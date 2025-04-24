@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>b2c_check_last_2_years_sales_batch</members>
+		<members>b2c_check_last_2_years_sales_batch_test</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Contact.b2c_Last_Online_Sale_Date__c</members>
+		<members>Contact.b2c_Last_Shop_Sale_Date__c</members>
+		<members>Contact.b2c_fld_Channel_TY__c</members>
+		<members>Contact.b2c_fld_Turnover_TY__c</members>
+		<name>CustomField</name>
+	</types>
+	<version>60.0</version>
+</Package>

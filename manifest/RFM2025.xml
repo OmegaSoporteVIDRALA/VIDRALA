@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>B2C_CalculatePreferredStore_Batch</members>
+		<members>B2C_ReassignPreferredSA_Batch</members>
+		<members>B2C_Segmentation2_Batch</members>
+		<members>B2C_Segmentation2_Regularization_Batch</members>
+        <members>b2c_check_last_2_years_sales_batch</members>
+        <members>b2c_check_last_2_years_sales_batch_test</members>
+        <members>B2C_Contact_CalculateFieldsLy_Batch</members>
+        <members>B2C_Contact_CalculateFieldsLy_Batch_Test</members>
+        <members>B2C_Contact_calculateFieldsTY_Batch</members>
+        <members>B2C_Contact_calculateFieldsTY_Batch_Test</members>
+        <members>B2C_class_core_constants</members>
+        <members>B2C_Sales_Trigger_Handler</members>
+		<name>ApexClass</name>
+	</types>
+	<!--<types>
+		<members>Contact.b2c_fld_RFM_Segmentation_2024__c</members>
+		<members>Contact.b2c_Last_Online_Sale_Date__c</members>
+		<members>Contact.b2c_Last_Shop_Sale_Date__c</members>
+		<members>Contact.b2c_fld_Channel_TY__c</members>
+		<members>Contact.b2c_fld_Turnover_TY__c</members> New field 
+        <members>Contact.b2c_fld_Last_Sale_Date_No_Miscellaneous__c</members> New field 
+        <members>Contact.b2c_fld_First_Transaction_Date_No_Misc__c</members>  New field 
+        <members>Contact.b2c_fld_recency__c</members>  New value "others" 
+        <members>Contact.b2c_fld_recency_ly__c</members>  New value "others" 
+        <members>b2c_obj_sales__c.b2c_fld_IsMiscellaneous__c</members>  New field 
+		<members>b2c_obj_segment__c.B2C_fld_Segment_ID_Cegid__c</members> 
+        <members>Contact.b2c_fld_Total_Transactions_No_Misc__c</members>  New field 
+        <members>Contact.b2c_fld_Last_Transaction_Date_No_Misc__c</members> New field 
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Contact.b2c_rt_customer</members>
+		<members>Contact.fnd_rt_contact</members>
+		<name>RecordType</name>
+	</types> -->
+	<version>62.0</version>
+</Package>
+<!-- Aqui faltaría modificar los registros de segment, indicado en pasos manuales de la tarea general de analisis -->

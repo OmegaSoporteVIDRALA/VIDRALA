@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>CSC_Allowed_From_Address__mdt.csc_fld_hub__c</members>
+		<members>CSC_HubConfiguration__mdt.csc_fld_hub__c</members>
+		<members>Case.CSC_fld_origin_hub__c</members>
+		<members>Case.b2c_fld_hub_handle_CSC__c</members>
+		<members>User.csc_fld_Hub__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>CSC_Allowed_From_Address.JP</members>
+		<members>CSC_Case_Classification_Admin_Address.Nitsu</members>
+		<members>CSC_Default_Owner_Regularization_Mapping.AS</members>
+		<members>CSC_Default_Owner_Regularization_Mapping.JP</members>
+		<members>CSC_HubConfiguration.Admin_Loewe_JP</members>
+		<members>CSC_HubConfiguration.Contact_Loewe_08</members>
+		<members>CSC_HubConfiguration.Loewe_Diduenjoy_JP</members>
+		<members>csc_Hub_Language_Queue_Assignment.English_JP</members>
+		<members>csc_Hub_Language_Queue_Assignment.Japanese_JP</members>
+		<name>CustomMetadata</name>
+	</types>
+	<types>
+		<members>CSC_Auto_Response_Loewe_Peak_Season</members>
+		<name>Flow</name>
+	</types>
+	<types>
+		<members>Loewe_Admin_JP</members>
+		<members>Loewe_DUE_JP</members>
+		<members>Loewe_English_JP</members>
+		<members>Loewe_Generic_JP</members>
+		<members>Loewe_Japanese_JP</members>
+		<members>Loewe_Supervisors_JP</members>
+		<name>Group</name>
+	</types>
+	<types>
+		<members>Case.Loewe_Admin_JP_Case</members>
+		<members>Case.Loewe_DUE_JP_Case</members>
+		<members>Case.Loewe_English_JP_Case</members>
+		<members>Case.Loewe_Generic_JP_Case</members>
+		<members>Case.Loewe_Japanese_JP_Case</members>
+		<name>ListView</name>
+	</types>
+	<types>
+		<members>Loewe_Admin_JP</members>
+		<members>Loewe_DUE_JP</members>
+		<members>Loewe_English_JP</members>
+		<members>Loewe_Generic_JP</members>
+		<members>Loewe_Japanese_JP</members>
+		<name>Queue</name>
+	</types>
+	<types>
+		<members>CSC_Advisor_JP</members>
+		<members>CSC_Supervisor_JP</members>
+		<name>Role</name>
+	</types>
+	<types>
+		<members>BusinessHours</members>
+		<name>Settings</name>
+	</types>
+	<types>
+		<members>Account</members>
+		<name>SharingRules</name>
+	</types>
+	<version>62.0</version>
+</Package>
+
+
+<!-- PASOS MANUALES:
+- Habilitar valores picklist en RTs
+- Revisar sharings vs entorno a desplegar, crearlas a mano ya que no permite desplegar el cambio en algunas
+- Asignar cola Generic a buzones de email-to case por defecto.
+- Meter roles jp y global en grupo supervisor JP
+- Meter grupo supervisor JP en todos los grupos de JP
+- Activar última versión del flow de autorrespuesta
+- Crear registros hub configuration voicemail en prod
+-->

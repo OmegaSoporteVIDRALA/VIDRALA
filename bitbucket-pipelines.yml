@@ -1,0 +1,153 @@
+# This is a sample build configuration for Docker.
+# Check our guides at https://confluence.atlassian.com/x/O1toN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: omegacrm/pipelines:latest
+
+definitions:
+  steps:
+    - step: &setup-dev-hub
+        name: Setup for the pipeline (in DevHub)
+        script:
+          - openssl enc -aes-256-cbc -md sha256 -salt -d -in $BITBUCKET_CLONE_DIR/assets/server.key.enc -out $BITBUCKET_CLONE_DIR/assets/server.key -k $SERVER_KEY_PASSWORD
+          - export SFDX_AUTOUPDATE_DISABLE=false
+          - export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
+          - export SFDX_DOMAIN_RETRY=600
+          - export SFDX_LOG_LEVEL=DEBUG
+          - mkdir $BITBUCKET_CLONE_DIR/logs
+        artifacts:
+          - assets/**
+          - logs/**
+    - step: &configure-preprod
+        name: Configure preprod environment
+        deployment: preprod
+        script:
+          - mkdir $BITBUCKET_CLONE_DIR/.sfdx
+          - echo $SF_AUTH_URL > ./.sfdx/.sfdxauthurl
+        artifacts:
+          - .sfdx/**
+    - step: &configure-pro
+        name: Configure production environment
+        deployment: production
+        script:
+          - mkdir $BITBUCKET_CLONE_DIR/.sfdx
+          - echo $SF_AUTH_URL > ./.sfdx/.sfdxauthurl
+        artifacts:
+          - .sfdx/**
+    - step: &deploy-to-org-preprod
+        name: Deploy repository to Salesforce org
+        script:
+          # Connect to org
+          - sf org login sfdx-url -f ./.sfdx/.sfdxauthurl -s -a pipelineSfdxOrg
+          # Make de deployment
+          - sf project deploy start --manifest $BITBUCKET_CLONE_DIR/manifest/manifest.xml
+          - apk add --no-cache curl
+          - export jiraId=''
+          - export status='To test us'
+
+          - >-
+            messageinfo=$(curl -X GET "https://api.bitbucket.org/2.0/repositories/omegasalesforceteam/loe-app/commit/$BITBUCKET_COMMIT"                            
+            -H "Authorization: Bearer $ACCESS_TOKEN_BEARER"
+            -H "Accept: application/json"| jq -r '.message')
+
+          - pr=$(echo $messageinfo |sed -E 's/.*#([0-9]+).*/\1/')
+          - echo $pr 
+          - >-
+              prinfo=$(curl -X GET "https://api.bitbucket.org/2.0/repositories/omegasalesforceteam/loe-app/pullrequests/$pr" 
+              -H "Authorization: Bearer $ACCESS_TOKEN_BEARER" 
+              -H "Accept: application/json"|jq -r '.description'|sed 's/\\//g');
+              
+          - jiraId=$(echo $prinfo | sed -r 's/.*KEY \[([^\[]*)\].*/\1/');
+          - echo $jiraId
+          
+          - echo $status
+
+          - if [[ -z "$jiraId" ]]; then exit 0; fi
+          - pipe: atlassian/jira-transition:0.5.1
+            variables:
+                JIRA_BASE_URL: 'https://omegacrm.atlassian.net'
+                JIRA_USER_EMAIL: 'scampo@omegacrmconsulting.com'
+                JIRA_API_TOKEN: 'ATATT3xFfGF0ITKiFm8Zhy6NfQr906glDgPNre1Ub6q7HO_ruBmTrq72TvVJYhb2VxHNZkIA2kSEt-ebqZEufX3wDkrkAe9zyqYk8ped4ROIQbw9IVsw1z7y_zjr7Sjc6BwQ0PMR37Pg38K4iv0E6xEEBTB-GXj8Z3Iuiji26QQLre8pvT_ADoQ=69A39703'
+                ISSUE: $jiraId
+                TRANSITION: $status
+        artifacts:
+          - .sfdx/**
+    - step: &deploy-to-org-manual
+        name: Deploy repository to Salesforce org
+        script:
+          # Connect to org
+          - sf org login sfdx-url -f ./.sfdx/.sfdxauthurl -s -a pipelineSfdxOrg
+          # Make de deployment
+          - sf project deploy start --manifest $BITBUCKET_CLONE_DIR/manifest/manifest.xml
+        artifacts:
+          - .sfdx/**
+    - step: &validate-to-org-and-test
+        name: Validate repository to Salesforce org
+        script:
+          - apk add --no-cache curl
+          - export testsAux='B2C_Delete_Store_Tags_Batch_Tests B2C_RegularizeProspectPS_Test'
+          - export tests=''
+          - echo $BITBUCKET_COMMIT
+          - echo "Validate to Org"
+
+          - >-
+            messageinfo=$(curl -X GET "https://api.bitbucket.org/2.0/repositories/omegasalesforceteam/loe-app/commit/$BITBUCKET_COMMIT"
+            -H "Authorization: Bearer $ACCESS_TOKEN_BEARER"
+            -H "Accept: application/json"| jq -r '.message')
+
+          - echo $messageinfo
+
+          - pr=$(echo $messageinfo |sed -E 's/.*#([0-9]+).*/\1/')
+          - echo $pr
+
+          - >-
+              prinfo=$(curl -X GET "https://api.bitbucket.org/2.0/repositories/omegasalesforceteam/loe-app/pullrequests/$pr"                  
+              -H "Authorization: Bearer $ACCESS_TOKEN_BEARER"
+              -H "Accept: application/json"|jq -r '.description'|sed 's/\\//g')
+
+          - tests=$(echo $prinfo | sed -r 's/.*Tests \[([^\[]*)\].*/\1/')
+          
+          - echo $tests
+          - replacementtests=$(if [[ -z "$tests" ]]; then echo "RunSpecifiedTests -t $testsAux"; else echo "RunSpecifiedTests -t $tests"; fi)
+          - echo $replacementtests
+          # Connect to org
+          - sf org login sfdx-url -f ./.sfdx/.sfdxauthurl -s -a pipelineSfdxOrg
+          # Make de validate
+          - sf project deploy validate --manifest $BITBUCKET_CLONE_DIR/manifest/manifest.xml --test-level $replacementtests
+        artifacts:
+          - .sfdx/**
+    - step: &validate-to-org-and-test-manual
+        name: Validate repository to Salesforce org
+        script:
+          - export tests='B2C_Delete_Store_Tags_Batch_Tests B2C_RegularizeProspectPS_Test'
+          - echo "Validate to Org manual"
+          - echo $tests
+          - replacementtests=$(if [[ -z "$tests" ]]; then echo ""; else echo "RunSpecifiedTests -t $tests"; fi)
+          - echo $replacementtests
+          # Connect to org
+          - sf org login sfdx-url -f ./.sfdx/.sfdxauthurl -s -a pipelineSfdxOrg
+          # Make de validate
+          - sf project deploy validate --manifest $BITBUCKET_CLONE_DIR/manifest/manifest.xml --test-level $replacementtests
+        artifacts:
+          - .sfdx/**
+pipelines:
+  branches:
+    preprod:
+      - step: *configure-preprod
+      - step: *validate-to-org-and-test
+      - step: *deploy-to-org-preprod
+    master:
+      - step: *configure-pro
+      - step: *validate-to-org-and-test
+  custom:
+    -manuallyPreprod:
+      - step: *configure-preprod
+      - step: *validate-to-org-and-test-manual
+      - step: *deploy-to-org-manual
+    -manuallyValidateMaster:
+      - step: *configure-pro
+      - step: *validate-to-org-and-test-manual
+    -manuallyDeployMaster:
+      - step: *configure-pro
+      - step: *deploy-to-org-manual

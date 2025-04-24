@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>B2C_ARD_Cleaning_Batch</members>
+		<members>B2C_ARD_Cleaning_Batch_Test</members>
+		<members>B2C_ARD_Cleaning_Batch_Scheduler</members>
+		<members>B2C_BatchUtils</members>
+		<members>B2C_CalculatePreferredStore_Batch</members>
+		<members>B2C_CalculatePreferredStore_Batch_Test</members>
+		<members>B2C_CheckModifiedAssistantStores_Batch</members>
+		<members>B2C_CheckRunContactTrigger</members>
+		<members>B2C_Contact_Trigger_Handler</members>
+		<members>B2C_Contact_Trigger_Handler_Test</members>
+		<members>B2C_ReassignPreferredSA_Batch</members>
+		<members>B2C_ReassignPreferredSA_Test</members>
+		<members>B2C_Sales_Trigger_Handler</members>
+		<members>B2C_Segmentation2_Batch</members>
+		<members>B2C_class_core_constants</members>
+		<members>B2C_Calculate_Sales_TransactionKey</members>
+		<members>B2C_Contact_CalculateFieldsLy_Batch</members>
+		<members>B2C_Contact_calculateFieldsTY_Batch</members>
+		<members>B2C_Product2_Trigger_Handler</members>
+		<members>B2C_Segmentation_Batch_Previous_Years</members>
+		<members>B2C_Segmentation2_Regularization_Batch</members>
+		<members>B2C_Segmentation2_Regulation_Batch_Test</members>
+		<members>B2C_Update_Sales_Batch</members>
+		<members>b2c_chech_last_2_years_sales_batch_EY</members>
+		<members>b2c_check_last_2_years_sales_batch</members>
+		<members>B2C_CheckModifiedToSegmentContact_Batch</members>
+		<members>B2C_Contact_CalculateRetained_Batch</members>
+		<members>B2C_Update_Currency_Exchange_Batch</members>
+		<members>B2C_RegularizeMetastoreKeyDateSales</members>
+		<members>B2C_RegularizeMetastore_Test</members>
+		<members>B2C_BypassTrigger</members>
+		<members>B2C_BatchUtils</members>
+		<members>B2C_Batches_Control_Page</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<!--<members>B2C_Contact_Trigger</members>-->
+		<members>B2C_Sales_Trigger</members>		
+		<name>ApexTrigger</name>
+	</types>
+	<types>
+		<members>Account.b2c_fld_meta_store_code__c</members>
+		<members>Contact.b2c_fld_automatic_reassignment_date__c</members>
+		<members>Contact.b2c_fld_psa_inactive_relocated__c</members>
+		<members>Contact.b2c_fld_prefered_store_org__c</members>
+		<members>Contact.b2c_fld_first_transaction_date__c</members>
+		<members>Contact.b2c_fld_last_transaction_date__c</members>
+		<members>Contact.b2c_Last_Online_Sale_Date__c</members>
+		<members>Contact.b2c_Channel_2_Years__c</members>
+		<members>User_Store__c.b2c_fld_meta_store_user_store__c</members>
+		<members>b2c_obj_sales__c.b2c_fld_meta_store__c</members>
+		<members>b2c_obj_sales__c.b2c_fld_Sales_Date__c</members>
+		<members>b2c_obj_sales__c.b2c_fld_Sales_Id_Key__c</members>
+		<members>b2c_special_store_codes__mdt.b2c_fld_category__c</members>
+		<members>b2c_special_store_codes__mdt.b2c_fld_store_code__c</members>
+		<members>whl_obj_country__c.b2c_fld_meta_store__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>WECHAT_User</members>
+		<name>CustomLabel</name>
+	</types>
+	<types>
+		<members>b2c_special_store_codes.X002100</members>
+		<members>b2c_special_store_codes.X002150</members>
+		<members>b2c_special_store_codes.X002199</members>
+		<name>CustomMetadata</name>
+	</types>
+	<types>
+		<members>WECHAT_User__mdt</members>
+		<members>b2c_special_store_codes__mdt</members>
+		<name>CustomObject</name>
+	</types>
+	<!--<types>
+		<members>Account-Meta-store</members>
+		<name>Layout</name>
+	</types>-->
+	<types>
+		<members>Account.b2c_rt_meta_store</members>
+		<name>RecordType</name>
+	</types>
+	<version>58.0</version>
+</Package>
+<!-- Clases test a ejecutar:
+B2C_ARD_Cleaning_Batch_Test
+B2C_CalculatePreferredStore_Batch_Test
+B2C_Contact_Trigger_Handler_Test
+B2C_ReassignPreferredSA_Test
+B2C_Sales_Trigger_Handler_Test
+B2C_Segmentation2_Batch_Test
+B2C_Calculate_Sales_TransactionKey_Test
+B2C_Contact_CalculateFieldsLy_Batch_Test
+B2C_Contact_calculateFieldsTY_Batch_Test
+B2C_Product2_Trigger_Handler_Test
+B2C_BatchUtils_Test
+B2C_Batches_Control_Page_Test
+B2C_RegularizeMetastore_Test
+B2C_Update_Sales_Batch_Test
+b2c_check_last_2_years_sales_batch_test
+B2C_Segment_Batch_Previous_Years_Test
+B2C_Update_Currency_Exchange_Batch_Test
+B2C_Contact_CalculateRetained_Test
+B2C_CheckModifiedToSegmentBatch_Test
+B2C_Segmentation2_Regulation_Batch_Test
+b2c_chech_last_2_years_sales_b_EY_Test
+-->

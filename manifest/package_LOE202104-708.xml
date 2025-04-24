@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<types>
+<members>B2C_Contact_CalculateFieldsLy_Batch</members>
+<members>B2C_Contact_CalculateFieldsLy_Batch_Test</members>
+<members>B2C_Contact_calculateFieldsTY_Batch</members>
+<members>B2C_Contact_calculateFieldsTY_Batch_Test</members>
+<members>B2C_class_core_constants</members>
+<members>B2C_Sales_Trigger_Handler</members>
+<name>ApexClass</name>
+</types>
+<types>
+<members>Contact.b2c_fld_Last_Sale_Date_No_Miscellaneous__c</members>
+<members>Contact.b2c_fld_First_Transaction_Date_No_Misc__c</members>
+<members>Contact.b2c_fld_recency__c</members> <!-- New "others" -->
+<members>Contact.b2c_fld_recency_ly__c</members> <!-- New "others" -->
+<members>b2c_obj_sales__c.b2c_fld_IsMiscellaneous__c</members>
+<name>CustomField</name>
+</types>
+<types>
+<members>Contact.fnd_rt_contact</members>
+<name>RecordType</name>
+</types>
+<version>60.0</version>
+</Package>

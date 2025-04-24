@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+   <types>
+        <members>B2C_Task_Trigger_Handler</members>
+        <members>B2C_Task_Trigger_Handler_Test</members>
+        <members>B2C_IndEmailResult_Trigger_Handler</members>
+        <members>B2C_IndEmailResult_Trigger_Handler_Test</members>
+        <members>B2C_CampaignMember_Handler</members>
+        <members>B2C_TaskStatus_Batch</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>CLT_Task_AfterInsert</members>        
+        <members>B2C_IndEmailResult_Trigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>CLT_Onboarding_Categories.AUTOMATIC_CLIENT_REASSIGNMENT</members>
+        <members>CLT_Onboarding_Categories.MANUAL_V_VIC_REASSIGNMENT</members>
+        <members>CLT_Onboarding_Categories.RECENTLY_REASSGINED_CLIENTS</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Contact.b2c_fld_contactability_email__c</members>
+        <members>Contact.b2c_fld_Created_Date_Time__c </members> 
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Contact.b2c_fld_onlineservices_opt_out__c</members>
+        <members>Contact.b2c_fld_onlineservices_opt_out_date_time__c</members>
+        <name>CustomField</name>
+    </types>
+<version>58.0</version>
+</Package>

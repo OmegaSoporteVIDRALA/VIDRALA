@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>due__Diduenjoy_Feedback__c.b2c_fld_ClientAdvisor__c</members>
+		<members>due__Diduenjoy_Feedback__c.b2c_fld_SaleStore__c</members>
+		<name>CustomField</name>
+	</types>
+        <types>
+		<members>CSC_Diduenjoy_Feedback_Trigger_Handler</members>
+		<members>CSC_Diduenjoy_Feedback_Handler_Test</members>
+		<name>ApexClass</name>
+	</types>
+        <types>
+		<members>CSC_Diduenjoy_Feedback_Trigger</members>
+		<name>ApexTrigger</name>
+	</types>
+	<version>60.0</version>
+</Package>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>b2c_obj_case_product__c.whl_fld_Amount__c</members>
+		<members>b2c_obj_case_product__c.whl_fld_CIL__c</members>
+		<members>b2c_obj_case_product__c.whl_fld_Case__c</members>
+		<members>b2c_obj_case_product__c.whl_fld_Product__c</members>
+		<members>b2c_obj_case_product__c.whl_fld_Quantity__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>b2c_obj_case_product__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Wharehouse_Cases_Management_Finance</members>
+		<members>Wharehouse_Cases_Management_Full</members>
+		<name>PermissionSet</name>
+	</types>
+	<version>60.0</version>
+</Package>

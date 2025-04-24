@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>cSC_CaseMakeMeOwner</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>Case.CSC_qa_MakeMeOwner</members>
+		<name>QuickAction</name>
+	</types>
+	<version>60.0</version>
+</Package>
