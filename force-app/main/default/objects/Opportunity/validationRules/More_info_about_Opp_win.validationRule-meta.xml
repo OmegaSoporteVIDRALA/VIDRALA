@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>More_info_about_Opp_win</fullName>
+    <active>false</active>
+    <description>User must enter supplementary info about the reason why an Opp has been won</description>
+    <errorConditionFormula>AND(
+
+OR(
+ISPICKVAL(  Primary_Reason_For_Win__c  , &quot;Price&quot;),
+ISPICKVAL(  Primary_Reason_For_Win__c  , &quot;Quality&quot;),
+ISPICKVAL(  Primary_Reason_For_Win__c  , &quot;Design&quot;),
+ISPICKVAL(  Primary_Reason_For_Win__c  , &quot;Strength of relationship&quot;)),
+
+
+ISBLANK(( More_Info_Reason_Opportunity_Was_Won__c ))
+
+
+
+)</errorConditionFormula>
+    <errorDisplayField>More_Info_Reason_Opportunity_Was_Won__c</errorDisplayField>
+    <errorMessage>Please provide additional information about why the Opportunity was won</errorMessage>
+</ValidationRule>

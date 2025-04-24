@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Spain Agent Permission Set Group Fifty</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Spain Agent</label>
+    <permissionSets>Pan_European_Permission_set</permissionSets>
+    <permissionSets>Report_Subscription_all_access</permissionSets>
+    <permissionSets>Salesforce_Inbox_Licence</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

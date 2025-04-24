@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Idioma --></label>
+    <name>OM_VID_Idioma__c</name>
+    <picklistValues>
+        <masterLabel>Español</masterLabel>
+        <translation><!-- Español --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Francés</masterLabel>
+        <translation><!-- Francés --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inglés</masterLabel>
+        <translation><!-- Inglés --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portugués</masterLabel>
+        <translation><!-- Portugués --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Account_Credit_Status__c</field>
+        <formula>CASE( Account.Account_Credit_Status__c, 
+&apos;3 Initial Check Completed&apos;, &apos;4 Full Check Submitted&apos;, 
+&apos;5 Full Check Completed&apos; 
+)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Credit_Check_Set_To__c</field>
+        <formula>CASE( Account.Account_Credit_Status__c, 
+&apos;3 Initial Check Completed&apos;, &apos;4 Full Check Submitted&apos;, 
+&apos;4 Full Check Submitted&apos;, &apos;5 Full Check Completed&apos;, 
+&apos;Not Allowed&apos; 
+
+)</formula>
+    </fieldOverrides>
+    <label>Full Check</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Credit_Check_Set_To__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Company_Registration_Number__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Credit_Form_Attached__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <type>Update</type>
+</QuickAction>

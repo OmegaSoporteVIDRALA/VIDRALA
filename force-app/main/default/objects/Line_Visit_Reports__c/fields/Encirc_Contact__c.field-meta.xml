@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Encirc_Contact__c</fullName>
+    <label>Encirc Contact</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SFDC1 Admin1</fullName>
+                <default>false</default>
+                <label>SFDC1 Admin1</label>
+            </value>
+            <value>
+                <fullName>Premier Administrator</fullName>
+                <default>false</default>
+                <label>Premier Administrator</label>
+            </value>
+            <value>
+                <fullName>Geoffrey Adolphus</fullName>
+                <default>false</default>
+                <label>Geoffrey Adolphus</label>
+            </value>
+            <value>
+                <fullName>Mark Booth</fullName>
+                <default>false</default>
+                <label>Mark Booth</label>
+            </value>
+            <value>
+                <fullName>Nicola Cassidy</fullName>
+                <default>false</default>
+                <label>Nicola Cassidy</label>
+            </value>
+            <value>
+                <fullName>Robert Coates</fullName>
+                <default>false</default>
+                <label>Robert Coates</label>
+            </value>
+            <value>
+                <fullName>Jan Cockburn</fullName>
+                <default>false</default>
+                <label>Jan Cockburn</label>
+            </value>
+            <value>
+                <fullName>Mark Cousins</fullName>
+                <default>false</default>
+                <label>Mark Cousins</label>
+            </value>
+            <value>
+                <fullName>Scott Crielly</fullName>
+                <default>false</default>
+                <label>Scott Crielly</label>
+            </value>
+            <value>
+                <fullName>Siobhan Crowe</fullName>
+                <default>false</default>
+                <label>Siobhan Crowe</label>
+            </value>
+            <value>
+                <fullName>James Currie</fullName>
+                <default>false</default>
+                <label>James Currie</label>
+            </value>
+            <value>
+                <fullName>Adrian Curry</fullName>
+                <default>false</default>
+                <label>Adrian Curry</label>
+            </value>
+            <value>
+                <fullName>Jenny Elliott</fullName>
+                <default>false</default>
+                <label>Jenny Elliott</label>
+            </value>
+            <value>
+                <fullName>Adrian Galligan</fullName>
+                <default>false</default>
+                <label>Adrian Galligan</label>
+            </value>
+            <value>
+                <fullName>Anita Galligan</fullName>
+                <default>false</default>
+                <label>Anita Galligan</label>
+            </value>
+            <value>
+                <fullName>Owen Gordon</fullName>
+                <default>false</default>
+                <label>Owen Gordon</label>
+            </value>
+            <value>
+                <fullName>Oliver Harry</fullName>
+                <default>false</default>
+                <label>Oliver Harry</label>
+            </value>
+            <value>
+                <fullName>Breege Harte</fullName>
+                <default>false</default>
+                <label>Breege Harte</label>
+            </value>
+            <value>
+                <fullName>Mark Hughes</fullName>
+                <default>false</default>
+                <label>Mark Hughes</label>
+            </value>
+            <value>
+                <fullName>Kevin Keenan</fullName>
+                <default>false</default>
+                <label>Kevin Keenan</label>
+            </value>
+            <value>
+                <fullName>Tony Krznar</fullName>
+                <default>false</default>
+                <label>Tony Krznar</label>
+            </value>
+            <value>
+                <fullName>Jeremy Lappin</fullName>
+                <default>false</default>
+                <label>Jeremy Lappin</label>
+            </value>
+            <value>
+                <fullName>Kate Lynch</fullName>
+                <default>false</default>
+                <label>Kate Lynch</label>
+            </value>
+            <value>
+                <fullName>Anne Maguire</fullName>
+                <default>false</default>
+                <label>Anne Maguire</label>
+            </value>
+            <value>
+                <fullName>Liam Maguire</fullName>
+                <default>false</default>
+                <label>Liam Maguire</label>
+            </value>
+            <value>
+                <fullName>Kieran Martin</fullName>
+                <default>false</default>
+                <label>Kieran Martin</label>
+            </value>
+            <value>
+                <fullName>Seamus McCabe</fullName>
+                <default>false</default>
+                <label>Seamus McCabe</label>
+            </value>
+            <value>
+                <fullName>Lynn McCann</fullName>
+                <default>false</default>
+                <label>Lynn McCann</label>
+            </value>
+            <value>
+                <fullName>Martin McGoldrick</fullName>
+                <default>false</default>
+                <label>Martin McGoldrick</label>
+            </value>
+            <value>
+                <fullName>Elaine McGrath</fullName>
+                <default>false</default>
+                <label>Elaine McGrath</label>
+            </value>
+            <value>
+                <fullName>Niall McGrath</fullName>
+                <default>false</default>
+                <label>Niall McGrath</label>
+            </value>
+            <value>
+                <fullName>Therese McTeggart</fullName>
+                <default>false</default>
+                <label>Therese McTeggart</label>
+            </value>
+            <value>
+                <fullName>Jacqueline Melanaphy</fullName>
+                <default>false</default>
+                <label>Jacqueline Melanaphy</label>
+            </value>
+            <value>
+                <fullName>Stuart Meldrum</fullName>
+                <default>false</default>
+                <label>Stuart Meldrum</label>
+            </value>
+            <value>
+                <fullName>James Moynagh</fullName>
+                <default>false</default>
+                <label>James Moynagh</label>
+            </value>
+            <value>
+                <fullName>Sean Murphy</fullName>
+                <default>false</default>
+                <label>Sean Murphy</label>
+            </value>
+            <value>
+                <fullName>Dwayne Nixon</fullName>
+                <default>false</default>
+                <label>Dwayne Nixon</label>
+            </value>
+            <value>
+                <fullName>Paddy O&apos;Doherty</fullName>
+                <default>false</default>
+                <label>Paddy O&apos;Doherty</label>
+            </value>
+            <value>
+                <fullName>Fiacre O&apos;Donnell</fullName>
+                <default>false</default>
+                <label>Fiacre O&apos;Donnell</label>
+            </value>
+            <value>
+                <fullName>Hugh og Farrell</fullName>
+                <default>false</default>
+                <label>Hugh og Farrell</label>
+            </value>
+            <value>
+                <fullName>Maria Orr</fullName>
+                <default>false</default>
+                <label>Maria Orr</label>
+            </value>
+            <value>
+                <fullName>Richard Orr</fullName>
+                <default>false</default>
+                <label>Richard Orr</label>
+            </value>
+            <value>
+                <fullName>Phil Palmer</fullName>
+                <default>false</default>
+                <label>Phil Palmer</label>
+            </value>
+            <value>
+                <fullName>Scott Parry</fullName>
+                <default>false</default>
+                <label>Scott Parry</label>
+            </value>
+            <value>
+                <fullName>Julian Phipps</fullName>
+                <default>false</default>
+                <label>Julian Phipps</label>
+            </value>
+            <value>
+                <fullName>Roisin Reilly</fullName>
+                <default>false</default>
+                <label>Roisin Reilly</label>
+            </value>
+            <value>
+                <fullName>Robert Rose</fullName>
+                <default>false</default>
+                <label>Robert Rose</label>
+            </value>
+            <value>
+                <fullName>Dave Sewell</fullName>
+                <default>false</default>
+                <label>Dave Sewell</label>
+            </value>
+            <value>
+                <fullName>Eugene Smith</fullName>
+                <default>false</default>
+                <label>Eugene Smith</label>
+            </value>
+            <value>
+                <fullName>Murray Stewart</fullName>
+                <default>false</default>
+                <label>Murray Stewart</label>
+            </value>
+            <value>
+                <fullName>Peter Tomlinson</fullName>
+                <default>false</default>
+                <label>Peter Tomlinson</label>
+            </value>
+            <value>
+                <fullName>Jeneka Turay</fullName>
+                <default>false</default>
+                <label>Jeneka Turay</label>
+            </value>
+            <value>
+                <fullName>Rob Turvey</fullName>
+                <default>false</default>
+                <label>Rob Turvey</label>
+            </value>
+            <value>
+                <fullName>Stephen Whitley</fullName>
+                <default>false</default>
+                <label>Stephen Whitley</label>
+            </value>
+            <value>
+                <fullName>Paul Woods</fullName>
+                <default>false</default>
+                <label>Paul Woods</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Org_Name_Blank__c</fullName>
+    <description>DEPRECATED 12 Nov 2024 case 7911</description>
+    <formula>ISPICKVAL( Sales_Organisation_Name__c , &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sales Org Name Blank</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

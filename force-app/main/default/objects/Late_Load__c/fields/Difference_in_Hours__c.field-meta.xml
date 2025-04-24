@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Difference_in_Hours__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (Difference_in_Days__c != 0, 
+  TEXT(FLOOR(24*Difference_in_Days__c)) &amp; &quot;:&quot; &amp; /*returns the number of hours */
+  LPAD(TEXT(ABS(ROUND( 60*( ROUND(24*Difference_in_Days__c,8) - FLOOR(ROUND(24*Difference_in_Days__c,8))), 0 ))),2,&apos;0&apos;) 
+  /*returns the number of minutes */
+, &apos;0:00&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Difference in Hours</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

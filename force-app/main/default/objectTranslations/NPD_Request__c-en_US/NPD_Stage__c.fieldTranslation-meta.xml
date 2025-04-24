@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- NPD Stage --></label>
+    <name>NPD_Stage__c</name>
+    <picklistValues>
+        <masterLabel>2 Day Production Run Approved</masterLabel>
+        <translation><!-- 2 Day Production Run Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bulk Moulds Delivery date</masterLabel>
+        <translation><!-- Bulk Moulds Delivery date --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bulk Moulds Ordered</masterLabel>
+        <translation><!-- Bulk Moulds Ordered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Approved for Bulk Glass</masterLabel>
+        <translation><!-- Customer Approved for Bulk Glass --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Brief</masterLabel>
+        <translation><!-- Design Brief --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Drawing Created</masterLabel>
+        <translation><!-- Drawing Created --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MPA Approved for Bulk Moulds</masterLabel>
+        <translation><!-- MPA Approved for Bulk Moulds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MPA Approved for Trial moulds</masterLabel>
+        <translation><!-- MPA Approved for Trial moulds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NPD Closed</masterLabel>
+        <translation><!-- NPD Closed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NPD Request</masterLabel>
+        <translation><!-- NPD Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NPD Void</masterLabel>
+        <translation><!-- NPD Void --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NPD stopped; mould equipment was purchased</masterLabel>
+        <translation><!-- NPD stopped; mould equipment was purchased --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Hold</masterLabel>
+        <translation><!-- On Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site Approved Bulk Glass Production</masterLabel>
+        <translation><!-- Site Approved Bulk Glass Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trial Date</masterLabel>
+        <translation><!-- Trial Date --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trial Mould Equip Delivery Date</masterLabel>
+        <translation><!-- Trial Mould Equip Delivery Date --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trial Moulds Ordered</masterLabel>
+        <translation><!-- Trial Moulds Ordered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trial Samples sent to customer</masterLabel>
+        <translation><!-- Trial Samples sent to customer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

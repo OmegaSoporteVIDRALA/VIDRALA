@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>UK</fullName>
+        <default>false</default>
+        <label>UK</label>
+    </customValue>
+    <customValue>
+        <fullName>Italy</fullName>
+        <default>false</default>
+        <label>Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>Vidrala</fullName>
+        <default>false</default>
+        <label>Vidrala</label>
+    </customValue>
+    <customValue>
+        <fullName>Vidrala France</fullName>
+        <default>false</default>
+        <label>Vidrala France</label>
+    </customValue>
+    <customValue>
+        <fullName>FIFTY</fullName>
+        <default>false</default>
+        <label>FIFTY</label>
+    </customValue>
+    <masterLabel>Sales Organisation Name</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

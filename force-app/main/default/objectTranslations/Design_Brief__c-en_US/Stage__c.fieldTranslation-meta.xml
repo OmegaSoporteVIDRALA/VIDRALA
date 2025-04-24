@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Stage --></label>
+    <name>Stage__c</name>
+    <picklistValues>
+        <masterLabel>Create design brief</masterLabel>
+        <translation><!-- Create design brief --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Create tech drawing</masterLabel>
+        <translation><!-- Create tech drawing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer approval to progress to pilot moulds</masterLabel>
+        <translation><!-- Customer approval to progress to pilot moulds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer procurement approval to bulk tools</masterLabel>
+        <translation><!-- Customer procurement approval to bulk tools --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer review</masterLabel>
+        <translation><!-- Customer review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer tech approval</masterLabel>
+        <translation><!-- Customer tech approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer tech review/approval</masterLabel>
+        <translation><!-- Customer tech review/approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design review</masterLabel>
+        <translation><!-- Design review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NPD stopped; mould equipment was purchased</masterLabel>
+        <translation><!-- NPD stopped; mould equipment was purchased --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On hold, awaiting additional information from Account Manager</masterLabel>
+        <translation><!-- On hold, awaiting additional information from Account Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pilot internal review</masterLabel>
+        <translation><!-- Pilot internal review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pilot trials</masterLabel>
+        <translation><!-- Pilot trials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Dead</masterLabel>
+        <translation><!-- Project Dead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports and samples to customer</masterLabel>
+        <translation><!-- Reports and samples to customer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

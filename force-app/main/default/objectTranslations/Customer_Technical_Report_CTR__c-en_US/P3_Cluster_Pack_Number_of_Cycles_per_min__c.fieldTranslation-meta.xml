@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- P3-Cluster Pack-Number of Cycles per min --></label>
+    <name>P3_Cluster_Pack_Number_of_Cycles_per_min__c</name>
+</CustomFieldTranslation>

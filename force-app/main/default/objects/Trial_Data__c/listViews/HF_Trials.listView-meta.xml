@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HF_Trials</fullName>
+    <columns>Mould_Number__c</columns>
+    <columns>Description__c</columns>
+    <columns>Trial_Stage__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Trial_Equipment_Plant__c</columns>
+    <columns>Mould_Type__c</columns>
+    <columns>Colour_of_Trial_Samples__c</columns>
+    <columns>Number_of_Trial_Samples_Required__c</columns>
+    <columns>Trial_Mould_Equipment_Delivery_Date__c</columns>
+    <columns>Trial_Date__c</columns>
+    <columns>Did_The_Trial_Take_Place__c</columns>
+    <columns>Trial_Meeting_Date__c</columns>
+    <columns>Results_of_Trial_Report_Meeting_Review__c</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <label>HF Trials</label>
+</ListView>

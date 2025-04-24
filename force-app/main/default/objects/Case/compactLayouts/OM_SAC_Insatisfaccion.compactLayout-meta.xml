@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_SAC_Insatisfaccion</fullName>
+    <fields>CaseNumber</fields>
+    <fields>AccountId</fields>
+    <fields>Reason</fields>
+    <fields>OwnerId</fields>
+    <label>Insatisfacción</label>
+</CompactLayout>

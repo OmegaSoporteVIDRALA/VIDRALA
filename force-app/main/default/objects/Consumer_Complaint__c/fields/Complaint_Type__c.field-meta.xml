@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaint_Type__c</fullName>
+    <description>Display which Complaint Types have been chosen on the record. Whether None, Some or All.</description>
+    <externalId>false</externalId>
+    <formula>CASE(  Complaint_Type_Number__c , 0, &quot;General&quot;, 1, &quot;Manufacturing Fault Present&quot;, 10, &quot;Legal&quot;, 100, &quot;Injury&quot;, 11, &quot;Manufacturing Fault Present and Legal&quot;, 101, &quot;Manufacturing Fault Present and Injury&quot;, 110, &quot;Legal and Injury&quot;, 111, &quot;Manufacturing Fault Present, Legal and Injury&quot;, NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Complaint Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

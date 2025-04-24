@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RestrictionRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <enforcementType>Restrict</enforcementType>
+    <masterLabel>Vidrala Customer Survey Annual Reports Restriction Rule Italy</masterLabel>
+    <recordFilter>ISPICKVAL(Survey_Type__c, &apos;Italy&apos;)=true</recordFilter>
+    <targetEntity>Vidrala_Customer_Survey_Annual_Reports__c</targetEntity>
+    <userCriteria>$Permission.ITALYUSER=true</userCriteria>
+    <version>1</version>
+</RestrictionRule>

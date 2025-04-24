@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>populates the filling fields (hidden)  to show correct in the list views</description>
+        <name>assign_budget_fields</name>
+        <label>assign budget fields</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.DLRS_Actual_Deposit_Filling__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Actual_Expenditure_Deposit__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.DLRS_Actual_Final_Pmt_Filling__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Actual_Expenditure_Balance__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.DLRS_Committed_Deposit_F__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Committed_Expenditure_Deposit__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.DLRS_Commited_Final_Pmt_F__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Committed_Expenditure_Balance__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.DLRS_Budget_Amount_F__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Budget_Amount__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>budget or budget year</description>
+        <name>Record_type</name>
+        <label>Record type</label>
+        <locationX>182</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Event Budget Year</defaultConnectorLabel>
+        <rules>
+            <name>Event_Budget_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Event_Budget_record_type.DeveloperName</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assign_budget_fields</targetReference>
+            </connector>
+            <label>Event Budget Record Type</label>
+        </rules>
+    </decisions>
+    <description>Update Filling Fields
+
+no entry criteria</description>
+    <environments>Default</environments>
+    <interviewLabel>Event Budget Before Save Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Event Budget Before Save Flow Filling Fields</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>fetc the id / name of the event budget record type to use later in the flow</description>
+        <name>Event_Budget_record_type</name>
+        <label>Event Budget record type</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Record_type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Event_Budget__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Event_Budget</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Event_Budget_record_type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Parent_Event_Filling__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Event_Budget__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

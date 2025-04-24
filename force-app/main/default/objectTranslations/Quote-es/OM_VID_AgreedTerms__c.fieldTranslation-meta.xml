@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Agreed terms de la cuenta relacionada --></help>
+    <label><!-- Agreed Terms --></label>
+    <name>OM_VID_AgreedTerms__c</name>
+</CustomFieldTranslation>

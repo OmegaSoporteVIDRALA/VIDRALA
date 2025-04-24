@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Results of Trial Report Meeting Review --></label>
+    <name>Results_of_Trial_Report_Meeting_Review__c</name>
+    <picklistValues>
+        <masterLabel>Approved</masterLabel>
+        <translation><!-- Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Further Testing</masterLabel>
+        <translation><!-- Further Testing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Approved</masterLabel>
+        <translation><!-- Not Approved --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

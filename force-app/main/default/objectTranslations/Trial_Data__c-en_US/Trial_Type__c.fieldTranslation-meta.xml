@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Trial Type --></label>
+    <name>Trial_Type__c</name>
+    <picklistValues>
+        <masterLabel>Alternative Set-up</masterLabel>
+        <translation><!-- Alternative Set-up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Retrial</masterLabel>
+        <translation><!-- Customer Retrial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Trial</masterLabel>
+        <translation><!-- Customer Trial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Trial</masterLabel>
+        <translation><!-- Internal Trial --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

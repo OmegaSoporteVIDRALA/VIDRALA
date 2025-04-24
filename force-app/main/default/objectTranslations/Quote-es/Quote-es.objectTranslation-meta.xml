@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>OM_VID_QuoteFiftyLayout</layout>
+        <sections>
+            <label><!-- Delivery Address --></label>
+            <section>Delivery Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Quote Layout</layout>
+        <sections>
+            <label><!-- Delivery Address --></label>
+            <section>Delivery Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Read Only</layout>
+        <sections>
+            <label><!-- Delivery Address --></label>
+            <section>Delivery Address</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Enviar Email de Oferta --></label>
+        <name>OM_VID_EnviarEmailOferta</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Oferta PDF</label>
+        <name>QuotePDFs</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Acuerdos de embalaje y rapel</label>
+        <name>Rebates_Packaging_Agreements</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Record Type para las Quotes de Omega --></description>
+        <label><!-- OM Quote Fifty --></label>
+        <name>OM_VID_Quote_Fifty</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Solo lectura</label>
+        <name>Read_Only</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Standard Record Type --></description>
+        <label><!-- Standard --></label>
+        <name>Standard</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Conga_Composer_Create_a_quote_PDF --></label>
+        <name>Conga_Composer_Create_a_quote_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Create_a_quote_PDF1 --></label>
+        <name>Conga_Composer_Create_a_quote_PDF1</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Create_a_quote_PDF12 --></label>
+        <name>Conga_Composer_Create_a_quote_PDF12</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_a_Quote_PDF --></label>
+        <name>Create_a_Quote_PDF</name>
+    </webLinks>
+</CustomObjectTranslation>

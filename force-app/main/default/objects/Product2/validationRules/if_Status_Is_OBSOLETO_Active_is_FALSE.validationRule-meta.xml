@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>if_Status_Is_OBSOLETO_Active_is_FALSE</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+IsActive = TRUE &amp;&amp;  ISPICKVAL( Status__c , &quot;Obsoleto&quot;),
+IsActive = FALSE &amp;&amp;  ISPICKVAL( Status__c , &quot;Obsoleto Comercial&quot;),
+IsActive = FALSE &amp;&amp;  ISPICKVAL( Status__c , &quot;Vigente - Preguntar fabricar/Pedir moldes&quot;),
+IsActive = FALSE &amp;&amp;  ISPICKVAL( Status__c , &quot;Vigente&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>IsActive</errorDisplayField>
+    <errorMessage>The Active Field Must Be Unticked To Select :Obsoleto.
+The Active Field Must Be Ticked To Select : Obsoleto Comercial, Vigente, Vigente - Preguntar fabricar/Pedir moldes.</errorMessage>
+</ValidationRule>

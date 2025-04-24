@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Customer_Existing_Bottle</fullName>
+    <active>true</active>
+    <businessProcess>New Customer</businessProcess>
+    <label>New Customer: Existing Bottle</label>
+    <picklistValues>
+        <picklist>Container_Colour__c</picklist>
+        <values>
+            <fullName>Amber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Artic Blue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autumn Leaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cobalt Blue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mallica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sea Green</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Manufacturer__c</picklist>
+        <values>
+            <fullName>Allied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ardagh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA Glass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beatson Clarke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encirc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SiseCam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkey</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Encirc_Appetite_For_Opportunity__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Incoterm__c</picklist>
+        <values>
+            <fullName>CFR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAP</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>EX WORKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Catalogue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2025</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>Lost to Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Budget %2F Lost Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Decision %2F Non-Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market__c</picklist>
+        <values>
+            <fullName>ES</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OM_VID_Idioma__c</picklist>
+        <values>
+            <fullName>Español</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Francés</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inglés</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugués</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Business_Type__c</picklist>
+        <values>
+            <fullName>Existing Customer%3A Existing Bottle %26 New Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer%3A New Bottle %26 New Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer%3A New Bottle Counter Spec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer%3A New Bottle Replacing Existing Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer%3A Existing Bottle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer%3A New Bottle</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Rating__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Type__c</picklist>
+        <values>
+            <fullName>Proactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reactive</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Reason_For_Win__c</picklist>
+        <values>
+            <fullName>Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strength of relationship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_Opportunity_Was_Lost__c</picklist>
+        <values>
+            <fullName>Lost%3A Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost%3A Legals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost%3A Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost%3A Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost%3A Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost%3A Timescales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified out%3A capacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified out%3A design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified out%3A price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified out%3A strategic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Organization_Text__c</picklist>
+        <values>
+            <fullName>Fifty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Organization__c</picklist>
+        <values>
+            <fullName>EN60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VD10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VD30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

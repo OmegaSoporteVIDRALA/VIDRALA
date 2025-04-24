@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Beers R</masterLabel>
+        <translation>Cervezas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cava and Champagne</masterLabel>
+        <translation>Cava y espusoso</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dairy</masterLabel>
+        <translation>Lácteos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Narrow Mouth Juices</masterLabel>
+        <translation>Zumos boca estrecha</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Not assigned</masterLabel>
+        <translation>Sin asignar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Oils</masterLabel>
+        <translation>Aceites</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Olives</masterLabel>
+        <translation>Aceitunas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Port</masterLabel>
+        <translation><!-- Port --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Preserves</masterLabel>
+        <translation>Conservas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Refillables</masterLabel>
+        <translation><!-- Refillables --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Refreshments</masterLabel>
+        <translation>Refrescos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Spirits</masterLabel>
+        <translation>Licores</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Still Wines</masterLabel>
+        <translation>Vinos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Various</masterLabel>
+        <translation>Varios</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vidrala It. Pallets</masterLabel>
+        <translation><!-- Vidrala It. Pallets --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vinegars</masterLabel>
+        <translation>Vinagres</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Water</masterLabel>
+        <translation>Aguas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wide Mouth Juices</masterLabel>
+        <translation>Zumos boca ancha</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

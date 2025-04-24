@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Reason why the business development will not be converted into an opportunity --></help>
+    <label>Cualificado</label>
+    <name>Qualified_Out__c</name>
+    <picklistValues>
+        <masterLabel>Capacity</masterLabel>
+        <translation><!-- Capacity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design</masterLabel>
+        <translation><!-- Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Price</masterLabel>
+        <translation><!-- Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategic</masterLabel>
+        <translation><!-- Strategic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suitability</masterLabel>
+        <translation><!-- Suitability --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

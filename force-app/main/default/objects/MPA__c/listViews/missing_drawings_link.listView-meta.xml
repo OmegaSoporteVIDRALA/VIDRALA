@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>missing_drawings_link</fullName>
+    <columns>NAME</columns>
+    <columns>Mould_Number__c</columns>
+    <columns>Drawing_Sketch_Number__c</columns>
+    <columns>Sales_Organization_Text__c</columns>
+    <columns>Drawing__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Drawing__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2017 12:00 AM</value>
+    </filters>
+    <label>missing drawings link</label>
+    <sharedTo>
+        <group>Sys_Admin</group>
+    </sharedTo>
+</ListView>

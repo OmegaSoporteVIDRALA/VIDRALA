@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Production_Weight_in_Tons__c</fullName>
+    <description>Field is used for a Rollup Summary on Opportunity page layout. It is a number field populated from a workflow rule to enable the Rollup Summary to work (as the Tonnage field is a formula and can&apos;t be referenced by the Rollup Summary)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total tonnage of the Opportunity based on the Production weight</inlineHelpText>
+    <label>Opportunity Production Weight in Tons</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

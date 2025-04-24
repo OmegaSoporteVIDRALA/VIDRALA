@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Early or Late Loads --></label>
+    <name>Early_or_Late_Loads__c</name>
+</CustomFieldTranslation>

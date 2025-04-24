@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Developments_2022</fullName>
+    <columns>NAME</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>Related_Lead__c</columns>
+    <columns>Related_Opportunity__c</columns>
+    <columns>Next_Steps__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sales_Opportunity_Year__c</field>
+        <operation>equals</operation>
+        <value>2022</value>
+    </filters>
+    <label>Business Developments 2022</label>
+</ListView>

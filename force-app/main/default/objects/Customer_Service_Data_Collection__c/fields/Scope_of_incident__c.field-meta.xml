@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scope_of_incident__c</fullName>
+    <label>Scope of incident</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+                <label>Consumer</label>
+            </value>
+            <value>
+                <fullName>Final Customer</fullName>
+                <default>false</default>
+                <label>Final Customer</label>
+            </value>
+            <value>
+                <fullName>Processing Line</fullName>
+                <default>false</default>
+                <label>Processing Line</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

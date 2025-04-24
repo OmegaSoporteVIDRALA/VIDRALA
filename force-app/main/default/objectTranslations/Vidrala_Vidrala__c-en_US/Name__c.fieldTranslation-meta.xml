@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Name of the customer --></help>
+    <label><!-- Name --></label>
+    <name>Name__c</name>
+    <relationshipLabel><!-- Vidrala Customer Surveys --></relationshipLabel>
+</CustomFieldTranslation>

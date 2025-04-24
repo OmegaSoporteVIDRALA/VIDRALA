@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- TYPE --></label>
+    <name>TYPE__c</name>
+    <picklistValues>
+        <masterLabel>ZDES - Descuento especial</masterLabel>
+        <translation><!-- ZDES - Descuento especial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZDUN - Descuento unitario</masterLabel>
+        <translation><!-- ZDUN - Descuento unitario --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZDVR - Descuento sobre vidrio</masterLabel>
+        <translation><!-- ZDVR - Descuento sobre vidrio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZSKT - Descuento por pronto pago</masterLabel>
+        <translation><!-- ZSKT - Descuento por pronto pago --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

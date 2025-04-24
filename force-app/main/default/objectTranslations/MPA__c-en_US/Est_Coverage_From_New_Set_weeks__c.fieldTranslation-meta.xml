@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Est. Coverage From New Set (weeks) --></label>
+    <name>Est_Coverage_From_New_Set_weeks__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo despaletizado --></label>
+    <name>OM_SAC_tipodespaletizado__c</name>
+    <picklistValues>
+        <masterLabel>Arrastre</masterLabel>
+        <translation><!-- Arrastre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Automática</masterLabel>
+        <translation><!-- Automática --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Despaletizado manual</masterLabel>
+        <translation><!-- Despaletizado manual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuelles</masterLabel>
+        <translation><!-- Fuelles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Semiautomática</masterLabel>
+        <translation><!-- Semiautomática --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

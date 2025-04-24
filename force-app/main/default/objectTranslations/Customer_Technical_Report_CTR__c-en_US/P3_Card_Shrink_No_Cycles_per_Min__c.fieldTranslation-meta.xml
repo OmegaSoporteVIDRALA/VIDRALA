@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- P3- Card &amp; Shrink No. Cycles per Min --></label>
+    <name>P3_Card_Shrink_No_Cycles_per_Min__c</name>
+</CustomFieldTranslation>

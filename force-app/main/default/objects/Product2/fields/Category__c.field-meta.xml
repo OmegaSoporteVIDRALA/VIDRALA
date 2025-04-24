@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>Grupo_Familia__c in vidrala org</description>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aguas</fullName>
+                <default>false</default>
+                <label>Aguas</label>
+            </value>
+            <value>
+                <fullName>Alimentación</fullName>
+                <default>false</default>
+                <label>Alimentación</label>
+            </value>
+            <value>
+                <fullName>Cava, espumosos y sidras</fullName>
+                <default>false</default>
+                <label>Cava, espumosos y sidras</label>
+            </value>
+            <value>
+                <fullName>Cervezas</fullName>
+                <default>false</default>
+                <label>Cervezas</label>
+            </value>
+            <value>
+                <fullName>Conservas</fullName>
+                <default>false</default>
+                <label>Conservas</label>
+            </value>
+            <value>
+                <fullName>Licores</fullName>
+                <default>false</default>
+                <label>Licores</label>
+            </value>
+            <value>
+                <fullName>Refrescos</fullName>
+                <default>false</default>
+                <label>Refrescos</label>
+            </value>
+            <value>
+                <fullName>Vinos</fullName>
+                <default>false</default>
+                <label>Vinos</label>
+            </value>
+            <value>
+                <fullName>Vinos de Oporto</fullName>
+                <default>false</default>
+                <label>Vinos de Oporto</label>
+            </value>
+            <value>
+                <fullName>Zumos</fullName>
+                <default>false</default>
+                <label>Zumos</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

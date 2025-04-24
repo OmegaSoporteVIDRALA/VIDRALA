@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Technical Report (CTR)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Technical Reports (CTR)</value>
+    </caseValues>
+    <layouts>
+        <layout>Customer Technical Report (CTR) Layout</layout>
+        <sections>
+            <label><!-- Additional FBI / Inspection / Massflow / Glideliner --></label>
+            <section>Additional FBI / Inspection / Massflow / Glideliner</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Labeller --></label>
+            <section>Additional Labeller</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Packer Info --></label>
+            <section>Additional Packer Info</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Palletising / Warehouse Info --></label>
+            <section>Additional Palletising / Warehouse Info</section>
+        </sections>
+        <sections>
+            <label><!-- Capper --></label>
+            <section>Capper</section>
+        </sections>
+        <sections>
+            <label><!-- Capsulator --></label>
+            <section>Capsulator</section>
+        </sections>
+        <sections>
+            <label><!-- Case Weigher &amp; Printer --></label>
+            <section>Case Weigher &amp; Printer</section>
+        </sections>
+        <sections>
+            <label><!-- Cooler --></label>
+            <section>Cooler</section>
+        </sections>
+        <sections>
+            <label><!-- Corker / Pushon --></label>
+            <section>Corker / Pushon</section>
+        </sections>
+        <sections>
+            <label><!-- Crowner --></label>
+            <section>Crowner</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Date / Batch Coding --></label>
+            <section>Date / Batch Coding</section>
+        </sections>
+        <sections>
+            <label><!-- Depalletiser --></label>
+            <section>Depalletiser</section>
+        </sections>
+        <sections>
+            <label><!-- Empty Bottle Massflow, Glideliner &amp; EBI --></label>
+            <section>Empty Bottle Massflow, Glideliner &amp; EBI</section>
+        </sections>
+        <sections>
+            <label><!-- FBI / Mass Flow --></label>
+            <section>FBI / Mass Flow</section>
+        </sections>
+        <sections>
+            <label><!-- Filler --></label>
+            <section>Filler</section>
+        </sections>
+        <sections>
+            <label><!-- Label Inspection --></label>
+            <section>Label Inspection</section>
+        </sections>
+        <sections>
+            <label><!-- Labeller --></label>
+            <section>Labeller</section>
+        </sections>
+        <sections>
+            <label><!-- Massflow --></label>
+            <section>Massflow</section>
+        </sections>
+        <sections>
+            <label><!-- Packer --></label>
+            <section>Packer</section>
+        </sections>
+        <sections>
+            <label><!-- Packer 1 --></label>
+            <section>Packer 1</section>
+        </sections>
+        <sections>
+            <label><!-- Packer 2 --></label>
+            <section>Packer 2</section>
+        </sections>
+        <sections>
+            <label><!-- Packer 3 --></label>
+            <section>Packer 3</section>
+        </sections>
+        <sections>
+            <label><!-- Pasteurisation --></label>
+            <section>Pasteurisation</section>
+        </sections>
+        <sections>
+            <label><!-- Retort --></label>
+            <section>Retort</section>
+        </sections>
+        <sections>
+            <label><!-- Rinser --></label>
+            <section>Rinser</section>
+        </sections>
+        <sections>
+            <label><!-- Sleever --></label>
+            <section>Sleever</section>
+        </sections>
+        <sections>
+            <label><!-- Steriliser --></label>
+            <section>Steriliser</section>
+        </sections>
+        <sections>
+            <label><!-- Testing --></label>
+            <section>Testing</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

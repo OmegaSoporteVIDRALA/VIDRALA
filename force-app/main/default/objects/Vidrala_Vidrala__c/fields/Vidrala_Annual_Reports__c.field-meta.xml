@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vidrala_Annual_Reports__c</fullName>
+    <label>Vidrala Annual Reports</label>
+    <referenceTo>Vidrala_Customer_Survey_Annual_Reports__c</referenceTo>
+    <relationshipName>Vidrala_Customer_Surveys</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

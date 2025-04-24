@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAP_Material_Code__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <inlineHelpText>This is the pack spec number which is the last five numbers after the underscore on the pallet label.</inlineHelpText>
+    <label>SAP Material Code</label>
+    <referenceTo>SAP_Material_Code__c</referenceTo>
+    <relationshipLabel>Customer Services Visit Reports</relationshipLabel>
+    <relationshipName>Customer_Services_Visit_Reports</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

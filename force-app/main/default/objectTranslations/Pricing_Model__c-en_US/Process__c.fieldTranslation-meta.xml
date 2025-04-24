@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Process --></label>
+    <name>Process__c</name>
+    <picklistValues>
+        <masterLabel>BB</masterLabel>
+        <translation><!-- BB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NNPB</masterLabel>
+        <translation><!-- NNPB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PB</masterLabel>
+        <translation><!-- PB --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

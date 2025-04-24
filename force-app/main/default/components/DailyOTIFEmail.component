@@ -1,0 +1,83 @@
+<!-- ------------------------------------------------------------------------------------------------------------------
+   Name:		DailyOTIFEmail.component
+   Description: Email Template VF component to Late Loads and Collapsed Loads in Current Month
+					
+   Date         Version Author          	Summary of Changes 
+   --------------------------------------------------------------------------------------------------------------------
+   Nov 2017     1.0     M.Witchalls(Ciber)	Initial Release 
+   Oct 2024		1.1		Improved formating
+------------------------------------------------------------------------------------------------------------------------  -->  
+<apex:component controller="DailyOTIFComponentController" access="global">
+	
+	<style type="text/css">
+		p {
+			font-family: Verdana; 
+			size: 10pt;
+		}
+		table {
+			font-family: Verdana; size: 10pt;
+			border-width: 2px;
+			border-spacing: 5px;
+			border-style: solid;
+			border-color: Gray;
+			background-color: #FFFFFF;
+		}
+		.headerClass {
+			border-width: 1px;
+			padding: 4px;
+			border-style: solid;
+			border-color: #000000;
+			background-color: #CCCCEE;
+			color: #000000;
+			font-weight: bold;
+		}
+		.colClass {
+			color: #000000;
+			border-width: 1px ;
+			padding: 4px ;
+			border-style: solid ;
+			border-color: #DCDCDC;
+			background-color: #FCFCFC;
+			text-align: right;
+		}
+		.totalClass {
+			color: #000000;
+			border-width: 1px ;
+			padding: 4px ;
+			border-style: solid ;
+			border-color: #DCDCDC;
+			background-color: #DCDCDC;
+			text-align: right;
+		}
+	</style> 
+	
+	<p style="font-weight:bold">Current Month Late/Early Loads</p>
+	   
+    <table>
+    	<tr class="headerClass">
+    		<th>Customer</th>
+    		<th>Late Loads</th>
+    		<th>Early Loads</th>
+    		<th>Collapsed</th>
+     	</tr>
+    	<apex:repeat value="{!records}" var="r">
+			<tr class="{!IF(OR(r.customer=='Current Month Totals',r.customer=='Previous 48 Hour Totals'),'totalClass','colClass')}"> 
+				<td style="text-align:left">{!r.customer}</td>
+				<td>{!r.late}</td>
+				<td>{!r.early}</td>
+				<td>{!r.collapsed}</td> 
+			</tr>
+    	</apex:repeat>
+    </table>  
+     
+	<br/>
+	<p><apex:outputLink value="{!last48hourLateReportLink}">Previous 48 Hour Late Load Details</apex:outputLink></p>
+	<p><apex:outputLink value="{!last48hourEarlyReportLink}">Previous 48 Hour Early Load Details</apex:outputLink></p>
+	<p><apex:outputLink value="{!last48hourCollapsedReportLink}">Previous 48 Hour Collapsed Load Details</apex:outputLink></p>
+	
+	<br/>
+	<p><apex:outputLink value="{!lateLoadReportLink}">Current Month Late Load Details</apex:outputLink></p>
+	<p><apex:outputLink value="{!earlyLoadReportLink}">Current Month Early Load Details</apex:outputLink></p>
+	<p><apex:outputLink value="{!collapsedLoadReportLink}">Current Month Collapsed Load Details</apex:outputLink></p>
+	<br/>
+</apex:component>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Fifty_Sharing_Read_writerule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Fifty Sharing Read/writerule</label>
+        <sharedTo>
+            <group>Fifty_Sales_Dir_office</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Fifty_Public_Group</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Pan_European_Rule</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Pan-European Rule</label>
+        <sharedTo>
+            <group>Pan_European_Read_And_Edit</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Pan_European_Read_And_Edit</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

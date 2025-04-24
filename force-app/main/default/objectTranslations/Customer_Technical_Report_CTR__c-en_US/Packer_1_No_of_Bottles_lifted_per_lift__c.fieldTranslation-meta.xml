@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Packer 1 - No of Bottles lifted per lift --></label>
+    <name>Packer_1_No_of_Bottles_lifted_per_lift__c</name>
+</CustomFieldTranslation>

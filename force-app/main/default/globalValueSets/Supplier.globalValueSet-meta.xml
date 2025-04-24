@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Clearpoint</fullName>
+        <default>false</default>
+        <label>Clearpoint</label>
+    </customValue>
+    <customValue>
+        <fullName>Chester Races</fullName>
+        <default>false</default>
+        <label>Chester Races</label>
+    </customValue>
+    <customValue>
+        <fullName>Club Wembley</fullName>
+        <default>false</default>
+        <label>Club Wembley</label>
+    </customValue>
+    <customValue>
+        <fullName>BSDA</fullName>
+        <default>false</default>
+        <label>BSDA</label>
+    </customValue>
+    <customValue>
+        <fullName>BEN</fullName>
+        <default>false</default>
+        <label>BEN</label>
+    </customValue>
+    <customValue>
+        <fullName>BFBI</fullName>
+        <default>false</default>
+        <label>BFBI</label>
+    </customValue>
+    <customValue>
+        <fullName>Kids Out</fullName>
+        <default>false</default>
+        <label>Kids Out</label>
+    </customValue>
+    <customValue>
+        <fullName>Belfry Golf</fullName>
+        <default>false</default>
+        <label>Belfry Golf</label>
+    </customValue>
+    <customValue>
+        <fullName>Lough Erne</fullName>
+        <default>false</default>
+        <label>Lough Erne</label>
+    </customValue>
+    <customValue>
+        <fullName>WSTA</fullName>
+        <default>false</default>
+        <label>WSTA</label>
+    </customValue>
+    <customValue>
+        <fullName>Croke Park</fullName>
+        <default>false</default>
+        <label>Croke Park</label>
+    </customValue>
+    <customValue>
+        <fullName>VIP Match Days</fullName>
+        <default>false</default>
+        <label>VIP Match Days</label>
+    </customValue>
+    <customValue>
+        <fullName>Delaware Catering</fullName>
+        <default>false</default>
+        <label>Delaware Catering</label>
+    </customValue>
+    <customValue>
+        <fullName>British Glass</fullName>
+        <default>false</default>
+        <label>British Glass</label>
+    </customValue>
+    <customValue>
+        <fullName>Manchester United</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Manchester United</label>
+    </customValue>
+    <masterLabel>Supplier</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

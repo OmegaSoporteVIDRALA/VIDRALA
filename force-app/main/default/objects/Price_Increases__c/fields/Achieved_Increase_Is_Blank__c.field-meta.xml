@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Achieved_Increase_Is_Blank__c</fullName>
+    <description>This will be checked if the &apos;Achieved Increase&apos; field is blank. (0 is not a blank value).</description>
+    <formula>ISBLANK(Achieved_Increase__c)</formula>
+    <inlineHelpText>This will be checked if the &apos;Achieved Increase&apos; field is blank. (0 is not a blank value).</inlineHelpText>
+    <label>Achieved Increase Is Blank</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

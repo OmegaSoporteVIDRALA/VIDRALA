@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Would this customer fit in with other strategic or operational goals? --></help>
+    <label>Otro ajuste estratégico u operacional?</label>
+    <name>Other_Strategic_or_Operational_Fit__c</name>
+</CustomFieldTranslation>

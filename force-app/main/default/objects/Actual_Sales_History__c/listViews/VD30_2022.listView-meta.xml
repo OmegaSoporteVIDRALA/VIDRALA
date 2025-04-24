@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VD30_2022</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>SAP_Material_Code__c</columns>
+    <columns>Market__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Year__c</field>
+        <operation>equals</operation>
+        <value>2022</value>
+    </filters>
+    <filters>
+        <field>Sales_Organization__c</field>
+        <operation>equals</operation>
+        <value>VD30</value>
+    </filters>
+    <label>VD30 2022</label>
+</ListView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Were the customer&apos;s production lines down? --></help>
+    <label><!-- Customer&apos;s lines down? --></label>
+    <name>Customers_lines_down__c</name>
+</CustomFieldTranslation>

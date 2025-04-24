@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notify_Last_Modify_User_that_they_did_not_change_the_Status</fullName>
+        <description>Notify Last Modify User that they did not change the Status</description>
+        <protected>false</protected>
+        <recipients>
+            <field>LastModifiedById</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Pricing_Model_Update_w_o_Status_Change</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_Model_2_Planning</fullName>
+        <description>Pricing Model - 2 Planning</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>mark.cousins@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>siobhan.crowe@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Pricing_Model_Submitted_to_Planning</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_Model_3_Design</fullName>
+        <description>Pricing Model - 3 Design</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>niall.mcgrath@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Pricing_Model_Submitted_to_Design</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_Model_4_Distribution</fullName>
+        <description>Pricing Model - 4 Distribution</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>elizabeth.carty1@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>martin.mcgoldrick@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Pricing_Model_Submitted_to_Distribution</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_Model_5_Finance</fullName>
+        <description>Pricing Model - 5 Finance</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>mark.cousins@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Pricing_Model_Submitted_to_Finance</template>
+    </alerts>
+    <alerts>
+        <fullName>Pricing_Model_Completed</fullName>
+        <description>Pricing Model - Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Pricing_Model_Completed</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Set_Rec_Type_1_Sales</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>x1Sales</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Rec Type - 1 Sales</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Rec_Type_2_Planning</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>x2Planning</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Rec Type - 2 Planning</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Rec_Type_3_Design</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>x3Design</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Rec Type - 3 Design</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Rec_Type_4_Distribution</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>x4Distribution</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Rec Type - 4 Distribution</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Rec_Type_5_Finance</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>X5_Finance</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Rec Type - 5 Finance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Rec_Type_6_Done</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>x6_Completed</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Rec Type - 6 Done</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

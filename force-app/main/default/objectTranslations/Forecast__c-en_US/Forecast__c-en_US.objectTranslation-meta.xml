@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Forecast</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Forecasts</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- TonnageList --></label>
+        <name>TonnageList</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- UnitsList --></label>
+        <name>UnitsList</name>
+    </fieldSets>
+    <layouts>
+        <layout>Forecast Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast Revisions --></label>
+            <section>Forecast Revisions</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

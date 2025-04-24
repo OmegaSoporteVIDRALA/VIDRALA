@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Are the blank moulds being used for another job - if yes record mould number and set letter --></help>
+    <label><!-- Reason for Mould Retirement? --></label>
+    <name>Reason_for_Mould_Retirement_18__c</name>
+</CustomFieldTranslation>

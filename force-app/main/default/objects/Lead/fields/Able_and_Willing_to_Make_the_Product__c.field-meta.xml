@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Able_and_Willing_to_Make_the_Product__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Can or would Encirc make the product?</description>
+    <inlineHelpText>Can or would Encirc make the product?</inlineHelpText>
+    <label>Able and Willing to Make the Product?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

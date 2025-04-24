@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Massflow Transportation --></label>
+    <name>Massflow_Transportation__c</name>
+    <picklistValues>
+        <masterLabel>Dry Lube</masterLabel>
+        <translation><!-- Dry Lube --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Falling Bottles</masterLabel>
+        <translation><!-- Falling Bottles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Massflow</masterLabel>
+        <translation><!-- Massflow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metal</masterLabel>
+        <translation><!-- Metal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Lube</masterLabel>
+        <translation><!-- No Lube --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plastic</masterLabel>
+        <translation><!-- Plastic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single-file</masterLabel>
+        <translation><!-- Single-file --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wet Lube</masterLabel>
+        <translation><!-- Wet Lube --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

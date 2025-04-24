@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Amber</fullName>
+        <default>false</default>
+        <label>Amber</label>
+    </customValue>
+    <customValue>
+        <fullName>Artic Blue</fullName>
+        <default>false</default>
+        <label>Artic Blue</label>
+    </customValue>
+    <customValue>
+        <fullName>Autumn Leaf</fullName>
+        <default>false</default>
+        <label>Autumn Leaf</label>
+    </customValue>
+    <customValue>
+        <fullName>Cobalt Blue</fullName>
+        <default>false</default>
+        <label>Cobalt Blue</label>
+    </customValue>
+    <customValue>
+        <fullName>Flint</fullName>
+        <default>false</default>
+        <label>Flint</label>
+    </customValue>
+    <customValue>
+        <fullName>Green</fullName>
+        <default>false</default>
+        <label>Green</label>
+    </customValue>
+    <customValue>
+        <fullName>Mallica</fullName>
+        <default>false</default>
+        <label>Mallica</label>
+    </customValue>
+    <customValue>
+        <fullName>Sea Green</fullName>
+        <default>false</default>
+        <label>Sea Green</label>
+    </customValue>
+    <masterLabel>Glass Colour</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

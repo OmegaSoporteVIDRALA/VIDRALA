@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <body>
+        <div class="slds-card">
+            <div style="text-align:center;  padding-bottom: 15px;" class="slds-text-heading_large">Classification Tables</div>
+            <div style="text-align:center;">
+                <img src="{!$Resource.CriticalOrFood}" width="450" height="170"/>
+            </div>
+            <div style="text-align:center;  padding-top: 15px; padding-bottom: 15px;">
+                <img src="{!$Resource.Classification}" width="450" height="190"/>
+            </div>
+        </div>
+    </body>
+</aura:component>

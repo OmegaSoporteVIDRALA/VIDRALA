@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF
+(  Lead_Score__c  &lt; 10, 
+IMAGE(&quot;https://encirc360--c.eu6.content.force.com/servlet/servlet.ImageServer?id=015580000004wqH&amp;oid=00D58000000H83h&amp;lastMod=1451909251000&quot;, &quot;red&quot;, 14, 36),
+
+IF( Lead_Score__c &lt; 30,
+IMAGE(&quot;https://encirc360--c.eu6.content.force.com/servlet/servlet.ImageServer?id=015580000004wqM&amp;oid=00D58000000H83h&amp;lastMod=1451909297000&quot;, &quot;yellow&quot;, 14, 36),
+
+IF( Lead_Score__c &gt;30,
+IMAGE(&quot;https://encirc360--c.eu6.content.force.com/servlet/servlet.ImageServer?id=015580000004wqC&amp;oid=00D58000000H83h&amp;lastMod=1451909217000&quot;, &quot;green&quot;, 14, 36),
+
+
+IMAGE(&quot;/img/samples/color_red.gif&quot;, &quot;red&quot;, 14, 36)
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lead Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Contract_Status_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( CONTAINS( Commercial_Contract_Status__c , &apos;Green&apos;) , 
+ IMAGE( &apos;/resource/CommercialContractStatusGREEN&apos;, &apos; Green&apos; , 20, 44), 
+ IF(CONTAINS( Commercial_Contract_Status__c , &apos;Amber&apos;) , IMAGE( &apos;/resource/CommercialContractStatusAMBER&apos;, &apos; Amber&apos; , 20, 44),  
+ IF(CONTAINS( Commercial_Contract_Status__c , &apos;Red&apos;) , IMAGE( &apos;/resource/CommercialContractStatusRED&apos;, &apos; Red&apos; , 20, 44), null) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Commercial Contract Status (Formula)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

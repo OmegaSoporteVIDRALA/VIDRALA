@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomHelpMenuSection xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customHelpMenuItems>
+        <linkUrl>https://encirc360.my.salesforce.com/sfc/p/58000000H83h/a/4I000001Vt3U/HxgvV27ZQdTp6K3eWSF04aX2L2nqWmjz3Fae3KOhIKY</linkUrl>
+        <masterLabel>Encirc Training</masterLabel>
+        <sortOrder>1</sortOrder>
+    </customHelpMenuItems>
+    <customHelpMenuItems>
+        <linkUrl>https://encirc360.my.salesforce.com/sfc/p/58000000H83h/a/4I000001el3d/PgdYHC74LGkCTodHvHTvbkTbnaB_LJSNka5UmfzAh74</linkUrl>
+        <masterLabel>Opportunity Object Help Sheet</masterLabel>
+        <sortOrder>2</sortOrder>
+    </customHelpMenuItems>
+    <customHelpMenuItems>
+        <linkUrl>https://encirc360.my.salesforce.com/sfc/p/58000000H83h/a/4I000001el3e/m3tiX0nDfcmMHqNtbyMyPdJjAczU7r5y9EZOYqssT98</linkUrl>
+        <masterLabel>Business Development Object Help Sheet</masterLabel>
+        <sortOrder>3</sortOrder>
+    </customHelpMenuItems>
+    <masterLabel>Encirc Help</masterLabel>
+</CustomHelpMenuSection>

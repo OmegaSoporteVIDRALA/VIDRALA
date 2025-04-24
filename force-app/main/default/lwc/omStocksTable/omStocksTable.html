@@ -1,0 +1,44 @@
+<template>
+    <div class="table-container">
+        <table class="custom-table">
+            <!-- Encabezados principales -->
+            <thead>
+                <tr>
+                    <th rowspan="2">SC: Color</th>
+                    <th rowspan="2">Material</th>
+                    <th rowspan="2">Descripción</th>
+                    <th rowspan="2">Mes.Año</th>
+                    <th colspan="3">Ctd. Stock Total BOT</th>
+                    <th colspan="3">Ctd. Stock Total PAL</th>
+                </tr>
+                <!-- Sub-encabezados -->
+                <tr>
+                    <th>Lote</th>
+                    <th>Exis. Bloqueadas</th>
+                    <th>Exis. Libres</th>
+                    <th>Exis. NoConf. Planta</th>
+                    <th>---</th>
+                    <th>Exis. Libres</th>
+                </tr>
+            </thead>
+
+            <!-- Filas de datos -->
+            <tbody>
+                <template for:each={tableData} for:item="row">
+                    <tr key={row.id}>
+                        <td>{row.color}</td>
+                        <td>{row.material}</td>
+                        <td>{row.descripcion}</td>
+                        <td>{row.mesAno}</td>
+                        <td>{row.lote}</td>
+                        <td>{row.exisBloqueadasBot}</td>
+                        <td>{row.exisLibresBot}</td>
+                        <td>{row.exisNoConfPlanta}</td>
+                        <td>{row.dash}</td>
+                        <td>{row.exisLibresPal}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>

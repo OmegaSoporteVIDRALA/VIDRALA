@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- WARNING - Mould Storage may start to cost after 6 months --></help>
+    <label><!-- Remind Owner in 6 months to review again --></label>
+    <name>Remind_me_in_6_months_to_review_again__c</name>
+</CustomFieldTranslation>

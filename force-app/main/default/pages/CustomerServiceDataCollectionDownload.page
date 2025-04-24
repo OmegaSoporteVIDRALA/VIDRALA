@@ -1,0 +1,103 @@
+<apex:page standardController="Customer_Service_Data_Collection__c" renderAs="PDF" applyBodyTag="false">
+    <head>
+        <style>
+            body {
+                font-family: 'Arial Unicode MS';
+            }
+            #masthead{
+                width: 100%
+                display:inline-block;
+            }
+            #title {
+                float: left;
+            }
+            #logo {
+                float:right;
+            }
+            #details{
+                width: 100%
+                display: inline-block;
+                clear: both;
+            }
+            @page {
+                @bottom-left {
+                    content: element(footer);
+                }
+            }            
+            div.footer {
+                display: block;
+                padding: 5px;
+                position: running(footer);
+            }            
+            .pagenumber:before {
+                content: counter(page);
+            }            
+            .pagecount:before {
+                content: counter(pages);
+            }            
+            p img{
+                height: 300px;
+            }            
+            .sfdc_richtext img {
+                border: 0;
+                width: 650px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="footer">
+            <div>Page
+                <span class="pagenumber" /> of
+                <span class="pagecount" />
+            </div>
+        </div>
+        <div id="masthead">
+            <h1 id="title">Customer Service Data Collection</h1>
+            <img id="logo" width="150" src="{!URLFOR($Resource.Encirc)}" alt="Encirc" />
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p>1. Customer: {!Customer_Service_Data_Collection__c.Customer__r.Name}</p>
+        <p>2. Filling line: {!Customer_Service_Data_Collection__c.Filling_line__c}</p>
+        <p>3. Filling site: {!Customer_Service_Data_Collection__c.Filling_site__c}</p>
+        <p>4. Reception date: {!Customer_Service_Data_Collection__c.Reception_date__c}</p>
+        <p>5. Customer NCR Code: {!Customer_Service_Data_Collection__c.Customer_NCR_Code__c}</p>
+        <p style="padding-top: 30px;">6. Model Details</p>
+        <p style="padding-left: 40px;">6.1 Model and Material Number: {!Customer_Service_Data_Collection__c.Model_Material_Id__c}</p>
+        <p style="padding-left: 40px;">6.2 Container Name: {!Customer_Service_Data_Collection__c.Container_Name__c}</p>
+        <p style="padding-left: 40px;">6.3 Works order number: {!Customer_Service_Data_Collection__c.Works_order_number__c}</p>
+        <p style="padding-left: 40px;">6.4 Batch/Lot number (Delivery note or order): {!Customer_Service_Data_Collection__c.Batch_number__c}</p>
+        <p style="padding-left: 40px;">6.5 DOM: {!Customer_Service_Data_Collection__c.DOM__c}</p>
+        <p style="padding-top: 30px;">7. Scope of incident: {!Customer_Service_Data_Collection__c.Scope_of_incident__c}</p>
+        <p style="padding-left: 40px;">7.1 Other: {!Customer_Service_Data_Collection__c.Other__c}</p>
+        <p>8. Incident description</p>
+        <p style="padding-left: 40px;">8.1 Incident Description: {!Customer_Service_Data_Collection__c.Incident_Description__c}</p>
+        <p style="padding-left: 40px;">8.2 Impact for customer: {!Customer_Service_Data_Collection__c.Impact_for_customer__c}</p>
+        <p style="padding-left: 40px;">8.3 Detection point: {!Customer_Service_Data_Collection__c.Detection_point__c}</p>
+        <p style="padding-left: 40px;">8.4 Affected cavites: {!Customer_Service_Data_Collection__c.Affected_cavities__c}</p>
+        <p style="padding-left: 40px;">8.5 Defective quantity / Breakage rate: {!Customer_Service_Data_Collection__c.Percentage__c}</p>
+        <p style="padding-left: 40px;">8.6 Finished products affected: {!Customer_Service_Data_Collection__c.Finished_products_affected__c}</p>
+        <p style="padding-top: 30px;" class="testClass">9. CTS Hypothesis:
+            <apex:outputText value="{!Customer_Service_Data_Collection__c.CTS_Hypothesis__c}" escape="false" />
+        </p>
+        <p>10. Incident classification for Customer: {!Customer_Service_Data_Collection__c.Incident_classification_for_Customer__c}</p>
+        <p>
+            <span>11. Return needed: {!Customer_Service_Data_Collection__c.Return_needed__c}</span>
+            <span style="float:right; padding-left: 40px;">Affected Qty (Pallets): {!Customer_Service_Data_Collection__c.Affected_QTY__c}</span>
+        </p>
+        <p>
+            <span>12. Charges of future risk: {!Customer_Service_Data_Collection__c.Charges_of_future_risk__c}</span>
+            <span style="float:right; padding-left: 40px;">Affected QTY (£ / €): {!Customer_Service_Data_Collection__c.Affected_QTY_pounds__c}</span>
+        </p>
+        <p>13. Global Categorization: {!Customer_Service_Data_Collection__c.Global_Categorization__c} (-see table below)</p>
+        <p>14. Supporting Information: {!Customer_Service_Data_Collection__c.Sampling_Pictures__c}</p>
+        <p style="padding-left: 40px;"> 14.1 Supporting Information:
+            <apex:outputField style="height: 50px" value="{!Customer_Service_Data_Collection__c.Sampling_Image__c}" />
+        </p>
+        <div style="text-align:center;  padding-top: 15px;">
+            <apex:image value="{!URLFOR($Resource.Classification)}" width="450" height="190" />
+        </div>
+    </body>
+</apex:page>

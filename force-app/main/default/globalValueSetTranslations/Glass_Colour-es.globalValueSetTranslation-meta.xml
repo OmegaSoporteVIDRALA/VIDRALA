@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Amber</masterLabel>
+        <translation>Ambar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Artic Blue</masterLabel>
+        <translation>Azul ártico</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Autumn Leaf</masterLabel>
+        <translation>Hoja muerta</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cobalt Blue</masterLabel>
+        <translation>Azul cobalto</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Flint</masterLabel>
+        <translation>Blanco</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Green</masterLabel>
+        <translation>Verde</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mallica</masterLabel>
+        <translation><!-- Mallica --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sea Green</masterLabel>
+        <translation><!-- Sea Green --></translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

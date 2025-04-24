@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Insatisfacción</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Insatisfacciones</value>
+    </caseValues>
+    <layouts>
+        <layout>Case Page Layout</layout>
+        <sections>
+            <label><!-- Análisis Insatisfacción --></label>
+            <section>Análisis Insatisfacción</section>
+        </sections>
+        <sections>
+            <label><!-- Parte de apertura --></label>
+            <section>Parte de apertura</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Fifty Calidad Insatisfacción --></label>
+        <name>Fifty_Calidad_Insatisfaccion</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Indica los campos obligatorios antes de cambiar de etapa: Cliente, Código reclamación cliente, Modelo y denominación --></errorMessage>
+        <name>Campos_obligatorios_parte_de_apertura</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Obligatorio indicar el Código de la insatisfacción en E-Gestiona para poder pasar a la siguiente etapa --></errorMessage>
+        <name>Codigo_Egestiona</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Analisis_de_insatisfaccion --></label>
+        <name>Conga_Composer_Analisis_de_insatisfaccion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Parte_de_Apertura --></label>
+        <name>Conga_Composer_Parte_de_Apertura</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+</CustomObjectTranslation>

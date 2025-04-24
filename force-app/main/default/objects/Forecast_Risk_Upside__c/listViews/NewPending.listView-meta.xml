@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NewPending</fullName>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Year__c</columns>
+    <columns>Month__c</columns>
+    <columns>Comments__c</columns>
+    <columns>Risks__c</columns>
+    <columns>Upsides__c</columns>
+    <columns>Approval_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>New - Unsubmitted,Pending Approval</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Forecast_Risk_Upside__c.Standard</value>
+    </filters>
+    <label>New and Pending</label>
+</ListView>

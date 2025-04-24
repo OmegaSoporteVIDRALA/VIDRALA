@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Por favor, informa más al detalle por qué se ha perdido la oportunidad</help>
+    <label>Mas info: razones de la pérdida</label>
+    <name>Additional_Analysis_of_Reason_for__c</name>
+</CustomFieldTranslation>

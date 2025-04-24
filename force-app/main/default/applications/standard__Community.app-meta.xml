@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Idea</tabs>
+    <tabs>standard-IdeaTheme</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Pricing_Model__c</tabs>
+    <tabs>Drawing__c</tabs>
+    <tabs>Deal_Sheet__c</tabs>
+    <tabs>My_Activities</tabs>
+    <tabs>Customer_Services_Visit_Report__c</tabs>
+    <tabs>Historical_MPA_s__c</tabs>
+    <tabs>Historical_Design_Briefs__c</tabs>
+    <tabs>Price_Increases__c</tabs>
+    <tabs>Certificate_of_Conformance__c</tabs>
+    <tabs>Line_Visit_Reports__c</tabs>
+    <tabs>Augmented_Reality__c</tabs>
+    <tabs>Commercial_Contract_Status__c</tabs>
+    <tabs>Customer_Contact_Report__c</tabs>
+    <tabs>SAP_Material_Code__c</tabs>
+    <tabs>Business_Development__c</tabs>
+    <tabs>Commercial_Contracts__c</tabs>
+    <tabs>Customer_Service_Data_Collection__c</tabs>
+    <tabs>Trial_Reports</tabs>
+    <tabs>Discount__c</tabs>
+    <tabs>CTR_CSR__c</tabs>
+</CustomApplication>

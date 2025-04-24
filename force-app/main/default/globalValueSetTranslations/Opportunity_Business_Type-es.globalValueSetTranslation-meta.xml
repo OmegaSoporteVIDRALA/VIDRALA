@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Existing Customer: Existing Bottle &amp; New Volume</masterLabel>
+        <translation>Cliente existente: Producto existente, nuevo volumen</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Existing Customer: New Bottle &amp; New Volume</masterLabel>
+        <translation>Cliente existente: Nueva producto y nuevo volumen</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Existing Customer: New Bottle Counter Spec</masterLabel>
+        <translation>Cliente existentes: Nuevo modelo personalizado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Existing Customer: New Bottle Replacing Existing Volume</masterLabel>
+        <translation>Cliente existente: Nuevo producto que reemplaza volumen existente</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Customer: Existing Bottle</masterLabel>
+        <translation>Nuevo cliente: Producto existente</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Customer: New Bottle</masterLabel>
+        <translation>Nuevo cliente, nuevo producto</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

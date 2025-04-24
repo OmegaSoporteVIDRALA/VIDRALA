@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_VID_PaymentMethod__c</fullName>
+    <description>Shows Related Account&apos;s payment method</description>
+    <externalId>false</externalId>
+    <formula>Opportunity.Account.Forma_de_pago__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Forma de pago de la cuenta relacionada</inlineHelpText>
+    <label>Payment Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

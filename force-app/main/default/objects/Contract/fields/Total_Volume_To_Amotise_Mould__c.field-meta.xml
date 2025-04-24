@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Volume_To_Amotise_Mould__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Moulds_price__c / Moulds_Price_In_Product__c) * 1000000</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Units</inlineHelpText>
+    <label>Total Volume To Amotise Mould</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When is the customer likely to renew or reopen this Closed/Lost Opportunity --></help>
+    <label>Cerrado/perdido fecha renovación</label>
+    <name>Closed_Lost_Renewal_Date__c</name>
+</CustomFieldTranslation>

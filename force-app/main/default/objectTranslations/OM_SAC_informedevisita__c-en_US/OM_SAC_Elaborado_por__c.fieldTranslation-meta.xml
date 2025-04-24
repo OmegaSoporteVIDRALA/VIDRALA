@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Elaboración --></label>
+    <name>OM_SAC_Elaborado_por__c</name>
+    <relationshipLabel><!-- Informes de visita (Elaboración) --></relationshipLabel>
+</CustomFieldTranslation>

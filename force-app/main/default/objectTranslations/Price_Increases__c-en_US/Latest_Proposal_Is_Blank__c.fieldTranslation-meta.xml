@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This will be checked if the &apos;Latest Proposal&apos; field is blank. (0 is not a blank value). --></help>
+    <label><!-- Latest Proposal Is Blank --></label>
+    <name>Latest_Proposal_Is_Blank__c</name>
+</CustomFieldTranslation>

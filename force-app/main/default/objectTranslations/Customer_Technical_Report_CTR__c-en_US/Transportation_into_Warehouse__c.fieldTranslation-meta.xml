@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Transportation into Warehouse --></label>
+    <name>Transportation_into_Warehouse__c</name>
+    <picklistValues>
+        <masterLabel>AGV</masterLabel>
+        <translation><!-- AGV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conveyors</masterLabel>
+        <translation><!-- Conveyors --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forklift Truck</masterLabel>
+        <translation><!-- Forklift Truck --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

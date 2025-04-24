@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Process__c</fullName>
+    <label>Process</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BB</fullName>
+                <default>false</default>
+                <label>BB</label>
+            </value>
+            <value>
+                <fullName>NNPB</fullName>
+                <default>false</default>
+                <label>NNPB</label>
+            </value>
+            <value>
+                <fullName>PB</fullName>
+                <default>false</default>
+                <label>PB</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

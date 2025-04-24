@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Buffer_Details</fullName>
+    <active>true</active>
+    <description>When &quot;Yes&quot; is selected in the &quot;Additional_Buffer_Requirements__c&quot; field the user must provide additional commentary in the &quot;Additional_Buffer_Details__c&quot;  field.</description>
+    <errorConditionFormula>ISPICKVAL(Additional_Buffer_Requirements__c , &quot;Yes&quot;)
+
+&amp;&amp;
+
+ISBLANK( Additional_Buffer_Details__c )</errorConditionFormula>
+    <errorDisplayField>Additional_Buffer_Details__c</errorDisplayField>
+    <errorMessage>If there are additioinal local or handling buffer requirements you must specify them here</errorMessage>
+</ValidationRule>

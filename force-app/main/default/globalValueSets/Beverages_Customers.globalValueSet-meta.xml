@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accolade</fullName>
+        <default>false</default>
+        <label>Accolade</label>
+    </customValue>
+    <customValue>
+        <fullName>Benchmark Drinks</fullName>
+        <default>false</default>
+        <label>Benchmark Drinks</label>
+    </customValue>
+    <customValue>
+        <fullName>Bibendum</fullName>
+        <default>false</default>
+        <label>Bibendum</label>
+    </customValue>
+    <customValue>
+        <fullName>Bibendum Off Trade</fullName>
+        <default>false</default>
+        <label>Bibendum Off Trade</label>
+    </customValue>
+    <customValue>
+        <fullName>Brand Phoenix</fullName>
+        <default>false</default>
+        <label>Brand Phoenix</label>
+    </customValue>
+    <customValue>
+        <fullName>Britvic Soft Drinks</fullName>
+        <default>false</default>
+        <label>Britvic Soft Drinks</label>
+    </customValue>
+    <customValue>
+        <fullName>Bruce Jack Wines</fullName>
+        <default>false</default>
+        <label>Bruce Jack Wines</label>
+    </customValue>
+    <customValue>
+        <fullName>Bundaberg</fullName>
+        <default>false</default>
+        <label>Bundaberg</label>
+    </customValue>
+    <customValue>
+        <fullName>CASELLA</fullName>
+        <default>false</default>
+        <label>CASELLA</label>
+    </customValue>
+    <customValue>
+        <fullName>CYT</fullName>
+        <default>false</default>
+        <label>CYT</label>
+    </customValue>
+    <customValue>
+        <fullName>Diageo Ltd</fullName>
+        <default>false</default>
+        <label>Diageo Ltd</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct Wines</fullName>
+        <default>false</default>
+        <label>Direct Wines</label>
+    </customValue>
+    <customValue>
+        <fullName>E&amp;J Gallo</fullName>
+        <default>false</default>
+        <label>E&amp;J Gallo</label>
+    </customValue>
+    <customValue>
+        <fullName>First Cape</fullName>
+        <default>false</default>
+        <label>First Cape</label>
+    </customValue>
+    <customValue>
+        <fullName>Freixenet Copestick</fullName>
+        <default>false</default>
+        <label>Freixenet Copestick</label>
+    </customValue>
+    <customValue>
+        <fullName>Grupo Penaflor</fullName>
+        <default>false</default>
+        <label>Grupo Penaflor</label>
+    </customValue>
+    <customValue>
+        <fullName>Indevin</fullName>
+        <default>false</default>
+        <label>Indevin</label>
+    </customValue>
+    <customValue>
+        <fullName>KOPPARBERG ASB</fullName>
+        <default>false</default>
+        <label>KOPPARBERG ASB</label>
+    </customValue>
+    <customValue>
+        <fullName>Mocktails</fullName>
+        <default>false</default>
+        <label>Mocktails</label>
+    </customValue>
+    <customValue>
+        <fullName>Nugan Wines</fullName>
+        <default>false</default>
+        <label>Nugan Wines</label>
+    </customValue>
+    <customValue>
+        <fullName>Off Piste</fullName>
+        <default>false</default>
+        <label>Off Piste</label>
+    </customValue>
+    <customValue>
+        <fullName>Packamama</fullName>
+        <default>false</default>
+        <label>Packamama</label>
+    </customValue>
+    <customValue>
+        <fullName>Skinny Brands</fullName>
+        <default>false</default>
+        <label>Skinny Brands</label>
+    </customValue>
+    <customValue>
+        <fullName>Sxollie Cider</fullName>
+        <default>false</default>
+        <label>Sxollie Cider</label>
+    </customValue>
+    <customValue>
+        <fullName>TWE_Treasury Wines</fullName>
+        <default>false</default>
+        <label>TWE Treasury Wines</label>
+    </customValue>
+    <customValue>
+        <fullName>VSPT</fullName>
+        <default>false</default>
+        <label>VSPT</label>
+    </customValue>
+    <customValue>
+        <fullName>Westons Cider</fullName>
+        <default>false</default>
+        <label>Westons Cider</label>
+    </customValue>
+    <customValue>
+        <fullName>WX Brands</fullName>
+        <default>false</default>
+        <label>WX Brands</label>
+    </customValue>
+    <masterLabel>Beverages Customers</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

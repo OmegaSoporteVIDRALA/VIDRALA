@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Event_Budget__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Parent Budget</description>
+    <label>Parent Budget</label>
+    <referenceTo>Event_Budget__c</referenceTo>
+    <relationshipLabel>Event Budget</relationshipLabel>
+    <relationshipName>Marketing_Event_Budget</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

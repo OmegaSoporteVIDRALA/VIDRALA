@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Was_load_replaced__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Was collapsed load replaced by a subsequent dispatch?</description>
+    <inlineHelpText>Was collapsed load replaced by a subsequent dispatch?</inlineHelpText>
+    <label>Was load replaced?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

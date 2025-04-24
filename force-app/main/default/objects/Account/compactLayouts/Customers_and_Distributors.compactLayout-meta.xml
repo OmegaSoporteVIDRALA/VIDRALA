@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customers_and_Distributors</fullName>
+    <fields>Name</fields>
+    <fields>SAP_Account_Number__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Industry</fields>
+    <fields>Commercial_Contract_Status_Formula__c</fields>
+    <fields>Contract_Expire_Date_Formula__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Sales_Admin_Lookup__c</fields>
+    <fields>Customer_Service__c</fields>
+    <label>Customers and Distributors</label>
+</CompactLayout>

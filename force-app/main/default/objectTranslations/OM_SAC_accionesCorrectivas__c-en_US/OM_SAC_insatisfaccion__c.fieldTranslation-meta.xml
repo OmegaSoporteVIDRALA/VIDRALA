@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Insatisfacción --></label>
+    <name>OM_SAC_insatisfaccion__c</name>
+    <relationshipLabel><!-- Acciones correctivas --></relationshipLabel>
+</CustomFieldTranslation>

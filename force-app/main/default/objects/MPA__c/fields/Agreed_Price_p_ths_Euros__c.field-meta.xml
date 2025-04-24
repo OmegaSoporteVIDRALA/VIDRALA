@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreed_Price_p_ths_Euros__c</fullName>
+    <description>Please use this field if the agreed price is Euros</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please use this field if the agreed price is Euros</inlineHelpText>
+    <label>Agreed Price p/ths (€ Euros)</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

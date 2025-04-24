@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_Trials</fullName>
+    <columns>NAME</columns>
+    <columns>Mould_Number__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>MPA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trial_Stage__c</field>
+        <operation>equals</operation>
+        <value>Live,Re Trial</value>
+    </filters>
+    <filters>
+        <field>Did_The_Trial_Take_Place__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <label>Live Trials</label>
+</ListView>

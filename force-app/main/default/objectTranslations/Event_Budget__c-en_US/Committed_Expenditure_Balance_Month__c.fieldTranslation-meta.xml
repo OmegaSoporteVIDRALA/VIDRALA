@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Month the balance is expected to be paid --></help>
+    <label><!-- Committed Balance Month --></label>
+    <name>Committed_Expenditure_Balance_Month__c</name>
+</CustomFieldTranslation>

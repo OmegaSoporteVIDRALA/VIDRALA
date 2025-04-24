@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Progress_to_Proposal</fullName>
+    <active>true</active>
+    <description>RecordType.Name = &quot;Encirc Master Opportunity&quot; added Spain migration</description>
+    <errorConditionFormula>AND( RecordType.Name = &quot;Encirc Master Opportunity&quot; ,
+ ISPICKVAL( StageName , &quot;Proposal&quot;),
+ OR(
+  TEXT( Container_Colour__c ) = &quot;&quot;,
+  ISBLANK( Container_Profile__c ),
+  ISBLANK( Container_Weight__c ),
+  TEXT( Encirc_Appetite_For_Opportunity__c ) = &quot;&quot;,
+  ISBLANK( Encirc_Opportunity_Appetite_Explained__c ),
+  ISBLANK( NextStep ),
+  ISBLANK( Expected_Annualised_Volume_000_s__c )
+ )
+)</errorConditionFormula>
+    <errorMessage>Please ensure all Introduction fields and the Expected Annualised Volume (000&apos;s) field are populated</errorMessage>
+</ValidationRule>

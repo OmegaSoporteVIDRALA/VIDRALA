@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Location__c</fullName>
+    <label>Delivery Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ABBEY - Abbeyleix - ABBEY</fullName>
+                <default>false</default>
+                <label>ABBEY - Abbeyleix - ABBEY</label>
+            </value>
+            <value>
+                <fullName>ABER - Aberdeen - ABER</fullName>
+                <default>false</default>
+                <label>ABER - Aberdeen - ABER</label>
+            </value>
+            <value>
+                <fullName>GLAS - Airdrie - GLAS</fullName>
+                <default>false</default>
+                <label>GLAS - Airdrie - GLAS</label>
+            </value>
+            <value>
+                <fullName>DUND - Arbroath - DUND</fullName>
+                <default>false</default>
+                <label>DUND - Arbroath - DUND</label>
+            </value>
+            <value>
+                <fullName>BAIL - Baileborough - BAIL</fullName>
+                <default>false</default>
+                <label>BAIL - Baileborough - BAIL</label>
+            </value>
+            <value>
+                <fullName>BALLY - Ballymena - BALLY</fullName>
+                <default>false</default>
+                <label>BALLY - Ballymena - BALLY</label>
+            </value>
+            <value>
+                <fullName>BEL - Belfast - BEL</fullName>
+                <default>false</default>
+                <label>BEL - Belfast - BEL</label>
+            </value>
+            <value>
+                <fullName>BARN - Barnsley - BARN</fullName>
+                <default>false</default>
+                <label>BARN - Barnsley - BARN</label>
+            </value>
+            <value>
+                <fullName>BEDFO - Bedford - BEDFO</fullName>
+                <default>false</default>
+                <label>BEDFO - Bedford - BEDFO</label>
+            </value>
+            <value>
+                <fullName>BELG - Belgium - BELG</fullName>
+                <default>false</default>
+                <label>BELG - Belgium - BELG</label>
+            </value>
+            <value>
+                <fullName>BIRM - Birmingham - BIRM</fullName>
+                <default>false</default>
+                <label>BIRM - Birmingham - BIRM</label>
+            </value>
+            <value>
+                <fullName>BRIS - Bristol - BRIS</fullName>
+                <default>false</default>
+                <label>BRIS - Bristol - BRIS</label>
+            </value>
+            <value>
+                <fullName>BURT - Burton on Trent - BURT</fullName>
+                <default>false</default>
+                <label>BURT - Burton on Trent - BURT</label>
+            </value>
+            <value>
+                <fullName>BUSH - Bushmills - BUSH</fullName>
+                <default>false</default>
+                <label>BUSH - Bushmills - BUSH</label>
+            </value>
+            <value>
+                <fullName>CAM - Cambridgeshire - CAM</fullName>
+                <default>false</default>
+                <label>CAM - Cambridgeshire - CAM</label>
+            </value>
+            <value>
+                <fullName>WESTS - Chichester - WESTS</fullName>
+                <default>false</default>
+                <label>WESTS - Chichester - WESTS</label>
+            </value>
+            <value>
+                <fullName>CLON - Clonmel - CLON</fullName>
+                <default>false</default>
+                <label>CLON - Clonmel - CLON</label>
+            </value>
+            <value>
+                <fullName>CUMN - Cumnock - CUMN</fullName>
+                <default>false</default>
+                <label>CUMN - Cumnock - CUMN</label>
+            </value>
+            <value>
+                <fullName>DER - Derry - DER</fullName>
+                <default>false</default>
+                <label>DER - Derry - DER</label>
+            </value>
+            <value>
+                <fullName>DEV - Devon - DEV</fullName>
+                <default>false</default>
+                <label>DEV - Devon - DEV</label>
+            </value>
+            <value>
+                <fullName>DONE - Donegal - DONE</fullName>
+                <default>false</default>
+                <label>DONE - Donegal - DONE</label>
+            </value>
+            <value>
+                <fullName>DUB - Dublin - DUB</fullName>
+                <default>false</default>
+                <label>DUB - Dublin - DUB</label>
+            </value>
+            <value>
+                <fullName>DURHA - Durham - DURHA</fullName>
+                <default>false</default>
+                <label>DURHA - Durham - DURHA</label>
+            </value>
+            <value>
+                <fullName>GLAS - East Kilbride - GLAS</fullName>
+                <default>false</default>
+                <label>GLAS - East Kilbride - GLAS</label>
+            </value>
+            <value>
+                <fullName>ENNI - Enniscorthy - ENNI</fullName>
+                <default>false</default>
+                <label>ENNI - Enniscorthy - ENNI</label>
+            </value>
+            <value>
+                <fullName>FAVE - Faversham - FAVE</fullName>
+                <default>false</default>
+                <label>FAVE - Faversham - FAVE</label>
+            </value>
+            <value>
+                <fullName>GLAS - Glasgow - GLAS</fullName>
+                <default>false</default>
+                <label>GLAS - Glasgow - GLAS</label>
+            </value>
+            <value>
+                <fullName>GLOUC - Gloucestershire - GLOUC</fullName>
+                <default>false</default>
+                <label>GLOUC - Gloucestershire - GLOUC</label>
+            </value>
+            <value>
+                <fullName>GLAS - Grangemouth - GLAS</fullName>
+                <default>false</default>
+                <label>GLAS - Grangemouth - GLAS</label>
+            </value>
+            <value>
+                <fullName>HAMP - Hampshire - HAMP</fullName>
+                <default>false</default>
+                <label>HAMP - Hampshire - HAMP</label>
+            </value>
+            <value>
+                <fullName>HUDD - Huddersfield - HUDD</fullName>
+                <default>false</default>
+                <label>HUDD - Huddersfield - HUDD</label>
+            </value>
+            <value>
+                <fullName>KEND - Kendal - KEND</fullName>
+                <default>false</default>
+                <label>KEND - Kendal - KEND</label>
+            </value>
+            <value>
+                <fullName>LANC - Lancashire - LANC</fullName>
+                <default>false</default>
+                <label>LANC - Lancashire - LANC</label>
+            </value>
+            <value>
+                <fullName>LEDB - Ledbury - LEDB</fullName>
+                <default>false</default>
+                <label>LEDB - Ledbury - LEDB</label>
+            </value>
+            <value>
+                <fullName>LEEDS - Leeds - LEEDS</fullName>
+                <default>false</default>
+                <label>LEEDS - Leeds - LEEDS</label>
+            </value>
+            <value>
+                <fullName>LEVEN - Leven - LEVEN</fullName>
+                <default>false</default>
+                <label>LEVEN - Leven - LEVEN</label>
+            </value>
+            <value>
+                <fullName>LIM - Limerick - LIM</fullName>
+                <default>false</default>
+                <label>LIM - Limerick - LIM</label>
+            </value>
+            <value>
+                <fullName>LIVE - Liverpool - LIVE</fullName>
+                <default>false</default>
+                <label>LIVE - Liverpool - LIVE</label>
+            </value>
+            <value>
+                <fullName>MANC - Manchester - MANC</fullName>
+                <default>false</default>
+                <label>MANC - Manchester - MANC</label>
+            </value>
+            <value>
+                <fullName>MID - Middlesex - MID</fullName>
+                <default>false</default>
+                <label>MID - Middlesex - MID</label>
+            </value>
+            <value>
+                <fullName>MONM - Monmouthshire - MONM</fullName>
+                <default>false</default>
+                <label>MONM - Monmouthshire - MONM</label>
+            </value>
+            <value>
+                <fullName>NORT - Northampton - NORT</fullName>
+                <default>false</default>
+                <label>NORT - Northampton - NORT</label>
+            </value>
+            <value>
+                <fullName>NORW - Norwich - NORW</fullName>
+                <default>false</default>
+                <label>NORW - Norwich - NORW</label>
+            </value>
+            <value>
+                <fullName>PERT - Perthshire - PERT</fullName>
+                <default>false</default>
+                <label>PERT - Perthshire - PERT</label>
+            </value>
+            <value>
+                <fullName>POWYS - Powys - POWYS</fullName>
+                <default>false</default>
+                <label>POWYS - Powys - POWYS</label>
+            </value>
+            <value>
+                <fullName>PRES - Preston - PRES</fullName>
+                <default>false</default>
+                <label>PRES - Preston - PRES</label>
+            </value>
+            <value>
+                <fullName>RUNC - Runcorn - RUNC</fullName>
+                <default>false</default>
+                <label>RUNC - Runcorn - RUNC</label>
+            </value>
+            <value>
+                <fullName>SELB - Selby - SELB</fullName>
+                <default>false</default>
+                <label>SELB - Selby - SELB</label>
+            </value>
+            <value>
+                <fullName>SHEP - Shepton Mallet - SHEP</fullName>
+                <default>false</default>
+                <label>SHEP - Shepton Mallet - SHEP</label>
+            </value>
+            <value>
+                <fullName>SHROP - Shropshire - SHROP</fullName>
+                <default>false</default>
+                <label>SHROP - Shropshire - SHROP</label>
+            </value>
+            <value>
+                <fullName>STAFF - Staffordshire - STAFF</fullName>
+                <default>false</default>
+                <label>STAFF - Staffordshire - STAFF</label>
+            </value>
+            <value>
+                <fullName>STOC - Stockport - STOC</fullName>
+                <default>false</default>
+                <label>STOC - Stockport - STOC</label>
+            </value>
+            <value>
+                <fullName>SUFFO - Suffolk - SUFFO</fullName>
+                <default>false</default>
+                <label>SUFFO - Suffolk - SUFFO</label>
+            </value>
+            <value>
+                <fullName>TADC - Tadcaster - TADC</fullName>
+                <default>false</default>
+                <label>TADC - Tadcaster - TADC</label>
+            </value>
+            <value>
+                <fullName>TIPP - Tipperary - TIPP</fullName>
+                <default>false</default>
+                <label>TIPP - Tipperary - TIPP</label>
+            </value>
+            <value>
+                <fullName>WARR - Warrington - WARR</fullName>
+                <default>false</default>
+                <label>WARR - Warrington - WARR</label>
+            </value>
+            <value>
+                <fullName>WATER - Waterford - WATER</fullName>
+                <default>false</default>
+                <label>WATER - Waterford - WATER</label>
+            </value>
+            <value>
+                <fullName>GLAS - Westlothian - GLAS</fullName>
+                <default>false</default>
+                <label>GLAS - Westlothian - GLAS</label>
+            </value>
+            <value>
+                <fullName>WESTS - West Sussex - WESTS</fullName>
+                <default>false</default>
+                <label>WESTS - West Sussex - WESTS</label>
+            </value>
+            <value>
+                <fullName>WOR - Worchester - WOR</fullName>
+                <default>false</default>
+                <label>WOR - Worchester - WOR</label>
+            </value>
+            <value>
+                <fullName>BELG - Ghent - BELG</fullName>
+                <default>false</default>
+                <label>BELG - Ghent - BELG</label>
+            </value>
+            <value>
+                <fullName>FRANC - France - FRANC</fullName>
+                <default>false</default>
+                <label>FRANC - France - FRANC</label>
+            </value>
+            <value>
+                <fullName>SALM - Salmsbury - SALM</fullName>
+                <default>false</default>
+                <label>SALM - Salmsbury - SALM</label>
+            </value>
+            <value>
+                <fullName>EXWO - Ex Works - EXWO</fullName>
+                <default>false</default>
+                <label>EXWO - Ex Works - EXWO</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

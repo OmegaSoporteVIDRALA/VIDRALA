@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RestrictionRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <enforcementType>Restrict</enforcementType>
+    <masterLabel>Packaging trial rule Italy</masterLabel>
+    <recordFilter>ISPICKVAL(Owner:User.Sales_Organisation_Name__c, &apos;Italy&apos;)=true</recordFilter>
+    <targetEntity>Packaging_Trial__c</targetEntity>
+    <userCriteria>$Permission.ITALYUSER=true</userCriteria>
+    <version>1</version>
+</RestrictionRule>

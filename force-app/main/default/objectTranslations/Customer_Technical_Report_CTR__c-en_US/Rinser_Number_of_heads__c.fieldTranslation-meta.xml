@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rinser - Number of heads --></label>
+    <name>Rinser_Number_of_heads__c</name>
+</CustomFieldTranslation>

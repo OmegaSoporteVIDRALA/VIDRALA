@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Plant --></label>
+    <name>Plant__c</name>
+    <picklistValues>
+        <masterLabel>Aiala Vidrio</masterLabel>
+        <translation><!-- Aiala Vidrio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Castellar Vidrio</masterLabel>
+        <translation><!-- Castellar Vidrio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Crisnova Vidrio</masterLabel>
+        <translation><!-- Crisnova Vidrio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gallo Vidrio</masterLabel>
+        <translation><!-- Gallo Vidrio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Santos Barosa</masterLabel>
+        <translation><!-- Santos Barosa --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Additional Labeller - Label Substrate --></label>
+    <name>Additional_Labeller_Label_Substrate__c</name>
+    <picklistValues>
+        <masterLabel>Clear PVC Backed</masterLabel>
+        <translation><!-- Clear PVC Backed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coloured PVC Backed</masterLabel>
+        <translation><!-- Coloured PVC Backed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metallic Paper Backed</masterLabel>
+        <translation><!-- Metallic Paper Backed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paper Backed</masterLabel>
+        <translation><!-- Paper Backed --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cost for Labelling Change Parts --></label>
+    <name>Cost_for_Labelling_Change_Parts__c</name>
+</CustomFieldTranslation>

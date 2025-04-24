@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Volumen en unidades (000)</label>
+    <name>Volume_Units_000__c</name>
+</CustomFieldTranslation>

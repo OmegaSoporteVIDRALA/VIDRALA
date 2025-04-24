@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please enter specific User who will be required to approve this MPA from the Planning Department --></help>
+    <label><!-- Record Approver: Planning Department --></label>
+    <name>Record_Approver_Planning_Department__c</name>
+    <relationshipLabel><!-- MPAs (Record Approver: Planning Department) --></relationshipLabel>
+</CustomFieldTranslation>

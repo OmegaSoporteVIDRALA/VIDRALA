@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Once the record is complete and your happy for the email to be sent to Scott and David please tick this box and save the record. --></help>
+    <label><!-- Form Complete --></label>
+    <name>Form_Complete__c</name>
+</CustomFieldTranslation>

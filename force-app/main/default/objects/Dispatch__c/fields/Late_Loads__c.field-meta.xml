@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Late_Loads__c</fullName>
+    <description>Number of times delivery was delayed</description>
+    <inlineHelpText>Number of times delivery was delayed</inlineHelpText>
+    <label>Late Loads</label>
+    <summaryFilterItems>
+        <field>Late_Load__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Late</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Late_Load__c.Dispatch__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

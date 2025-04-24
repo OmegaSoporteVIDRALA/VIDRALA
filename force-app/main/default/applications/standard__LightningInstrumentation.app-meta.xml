@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>LightningInstrumentation</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Encirc_Competitors</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Encirc_Investors_Owners</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Other</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Press</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Trade_Bodies</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Suppliers</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <tabs>standard-LightningInstrumentation</tabs>
+    <tabs>Business_Development__c</tabs>
+    <tabs>Commercial_Contracts__c</tabs>
+    <tabs>Customer_Service_Data_Collection__c</tabs>
+    <tabs>Trial_Reports</tabs>
+    <tabs>Discount__c</tabs>
+    <tabs>CTR_CSR__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

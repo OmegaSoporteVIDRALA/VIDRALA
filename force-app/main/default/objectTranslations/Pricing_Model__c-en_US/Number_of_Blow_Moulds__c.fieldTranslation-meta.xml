@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Number of Blow Moulds --></label>
+    <name>Number_of_Blow_Moulds__c</name>
+</CustomFieldTranslation>

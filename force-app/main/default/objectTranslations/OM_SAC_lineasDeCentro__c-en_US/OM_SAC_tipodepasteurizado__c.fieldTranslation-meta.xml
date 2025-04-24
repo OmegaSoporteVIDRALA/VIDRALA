@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de pasteurizado --></label>
+    <name>OM_SAC_tipodepasteurizado__c</name>
+    <picklistValues>
+        <masterLabel>Flash</masterLabel>
+        <translation><!-- Flash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Túnel</masterLabel>
+        <translation><!-- Túnel --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

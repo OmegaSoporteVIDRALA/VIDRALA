@@ -1,0 +1,9 @@
+<design:component>
+	<design:attribute name="relatedObjectAPI" label="Related Object API Name" />
+    <design:attribute name="lookupAPI" label="Lookup API Name For Main Object" />
+    <design:attribute name="fieldAPIs" label="Field API Names" />
+    <design:attribute name="whereCondition" label="Additional Filers" />
+    <design:attribute name="additionalRequest" label="Request for the crossObjects" />
+    <design:attribute name="additionalAPI" label="Cross API Name" />
+    <design:attribute name="pxHeight" label="Size(px)" />
+</design:component>

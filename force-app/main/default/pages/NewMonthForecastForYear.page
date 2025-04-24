@@ -1,0 +1,35 @@
+<apex:page id="thePage" standardController="Account" extensions="NewMonthForecastExtensionController" action="{!check}" lightningStylesheets="true">
+    <!-- -----------------------------------------------------------------------------------------------------------------------
+   Name:		NewMonthForecastsForYear.page
+   Description: VF Page for 'New Month Forecasts for Year' button
+					
+   Date         Version Author          	Summary of Changes 
+   -----------  ------- ------------------	--------------------------------------------------------------------------------
+   Dec 2017     1.0     M.Witchalls(Ciber)	Initial Release 
+------------------------------------------------------------------------------------------------------------------------  -->
+    <apex:form id="theForm">
+        <apex:pageBlock id="thePageBlock">
+            <apex:pageMessages id="messages" />
+            <div style="text-align:center;">
+                {!$Label.SalesOrg_Selection_Label}
+                <div style="padding:1%;">
+                    {!$Label.SalesOrg_UK_Checkbox_Label}
+                    <apex:inputCheckbox value="{!isUK}">
+                        <apex:actionsupport event="onchange" rerender="theButton" />
+                    </apex:inputCheckbox>
+                    {!$Label.SalesOrg_Italy_Checkbox_Label}
+                    <apex:inputCheckbox value="{!isItaly}">
+                        <apex:actionsupport event="onchange" rerender="theButton" />
+                    </apex:inputCheckbox>
+                    {!$Label.SalesOrg_Spain_Checkbox_Label}
+                    <apex:inputCheckbox value="{!isSpain}">
+                        <apex:actionsupport event="onchange" rerender="theButton" />
+                    </apex:inputCheckbox>
+                </div>
+                <apex:commandButton id="theButton" value="Continue" action="{!contin}" immediate="false" rendered="{!accountNum != null}"
+                    disabled="{!IF(isUK == false && isItaly == false && isSpain == false, true, false)}" />
+                <apex:commandButton value="Cancel" action="{!cancel}" immediate="true" />
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

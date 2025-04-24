@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_Don_t_Know__c</fullName>
+    <formula>NOT(ISBLANK(I_Dont_Know_Text__c))</formula>
+    <label>I Don’t Know</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

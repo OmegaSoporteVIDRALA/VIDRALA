@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_The_Product_Price_Required_fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+  OR ( 
+ISBLANK( Percentage__c ) ,
+ISBLANK( Moulds_Price_In_Product__c ) 
+),
+ISPICKVAL(Moulds_Agreement__c , &quot;Sobre precio modelo (In the product price)&quot;),
+ 
+ NOT(ISPICKVAL(Moulds_Agreement__c , &quot;Cliente 100% (100% Customer)&quot;)),
+NOT(ISPICKVAL(Moulds_Agreement__c , &quot;Sólo valor residual (Only remaining value)&quot;)),
+NOT(ISPICKVAL(Moulds_Agreement__c , &quot;Vidrala 100% (100% Vidrala)&quot;))
+
+
+)</errorConditionFormula>
+    <errorMessage>Percentage and Moulds Price in Product must be filled in</errorMessage>
+</ValidationRule>

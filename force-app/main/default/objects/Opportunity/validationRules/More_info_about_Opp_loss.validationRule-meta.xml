@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>More_info_about_Opp_loss</fullName>
+    <active>false</active>
+    <description>User must enter supplementary info about the reason why an Opp has been lost if the picklist choice is anything OTHER THAN &quot;Qualified Out&quot;</description>
+    <errorConditionFormula>AND(
+
+OR(
+ISPICKVAL(  Reason_Opportunity_Was_Lost__c  , &quot;Lost: Price&quot;),
+ISPICKVAL(  Reason_Opportunity_Was_Lost__c  , &quot;Lost: Quality&quot;),
+ISPICKVAL(  Reason_Opportunity_Was_Lost__c  , &quot;Lost: Design&quot;),
+ISPICKVAL(  Reason_Opportunity_Was_Lost__c  , &quot;Lost: Timescales&quot;),
+ISPICKVAL(  Reason_Opportunity_Was_Lost__c  , &quot;Lost: Legals&quot;)),
+
+
+ISBLANK(( Additional_Analysis_of_Reason_for__c ))
+
+
+
+)</errorConditionFormula>
+    <errorDisplayField>Additional_Analysis_of_Reason_for__c</errorDisplayField>
+    <errorMessage>Please provide additional information about why the Opportunity was lost</errorMessage>
+</ValidationRule>

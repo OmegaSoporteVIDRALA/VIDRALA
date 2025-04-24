@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pallet_Type_Planning__c</fullName>
+    <description>Planning field</description>
+    <label>Pallet Type (Planning)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PPT04 - Blue Pallet</fullName>
+                <default>false</default>
+                <label>PPT04 - Blue Pallet</label>
+            </value>
+            <value>
+                <fullName>PPT12 - EQ</fullName>
+                <default>false</default>
+                <label>PPT12 - EQ</label>
+            </value>
+            <value>
+                <fullName>PPT17 - Heat Treated</fullName>
+                <default>false</default>
+                <label>PPT17 - Heat Treated</label>
+            </value>
+            <value>
+                <fullName>PPT29 - Red Pallet</fullName>
+                <default>false</default>
+                <label>PPT29 - Red Pallet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

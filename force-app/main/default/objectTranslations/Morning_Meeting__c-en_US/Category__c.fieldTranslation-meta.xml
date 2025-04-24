@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Category --></label>
+    <name>Category__c</name>
+    <picklistValues>
+        <masterLabel>Logistics - Transport</masterLabel>
+        <translation><!-- Logistics - Transport --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistics - Warehouse</masterLabel>
+        <translation><!-- Logistics - Warehouse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planning - Re Work</masterLabel>
+        <translation><!-- Planning - Re Work --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quality - Glass</masterLabel>
+        <translation><!-- Quality - Glass --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quality - Packaging</masterLabel>
+        <translation><!-- Quality - Packaging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

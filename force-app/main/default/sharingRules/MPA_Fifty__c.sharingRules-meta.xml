@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>MPA_Fifty</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MPA Fifty</label>
+        <sharedTo>
+            <group>Fifty_Sales_Dir_office</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Fifty_Public_Group</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>pan_eu_share</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>pan eu share</label>
+        <sharedTo>
+            <group>Pan_European_Read_And_Edit</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Pan_European_Read_And_Edit</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

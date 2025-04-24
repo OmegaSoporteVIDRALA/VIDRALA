@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2022</fullName>
+    <columns>Unique_ID__c</columns>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Customer_A_c_No__c</columns>
+    <columns>Calendar_Month__c</columns>
+    <columns>Year__c</columns>
+    <columns>Budget__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Year__c</field>
+        <operation>equals</operation>
+        <value>2022</value>
+    </filters>
+    <label>2022</label>
+</ListView>

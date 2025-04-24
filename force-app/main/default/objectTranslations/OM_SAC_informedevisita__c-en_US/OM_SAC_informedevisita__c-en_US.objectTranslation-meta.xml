@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Informe de visita</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Informes de visita</value>
+    </caseValues>
+    <layouts>
+        <layout>Informe de visita Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Conga_Composer_Informe_de_Visita --></label>
+        <name>Conga_Composer_Informe_de_Visita</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Informe_de_Visita12 --></label>
+        <name>Conga_Composer_Informe_de_Visita12</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Informe_de_visita1 --></label>
+        <name>Conga_Composer_Informe_de_visita1</name>
+    </webLinks>
+</CustomObjectTranslation>

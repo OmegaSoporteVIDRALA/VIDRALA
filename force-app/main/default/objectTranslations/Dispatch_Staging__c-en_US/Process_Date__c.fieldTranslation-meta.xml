@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date included in a batch load to the Dispatch object --></help>
+    <label><!-- Process Date --></label>
+    <name>Process_Date__c</name>
+</CustomFieldTranslation>

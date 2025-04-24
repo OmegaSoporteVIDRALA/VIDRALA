@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>(Early or) Late Load</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>(Early or) Late Loads</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Collapsed Load Fields --></label>
+        <name>CollapsedLoad</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Customer Informed --></label>
+        <name>CustomerInformed</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Early Load Fields --></label>
+        <name>EarlyLoad</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Late Load Fields --></label>
+        <name>LateLoad</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Customers Lines Down --></label>
+        <name>LinesDown</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Read Only Fields --></label>
+        <name>ReadOnly</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Replacement Fields --></label>
+        <name>Replacement</name>
+    </fieldSets>
+    <layouts>
+        <layout>Collapsed Load Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Early Load Layout</layout>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Late Load Layout</layout>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Load collapsed on delivery --></description>
+        <label><!-- Collapsed Load --></label>
+        <name>Collapsed_Load</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Delivery early and not collapsed --></description>
+        <label><!-- Early Load --></label>
+        <name>Early_Load</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Delivery late but not collapsed --></description>
+        <label><!-- Late Load --></label>
+        <name>Late_Load</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please provide comments before adding the customer requested date --></errorMessage>
+        <name>Comment_must_be_filled_before_CR_date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For an Early Load, the new delivery date must be earlier than the planned delivery date --></errorMessage>
+        <name>Delivery_date_early_if_Status_is_Early</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For a Late Load, the new delivery date must be later than the planned delivery date --></errorMessage>
+        <name>Delivery_date_late_if_Status_is_Late</name>
+    </validationRules>
+</CustomObjectTranslation>

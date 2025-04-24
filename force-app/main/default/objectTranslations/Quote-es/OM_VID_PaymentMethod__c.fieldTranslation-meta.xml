@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Forma de pago de la cuenta relacionada --></help>
+    <label><!-- Payment Method --></label>
+    <name>OM_VID_PaymentMethod__c</name>
+</CustomFieldTranslation>

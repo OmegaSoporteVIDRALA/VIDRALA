@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Alcance cliente --></label>
+    <name>OM_SAC_alcanceCliente__c</name>
+    <picklistValues>
+        <masterLabel>Cliente final</masterLabel>
+        <translation><!-- Cliente final --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consumidor</masterLabel>
+        <translation><!-- Consumidor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Linea envasado</masterLabel>
+        <translation><!-- Linea envasado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Otro</masterLabel>
+        <translation><!-- Otro --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

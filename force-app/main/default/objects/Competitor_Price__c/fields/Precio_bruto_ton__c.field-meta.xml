@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precio_bruto_ton__c</fullName>
+    <formula>(Gross_Price_1000__c / Product__r.Weight__c )*1000</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Este campo se completa en automático teniendo en cuenta el precio bruto indicado  y el peso del modelo registrado</inlineHelpText>
+    <label>Precio bruto €/ton</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

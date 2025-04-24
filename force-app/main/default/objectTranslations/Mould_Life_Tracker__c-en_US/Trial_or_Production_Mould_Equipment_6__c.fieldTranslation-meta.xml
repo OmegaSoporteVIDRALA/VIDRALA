@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Trial or Production Mould Equipment? --></label>
+    <name>Trial_or_Production_Mould_Equipment_6__c</name>
+    <picklistValues>
+        <masterLabel>Production</masterLabel>
+        <translation><!-- Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trial</masterLabel>
+        <translation><!-- Trial --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

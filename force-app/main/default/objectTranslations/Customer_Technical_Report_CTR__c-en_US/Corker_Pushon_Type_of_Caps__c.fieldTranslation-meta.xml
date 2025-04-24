@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Corker / Pushon - Type of Caps --></label>
+    <name>Corker_Pushon_Type_of_Caps__c</name>
+    <picklistValues>
+        <masterLabel>Cork</masterLabel>
+        <translation><!-- Cork --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Push on</masterLabel>
+        <translation><!-- Push on --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

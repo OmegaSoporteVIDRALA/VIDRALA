@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Score__c</fullName>
+    <description>Creates simple lead score where certain fields are both necessary and sufficient.</description>
+    <externalId>false</externalId>
+    <formula>IF( Volume_Satisfies_Production_Criteria__c , 10, 0)  + 
+IF(  Competitor_s_Existing_Customer__c  , 10, 0) +
+IF(   Able_and_Willing_to_Make_the_Product__c   , 10, 0) +
+IF(   Does_Not_Cannibalise_Distributor__c   , 10, 0) +
+IF(   Timeframe_achievable__c   , 10, 0) +
+IF(   Decision_Process_Known__c   , 3, 0) +
+IF(   Able_to_Add_Value__c   , 3, 0) +
+IF(    Other_Strategic_or_Operational_Fit__c    , 3, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lead Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

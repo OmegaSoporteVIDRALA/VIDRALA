@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Drawing</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Drawings</value>
+    </caseValues>
+    <layouts>
+        <layout>Container Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fifty Container Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- MPA Details --></label>
+            <section>MPA Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Update drawing --></label>
+        <name>Update_drawing</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Drawings (Encirc) --></label>
+        <name>Drawings_Encirc</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Drawings (Fifty) --></label>
+        <name>Drawings_Fifty</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

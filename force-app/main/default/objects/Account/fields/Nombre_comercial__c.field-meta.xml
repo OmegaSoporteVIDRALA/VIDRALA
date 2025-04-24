@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nombre_comercial__c</fullName>
+    <description>Indicar el Nombre cComercial de la cuenta en caso de ser diferente a la Razón social.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicar en este campo el nombre comercial del cliente. En ocasiones la razón social es distinta al nombre comercial, y la búsqueda en Salesforce se hace más complicada.</inlineHelpText>
+    <label>Nombre comercial</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

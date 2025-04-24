@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sample Purpose --></label>
+    <name>Sample_Purpose__c</name>
+    <picklistValues>
+        <masterLabel>Filling</masterLabel>
+        <translation><!-- Filling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Packaging</masterLabel>
+        <translation><!-- Packaging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transit</masterLabel>
+        <translation><!-- Transit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visual Only</masterLabel>
+        <translation><!-- Visual Only --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

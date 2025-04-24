@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fields_required_for_Qualification</fullName>
+    <active>true</active>
+    <description>Certain fields must be completed before a lead can be Qualified.</description>
+    <errorConditionFormula>TEXT(Status) = &apos;Qualified&apos;
+&amp;&amp;
+ ISBLANK( Email ) 
+ &amp;&amp; 
+AND(Phone = &quot;&quot;, MobilePhone = &quot;&quot;
+
+)</errorConditionFormula>
+    <errorMessage>Before a Lead can be converted it must have a Status of Qualified - Yellow/Green, you must also complete the Email and either the Phone or Mobile fields.</errorMessage>
+</ValidationRule>

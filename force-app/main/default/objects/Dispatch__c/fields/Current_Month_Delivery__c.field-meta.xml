@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Month_Delivery__c</fullName>
+    <description>Is the month of the delivery date equal to yesterday&apos;s month of the year?</description>
+    <formula>IF($Setup.Current_Month__c.Delivery_Month__c &gt; 0,
+  AND(
+    MONTH(DATEVALUE(Planned_Delivery_Date__c)) == $Setup.Current_Month__c.Delivery_Month__c,
+    YEAR(DATEVALUE(Planned_Delivery_Date__c)) == $Setup.Current_Month__c.Year__c
+  ),
+  AND(
+    MONTH(DATEVALUE(Planned_Delivery_Date__c)) == MONTH(TODAY()-1),
+    YEAR(DATEVALUE(Planned_Delivery_Date__c)) == YEAR(TODAY()-1)
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Current Month Delivery</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

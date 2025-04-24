@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How many tickets are still available after acceptances and still pending invitations --></help>
+    <label>Tickets restantes</label>
+    <name>Remaining_Tickets__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Shows the related Accounts Owner --></help>
+    <label><!-- Glass Account Manager --></label>
+    <name>Glass_Account_Manager_24__c</name>
+</CustomFieldTranslation>

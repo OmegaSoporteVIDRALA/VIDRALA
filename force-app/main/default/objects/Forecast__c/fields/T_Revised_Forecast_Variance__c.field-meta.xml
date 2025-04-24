@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>T_Revised_Forecast_Variance__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Revised_Forecast_Tonnage__c =0,0, Revised_Forecast_Tonnage__c - Forecast_Tonnage__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>T Revised Forecast Variance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

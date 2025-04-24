@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Week_4_Tonnage_Rounded__c</fullName>
+    <label>T Week 4</label>
+    <summarizedField>Forecast__c.Week_4_Tonnage_Rounded__c</summarizedField>
+    <summaryForeignKey>Forecast__c.Month__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

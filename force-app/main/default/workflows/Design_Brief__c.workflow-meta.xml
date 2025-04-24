@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>NEW_Design_Brief_is_Created</fullName>
+        <description>NEW Design Brief is Created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design_Brief_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/NEW_Design_Brief_is_Created</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Design_Process_Record_Created</fullName>
+        <description>New Design Process Record Created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>caitlin.mcclements1@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>hugh.farrell@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>niall.mcgrath@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/New_Design_Record_Created</template>
+    </alerts>
+</Workflow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recalculate_Apex_Sharing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Enables a System Administrator to redo the Apex Sharing on Child Objects</description>
+    <label>Recalculate Apex Sharing on Save</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

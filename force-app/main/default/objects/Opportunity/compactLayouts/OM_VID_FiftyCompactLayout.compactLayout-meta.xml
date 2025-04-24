@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_VID_FiftyCompactLayout</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>CloseDate</fields>
+    <fields>OwnerId</fields>
+    <fields>Opportunity_Business_Type__c</fields>
+    <label>Fifty Compact Layout</label>
+</CompactLayout>

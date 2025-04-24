@@ -1,0 +1,29 @@
+<template >
+    <template if:true={isDataEmpty}>
+    <lightning-card  title="Discounts" icon-name="standard:account" >
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                hide-checkbox-column="true">
+        </lightning-datatable>
+    <footer style="text-align:center; margin-top: 10px;">
+        <a onclick={handleGotoDiscounts}>View All</a>
+    </footer>   
+</lightning-card>
+</template>
+<template if:true={isDataAgreementEmpty}>
+    <lightning-card  title="Packaging Agreements" icon-name="standard:account" >
+                <lightning-datatable
+                        key-field="id"
+                        data={dataAgreement}
+                        columns={agreementColumns}
+                        hide-checkbox-column="true">                       
+                </lightning-datatable>
+            <footer style="text-align:center; margin-top: 10px;">
+                <a onclick={handleGotoAgreements}>View All</a>
+            </footer> 
+        </p>
+    </lightning-card>  
+</template> 
+</template>

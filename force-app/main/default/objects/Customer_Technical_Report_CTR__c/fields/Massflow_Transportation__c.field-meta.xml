@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Massflow_Transportation__c</fullName>
+    <label>Massflow Transportation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Massflow</fullName>
+                <default>false</default>
+                <label>Massflow</label>
+            </value>
+            <value>
+                <fullName>Single-file</fullName>
+                <default>false</default>
+                <label>Single-file</label>
+            </value>
+            <value>
+                <fullName>Metal</fullName>
+                <default>false</default>
+                <label>Metal</label>
+            </value>
+            <value>
+                <fullName>Plastic</fullName>
+                <default>false</default>
+                <label>Plastic</label>
+            </value>
+            <value>
+                <fullName>Wet Lube</fullName>
+                <default>false</default>
+                <label>Wet Lube</label>
+            </value>
+            <value>
+                <fullName>Dry Lube</fullName>
+                <default>false</default>
+                <label>Dry Lube</label>
+            </value>
+            <value>
+                <fullName>No Lube</fullName>
+                <default>false</default>
+                <label>No Lube</label>
+            </value>
+            <value>
+                <fullName>Falling Bottles</fullName>
+                <default>false</default>
+                <label>Falling Bottles</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

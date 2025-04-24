@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pricing Model</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pricing Models</value>
+    </caseValues>
+    <layouts>
+        <layout>1 Sales Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Design --></label>
+            <section>Design</section>
+        </sections>
+        <sections>
+            <label><!-- Distribution --></label>
+            <section>Distribution</section>
+        </sections>
+        <sections>
+            <label><!-- Pack Spec (Per Pallet) --></label>
+            <section>Pack Spec (Per Pallet)</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Bottle Info --></label>
+            <section>Sales - Bottle Info</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Delivery and Packing --></label>
+            <section>Sales - Delivery and Packing</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Drawings --></label>
+            <section>Sales - Drawings</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - General Info --></label>
+            <section>Sales - General Info</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+        <sections>
+            <label><!-- Timeline --></label>
+            <section>Timeline</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>2 Planning Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Design --></label>
+            <section>Design</section>
+        </sections>
+        <sections>
+            <label><!-- Distribution --></label>
+            <section>Distribution</section>
+        </sections>
+        <sections>
+            <label><!-- Pack Spec (Per Pallet) --></label>
+            <section>Pack Spec (Per Pallet)</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Bottle Info --></label>
+            <section>Sales - Bottle Info</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Delivery and Packing --></label>
+            <section>Sales - Delivery and Packing</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Drawings --></label>
+            <section>Sales - Drawings</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - General Info --></label>
+            <section>Sales - General Info</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+        <sections>
+            <label><!-- Timeline --></label>
+            <section>Timeline</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>3 Design Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Design --></label>
+            <section>Design</section>
+        </sections>
+        <sections>
+            <label><!-- Distribution --></label>
+            <section>Distribution</section>
+        </sections>
+        <sections>
+            <label><!-- Pack Spec (Per Pallet) --></label>
+            <section>Pack Spec (Per Pallet)</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Bottle Info --></label>
+            <section>Sales - Bottle Info</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Delivery and Packing --></label>
+            <section>Sales - Delivery and Packing</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Drawings --></label>
+            <section>Sales - Drawings</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - General Info --></label>
+            <section>Sales - General Info</section>
+        </sections>
+        <sections>
+            <label><!-- Section --></label>
+            <section>Section</section>
+        </sections>
+        <sections>
+            <label><!-- Timeline --></label>
+            <section>Timeline</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>4 Distribution Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Design --></label>
+            <section>Design</section>
+        </sections>
+        <sections>
+            <label><!-- Distribution --></label>
+            <section>Distribution</section>
+        </sections>
+        <sections>
+            <label><!-- Pack Spec (Per Pallet) --></label>
+            <section>Pack Spec (Per Pallet)</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Bottle Info --></label>
+            <section>Sales - Bottle Info</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Delivery and Packing --></label>
+            <section>Sales - Delivery and Packing</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Drawings --></label>
+            <section>Sales - Drawings</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - General Info --></label>
+            <section>Sales - General Info</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+        <sections>
+            <label><!-- Timeline --></label>
+            <section>Timeline</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>5 Finance Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Design --></label>
+            <section>Design</section>
+        </sections>
+        <sections>
+            <label><!-- Distribution --></label>
+            <section>Distribution</section>
+        </sections>
+        <sections>
+            <label><!-- Pack Spec (Per Pallet) --></label>
+            <section>Pack Spec (Per Pallet)</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Bottle Info --></label>
+            <section>Sales - Bottle Info</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Delivery and Packing --></label>
+            <section>Sales - Delivery and Packing</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Drawings --></label>
+            <section>Sales - Drawings</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - General Info --></label>
+            <section>Sales - General Info</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+        <sections>
+            <label><!-- Timeline --></label>
+            <section>Timeline</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>6 Completed Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Design --></label>
+            <section>Design</section>
+        </sections>
+        <sections>
+            <label><!-- Distribution --></label>
+            <section>Distribution</section>
+        </sections>
+        <sections>
+            <label><!-- Pack Spec (Per Pallet) --></label>
+            <section>Pack Spec (Per Pallet)</section>
+        </sections>
+        <sections>
+            <label><!-- Planning --></label>
+            <section>Planning</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Bottle Info --></label>
+            <section>Sales - Bottle Info</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Delivery and Packing --></label>
+            <section>Sales - Delivery and Packing</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - Drawings --></label>
+            <section>Sales - Drawings</section>
+        </sections>
+        <sections>
+            <label><!-- Sales - General Info --></label>
+            <section>Sales - General Info</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+        <sections>
+            <label><!-- Timeline --></label>
+            <section>Timeline</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- 5 Finance --></label>
+        <name>X5_Finance</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 1 Sales --></label>
+        <name>x1Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 2 Planning --></label>
+        <name>x2Planning</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 3 Design --></label>
+        <name>x3Design</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 4 Distribution --></label>
+        <name>x4Distribution</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 6 Completed --></label>
+        <name>x6_Completed</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- Apex --></label>
+        <name>Apex</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- If there are additioinal local or handling buffer requirements you must specify them here --></errorMessage>
+        <name>Additional_Buffer_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If the bottle shape is anything other than &quot;Round&quot; you must provide details of the additional production staff that will be required --></errorMessage>
+        <name>Additional_Production_Staff_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If you intend to attach a Drawing please enter the reference of the drawing you will upload --></errorMessage>
+        <name>Drawing_Reference_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If it is a General Sales Item you must enter further details here --></errorMessage>
+        <name>General_Sale_Item_Notes</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If the Customer has a max pallet height you must specify it here --></errorMessage>
+        <name>Max_Pallet_Height</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If you selected &quot;Other&quot; as the Delivery Location, you must specify a new location here --></errorMessage>
+        <name>New_Delivery_Location</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When the Colour is &quot;Other&quot; you must specify the colour in the Other (Colour) field. --></errorMessage>
+        <name>Other_Colour</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If a trial is needed you must enter trial details --></errorMessage>
+        <name>Trial_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If you are not intending to attach a Pack Spec you must provide a reason --></errorMessage>
+        <name>Why_No_Pack_Spec</name>
+    </validationRules>
+</CustomObjectTranslation>

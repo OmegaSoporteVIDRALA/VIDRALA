@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Approval_Accepted_to_Account_Owner_and_Planning_Manager</fullName>
+        <description>Approval Accepted to Account Owner and Planning Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Account_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Vidrala_Templates/Step_3_Approval_to_Planning_Mng_Owner_EMAIL_MPA_FIFTY</template>
+    </alerts>
+    <alerts>
+        <fullName>Approval_Rejected_EMAIL_MPA_Fifty</fullName>
+        <description>Approval Rejected EMAIL MPA (Fifty)</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Account_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Vidrala_Templates/Step_3_Rejection_to_Planning_Mng_Owner_EMAIL_MPA_FIFTY</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_To_Fifty_Area_Manager_France_Approval_Notification</fullName>
+        <description>Email To Fifty Area Manager France Approval Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Fifty_Area_Manager_France</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Vidrala_Templates/Step_2_Approval_Area_Manager_EMAIL_MPA_FIFTY</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_To_Fifty_Area_Manager_Spain_Approval_Notification</fullName>
+        <description>Email To Fifty Area Manager Spain Approval Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Fifty_Area_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Vidrala_Templates/Step_2_Approval_Area_Manager_EMAIL_MPA_FIFTY</template>
+    </alerts>
+    <alerts>
+        <fullName>Fifty_Area_Manager_Spain_Approval_Notification</fullName>
+        <description>Fifty Area Manager Spain Approval Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Vidrala_Templates/Step_2_Approval_Area_Manager_EMAIL_MPA_FIFTY</template>
+    </alerts>
+    <alerts>
+        <fullName>MPAFIFTY_APPROVAL_Alert_to_Area_Manager_PT_Portugal</fullName>
+        <description>MPAFIFTY APPROVAL Alert to Area Manager PT Portugal</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>r.gallego@vidrala.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Vidrala_Templates/Step_2_Approval_Area_Manager_EMAIL_MPA_FIFTY</template>
+    </alerts>
+    <alerts>
+        <fullName>Notification_to_go_back_to_the_Planning_Manager</fullName>
+        <description>Notification to go back to the Planning Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Vidrala_Templates/Step_2_Rejection_to_Planning_Mng_EMAIL_MPA_FIFTY</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Change Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Change Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_planning_approval</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Planning Approval</literalValue>
+        <name>Pending planning approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_To_Pending</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update Approval Status To Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Planning Approval</literalValue>
+        <name>update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

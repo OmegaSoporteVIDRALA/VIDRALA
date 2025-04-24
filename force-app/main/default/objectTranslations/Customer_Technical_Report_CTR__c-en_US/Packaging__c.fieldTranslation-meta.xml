@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Packaging --></label>
+    <name>Packaging__c</name>
+    <picklistValues>
+        <masterLabel>Compression</masterLabel>
+        <translation><!-- Compression --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuse Seal</masterLabel>
+        <translation><!-- Fuse Seal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Horizontal Band</masterLabel>
+        <translation><!-- Horizontal Band --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inverted Tray</masterLabel>
+        <translation><!-- Inverted Tray --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Load Hog</masterLabel>
+        <translation><!-- Load Hog --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLP (Corrugated)</masterLabel>
+        <translation><!-- PLP (Corrugated) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLP (Solid)</masterLabel>
+        <translation><!-- PLP (Solid) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shrouded</masterLabel>
+        <translation><!-- Shrouded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Top Frame</masterLabel>
+        <translation><!-- Top Frame --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unshrouded</masterLabel>
+        <translation><!-- Unshrouded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Upright Tray</masterLabel>
+        <translation><!-- Upright Tray --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vertical Band</masterLabel>
+        <translation><!-- Vertical Band --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

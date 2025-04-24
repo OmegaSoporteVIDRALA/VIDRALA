@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- When Are The Containers Required --></label>
+    <name>When_Are_The_Containers_Required__c</name>
+</CustomFieldTranslation>

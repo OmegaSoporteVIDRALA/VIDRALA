@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Este precio se calcula en automático, teniendo en cuenta el precio neto indicado y el peso del modelo registrado --></help>
+    <label><!-- Net Price €/ton --></label>
+    <name>Net_Price_ton__c</name>
+</CustomFieldTranslation>

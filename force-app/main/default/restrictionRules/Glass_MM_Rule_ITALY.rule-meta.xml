@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RestrictionRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <enforcementType>Restrict</enforcementType>
+    <masterLabel>Glass MM Rule ITALY</masterLabel>
+    <recordFilter>ISPICKVAL(Owner:User.Sales_Organisation_Name__c, &apos;Italy&apos;)=true</recordFilter>
+    <targetEntity>Morning_Meeting__c</targetEntity>
+    <userCriteria>$Permission.ITALYUSER=true</userCriteria>
+    <version>1</version>
+</RestrictionRule>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>All_Italy_Leads</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>italy lead owers with italy group: read only</description>
+        <label>All Italy Leads</label>
+        <sharedTo>
+            <group>Italy_All_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Italy_All_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>All_fifty_leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>All fifty leads</label>
+        <sharedTo>
+            <group>Fifty_Sales_Dir_office</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Fifty_Public_Group</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Encirc_lead_sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Encirc lead sharing</label>
+        <sharedTo>
+            <group>Encirc_Public_Group</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Encirc_Public_Group</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

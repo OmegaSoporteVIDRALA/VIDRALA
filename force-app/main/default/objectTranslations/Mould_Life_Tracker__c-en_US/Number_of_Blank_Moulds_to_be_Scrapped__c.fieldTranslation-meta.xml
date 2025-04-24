@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Number of Blank Moulds to be Scrapped --></label>
+    <name>Number_of_Blank_Moulds_to_be_Scrapped__c</name>
+</CustomFieldTranslation>

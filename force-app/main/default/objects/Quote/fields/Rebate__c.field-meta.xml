@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rebate__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Existing rebate on the Account</description>
+    <label>Existing Rebate</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Rebate__c.Account__r.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account_Id_Copy__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Rebate__c</referenceTo>
+    <relationshipLabel>Quotes</relationshipLabel>
+    <relationshipName>Quotes</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

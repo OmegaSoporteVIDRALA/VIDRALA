@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Refers to the person responsible for receiving invoices related to this opportunity --></help>
+    <label><!-- Billing Contact --></label>
+    <name>Billing_Contact__c</name>
+    <relationshipLabel><!-- Opportunities --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2019</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Trading_Year__c</columns>
+    <columns>Actual_date_effect__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trading_Year__c</field>
+        <operation>equals</operation>
+        <value>2019</value>
+    </filters>
+    <label>2019</label>
+</ListView>

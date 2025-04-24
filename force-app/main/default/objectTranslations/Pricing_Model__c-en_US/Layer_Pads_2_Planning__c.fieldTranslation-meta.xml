@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cardboard Trays --></label>
+    <name>Layer_Pads_2_Planning__c</name>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS1</masterLabel>
+        <translation><!-- PCS1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS10</masterLabel>
+        <translation><!-- PCS10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS11</masterLabel>
+        <translation><!-- PCS11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS12</masterLabel>
+        <translation><!-- PCS12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS13</masterLabel>
+        <translation><!-- PCS13 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS14</masterLabel>
+        <translation><!-- PCS14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS15</masterLabel>
+        <translation><!-- PCS15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS16</masterLabel>
+        <translation><!-- PCS16 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS17</masterLabel>
+        <translation><!-- PCS17 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS18</masterLabel>
+        <translation><!-- PCS18 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS19</masterLabel>
+        <translation><!-- PCS19 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS2</masterLabel>
+        <translation><!-- PCS2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS20</masterLabel>
+        <translation><!-- PCS20 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS21</masterLabel>
+        <translation><!-- PCS21 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS22</masterLabel>
+        <translation><!-- PCS22 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS23</masterLabel>
+        <translation><!-- PCS23 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS24</masterLabel>
+        <translation><!-- PCS24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS25</masterLabel>
+        <translation><!-- PCS25 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS26</masterLabel>
+        <translation><!-- PCS26 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS27</masterLabel>
+        <translation><!-- PCS27 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS28</masterLabel>
+        <translation><!-- PCS28 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS29</masterLabel>
+        <translation><!-- PCS29 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS3</masterLabel>
+        <translation><!-- PCS3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS30</masterLabel>
+        <translation><!-- PCS30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS31</masterLabel>
+        <translation><!-- PCS31 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS32</masterLabel>
+        <translation><!-- PCS32 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS33</masterLabel>
+        <translation><!-- PCS33 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS34</masterLabel>
+        <translation><!-- PCS34 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS35</masterLabel>
+        <translation><!-- PCS35 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS36</masterLabel>
+        <translation><!-- PCS36 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS37</masterLabel>
+        <translation><!-- PCS37 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS38</masterLabel>
+        <translation><!-- PCS38 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS39</masterLabel>
+        <translation><!-- PCS39 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS4</masterLabel>
+        <translation><!-- PCS4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS40</masterLabel>
+        <translation><!-- PCS40 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS41</masterLabel>
+        <translation><!-- PCS41 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS42</masterLabel>
+        <translation><!-- PCS42 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS43</masterLabel>
+        <translation><!-- PCS43 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS44</masterLabel>
+        <translation><!-- PCS44 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS45</masterLabel>
+        <translation><!-- PCS45 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS46</masterLabel>
+        <translation><!-- PCS46 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS47</masterLabel>
+        <translation><!-- PCS47 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS48</masterLabel>
+        <translation><!-- PCS48 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS49</masterLabel>
+        <translation><!-- PCS49 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS5</masterLabel>
+        <translation><!-- PCS5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS50</masterLabel>
+        <translation><!-- PCS50 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS51</masterLabel>
+        <translation><!-- PCS51 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS52</masterLabel>
+        <translation><!-- PCS52 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS53</masterLabel>
+        <translation><!-- PCS53 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS54</masterLabel>
+        <translation><!-- PCS54 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS55</masterLabel>
+        <translation><!-- PCS55 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS56</masterLabel>
+        <translation><!-- PCS56 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS57</masterLabel>
+        <translation><!-- PCS57 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS58</masterLabel>
+        <translation><!-- PCS58 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS59</masterLabel>
+        <translation><!-- PCS59 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS6</masterLabel>
+        <translation><!-- PCS6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS60</masterLabel>
+        <translation><!-- PCS60 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS61</masterLabel>
+        <translation><!-- PCS61 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS62</masterLabel>
+        <translation><!-- PCS62 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS63</masterLabel>
+        <translation><!-- PCS63 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS64</masterLabel>
+        <translation><!-- PCS64 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS65</masterLabel>
+        <translation><!-- PCS65 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS66</masterLabel>
+        <translation><!-- PCS66 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS67</masterLabel>
+        <translation><!-- PCS67 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS68</masterLabel>
+        <translation><!-- PCS68 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS69</masterLabel>
+        <translation><!-- PCS69 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS7</masterLabel>
+        <translation><!-- PCS7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS70</masterLabel>
+        <translation><!-- PCS70 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS71</masterLabel>
+        <translation><!-- PCS71 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS72</masterLabel>
+        <translation><!-- PCS72 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS73</masterLabel>
+        <translation><!-- PCS73 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS74</masterLabel>
+        <translation><!-- PCS74 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS75</masterLabel>
+        <translation><!-- PCS75 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS76</masterLabel>
+        <translation><!-- PCS76 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS77</masterLabel>
+        <translation><!-- PCS77 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS78</masterLabel>
+        <translation><!-- PCS78 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS79</masterLabel>
+        <translation><!-- PCS79 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS8</masterLabel>
+        <translation><!-- PCS8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS80</masterLabel>
+        <translation><!-- PCS80 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS81</masterLabel>
+        <translation><!-- PCS81 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS82</masterLabel>
+        <translation><!-- PCS82 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS83</masterLabel>
+        <translation><!-- PCS83 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS84</masterLabel>
+        <translation><!-- PCS84 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS85</masterLabel>
+        <translation><!-- PCS85 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS86</masterLabel>
+        <translation><!-- PCS86 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS87</masterLabel>
+        <translation><!-- PCS87 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS88</masterLabel>
+        <translation><!-- PCS88 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS89</masterLabel>
+        <translation><!-- PCS89 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS9</masterLabel>
+        <translation><!-- PCS9 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PCS90</masterLabel>
+        <translation><!-- PCS90 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

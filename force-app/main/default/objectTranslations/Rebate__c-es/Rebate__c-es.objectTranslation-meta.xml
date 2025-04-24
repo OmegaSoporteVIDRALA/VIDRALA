@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rappel</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rappeles</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Fifty Rebate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Rebate Accounting --></label>
+            <section>Rebate Accounting</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Rebate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Rebate Accounting --></label>
+            <section>Rebate Accounting</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Rappeles</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Rebate (Encirc) --></label>
+        <name>Rebate_Encirc</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Rappeles Fifty</label>
+        <name>Rebate_Fifty</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- Apex --></label>
+        <name>Apex</name>
+    </sharingReasons>
+</CustomObjectTranslation>

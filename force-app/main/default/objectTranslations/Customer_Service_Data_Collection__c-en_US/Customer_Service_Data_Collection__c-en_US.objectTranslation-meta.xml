@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Service Data Collection</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Service Data Collections</value>
+    </caseValues>
+    <layouts>
+        <layout>Customer Service Data Collection Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Data --></label>
+            <section>Customer Data</section>
+        </sections>
+        <sections>
+            <label><!-- Incident Classification --></label>
+            <section>Incident Classification</section>
+        </sections>
+        <sections>
+            <label><!-- Incident Description --></label>
+            <section>Incident Description</section>
+        </sections>
+        <sections>
+            <label><!-- Model Details --></label>
+            <section>Model Details</section>
+        </sections>
+        <sections>
+            <label><!-- Other --></label>
+            <section>Other</section>
+        </sections>
+        <sections>
+            <label><!-- Scope of Incident --></label>
+            <section>Scope of Incident</section>
+        </sections>
+        <sections>
+            <label><!-- Supporting Information --></label>
+            <section>Supporting Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>None-Admin Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Data --></label>
+            <section>Customer Data</section>
+        </sections>
+        <sections>
+            <label><!-- Incident Classification --></label>
+            <section>Incident Classification</section>
+        </sections>
+        <sections>
+            <label><!-- Incident Description --></label>
+            <section>Incident Description</section>
+        </sections>
+        <sections>
+            <label><!-- Model Details --></label>
+            <section>Model Details</section>
+        </sections>
+        <sections>
+            <label><!-- Other --></label>
+            <section>Other</section>
+        </sections>
+        <sections>
+            <label><!-- Scope of Incident --></label>
+            <section>Scope of Incident</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Quality &amp; Standard Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Data --></label>
+            <section>Customer Data</section>
+        </sections>
+        <sections>
+            <label><!-- Incident Classification --></label>
+            <section>Incident Classification</section>
+        </sections>
+        <sections>
+            <label><!-- Incident Description --></label>
+            <section>Incident Description</section>
+        </sections>
+        <sections>
+            <label><!-- Model Details --></label>
+            <section>Model Details</section>
+        </sections>
+        <sections>
+            <label><!-- Other --></label>
+            <section>Other</section>
+        </sections>
+        <sections>
+            <label><!-- Scope of Incident --></label>
+            <section>Scope of Incident</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- &quot;report complete&quot; can not be ticked if the &quot;plant field&quot; has not be filled in --></errorMessage>
+        <name>plant_cannot_be_blank_and_report_checked</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Customer_Services_Data_Collection_Download --></label>
+        <name>Customer_Services_Data_Collection_Download</name>
+    </webLinks>
+</CustomObjectTranslation>

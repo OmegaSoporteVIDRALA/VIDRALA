@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Type__c</fullName>
+    <description>Types Of Encirc Events</description>
+    <label>Event Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SAP_Material_Group__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Event_Type</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Golf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Wembley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Manchester United</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Driving</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Horse racing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Grand Prix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Cricket</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Rugby</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Henley Regatta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Concerts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Account Manager local activity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Football</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SC500 Trade Events</controllingFieldValue>
+            <valueName>British Glass</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SC500 Trade Events</controllingFieldValue>
+            <controllingFieldValue>SD700 Sponsorship/Subscription</controllingFieldValue>
+            <valueName>BSDA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SC500 Trade Events</controllingFieldValue>
+            <valueName>Glass Trade Shows/Seminars</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD700 Sponsorship/Subscription</controllingFieldValue>
+            <valueName>Kids Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD700 Sponsorship/Subscription</controllingFieldValue>
+            <valueName>BEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD700 Sponsorship/Subscription</controllingFieldValue>
+            <valueName>BFBI</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

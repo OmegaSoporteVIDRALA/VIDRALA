@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Calentamiento --></label>
+    <name>OM_SAC_calentamiento__c</name>
+    <picklistValues>
+        <masterLabel>Ducha de agua</masterLabel>
+        <translation><!-- Ducha de agua --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vapor directo</masterLabel>
+        <translation><!-- Vapor directo --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

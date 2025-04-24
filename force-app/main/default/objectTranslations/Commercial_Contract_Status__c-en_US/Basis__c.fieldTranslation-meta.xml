@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Basis --></label>
+    <name>Basis__c</name>
+    <picklistValues>
+        <masterLabel>Indemnity</masterLabel>
+        <translation><!-- Indemnity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liability</masterLabel>
+        <translation><!-- Liability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limited</masterLabel>
+        <translation><!-- Limited --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TBC</masterLabel>
+        <translation><!-- TBC --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

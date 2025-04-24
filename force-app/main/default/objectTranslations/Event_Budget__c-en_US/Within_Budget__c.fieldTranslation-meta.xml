@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A Red Flag Appears When The Actual And Committed Amounts Exceeds Budget Amount --></help>
+    <label><!-- Within Budget? --></label>
+    <name>Within_Budget__c</name>
+</CustomFieldTranslation>

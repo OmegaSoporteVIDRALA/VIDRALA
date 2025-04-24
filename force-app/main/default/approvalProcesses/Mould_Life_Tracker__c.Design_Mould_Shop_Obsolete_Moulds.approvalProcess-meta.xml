@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>allInternalUsers</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>How_to_Edit__c</field>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Customer_Name_3__c</field>
+        <field>Sales_Organisation_4__c</field>
+        <field>Description_5__c</field>
+        <field>Trial_or_Production_Mould_Equipment_6__c</field>
+        <field>Mould_Number_7__c</field>
+        <field>Bottle_Number_8__c</field>
+        <field>Mould_Number_Set_Letter_9__c</field>
+        <field>Mould_equipment_configuration_10__c</field>
+        <field>Maximum_Container_GOBS_Production_000_11__c</field>
+        <field>Container_GOBS_Produced_000s_12__c</field>
+        <field>Container_GOBS_Remaining_000s_13__c</field>
+        <field>Mould_Life_Remaining_14__c</field>
+        <field>Number_of_Production_runs_for_Mould_15__c</field>
+        <field>Number_of_Moulds_to_be_scrapped_16__c</field>
+        <field>Replacement_Set_of_Mould_Available_17__c</field>
+        <field>Reason_for_Mould_Retirement_18__c</field>
+        <field>Has_this_container_been_replaced_19__c</field>
+        <field>Replacement_Container_Drawing_19__c</field>
+        <field>Cost_of_Set_Mould_Equipment_When_New_20__c</field>
+        <field>Remaining_Value_of_Mould_Equipment_21__c</field>
+        <field>Who_is_paying_Residual_Cost_of_Mould_22__c</field>
+        <field>Account_Manager__c</field>
+        <field>Account_Manager_Approval_Status__c</field>
+        <field>Accounts_have_been_informed_to_invoice23__c</field>
+        <field>Comments_on_Cost_to_Customer__c</field>
+        <field>CreatedBy</field>
+        <field>CurrencyIsoCode</field>
+        <field>Design_Team_Approval_Status__c</field>
+        <field>Glass_Account_Manager_24__c</field>
+        <field>How_much_is_the_customer_being_charged__c</field>
+        <field>LastModifiedBy</field>
+        <field>RecordType</field>
+        <field>Remind_me_in_6_months_to_review_again__c</field>
+        <field>Site_2__c</field>
+        <field>Submitter_Id__c</field>
+        <field>Submit_to_Mould_Shop__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Mould_Tracking_Design_Team</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Design Team</label>
+        <name>Design_Team</name>
+    </approvalStep>
+    <description>Mould shop raises a new record and completes fields 1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18 then Submit for Design team approval</description>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>OR(
+AND(
+
+	RecordType.DeveloperName = &apos;Mould_Shop_Obsolete_Moulds&apos;,
+		OR(
+		ISPICKVAL( Design_Team_Approval_Status__c, &apos;Required&apos;),
+		ISPICKVAL(Design_Team_Approval_Status__c, &apos;Rejected&apos;)
+		)
+
+	),
+
+	AND(
+	RecordType.DeveloperName = &apos;Account_Manager_Commercial_obsolete&apos;,
+		OR(
+		ISPICKVAL( Design_Team_Approval_Status__c, &apos;Required&apos;),
+		ISPICKVAL(Design_Team_Approval_Status__c, &apos;Rejected&apos;)
+		)
+
+	)
+
+
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Design_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Design_Rejection</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Design_Pending</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Stamp_Submitter_Id2</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Design - Mould Shop - Obsolete Moulds</label>
+    <processOrder>1</processOrder>
+    <recallActions>
+        <action>
+            <name>Design_Required</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

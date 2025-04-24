@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>EN60</fullName>
+        <default>true</default>
+        <label>EN60</label>
+    </customValue>
+    <customValue>
+        <fullName>VD30</fullName>
+        <default>false</default>
+        <label>VD30</label>
+    </customValue>
+    <customValue>
+        <fullName>VD10</fullName>
+        <default>false</default>
+        <label>VD10</label>
+    </customValue>
+    <customValue>
+        <fullName>VD50</fullName>
+        <default>false</default>
+        <label>VD50</label>
+    </customValue>
+    <masterLabel>Sales Organization</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

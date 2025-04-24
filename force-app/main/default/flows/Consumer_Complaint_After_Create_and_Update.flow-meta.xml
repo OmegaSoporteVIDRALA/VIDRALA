@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sent to Consumer Complaints Admin once Quality Manager Comments field has been populated</description>
+        <name>QM_Comments_Populated</name>
+        <label>QM Comments Populated</label>
+        <locationX>50</locationX>
+        <locationY>1847</locationY>
+        <actionName>Consumer_Complaint__c.Quality_Manager_Comments_Populated</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Consumer_Complaint__c.Quality_Manager_Comments_Populated</nameSegment>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Consumer_Complaint_Name</name>
+        <label>Assign Consumer Complaint Name</label>
+        <locationX>50</locationX>
+        <locationY>839</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Consumer_Complaint.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formulaComplaintName</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Have_comments_been_updated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_ID</name>
+        <label>Assign ID</label>
+        <locationX>50</locationX>
+        <locationY>1439</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Consumer_Complaint.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Consumer_Complaint_fields</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Previous_Comments_field</name>
+        <label>Assign Previous Comments field</label>
+        <locationX>50</locationX>
+        <locationY>1139</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Consumer_Complaint.Previous_Comments__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>formula_PreviousComments</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_Var_ConsumerComplaint_is_not_null</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Stamp_Complaint_Date</name>
+        <label>Assign Stamp Complaint Date</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Consumer_Complaint.Complaint_Type_Confirmed_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_is_Name_is_populated</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Are_Flows_enabled</name>
+        <label>Are Flows enabled?</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Flow_should_run</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.Configuration__c.Are_Flows_Off__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Complaint_Type_Confirmed</targetReference>
+            </connector>
+            <label>Flow should run</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Var_ConsumerComplaint_is_not_null</name>
+        <label>Check if Var_ConsumerComplaint is not null?</label>
+        <locationX>182</locationX>
+        <locationY>1331</locationY>
+        <defaultConnector>
+            <targetReference>Have_QM_Comments_Been_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Var_Consumer_Complaint</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_ID</targetReference>
+            </connector>
+            <label>Not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_is_Name_is_populated</name>
+        <label>Check if Name is populated?</label>
+        <locationX>182</locationX>
+        <locationY>731</locationY>
+        <defaultConnector>
+            <targetReference>Have_comments_been_updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Encirc_Reference_No__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Customer__r.Name</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Record_Name__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>formulaComplaintName</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Consumer_Complaint_Name</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>The Date for first time any of Manufacturing Fault Present, Legal Y/N and Injury Y/N have Yes selected</description>
+        <name>Complaint_Type_Confirmed</name>
+        <label>Check if Complaint Type is Confirmed?</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Check_is_Name_is_populated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Complaint_is_Yes</name>
+            <conditionLogic>(1 or 2 or 3) and 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Manufacturing_Fault_Present__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Injury__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Legal__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Complaint_Type_Confirmed_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stamp_Complaint_Date</targetReference>
+            </connector>
+            <label>Complaint is Yes?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks to see if the Comments field has been updated</description>
+        <name>Have_comments_been_updated</name>
+        <label>Have comments been updated?</label>
+        <locationX>182</locationX>
+        <locationY>1031</locationY>
+        <defaultConnector>
+            <targetReference>Check_if_Var_ConsumerComplaint_is_not_null</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Comments_Updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Comments__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Previous_Comments_field</targetReference>
+            </connector>
+            <label>Comments Updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks to see if the Quality Managers Comments text box has been updated</description>
+        <name>Have_QM_Comments_Been_Updated</name>
+        <label>Have QM Comments Been Updated?</label>
+        <locationX>182</locationX>
+        <locationY>1739</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>QM_Comments_Updatedd</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Quality_Managers_Comments__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QM_Comments_Populated</targetReference>
+            </connector>
+            <label>QM Comments Updated</label>
+        </rules>
+    </decisions>
+    <description>After Create and Update Flow for the Consumer Complaint object
+*Updated Date Formula</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Whenever a User updates the Comments Text field, this keeps PreviousComments field populated with the previous Text from the Comments field.</description>
+        <name>formula_PreviousComments</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record__Prior.Comments__c} &amp; BR() &amp; {!$Record.Previous_Comments__c}, 131072 )</expression>
+    </formulas>
+    <formulas>
+        <description>Formula to populate the Consumer Complaint Name</description>
+        <name>formulaComplaintName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Encirc_Reference_No__c} + &apos; - &apos; + {!$Record.Customer__r.Name} + &apos; - &apos; + TEXT(DAY(DATEVALUE({!$Record.CreatedDate})))+&apos;-&apos; +TEXT(MONTH(DATEVALUE({!$Record.CreatedDate})))+&apos;-&apos; +TEXT(YEAR(DATEVALUE({!$Record.CreatedDate})))</expression>
+    </formulas>
+    <interviewLabel>Consumer Complaint: After Create and Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Consumer Complaint: After Create and Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Consumer_Complaint_fields</name>
+        <label>Update Consumer Complaint fields</label>
+        <locationX>50</locationX>
+        <locationY>1547</locationY>
+        <connector>
+            <targetReference>Have_QM_Comments_Been_Updated</targetReference>
+        </connector>
+        <inputReference>Var_Consumer_Complaint</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Are_Flows_enabled</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Quality_Managers_Comments__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Complaint_Type_Confirmed_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Comments__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Consumer_Complaint__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Var_Consumer_Complaint</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Consumer_Complaint__c</objectType>
+    </variables>
+</Flow>

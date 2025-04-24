@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Account number on AS400 before moving over to SAP --></help>
+    <label><!-- AS400 Legacy Encirc Account Number --></label>
+    <name>AS400_Legacy_Encirc_Account_Number__c</name>
+</CustomFieldTranslation>

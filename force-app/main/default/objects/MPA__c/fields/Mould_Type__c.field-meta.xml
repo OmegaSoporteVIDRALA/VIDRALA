@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mould_Type__c</fullName>
+    <label>Mould Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AIS SG</fullName>
+                <default>false</default>
+                <label>AIS SG</label>
+            </value>
+            <value>
+                <fullName>AIS DG</fullName>
+                <default>false</default>
+                <label>AIS DG</label>
+            </value>
+            <value>
+                <fullName>AIS Tandem</fullName>
+                <default>false</default>
+                <label>AIS Tandem</label>
+            </value>
+            <value>
+                <fullName>AIS TG</fullName>
+                <default>false</default>
+                <label>AIS TG</label>
+            </value>
+            <value>
+                <fullName>NIS DG</fullName>
+                <default>false</default>
+                <label>NIS DG</label>
+            </value>
+            <value>
+                <fullName>NIS DG/TG</fullName>
+                <default>false</default>
+                <label>NIS DG/TG</label>
+            </value>
+            <value>
+                <fullName>NIS TG</fullName>
+                <default>false</default>
+                <label>NIS TG</label>
+            </value>
+            <value>
+                <fullName>NIS QG</fullName>
+                <default>false</default>
+                <label>NIS QG</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

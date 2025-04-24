@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Glass Daily Morning Meeting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Glass Daily Morning Meetings</value>
+    </caseValues>
+    <layouts>
+        <layout>Morning Meeting Layout</layout>
+        <sections>
+            <label><!-- Actions / Comments --></label>
+            <section>Actions / Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Minute information --></label>
+            <section>Minute information</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

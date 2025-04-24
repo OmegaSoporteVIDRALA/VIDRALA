@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_VID_Quote_Fifty</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>OM_VID_FiftyCompactLayout</compactLayoutAssignment>
+    <description>Record Type para las Quotes de Omega</description>
+    <label>OM Quote Fifty</label>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product and Scales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

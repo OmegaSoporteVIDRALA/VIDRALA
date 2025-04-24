@@ -1,0 +1,118 @@
+<apex:page controller="ProductForecastListController" tabStyle="Forecast__c" lightningStylesheets="true">
+<!-- -----------------------------------------------------------------------------------------------------------------------
+   Name:		ProductForecastTonnage.page
+   Description: List of Product Forecasts for Current Month and Specific Customer
+					
+   Date         Version Author          	Summary of Changes 
+   -----------  ------- ------------------	--------------------------------------------------------------------------------
+   Nov 2017     1.0     M.Witchalls(Ciber)	Initial Release 
+------------------------------------------------------------------------------------------------------------------------  -->         
+	<apex:stylesheet value="{!URLFOR($Resource.slds214, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<style>
+		.rightClass {
+			text-align:right;
+		}
+	</style>
+	<h2 style="font-size:large">
+		<a href="javascript:void(0);">Current Month Tonnage: {!totals.Customer_Name_Text__c}</a>
+	</h2>
+	<div class="slds-tile">
+		<br/>
+		<div class="slds-tile__detail slds-text-body--small">
+			<table>
+				<tr>
+					<th scope="row" class="rightClass">{!$ObjectType.Month__c.Fields.Forecast__c.Label}</th>
+					<td></td>
+					<td class="rightClass">{!totals.Forecast_Tonnage_Rounded__c}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="rightClass">{!$ObjectType.Month__c.Fields.Total_Units_Rounded__c.Label}</th>
+					<td></td>
+					<td class="rightClass">{!totals.Total_Tonnage_Rounded__c}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="rightClass">{!$ObjectType.Month__c.Fields.Adh_to_Fcast__c.Label}</th>
+					<td></td>
+					<td class="rightClass">{!totals.Adh_to_T_Fcast__c}</td>
+					<td>%</td>
+				</tr>
+				<tr>
+					<th scope="row" class="rightClass">{!$ObjectType.Month__c.Fields.Risks__c.Label}</th>
+					<td></td>
+					<td class="rightClass">{!totals.Risk_Tonnage__c}</td>
+					<td></td>
+					<th>{!$ObjectType.Month__c.Fields.Risk_Upside_Comments__c.Label}</th>
+					<td></td>
+					<td>{!totals.Risk_Upside_Comments__c}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="rightClass">{!$ObjectType.Month__c.Fields.Upsides__c.Label}</th>
+					<td></td>
+					<td class="rightClass">{!totals.Upside_Tonnage__c}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="rightClass">{!$ObjectType.Month__c.Fields.Revised_Forecast__c.Label}</th>
+					<td></td>
+					<td class="rightClass">{!totals.Revised_T_Forecast__c}</td>
+				</tr>
+				<tr>
+					<th scope="row" class="rightClass">{!$ObjectType.Month__c.Fields.Adh_to_Rev_Fcast__c.Label}</th>
+					<td></td>
+					<td class="rightClass">{!totals.Adh_to_Rev_T_Fcast__c}</td>
+					<td>%</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<br/>
+	<table class="slds-table slds-table--bordered slds-table--cell-buffer">
+		<thead>
+			<tr class="slds-text-title--caps">
+				<th scope="col">
+					<div class="slds-truncate" title="Product Name">{!$ObjectType.Forecast__c.Fields.Product_Name__c.Label}</div>
+				</th>
+				<th scope="col">
+					<div class="slds-truncate" title="Product Description">{!$ObjectType.Forecast__c.Fields.Product_Description__c.Label}</div>
+				</th>
+				<apex:repeat value="{!tonnageList}" var="f">
+					<th scope="col" class="rightClass">
+						<div class="slds-truncate" title="{!f.label}">{!f.label}</div>
+					</th>
+				</apex:repeat>
+			</tr>
+		</thead>
+		<tbody>
+			<apex:repeat value="{!records}" var="r">
+				<tr>
+					<th scope="row">
+						<div class="slds-truncate" title="{!r.Name}">{!r.Name}</div>
+					</th>
+					<td>
+						<div class="slds-truncate" title="{!r.Product_Description__c}">{!r.Product_Description__c}</div>
+					</td>
+					<apex:repeat value="{!tonnageList}" var="f">
+						<td class="rightClass">
+							<div class="slds-truncate" title="{!r[f.fieldPath]}">{!r[f.fieldPath]}</div>
+						</td>
+					</apex:repeat>
+				</tr>
+			</apex:repeat>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="slds-truncate"></div>
+				</td>
+				<th scope="row">
+					<div class="slds-truncate">TOTALS</div>
+				</th>
+				<apex:repeat value="{!customerTonnageList}" var="f">
+					<td class="rightClass">
+						<div class="slds-truncate">{!totals[f.fieldPath]}</div>
+					</td>
+				</apex:repeat>
+			</tr>
+		</tbody>
+	</table>
+</apex:page>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Beers R</fullName>
+        <default>false</default>
+        <label>Beers R</label>
+    </customValue>
+    <customValue>
+        <fullName>Cava and Champagne</fullName>
+        <default>false</default>
+        <label>Cava and Champagne</label>
+    </customValue>
+    <customValue>
+        <fullName>Dairy</fullName>
+        <default>false</default>
+        <label>Dairy</label>
+    </customValue>
+    <customValue>
+        <fullName>Narrow Mouth Juices</fullName>
+        <default>false</default>
+        <label>Narrow Mouth Juices</label>
+    </customValue>
+    <customValue>
+        <fullName>Not assigned</fullName>
+        <default>false</default>
+        <label>Not assigned</label>
+    </customValue>
+    <customValue>
+        <fullName>Oils</fullName>
+        <default>false</default>
+        <label>Oils</label>
+    </customValue>
+    <customValue>
+        <fullName>Olives</fullName>
+        <default>false</default>
+        <label>Olives</label>
+    </customValue>
+    <customValue>
+        <fullName>Port</fullName>
+        <default>false</default>
+        <label>Port</label>
+    </customValue>
+    <customValue>
+        <fullName>Preserves</fullName>
+        <default>false</default>
+        <label>Preserves</label>
+    </customValue>
+    <customValue>
+        <fullName>Refillables</fullName>
+        <default>false</default>
+        <label>Refillables</label>
+    </customValue>
+    <customValue>
+        <fullName>Refreshments</fullName>
+        <default>false</default>
+        <label>Refreshments</label>
+    </customValue>
+    <customValue>
+        <fullName>Spirits</fullName>
+        <default>false</default>
+        <label>Spirits</label>
+    </customValue>
+    <customValue>
+        <fullName>Still Wines</fullName>
+        <default>false</default>
+        <label>Still Wines</label>
+    </customValue>
+    <customValue>
+        <fullName>Various</fullName>
+        <default>false</default>
+        <label>Various</label>
+    </customValue>
+    <customValue>
+        <fullName>Vidrala It. Pallets</fullName>
+        <default>false</default>
+        <label>Vidrala It. Pallets</label>
+    </customValue>
+    <customValue>
+        <fullName>Vinegars</fullName>
+        <default>false</default>
+        <label>Vinegars</label>
+    </customValue>
+    <customValue>
+        <fullName>Water</fullName>
+        <default>false</default>
+        <label>Water</label>
+    </customValue>
+    <customValue>
+        <fullName>Wide Mouth Juices</fullName>
+        <default>false</default>
+        <label>Wide Mouth Juices</label>
+    </customValue>
+    <customValue>
+        <fullName>Vinos</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vinos</label>
+    </customValue>
+    <customValue>
+        <fullName>Refrescos</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Refrescos</label>
+    </customValue>
+    <customValue>
+        <fullName>Otros</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Otros</label>
+    </customValue>
+    <customValue>
+        <fullName>Licores</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Licores</label>
+    </customValue>
+    <customValue>
+        <fullName>Espumosos</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Espumosos</label>
+    </customValue>
+    <customValue>
+        <fullName>Conservas</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Conservas</label>
+    </customValue>
+    <customValue>
+        <fullName>Cervezas</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cervezas</label>
+    </customValue>
+    <customValue>
+        <fullName>Aguas</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aguas</label>
+    </customValue>
+    <customValue>
+        <fullName>Zumos</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Zumos</label>
+    </customValue>
+    <customValue>
+        <fullName>Aceites</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aceites</label>
+    </customValue>
+    <masterLabel>Sector/Account Industry Vidrala Europe</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

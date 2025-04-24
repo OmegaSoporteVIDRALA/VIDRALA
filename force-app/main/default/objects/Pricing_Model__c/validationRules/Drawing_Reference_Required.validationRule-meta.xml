@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawing_Reference_Required</fullName>
+    <active>true</active>
+    <description>When &quot;Yes&quot; is selected in the &quot;Drawing_Attached__c&quot; field the user must provide additional commentary in the &quot;Drawing_Reference__c&quot;  field.</description>
+    <errorConditionFormula>ISPICKVAL(Drawing_Attached__c , &quot;Yes&quot;)
+
+&amp;&amp;
+
+ISBLANK( Drawing_Reference__c)</errorConditionFormula>
+    <errorDisplayField>Drawing_Reference__c</errorDisplayField>
+    <errorMessage>If you intend to attach a Drawing please enter the reference of the drawing you will upload</errorMessage>
+</ValidationRule>

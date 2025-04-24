@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Download_Customer_Contact_Report_French</fullName>
+    <availability>online</availability>
+    <description>Download Customer Contact Report PDF in French</description>
+    <displayType>button</displayType>
+    <linkType>page</linkType>
+    <masterLabel>Download Customer Contact Report French</masterLabel>
+    <openType>replace</openType>
+    <page>InformeVisitaPDFFrench</page>
+    <protected>false</protected>
+</WebLink>

@@ -1,0 +1,74 @@
+<aura:component controller="CustomRelatedListComponentController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+	<aura:attribute name="recordId" type="String" />
+    <aura:attribute name="lookupAPI" type="String" />
+    <aura:attribute name="relatedObjectAPI" type="String" />
+    <aura:attribute name="additionalRequest" type="String" />
+    <aura:attribute name="additionalAPI" type="String" />
+    <aura:attribute name="fieldAPIs" type="String" />
+    <aura:attribute name="whereCondition" type="String" />
+    <aura:attribute name="objectName" type="String" />
+    <aura:attribute name="objectValues" type="List" />
+    <aura:attribute name="objectLabels" type="List" />
+    <aura:attribute name="objectCount" type="String" />
+    <aura:attribute name="errorMessage" type="String" />
+    <aura:attribute name="hasRecords" type="Boolean" />
+    <aura:attribute name="pxHeight" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <head>
+    </head>
+    <body>
+        <div class="slds-card">
+            <aura:if isTrue="{!v.hasRecords}">
+                <div class="slds">
+                    <div class="slds-card__header slds-grid">
+                        <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                            <div class="slds-media__figure">
+                            </div>
+                            <div class="slds-media__body">
+                                <h2 class="slds-text-heading--small slds-truncate">Related {!v.objectName} List ({!v.objectCount})</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-card__body">
+                        <section class="slds-card__body">
+                            <div class="slds-scrollable" style="{v.pxHeight}">
+                                <table class="slds-table slds-table--bordered">
+                                    <thead>
+                                        <tr class="slds-text-heading--label">
+                                            <aura:iteration items="{!v.objectLabels}" var="labelVal">
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="{!labelVal}">{!labelVal}</div>
+                                                </th>
+                                            </aura:iteration>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <aura:iteration items="{!v.objectValues}" var="valueList">
+                                            <tr class="slds-hint-parent">
+                                                <aura:iteration items="{!valueList}" var="value">
+                                                    <aura:if isTrue="{!value != valueList[0]}">
+                                                        <td>
+                                                            <div class="slds-truncate" title="{!value}">{!value}</div>
+                                                        </td> 
+                                                        <aura:set attribute="else">
+                                                            <td>
+                                                                <h3><a data-recid="{!value}" onclick="{!c.navigateToRecord}" style="width:100%;">Link</a></h3>
+                                                            </td>
+                                                        </aura:set>
+                                                    </aura:if>
+                                                </aura:iteration>
+                                            </tr>
+                                        </aura:iteration>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <h2 class="slds-text-heading--small slds-truncate">There was not found any related records.</h2>
+                </aura:set>
+            </aura:if>
+        </div>
+    </body>
+</aura:component>

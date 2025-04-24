@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Services Visit Report</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Services Visit Reports</value>
+    </caseValues>
+    <layouts>
+        <layout>Customer Technical Visit Reports Layout</layout>
+        <sections>
+            <label><!-- 1 --></label>
+            <section>1</section>
+        </sections>
+        <sections>
+            <label><!-- 2 --></label>
+            <section>2</section>
+        </sections>
+        <sections>
+            <label><!-- 3 --></label>
+            <section>3</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Report Complete can&apos;t be checked on record creation. --></errorMessage>
+        <name>Report_Complete_Check</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Customer_Services_Visit_Report_Download --></label>
+        <name>Customer_Services_Visit_Report_Download</name>
+    </webLinks>
+</CustomObjectTranslation>

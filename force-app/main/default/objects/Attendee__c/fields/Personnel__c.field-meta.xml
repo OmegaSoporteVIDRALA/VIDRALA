@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personnel__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Encirc Personnel With Or Without A User In Salesforce</description>
+    <inlineHelpText>Notify A System Administrator If The Personnel Member You Are Looking For Cannot Be Found</inlineHelpText>
+    <label>Personnel</label>
+    <referenceTo>Personnel__c</referenceTo>
+    <relationshipLabel>Attendees</relationshipLabel>
+    <relationshipName>Attendees</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

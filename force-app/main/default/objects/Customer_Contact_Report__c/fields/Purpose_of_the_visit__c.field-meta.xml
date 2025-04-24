@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purpose_of_the_visit__c</fullName>
+    <label>Purpose of the visit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NEGOCIACIÓN PRECIOS</fullName>
+                <default>true</default>
+                <label>NEGOCIACIÓN PRECIOS</label>
+            </value>
+            <value>
+                <fullName>REVISIÓN RAPPELES</fullName>
+                <default>false</default>
+                <label>REVISIÓN RAPPELES</label>
+            </value>
+            <value>
+                <fullName>PRESENTACION MODELOS NUEVOS</fullName>
+                <default>false</default>
+                <label>PRESENTACION MODELOS NUEVOS</label>
+            </value>
+            <value>
+                <fullName>CALIDAD</fullName>
+                <default>false</default>
+                <label>CALIDAD</label>
+            </value>
+            <value>
+                <fullName>RIESGOS</fullName>
+                <default>false</default>
+                <label>RIESGOS</label>
+            </value>
+            <value>
+                <fullName>OTROS</fullName>
+                <default>false</default>
+                <label>OTROS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

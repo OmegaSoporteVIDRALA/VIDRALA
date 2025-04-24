@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field is to be used when an account has changed its name and you want to keep the data together --></help>
+    <label><!-- Historical Name --></label>
+    <name>Historical_Name__c</name>
+</CustomFieldTranslation>

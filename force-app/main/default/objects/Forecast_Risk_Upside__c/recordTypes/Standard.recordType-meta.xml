@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard</fullName>
+    <active>true</active>
+    <description>Records that have not yet been approved or rejected</description>
+    <label>Standard</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>New - Unsubmitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

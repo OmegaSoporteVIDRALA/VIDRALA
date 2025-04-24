@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_tool_order_date__c</fullName>
+    <description>To see if a date has been selected for the production tooling ordered field</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Production_Tooling_Ordered__c),&quot;No Date&quot;, &quot;Has Date&quot;)</formula>
+    <label>Production tool order date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

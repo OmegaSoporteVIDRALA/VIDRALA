@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This weight is used to work out the customer annual tons.  If you don&apos;t know the exact weight please enter an estimate as this can be changed --></help>
+    <label><!-- Container Weight --></label>
+    <name>Container_Weight__c</name>
+</CustomFieldTranslation>

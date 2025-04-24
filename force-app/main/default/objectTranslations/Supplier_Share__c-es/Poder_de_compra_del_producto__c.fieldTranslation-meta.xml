@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Debemos indicar en este campo el poder total de compra que tiene el cliente en el modelo que estamos indicando --></help>
+    <label><!-- Poder de compra del producto --></label>
+    <name>Poder_de_compra_del_producto__c</name>
+</CustomFieldTranslation>

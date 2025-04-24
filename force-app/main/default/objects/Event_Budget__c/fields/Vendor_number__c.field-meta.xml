@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_number__c</fullName>
+    <description>&quot;Dependant on which supplier is picked
+Clearpoint is 115396
+Chester Races is 115601
+Wembley is 116202
+Etc.</description>
+    <label>Vendor number</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Supplier__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>115396</fullName>
+                <default>false</default>
+                <label>115396</label>
+            </value>
+            <value>
+                <fullName>115601</fullName>
+                <default>false</default>
+                <label>115601</label>
+            </value>
+            <value>
+                <fullName>116202</fullName>
+                <default>false</default>
+                <label>116202</label>
+            </value>
+            <value>
+                <fullName>114305</fullName>
+                <default>false</default>
+                <label>114305</label>
+            </value>
+            <value>
+                <fullName>114790</fullName>
+                <default>false</default>
+                <label>114790</label>
+            </value>
+            <value>
+                <fullName>116535</fullName>
+                <default>false</default>
+                <label>116535</label>
+            </value>
+            <value>
+                <fullName>114824</fullName>
+                <default>false</default>
+                <label>114824</label>
+            </value>
+            <value>
+                <fullName>116223</fullName>
+                <default>false</default>
+                <label>116223</label>
+            </value>
+            <value>
+                <fullName>117149</fullName>
+                <default>false</default>
+                <label>117149</label>
+            </value>
+            <value>
+                <fullName>118708</fullName>
+                <default>false</default>
+                <label>118708</label>
+            </value>
+            <value>
+                <fullName>201403</fullName>
+                <default>false</default>
+                <label>201403</label>
+            </value>
+            <value>
+                <fullName>201075</fullName>
+                <default>false</default>
+                <label>201075</label>
+            </value>
+            <value>
+                <fullName>113570</fullName>
+                <default>false</default>
+                <label>113570</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Croke Park</controllingFieldValue>
+            <valueName>118708</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VIP Match Days</controllingFieldValue>
+            <valueName>201403</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delaware Catering</controllingFieldValue>
+            <valueName>201075</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>British Glass</controllingFieldValue>
+            <valueName>113570</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Clearpoint</controllingFieldValue>
+            <valueName>115396</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chester Races</controllingFieldValue>
+            <valueName>115601</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Club Wembley</controllingFieldValue>
+            <valueName>116202</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BSDA</controllingFieldValue>
+            <valueName>114305</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEN</controllingFieldValue>
+            <valueName>114790</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BFBI</controllingFieldValue>
+            <valueName>116535</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kids Out</controllingFieldValue>
+            <valueName>114824</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belfry Golf</controllingFieldValue>
+            <valueName>116223</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lough Erne</controllingFieldValue>
+            <valueName>117149</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

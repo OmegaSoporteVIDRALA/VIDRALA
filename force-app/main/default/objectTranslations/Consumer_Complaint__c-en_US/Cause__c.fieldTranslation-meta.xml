@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cause --></label>
+    <name>Cause__c</name>
+    <picklistValues>
+        <masterLabel>Capping Issues</masterLabel>
+        <translation><!-- Capping Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consumer Damage</masterLabel>
+        <translation><!-- Consumer Damage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contamination</masterLabel>
+        <translation><!-- Contamination --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Handling Damage</masterLabel>
+        <translation><!-- Handling Damage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inclusion</masterLabel>
+        <translation><!-- Inclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inconclusive</masterLabel>
+        <translation><!-- Inconclusive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Micro Fractures</masterLabel>
+        <translation><!-- Micro Fractures --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Sample</masterLabel>
+        <translation><!-- No Sample --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Error</masterLabel>
+        <translation><!-- Operator Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scratch</masterLabel>
+        <translation><!-- Scratch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Soft Blister</masterLabel>
+        <translation><!-- Soft Blister --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

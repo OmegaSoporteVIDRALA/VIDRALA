@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Is Encirc certain that accepting this project would not cannibalise Encirc’s existing distributors’ revenues? --></help>
+    <label><!-- Does Not Cannibalise Distributor? --></label>
+    <name>Does_Not_Cannibalise_Distributor__c</name>
+</CustomFieldTranslation>

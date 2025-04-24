@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please provide an explanation for your assessment of Vidrala&apos;s appetite for the Opportunity --></help>
+    <label><!-- Vidrala Opportunity Appetite Explained --></label>
+    <name>Encirc_Opportunity_Appetite_Explained__c</name>
+</CustomFieldTranslation>

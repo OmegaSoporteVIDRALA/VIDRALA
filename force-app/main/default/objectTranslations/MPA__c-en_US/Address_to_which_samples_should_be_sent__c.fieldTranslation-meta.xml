@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- For any European address please include the EIRO code --></help>
+    <label><!-- Address to which samples should be sent --></label>
+    <name>Address_to_which_samples_should_be_sent__c</name>
+</CustomFieldTranslation>

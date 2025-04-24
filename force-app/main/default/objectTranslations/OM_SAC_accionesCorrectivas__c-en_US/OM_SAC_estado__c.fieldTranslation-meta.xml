@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Estado --></label>
+    <name>OM_SAC_estado__c</name>
+    <picklistValues>
+        <masterLabel>Corregido</masterLabel>
+        <translation><!-- Corregido --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No corregido</masterLabel>
+        <translation><!-- No corregido --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

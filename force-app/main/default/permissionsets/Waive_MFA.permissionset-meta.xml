@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used To waive MFA for users
+This permission overrides the Multi-Factor Authentication for User Interface Logins user permission and the Require multi-factor authentication (MFA) for all direct UI logins to your Salesforce org setting.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Waive MFA</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>BypassMFAForUiLogins</name>
+    </userPermissions>
+</PermissionSet>

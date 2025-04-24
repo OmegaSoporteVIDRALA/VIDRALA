@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Palletising - Pallet Types --></label>
+    <name>Palletising_Pallet_Types__c</name>
+    <picklistValues>
+        <masterLabel>CHEP (Blue)</masterLabel>
+        <translation><!-- CHEP (Blue) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chep Euro (Blue)</masterLabel>
+        <translation><!-- Chep Euro (Blue) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EPAL</masterLabel>
+        <translation><!-- EPAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Heat Treated</masterLabel>
+        <translation><!-- Heat Treated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LPR (Red)</masterLabel>
+        <translation><!-- LPR (Red) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STD (White)</masterLabel>
+        <translation><!-- STD (White) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TF</masterLabel>
+        <translation><!-- TF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VMF</masterLabel>
+        <translation><!-- VMF --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

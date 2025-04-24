@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Quality Standards Attached --></label>
+    <name>Quality_Standards_Attached__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes - I&apos;ll attach them now</masterLabel>
+        <translation><!-- Yes - I&apos;ll attach them now --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

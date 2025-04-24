@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enter_deetz_if_Banding_is_true</fullName>
+    <active>true</active>
+    <description>User must enter additional notes if they believe it is possible that this container pack specification will require Banding.</description>
+    <errorConditionFormula>AND(
+  Container_Pack_Might_Require_Banding__c  = TRUE,
+
+   ISBLANK( Container_Pack_Banding_Notes__c ) 
+
+)</errorConditionFormula>
+    <errorDisplayField>Container_Pack_Banding_Notes__c</errorDisplayField>
+    <errorMessage>You must enter details of the potential Banding</errorMessage>
+</ValidationRule>

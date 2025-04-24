@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Contacto de Encirc</label>
+    <name>Encirc_Contact__c</name>
+    <picklistValues>
+        <masterLabel>Adrian Curry</masterLabel>
+        <translation><!-- Adrian Curry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adrian Galligan</masterLabel>
+        <translation><!-- Adrian Galligan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anita Galligan</masterLabel>
+        <translation><!-- Anita Galligan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anne Maguire</masterLabel>
+        <translation><!-- Anne Maguire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Breege Harte</masterLabel>
+        <translation><!-- Breege Harte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dave Sewell</masterLabel>
+        <translation><!-- Dave Sewell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dwayne Nixon</masterLabel>
+        <translation><!-- Dwayne Nixon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elaine McGrath</masterLabel>
+        <translation><!-- Elaine McGrath --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eugene Smith</masterLabel>
+        <translation><!-- Eugene Smith --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fiacre O&apos;Donnell</masterLabel>
+        <translation><!-- Fiacre O&apos;Donnell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Geoffrey Adolphus</masterLabel>
+        <translation><!-- Geoffrey Adolphus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hugh og Farrell</masterLabel>
+        <translation><!-- Hugh og Farrell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jacqueline Melanaphy</masterLabel>
+        <translation><!-- Jacqueline Melanaphy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>James Currie</masterLabel>
+        <translation><!-- James Currie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>James Moynagh</masterLabel>
+        <translation><!-- James Moynagh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jan Cockburn</masterLabel>
+        <translation><!-- Jan Cockburn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jeneka Turay</masterLabel>
+        <translation><!-- Jeneka Turay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jenny Elliott</masterLabel>
+        <translation><!-- Jenny Elliott --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jeremy Lappin</masterLabel>
+        <translation><!-- Jeremy Lappin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Julian Phipps</masterLabel>
+        <translation><!-- Julian Phipps --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kate Lynch</masterLabel>
+        <translation><!-- Kate Lynch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kevin Keenan</masterLabel>
+        <translation><!-- Kevin Keenan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kieran Martin</masterLabel>
+        <translation><!-- Kieran Martin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liam Maguire</masterLabel>
+        <translation><!-- Liam Maguire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lynn McCann</masterLabel>
+        <translation><!-- Lynn McCann --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maria Orr</masterLabel>
+        <translation><!-- Maria Orr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mark Booth</masterLabel>
+        <translation><!-- Mark Booth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mark Cousins</masterLabel>
+        <translation><!-- Mark Cousins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mark Hughes</masterLabel>
+        <translation><!-- Mark Hughes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Martin McGoldrick</masterLabel>
+        <translation><!-- Martin McGoldrick --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Murray Stewart</masterLabel>
+        <translation><!-- Murray Stewart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Niall McGrath</masterLabel>
+        <translation><!-- Niall McGrath --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nicola Cassidy</masterLabel>
+        <translation><!-- Nicola Cassidy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oliver Harry</masterLabel>
+        <translation><!-- Oliver Harry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Owen Gordon</masterLabel>
+        <translation><!-- Owen Gordon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paddy O&apos;Doherty</masterLabel>
+        <translation><!-- Paddy O&apos;Doherty --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paul Woods</masterLabel>
+        <translation><!-- Paul Woods --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peter Tomlinson</masterLabel>
+        <translation><!-- Peter Tomlinson --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phil Palmer</masterLabel>
+        <translation><!-- Phil Palmer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premier Administrator</masterLabel>
+        <translation><!-- Premier Administrator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Richard Orr</masterLabel>
+        <translation><!-- Richard Orr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rob Turvey</masterLabel>
+        <translation><!-- Rob Turvey --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Robert Coates</masterLabel>
+        <translation><!-- Robert Coates --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Robert Rose</masterLabel>
+        <translation><!-- Robert Rose --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roisin Reilly</masterLabel>
+        <translation><!-- Roisin Reilly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SFDC1 Admin1</masterLabel>
+        <translation><!-- SFDC1 Admin1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scott Crielly</masterLabel>
+        <translation><!-- Scott Crielly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scott Parry</masterLabel>
+        <translation><!-- Scott Parry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seamus McCabe</masterLabel>
+        <translation><!-- Seamus McCabe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sean Murphy</masterLabel>
+        <translation><!-- Sean Murphy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Siobhan Crowe</masterLabel>
+        <translation><!-- Siobhan Crowe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stephen Whitley</masterLabel>
+        <translation><!-- Stephen Whitley --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stuart Meldrum</masterLabel>
+        <translation><!-- Stuart Meldrum --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Therese McTeggart</masterLabel>
+        <translation><!-- Therese McTeggart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tony Krznar</masterLabel>
+        <translation><!-- Tony Krznar --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

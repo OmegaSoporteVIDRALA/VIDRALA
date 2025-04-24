@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Amber</masterLabel>
+        <translation>Topacio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Antique</masterLabel>
+        <translation>Musgo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Black</masterLabel>
+        <translation>Negro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Blue</masterLabel>
+        <translation>Azul</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dark Amber</masterLabel>
+        <translation>Ambar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dead leaf</masterLabel>
+        <translation>Hoja muerta</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Emerald Green</masterLabel>
+        <translation>Verde esmeralda</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Flint</masterLabel>
+        <translation>Blanco</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Half white</masterLabel>
+        <translation>Extraclaro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Olive Green</masterLabel>
+        <translation>Verde oscuro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otros</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>S</masterLabel>
+        <translation>S</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

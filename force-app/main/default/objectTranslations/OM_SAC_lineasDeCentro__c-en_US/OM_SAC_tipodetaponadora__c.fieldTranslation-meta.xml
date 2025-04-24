@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tipo de taponadora --></label>
+    <name>OM_SAC_tipodetaponadora__c</name>
+    <picklistValues>
+        <masterLabel>Corcho</masterLabel>
+        <translation><!-- Corcho --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cápsulas metálicas/plásticas</masterLabel>
+        <translation><!-- Cápsulas metálicas/plásticas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Otros</masterLabel>
+        <translation><!-- Otros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tapón corona</masterLabel>
+        <translation><!-- Tapón corona --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tapón rosca</masterLabel>
+        <translation><!-- Tapón rosca --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tapón rosca con vertedero</masterLabel>
+        <translation><!-- Tapón rosca con vertedero --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tapón sintético</masterLabel>
+        <translation><!-- Tapón sintético --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Twist-off</masterLabel>
+        <translation><!-- Twist-off --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Encirc Italy Sales Office</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Encirc Italy Sales Office</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Encirc_Italy_Director</parentRole>
+</Role>

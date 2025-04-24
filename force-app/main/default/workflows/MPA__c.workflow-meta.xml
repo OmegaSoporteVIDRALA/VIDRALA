@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Alert_to_Account_Owner</fullName>
+        <description>Email Alert to Account Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Approval_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_to_Material_Planner</fullName>
+        <description>Email Alert to Material Planner</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>breege.harte@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>claire.dolan@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>maria.orr@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Internal_Workflow_Rule_Templates/Sales_Initiated_MPA_Awaiting_Approval_from_Material_Planning</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_to_Material_Planner_2</fullName>
+        <description>Email Alert to Material Planner 2</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>breege.harte@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kyle.somerville1@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Internal_Workflow_Rule_Templates/Sales_Initiated_MPA_Awaiting_Approval_from_Material_Planning</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Step_1_Approval_Notification_to_record_submitter</fullName>
+        <description>Email Step 1 Approval Notification to record submitter</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Approval_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Step_2_Approval_Notification_to_record_submitter</fullName>
+        <description>Email Step 2 Approval Notification to record submitter</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Approval_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_all_members_of_Public_Group_Design</fullName>
+        <description>Email all members of Public Group &quot;Design&quot;</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Approval_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_all_members_of_Public_Group_Design_to_advise_of_record_rejection</fullName>
+        <description>Email all members of Public Group &quot;Design&quot; to advise of record rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>breege.harte@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Internal_Only_Final_Rejection_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_submitter</fullName>
+        <description>Email submitter to confirm record is Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Internal_Only_Approval_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_submitter_to_confirm_record_is_Approved</fullName>
+        <description>Email submitter to confirm record is Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_submitter_to_confirm_record_is_Approved_3</fullName>
+        <description>Email submitter to confirm record is Approved 3</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>jeneka.turay@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vicky.craven@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Internal_Only_Request_APPROVED</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_submitter_to_confirm_record_is_Rejected_2</fullName>
+        <description>Email submitter to confirm record is Rejected 2</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Internal_Only_Request_REJECTED</template>
+    </alerts>
+    <alerts>
+        <fullName>Final_Rejection_Sales_Executive</fullName>
+        <description>Final Rejection - Sales Executive</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>breege.harte@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Approval_Notification_Final_Rejection_2</template>
+    </alerts>
+    <alerts>
+        <fullName>Inform_Public_Group_Design_Group_that_a_record_has_been_submitted_for_approval</fullName>
+        <description>Inform Public Group &quot;Design Group&quot; that a record has been submitted for approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Internal_Only_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Inform_all_members_of_Public_Group_Design_Group_that_a_record_has_been_approved</fullName>
+        <description>Inform all members of Public Group &quot;Design Group&quot; that a record has been approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Approval_Notification_Final_Approval_2</template>
+    </alerts>
+    <alerts>
+        <fullName>Inform_all_members_of_Public_Group_Design_Group_that_a_record_has_been_rejected</fullName>
+        <description>Inform all members of Public Group &quot;Design Group&quot; that a record has been rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>breege.harte@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Approval_Notification_Final_Rejection_2</template>
+    </alerts>
+    <alerts>
+        <fullName>Inform_all_members_of_Public_Group_Design_Group_that_a_record_has_been_submitted</fullName>
+        <description>Inform all members of Public Group &quot;Design Group&quot; that a record has been submitted for approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Approval_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Inform_record_submitter_that_Material_Planning_have_approved_request</fullName>
+        <description>Inform record submitter that Material Planning have approved request</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Approval_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Inform_submitter_that_Ops_Director_has_approved_request</fullName>
+        <description>Inform submitter that Ops Director has approved request</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Approval_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Inform_submitter_that_request_has_been_approved_2</fullName>
+        <description>Inform submitter that request has been approved 2</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>jeneka.turay@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vicky.craven@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Inform_submitter_that_request_has_been_rejected</fullName>
+        <description>Inform submitter that request has been rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Request_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>MPA_Approved</fullName>
+        <description>MPA Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>jeneka.turay@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vicky.craven@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>MPA_Approved_2</fullName>
+        <description>MPA Approved 2</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>jeneka.turay@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vicky.craven@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Design_Group_that_an_MPA_Approval_Request_has_been_Approved</fullName>
+        <description>Notify Design Group that an MPA Approval Request has been Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Internal_Only_Final_Approval_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Maria_Orr_that_an_MPA_Approval_Request_has_been_Rejected</fullName>
+        <description>Notify Maria Orr that an MPA Approval Request has been Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>maria.orr@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vicky.craven@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/MPA_Design_Initiated_Sales_Initiated_Rejection</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_all_members_of_the_Design_Group_that_an_MPA_Approval_Request_has_been_App</fullName>
+        <description>Notify all members of the Design Group that an MPA Approval Request has been Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>jeneka.turay@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vicky.craven@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Approval_Final_Notification_Design</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_all_members_of_the_Design_Group_that_an_MPA_Approval_Request_has_been_Rej</fullName>
+        <description>Notify all members of the Design Group that an MPA Approval Request has been Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Design</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>breege.harte@encirc360.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Rejection_Final_Notification_Design</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_submitter_of_Design_Initiated_MPA_approval_that_their_request_has_been_Ap</fullName>
+        <description>Notify submitter of Design Initiated MPA approval that their request has been Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_submitter_of_Design_Initiated_MPA_approval_that_their_request_has_been_Re</fullName>
+        <description>Notify submitter of Design Initiated MPA approval that their request has been Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Request_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Planning_MPA_Request_Approved</fullName>
+        <description>Planning MPA Request Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Planning_MPA_Request_Rejected</fullName>
+        <description>Planning MPA Request Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Design_Initiated_Request_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Alert_To_All_Three_Approvers</fullName>
+        <description>Send Email Alert To All Three Approvers</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Record_Approver_Finance_Department__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Record_Approver_Operations_Director__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Record_Approver_Planning_Department__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Approval_Submission</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Confirmation_to_Submitter_Approved</fullName>
+        <description>Send Email Confirmation to Submitter - Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Confirmation_to_Submitter_Rejected</fullName>
+        <description>Send Email Confirmation to Submitter - Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/MPA_Sales_Initiated_Request_Rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Change_Status_Field_to_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Change Status Field to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_Field_to_Pending</fullName>
+        <description>Changes value of Approval Status picklist to Pending</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Change Status Field to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_Field_to_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Change Status Field to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_Field_to_Rejected_2</fullName>
+        <description>Changes Approval Status field value from &quot;Pending Approval&quot; to &quot;Rejected&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Change Status Field to Rejected 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_date_of_initial_AP_submission</fullName>
+        <description>Sets the date of a field showing the date at which the Approval Process was initially submitted for Approval</description>
+        <field>Initial_Approval_Process_Submission_Date__c</field>
+        <formula>Today()</formula>
+        <name>Set date of initial AP submission</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_date_of_initial_AP_submission_2</fullName>
+        <description>Sets the date of a field showing the date at which the Approval Process was initially submitted for Approval</description>
+        <field>Initial_Approval_Process_Submission_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Set date of initial AP submission 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update Approval Status Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_10</fullName>
+        <description>Update Approval Status field value from &quot;Pending Approval&quot; to &quot;Approved&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Approval Status Field  10</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_11</fullName>
+        <description>Update Approval Status field value from &quot;Pending Approval&quot; to &quot;Approved&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Approval Status Field 11</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_12</fullName>
+        <description>Update Approval Status field value from &quot;New - Unsubmitted&quot; to &quot;Pending Planning Approval&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Planning Approval</literalValue>
+        <name>Update Approval Status Field 12</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_14</fullName>
+        <description>Approval Status field value changed from &quot;Pending Approval&quot; to &quot;Rejected&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Approval Status Field 14</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_2</fullName>
+        <description>Update Approval Status field value from &quot;New - Unsubmitted&quot; to &quot;Pending Approval&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update Approval Status Field 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_3</fullName>
+        <description>Updates Approval Status from &quot;Pending Approval&apos; to &quot;Rejected&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Approval Status Field 3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_4</fullName>
+        <description>Updates Approval Status field from &quot;Pending Planning Approval&quot; to &quot;Pending Approval&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update Approval Status Field 4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_5</fullName>
+        <description>Updates field value of Approval Status from &quot;Pending Approval&quot; to &quot;Approved&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Approval Status Field 5</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_6</fullName>
+        <description>Update Approval Status field value from &quot;New - Unsubmitted&quot; to &quot;Pending Approval&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update Approval Status Field 6</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_7</fullName>
+        <description>Update Approval Status field value from &quot;Pending Approval&quot; to &quot;Rejected&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Approval Status Field 7</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_8</fullName>
+        <description>Update Approval Status field value from &quot;Pending Approval&quot; to &quot;Rejected&quot;</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Approval Status Field 8</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_To_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Approval Status Field To Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_Field_To_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Approval Status Field To Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

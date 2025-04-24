@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Por qué interesa esta oportunidad?</help>
+    <label>Explicación interés en la oportunidad</label>
+    <name>Encirc_Opportunity_Appetite_Explained__c</name>
+</CustomFieldTranslation>

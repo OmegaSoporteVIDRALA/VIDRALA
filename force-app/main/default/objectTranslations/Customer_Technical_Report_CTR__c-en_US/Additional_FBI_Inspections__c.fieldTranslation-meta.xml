@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Additional FBI Inspections --></label>
+    <name>Additional_FBI_Inspections__c</name>
+    <picklistValues>
+        <masterLabel>&quot;Dud&quot;/Tap Tone</masterLabel>
+        <translation><!-- &quot;Dud&quot;/Tap Tone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cap Colour</masterLabel>
+        <translation><!-- Cap Colour --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metal Detector</masterLabel>
+        <translation><!-- Metal Detector --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Cap</masterLabel>
+        <translation><!-- Missing Cap --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overfill</masterLabel>
+        <translation><!-- Overfill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thread Definition</masterLabel>
+        <translation><!-- Thread Definition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Underfill</masterLabel>
+        <translation><!-- Underfill --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

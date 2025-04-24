@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Dark Amber</fullName>
+        <default>false</default>
+        <label>Dark Amber</label>
+    </customValue>
+    <customValue>
+        <fullName>Flint</fullName>
+        <default>false</default>
+        <label>Flint</label>
+    </customValue>
+    <customValue>
+        <fullName>Dead leaf</fullName>
+        <default>false</default>
+        <label>Dead leaf</label>
+    </customValue>
+    <customValue>
+        <fullName>Antique</fullName>
+        <default>false</default>
+        <label>Antique</label>
+    </customValue>
+    <customValue>
+        <fullName>Black</fullName>
+        <default>false</default>
+        <label>Black</label>
+    </customValue>
+    <customValue>
+        <fullName>Olive Green</fullName>
+        <default>false</default>
+        <label>Olive Green</label>
+    </customValue>
+    <customValue>
+        <fullName>S</fullName>
+        <default>false</default>
+        <label>S</label>
+    </customValue>
+    <customValue>
+        <fullName>Amber</fullName>
+        <default>false</default>
+        <label>Amber</label>
+    </customValue>
+    <customValue>
+        <fullName>Emerald Green</fullName>
+        <default>false</default>
+        <label>Emerald Green</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Blue</fullName>
+        <default>false</default>
+        <label>Blue</label>
+    </customValue>
+    <customValue>
+        <fullName>Half white</fullName>
+        <default>false</default>
+        <label>Half white</label>
+    </customValue>
+    <masterLabel>Fifty Colour</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

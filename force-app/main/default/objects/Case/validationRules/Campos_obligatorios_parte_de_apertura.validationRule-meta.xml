@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campos_obligatorios_parte_de_apertura</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Status, &apos;OM_SAC_pendienteAnalisis&apos;), 
+				OR(ISBLANK(AccountId) , ISBLANK(OM_SAC_codigoReclamacionCliente__c) , ISBLANK(OM_SAC_modeloYDenominacion__c )))</errorConditionFormula>
+    <errorMessage>Indica los campos obligatorios antes de cambiar de etapa: Cliente, Código reclamación cliente, Modelo y denominación</errorMessage>
+</ValidationRule>

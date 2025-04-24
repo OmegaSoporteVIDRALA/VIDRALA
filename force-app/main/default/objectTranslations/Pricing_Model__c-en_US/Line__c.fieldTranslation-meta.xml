@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Line --></label>
+    <name>Line__c</name>
+    <picklistValues>
+        <masterLabel>A1</masterLabel>
+        <translation><!-- A1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>A2</masterLabel>
+        <translation><!-- A2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>A3</masterLabel>
+        <translation><!-- A3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>A4</masterLabel>
+        <translation><!-- A4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>A5</masterLabel>
+        <translation><!-- A5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>A6</masterLabel>
+        <translation><!-- A6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B1</masterLabel>
+        <translation><!-- B1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B2</masterLabel>
+        <translation><!-- B2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B3</masterLabel>
+        <translation><!-- B3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B4</masterLabel>
+        <translation><!-- B4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B5</masterLabel>
+        <translation><!-- B5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B6</masterLabel>
+        <translation><!-- B6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B7</masterLabel>
+        <translation><!-- B7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C1</masterLabel>
+        <translation><!-- C1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C2</masterLabel>
+        <translation><!-- C2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C3</masterLabel>
+        <translation><!-- C3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C4</masterLabel>
+        <translation><!-- C4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>F1</masterLabel>
+        <translation><!-- F1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>F2</masterLabel>
+        <translation><!-- F2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>F3</masterLabel>
+        <translation><!-- F3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>F4</masterLabel>
+        <translation><!-- F4 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

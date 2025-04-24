@@ -1,0 +1,16 @@
+<apex:page standardController="Late_Load__c" extensions="NewLateLoadOverrideExtension" action="{!abortAction}" lightningStylesheets="true">
+   <!-- -----------------------------------------------------------------------------------------------------------------------
+   Name:		NewLateLoadOverride.page
+   Description: New Late Load button override page
+					
+   Date         Version Author          	Summary of Changes 
+   -----------  ------- ------------------	--------------------------------------------------------------------------------
+   Nov 2017     1.0     M.Witchalls(Ciber)	Initial Release 
+------------------------------------------------------------------------------------------------------------------------  -->
+   <apex:form >
+      <apex:pageBlock id="thePageBlock">
+         <apex:pageMessages id="messages" />
+         <apex:commandButton value="Cancel" action="{!cancel}" immediate="true" />
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>

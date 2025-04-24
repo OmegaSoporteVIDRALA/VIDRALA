@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remind_me_in_6_months_to_review_again__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>WARNING - Mould Storage may start to cost after 6 months</inlineHelpText>
+    <label>Remind Owner in 6 months to review again</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

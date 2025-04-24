@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision_Process_Known__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does Encirc know and understand the Lead’s decision makers / decision making process?</description>
+    <inlineHelpText>Does Encirc know and understand the Lead’s decision makers / decision making process?</inlineHelpText>
+    <label>Decision Process Known?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Incident classification for Customer --></label>
+    <name>Incident_classification_for_Customer__c</name>
+    <picklistValues>
+        <masterLabel>High (Risk of losing sales)</masterLabel>
+        <translation><!-- High (Risk of losing sales) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low (Doesn&apos;t impacts ENCIRC&apos;s reputation)</masterLabel>
+        <translation><!-- Low (Doesn&apos;t impacts ENCIRC&apos;s reputation) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medium (Impacts ENCIRC&apos;s reputation)</masterLabel>
+        <translation><!-- Medium (Impacts ENCIRC&apos;s reputation) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InternalIdeasIdeaRecordType</fullName>
+    <active>true</active>
+    <description>Record Type used to associate ideas with a specific community</description>
+    <label>Internal Ideas: Idea Record Type</label>
+    <picklistValues>
+        <picklist>Categories</picklist>
+        <values>
+            <fullName>Batch and Furnace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beverages Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beverages Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold End</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company wide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Despatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Efficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health and Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot End</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Job Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paletise and Warehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tech</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

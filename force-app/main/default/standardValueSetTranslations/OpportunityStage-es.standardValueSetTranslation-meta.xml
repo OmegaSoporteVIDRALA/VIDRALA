@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Agreement to Proceed</masterLabel>
+        <translation>Acuerdo alcanzado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Client Appetite to Partner</masterLabel>
+        <translation><!-- Client Appetite to Partner --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Closed - Unsuitable</masterLabel>
+        <translation>Cerrada - Inadecuada</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Closed Lost</masterLabel>
+        <translation>Cerrada perdida</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Closed Won</masterLabel>
+        <translation>Cerrada ganada</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Design</masterLabel>
+        <translation>Diseño</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Development Phase</masterLabel>
+        <translation>En fase de desarrollo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Introduction</masterLabel>
+        <translation>En fase de introducción</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Knowledge Transfer</masterLabel>
+        <translation><!-- Knowledge Transfer --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MPA Negotiation</masterLabel>
+        <translation><!-- MPA Negotiation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MPA Specification</masterLabel>
+        <translation><!-- MPA Specification --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Needs Analysis</masterLabel>
+        <translation>Necesita análisis</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Negotiate &amp; Review</masterLabel>
+        <translation>Negociar y revisar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Proposal</masterLabel>
+        <translation>Propuesta</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Proposal / Price / Quote</masterLabel>
+        <translation>Propuesta / Precio / Oferta</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Qualification</masterLabel>
+        <translation>Calificación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Quotation</masterLabel>
+        <translation>Cotización</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Research</masterLabel>
+        <translation>Estudio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Suitability Agreed</masterLabel>
+        <translation>Conveniencia acordada</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rebate_Fifty</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Rebate</compactLayoutAssignment>
+    <label>Rebate (Fifty)</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New - Unsubmitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Organisation_Name__c</picklist>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vidrala</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Organisation__c</picklist>
+        <values>
+            <fullName>EN60</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>VD10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VD30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unit_Type__c</picklist>
+        <values>
+            <fullName>BOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

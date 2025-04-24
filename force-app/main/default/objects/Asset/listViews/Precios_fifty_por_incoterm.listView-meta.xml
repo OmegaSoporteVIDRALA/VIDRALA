@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precios_fifty_por_incoterm</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>Incoterms__c</columns>
+    <columns>Price_1000__c</columns>
+    <columns>ASSET.INSTALL_DATE</columns>
+    <columns>ASSET.USAGE_END_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Incoterms__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Fifty desde el 01/05/23 por incoterm</label>
+</ListView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NPD_Stage__c</fullName>
+    <label>NPD Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NPD Request</fullName>
+                <default>true</default>
+                <label>NPD Request</label>
+            </value>
+            <value>
+                <fullName>Design Brief</fullName>
+                <default>false</default>
+                <label>Design Brief</label>
+            </value>
+            <value>
+                <fullName>Drawing Created</fullName>
+                <default>false</default>
+                <label>Drawing Created</label>
+            </value>
+            <value>
+                <fullName>MPA Approved for Trial moulds</fullName>
+                <default>false</default>
+                <label>MPA Approved for Trial moulds</label>
+            </value>
+            <value>
+                <fullName>Trial Moulds Ordered</fullName>
+                <default>false</default>
+                <label>Trial Moulds Ordered</label>
+            </value>
+            <value>
+                <fullName>Trial Mould Equip Delivery Date</fullName>
+                <default>false</default>
+                <label>Trial Mould Equip Delivery Date</label>
+            </value>
+            <value>
+                <fullName>Trial Date</fullName>
+                <default>false</default>
+                <label>Trial Date</label>
+            </value>
+            <value>
+                <fullName>Trial Samples sent to customer</fullName>
+                <default>false</default>
+                <label>Trial Samples sent to customer</label>
+            </value>
+            <value>
+                <fullName>MPA Approved for Bulk Moulds</fullName>
+                <default>false</default>
+                <label>MPA Approved for Bulk Moulds</label>
+            </value>
+            <value>
+                <fullName>Bulk Moulds Ordered</fullName>
+                <default>false</default>
+                <label>Bulk Moulds Ordered</label>
+            </value>
+            <value>
+                <fullName>Bulk Moulds Delivery date</fullName>
+                <default>false</default>
+                <label>Bulk Moulds Delivery date</label>
+            </value>
+            <value>
+                <fullName>2 Day Production Run Approved</fullName>
+                <default>false</default>
+                <label>2 Day Production Run Approved</label>
+            </value>
+            <value>
+                <fullName>Customer Approved for Bulk Glass</fullName>
+                <default>false</default>
+                <label>Customer Approved for Bulk Glass</label>
+            </value>
+            <value>
+                <fullName>Site Approved Bulk Glass Production</fullName>
+                <default>false</default>
+                <label>Site Approved Bulk Glass Production</label>
+            </value>
+            <value>
+                <fullName>NPD Void</fullName>
+                <default>false</default>
+                <label>NPD Void</label>
+            </value>
+            <value>
+                <fullName>NPD Closed</fullName>
+                <default>false</default>
+                <label>NPD Closed</label>
+            </value>
+            <value>
+                <fullName>NPD stopped; mould equipment was purchased</fullName>
+                <default>false</default>
+                <label>NPD stopped; mould equipment was purchased</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

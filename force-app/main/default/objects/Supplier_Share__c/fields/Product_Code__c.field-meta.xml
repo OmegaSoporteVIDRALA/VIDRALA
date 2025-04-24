@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Code__c</fullName>
+    <description>Created for MS Case 00004984.</description>
+    <externalId>false</externalId>
+    <formula>Product__r.ProductCode</formula>
+    <inlineHelpText>This will display the product code via the selected &apos;Product&apos;</inlineHelpText>
+    <label>Product Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

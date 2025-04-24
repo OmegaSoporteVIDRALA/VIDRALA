@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Did The Trial Take Place? --></label>
+    <name>Did_The_Trial_Take_Place__c</name>
+    <picklistValues>
+        <masterLabel>Aborted</masterLabel>
+        <translation><!-- Aborted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation><!-- No --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

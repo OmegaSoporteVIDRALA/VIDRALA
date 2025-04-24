@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Last Risk/Upside Approved or Rejected Date --></help>
+    <label><!-- Last Risk/Upside Date --></label>
+    <name>Last_Risk_Upside_Date__c</name>
+</CustomFieldTranslation>

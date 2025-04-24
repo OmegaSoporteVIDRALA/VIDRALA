@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Campaign Layout</layout>
+        <sections>
+            <label><!-- ROI --></label>
+            <section>ROI</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Camapña hija</label>
+        <name>Child_Campaign</name>
+    </quickActions>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewAllCampaignMembers --></label>
+        <name>ViewAllCampaignMembers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
+</CustomObjectTranslation>

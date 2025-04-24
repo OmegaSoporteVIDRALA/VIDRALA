@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rebate_Approval_Manager__c</fullName>
+    <description>Defines who is responsible for approving any Rebates submitted by this User.</description>
+    <inlineHelpText>Defines who is responsible for approving any Rebates submitted by this User.</inlineHelpText>
+    <label>Rebate Approval Manager</label>
+    <relationshipName>x1</relationshipName>
+    <restrictedAdminField>false</restrictedAdminField>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Hierarchy</type>
+</CustomField>

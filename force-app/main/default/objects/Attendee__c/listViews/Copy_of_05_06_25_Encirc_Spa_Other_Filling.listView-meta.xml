@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_05_06_25_Encirc_Spa_Other_Filling</fullName>
+    <columns>Attendee_Type__c</columns>
+    <columns>NAME</columns>
+    <columns>Personnel__c</columns>
+    <columns>Contact__c</columns>
+    <columns>Account__c</columns>
+    <columns>Beverages_Customer_Contact_Account__c</columns>
+    <columns>Tier__c</columns>
+    <columns>Status__c</columns>
+    <columns>Is_a_Hotel_Required__c</columns>
+    <columns>Hotel_is_required_both_nights__c</columns>
+    <columns>Night_before_event__c</columns>
+    <columns>Night_of_event__c</columns>
+    <columns>Dietary_Requirements__c</columns>
+    <columns>Dietary_Requirements_Comments__c</columns>
+    <columns>General_Member_Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event__c</field>
+        <operation>equals</operation>
+        <value>Encirc Golf Day @ The Belfry 2025 - Spa Only or Others</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Nominated,Invite Sent,Accepted</value>
+    </filters>
+    <filters>
+        <field>Account__c</field>
+        <operation>notEqual</operation>
+        <value>BEVERAGES CUSTOMERS,eNCIRC bEVERAGES</value>
+    </filters>
+    <label>05.06.25 - Encirc Spa/Other - Glass(12)</label>
+</ListView>

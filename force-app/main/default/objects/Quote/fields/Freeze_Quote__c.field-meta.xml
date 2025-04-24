@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Freeze_Quote__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>used to change the record type to read-only see process builder</description>
+    <inlineHelpText>Used to change the Record Type to read-only Notify Admin to Unlock</inlineHelpText>
+    <label>Freeze Quote</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

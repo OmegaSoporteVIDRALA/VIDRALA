@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Encirc_UK_Customer</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>SAP_Account_Number__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Account_Executive__c</columns>
+    <columns>Senior_Sales_Admin_Lookup__c</columns>
+    <columns>Sales_Admin_Lookup__c</columns>
+    <columns>Customer_Service__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Customers,Account.Pan_European,Account.Parent_Pan_European</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>JMela,jcb,jelli,mhugh,Turvs,rcoat,scrie,tpres,kjack,mstew,lfost</value>
+    </filters>
+    <label>Encirc UK Customer</label>
+</ListView>

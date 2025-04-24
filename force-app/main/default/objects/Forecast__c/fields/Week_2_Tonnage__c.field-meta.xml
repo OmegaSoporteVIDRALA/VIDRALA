@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Week_2_Tonnage__c</fullName>
+    <label>Week 2 Tonnage</label>
+    <summarizedField>Dispatch__c.Tonnage__c</summarizedField>
+    <summaryFilterItems>
+        <field>Dispatch__c.Week_in_Month__c</field>
+        <operation>equals</operation>
+        <value>2</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Dispatch__c.Forecast__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

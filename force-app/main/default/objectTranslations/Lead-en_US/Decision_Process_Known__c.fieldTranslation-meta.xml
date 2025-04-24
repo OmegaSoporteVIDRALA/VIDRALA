@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Does Encirc know and understand the Lead’s decision makers / decision making process? --></help>
+    <label><!-- Decision Process Known? --></label>
+    <name>Decision_Process_Known__c</name>
+</CustomFieldTranslation>

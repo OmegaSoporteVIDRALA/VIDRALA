@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mould Equipment Configuration --></label>
+    <name>Mould_equipment_configuration_10__c</name>
+    <picklistValues>
+        <masterLabel>AIS DG</masterLabel>
+        <translation><!-- AIS DG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIS SG</masterLabel>
+        <translation><!-- AIS SG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIS TG</masterLabel>
+        <translation><!-- AIS TG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIS Tandem</masterLabel>
+        <translation><!-- AIS Tandem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NIS DG</masterLabel>
+        <translation><!-- NIS DG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NIS DG/TG</masterLabel>
+        <translation><!-- NIS DG/TG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NIS QG</masterLabel>
+        <translation><!-- NIS QG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NIS TG</masterLabel>
+        <translation><!-- NIS TG --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

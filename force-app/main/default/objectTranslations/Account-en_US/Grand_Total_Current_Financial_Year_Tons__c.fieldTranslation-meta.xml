@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the Sum of the &apos;Current Financial Year Tons&apos;s and the Child &apos;Current Financial Year Tons&apos; --></help>
+    <label><!-- Grand Total Current Financial Year Tons --></label>
+    <name>Grand_Total_Current_Financial_Year_Tons__c</name>
+</CustomFieldTranslation>

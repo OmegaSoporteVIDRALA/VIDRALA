@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Fifty Stage Quotation Email
+Email Marta When the Stage changes to Quotation
+
+Text Email Template
+Opportunity Stage Quotation
+
+Email Alert
+Opportunity Fifty Stage Quotation Email</description>
+        <name>Fifty_Stage_Quotation_Email</name>
+        <label>Fifty Stage Quotation Email</label>
+        <locationX>248</locationX>
+        <locationY>2447</locationY>
+        <actionName>Opportunity.Opportunity_Fifty_Stage_Quotation_Email</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity.Opportunity_Fifty_Stage_Quotation_Email</nameSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_ID_to_the_Opportunity_Variable</name>
+        <label>Assign ID to the Opportunity Variable</label>
+        <locationX>248</locationX>
+        <locationY>1739</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Opportunity.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Opportunity_records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Name_False</name>
+        <label>Assign Name - False</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Opportunity.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_Sales_Org_is_set</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Name_True</name>
+        <label>Assign Name - True</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Opportunity.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Set_Opportunity_NameFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_Sales_Org_is_set</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Previous_comments_field</name>
+        <label>Assign Previous comments field - True</label>
+        <locationX>248</locationX>
+        <locationY>1439</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Opportunity.Comments__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Populate_comments</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_the_Opportunity_Variable_is_not_null</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Previous_comments_field_false</name>
+        <label>Assign Previous comments field - False</label>
+        <locationX>512</locationX>
+        <locationY>1439</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Opportunity.Comments__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Comments__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_the_Opportunity_Variable_is_not_null</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Sales_Org_Code_False</name>
+        <label>Assign Sales Org Code - False</label>
+        <locationX>512</locationX>
+        <locationY>1139</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Opportunity.Sales_Organization__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Sales_Organization__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_Next_Step_is_Changed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Sales_Org_Code_True</name>
+        <label>Assign Sales Org Code - True</label>
+        <locationX>248</locationX>
+        <locationY>1139</locationY>
+        <assignmentItems>
+            <assignToReference>Var_Opportunity.Sales_Organization__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Assign_Sales_Org</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_if_Next_Step_is_Changed</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Are_Flows_enabled</name>
+        <label>Are Flows enabled?</label>
+        <locationX>611</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Flow_should_run</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.Configuration__c.Are_Flows_Off__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_New1</targetReference>
+            </connector>
+            <label>Flow should run</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_Record_Type</name>
+        <label>Check for Record Type?</label>
+        <locationX>380</locationX>
+        <locationY>2039</locationY>
+        <defaultConnector>
+            <targetReference>Fifty_Opportunity_and_Stage_Quotation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes2</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Encirc Master Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Existing Customer: Existing Bottle &amp; New Volume</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Existing Customer: New Bottle &amp; New Volume</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Existing Customer: New Bottle Replacing Existing Volume</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Existing Customer: New Bottle Counter Spec</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New Customer: New Bottle</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MPA Only</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_a_task</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_for_Stage_and_Lead_Source</name>
+        <label>Check for Stage and Lead Source?</label>
+        <locationX>182</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Name_False</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LeadSource</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Business Development Internal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Name_True</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Next_Step_is_Changed</name>
+        <label>Check if Next Step is Changed?</label>
+        <locationX>380</locationX>
+        <locationY>1331</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Previous_comments_field_false</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes22</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.NextStep</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Previous_comments_field</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Sales_Org_is_set</name>
+        <label>Check if Sales Org is set?</label>
+        <locationX>380</locationX>
+        <locationY>1031</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Sales_Org_Code_False</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes12</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Sales_org_set</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Sales_Org_Code_True</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_the_Opportunity_Variable_is_not_null</name>
+        <label>Check if the Opportunity Variable is not null?</label>
+        <locationX>380</locationX>
+        <locationY>1631</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_Record_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Var_Opportunity</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_ID_to_the_Opportunity_Variable</targetReference>
+            </connector>
+            <label>Not null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>&quot;Marta&quot; requries an email
+Case 7799 25 Sep 24
+When an opportunity has been moved to &quot;Quotation Stage&quot; please email Marta Pena.
+Email subject title &quot;New opportunity should be offered&quot;</description>
+        <name>Fifty_Opportunity_and_Stage_Quotation</name>
+        <label>Fifty Opportunity and Stage Quotation</label>
+        <locationX>380</locationX>
+        <locationY>2339</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>record_type_is_Fifty_and_Stage_is_Qualification</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fifty_Master_Opportunity</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Quotation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.StageName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Quotation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Fifty_Stage_Quotation_Email</targetReference>
+            </connector>
+            <label>record type is Fifty and Stage is Qualification</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_New1</name>
+        <label>Is New?</label>
+        <locationX>380</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Check_for_Closed_Won_Stage</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Is_New</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_for_Converted_Lead</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Added case 7799 Email Marta on fifty Master opportunity and Qualification stage</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Assign_comments</name>
+        <dataType>String</dataType>
+        <expression>PRIORVALUE({!$Record.NextStep} )&amp; BR() &amp; {!$Record.Comments__c}</expression>
+    </formulas>
+    <formulas>
+        <name>Assign_Sales_Org</name>
+        <dataType>String</dataType>
+        <expression>CASE(
+ TEXT({!$Record.Sales_Organization_Text__c} ),
+ &quot;UK&quot;,&quot;EN60&quot;,
+ &quot;Italy&quot;,&quot;VD30&quot;,
+ &quot;Spain&quot;,&quot;VD10&quot;,
+ &quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Is_New</name>
+        <dataType>Boolean</dataType>
+        <expression>IsNew()</expression>
+    </formulas>
+    <formulas>
+        <name>Populate_comments</name>
+        <dataType>String</dataType>
+        <expression>PRIORVALUE({!$Record.NextStep}) &amp; BR() &amp; {!$Record.Comments__c}</expression>
+    </formulas>
+    <formulas>
+        <name>Sales_org_set</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+ ISNEW(),
+ ISCHANGED({!$Record.Sales_Organization_Text__c} )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Set_Opportunity_NameFormula</name>
+        <dataType>String</dataType>
+        <expression>$Record.Account.Name  &amp; &quot;  -  &quot;  &amp;  text (YEAR(TODAY()))  &amp; &quot; - &quot;  &amp; $Record.Name</expression>
+    </formulas>
+    <interviewLabel>Opportunity Update Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Create or Update Triggered</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_a_task</name>
+        <label>Create a task</label>
+        <locationX>248</locationX>
+        <locationY>2147</locationY>
+        <connector>
+            <targetReference>Fifty_Opportunity_and_Stage_Quotation</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Ensure Deal Sheet is attached to Account Plan</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <name>Update_Opportunity_records</name>
+        <label>Update Opportunity records</label>
+        <locationX>248</locationX>
+        <locationY>1847</locationY>
+        <connector>
+            <targetReference>Check_for_Record_Type</targetReference>
+        </connector>
+        <inputReference>Var_Opportunity</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>485</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Are_Flows_enabled</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Check_for_Closed_Won_Stage</name>
+        <label>Check for Closed Won Stage</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Check_if_Sales_Org_is_set</targetReference>
+        </connector>
+        <flowName>Opportunity_Closed_Won_Stage</flowName>
+        <inputAssignments>
+            <name>Opportunity</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Check_for_Converted_Lead</name>
+        <label>Check for Converted Lead</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Check_for_Stage_and_Lead_Source</targetReference>
+        </connector>
+        <flowName>Opportunity_Converted_Lead</flowName>
+        <inputAssignments>
+            <name>Opportunity</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>AllAssets</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Asset</objectType>
+    </variables>
+    <variables>
+        <name>AllLineItems</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <name>collectionToBeUpdated</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <name>NewAsset</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Asset</objectType>
+    </variables>
+    <variables>
+        <name>RecVArOppProduct</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <name>Var_Opportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+</Flow>

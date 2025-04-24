@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pallet Type (Planning) --></label>
+    <name>Pallet_Type_Planning__c</name>
+    <picklistValues>
+        <masterLabel>PPT04 - Blue Pallet</masterLabel>
+        <translation><!-- PPT04 - Blue Pallet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPT12 - EQ</masterLabel>
+        <translation><!-- PPT12 - EQ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPT17 - Heat Treated</masterLabel>
+        <translation><!-- PPT17 - Heat Treated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPT29 - Red Pallet</masterLabel>
+        <translation><!-- PPT29 - Red Pallet --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

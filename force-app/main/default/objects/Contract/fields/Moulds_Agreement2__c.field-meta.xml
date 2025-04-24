@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Moulds_Agreement2__c</fullName>
+    <label>Moulds Agreement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Cliente 100 % (100% Customer)</fullName>
+                <default>false</default>
+                <label>Cliente 100 % (100% Customer)</label>
+            </value>
+            <value>
+                <fullName>Sobre precio modelo (In the product price)</fullName>
+                <default>false</default>
+                <label>Sobre precio modelo (In the product price)</label>
+            </value>
+            <value>
+                <fullName>Sobre valor residual (Only remaining product)</fullName>
+                <default>false</default>
+                <label>Sobre valor residual (Only remaining product)</label>
+            </value>
+            <value>
+                <fullName>Vidrala 100% (100 % Vidrala)</fullName>
+                <default>false</default>
+                <label>Vidrala 100% (100 % Vidrala)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2025_Customer_Entertainment</fullName>
+    <booleanFilter>4 OR (1 AND 2 AND 3 AND 5 AND 6 AND 7)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Parent_Event_Budget__c</columns>
+    <columns>Budget_Start_Date__c</columns>
+    <columns>Budget_End_Date__c</columns>
+    <columns>Budget_Amount__c</columns>
+    <columns>Customer_Entertainment_Budget__c</columns>
+    <columns>Actual_Expenditure_Deposit__c</columns>
+    <columns>Actual_Expenditure_Balance__c</columns>
+    <columns>Committed_Expenditure_Deposit__c</columns>
+    <columns>Committed_Expenditure_Balance__c</columns>
+    <columns>Budget_V_Actual_and_Committed__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Budget_Start_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2025</value>
+    </filters>
+    <filters>
+        <field>Budget_End_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>12/31/2025</value>
+    </filters>
+    <filters>
+        <field>SAP_Material_Group__c</field>
+        <operation>equals</operation>
+        <value>SD450 Customer Entertainment</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>2025 Budget</value>
+    </filters>
+    <filters>
+        <field>Parent_Event_Budget__c</field>
+        <operation>equals</operation>
+        <value>2025 Budget</value>
+    </filters>
+    <filters>
+        <field>Parent_Event_Budget__c</field>
+        <operation>notEqual</operation>
+        <value>2025 Filling</value>
+    </filters>
+    <filters>
+        <field>Parent_Event_Budget__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>2025 Customer Entertainment</label>
+</ListView>

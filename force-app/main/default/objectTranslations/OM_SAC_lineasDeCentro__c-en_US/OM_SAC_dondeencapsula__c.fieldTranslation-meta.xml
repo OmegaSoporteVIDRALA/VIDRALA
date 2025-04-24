@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Dónde encapsula --></label>
+    <name>OM_SAC_dondeencapsula__c</name>
+    <picklistValues>
+        <masterLabel>En máquina independiente</masterLabel>
+        <translation><!-- En máquina independiente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>En taponadora</masterLabel>
+        <translation><!-- En taponadora --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

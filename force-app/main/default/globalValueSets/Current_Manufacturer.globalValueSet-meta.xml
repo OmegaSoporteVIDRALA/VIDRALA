@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Allied</fullName>
+        <default>false</default>
+        <label>Allied</label>
+    </customValue>
+    <customValue>
+        <fullName>Ardagh</fullName>
+        <default>false</default>
+        <label>Ardagh</label>
+    </customValue>
+    <customValue>
+        <fullName>BA Glass</fullName>
+        <default>false</default>
+        <label>BA Glass</label>
+    </customValue>
+    <customValue>
+        <fullName>Beatson Clarke</fullName>
+        <default>false</default>
+        <label>Beatson Clarke</label>
+    </customValue>
+    <customValue>
+        <fullName>Encirc</fullName>
+        <default>false</default>
+        <label>Encirc</label>
+    </customValue>
+    <customValue>
+        <fullName>Germany</fullName>
+        <default>false</default>
+        <label>Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>OI</fullName>
+        <default>false</default>
+        <label>OI</label>
+    </customValue>
+    <customValue>
+        <fullName>SiseCam</fullName>
+        <default>false</default>
+        <label>SiseCam</label>
+    </customValue>
+    <customValue>
+        <fullName>Turkey</fullName>
+        <default>false</default>
+        <label>Turkey</label>
+    </customValue>
+    <customValue>
+        <fullName>TBC</fullName>
+        <default>false</default>
+        <label>TBC</label>
+    </customValue>
+    <masterLabel>Current Manufacturer</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

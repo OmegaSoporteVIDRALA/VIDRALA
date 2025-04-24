@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lista_con_productos_y_precios</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>ASSET.INSTALL_DATE</columns>
+    <columns>Price_1000__c</columns>
+    <columns>PRODUCT2.FAMILY_ENUM</columns>
+    <columns>Incoterms__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Incoterms__c</field>
+        <operation>equals</operation>
+        <value>EX WORKS,FCA</value>
+    </filters>
+    <label>Lista con productos y precios</label>
+</ListView>

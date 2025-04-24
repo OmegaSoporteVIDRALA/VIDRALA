@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Annualised_Volume_Tons_000__c</fullName>
+    <description>This field takes the Customer Annual Vol Units, multiples it with the container weight and then divides by 1000</description>
+    <externalId>false</externalId>
+    <formula>Expected_Annualised_Volume_000_s__c * Container_Weight__c/1000</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field takes the Customer Annual Vol Units, multiples it with the container weight and then divides by 1000</inlineHelpText>
+    <label>Customer Annual Vol Tons (000)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

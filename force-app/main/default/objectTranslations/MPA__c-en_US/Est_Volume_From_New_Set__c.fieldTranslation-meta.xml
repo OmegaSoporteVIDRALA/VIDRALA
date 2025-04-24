@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Est. Volume From New Set (000&apos;s) --></label>
+    <name>Est_Volume_From_New_Set__c</name>
+</CustomFieldTranslation>

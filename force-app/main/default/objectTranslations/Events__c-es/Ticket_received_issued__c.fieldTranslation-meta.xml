@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tickets have been received and distributed --></help>
+    <label>Ticket recibido y emitido</label>
+    <name>Ticket_received_issued__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comment_must_be_filled_before_CR_date</fullName>
+    <active>true</active>
+    <description>Comments must be added before customer requested date can be filled</description>
+    <errorConditionFormula>ISBLANK(Comments__c) &amp;&amp; 
+NOT(ISBLANK( Customer_Requested_Date__c))</errorConditionFormula>
+    <errorDisplayField>Comments__c</errorDisplayField>
+    <errorMessage>Please provide comments before adding the customer requested date</errorMessage>
+</ValidationRule>

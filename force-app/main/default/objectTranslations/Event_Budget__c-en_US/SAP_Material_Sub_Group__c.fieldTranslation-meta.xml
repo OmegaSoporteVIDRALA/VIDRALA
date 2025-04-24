@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SAP Material Sub Group --></label>
+    <name>SAP_Material_Sub_Group__c</name>
+    <picklistValues>
+        <masterLabel>Filling</masterLabel>
+        <translation><!-- Filling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Glass</masterLabel>
+        <translation><!-- Glass --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HQ</masterLabel>
+        <translation><!-- HQ --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

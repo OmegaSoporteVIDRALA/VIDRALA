@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Contact_Sharing_All_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Contact Sharing All Users</label>
+        <sharedTo>
+            <roleAndSubordinates>All_Users</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Sales</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Contact_Sharing_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Contact Sharing Sales</label>
+        <sharedTo>
+            <roleAndSubordinates>Sales</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Sales</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Italy_All_Contacts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>shares all italy owned contacts</description>
+        <label>Italy All Contacts</label>
+        <sharedTo>
+            <group>Italy_All_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Italy_All_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_R_W_All_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All Users should have access to Contacts</description>
+        <label>Share R/W All Users</label>
+        <sharedTo>
+            <roleAndSubordinates>All_Users</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>All_Users</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_R_W_All_Users_to_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share R/W All Users to Sales</label>
+        <sharedTo>
+            <roleAndSubordinates>Sales</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>All_Users</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>director_Uk</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>director Uk</label>
+        <sharedTo>
+            <role>Encirc_UK_Sales_Director</role>
+        </sharedTo>
+        <sharedFrom>
+            <group>Encirc_Public_Group</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>read_write_All_fifty</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Read/Write All Fifty</label>
+        <sharedTo>
+            <group>Fifty_Sales_Dir_office</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Fifty_Public_Group</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

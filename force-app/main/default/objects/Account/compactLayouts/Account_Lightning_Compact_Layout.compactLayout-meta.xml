@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Lightning_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>OwnerId</fields>
+    <fields>Account_Executive__c</fields>
+    <fields>Sales_Admin__c</fields>
+    <fields>Senior_Sales_Admin__c</fields>
+    <fields>Customer_Service__c</fields>
+    <fields>Credit_Check_Timeline__c</fields>
+    <fields>Commercial_Contract_Status_Formula__c</fields>
+    <fields>Contract_Expire_Date_Formula__c</fields>
+    <label>Account Lightning Compact Layout</label>
+</CompactLayout>

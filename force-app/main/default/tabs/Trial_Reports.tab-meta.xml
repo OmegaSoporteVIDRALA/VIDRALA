@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>To link directly to Trial Reports Folder</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Trial Reports</label>
+    <motif>Custom64: Compass</motif>
+    <url>https://encirc360.lightning.force.com/lightning/r/Folder/00l58000000PBL0AAO/view?queryScope=userFolders</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

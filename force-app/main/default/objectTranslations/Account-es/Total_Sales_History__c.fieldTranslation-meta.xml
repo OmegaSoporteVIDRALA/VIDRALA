@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The life-time revenue from this account, a sum of revenue taken form all &apos;Actual Sales History&apos;s associated to this Account --></help>
+    <label>Historial de ventas</label>
+    <name>Total_Sales_History__c</name>
+</CustomFieldTranslation>

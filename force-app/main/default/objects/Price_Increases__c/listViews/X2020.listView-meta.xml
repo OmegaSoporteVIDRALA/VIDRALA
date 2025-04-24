@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2020</fullName>
+    <columns>Sales_Organization__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Achieved_Increase__c</columns>
+    <columns>Achievement_v_Budget__c</columns>
+    <columns>Budgeted_date_effect__c</columns>
+    <columns>Actual_date_effect__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trading_Year__c</field>
+        <operation>equals</operation>
+        <value>2020</value>
+    </filters>
+    <label>2020</label>
+</ListView>

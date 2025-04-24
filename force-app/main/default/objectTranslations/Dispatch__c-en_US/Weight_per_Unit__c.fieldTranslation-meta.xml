@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Weight per unit in grams --></help>
+    <label><!-- Weight per Unit --></label>
+    <name>Weight_per_Unit__c</name>
+</CustomFieldTranslation>

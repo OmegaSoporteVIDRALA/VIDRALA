@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub-category --></label>
+    <name>Sub_category__c</name>
+    <picklistValues>
+        <masterLabel>Academy</masterLabel>
+        <translation><!-- Academy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arts &amp; Media</masterLabel>
+        <translation><!-- Arts &amp; Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beverages</masterLabel>
+        <translation><!-- Beverages --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entertainment</masterLabel>
+        <translation><!-- Entertainment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Glass</masterLabel>
+        <translation><!-- Glass --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistics</masterLabel>
+        <translation><!-- Logistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sports</masterLabel>
+        <translation><!-- Sports --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

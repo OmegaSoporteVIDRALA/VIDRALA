@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpportunityLineID__c</fullName>
+    <description>ID of the Opportunity Line Item that this Quote Line Item relates to.</description>
+    <externalId>false</externalId>
+    <formula>OpportunityLineItem.Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>ID of the Opportunity Line Item that this Quote Line Item relates to.</inlineHelpText>
+    <label>Opportunity Line ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

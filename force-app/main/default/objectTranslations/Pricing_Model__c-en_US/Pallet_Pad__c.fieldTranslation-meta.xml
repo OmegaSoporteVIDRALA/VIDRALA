@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Base Pad --></label>
+    <name>Pallet_Pad__c</name>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPP05</masterLabel>
+        <translation><!-- PPP05 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPP10</masterLabel>
+        <translation><!-- PPP10 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

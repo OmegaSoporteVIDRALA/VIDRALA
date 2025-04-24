@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Colour</fullName>
+    <active>true</active>
+    <description>When &quot;Other&quot; is selected in the Colour__c field the user must specify the colour in the Other_Colour__c field.</description>
+    <errorConditionFormula>TEXT(Colour__c) = &apos;Other&apos;
+&amp;&amp;
+ISBLANK(Other_Colour__c)</errorConditionFormula>
+    <errorDisplayField>Other_Colour__c</errorDisplayField>
+    <errorMessage>When the Colour is &quot;Other&quot; you must specify the colour in the Other (Colour) field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Master Account record for the customer</description>
+    <inlineHelpText>Master Account record for the customer</inlineHelpText>
+    <label>Customer</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipName>MPAs1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

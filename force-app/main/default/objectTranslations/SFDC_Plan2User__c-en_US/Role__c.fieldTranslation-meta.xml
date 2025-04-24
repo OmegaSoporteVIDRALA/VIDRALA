@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Role --></label>
+    <name>Role__c</name>
+    <picklistValues>
+        <masterLabel>Account Manager</masterLabel>
+        <translation><!-- Account Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Service</masterLabel>
+        <translation><!-- Customer Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operations</masterLabel>
+        <translation><!-- Operations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quality</masterLabel>
+        <translation><!-- Quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Office Account Handler</masterLabel>
+        <translation><!-- Sales Office Account Handler --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical</masterLabel>
+        <translation><!-- Technical --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

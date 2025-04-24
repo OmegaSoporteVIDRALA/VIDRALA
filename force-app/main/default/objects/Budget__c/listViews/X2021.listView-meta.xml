@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2021</fullName>
+    <columns>NAME</columns>
+    <columns>SAP_Society__c</columns>
+    <columns>Market__c</columns>
+    <columns>Year__c</columns>
+    <columns>Month_Name__c</columns>
+    <columns>Colour__c</columns>
+    <columns>Sales_Organisation__c</columns>
+    <columns>Tonnage__c</columns>
+    <columns>Turnover_000__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Year__c</field>
+        <operation>equals</operation>
+        <value>2021</value>
+    </filters>
+    <label>2021</label>
+</ListView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_Finance_Initial_Credit_Check_submitted</fullName>
+        <description>Alert Finance Initial Credit Check submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Initial_Credit_Check_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Full_Check_Completed</fullName>
+        <description>Full Check Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Full_Credit_Check_Completed</template>
+    </alerts>
+    <alerts>
+        <fullName>Full_Check_Submitted</fullName>
+        <description>Full Check Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Full_Credit_Check_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Initial_Credit_Check_Completed</fullName>
+        <description>Initial Credit Check Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Initial_Credit_Check_Completed</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Set_Recalculate_Apex_Sharing_to_False</fullName>
+        <field>Recalculate_Apex_Sharing__c</field>
+        <literalValue>0</literalValue>
+        <name>Set Recalculate Apex Sharing to False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

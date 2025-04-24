@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- En caso de contratos de más de 2 años de vigencia, indicar el volumen negociado para el 3 año de vigencia --></help>
+    <label>Volumen 3er año</label>
+    <name>Volume_Allowance_3rd_year__c</name>
+</CustomFieldTranslation>

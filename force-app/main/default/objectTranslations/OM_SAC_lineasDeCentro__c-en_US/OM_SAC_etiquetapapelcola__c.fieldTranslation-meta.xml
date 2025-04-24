@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Etiqueta papel + cola --></label>
+    <name>OM_SAC_etiquetapapelcola__c</name>
+    <picklistValues>
+        <masterLabel>Cola caliente / fría</masterLabel>
+        <translation><!-- Cola caliente / fría --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fabricante cola</masterLabel>
+        <translation><!-- Fabricante cola --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

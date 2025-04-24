@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volume_Allowance_2nd_year__c</fullName>
+    <description>En caso de contratos de más de 1 años de vigencia, indicar el volumen negociado para el 2 año de vigencia</description>
+    <externalId>false</externalId>
+    <inlineHelpText>En caso de contratos de más de 1 años de vigencia, indicar el volumen negociado para el 2 año de vigencia</inlineHelpText>
+    <label>Volume Allowance 2nd year</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

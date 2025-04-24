@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Replaced_Moulds_Need_Lookup</fullName>
+    <active>true</active>
+    <description>If the container has been replaced, users need to enter the replacement drawing lookup</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(Has_this_container_been_replaced_19__c, &apos;Yes&apos;),
+ ISBLANK(Replacement_Container_Drawing_19__c)
+)</errorConditionFormula>
+    <errorDisplayField>Replacement_Container_Drawing_19__c</errorDisplayField>
+    <errorMessage>Please specify the Replacement Container Drawing</errorMessage>
+</ValidationRule>

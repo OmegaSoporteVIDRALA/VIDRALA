@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Trial Equipment Config --></label>
+    <name>Trial_Equipment_Config__c</name>
+    <picklistValues>
+        <masterLabel>Double Gob</masterLabel>
+        <translation><!-- Double Gob --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Double/Triple Gob</masterLabel>
+        <translation><!-- Double/Triple Gob --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quad Gob</masterLabel>
+        <translation><!-- Quad Gob --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single Gob</masterLabel>
+        <translation><!-- Single Gob --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Triple Gob</masterLabel>
+        <translation><!-- Triple Gob --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

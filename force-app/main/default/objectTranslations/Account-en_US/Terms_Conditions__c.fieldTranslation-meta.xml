@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Does this account have signed Terms &amp; conditions or are not they required --></help>
+    <label><!-- Terms &amp; Conditions --></label>
+    <name>Terms_Conditions__c</name>
+    <picklistValues>
+        <masterLabel>NO</masterLabel>
+        <translation><!-- NO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Required</masterLabel>
+        <translation><!-- Not Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>YES</masterLabel>
+        <translation><!-- YES --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

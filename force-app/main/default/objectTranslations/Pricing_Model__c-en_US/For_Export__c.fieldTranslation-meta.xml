@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- For Export --></label>
+    <name>For_Export__c</name>
+    <picklistValues>
+        <masterLabel>None of the volume will be exported outside of UK/ROI</masterLabel>
+        <translation><!-- None of the volume will be exported outside of UK/ROI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Some of the volume will be exported outside of UK/ROI</masterLabel>
+        <translation><!-- Some of the volume will be exported outside of UK/ROI --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

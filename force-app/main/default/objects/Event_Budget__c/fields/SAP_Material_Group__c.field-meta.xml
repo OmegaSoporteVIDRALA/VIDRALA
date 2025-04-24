@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAP_Material_Group__c</fullName>
+    <description>Budget Types that Encirc Uses</description>
+    <label>SAP Material Group</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SD450 Customer Entertainment</fullName>
+                <default>false</default>
+                <label>SD450 Customer Entertainment</label>
+            </value>
+            <value>
+                <fullName>SC500 Trade Events</fullName>
+                <default>false</default>
+                <label>SC500 Trade Events</label>
+            </value>
+            <value>
+                <fullName>SD700 Sponsorship/Subscription</fullName>
+                <default>false</default>
+                <label>SD700 Sponsorship/Subscription</label>
+            </value>
+            <value>
+                <fullName>SC500 Marketing</fullName>
+                <default>false</default>
+                <label>SC500 Marketing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

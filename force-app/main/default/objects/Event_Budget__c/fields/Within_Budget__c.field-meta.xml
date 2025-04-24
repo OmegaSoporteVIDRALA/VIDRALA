@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Within_Budget__c</fullName>
+    <description>A Red Flag Appears When The Actual And Committed Amounts Exceeds Budget Amount</description>
+    <externalId>false</externalId>
+    <formula>IF(  (Actual_Expenditure_Balance__c +  Actual_Expenditure_Deposit__c +  Committed_Expenditure_Balance__c +  Committed_Expenditure_Deposit__c  )  &gt;  Budget_Amount__c  ,
+IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;red&quot;, 30, 30),
+IF( Budget_Amount__c &gt; (Actual_Expenditure_Balance__c +  Actual_Expenditure_Deposit__c +  Committed_Expenditure_Balance__c +  Committed_Expenditure_Deposit__c  ) ,
+IMAGE(&quot;/img/samples/flag_green.gif&quot;, &quot;green&quot;, 30, 30),
+IMAGE(&quot;/img/samples/flag_green.gif&quot;, &quot;green&quot;, 30, 30)
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>A Red Flag Appears When The Actual And Committed Amounts Exceeds Budget Amount</inlineHelpText>
+    <label>Within Budget?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Describe why the note has been included --></help>
+    <label><!-- Reason for note --></label>
+    <name>Reason_for_note__c</name>
+</CustomFieldTranslation>

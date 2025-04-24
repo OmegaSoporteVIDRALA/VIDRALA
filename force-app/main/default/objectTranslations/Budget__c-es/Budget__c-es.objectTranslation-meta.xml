@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Budget --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Budget --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <layouts>
+        <layout>Budget Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Budget Name --></nameFieldLabel>
+</CustomObjectTranslation>

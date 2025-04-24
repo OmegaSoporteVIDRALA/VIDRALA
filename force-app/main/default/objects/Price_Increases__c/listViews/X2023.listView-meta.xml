@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Trading_Year__c</columns>
+    <columns>Budgeted_Increase__c</columns>
+    <columns>Latest_Proposal__c</columns>
+    <columns>Achieved_Increase__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trading_Year__c</field>
+        <operation>equals</operation>
+        <value>2023</value>
+    </filters>
+    <label>2023</label>
+</ListView>

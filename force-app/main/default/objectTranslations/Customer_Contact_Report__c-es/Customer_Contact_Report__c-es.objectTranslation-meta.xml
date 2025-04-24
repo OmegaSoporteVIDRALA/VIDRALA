@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Informe visita a clientes</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Informes visita a clientes</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Customer Visit Report Layout</layout>
+        <sections>
+            <label><!-- AOB --></label>
+            <section>AOB</section>
+        </sections>
+        <sections>
+            <label><!-- Action Points --></label>
+            <section>Action Points</section>
+        </sections>
+        <sections>
+            <label><!-- Agenda --></label>
+            <section>Agenda</section>
+        </sections>
+        <sections>
+            <label><!-- Attendees --></label>
+            <section>Attendees</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Items Discussed --></label>
+            <section>Items Discussed</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fifty Customer Visit Report</layout>
+        <sections>
+            <label><!-- Action Points --></label>
+            <section>Action Points</section>
+        </sections>
+        <sections>
+            <label><!-- Agenda --></label>
+            <section>Agenda</section>
+        </sections>
+        <sections>
+            <label><!-- Attendees --></label>
+            <section>Attendees</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Items Discussed --></label>
+            <section>Items Discussed</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Informes visita a clientes</nameFieldLabel>
+    <webLinks>
+        <label>Descargar Informe Visita (encirc)</label>
+        <name>Download_Customer_Contact_Report</name>
+    </webLinks>
+    <webLinks>
+        <label>Descargar Informe Visita (EN)</label>
+        <name>Download_Customer_Contact_Report_English</name>
+    </webLinks>
+    <webLinks>
+        <label>Descargar Informe Visita (FR)</label>
+        <name>Download_Customer_Contact_Report_French</name>
+    </webLinks>
+    <webLinks>
+        <label>Descargar Informe Visita (PT)</label>
+        <name>Download_Customer_Contact_Report_Portuguese</name>
+    </webLinks>
+    <webLinks>
+        <label>Descargar Informe Visita (ES)</label>
+        <name>Download_Customer_Contact_Report_Spanish</name>
+    </webLinks>
+</CustomObjectTranslation>

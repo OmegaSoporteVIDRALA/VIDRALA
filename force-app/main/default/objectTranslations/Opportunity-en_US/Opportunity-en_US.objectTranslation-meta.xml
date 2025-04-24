@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Container Details --></label>
+            <section>Container Details</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Appetite --></label>
+            <section>Opportunity Appetite</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Expected Volumes --></label>
+            <section>Opportunity Expected Volumes</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Product Values --></label>
+            <section>Opportunity Product Values</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Source --></label>
+            <section>Opportunity Source</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Win/Loss Analysis --></label>
+            <section>Opportunity Win/Loss Analysis</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vidrala (Opportunity Layout)</layout>
+        <sections>
+            <label><!-- Opportunity Appetite --></label>
+            <section>Opportunity Appetite</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Expected Volumes --></label>
+            <section>Opportunity Expected Volumes</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Product Values --></label>
+            <section>Opportunity Product Values</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Source --></label>
+            <section>Opportunity Source</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Win/Loss Analysis --></label>
+            <section>Opportunity Win/Loss Analysis</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Encirc Master Opportunity --></label>
+        <name>Encirc_Master_Opportunity</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Existing Customer: Existing Bottle &amp; New Volume --></label>
+        <name>Existing_Customer_Existing_Bottle_New_Volume</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Existing Customer: New Bottle Counter Spec --></label>
+        <name>Existing_Customer_New_Bottle_Counter_Spec</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Existing Customer: New Bottle &amp; New Volume --></label>
+        <name>Existing_Customer_New_Bottle_New_Volume</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Existing Customer: New Bottle Replacing Existing Volume --></label>
+        <name>Existing_Customer_New_Bottle_Replacing_Existing_Volume</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Fifty Master Opportunity --></label>
+        <name>Fifty_Master_Opportunity</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MPA Only --></label>
+        <name>MPA_Only</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New Customer: Existing Bottle --></label>
+        <name>New_Customer_Existing_Bottle</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New Customer: New Bottle --></label>
+        <name>New_Customer_New_Bottle</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please enter date when you expect customer to renew this Opportunity --></errorMessage>
+        <name>Enforce_Renewal_Opportunity_Renewal_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Stage must be &quot;Introduction&quot; for new Opportunities --></errorMessage>
+        <name>Fifty_Opportunity_New_Stage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide additional information about why the Opportunity was lost --></errorMessage>
+        <name>More_info_about_Opp_loss</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide additional information about why the Opportunity was won --></errorMessage>
+        <name>More_info_about_Opp_win</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Opportunity Close Date must be in the future --></errorMessage>
+        <name>Opportunity_Close_Date_Is_In_The_Future</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure all Introduction fields and the Expected Annualised Volume (000&apos;s) field are populated --></errorMessage>
+        <name>Progress_to_Proposal</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please complete the Container Details fields and the Opportunity Appetite --></errorMessage>
+        <name>Progress_to_Qualification</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure the Introduction, Qualification fields and the Amount field are populated --></errorMessage>
+        <name>Progress_to_Quotation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Quote Required By Date must be in the future --></errorMessage>
+        <name>Quote_Required_By_Date_Is_In_The_Future</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure the SAP Account Number is Included on the Account record before moving to the Close Winning this Opportunity --></errorMessage>
+        <name>SAP_Account_Number_Blank_no_Quote_Stage</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Crear_oferta --></label>
+        <name>Crear_oferta</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+    <workflowTasks>
+        <description><!-- An opportunity with this customer was previously moved to Closed/Lost. At that time the Opportunity owner expected the Opportunity to renew in the future. That opportunity renewal date is in 90 days. Please contact the customer to discuss. --></description>
+        <name>Contact_customer_an_opportunity_is_likely_to_reopen_in_the_next_90_days</name>
+        <subject><!-- Contact customer: an opportunity is likely to reopen in the next 90 days --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Please make sure that the Deal Sheet is attached to the relevant Account Plan. The Opportunity is now marked as &quot;Closed/Won&quot; so there should be a Deal Sheet attached to the Account Plan. --></description>
+        <name>Ensure_Deal_Sheet_is_Attached</name>
+        <subject><!-- Ensure Deal Sheet is attached to Account Plan --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description>
+            <!-- Por favor, revisa la oportunidad que está a punto de vencer .
+Gracias, -->
+        </description>
+        <name>FECHA2_VENCIMIENTO_OPORTUNIDAD</name>
+        <subject><!-- FECHA VENCIMIENTO OPORTUNIDAD --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description>
+            <!-- Por favor, revisa esta oportunidad que sigue en estado abierta y está a punto de vencer
+Gracias, -->
+        </description>
+        <name>FECHA_VENCIMIENTO_OPORTUNIDAD</name>
+        <subject><!-- FECHA VENCIMIENTO OPORTUNIDAD --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

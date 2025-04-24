@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fifty_Contact_RT</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Vidrala_Contact_Compact_Layout</compactLayoutAssignment>
+    <label>Fifty_Contact_RT</label>
+    <picklistValues>
+        <picklist>Beverages_Customer__c</picklist>
+        <values>
+            <fullName>Accolade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benchmark Drinks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bibendum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bibendum Off Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Phoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Britvic Soft Drinks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bruce Jack Wines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundaberg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASELLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CYT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diageo Ltd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E%26J Gallo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freixenet Copestick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grupo Penaflor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indevin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KOPPARBERG ASB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mocktails</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nugan Wines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off Piste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packamama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skinny Brands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sxollie Cider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TWE_Treasury Wines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VSPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WX Brands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Westons Cider</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Insight_Profile__c</picklist>
+        <values>
+            <fullName>Blue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yellow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interests__c</picklist>
+        <values>
+            <fullName>American Football</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arts %26 Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Basketball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Racing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cycling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equestrian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Football</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GAA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Golf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gym</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horse Racing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hurling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motorbikes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rugby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Running</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Theatre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wine</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Business Development Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Catalogue</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Opportunities 2025</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market__c</picklist>
+        <values>
+            <fullName>ES</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Non Active</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

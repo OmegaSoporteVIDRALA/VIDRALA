@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_purchasing_power_null_dont_create</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISBLANK( Account__r.Total_Purchase_Power__c ) &amp;&amp;  ISNEW()</errorConditionFormula>
+    <errorMessage>No ha sido informado el campo &quot;Capacidad total de compra&quot; en la cuenta</errorMessage>
+</ValidationRule>

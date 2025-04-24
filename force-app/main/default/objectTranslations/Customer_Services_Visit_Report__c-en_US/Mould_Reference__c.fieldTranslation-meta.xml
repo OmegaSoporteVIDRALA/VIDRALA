@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Drawing number --></help>
+    <label><!-- Mould Reference: --></label>
+    <name>Mould_Reference__c</name>
+    <relationshipLabel><!-- Customer Services Visit Reports --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Able_to_Add_Value__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Could Encird add value to the customer?</description>
+    <inlineHelpText>Could Encird add value to the customer?</inlineHelpText>
+    <label>Able to Add Value?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

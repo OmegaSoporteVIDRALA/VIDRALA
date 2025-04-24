@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loading__c</fullName>
+    <label>Loading</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FLT</fullName>
+                <default>false</default>
+                <label>FLT</label>
+            </value>
+            <value>
+                <fullName>AGV&apos;s</fullName>
+                <default>false</default>
+                <label>AGV&apos;s</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

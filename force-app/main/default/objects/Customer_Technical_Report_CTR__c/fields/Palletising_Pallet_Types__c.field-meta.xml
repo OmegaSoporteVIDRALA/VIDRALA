@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Palletising_Pallet_Types__c</fullName>
+    <label>Palletising - Pallet Types</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>STD (White)</fullName>
+                <default>false</default>
+                <label>STD (White)</label>
+            </value>
+            <value>
+                <fullName>CHEP (Blue)</fullName>
+                <default>false</default>
+                <label>CHEP (Blue)</label>
+            </value>
+            <value>
+                <fullName>LPR (Red)</fullName>
+                <default>false</default>
+                <label>LPR (Red)</label>
+            </value>
+            <value>
+                <fullName>Heat Treated</fullName>
+                <default>false</default>
+                <label>Heat Treated</label>
+            </value>
+            <value>
+                <fullName>Chep Euro (Blue)</fullName>
+                <default>false</default>
+                <label>Chep Euro (Blue)</label>
+            </value>
+            <value>
+                <fullName>TF</fullName>
+                <default>false</default>
+                <label>TF</label>
+            </value>
+            <value>
+                <fullName>VMF</fullName>
+                <default>false</default>
+                <label>VMF</label>
+            </value>
+            <value>
+                <fullName>EPAL</fullName>
+                <default>false</default>
+                <label>EPAL</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

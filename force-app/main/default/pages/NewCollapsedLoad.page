@@ -1,0 +1,76 @@
+<apex:page standardController="Dispatch__c" extensions="NewLateLoadExtensionController" title="New Late Load" tabStyle="Late_Load__c"
+ lightningStylesheets="true">
+	<!-- -----------------------------------------------------------------------------------------------------------------------
+   Name:		NewCollapsedLoad.page
+   Description: New Collapsed Load button page
+					
+   Date         Version Author          	Summary of Changes 
+   -----------  ------- ------------------	--------------------------------------------------------------------------------
+   Nov 2017     1.0     M.Witchalls(Ciber)	Initial Release 
+------------------------------------------------------------------------------------------------------------------------  -->
+	<apex:sectionHeader title="{!$ObjectType.Dispatch__c.label} {!Dispatch__c.Dispatch_ID__c}" subtitle="New {!recordTypeName}"/>
+	<apex:form id="theForm">
+		<apex:pageMessages id="messages" />
+		<apex:outputPanel layout="block" style="text-align:center">
+			<apex:commandButton value="Save" action="{!save}" />
+			<apex:commandButton value="Cancel" action="{!cancel}" immediate="true" />
+		</apex:outputPanel>
+		<apex:pageBlock mode="edit" id="pageBlock0">
+			<apex:pageBlockSection title="Dispatch Information" columns="2">
+				<apex:repeat value="{!readOnlyFields}" var="f">
+					<apex:outputField value="{!load[f.fieldPath]}" />
+				</apex:repeat>
+				<apex:outputField value="{!dispatch.Pack_Specification__c}" />
+				<apex:outputField value="{!dispatch.Dispatch_Date__c}" />
+				<apex:pageBlockSectionItem />
+				<apex:outputField value="{!dispatch.Dispatch_Date_Time__c}" />
+				<apex:pageBlockSectionItem />
+				<apex:outputField value="{!dispatch.Planned_Delivery_Date__c}" />
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="section1" title="Collapsed Load Information" columns="1">
+				<apex:inputField value="{!load.Comments__c}" label="Details" required="true" style="width:350px;height:50px" />
+				<apex:repeat value="{!collapsedloadFields}" var="f">
+					<apex:inputField value="{!load[f.fieldPath]}" required="{!f.fieldPath!='Pallets_damaged__c'}" />
+				</apex:repeat>
+				<apex:inputField value="{!load.Was_load_replaced__c}">
+					<apex:actionSupport event="onchange" action="{!replacementChange}" rerender="pageBlock1,messages" />
+				</apex:inputField>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+		<apex:actionRegion >
+			<apex:pageBlock mode="edit" id="pageBlock1">
+				<apex:pageBlockSection title="Replacement Section (Mandatory)" columns="1" rendered="{!load.Was_load_replaced__c}">
+					<apex:repeat value="{!replacementFields}" var="f">
+						<apex:inputField value="{!load[f.fieldPath]}" />
+					</apex:repeat>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+			<apex:pageBlock mode="edit" id="pageBlock2">
+				<apex:pageBlockSection columns="1">
+					<apex:inputField value="{!load.Customer_Informed__c}">
+						<apex:actionSupport event="onchange" action="{!customerInformedChange}" rerender="pageBlock3,messages" />
+					</apex:inputField>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+			<apex:pageBlock mode="edit" id="pageBlock3">
+				<apex:pageBlockSection id="section2" title="Customer Informed Section (Mandatory)" columns="1" rendered="{!load.Customer_Informed__c}">
+					<apex:repeat value="{!customerInformedFields}" var="f">
+						<apex:inputField value="{!load[f.fieldPath]}" />
+					</apex:repeat>
+					<apex:inputField value="{!load.Customers_lines_down__c}">
+						<apex:actionSupport event="onchange" action="{!linesDownChange}" rerender="pageBlock3" />
+					</apex:inputField>
+				</apex:pageBlockSection>
+				<apex:pageBlockSection id="section3" title="Customer's Lines Down Section (Mandatory)" columns="1" rendered="{!load.Customers_lines_down__c}">
+					<apex:repeat value="{!linesDownFields}" var="f">
+						<apex:inputField value="{!load[f.fieldPath]}" />
+					</apex:repeat>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+		</apex:actionRegion>
+		<apex:outputPanel layout="block" style="text-align:center">
+			<apex:commandButton value="Save" action="{!save}" />
+			<apex:commandButton value="Cancel" action="{!cancel}" immediate="true" />
+		</apex:outputPanel>
+	</apex:form>
+</apex:page>

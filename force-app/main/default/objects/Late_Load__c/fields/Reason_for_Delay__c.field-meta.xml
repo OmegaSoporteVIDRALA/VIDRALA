@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Delay__c</fullName>
+    <description>Reason for Late Delivery</description>
+    <label>Reason for Delay</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Traffic</fullName>
+                <default>false</default>
+                <label>Traffic</label>
+            </value>
+            <value>
+                <fullName>Haulier - Planning</fullName>
+                <default>false</default>
+                <label>Haulier - Planning</label>
+            </value>
+            <value>
+                <fullName>Haulier - Breakdown</fullName>
+                <default>false</default>
+                <label>Haulier - Breakdown</label>
+            </value>
+            <value>
+                <fullName>Haulier - Driver Error</fullName>
+                <default>false</default>
+                <label>Haulier - Driver Error</label>
+            </value>
+            <value>
+                <fullName>Haulier - Driver Hours</fullName>
+                <default>false</default>
+                <label>Haulier - Driver Hours</label>
+            </value>
+            <value>
+                <fullName>Encirc - Stock Availability</fullName>
+                <default>false</default>
+                <label>Encirc - Stock Availability</label>
+            </value>
+            <value>
+                <fullName>Encirc - System Issues</fullName>
+                <default>false</default>
+                <label>Encirc - System Issues</label>
+            </value>
+            <value>
+                <fullName>Encirc - Stock Issues</fullName>
+                <default>false</default>
+                <label>Encirc - Stock Issues</label>
+            </value>
+            <value>
+                <fullName>Encirc - Loading Delay</fullName>
+                <default>false</default>
+                <label>Encirc - Loading Delay</label>
+            </value>
+            <value>
+                <fullName>Encirc - Planning</fullName>
+                <default>false</default>
+                <label>Encirc - Planning</label>
+            </value>
+            <value>
+                <fullName>Customer - Planning</fullName>
+                <default>false</default>
+                <label>Customer - Planning</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Breakdown</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Breakdown</label>
+            </value>
+            <value>
+                <fullName>Delays at loading point</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Delays at loading point</label>
+            </value>
+            <value>
+                <fullName>Driver Called in Sick</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Driver Called in Sick</label>
+            </value>
+            <value>
+                <fullName>Driver held up at previous drop</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Driver held up at previous drop</label>
+            </value>
+            <value>
+                <fullName>Driver held up looking for correct address</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Driver held up looking for correct address</label>
+            </value>
+            <value>
+                <fullName>Driver issues</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Driver issues</label>
+            </value>
+            <value>
+                <fullName>Driver stuck in motorway traffic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Driver stuck in motorway traffic</label>
+            </value>
+            <value>
+                <fullName>Driving Hours</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Driving Hours</label>
+            </value>
+            <value>
+                <fullName>External warehouse issues</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>External warehouse issues</label>
+            </value>
+            <value>
+                <fullName>Ferry Issues</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ferry Issues</label>
+            </value>
+            <value>
+                <fullName>Haulier did not book the load</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Haulier did not book the load</label>
+            </value>
+            <value>
+                <fullName>Haulier did not make changes to the load</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Haulier did not make changes to the load</label>
+            </value>
+            <value>
+                <fullName>Load involved in Traffic accident</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Load involved in Traffic accident</label>
+            </value>
+            <value>
+                <fullName>Mix up with load references</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mix up with load references</label>
+            </value>
+            <value>
+                <fullName>Stock not released on time</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Stock not released on time</label>
+            </value>
+            <value>
+                <fullName>Wrong load sent in</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wrong load sent in</label>
+            </value>
+            <value>
+                <fullName>Wrong type of trailer sent in</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wrong type of trailer sent in</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CUOTA_POR_PRODUCTO</fullName>
+    <active>true</active>
+    <description>En este record type añadimos las cuotas diferenciadas por producto</description>
+    <label>CUOTA POR PRODUCTO</label>
+</RecordType>

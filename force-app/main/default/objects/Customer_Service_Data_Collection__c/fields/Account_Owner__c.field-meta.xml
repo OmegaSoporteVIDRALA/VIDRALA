@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Owner__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Field used to capture the Account Owner; utilised for automated email for the &apos;Customer Service Data Collections&apos; report</description>
+    <label>Account Owner</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Customer_Service_Data_Collections</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

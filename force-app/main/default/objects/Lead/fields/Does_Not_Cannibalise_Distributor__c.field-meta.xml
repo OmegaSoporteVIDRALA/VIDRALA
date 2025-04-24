@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Does_Not_Cannibalise_Distributor__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is Encirc certain that accepting this project would not cannibalise Encirc’s existing distributors’ revenues?</description>
+    <inlineHelpText>Is Encirc certain that accepting this project would not cannibalise Encirc’s existing distributors’ revenues?</inlineHelpText>
+    <label>Does Not Cannibalise Distributor?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

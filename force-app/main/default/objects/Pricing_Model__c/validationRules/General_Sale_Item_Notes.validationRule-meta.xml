@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_Sale_Item_Notes</fullName>
+    <active>true</active>
+    <description>When &quot;Yes&quot; is selected in the &quot;General_Sale_Item__c&quot; field the user must provide additional commentary in the &quot;General_Sale_Item_Notes__c&quot;  field.</description>
+    <errorConditionFormula>ISPICKVAL(General_Sale_Item__c, &quot;Yes&quot;)
+
+&amp;&amp;
+
+ISBLANK( General_Sale_Item_Notes__c )</errorConditionFormula>
+    <errorDisplayField>General_Sale_Item_Notes__c</errorDisplayField>
+    <errorMessage>If it is a General Sales Item you must enter further details here</errorMessage>
+</ValidationRule>

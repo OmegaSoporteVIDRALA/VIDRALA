@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_Trade_Containers</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Drawing_Type__c</columns>
+    <columns>Finish__c</columns>
+    <columns>Colour__c</columns>
+    <columns>Spec_No__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>Design_Brief__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Drawing_Type__c</field>
+        <operation>equals</operation>
+        <value>Container</value>
+    </filters>
+    <filters>
+        <field>Account_Name_Formula__c</field>
+        <operation>equals</operation>
+        <value>General Trade</value>
+    </filters>
+    <label>General Trade Containers</label>
+</ListView>

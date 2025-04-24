@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_ProductColourTranslateAuto__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Quote.OM_VID_Idioma__c, 
+    &quot;Español&quot;, 
+     CASE(TEXT(Product2.Colour__c),
+        &quot;Amber&quot;, &quot;Topacio&quot;,
+        &quot;Antique&quot;, &quot;Musgo&quot;,
+        &quot;Black&quot;, &quot;Negro&quot;,
+								&quot;Blue&quot;, &quot;Azul&quot;,
+        &quot;Dark Amber&quot;, &quot;Ambar&quot;,
+        &quot;Dead leaf&quot;, &quot;Hoja muerta&quot;,
+								&quot;Emerald Green&quot;, &quot;Verde esmeralda&quot;,
+        &quot;Flint&quot;, &quot;Blanco&quot;,
+        &quot;Half white&quot;, &quot;Extraclaro&quot;,
+								&quot;Olive Green&quot;, &quot;Verde oscuro&quot;,
+        &quot;Other&quot;, &quot;Otros&quot;,
+        &quot;S&quot;, &quot;S&quot;,
+        TEXT(Product2.Colour__c)), 
+
+    &quot;Francés&quot;, 
+    CASE(TEXT(Product2.Colour__c),
+        &quot;Amber&quot;, &quot;Topaze&quot;,
+        &quot;Antique&quot;, &quot;Mousse&quot;,
+        &quot;Black&quot;, &quot;Noir&quot;,
+								&quot;Blue&quot;, &quot;Bleu&quot;,
+        &quot;Dark Amber&quot;, &quot;Ambre&quot;,
+        &quot;Dead leaf&quot;, &quot;Feuille morte&quot;,
+								&quot;Emerald Green&quot;, &quot;Vert émeraude&quot;,
+        &quot;Flint&quot;, &quot;Blanc&quot;,
+        &quot;Half white&quot;, &quot;Extraclair&quot;,
+								&quot;Olive Green&quot;, &quot;Vert foncé&quot;,
+        &quot;Other&quot;, &quot;Autres&quot;,
+        &quot;S&quot;, &quot;S&quot;,
+        TEXT(Product2.Colour__c)),
+    &quot;Portugués&quot;, 
+    CASE(TEXT(Product2.Colour__c),
+        &quot;Amber&quot;, &quot;Topázio&quot;,
+        &quot;Antique&quot;, &quot;Musgo&quot;,
+        &quot;Black&quot;, &quot;Preto&quot;,
+								&quot;Blue&quot;, &quot;Azul&quot;,
+        &quot;Dark Amber&quot;, &quot;Âmbar&quot;,
+        &quot;Dead leaf&quot;, &quot;Folha morta&quot;,
+								&quot;Emerald Green&quot;, &quot;Verde esmeralda&quot;,
+        &quot;Flint&quot;, &quot;Branco&quot;,
+        &quot;Half white&quot;, &quot;Extraclaro&quot;,
+								&quot;Olive Green&quot;, &quot;Verde escuro&quot;,
+        &quot;Other&quot;, &quot;Outros&quot;,
+        &quot;S&quot;, &quot;S&quot;,
+        TEXT(Product2.Colour__c)),
+
+    TEXT(Product2.Colour__c)
+)</formula>
+    <label>Product colour translate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

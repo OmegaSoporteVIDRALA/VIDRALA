@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <description>Product Field That gets updated with product information</description>
+    <inlineHelpText>CAMPO NO EDITABLE - RECOGE EN AUTOMATICO LOS PRODUCTOS DEL CONTACTO QUE VIENE A TRAVES DEL CATALOGO VIRTUAL. POR FAVOR NO ESCRIBIR NADA MANUALMENTE</inlineHelpText>
+    <label>Product</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

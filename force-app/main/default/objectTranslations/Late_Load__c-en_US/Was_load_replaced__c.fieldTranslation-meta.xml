@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Was collapsed load replaced by a subsequent dispatch? --></help>
+    <label><!-- Was load replaced? --></label>
+    <name>Was_load_replaced__c</name>
+</CustomFieldTranslation>

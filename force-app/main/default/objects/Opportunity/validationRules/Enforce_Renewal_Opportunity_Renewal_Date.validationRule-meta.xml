@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enforce_Renewal_Opportunity_Renewal_Date</fullName>
+    <active>true</active>
+    <description>User must enter a renewal date for any Opportunity that has been Closed/Lost</description>
+    <errorConditionFormula>AND(
+
+(ISPICKVAL ( StageName, &quot;Closed Lost&quot;)),
+RecordType.DeveloperName &lt;&gt; &quot;Fifty_Master_Opportunity&quot;,
+OR (
+( ISBLANK(Closed_Lost_Renewal_Date__c)),
+( Closed_Lost_Renewal_Date__c &lt;= Today() ) )
+)</errorConditionFormula>
+    <errorDisplayField>Closed_Lost_Renewal_Date__c</errorDisplayField>
+    <errorMessage>Please enter date when you expect customer to renew this Opportunity</errorMessage>
+</ValidationRule>

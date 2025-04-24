@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Vendor number --></label>
+    <name>Vendor_number__c</name>
+    <picklistValues>
+        <masterLabel>113570</masterLabel>
+        <translation><!-- 113570 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>114305</masterLabel>
+        <translation><!-- 114305 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>114790</masterLabel>
+        <translation><!-- 114790 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>114824</masterLabel>
+        <translation><!-- 114824 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>115396</masterLabel>
+        <translation><!-- 115396 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>115601</masterLabel>
+        <translation><!-- 115601 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>116202</masterLabel>
+        <translation><!-- 116202 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>116223</masterLabel>
+        <translation><!-- 116223 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>116535</masterLabel>
+        <translation><!-- 116535 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>117149</masterLabel>
+        <translation><!-- 117149 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>118708</masterLabel>
+        <translation><!-- 118708 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>201075</masterLabel>
+        <translation><!-- 201075 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>201403</masterLabel>
+        <translation><!-- 201403 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

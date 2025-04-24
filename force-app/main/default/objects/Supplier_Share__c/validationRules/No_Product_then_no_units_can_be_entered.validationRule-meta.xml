@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Product_then_no_units_can_be_entered</fullName>
+    <active>true</active>
+    <description>User shouldn’t allow to enter product units if the product is blank</description>
+    <errorConditionFormula>ISBLANK( Product__c ) &amp;&amp;    NOT(ISNULL( Units__c ))</errorConditionFormula>
+    <errorMessage>No Product is selected</errorMessage>
+</ValidationRule>

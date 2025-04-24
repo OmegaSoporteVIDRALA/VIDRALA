@@ -1,0 +1,85 @@
+<!-- ----------------------------------------------------------------------------------------------------------------
+   Name:		DailyComparativesTop20Tonnage.component
+   Description: Email Template VF component to show Top 20 Customers by Tonnage in the current month
+					
+   Date         Version Author          	Summary of Changes 
+   ------------------------------------------------------------------------------------------------------------------
+   Nov 2016     1.0     M.Witchalls(Ciber)	Initial Release 
+   Dec 2017		1.1		M.Witchalls(Cloud9)	Addition of DTG fields
+   Oct 2024		1.2		Improved formating
+-------------------------------------------------------------------------------------------------------------------- -->  
+<apex:component controller="DailyComparativesComponentController" access="global">
+
+	<style type="text/css">
+		p {
+			font-family: 
+			Verdana; size: 10pt;
+		}
+		table {
+			font-family: Verdana; size: 10pt;
+			border-width: 2px;
+			border-spacing: 5px;
+			border-style: solid;
+			border-color: Gray;
+			background-color: #FFFFFF;
+		}
+		.tHeaderClass {
+			border-width: 1px;
+			padding: 4px;
+			border-style: solid;
+			border-color: #000000;
+			background-color: #EFD9BA;
+			color: #000000;
+			font-weight: bold;
+		}
+		.tColClass {
+			color: #000000;
+			border-width: 1px ;
+			padding: 4px ;
+			border-style: solid ;
+			border-color: #DCDCDC;
+			background-color: #FCFCFC;
+			text-align: right;
+		}
+		.totalClass {
+			color: #000000;
+			border-width: 1px ;
+			padding: 4px ;
+			border-style: solid ;
+			border-color: #DCDCDC;
+			background-color: #DCDCDC;
+			text-align: right;
+		}
+	</style> 
+	
+	<p style="font-weight:bold">Daily Comparatives Top 20 by Tonnage</p>
+	   
+    <table>
+    	<tr class="tHeaderClass">
+    		<th>Customer</th>
+    		<th>Budget</th>
+    		<th>Forecast</th>
+    		<th>Revised</th>
+    		<th>Actual</th>
+    		<th>Adh %</th>
+    		<th>DTG</th>
+    	</tr>
+    	<apex:repeat value="{!tonnage}" var="m">
+			<tr class="{!IF(m.custNo==null,'totalClass','tColClass')}"> 
+				<td style="text-align:left"><a style="{!IF(m.CustNo==null,'text-decoration:none;color:black','')}" href="{!m.hrefValue}">{!m.customer}</a></td>
+				<td>{!m.budget}</td>
+				<td>{!m.forecast}</td>
+				<td>{!m.revised}</td>
+				<td>{!m.actual}</td>
+				<td>{!m.percent}</td>
+				<td>{!m.dtg}</td>
+			</tr>
+    	</apex:repeat>
+    </table>
+    
+    <br/>
+	<center>
+		<apex:outputLink value="{!tonnageReportLink}">See Full Tonnage Report</apex:outputLink>
+	</center>
+	<br/>
+</apex:component>

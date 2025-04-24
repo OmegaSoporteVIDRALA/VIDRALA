@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The date by which the Design Team expect the job will be finished. --></help>
+    <label><!-- Design Job Target Date --></label>
+    <name>Design_Job_Target_Date__c</name>
+</CustomFieldTranslation>

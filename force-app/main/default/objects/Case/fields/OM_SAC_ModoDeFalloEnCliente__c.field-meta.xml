@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_SAC_ModoDeFalloEnCliente__c</fullName>
+    <label>Modo de fallo en cliente</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Seguridad alimentaria</fullName>
+                <default>false</default>
+                <label>Seguridad alimentaria</label>
+            </value>
+            <value>
+                <fullName>Roturas consumidor final</fullName>
+                <default>false</default>
+                <label>Roturas consumidor final</label>
+            </value>
+            <value>
+                <fullName>Roturas en diferido</fullName>
+                <default>false</default>
+                <label>Roturas en diferido</label>
+            </value>
+            <value>
+                <fullName>Estanqueidad</fullName>
+                <default>false</default>
+                <label>Estanqueidad</label>
+            </value>
+            <value>
+                <fullName>Daño instalación</fullName>
+                <default>false</default>
+                <label>Daño instalación</label>
+            </value>
+            <value>
+                <fullName>Roturas en línea</fullName>
+                <default>false</default>
+                <label>Roturas en línea</label>
+            </value>
+            <value>
+                <fullName>Llenado</fullName>
+                <default>false</default>
+                <label>Llenado</label>
+            </value>
+            <value>
+                <fullName>Taponado</fullName>
+                <default>false</default>
+                <label>Taponado</label>
+            </value>
+            <value>
+                <fullName>Etiquetado</fullName>
+                <default>false</default>
+                <label>Etiquetado</label>
+            </value>
+            <value>
+                <fullName>Transporte en línea cliente</fullName>
+                <default>false</default>
+                <label>Transporte en línea cliente</label>
+            </value>
+            <value>
+                <fullName>Incumplimiento pauta</fullName>
+                <default>false</default>
+                <label>Incumplimiento pauta</label>
+            </value>
+            <value>
+                <fullName>Despaletizado</fullName>
+                <default>false</default>
+                <label>Despaletizado</label>
+            </value>
+            <value>
+                <fullName>Aspecto</fullName>
+                <default>false</default>
+                <label>Aspecto</label>
+            </value>
+            <value>
+                <fullName>Trazabilidad</fullName>
+                <default>false</default>
+                <label>Trazabilidad</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

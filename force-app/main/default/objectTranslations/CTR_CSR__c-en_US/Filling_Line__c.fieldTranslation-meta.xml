@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- No need to add the word line to this field just enter the number or name please --></help>
+    <label><!-- Filling Line --></label>
+    <name>Filling_Line__c</name>
+</CustomFieldTranslation>

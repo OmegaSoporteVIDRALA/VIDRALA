@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Create design brief</fullName>
+                <default>true</default>
+                <label>Create design brief</label>
+            </value>
+            <value>
+                <fullName>Create tech drawing</fullName>
+                <default>false</default>
+                <label>Create tech drawing</label>
+            </value>
+            <value>
+                <fullName>Design review</fullName>
+                <default>false</default>
+                <label>Design review</label>
+            </value>
+            <value>
+                <fullName>Customer tech review/approval</fullName>
+                <default>false</default>
+                <label>Customer tech review/approval</label>
+            </value>
+            <value>
+                <fullName>Customer approval to progress to pilot moulds</fullName>
+                <default>false</default>
+                <label>Customer approval to progress to pilot moulds</label>
+            </value>
+            <value>
+                <fullName>Pilot trials</fullName>
+                <default>false</default>
+                <label>Pilot trials</label>
+            </value>
+            <value>
+                <fullName>Pilot internal review</fullName>
+                <default>false</default>
+                <label>Pilot internal review</label>
+            </value>
+            <value>
+                <fullName>Reports and samples to customer</fullName>
+                <default>false</default>
+                <label>Reports and samples to customer</label>
+            </value>
+            <value>
+                <fullName>Customer review</fullName>
+                <default>false</default>
+                <label>Customer review</label>
+            </value>
+            <value>
+                <fullName>Customer tech approval</fullName>
+                <default>false</default>
+                <label>Customer tech approval</label>
+            </value>
+            <value>
+                <fullName>Customer procurement approval to bulk tools</fullName>
+                <default>false</default>
+                <label>Customer procurement approval to bulk tools</label>
+            </value>
+            <value>
+                <fullName>On hold, awaiting additional information from Account Manager</fullName>
+                <default>false</default>
+                <label>On hold, awaiting additional information from Account Manager</label>
+            </value>
+            <value>
+                <fullName>Project Dead</fullName>
+                <default>false</default>
+                <label>Project Dead</label>
+            </value>
+            <value>
+                <fullName>NPD stopped; mould equipment was purchased</fullName>
+                <default>false</default>
+                <label>NPD stopped; mould equipment was purchased</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

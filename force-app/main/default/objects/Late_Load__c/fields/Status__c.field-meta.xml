@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Early or Late? (Or On Time but Collapsed)</description>
+    <inlineHelpText>Early or Late? (Or On Time but Collapsed)</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On Time</fullName>
+                <default>true</default>
+                <label>On Time</label>
+            </value>
+            <value>
+                <fullName>Late</fullName>
+                <default>false</default>
+                <label>Late</label>
+            </value>
+            <value>
+                <fullName>Early</fullName>
+                <default>false</default>
+                <label>Early</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

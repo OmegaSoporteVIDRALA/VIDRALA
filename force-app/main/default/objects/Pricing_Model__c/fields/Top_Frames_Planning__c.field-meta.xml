@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Top_Frames_Planning__c</fullName>
+    <description>Planning field</description>
+    <label>Top Frames (Planning)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>PPT22</fullName>
+                <default>false</default>
+                <label>PPT22</label>
+            </value>
+            <value>
+                <fullName>PPT25</fullName>
+                <default>false</default>
+                <label>PPT25</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

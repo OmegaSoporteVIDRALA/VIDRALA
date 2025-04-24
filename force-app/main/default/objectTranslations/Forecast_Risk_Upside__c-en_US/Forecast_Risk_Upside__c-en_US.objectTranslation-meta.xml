@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Forecast Risk/Upside</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Forecast Risks/Upsides</value>
+    </caseValues>
+    <layouts>
+        <layout>Approved/Rejected Layout</layout>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Forecast Risk/Upside Layout</layout>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Records that have been approved or rejected --></description>
+        <label><!-- Approved/Rejected --></label>
+        <name>Approved_Rejected</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Records that have not yet been approved or rejected --></description>
+        <label><!-- Standard --></label>
+        <name>Standard</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

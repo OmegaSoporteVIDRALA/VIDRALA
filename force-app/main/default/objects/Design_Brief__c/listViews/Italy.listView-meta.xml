@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Italy</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Drawing_Number__c</columns>
+    <columns>Design_Brief_Number__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Account__c</columns>
+    <columns>Customer_Contact__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Giovanni Cussino</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Stefano Luca</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Project Dead</value>
+    </filters>
+    <label>Italy</label>
+</ListView>

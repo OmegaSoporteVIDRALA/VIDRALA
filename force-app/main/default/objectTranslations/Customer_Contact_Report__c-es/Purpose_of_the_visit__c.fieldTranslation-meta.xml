@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Purpose of the visit --></label>
+    <name>Purpose_of_the_visit__c</name>
+    <picklistValues>
+        <masterLabel>CALIDAD</masterLabel>
+        <translation><!-- CALIDAD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NEGOCIACIÓN PRECIOS</masterLabel>
+        <translation><!-- NEGOCIACIÓN PRECIOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OTROS</masterLabel>
+        <translation><!-- OTROS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRESENTACION MODELOS NUEVOS</masterLabel>
+        <translation><!-- PRESENTACION MODELOS NUEVOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REVISIÓN RAPPELES</masterLabel>
+        <translation><!-- REVISIÓN RAPPELES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RIESGOS</masterLabel>
+        <translation><!-- RIESGOS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

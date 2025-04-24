@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portes_Devolucion__c</fullName>
+    <label>Portes Devolución</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Portes Cliente</fullName>
+                <default>true</default>
+                <label>Portes Cliente</label>
+            </value>
+            <value>
+                <fullName>Portes Vidrala</fullName>
+                <default>false</default>
+                <label>Portes Vidrala</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

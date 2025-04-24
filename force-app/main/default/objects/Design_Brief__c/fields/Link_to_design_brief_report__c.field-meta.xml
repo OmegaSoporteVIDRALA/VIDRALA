@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_to_design_brief_report__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK( &quot;https://encirc360.lightning.force.com/lightning/r/Report/00O4I0000055Q6PUAU/view?queryScope=userFolders&amp;fv0=&quot;+Drawing__r.Name, &quot;Link to design brief report&quot;)</formula>
+    <label>Link to design brief report</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

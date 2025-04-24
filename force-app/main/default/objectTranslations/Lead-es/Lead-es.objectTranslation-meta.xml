@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Lead Filter Fields --></label>
+        <name>MC4SF__Lead_Filter_Fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label><!-- Business Development --></label>
+            <section>Business Development</section>
+        </sections>
+        <sections>
+            <label><!-- E- Catalogue --></label>
+            <section>E- Catalogue</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Qualification --></label>
+            <section>Lead Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Next Steps --></label>
+            <section>Next Steps</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vidrala/Fifty Lead Layout</layout>
+        <sections>
+            <label><!-- Consulta --></label>
+            <section>Consulta</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Catálogo web</label>
+        <name>E_Catalog</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage>Antes que el candidatos pueda ser convertido, el campo &quot;Estatus cualificado&quot; debe estar en amarillo o verde. Además debes completar también el campo email así como  el teléfono</errorMessage>
+        <name>Fields_required_for_Qualification</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The lead should be in &apos;Active&apos; status --></errorMessage>
+        <name>New_Leads_Should_Be_Active</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions_detail --></label>
+        <name>MC4SF__MailChimp_Subscriptions_detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions_list --></label>
+        <name>MC4SF__MailChimp_Subscriptions_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Manager_Must_Equal_Account_Owner</fullName>
+    <active>true</active>
+    <description>The user must enter the correct Account Manager for the Account that this MPA relates to</description>
+    <errorConditionFormula>AND (
+
+(RecordType.DeveloperName = &quot;Planning_Initiated&quot;),
+
+(Customer__r.OwnerId &lt;&gt;  Account_Manager__r.Id )
+
+
+)</errorConditionFormula>
+    <errorDisplayField>Account_Manager__c</errorDisplayField>
+    <errorMessage>The Account Manager must be the Account Owner. You can check this on the Account record.</errorMessage>
+</ValidationRule>

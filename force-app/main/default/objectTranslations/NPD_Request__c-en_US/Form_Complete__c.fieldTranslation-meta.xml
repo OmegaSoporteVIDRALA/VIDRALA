@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- Is the form ready to be emailed to the NPD team? 
+Selecting yes and saving will send an email. -->
+    </help>
+    <label><!-- Form Complete --></label>
+    <name>Form_Complete__c</name>
+    <picklistValues>
+        <masterLabel>NO</masterLabel>
+        <translation><!-- NO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>YES</masterLabel>
+        <translation><!-- YES --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>(SO-003) MPA form Rev 18</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>MPAs</value>
+    </caseValues>
+    <layouts>
+        <layout>MPA Design Layout</layout>
+        <sections>
+            <label><!-- Current Stock and Mould Life --></label>
+            <section>Current Stock and Mould Life</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mould Purchase - Balance / Replacement Equipment --></label>
+            <section>Mould Purchase - Balance / Replacement Equipment</section>
+        </sections>
+        <sections>
+            <label><!-- Mould Purchase - Other Available Equipment --></label>
+            <section>Mould Purchase - Other Available Equipment</section>
+        </sections>
+        <sections>
+            <label><!-- Replacement Mould Request --></label>
+            <section>Replacement Mould Request</section>
+        </sections>
+        <sections>
+            <label><!-- Requested Set Details --></label>
+            <section>Requested Set Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MPA Internal Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mould Purchase - Balance / Replacement Equipment --></label>
+            <section>Mould Purchase - Balance / Replacement Equipment</section>
+        </sections>
+        <sections>
+            <label><!-- Mould Purchase - Other Available Equipment --></label>
+            <section>Mould Purchase - Other Available Equipment</section>
+        </sections>
+        <sections>
+            <label><!-- Mould Purchase - Trial Equipment --></label>
+            <section>Mould Purchase - Trial Equipment</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Record Approval --></label>
+            <section>Record Approval</section>
+        </sections>
+        <sections>
+            <label><!-- Trial Request --></label>
+            <section>Trial Request</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MPA Sales Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Mould Purchase - Balance / Replacement Equipment --></label>
+            <section>Mould Purchase - Balance / Replacement Equipment</section>
+        </sections>
+        <sections>
+            <label><!-- Mould Purchase - Other Available Equipment --></label>
+            <section>Mould Purchase - Other Available Equipment</section>
+        </sections>
+        <sections>
+            <label><!-- Mould Purchase - Trial Equipment --></label>
+            <section>Mould Purchase - Trial Equipment</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Record Approval --></label>
+            <section>Record Approval</section>
+        </sections>
+        <sections>
+            <label><!-- Trial Request --></label>
+            <section>Trial Request</section>
+        </sections>
+        <sections>
+            <label><!-- information --></label>
+            <section>information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- MPA&apos;s that have been initiated by Design Department --></description>
+        <label><!-- Design Initiated --></label>
+        <name>Design_Initiated</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- MPAs for internal mould requirements only --></description>
+        <label><!-- Internal Only --></label>
+        <name>Internal_Only</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- MPA&apos;s that have been initiated by Account Managers or Business Development --></description>
+        <label><!-- Sales Initiated --></label>
+        <name>Sales_Initiated</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The Account Manager must be the Account Owner. You can check this on the Account record. --></errorMessage>
+        <name>Account_Manager_Must_Equal_Account_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please add as a value to the &quot;Enter Previous Bottle Code&quot; field --></errorMessage>
+        <name>Bottle_Validation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must enter details of the potential Banding --></errorMessage>
+        <name>Enter_deetz_if_Banding_is_true</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must enter a User who works in the Finance Department --></errorMessage>
+        <name>Finance_Record_Approver_Has_Finance_Role</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You may only enter a User who has the business title of Operations Director --></errorMessage>
+        <name>Ops_Director_Approver_Title_Is_Ops_Dir</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When the Colour is &quot;Other&quot; you must specify the colour in the Other (Colour) field. --></errorMessage>
+        <name>Other_Colour</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must enter a User who works in the Planning Department --></errorMessage>
+        <name>Planning_Record_Apprvr_Has_Planning_Role</name>
+    </validationRules>
+</CustomObjectTranslation>

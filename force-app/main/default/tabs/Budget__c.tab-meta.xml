@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>This object is a place for Fifty to upload their annual budget</description>
+    <motif>Custom6: Triangle</motif>
+</CustomTab>

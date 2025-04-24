@@ -1,0 +1,45 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="QuotePDFController">
+  <aura:attribute name="template" type="String"/>
+  <aura:attribute name="recordId" type="String" />
+    <aura:html tag="style">
+        .cuf-content {
+            padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+            padding: 0rem !important;
+        }       
+        .slds-modal__content{
+            overflow-y:hidden !important;
+            height:unset !important;
+            max-height:unset !important;
+        }
+    </aura:html>
+  <header class="slds-modal__header">
+    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+      Choose Template...
+    </h2>
+  </header>
+  <div class="slds-modal__content slds-p-around_small" id="modal-content-id-1">
+    <lightning:select name="template" aura:id="options" label="Select Template" value="{!v.template}" required="true">
+        <option value="QuotePDF">English Quote PDF</option>
+        <option value="QuoteSpanishPDF">Spanish Quote PDF</option>
+        <option value="QuoteFrenchPDF">French Quote PDF</option>
+        <option value="QuotePortugesePDF">Portugese Quote PDF</option>
+        <option value="QuoteItalianPDF">Italian Quote PDF</option>
+    </lightning:select>
+  </div>
+  <footer  class="slds-modal__footer">
+    <lightning:button
+      variant="neutral"
+      label="Save"
+      title="Save"
+      onclick="{! c.savePDF }"
+    />
+    <lightning:button
+      variant="brand"
+      label="Open"
+      title="Open"
+      onclick="{! c.openPDF }"
+    />
+  </footer>
+</aura:component>

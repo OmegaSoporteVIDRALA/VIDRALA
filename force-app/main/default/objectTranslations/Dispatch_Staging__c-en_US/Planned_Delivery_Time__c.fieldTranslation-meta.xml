@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Must be in this format 10:00:00 --></help>
+    <label><!-- Planned Delivery Time --></label>
+    <name>Planned_Delivery_Time__c</name>
+</CustomFieldTranslation>

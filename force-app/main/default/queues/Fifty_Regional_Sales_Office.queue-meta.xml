@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Fifty Regional Sales Office</name>
+    <queueMembers>
+        <roles>
+            <role>Fifty_Sales_Office</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>MPA_Fifty__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Rebate__c</sobjectType>
+    </queueSobject>
+</Queue>

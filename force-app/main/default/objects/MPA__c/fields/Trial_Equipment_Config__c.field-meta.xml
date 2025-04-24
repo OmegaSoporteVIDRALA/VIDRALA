@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trial_Equipment_Config__c</fullName>
+    <label>Trial Equipment Config</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Single Gob</fullName>
+                <default>false</default>
+                <label>Single Gob</label>
+            </value>
+            <value>
+                <fullName>Double Gob</fullName>
+                <default>false</default>
+                <label>Double Gob</label>
+            </value>
+            <value>
+                <fullName>Double/Triple Gob</fullName>
+                <default>false</default>
+                <label>Double/Triple Gob</label>
+            </value>
+            <value>
+                <fullName>Triple Gob</fullName>
+                <default>false</default>
+                <label>Triple Gob</label>
+            </value>
+            <value>
+                <fullName>Quad Gob</fullName>
+                <default>false</default>
+                <label>Quad Gob</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Naked/Labelled --></label>
+    <name>Naked_Labelled__c</name>
+    <picklistValues>
+        <masterLabel>ACL  (Resulting price will be indicative only)</masterLabel>
+        <translation><!-- ACL  (Resulting price will be indicative only) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Naked</masterLabel>
+        <translation><!-- Naked --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PSL (Resulting price will be indicative only)</masterLabel>
+        <translation><!-- PSL (Resulting price will be indicative only) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sleeve  (Resulting price will be indicative only)</masterLabel>
+        <translation><!-- Sleeve  (Resulting price will be indicative only) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

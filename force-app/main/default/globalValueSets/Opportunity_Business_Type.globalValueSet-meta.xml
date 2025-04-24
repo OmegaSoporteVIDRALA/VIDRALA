@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Existing Customer: Existing Bottle &amp; New Volume</fullName>
+        <default>false</default>
+        <label>Existing Customer: Existing Bottle &amp; New Volume</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Customer: New Bottle &amp; New Volume</fullName>
+        <default>false</default>
+        <label>Existing Customer: New Bottle &amp; New Volume</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Customer: New Bottle Counter Spec</fullName>
+        <default>false</default>
+        <label>Existing Customer: New Bottle Counter Spec</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Customer: New Bottle Replacing Existing Volume</fullName>
+        <default>false</default>
+        <label>Existing Customer: New Bottle Replacing Existing Volume</label>
+    </customValue>
+    <customValue>
+        <fullName>New Customer: Existing Bottle</fullName>
+        <default>false</default>
+        <label>New Customer: Existing Bottle</label>
+    </customValue>
+    <customValue>
+        <fullName>New Customer: New Bottle</fullName>
+        <default>false</default>
+        <label>New Customer: New Bottle</label>
+    </customValue>
+    <masterLabel>OpportunityBusinessType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

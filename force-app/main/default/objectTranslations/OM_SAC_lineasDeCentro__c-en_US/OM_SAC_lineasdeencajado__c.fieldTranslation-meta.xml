@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Líneas de encajado --></label>
+    <name>OM_SAC_lineasdeencajado__c</name>
+</CustomFieldTranslation>

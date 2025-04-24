@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Intereses</label>
+    <name>Interests__c</name>
+    <picklistValues>
+        <masterLabel>American Football</masterLabel>
+        <translation><!-- American Football --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arts &amp; Media</masterLabel>
+        <translation><!-- Arts &amp; Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basketball</masterLabel>
+        <translation><!-- Basketball --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Car Racing</masterLabel>
+        <translation><!-- Car Racing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cycling</masterLabel>
+        <translation><!-- Cycling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Equestrian</masterLabel>
+        <translation><!-- Equestrian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Football</masterLabel>
+        <translation><!-- Football --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GAA</masterLabel>
+        <translation><!-- GAA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Golf</masterLabel>
+        <translation><!-- Golf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gym</masterLabel>
+        <translation><!-- Gym --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Horse Racing</masterLabel>
+        <translation><!-- Horse Racing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hurling</masterLabel>
+        <translation><!-- Hurling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Live Music</masterLabel>
+        <translation><!-- Live Music --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Motorbikes</masterLabel>
+        <translation><!-- Motorbikes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Music</masterLabel>
+        <translation><!-- Music --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Sports</masterLabel>
+        <translation><!-- Other Sports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rugby</masterLabel>
+        <translation><!-- Rugby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Running</masterLabel>
+        <translation><!-- Running --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spa</masterLabel>
+        <translation><!-- Spa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Theatre</masterLabel>
+        <translation><!-- Theatre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Travel</masterLabel>
+        <translation><!-- Travel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Walking</masterLabel>
+        <translation><!-- Walking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wine</masterLabel>
+        <translation><!-- Wine --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

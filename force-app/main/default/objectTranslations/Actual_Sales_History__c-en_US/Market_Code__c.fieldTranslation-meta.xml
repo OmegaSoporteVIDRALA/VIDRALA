@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Market Code --></label>
+    <name>Market_Code__c</name>
+    <picklistValues>
+        <masterLabel>ES</masterLabel>
+        <translation><!-- ES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FR</masterLabel>
+        <translation><!-- FR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NM</masterLabel>
+        <translation><!-- NM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PT</masterLabel>
+        <translation><!-- PT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date customer will run a trial on the samples sent to them --></help>
+    <label><!-- Date for Customer Samples Trial --></label>
+    <name>Date_for_Customer_Samples_Trial__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2020</fullName>
+    <columns>NAME</columns>
+    <columns>Survey_Year__c</columns>
+    <columns>Survey_Type__c</columns>
+    <columns>Account__c</columns>
+    <columns>Name__c</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>Survey_Sent__c</columns>
+    <columns>Received_Reply__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Survey_Year__c</field>
+        <operation>equals</operation>
+        <value>2020</value>
+    </filters>
+    <filters>
+        <field>Survey_Type__c</field>
+        <operation>equals</operation>
+        <value>Italy</value>
+    </filters>
+    <label>2020</label>
+</ListView>

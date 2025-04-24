@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Encirc_Opportunity_Appetite_Explained__c</fullName>
+    <description>Please provide an explanation for your assessment of Vidrala&apos;s appetite for the Opportunity</description>
+    <inlineHelpText>Please provide an explanation for your assessment of Vidrala&apos;s appetite for the Opportunity</inlineHelpText>
+    <label>Vidrala Opportunity Appetite Explained</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

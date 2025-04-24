@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Hot or Cold Filled --></label>
+    <name>Hot_or_Cold_Filled__c</name>
+    <picklistValues>
+        <masterLabel>Cold</masterLabel>
+        <translation><!-- Cold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hot</masterLabel>
+        <translation><!-- Hot --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

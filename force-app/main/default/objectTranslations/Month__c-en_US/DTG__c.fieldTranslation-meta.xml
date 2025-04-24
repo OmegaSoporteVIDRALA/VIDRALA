@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Distance To Go (to reach Forecast or Revised Forecast) --></help>
+    <label><!-- DTG --></label>
+    <name>DTG__c</name>
+</CustomFieldTranslation>

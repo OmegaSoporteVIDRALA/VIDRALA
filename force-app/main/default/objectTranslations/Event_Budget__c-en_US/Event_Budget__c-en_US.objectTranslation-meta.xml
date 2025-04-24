@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event Budget</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Event Budget</value>
+    </caseValues>
+    <layouts>
+        <layout>Budget Year Layout</layout>
+        <sections>
+            <label><!-- Budget --></label>
+            <section>Budget</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Filling Budget --></label>
+            <section>Filling Budget</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Event Budget Layout</layout>
+        <sections>
+            <label><!-- Budget --></label>
+            <section>Budget</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- PR-PO Details --></label>
+            <section>PR-PO Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Event Budget --></label>
+        <name>Event_Budget</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Event Budget Year --></label>
+        <name>Event_Budget_Year</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

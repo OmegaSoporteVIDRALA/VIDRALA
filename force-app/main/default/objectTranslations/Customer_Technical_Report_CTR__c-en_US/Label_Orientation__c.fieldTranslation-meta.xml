@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Label Orientation --></label>
+    <name>Label_Orientation__c</name>
+    <picklistValues>
+        <masterLabel>Mechanical Spotting</masterLabel>
+        <translation><!-- Mechanical Spotting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optical Spotting</masterLabel>
+        <translation><!-- Optical Spotting --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

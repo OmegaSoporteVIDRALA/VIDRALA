@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trial_Details</fullName>
+    <active>true</active>
+    <description>When &quot;Yes&quot; is selected in the &quot;Is_a_Trial_Needed__c&quot; field the user must provide additional commentary in the &quot;Trial_Details__c&quot;  field.</description>
+    <errorConditionFormula>ISPICKVAL(Is_a_Trial_Needed__c , &quot;Yes&quot;)
+
+&amp;&amp;
+
+ISBLANK( Trial_Details__c )</errorConditionFormula>
+    <errorDisplayField>Trial_Details__c</errorDisplayField>
+    <errorMessage>If a trial is needed you must enter trial details</errorMessage>
+</ValidationRule>

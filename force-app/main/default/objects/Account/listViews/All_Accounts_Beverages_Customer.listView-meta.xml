@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Accounts_Beverages_Customer</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>SAP_Account_Number__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Account_Executive__c</columns>
+    <columns>Senior_Sales_Admin_Lookup__c</columns>
+    <columns>Sales_Admin_Lookup__c</columns>
+    <columns>Customer_Service__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Encirc_Beverages_Customers</value>
+    </filters>
+    <label>All Accounts - Beverages Customer</label>
+    <sharedTo>
+        <group>Sys_Admin</group>
+        <group>System_admin_group</group>
+    </sharedTo>
+</ListView>

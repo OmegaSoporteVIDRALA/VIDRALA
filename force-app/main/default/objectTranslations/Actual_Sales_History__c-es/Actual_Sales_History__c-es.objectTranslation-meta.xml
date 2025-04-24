@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Histórico de ventas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Históricos de ventas</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Deal Summary Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Histórico de ventas</nameFieldLabel>
+</CustomObjectTranslation>

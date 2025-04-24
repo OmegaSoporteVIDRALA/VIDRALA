@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Customer__c</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Year__c</columns>
+    <columns>Unique_ID__c</columns>
+    <columns>Budget__c</columns>
+    <columns>Forecast__c</columns>
+    <columns>Budget_Tonnage__c</columns>
+    <columns>Forecast_Tonnage__c</columns>
+    <columns>Risks__c</columns>
+    <columns>Upsides__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

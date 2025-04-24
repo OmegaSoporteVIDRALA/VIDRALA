@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Senior Sales Admin --></label>
+    <name>Senior_Sales_Admin_Lookup__c</name>
+    <relationshipLabel><!-- Accounts (Senior Sales Admin) --></relationshipLabel>
+</CustomFieldTranslation>

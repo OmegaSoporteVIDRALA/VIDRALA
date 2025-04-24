@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Portes Devolución --></label>
+    <name>Portes_Devolucion__c</name>
+    <picklistValues>
+        <masterLabel>Portes Cliente</masterLabel>
+        <translation><!-- Portes Cliente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portes Vidrala</masterLabel>
+        <translation><!-- Portes Vidrala --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

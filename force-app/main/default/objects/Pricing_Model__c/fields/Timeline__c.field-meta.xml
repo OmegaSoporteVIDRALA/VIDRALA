@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timeline__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Status__c ,
+
+&quot;1 Sales&quot;, IMAGE(&quot;/resource/PricingModel_1&quot;,&quot;Sales&quot;),
+&quot;2 Planning&quot;, IMAGE(&quot;/resource/PricingModel_2&quot;,&quot;Planning&quot;),
+&quot;3 Design&quot;, IMAGE(&quot;/resource/PricingModel_3&quot;,&quot;Design&quot;),
+&quot;4 Distribution&quot;, IMAGE(&quot;/resource/PricingModel_4&quot;,&quot;Distribution&quot;),
+&quot;5 Finance&quot;, IMAGE(&quot;/resource/PricingModel_5&quot;,&quot;Finance&quot;),
+IMAGE(&quot;/resource/PricingModel_6&quot;,&quot;Done&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Timeline</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

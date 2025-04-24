@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Layer Pads (1) --></label>
+    <name>Layer_Pads_1_Planning__c</name>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPP11</masterLabel>
+        <translation><!-- PPP11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPP13</masterLabel>
+        <translation><!-- PPP13 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPP14</masterLabel>
+        <translation><!-- PPP14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPP15</masterLabel>
+        <translation><!-- PPP15 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

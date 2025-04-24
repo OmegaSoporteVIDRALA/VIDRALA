@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Derrylin_Live_Trials</fullName>
+    <columns>Trial_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Mould_Number__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>MPA__c</columns>
+    <columns>Did_The_Trial_Take_Place__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trial_Stage__c</field>
+        <operation>equals</operation>
+        <value>Live,Re Trial</value>
+    </filters>
+    <filters>
+        <field>Production_Line_Used_for_Trial__c</field>
+        <operation>equals</operation>
+        <value>DL11,DL12,DL13,DL14,DL21,DL22,DL23,DL24</value>
+    </filters>
+    <label>Derrylin Live Trials</label>
+</ListView>

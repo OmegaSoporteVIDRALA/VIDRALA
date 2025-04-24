@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Vidrala Customer Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Vidrala Customer Surveys</value>
+    </caseValues>
+    <layouts>
+        <layout>Vidrala Survey Responses Layout</layout>
+        <sections>
+            <label><!-- 1. Account Details --></label>
+            <section>1. Account Details</section>
+        </sections>
+        <sections>
+            <label><!-- 10. Competitor 1 --></label>
+            <section>10. Competitor 1</section>
+        </sections>
+        <sections>
+            <label><!-- 11. Competitor 2 --></label>
+            <section>11. Competitor 2</section>
+        </sections>
+        <sections>
+            <label><!-- 12. Sustainability --></label>
+            <section>12. Sustainability</section>
+        </sections>
+        <sections>
+            <label><!-- 13. Food Safety --></label>
+            <section>13. Food Safety</section>
+        </sections>
+        <sections>
+            <label><!-- 14. Recommended Supplier Information --></label>
+            <section>14. Recommended Supplier Information</section>
+        </sections>
+        <sections>
+            <label><!-- 15. Final Comments --></label>
+            <section>15. Final Comments</section>
+        </sections>
+        <sections>
+            <label><!-- 2. Quality --></label>
+            <section>2. Quality</section>
+        </sections>
+        <sections>
+            <label><!-- 3. Complaints --></label>
+            <section>3. Complaints</section>
+        </sections>
+        <sections>
+            <label><!-- 4. Production Planning &amp; Logistics --></label>
+            <section>4. Production Planning &amp; Logistics</section>
+        </sections>
+        <sections>
+            <label><!-- 5. Encirc Customer Service --></label>
+            <section>5. Encirc Customer Service</section>
+        </sections>
+        <sections>
+            <label><!-- 6. Technical Assistance --></label>
+            <section>6. Technical Assistance</section>
+        </sections>
+        <sections>
+            <label><!-- 7. Value --></label>
+            <section>7. Value</section>
+        </sections>
+        <sections>
+            <label><!-- 8. Encirc Glass Packaging Usage --></label>
+            <section>8. Encirc Glass Packaging Usage</section>
+        </sections>
+        <sections>
+            <label><!-- 9. Improvement Plan --></label>
+            <section>9. Improvement Plan</section>
+        </sections>
+        <sections>
+            <label><!-- Another competitor to evaluate? --></label>
+            <section>Another competitor to evaluate?</section>
+        </sections>
+        <sections>
+            <label><!-- Competitors --></label>
+            <section>Competitors</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Encirc Assessment --></label>
+            <section>Encirc Assessment</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Survey Year --></label>
+        <name>Survey_Year</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The Survey Type doesn&apos;t match the Annual Reports Type --></errorMessage>
+        <name>Survey_Type_Match_With_Annual_Report</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type Of Design --></label>
+    <name>TypeOfDesign__c</name>
+    <picklistValues>
+        <masterLabel>Counter Spec</masterLabel>
+        <translation><!-- Counter Spec --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Product</masterLabel>
+        <translation><!-- New Product --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please add any comments you may have about any responses above. --></help>
+    <label>Comentarios calificación del candidato</label>
+    <name>Lead_Qualification_Comments__c</name>
+</CustomFieldTranslation>

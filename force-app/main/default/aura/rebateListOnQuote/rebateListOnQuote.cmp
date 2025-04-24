@@ -1,0 +1,58 @@
+<aura:component controller="RebateSearchOnAccount" implements="force:hasRecordId,flexipage:availableForAllPageTypes,force:appHostable" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="rebates" type="List" />
+    <aura:attribute name="rebateCount" type="Integer" default="0"/>
+    
+    <lightning:card iconName="custom:custom45">
+		<aura:set attribute="title">
+            <h1>Rebates ({!v.rebateCount})</h1>
+        </aura:set>                    
+        <lightning:layout multipleRows="true">                 
+            <lightning:layoutItem padding="around-small" size="12"> 
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Rebate Name">Rebate Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Product">Product</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Scales">Scales</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Percentage">Percentage</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Provision">Provision</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.rebates}" var="rebate" indexVar="index">
+                            <tr class="slds-hint-parent">
+                                <td data-label="Rebate Name">
+                                    <div class="slds-truncate" title="Rebate Name">{!rebate.Name}</div>
+                                </td>
+                                <td data-label="Product">
+        							<div class="slds-truncate" title="Product">{!rebate.Product__r.Name}</div>
+     						    </td>
+                                <td data-label="Scales">
+        							<div class="slds-truncate" title="Scales">{!rebate.Scales__c}</div>
+     						    </td>
+                                <td data-label="Percentage">
+        							<div class="slds-truncate" title="Percentage">{!rebate.Percentage__c}</div>
+     						    </td>
+                                <td data-label="Provision">
+        							<div class="slds-truncate" title="Provision">{!rebate.Provision__c}</div>
+     						    </td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </lightning:layoutItem>               
+        </lightning:layout> 
+	</lightning:card> 
+    
+</aura:component>

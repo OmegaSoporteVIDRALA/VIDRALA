@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>http://sf.vidrala.com/adfs/services/trust</issuer>
+    <loginUrl>https://sf.vidrala.com/adfs/ls/</loginUrl>
+    <name>Sign in Using Vidrala</name>
+    <oauthTokenEndpoint>https://encirc360.my.salesforce.com/services/oauth2/token?so=00D58000000H83h</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P1Q400000003SX</requestSigningCertId>
+    <salesforceLoginUrl>https://encirc360.my.salesforce.com?so=00D58000000H83h</salesforceLoginUrl>
+    <samlEntityId>https://encirc360.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <singleLogoutBinding>RedirectBinding</singleLogoutBinding>
+    <singleLogoutUrl>https://sf.vidrala.com/adfs/ls/</singleLogoutUrl>
+    <useConfigRequestMethod>false</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>false</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIC2DCCAcCgAwIBAgIQRHYHldPBr6VMFAVNfSlIizANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIFNpZ25pbmcgLSBzZi52aWRyYWxhLmNvbTAeFw0yNDA3MzAwNzIyNDBaFw0yNTA3MzAwNzIyNDBaMCgxJjAkBgNVBAMTHUFERlMgU2lnbmluZyAtIHNmLnZpZHJhbGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1N3Bs+9PUbY23vCZRdQZO/3LOYWM31Z9hrDEgao635W92mZHzxeTK6ODkdiD7FG1V44l0Lj1EEoLYo/7hYtrh/xDhIJrYmiNp9p3vd11n/40jP9H+jqdS9oQFFLrAHZmpfJUQh1GAq3DBlFQkj6p1oBDJNs9213ouwa50qwqcKnGFooWQDGMIYzkgaQLmmj1902RksnhDTHRbSGzqYL7OtusVNA22qiecYUkAR9/idEj5pYRJrFiwmKot5bIfNEtvv82IRXyFTwvCHuvEcGUn8WJxkwI5EYczIDvFtBZnxeZghhBdNBzlaJCT4L3GavSRixCcbEM1DZqLsfYfkjCXwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBhD6yBioiYeDgXXQb2hM34Y9gJtnzDWF49r53xhmMWFZU7KpdADieOeDrLmaf9PAbaGYdtMvf+Iv80NA7CqjClT+Yxhg3A9qzLtiyMMZYJAXEsxEf1EPt42rK00kArzSaV+rS5SvM3CYKN+GeqYu+NK8qEOICbrGRikY0L2H+9py7X5mpiNwbqA8/x+ZF54nEbRrAhQCq0pJi8Vmhbl37L8lt0pvJqhw3NmVlVqgRjzqSBrmzwCt2ovCPllbQNXUrTIhZligC6zgxwtp3giOVRpOhmliM0nMO/MY8lMxYrnM0f8pHGgHb7WaiPQ+/io64ew07FDc9e3+m2RQFMpnsJ</validationCert>
+</SamlSsoConfig>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Remaining Mould Life Cover (weeks) --></label>
+    <name>Remaining_Mould_Life_Cover_weeks__c</name>
+</CustomFieldTranslation>

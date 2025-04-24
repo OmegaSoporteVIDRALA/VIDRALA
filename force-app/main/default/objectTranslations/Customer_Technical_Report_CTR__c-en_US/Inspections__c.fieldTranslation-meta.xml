@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Inspections --></label>
+    <name>Inspections__c</name>
+    <picklistValues>
+        <masterLabel>Askew</masterLabel>
+        <translation><!-- Askew --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Barcode</masterLabel>
+        <translation><!-- Barcode --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Creasing</masterLabel>
+        <translation><!-- Creasing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Back</masterLabel>
+        <translation><!-- Missing Back --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Body</masterLabel>
+        <translation><!-- Missing Body --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Front</masterLabel>
+        <translation><!-- Missing Front --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Neck</masterLabel>
+        <translation><!-- Missing Neck --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orientation</masterLabel>
+        <translation><!-- Orientation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

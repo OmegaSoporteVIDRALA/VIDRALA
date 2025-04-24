@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Annual</fullName>
+    <active>true</active>
+    <description>Large/global - includes all legal agreements</description>
+    <label>Customer Annual</label>
+    <picklistValues>
+        <picklist>Moulds_Agreement2__c</picklist>
+        <values>
+            <fullName>Cliente 100 %25 %28100%25 Customer%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sobre precio modelo %28In the product price%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sobre valor residual %28Only remaining product%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vidrala 100%25 %28100 %25 Vidrala%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Moulds_Agreement__c</picklist>
+        <values>
+            <fullName>Cliente 100%25 %28100%25 Customer%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sobre precio modelo %28In the product price%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sólo valor residual %28Only remaining value%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vidrala 100%25  %28100%25 Vidrala%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Organisation_Name__c</picklist>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vidrala</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Organisation_SAP_Code__c</picklist>
+        <values>
+            <fullName>EN60</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>VD10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VD30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Approval Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tons_Units__c</picklist>
+        <values>
+            <fullName>Tons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Units</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

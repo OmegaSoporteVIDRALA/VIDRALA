@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Design_Brief_Created__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checks box after the design brief is created</description>
+    <label>Design Brief Created</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Height Capabilities --></label>
+    <name>Height_Capabilities__c</name>
+    <picklistValues>
+        <masterLabel>Short Pack</masterLabel>
+        <translation><!-- Short Pack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tall Pack</masterLabel>
+        <translation><!-- Tall Pack --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

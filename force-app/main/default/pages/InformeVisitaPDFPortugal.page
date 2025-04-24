@@ -1,0 +1,72 @@
+<apex:page standardController="Customer_Contact_Report__c" renderAs="PDF" applyBodyTag="false">
+    <head>
+        <style>
+            body {
+                font-family: 'Arial Unicode MS';
+            }
+            #masthead{
+                width: 100%
+                display:inline-block;
+            }
+            #title {
+                float: left;
+            }
+            #logo {
+                float:right;
+            }
+            #details{
+                width: 100%
+                display: inline-block;
+                clear: both;
+            }
+            @page {
+                @bottom-left {
+                    content: element(footer);
+                }
+            }
+            div.footer {
+                display: block;
+                padding: 5px;
+                position: running(footer);
+            }
+            .pagenumber:before {
+                content: counter(page);
+            }
+            .pagecount:before {
+                content: counter(pages);
+            }
+            .sfdc_richtext img {
+               border: 0;
+               width: 100%;
+             }
+        </style>
+    </head>
+    <body>
+        <div class="footer">
+            <div>Folha
+                <span class="pagenumber" /> de
+                <span class="pagecount" />
+            </div>
+        </div>
+        <div id="masthead">
+            <h1 id="title">Informação Visita Cliente:</h1>
+            <img id="logo" width="90" src="{!URLFOR($Resource.Vidralalogo)}" alt="Vidrala" />
+        </div>
+        <div id="details">
+            <p>Cliente: {!Customer_Contact_Report__c.Account__r.Name}</p>
+            <p>Data e hora:
+                <apex:outputField value="{!Customer_Contact_Report__c.Date_and_Time__c}"></apex:outputField>
+            </p>
+            <p>Local: {!Customer_Contact_Report__c.Location__c}</p>
+        </div>
+        <h2>Assistentes:</h2>
+        <hr/>
+        <apex:outputField value="{!Customer_Contact_Report__c.Attendees__c}"></apex:outputField>
+        <h2>1. Temas tratados/Notas</h2>
+        <hr/>
+        <apex:outputField value="{!Customer_Contact_Report__c.Items_Discussed__c}"></apex:outputField>
+        <h2>2. Ações a empreender</h2>
+        <hr/>
+        <apex:outputField value="{!Customer_Contact_Report__c.Action_Points__c}"></apex:outputField>
+    </body>
+</apex:page>

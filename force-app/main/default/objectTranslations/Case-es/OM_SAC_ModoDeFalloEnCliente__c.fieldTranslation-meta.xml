@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Modo de fallo en cliente --></label>
+    <name>OM_SAC_ModoDeFalloEnCliente__c</name>
+    <picklistValues>
+        <masterLabel>Aspecto</masterLabel>
+        <translation><!-- Aspecto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daño instalación</masterLabel>
+        <translation><!-- Daño instalación --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Despaletizado</masterLabel>
+        <translation><!-- Despaletizado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Estanqueidad</masterLabel>
+        <translation><!-- Estanqueidad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Etiquetado</masterLabel>
+        <translation><!-- Etiquetado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incumplimiento pauta</masterLabel>
+        <translation><!-- Incumplimiento pauta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Llenado</masterLabel>
+        <translation><!-- Llenado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roturas consumidor final</masterLabel>
+        <translation><!-- Roturas consumidor final --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roturas en diferido</masterLabel>
+        <translation><!-- Roturas en diferido --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roturas en línea</masterLabel>
+        <translation><!-- Roturas en línea --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seguridad alimentaria</masterLabel>
+        <translation><!-- Seguridad alimentaria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Taponado</masterLabel>
+        <translation><!-- Taponado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transporte en línea cliente</masterLabel>
+        <translation><!-- Transporte en línea cliente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trazabilidad</masterLabel>
+        <translation><!-- Trazabilidad --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

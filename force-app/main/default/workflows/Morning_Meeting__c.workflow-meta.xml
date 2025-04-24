@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Glass_Daily_Morning_Meeting</fullName>
+        <description>Glass Daily Morning Meeting</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_to__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Glass_Daily_Morning_Meeting</template>
+    </alerts>
+    <alerts>
+        <fullName>Glass_Daily_Morning_Meeting_Completed_by_date</fullName>
+        <description>Glass Daily Morning Meeting - Completed by date</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_to__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Glass_Daily_Morning_Meeting_Completed_by_Date</template>
+    </alerts>
+    <alerts>
+        <fullName>Glass_Daily_Morning_Minutes_Reminder</fullName>
+        <description>Glass Daily Morning Minutes Reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_to__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Glass_Daily_Morning_Meeting_Reminder</template>
+    </alerts>
+    <alerts>
+        <fullName>Glass_Temp_2</fullName>
+        <description>Glass Temp 2</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_to__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Glass_2</template>
+    </alerts>
+</Workflow>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Explanation of how the Rebate is to be accrued for accounting purposes --></help>
+    <label><!-- Explanation of Rebate Accrual Basis --></label>
+    <name>Explanation_of_Rebate_Accrual_Basis__c</name>
+</CustomFieldTranslation>

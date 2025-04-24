@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Material__c</fullName>
+    <description>From Vidrala Spain Picklist</description>
+    <label>Material</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>8001378 PALETA ANIFE RETORNABLE 1200X1000X155</fullName>
+                <default>true</default>
+                <label>PALETA ANIFE RETORNABLE 1200X1000X155</label>
+            </value>
+            <value>
+                <fullName>8001392 PALETA VMF RETORNABLE 1200X1000X154</fullName>
+                <default>false</default>
+                <label>PALETA VMF RETORNABLE 1200X1000X154</label>
+            </value>
+            <value>
+                <fullName>8000355 PLANCHA PP CARTONPLAST PCA 1200X1000 ALV</fullName>
+                <default>false</default>
+                <label>PLANCHA PP CARTONPLAST PCA 1200X1000 ALV</label>
+            </value>
+            <value>
+                <fullName>8000385 PLANCHA PP VIDRALA PVE EXPORT 1200X1000</fullName>
+                <default>false</default>
+                <label>PLANCHA PP VIDRALA PVE EXPORT 1200X1000</label>
+            </value>
+            <value>
+                <fullName>8000042 PALETA RG01 RETORNAB. ALIG 1200X1000X125</fullName>
+                <default>false</default>
+                <label>PALETA RG01 RETORNAB. ALIG 1200X1000X125</label>
+            </value>
+            <value>
+                <fullName>8003618 PLACA PP SMARTPAD 1200X1000 2,6 -3mm PSM</fullName>
+                <default>false</default>
+                <label>PLACA PP SMARTPAD 1200X1000 2,6 -3mm PSM</label>
+            </value>
+            <value>
+                <fullName>8003625 Top Frame - 25 mm</fullName>
+                <default>false</default>
+                <label>TOP FRAME - 25 mm</label>
+            </value>
+            <value>
+                <fullName>8003835 PALETES HK RETORNABLE 1200X1000X162</fullName>
+                <default>false</default>
+                <label>PALETES HK RETORNABLE 1200X1000X162</label>
+            </value>
+            <value>
+                <fullName>8002589 PALETA TF RETORNABLE 1200X1000X145</fullName>
+                <default>false</default>
+                <label>PALETA TF RETORNABLE  1200X1000X145</label>
+            </value>
+            <value>
+                <fullName>8002626 PALETA DIN (T5) RETORNABLE 1200X1000X134</fullName>
+                <default>false</default>
+                <label>PALETA DIN (T5) RETORNABLE 1200X1000X134</label>
+            </value>
+            <value>
+                <fullName>8002627 PALETA EURO RETORNABLE 1200X 800X144</fullName>
+                <default>false</default>
+                <label>PALETA EURO RETORNABLE     1200X 800X144</label>
+            </value>
+            <value>
+                <fullName>8002628 PALETA UK 1200X1000X150</fullName>
+                <default>false</default>
+                <label>PALETA UK 1200X1000X150</label>
+            </value>
+            <value>
+                <fullName>8000350 PLACA 1200X1000 PP VIDRALA AKY 3.5mm PVE</fullName>
+                <default>false</default>
+                <label>PLACA 1200X1000 PP VIDRALA AKY 3.5mm PVE</label>
+            </value>
+            <value>
+                <fullName>8000360 PLACA 1200X1000 PP CPL 3mm SANDWICH PCS</fullName>
+                <default>false</default>
+                <label>PLACA 1200X1000 PP CPL 3mm SANDWICH PCS</label>
+            </value>
+            <value>
+                <fullName>8000397 PLACA 1200X1000 PP CPL 3mm SDW TROQ PCST</fullName>
+                <default>false</default>
+                <label>PLACA 1200X1000 PP CPL 3mm SDW TROQ PCST</label>
+            </value>
+            <value>
+                <fullName>8003021 PALETA EQ ENCIRC RET 1200X1000X157</fullName>
+                <default>false</default>
+                <label>PALETA EQ ENCIRC RET 1200X1000X157</label>
+            </value>
+            <value>
+                <fullName>8002598 INTERFAL.PVI ALVEOL 1200X1000X3.4 VERDE</fullName>
+                <default>false</default>
+                <label>INTERFAL.PVI ALVEOL 1200X1000X3.4 VERDE</label>
+            </value>
+            <value>
+                <fullName>8003836 TAPA PP MACIZA SMARTCAP 1200X1000 TSM</fullName>
+                <default>false</default>
+                <label>TAPA PP MACIZA SMARTCAP 1200X1000 TSM</label>
+            </value>
+            <value>
+                <fullName>8002517 PALETA DE MADERA CHEP RECUPERABLE</fullName>
+                <default>false</default>
+                <label>PALETA DE MADERA CHEP RECUPERABLE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

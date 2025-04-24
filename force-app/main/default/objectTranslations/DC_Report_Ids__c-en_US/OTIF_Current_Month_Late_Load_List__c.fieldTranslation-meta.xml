@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- OTIF Current Month Late Load List --></label>
+    <name>OTIF_Current_Month_Late_Load_List__c</name>
+</CustomFieldTranslation>

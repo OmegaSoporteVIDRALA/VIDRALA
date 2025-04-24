@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bottle__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Reference to Bottle Description</description>
+    <label>Bottle</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Bottle__c.Is_Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Bottle__c</referenceTo>
+    <relationshipLabel>Dispatches</relationshipLabel>
+    <relationshipName>Dispatches</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2024</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>Priority__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Start_date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Contract_Status__c</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>To_be_actioned_by__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>End_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2024</value>
+    </filters>
+    <label>2024</label>
+</ListView>

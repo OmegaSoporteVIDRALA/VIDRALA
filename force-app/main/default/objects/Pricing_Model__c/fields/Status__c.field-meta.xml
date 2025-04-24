@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Sales</fullName>
+                <default>true</default>
+                <label>1 Sales</label>
+            </value>
+            <value>
+                <fullName>2 Planning</fullName>
+                <default>false</default>
+                <label>2 Planning</label>
+            </value>
+            <value>
+                <fullName>3 Design</fullName>
+                <default>false</default>
+                <label>3 Design</label>
+            </value>
+            <value>
+                <fullName>4 Distribution</fullName>
+                <default>false</default>
+                <label>4 Distribution</label>
+            </value>
+            <value>
+                <fullName>5 Finance</fullName>
+                <default>false</default>
+                <label>5 Finance</label>
+            </value>
+            <value>
+                <fullName>6 Done</fullName>
+                <default>false</default>
+                <label>6 Done</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

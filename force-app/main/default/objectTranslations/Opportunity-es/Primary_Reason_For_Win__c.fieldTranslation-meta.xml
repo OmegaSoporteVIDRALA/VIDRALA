@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Mótivo principal ganacia</label>
+    <name>Primary_Reason_For_Win__c</name>
+    <picklistValues>
+        <masterLabel>Design</masterLabel>
+        <translation>Ganada por diseño</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Price</masterLabel>
+        <translation>Ganada por precio</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quality</masterLabel>
+        <translation>Ganada por calidad</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strength of relationship</masterLabel>
+        <translation>Ganada por la buena relación con el cliente</translation>
+    </picklistValues>
+</CustomFieldTranslation>

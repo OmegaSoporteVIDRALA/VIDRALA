@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set provides access to a specific group of allocated (cross functional) Users to a specific MPA Record Type known as &quot;Internal MPA&quot;. Only Users with this Permission Set can access that MPA Record Type.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Access to MPA Record Type &quot;Internal Only&quot;</label>
+    <license>Salesforce</license>
+    <recordTypeVisibilities>
+        <recordType>MPA__c.Internal_Only</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

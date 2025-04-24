@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Initial_Check_Submit_City</fullName>
+    <active>true</active>
+    <description>This rule ensures that when a user submits an Account for an Initial credit check that all of the required fields are completed.</description>
+    <errorConditionFormula>Account_Credit_Status__c = &apos;2 Initial Check Submitted&apos;
+&amp;&amp;
+ISBLANK(BillingCity)</errorConditionFormula>
+    <errorDisplayField>BillingCity</errorDisplayField>
+    <errorMessage>You must add a Billing City.</errorMessage>
+</ValidationRule>

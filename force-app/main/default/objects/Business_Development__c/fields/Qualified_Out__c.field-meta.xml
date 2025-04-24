@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualified_Out__c</fullName>
+    <inlineHelpText>Reason why the business development will not be converted into an opportunity</inlineHelpText>
+    <label>Qualified Out</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Design</fullName>
+                <default>false</default>
+                <label>Design</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+                <label>Strategic</label>
+            </value>
+            <value>
+                <fullName>Capacity</fullName>
+                <default>false</default>
+                <label>Capacity</label>
+            </value>
+            <value>
+                <fullName>Suitability</fullName>
+                <default>false</default>
+                <label>Suitability</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

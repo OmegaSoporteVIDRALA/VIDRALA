@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Delivery Location --></label>
+    <name>Delivery_Location__c</name>
+    <picklistValues>
+        <masterLabel>ABBEY - Abbeyleix - ABBEY</masterLabel>
+        <translation><!-- ABBEY - Abbeyleix - ABBEY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ABER - Aberdeen - ABER</masterLabel>
+        <translation><!-- ABER - Aberdeen - ABER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAIL - Baileborough - BAIL</masterLabel>
+        <translation><!-- BAIL - Baileborough - BAIL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BALLY - Ballymena - BALLY</masterLabel>
+        <translation><!-- BALLY - Ballymena - BALLY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BARN - Barnsley - BARN</masterLabel>
+        <translation><!-- BARN - Barnsley - BARN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BEDFO - Bedford - BEDFO</masterLabel>
+        <translation><!-- BEDFO - Bedford - BEDFO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BEL - Belfast - BEL</masterLabel>
+        <translation><!-- BEL - Belfast - BEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BELG - Belgium - BELG</masterLabel>
+        <translation><!-- BELG - Belgium - BELG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BELG - Ghent - BELG</masterLabel>
+        <translation><!-- BELG - Ghent - BELG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BIRM - Birmingham - BIRM</masterLabel>
+        <translation><!-- BIRM - Birmingham - BIRM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRIS - Bristol - BRIS</masterLabel>
+        <translation><!-- BRIS - Bristol - BRIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BURT - Burton on Trent - BURT</masterLabel>
+        <translation><!-- BURT - Burton on Trent - BURT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUSH - Bushmills - BUSH</masterLabel>
+        <translation><!-- BUSH - Bushmills - BUSH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CAM - Cambridgeshire - CAM</masterLabel>
+        <translation><!-- CAM - Cambridgeshire - CAM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CLON - Clonmel - CLON</masterLabel>
+        <translation><!-- CLON - Clonmel - CLON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CUMN - Cumnock - CUMN</masterLabel>
+        <translation><!-- CUMN - Cumnock - CUMN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DER - Derry - DER</masterLabel>
+        <translation><!-- DER - Derry - DER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DEV - Devon - DEV</masterLabel>
+        <translation><!-- DEV - Devon - DEV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DONE - Donegal - DONE</masterLabel>
+        <translation><!-- DONE - Donegal - DONE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DUB - Dublin - DUB</masterLabel>
+        <translation><!-- DUB - Dublin - DUB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DUND - Arbroath - DUND</masterLabel>
+        <translation><!-- DUND - Arbroath - DUND --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DURHA - Durham - DURHA</masterLabel>
+        <translation><!-- DURHA - Durham - DURHA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENNI - Enniscorthy - ENNI</masterLabel>
+        <translation><!-- ENNI - Enniscorthy - ENNI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXWO - Ex Works - EXWO</masterLabel>
+        <translation><!-- EXWO - Ex Works - EXWO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAVE - Faversham - FAVE</masterLabel>
+        <translation><!-- FAVE - Faversham - FAVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRANC - France - FRANC</masterLabel>
+        <translation><!-- FRANC - France - FRANC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GLAS - Airdrie - GLAS</masterLabel>
+        <translation><!-- GLAS - Airdrie - GLAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GLAS - East Kilbride - GLAS</masterLabel>
+        <translation><!-- GLAS - East Kilbride - GLAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GLAS - Glasgow - GLAS</masterLabel>
+        <translation><!-- GLAS - Glasgow - GLAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GLAS - Grangemouth - GLAS</masterLabel>
+        <translation><!-- GLAS - Grangemouth - GLAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GLAS - Westlothian - GLAS</masterLabel>
+        <translation><!-- GLAS - Westlothian - GLAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GLOUC - Gloucestershire - GLOUC</masterLabel>
+        <translation><!-- GLOUC - Gloucestershire - GLOUC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HAMP - Hampshire - HAMP</masterLabel>
+        <translation><!-- HAMP - Hampshire - HAMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HUDD - Huddersfield - HUDD</masterLabel>
+        <translation><!-- HUDD - Huddersfield - HUDD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KEND - Kendal - KEND</masterLabel>
+        <translation><!-- KEND - Kendal - KEND --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LANC - Lancashire - LANC</masterLabel>
+        <translation><!-- LANC - Lancashire - LANC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LEDB - Ledbury - LEDB</masterLabel>
+        <translation><!-- LEDB - Ledbury - LEDB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LEEDS - Leeds - LEEDS</masterLabel>
+        <translation><!-- LEEDS - Leeds - LEEDS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LEVEN - Leven - LEVEN</masterLabel>
+        <translation><!-- LEVEN - Leven - LEVEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LIM - Limerick - LIM</masterLabel>
+        <translation><!-- LIM - Limerick - LIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LIVE - Liverpool - LIVE</masterLabel>
+        <translation><!-- LIVE - Liverpool - LIVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MANC - Manchester - MANC</masterLabel>
+        <translation><!-- MANC - Manchester - MANC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MID - Middlesex - MID</masterLabel>
+        <translation><!-- MID - Middlesex - MID --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MONM - Monmouthshire - MONM</masterLabel>
+        <translation><!-- MONM - Monmouthshire - MONM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NORT - Northampton - NORT</masterLabel>
+        <translation><!-- NORT - Northampton - NORT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NORW - Norwich - NORW</masterLabel>
+        <translation><!-- NORW - Norwich - NORW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PERT - Perthshire - PERT</masterLabel>
+        <translation><!-- PERT - Perthshire - PERT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POWYS - Powys - POWYS</masterLabel>
+        <translation><!-- POWYS - Powys - POWYS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRES - Preston - PRES</masterLabel>
+        <translation><!-- PRES - Preston - PRES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RUNC - Runcorn - RUNC</masterLabel>
+        <translation><!-- RUNC - Runcorn - RUNC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALM - Salmsbury - SALM</masterLabel>
+        <translation><!-- SALM - Salmsbury - SALM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SELB - Selby - SELB</masterLabel>
+        <translation><!-- SELB - Selby - SELB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHEP - Shepton Mallet - SHEP</masterLabel>
+        <translation><!-- SHEP - Shepton Mallet - SHEP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHROP - Shropshire - SHROP</masterLabel>
+        <translation><!-- SHROP - Shropshire - SHROP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STAFF - Staffordshire - STAFF</masterLabel>
+        <translation><!-- STAFF - Staffordshire - STAFF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STOC - Stockport - STOC</masterLabel>
+        <translation><!-- STOC - Stockport - STOC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SUFFO - Suffolk - SUFFO</masterLabel>
+        <translation><!-- SUFFO - Suffolk - SUFFO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TADC - Tadcaster - TADC</masterLabel>
+        <translation><!-- TADC - Tadcaster - TADC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TIPP - Tipperary - TIPP</masterLabel>
+        <translation><!-- TIPP - Tipperary - TIPP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WARR - Warrington - WARR</masterLabel>
+        <translation><!-- WARR - Warrington - WARR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WATER - Waterford - WATER</masterLabel>
+        <translation><!-- WATER - Waterford - WATER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WESTS - Chichester - WESTS</masterLabel>
+        <translation><!-- WESTS - Chichester - WESTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WESTS - West Sussex - WESTS</masterLabel>
+        <translation><!-- WESTS - West Sussex - WESTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WOR - Worchester - WOR</masterLabel>
+        <translation><!-- WOR - Worchester - WOR --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Risk_Upside_submitter_to_advise_of_rejection</fullName>
+        <description>Email Risk/Upside submitter to advise of rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Forecast_Risk_Ups_Approval_Request_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Risk_Upside_submitter_to_confirm_approval</fullName>
+        <description>Email Risk/Upside submitter to confirm approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_Process_Email_Templates/Forecast_Risk_Ups_Approval_Request_Approved</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_Approval_Rejection_Date</fullName>
+        <field>Approved_Rejected_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Update Approval/Rejection Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_Type_to_Approved_Rejected</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Approved_Rejected</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type to Approved/Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_Type_to_Standard</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Standard</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type to Standard</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Risk_Ups_Approval_Status_to_New</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>New - Unsubmitted</literalValue>
+        <name>Update Risk/Ups Approval Status to New</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Risk_Ups_Approval_Sts_to_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Risk/Ups Approval Sts to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Risk_Ups_Approval_Sts_to_Pending</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Update Risk/Ups Approval Sts to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Risk_Ups_Approval_Sts_to_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Risk/Ups Approval Sts to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

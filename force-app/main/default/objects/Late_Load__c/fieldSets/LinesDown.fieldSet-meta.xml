@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LinesDown</fullName>
+    <description>New Late Load
+New Collapsed Load</description>
+    <displayedFields>
+        <field>Time_no_glass__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Customers Lines Down</label>
+</FieldSet>

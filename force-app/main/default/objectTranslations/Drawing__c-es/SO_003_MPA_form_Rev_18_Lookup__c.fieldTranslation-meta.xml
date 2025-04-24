@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- (SO-003) MPA form Rev 18 Lookup --></label>
+    <name>SO_003_MPA_form_Rev_18_Lookup__c</name>
+    <relationshipLabel><!-- Drawings --></relationshipLabel>
+</CustomFieldTranslation>

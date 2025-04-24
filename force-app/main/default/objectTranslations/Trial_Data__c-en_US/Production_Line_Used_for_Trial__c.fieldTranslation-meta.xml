@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Production Line Used for Trial --></label>
+    <name>Production_Line_Used_for_Trial__c</name>
+    <picklistValues>
+        <masterLabel>CR11</masterLabel>
+        <translation><!-- CR11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CR12</masterLabel>
+        <translation><!-- CR12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CR21</masterLabel>
+        <translation><!-- CR21 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CR22</masterLabel>
+        <translation><!-- CR22 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DL11</masterLabel>
+        <translation><!-- DL11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DL12</masterLabel>
+        <translation><!-- DL12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DL13</masterLabel>
+        <translation><!-- DL13 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DL14</masterLabel>
+        <translation><!-- DL14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DL21</masterLabel>
+        <translation><!-- DL21 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DL22</masterLabel>
+        <translation><!-- DL22 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DL23</masterLabel>
+        <translation><!-- DL23 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DL24</masterLabel>
+        <translation><!-- DL24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL11</masterLabel>
+        <translation><!-- EL11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL12</masterLabel>
+        <translation><!-- EL12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL13</masterLabel>
+        <translation><!-- EL13 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL14</masterLabel>
+        <translation><!-- EL14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL15</masterLabel>
+        <translation><!-- EL15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL16</masterLabel>
+        <translation><!-- EL16 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL17</masterLabel>
+        <translation><!-- EL17 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL21</masterLabel>
+        <translation><!-- EL21 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL22</masterLabel>
+        <translation><!-- EL22 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL23</masterLabel>
+        <translation><!-- EL23 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL24</masterLabel>
+        <translation><!-- EL24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL25</masterLabel>
+        <translation><!-- EL25 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL26</masterLabel>
+        <translation><!-- EL26 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EL27</masterLabel>
+        <translation><!-- EL27 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

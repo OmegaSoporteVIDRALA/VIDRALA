@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Organisation_Name__c</fullName>
+    <description>DEPRECATED 12 Nov 2024 case 7911</description>
+    <label>Sales Organisation Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Sales_Organisation_Name</valueSetName>
+    </valueSet>
+</CustomField>

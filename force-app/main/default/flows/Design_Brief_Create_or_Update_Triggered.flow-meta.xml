@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>NEW_Design_Brief_is_Created</name>
+        <label>NEW Design Brief is Created</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>Design_Brief__c.NEW_Design_Brief_is_Created</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_AutomationBypassDateTime</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Design_Brief__c.NEW_Design_Brief_is_Created</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Are_Flows_enabled</name>
+        <label>Are Flows enabled?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Flow_should_run</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.Configuration__c.Are_Flows_Off__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>NEW_Design_Brief_is_Created</targetReference>
+            </connector>
+            <label>Flow should run</label>
+        </rules>
+    </decisions>
+    <description>Removed second email alert</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Is_New</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>Time_RightNow</name>
+        <dataType>Date</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <formulas>
+        <description>Formula is used to identify the Sales Organisation SAP Code of the user creating/raising any Drawing records.</description>
+        <name>USERSalesOrgSAPCode</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(ISPICKVAL({!$Record.CreatedBy.Sales_Organisation_SAP_Code__c}, &quot;EN60&quot;),
+      ISPICKVAL({!$Record.CreatedBy.Sales_Organisation_SAP_Code__c}, &quot;VD30&quot;))</expression>
+    </formulas>
+    <interviewLabel>Design Brief - Create or Update Triggered {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Design Brief - Create or Update Triggered</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_AutomationBypassDateTime</name>
+        <label>Update AutomationBypassDateTime</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>AutomationBypassDateTime__c</field>
+            <value>
+                <elementReference>Time_RightNow</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Are_Flows_enabled</targetReference>
+        </connector>
+        <object>Design_Brief__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

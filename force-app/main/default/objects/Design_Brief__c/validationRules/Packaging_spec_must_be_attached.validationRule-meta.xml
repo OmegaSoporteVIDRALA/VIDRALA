@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Packaging_spec_must_be_attached</fullName>
+    <active>true</active>
+    <description>If this is an existing container then the user must agree to attach a packaging spec</description>
+    <errorConditionFormula>ISPICKVAL(Existing_Packaging_Spec_Attached__c, &quot;No&quot;)</errorConditionFormula>
+    <errorDisplayField>Existing_Packaging_Spec_Attached__c</errorDisplayField>
+    <errorMessage>If this is an existing container then you must agree to attach the packaging specification immediately.</errorMessage>
+</ValidationRule>

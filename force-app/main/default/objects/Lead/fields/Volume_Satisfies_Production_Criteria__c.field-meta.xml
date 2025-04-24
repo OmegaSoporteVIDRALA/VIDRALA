@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volume_Satisfies_Production_Criteria__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does the potential volume satisfy Encirc’s production criteria?</description>
+    <inlineHelpText>Does the potential volume satisfy Encirc’s production criteria?</inlineHelpText>
+    <label>Volume Satisfies Production Criteria?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

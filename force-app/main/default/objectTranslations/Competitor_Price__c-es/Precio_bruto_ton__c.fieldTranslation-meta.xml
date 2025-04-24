@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Este campo se completa en automático teniendo en cuenta el precio bruto indicado  y el peso del modelo registrado --></help>
+    <label><!-- Precio bruto €/ton --></label>
+    <name>Precio_bruto_ton__c</name>
+</CustomFieldTranslation>

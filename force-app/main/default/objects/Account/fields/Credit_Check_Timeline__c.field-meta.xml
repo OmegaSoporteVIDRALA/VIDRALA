@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Check_Timeline__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(  Account_Credit_Status__c,
+&apos;1 New Account&apos;,IMAGE(&quot;/resource/CreditCheck_1&quot;,&quot;New Account&quot;),
+&apos;2 Initial Check Submitted&apos;,IMAGE(&quot;/resource/CreditCheck_2&quot;,&quot;Initial Check Submitted&quot;),
+&apos;3 Initial Check Completed&apos;,IMAGE(&quot;/resource/CreditCheck_3&quot;,&quot;Initial Check Completed&quot;),
+&apos;4 Full Check Submitted&apos;,IMAGE(&quot;/resource/CreditCheck_4&quot;,&quot;Full Check Submitted&quot;),
+IMAGE(&quot;/resource/CreditCheck_5&quot;,&quot;Full Check Completed&quot;)
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Credit Check Timeline</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( Credit_Block__c,
+     IMAGE(&quot;img/msg_icons/error24.png&quot;,&quot;Blocked!&quot;),
+     IF ( Account_Credit_Limit__c &gt; 0,
+          IMAGE(&quot;img/msg_icons/confirm24.png&quot;,&quot;Credit OK&quot;),
+          IMAGE(&quot;img/msg_icons/warning24.png&quot;,&quot;No check &quot;)
+     )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Credit Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

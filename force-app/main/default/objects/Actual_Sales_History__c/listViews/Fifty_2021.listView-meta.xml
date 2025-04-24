@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fifty_2021</fullName>
+    <columns>OBJECT_ID</columns>
+    <columns>NAME</columns>
+    <columns>Sales_Organization__c</columns>
+    <columns>Account__c</columns>
+    <columns>Bottle__c</columns>
+    <columns>SAP_Material_Code__c</columns>
+    <columns>Date__c</columns>
+    <columns>Month__c</columns>
+    <columns>Year__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Tonnes__c</columns>
+    <columns>Volume_000_s__c</columns>
+    <columns>Revenue_Per_Tonne__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Year__c</field>
+        <operation>equals</operation>
+        <value>2021</value>
+    </filters>
+    <filters>
+        <field>Sales_Organization__c</field>
+        <operation>equals</operation>
+        <value>VD10</value>
+    </filters>
+    <label>Fifty 2021</label>
+</ListView>

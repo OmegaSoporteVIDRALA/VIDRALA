@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pasteurisation Process --></label>
+    <name>Pasteurisation_Process__c</name>
+    <picklistValues>
+        <masterLabel>Flash</masterLabel>
+        <translation><!-- Flash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retort</masterLabel>
+        <translation><!-- Retort --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tunnel</masterLabel>
+        <translation><!-- Tunnel --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

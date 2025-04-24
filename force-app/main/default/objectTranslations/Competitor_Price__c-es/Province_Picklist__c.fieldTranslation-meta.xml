@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Provincia</label>
+    <name>Province_Picklist__c</name>
+    <picklistValues>
+        <masterLabel>ALAVA</masterLabel>
+        <translation><!-- ALAVA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALBACETE</masterLabel>
+        <translation><!-- ALBACETE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALICANTE</masterLabel>
+        <translation><!-- ALICANTE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALMERIA</masterLabel>
+        <translation><!-- ALMERIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ASTURIAS</masterLabel>
+        <translation><!-- ASTURIAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AVILA</masterLabel>
+        <translation><!-- AVILA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ain</masterLabel>
+        <translation><!-- Ain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aisne</masterLabel>
+        <translation><!-- Aisne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alentejo Central</masterLabel>
+        <translation><!-- Alentejo Central --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alentejo Litoral</masterLabel>
+        <translation><!-- Alentejo Litoral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Algarve</masterLabel>
+        <translation><!-- Algarve --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allier</masterLabel>
+        <translation><!-- Allier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alpes (Alta provenz)</masterLabel>
+        <translation><!-- Alpes (Alta provenz) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alpes (Altos)</masterLabel>
+        <translation><!-- Alpes (Altos) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alpes marítimos</masterLabel>
+        <translation><!-- Alpes marítimos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto Alentejo</masterLabel>
+        <translation><!-- Alto Alentejo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alto Trás-os-Montes</masterLabel>
+        <translation><!-- Alto Trás-os-Montes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ardèche</masterLabel>
+        <translation><!-- Ardèche --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ariège</masterLabel>
+        <translation><!-- Ariège --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aube</masterLabel>
+        <translation><!-- Aube --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aude</masterLabel>
+        <translation><!-- Aude --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ave</masterLabel>
+        <translation><!-- Ave --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aveyron</masterLabel>
+        <translation><!-- Aveyron --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BADAJOZ</masterLabel>
+        <translation><!-- BADAJOZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BALEARES</masterLabel>
+        <translation><!-- BALEARES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BARCELONA</masterLabel>
+        <translation><!-- BARCELONA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BURGOS</masterLabel>
+        <translation><!-- BURGOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Baixo Alentejo</masterLabel>
+        <translation><!-- Baixo Alentejo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Baixo Mondego</masterLabel>
+        <translation><!-- Baixo Mondego --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Baixo Vouga</masterLabel>
+        <translation><!-- Baixo Vouga --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beira Interior Norte</masterLabel>
+        <translation><!-- Beira Interior Norte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beira Interior Sul</masterLabel>
+        <translation><!-- Beira Interior Sul --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bouches-du-Rhône</masterLabel>
+        <translation><!-- Bouches-du-Rhône --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CACERES</masterLabel>
+        <translation><!-- CACERES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CADIZ</masterLabel>
+        <translation><!-- CADIZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CANTABRIA</masterLabel>
+        <translation><!-- CANTABRIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CASTELLON</masterLabel>
+        <translation><!-- CASTELLON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CEUTA</masterLabel>
+        <translation><!-- CEUTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CIUDAD REAL</masterLabel>
+        <translation><!-- CIUDAD REAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CORDOBA</masterLabel>
+        <translation><!-- CORDOBA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CUENCA</masterLabel>
+        <translation><!-- CUENCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Calvados</masterLabel>
+        <translation><!-- Calvados --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cantal</masterLabel>
+        <translation><!-- Cantal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Charente</masterLabel>
+        <translation><!-- Charente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Charente-Maritime</masterLabel>
+        <translation><!-- Charente-Maritime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cher</masterLabel>
+        <translation><!-- Cher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corrèze</masterLabel>
+        <translation><!-- Corrèze --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corse-du-Nord</masterLabel>
+        <translation><!-- Corse-du-Nord --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corse-du-Sud</masterLabel>
+        <translation><!-- Corse-du-Sud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cova da Beira</masterLabel>
+        <translation><!-- Cova da Beira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Creuse</masterLabel>
+        <translation><!-- Creuse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cávado</masterLabel>
+        <translation><!-- Cávado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Côte-d&apos;Or</masterLabel>
+        <translation><!-- Côte-d&apos;Or --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Côtes-d&apos;Armor</masterLabel>
+        <translation><!-- Côtes-d&apos;Armor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>D.O.M.-T.O.M.</masterLabel>
+        <translation><!-- D.O.M.-T.O.M. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dordogne</masterLabel>
+        <translation><!-- Dordogne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Doubs</masterLabel>
+        <translation><!-- Doubs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Douro</masterLabel>
+        <translation><!-- Douro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Drôme</masterLabel>
+        <translation><!-- Drôme --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dão-Lafoes</masterLabel>
+        <translation><!-- Dão-Lafoes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entre Douro e Vouga</masterLabel>
+        <translation><!-- Entre Douro e Vouga --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Essonne</masterLabel>
+        <translation><!-- Essonne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eure</masterLabel>
+        <translation><!-- Eure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eure-et-Loir</masterLabel>
+        <translation><!-- Eure-et-Loir --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finistère</masterLabel>
+        <translation><!-- Finistère --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GERONA</masterLabel>
+        <translation><!-- GERONA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GRANADA</masterLabel>
+        <translation><!-- GRANADA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GUADALAJARA</masterLabel>
+        <translation><!-- GUADALAJARA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GUIPUZCOA</masterLabel>
+        <translation><!-- GUIPUZCOA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gard</masterLabel>
+        <translation><!-- Gard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Garona (Alta)</masterLabel>
+        <translation><!-- Garona (Alta) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gers</masterLabel>
+        <translation><!-- Gers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gironde</masterLabel>
+        <translation><!-- Gironde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grande Lisboa</masterLabel>
+        <translation><!-- Grande Lisboa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grande Porto</masterLabel>
+        <translation><!-- Grande Porto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guadalupe</masterLabel>
+        <translation><!-- Guadalupe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guyana</masterLabel>
+        <translation><!-- Guyana --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HUELVA</masterLabel>
+        <translation><!-- HUELVA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HUESCA</masterLabel>
+        <translation><!-- HUESCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hauts-de-Seine</masterLabel>
+        <translation><!-- Hauts-de-Seine --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hérault</masterLabel>
+        <translation><!-- Hérault --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ille-et-Vilaine</masterLabel>
+        <translation><!-- Ille-et-Vilaine --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indre</masterLabel>
+        <translation><!-- Indre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Indre-et-Loire</masterLabel>
+        <translation><!-- Indre-et-Loire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Isère</masterLabel>
+        <translation><!-- Isère --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JAEN</masterLabel>
+        <translation><!-- JAEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jura</masterLabel>
+        <translation><!-- Jura --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LA CORUÑA</masterLabel>
+        <translation><!-- LA CORUÑA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LA RIOJA</masterLabel>
+        <translation><!-- LA RIOJA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LAS PALMAS</masterLabel>
+        <translation><!-- LAS PALMAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LEON</masterLabel>
+        <translation><!-- LEON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LERIDA</masterLabel>
+        <translation><!-- LERIDA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LUGO</masterLabel>
+        <translation><!-- LUGO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landes</masterLabel>
+        <translation><!-- Landes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Las Ardenas</masterLabel>
+        <translation><!-- Las Ardenas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lezíria do Tejo</masterLabel>
+        <translation><!-- Lezíria do Tejo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loir-et-Cher</masterLabel>
+        <translation><!-- Loir-et-Cher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loire</masterLabel>
+        <translation><!-- Loire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loire (Haute)</masterLabel>
+        <translation><!-- Loire (Haute) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loire-Atlantique</masterLabel>
+        <translation><!-- Loire-Atlantique --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loiret</masterLabel>
+        <translation><!-- Loiret --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lot</masterLabel>
+        <translation><!-- Lot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lot-et-Garonne</masterLabel>
+        <translation><!-- Lot-et-Garonne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lozère</masterLabel>
+        <translation><!-- Lozère --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MADRID</masterLabel>
+        <translation><!-- MADRID --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MALAGA</masterLabel>
+        <translation><!-- MALAGA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MELILLA</masterLabel>
+        <translation><!-- MELILLA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MURCIA</masterLabel>
+        <translation><!-- MURCIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maine-et-Loire</masterLabel>
+        <translation><!-- Maine-et-Loire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manche</masterLabel>
+        <translation><!-- Manche --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marne</masterLabel>
+        <translation><!-- Marne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marne (Haute)</masterLabel>
+        <translation><!-- Marne (Haute) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Martinica</masterLabel>
+        <translation><!-- Martinica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mayenne</masterLabel>
+        <translation><!-- Mayenne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meurthe-et-Moselle</masterLabel>
+        <translation><!-- Meurthe-et-Moselle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meuse</masterLabel>
+        <translation><!-- Meuse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Minho-Lima</masterLabel>
+        <translation><!-- Minho-Lima --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Morbihan</masterLabel>
+        <translation><!-- Morbihan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Moselle</masterLabel>
+        <translation><!-- Moselle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Médio Tejo</masterLabel>
+        <translation><!-- Médio Tejo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NAVARRA</masterLabel>
+        <translation><!-- NAVARRA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nièvre</masterLabel>
+        <translation><!-- Nièvre --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Norte</masterLabel>
+        <translation><!-- Norte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ORENSE</masterLabel>
+        <translation><!-- ORENSE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oeste</masterLabel>
+        <translation><!-- Oeste --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oise</masterLabel>
+        <translation><!-- Oise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orne</masterLabel>
+        <translation><!-- Orne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALENCIA</masterLabel>
+        <translation><!-- PALENCIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PONTEVEDRA</masterLabel>
+        <translation><!-- PONTEVEDRA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>París</masterLabel>
+        <translation><!-- París --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pas-de-Calais</masterLabel>
+        <translation><!-- Pas-de-Calais --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Península de Setúbal</masterLabel>
+        <translation><!-- Península de Setúbal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pinhal Interior N.</masterLabel>
+        <translation><!-- Pinhal Interior N. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pinhal Interior Sul</masterLabel>
+        <translation><!-- Pinhal Interior Sul --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pinhal Litoral</masterLabel>
+        <translation><!-- Pinhal Litoral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pirineos (Altos)</masterLabel>
+        <translation><!-- Pirineos (Altos) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pirineos atlánticos</masterLabel>
+        <translation><!-- Pirineos atlánticos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pirineos orientales</masterLabel>
+        <translation><!-- Pirineos orientales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Puy-de-Dôme</masterLabel>
+        <translation><!-- Puy-de-Dôme --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reg.Aut.da Madeira</masterLabel>
+        <translation><!-- Reg.Aut.da Madeira --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reg.Aut.dos Açores</masterLabel>
+        <translation><!-- Reg.Aut.dos Açores --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rin (Alto)</masterLabel>
+        <translation><!-- Rin (Alto) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rin (Bajo)</masterLabel>
+        <translation><!-- Rin (Bajo) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Réunion</masterLabel>
+        <translation><!-- Réunion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ródano</masterLabel>
+        <translation><!-- Ródano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SALAMANCA</masterLabel>
+        <translation><!-- SALAMANCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEGOVIA</masterLabel>
+        <translation><!-- SEGOVIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEVILLA</masterLabel>
+        <translation><!-- SEVILLA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SORIA</masterLabel>
+        <translation><!-- SORIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STA. CRUZ DE TENERIFE</masterLabel>
+        <translation><!-- STA. CRUZ DE TENERIFE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saboya</masterLabel>
+        <translation><!-- Saboya --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saboya (alta)</masterLabel>
+        <translation><!-- Saboya (alta) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saint-Pierre-et-Miq.</masterLabel>
+        <translation><!-- Saint-Pierre-et-Miq. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sarthe</masterLabel>
+        <translation><!-- Sarthe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saône (Haute)</masterLabel>
+        <translation><!-- Saône (Haute) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saône-et-Loire</masterLabel>
+        <translation><!-- Saône-et-Loire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seine-Maritime</masterLabel>
+        <translation><!-- Seine-Maritime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seine-Saint-Denis</masterLabel>
+        <translation><!-- Seine-Saint-Denis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seine-et-Marne</masterLabel>
+        <translation><!-- Seine-et-Marne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Serra da Estrela</masterLabel>
+        <translation><!-- Serra da Estrela --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Somme</masterLabel>
+        <translation><!-- Somme --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sèvres (Deux)</masterLabel>
+        <translation><!-- Sèvres (Deux) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TARRAGONA</masterLabel>
+        <translation><!-- TARRAGONA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TERUEL</masterLabel>
+        <translation><!-- TERUEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOLEDO</masterLabel>
+        <translation><!-- TOLEDO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tarn</masterLabel>
+        <translation><!-- Tarn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tarn-et-Garonne</masterLabel>
+        <translation><!-- Tarn-et-Garonne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Territ.-de-Belfort</masterLabel>
+        <translation><!-- Territ.-de-Belfort --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tâmega</masterLabel>
+        <translation><!-- Tâmega --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VALENCIA</masterLabel>
+        <translation><!-- VALENCIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VALLADOLID</masterLabel>
+        <translation><!-- VALLADOLID --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIZCAYA</masterLabel>
+        <translation><!-- VIZCAYA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Val-d&apos;Oise</masterLabel>
+        <translation><!-- Val-d&apos;Oise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Val-de-Marne</masterLabel>
+        <translation><!-- Val-de-Marne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Var</masterLabel>
+        <translation><!-- Var --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vaucluse</masterLabel>
+        <translation><!-- Vaucluse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendée</masterLabel>
+        <translation><!-- Vendée --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vienne</masterLabel>
+        <translation><!-- Vienne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vienne (Haute)</masterLabel>
+        <translation><!-- Vienne (Haute) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vosges</masterLabel>
+        <translation><!-- Vosges --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wallis-et-Futuna</masterLabel>
+        <translation><!-- Wallis-et-Futuna --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yonne</masterLabel>
+        <translation><!-- Yonne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yvelines</masterLabel>
+        <translation><!-- Yvelines --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZAMORA</masterLabel>
+        <translation><!-- ZAMORA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZARAGOZA</masterLabel>
+        <translation><!-- ZARAGOZA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

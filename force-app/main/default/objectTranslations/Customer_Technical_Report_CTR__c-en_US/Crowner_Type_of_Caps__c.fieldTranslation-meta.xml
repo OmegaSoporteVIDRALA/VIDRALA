@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Crowner - Type of Caps --></label>
+    <name>Crowner_Type_of_Caps__c</name>
+    <picklistValues>
+        <masterLabel>Crimp</masterLabel>
+        <translation><!-- Crimp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Twist-off</masterLabel>
+        <translation><!-- Twist-off --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

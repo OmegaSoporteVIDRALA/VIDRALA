@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Labeller_Label_Substrate__c</fullName>
+    <label>Additional Labeller - Label Substrate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Paper Backed</fullName>
+                <default>false</default>
+                <label>Paper Backed</label>
+            </value>
+            <value>
+                <fullName>Metallic Paper Backed</fullName>
+                <default>false</default>
+                <label>Metallic Paper Backed</label>
+            </value>
+            <value>
+                <fullName>Coloured PVC Backed</fullName>
+                <default>false</default>
+                <label>Coloured PVC Backed</label>
+            </value>
+            <value>
+                <fullName>Clear PVC Backed</fullName>
+                <default>false</default>
+                <label>Clear PVC Backed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

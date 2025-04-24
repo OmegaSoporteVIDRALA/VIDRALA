@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field takes the Est Units, multiples it with the container weight and then divides by 1000 --></help>
+    <label><!-- Estimated Tons (000) --></label>
+    <name>Estimated_Tons_000__c</name>
+</CustomFieldTranslation>

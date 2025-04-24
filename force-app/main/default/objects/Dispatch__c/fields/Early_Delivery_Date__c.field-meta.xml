@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Early_Delivery_Date__c</fullName>
+    <description>Expected Delivery Date as determined by the earliest Early Load</description>
+    <inlineHelpText>Expected Delivery Date as determined by the earliest Early Load</inlineHelpText>
+    <label>Early Delivery Date</label>
+    <summarizedField>Late_Load__c.New_Delivery_Date__c</summarizedField>
+    <summaryFilterItems>
+        <field>Late_Load__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Early</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Late_Load__c.Dispatch__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

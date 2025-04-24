@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Full_Check_Credit_Form_Attached</fullName>
+    <active>true</active>
+    <description>This rule ensures that when a user submits an Account for a Full credit check that the Credit Form Attached box is checked.</description>
+    <errorConditionFormula>Account_Credit_Status__c = &apos;4 Full Check Submitted&apos;
+&amp;&amp;
+NOT(Credit_Form_Attached__c)</errorConditionFormula>
+    <errorDisplayField>Credit_Form_Attached__c</errorDisplayField>
+    <errorMessage>You must confirm that a completed form is attached.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Late_Load</fullName>
+    <active>true</active>
+    <description>Delivery late but not collapsed</description>
+    <label>Late Load</label>
+    <picklistValues>
+        <picklist>Method_of_Communication__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Delay__c</picklist>
+        <values>
+            <fullName>Customer - Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encirc - Loading Delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encirc - Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encirc - Stock Availability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encirc - Stock Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encirc - System Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haulier - Breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haulier - Driver Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haulier - Driver Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haulier - Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traffic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Late</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

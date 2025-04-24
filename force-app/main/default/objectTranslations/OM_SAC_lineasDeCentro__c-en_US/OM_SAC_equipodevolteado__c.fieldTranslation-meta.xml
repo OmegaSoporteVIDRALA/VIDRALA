@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Equipo de volteado --></label>
+    <name>OM_SAC_equipodevolteado__c</name>
+    <picklistValues>
+        <masterLabel>Giratorio</masterLabel>
+        <translation><!-- Giratorio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lineal</masterLabel>
+        <translation><!-- Lineal --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

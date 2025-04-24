@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Material__c</fullName>
+    <label>Material</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PALETA ANIFE RETORNABLE 1200X1000X155</fullName>
+                <default>false</default>
+                <label>PALETA ANIFE RETORNABLE 1200X1000X155</label>
+            </value>
+            <value>
+                <fullName>PALETA VMF RETORNABLE 1200X1000X154</fullName>
+                <default>false</default>
+                <label>PALETA VMF RETORNABLE 1200X1000X154</label>
+            </value>
+            <value>
+                <fullName>PLANCHA PP CARTONPLAST PCA 1200X1000 ALV</fullName>
+                <default>false</default>
+                <label>PLANCHA PP CARTONPLAST PCA 1200X1000 ALV</label>
+            </value>
+            <value>
+                <fullName>PLANCHA PP VIDRALA PVE EXPORT 1200X1000</fullName>
+                <default>false</default>
+                <label>PLANCHA PP VIDRALA PVE EXPORT 1200X1000</label>
+            </value>
+            <value>
+                <fullName>PALETA RG01 RETORNAB. ALIG 1200X1000X125</fullName>
+                <default>false</default>
+                <label>PALETA RG01 RETORNAB. ALIG 1200X1000X125</label>
+            </value>
+            <value>
+                <fullName>PLACA PP SMARTPAD 1200X1000 2,6 -3mm PSM</fullName>
+                <default>false</default>
+                <label>PLACA PP SMARTPAD 1200X1000 2,6 -3mm PSM</label>
+            </value>
+            <value>
+                <fullName>TOP FRAME - 25 mm</fullName>
+                <default>false</default>
+                <label>TOP FRAME - 25 mm</label>
+            </value>
+            <value>
+                <fullName>PALETES HK RETORNABLE 1200X1000X162</fullName>
+                <default>false</default>
+                <label>PALETES HK RETORNABLE 1200X1000X162</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

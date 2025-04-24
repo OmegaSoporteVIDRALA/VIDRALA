@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Material</label>
+    <name>Material__c</name>
+    <picklistValues>
+        <masterLabel>INTERFAL.PVI ALVEOL 1200X1000X3.4 VERDE</masterLabel>
+        <translation><!-- INTERFAL.PVI ALVEOL 1200X1000X3.4 VERDE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA ANIFE RETORNABLE 1200X1000X155</masterLabel>
+        <translation><!-- PALETA ANIFE RETORNABLE 1200X1000X155 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA DE MADERA CHEP RECUPERABLE</masterLabel>
+        <translation><!-- PALETA DE MADERA CHEP RECUPERABLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA DIN (T5) RETORNABLE 1200X1000X134</masterLabel>
+        <translation><!-- PALETA DIN (T5) RETORNABLE 1200X1000X134 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA EQ ENCIRC RET 1200X1000X157</masterLabel>
+        <translation><!-- PALETA EQ ENCIRC RET 1200X1000X157 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA EURO RETORNABLE     1200X 800X144</masterLabel>
+        <translation><!-- PALETA EURO RETORNABLE     1200X 800X144 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA RG01 RETORNAB. ALIG 1200X1000X125</masterLabel>
+        <translation><!-- PALETA RG01 RETORNAB. ALIG 1200X1000X125 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA TF RETORNABLE  1200X1000X145</masterLabel>
+        <translation><!-- PALETA TF RETORNABLE  1200X1000X145 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA UK 1200X1000X150</masterLabel>
+        <translation><!-- PALETA UK 1200X1000X150 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETA VMF RETORNABLE 1200X1000X154</masterLabel>
+        <translation><!-- PALETA VMF RETORNABLE 1200X1000X154 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PALETES HK RETORNABLE 1200X1000X162</masterLabel>
+        <translation><!-- PALETES HK RETORNABLE 1200X1000X162 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLACA 1200X1000 PP CPL 3mm SANDWICH PCS</masterLabel>
+        <translation><!-- PLACA 1200X1000 PP CPL 3mm SANDWICH PCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLACA 1200X1000 PP CPL 3mm SDW TROQ PCST</masterLabel>
+        <translation><!-- PLACA 1200X1000 PP CPL 3mm SDW TROQ PCST --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLACA 1200X1000 PP VIDRALA AKY 3.5mm PVE</masterLabel>
+        <translation><!-- PLACA 1200X1000 PP VIDRALA AKY 3.5mm PVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLACA PP SMARTPAD 1200X1000 2,6 -3mm PSM</masterLabel>
+        <translation><!-- PLACA PP SMARTPAD 1200X1000 2,6 -3mm PSM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLANCHA PP CARTONPLAST PCA 1200X1000 ALV</masterLabel>
+        <translation><!-- PLANCHA PP CARTONPLAST PCA 1200X1000 ALV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLANCHA PP VIDRALA PVE EXPORT 1200X1000</masterLabel>
+        <translation><!-- PLANCHA PP VIDRALA PVE EXPORT 1200X1000 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TAPA PP MACIZA SMARTCAP 1200X1000 TSM</masterLabel>
+        <translation><!-- TAPA PP MACIZA SMARTCAP 1200X1000 TSM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOP FRAME - 25 mm</masterLabel>
+        <translation><!-- TOP FRAME - 25 mm --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

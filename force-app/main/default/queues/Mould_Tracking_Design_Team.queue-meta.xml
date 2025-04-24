@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Mould Tracking Design Team</name>
+    <queueMembers>
+        <users>
+            <user>hugh.farrell@encirc360.com</user>
+            <user>joe.macintyre1@encirc360.com</user>
+            <user>jonathan.mcbrien1@encirc360.com</user>
+            <user>niall.mcgrath@encirc360.com</user>
+            <user>stephen.carson1@encirc360.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Mould_Life_Tracker__c</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Additional Labeller - Label Adhesive --></label>
+    <name>Additional_Labeller_Label_Adhesive__c</name>
+    <picklistValues>
+        <masterLabel>Hot Melt</masterLabel>
+        <translation><!-- Hot Melt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Self Adhesive (PSL)</masterLabel>
+        <translation><!-- Self Adhesive (PSL) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wet Glue</masterLabel>
+        <translation><!-- Wet Glue --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

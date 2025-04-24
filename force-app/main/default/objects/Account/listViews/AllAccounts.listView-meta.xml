@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllAccounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>SAP_Account_Number__c</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>Current_Financial_Year_Tons__c</columns>
+    <columns>Account_Industry_Sector__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Competitors,Account.Customers,Account.Distributor,Account.Encirc_Competitors,Account.Encirc_Investors_Owners,Account.Future_Customers,Account.Investors_Owners,Account.Other,Account.Pan_European,Account.Parent_Pan_European,Account.Press,Account.Suppliers,Account.Trade_Bodies</value>
+    </filters>
+    <label>Todas las Cuentas</label>
+</ListView>

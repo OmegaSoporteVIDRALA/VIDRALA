@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sales Admin --></label>
+    <name>Sales_Admin__c</name>
+    <relationshipLabel><!-- Customer Services Visit Reports (Sales Admin) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Month Forecast</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Month Forecasts</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- TonnageList --></label>
+        <name>TonnageList</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- UnitsList --></label>
+        <name>UnitsList</name>
+    </fieldSets>
+    <layouts>
+        <layout>Month Layout</layout>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Revised Forecast Upload --></label>
+            <section>Revised Forecast Upload</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Month Layout - Standard Users</layout>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The Year must be 4 digits --></errorMessage>
+        <name>Year_must_be_numeric</name>
+    </validationRules>
+</CustomObjectTranslation>

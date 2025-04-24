@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If it is possible that the container pack specification will require Banding please enter details --></help>
+    <label><!-- Container Pack Banding Notes --></label>
+    <name>Container_Pack_Banding_Notes__c</name>
+</CustomFieldTranslation>

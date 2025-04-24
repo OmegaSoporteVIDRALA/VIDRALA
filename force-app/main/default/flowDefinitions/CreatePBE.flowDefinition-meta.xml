@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates 2 price book entries when a new product is created. Both are in the standard price book. 1 in GBP and 1 in EUR. Both with value of 0.0.</description>
+    <masterLabel>CreatePBE</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Attendee_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Attendee__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Lead</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Lead</pageOrSobjectType>
+    </actionOverrides>
+    <description>Custom Encirc App for all Users.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Encirc Lightning</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_Account_Manager</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Encirc Account Managers Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_Account_Manager</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Encirc Director Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_Account_Manager</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Encirc Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Encirc_Competitors</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Encirc_Investors_Owners</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Other</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Press</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Suppliers</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Blank_Account_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Trade_Bodies</recordType>
+        <type>Flexipage</type>
+        <profile>Encirc Manufacturing Community User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_Design_and_Planning</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Encirc Mould Lifecycle Community user</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_Design_and_Planning</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Encirc Design/Planning User</profile>
+    </profileActionOverrides>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>SFDC_Acct_Plan__c</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>SFDC_Strategy__c</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-Pricebook2</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Order</tabs>
+    <tabs>System_Notes__c</tabs>
+    <tabs>Rebate__c</tabs>
+    <tabs>Design_Brief__c</tabs>
+    <tabs>MPA__c</tabs>
+    <tabs>Actual_Sales_History__c</tabs>
+    <tabs>Pricing_Model__c</tabs>
+    <tabs>Drawing__c</tabs>
+    <tabs>Deal_Sheet__c</tabs>
+    <tabs>My_Activities</tabs>
+    <tabs>Customer_Services_Visit_Report__c</tabs>
+    <tabs>Historical_MPA_s__c</tabs>
+    <tabs>Historical_Design_Briefs__c</tabs>
+    <tabs>Price_Increases__c</tabs>
+    <tabs>Late_Load__c</tabs>
+    <tabs>Month__c</tabs>
+    <tabs>Augmented_Reality__c</tabs>
+    <tabs>Commercial_Contract_Status__c</tabs>
+    <tabs>Customer_Contact_Report__c</tabs>
+    <tabs>SAP_Material_Code__c</tabs>
+    <tabs>Business_Development__c</tabs>
+    <tabs>Commercial_Contracts__c</tabs>
+    <tabs>Vidrala_Vidrala__c</tabs>
+    <tabs>Vidrala_Customer_Survey_Annual_Reports__c</tabs>
+    <tabs>Customer_Service_Data_Collection__c</tabs>
+    <tabs>Trial_Data__c</tabs>
+    <tabs>Trial_Reports</tabs>
+    <tabs>Events__c</tabs>
+    <tabs>Attendee__c</tabs>
+    <tabs>Discount__c</tabs>
+    <tabs>CTR_CSR__c</tabs>
+    <tabs>Mould_Life_Tracker__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

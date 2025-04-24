@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Precio Ex Works multiplicado por el volumen ofertado</help>
+    <label>Volumen total - Ex Works (unidades)</label>
+    <name>Revenue_ExWorks_Units__c</name>
+</CustomFieldTranslation>

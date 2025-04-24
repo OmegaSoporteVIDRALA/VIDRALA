@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Shape --></label>
+    <name>Shape__c</name>
+    <picklistValues>
+        <masterLabel>Flask (Concave)</masterLabel>
+        <translation><!-- Flask (Concave) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flask (Oval)</masterLabel>
+        <translation><!-- Flask (Oval) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rounds</masterLabel>
+        <translation><!-- Rounds --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Squares</masterLabel>
+        <translation><!-- Squares --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

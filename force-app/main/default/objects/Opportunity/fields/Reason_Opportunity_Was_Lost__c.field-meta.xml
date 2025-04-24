@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Opportunity_Was_Lost__c</fullName>
+    <label>Reason Opportunity Was Lost</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Qualified out: design</fullName>
+                <default>false</default>
+                <label>Qualified out: design</label>
+            </value>
+            <value>
+                <fullName>Qualified out: price</fullName>
+                <default>false</default>
+                <label>Qualified out: price</label>
+            </value>
+            <value>
+                <fullName>Qualified out: strategic</fullName>
+                <default>false</default>
+                <label>Qualified out: strategic</label>
+            </value>
+            <value>
+                <fullName>Qualified out: capacity</fullName>
+                <default>false</default>
+                <label>Qualified out: capacity</label>
+            </value>
+            <value>
+                <fullName>Lost: Price</fullName>
+                <default>false</default>
+                <label>Lost: Price</label>
+            </value>
+            <value>
+                <fullName>Lost: Quality</fullName>
+                <default>false</default>
+                <label>Lost: Quality</label>
+            </value>
+            <value>
+                <fullName>Lost: Design</fullName>
+                <default>false</default>
+                <label>Lost: Design</label>
+            </value>
+            <value>
+                <fullName>Lost: Timescales</fullName>
+                <default>false</default>
+                <label>Lost: Timescales</label>
+            </value>
+            <value>
+                <fullName>Lost: Legals</fullName>
+                <default>false</default>
+                <label>Lost: Legals</label>
+            </value>
+            <value>
+                <fullName>Lost: Other</fullName>
+                <default>false</default>
+                <label>Lost: Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Qualified out: design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Qualified out: price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Qualified out: strategic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Qualified out: capacity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost: Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost: Quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost: Design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost: Timescales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost: Legals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost: Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

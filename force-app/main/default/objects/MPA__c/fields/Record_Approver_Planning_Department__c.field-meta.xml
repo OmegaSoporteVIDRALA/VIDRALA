@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Approver_Planning_Department__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Please enter specific User who will be required to approve this MPA from the Planning Department</description>
+    <inlineHelpText>Please enter specific User who will be required to approve this MPA from the Planning Department</inlineHelpText>
+    <label>Record Approver: Planning Department</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>MPAs3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_s_Existing_Customer__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is the lead a meaningful, existing customer of one of Encirc&apos;s competitors?</description>
+    <inlineHelpText>Is the lead a meaningful, existing customer of one of Encirc&apos;s competitors?</inlineHelpText>
+    <label>Competitor&apos;s Existing Customer?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

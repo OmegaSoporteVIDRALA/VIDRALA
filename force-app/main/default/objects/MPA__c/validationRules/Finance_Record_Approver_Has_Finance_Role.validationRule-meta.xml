@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finance_Record_Approver_Has_Finance_Role</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND 
+( 
+( RecordType.DeveloperName = &quot;Sales_Initiated&quot;), 
+
+(  Record_Approver_Finance_Department__r.UserRoleId    &lt;&gt; &quot;00E58000000Lg3s&quot;) 
+
+)</errorConditionFormula>
+    <errorDisplayField>Record_Approver_Finance_Department__c</errorDisplayField>
+    <errorMessage>You must enter a User who works in the Finance Department</errorMessage>
+</ValidationRule>

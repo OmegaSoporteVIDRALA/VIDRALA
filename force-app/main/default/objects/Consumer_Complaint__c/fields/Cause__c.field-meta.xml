@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cause__c</fullName>
+    <label>Cause</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Capping Issues</fullName>
+                <default>false</default>
+                <label>Capping Issues</label>
+            </value>
+            <value>
+                <fullName>Consumer Damage</fullName>
+                <default>false</default>
+                <label>Consumer Damage</label>
+            </value>
+            <value>
+                <fullName>Contamination</fullName>
+                <default>false</default>
+                <label>Contamination</label>
+            </value>
+            <value>
+                <fullName>Handling Damage</fullName>
+                <default>false</default>
+                <label>Handling Damage</label>
+            </value>
+            <value>
+                <fullName>Inclusion</fullName>
+                <default>false</default>
+                <label>Inclusion</label>
+            </value>
+            <value>
+                <fullName>Inconclusive</fullName>
+                <default>false</default>
+                <label>Inconclusive</label>
+            </value>
+            <value>
+                <fullName>Micro Fractures</fullName>
+                <default>false</default>
+                <label>Micro Fractures</label>
+            </value>
+            <value>
+                <fullName>No Sample</fullName>
+                <default>false</default>
+                <label>No Sample</label>
+            </value>
+            <value>
+                <fullName>Operator Error</fullName>
+                <default>false</default>
+                <label>Operator Error</label>
+            </value>
+            <value>
+                <fullName>Scratch</fullName>
+                <default>false</default>
+                <label>Scratch</label>
+            </value>
+            <value>
+                <fullName>Soft Blister</fullName>
+                <default>false</default>
+                <label>Soft Blister</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

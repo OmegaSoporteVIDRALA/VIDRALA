@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pallet Records --></label>
+    <name>Pallet_Records__c</name>
+    <picklistValues>
+        <masterLabel>Scanned</masterLabel>
+        <translation><!-- Scanned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Written</masterLabel>
+        <translation><!-- Written --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pallet Type --></label>
+    <name>Pallet_Type__c</name>
+    <picklistValues>
+        <masterLabel>CHEP</masterLabel>
+        <translation><!-- CHEP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EQ</masterLabel>
+        <translation><!-- EQ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Red Pallets</masterLabel>
+        <translation><!-- Red Pallets --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

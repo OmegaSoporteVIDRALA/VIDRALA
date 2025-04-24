@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Packaging__c</fullName>
+    <label>Packaging</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shrouded</fullName>
+                <default>false</default>
+                <label>Shrouded</label>
+            </value>
+            <value>
+                <fullName>Fuse Seal</fullName>
+                <default>false</default>
+                <label>Fuse Seal</label>
+            </value>
+            <value>
+                <fullName>Unshrouded</fullName>
+                <default>false</default>
+                <label>Unshrouded</label>
+            </value>
+            <value>
+                <fullName>Compression</fullName>
+                <default>false</default>
+                <label>Compression</label>
+            </value>
+            <value>
+                <fullName>PLP (Solid)</fullName>
+                <default>false</default>
+                <label>PLP (Solid)</label>
+            </value>
+            <value>
+                <fullName>PLP (Corrugated)</fullName>
+                <default>false</default>
+                <label>PLP (Corrugated)</label>
+            </value>
+            <value>
+                <fullName>Load Hog</fullName>
+                <default>false</default>
+                <label>Load Hog</label>
+            </value>
+            <value>
+                <fullName>Horizontal Band</fullName>
+                <default>false</default>
+                <label>Horizontal Band</label>
+            </value>
+            <value>
+                <fullName>Vertical Band</fullName>
+                <default>false</default>
+                <label>Vertical Band</label>
+            </value>
+            <value>
+                <fullName>Top Frame</fullName>
+                <default>false</default>
+                <label>Top Frame</label>
+            </value>
+            <value>
+                <fullName>Inverted Tray</fullName>
+                <default>false</default>
+                <label>Inverted Tray</label>
+            </value>
+            <value>
+                <fullName>Upright Tray</fullName>
+                <default>false</default>
+                <label>Upright Tray</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

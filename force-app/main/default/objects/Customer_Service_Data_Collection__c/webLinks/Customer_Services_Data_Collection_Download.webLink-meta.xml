@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Services_Data_Collection_Download</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>page</linkType>
+    <masterLabel>CS Data Collection Download</masterLabel>
+    <openType>replace</openType>
+    <page>CustomerServiceDataCollectionDownload</page>
+    <protected>false</protected>
+</WebLink>

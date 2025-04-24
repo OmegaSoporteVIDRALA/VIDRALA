@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Type In The Account Name To Retrieve Contacts For The Account --></help>
+    <label>Contacto</label>
+    <name>Contact__c</name>
+    <relationshipLabel><!-- Event Attendee --></relationshipLabel>
+</CustomFieldTranslation>

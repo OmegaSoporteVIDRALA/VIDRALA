@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Otros</label>
+    <name>Other_1__c</name>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing</masterLabel>
+        <translation><!-- Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing &amp; Samples</masterLabel>
+        <translation><!-- Pricing &amp; Samples --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Samples</masterLabel>
+        <translation><!-- Samples --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supply</masterLabel>
+        <translation><!-- Supply --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supply &amp; Pricing</masterLabel>
+        <translation><!-- Supply &amp; Pricing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

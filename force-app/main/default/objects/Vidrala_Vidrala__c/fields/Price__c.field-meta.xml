@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price__c</fullName>
+    <formula>NOT(ISBLANK(Price_Text__c))</formula>
+    <label>Price</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

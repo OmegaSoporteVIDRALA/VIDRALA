@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved</fullName>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Year__c</columns>
+    <columns>Month__c</columns>
+    <columns>Comments__c</columns>
+    <columns>Risks__c</columns>
+    <columns>Upsides__c</columns>
+    <columns>Approval_Status__c</columns>
+    <columns>Approved_Rejected_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Forecast_Risk_Upside__c.Approved_Rejected</value>
+    </filters>
+    <label>Approved</label>
+</ListView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Insatisfacción SAC</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>OM_SAC_loteOAlbaran__c</fieldNames>
+        <fieldNames>OM_SAC_modeloYDenominacion__c</fieldNames>
+        <fieldNames>OM_SAC_fechaDeRecepcion__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;En esta etapa se deben informar los campos del parte de apertura.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Nuevo</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>OM_SAC_Cod_Egestiona__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;En esta etapa se introducirá el código de la insatisfacción generada en E-Gestiona.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Pendiente análisis</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;En esta etapa se realizarán modificaciones sobre el documento de Análisis de la insatisfacción y una vez completado se enviará por correo a los respectivos destinatarios y se avanzará a la siguiente etapa.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Pendiente notificar análisis</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Fifty_Calidad_Insatisfaccion</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Call</masterLabel>
+        <translation>Llamada</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Encirc / Fifty Project</masterLabel>
+        <translation>Proyecto Encirc / Fifty</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Job Change charge</masterLabel>
+        <translation><!-- Job Change charge --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Meeting</masterLabel>
+        <translation>Reunión</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>NCR Task</masterLabel>
+        <translation><!-- NCR Task --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales Meeting Task</masterLabel>
+        <translation>Tarea de la reunión de ventas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Stock</masterLabel>
+        <translation>Stock</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sysad Task</masterLabel>
+        <translation><!-- Sysad Task --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

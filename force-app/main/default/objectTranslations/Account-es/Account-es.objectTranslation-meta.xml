@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Account Filter Fields --></label>
+        <name>MC4SF__Account_Filter_Fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Account Application and Credit Status --></label>
+            <section>Account Application and Credit Status</section>
+        </sections>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Blank Community Layout</layout>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Layout</layout>
+        <sections>
+            <label><!-- Account Application and Credit Status --></label>
+            <section>Account Application and Credit Status</section>
+        </sections>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+        <sections>
+            <label><!-- Descriptoin --></label>
+            <section>Descriptoin</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Destinatario de mercancía</layout>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+        <sections>
+            <label><!-- Descriptoin --></label>
+            <section>Descriptoin</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Non Sales User</layout>
+        <sections>
+            <label><!-- Account Application and Credit Status --></label>
+            <section>Account Application and Credit Status</section>
+        </sections>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+        <sections>
+            <label><!-- Descriptoin --></label>
+            <section>Descriptoin</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Non-Customer Layout</layout>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Parent Pan European</layout>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>System Admin Customer Layout</layout>
+        <sections>
+            <label><!-- Account Application and Credit Status --></label>
+            <section>Account Application and Credit Status</section>
+        </sections>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+        <sections>
+            <label><!-- Descriptoin --></label>
+            <section>Descriptoin</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Totals --></label>
+            <section>Opportunity Totals</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vidrala (Customer Layout)</layout>
+        <sections>
+            <label><!-- Account Application and Credit Status --></label>
+            <section>Account Application and Credit Status</section>
+        </sections>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+        <sections>
+            <label><!-- Descriptoin --></label>
+            <section>Descriptoin</section>
+        </sections>
+        <sections>
+            <label><!-- Revenue --></label>
+            <section>Revenue</section>
+        </sections>
+        <sections>
+            <label><!-- Supplier Share Infomation --></label>
+            <section>Supplier Share Infomation</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Vidrala (Non-Customer Layout)</layout>
+        <sections>
+            <label><!-- Account Team --></label>
+            <section>Account Team</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Account Owner Financials --></label>
+        <name>Account_Owner_Financials</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Cuenta hija</label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Financiero</label>
+        <name>Financials</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Chequeo completo</label>
+        <name>Full_Check</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Chequeo inicial</label>
+        <name>Initial_Check</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Pan Euro Financials --></label>
+        <name>Pan_Euro_Financials</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Financiero Panaeuropeo</label>
+        <name>Pan_Euro_Parent_Financials</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Competitor --></description>
+        <label>Competidor</label>
+        <name>Competitors</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Past or Present --></description>
+        <label>Cliente</label>
+        <name>Customers</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Distributors for Vidrala (Encirc &amp; Fifty) --></description>
+        <label>Distribuidor</label>
+        <name>Distributor</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Encirc Beverages Customers --></label>
+        <name>Encirc_Beverages_Customers</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Encirc competitors --></description>
+        <label>Competencia Encirc</label>
+        <name>Encirc_Competitors</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Encirc investors or members of parent company --></description>
+        <label><!-- Encirc Investors &amp; Owners --></label>
+        <name>Encirc_Investors_Owners</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Future customers (Vidrala Spain) --></description>
+        <label>Clientes futuros</label>
+        <name>Future_Customers</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Investors &amp; Owners --></label>
+        <name>Investors_Owners</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Any other type --></description>
+        <label>Otros</label>
+        <name>Other</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Customers who more than one division sell to --></description>
+        <label>Pan Europeo</label>
+        <name>Pan_European</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This will be a view for stakeholders to view rolled up sales data --></description>
+        <label>Cuenta superior Pan Europeo</label>
+        <name>Parent_Pan_European</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Trade, national or local media --></description>
+        <label>Prensa</label>
+        <name>Press</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Suppliers --></description>
+        <label>Proveedores</label>
+        <name>Suppliers</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Related trade bodies --></description>
+        <label><!-- Trade Bodies --></label>
+        <name>Trade_Bodies</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You must confirm that a completed form is attached. --></errorMessage>
+        <name>Credit_Full_Check_Credit_Form_Attached</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must add a Billing City. --></errorMessage>
+        <name>Credit_Initial_Check_Submit_City</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must add a Billing Country. --></errorMessage>
+        <name>Credit_Initial_Check_Submit_Country</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must add a Billing Post Code. --></errorMessage>
+        <name>Credit_Initial_Check_Submit_PostCode</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must add a Billing Street. --></errorMessage>
+        <name>Credit_Initial_Check_Submit_Street</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot submit. --></errorMessage>
+        <name>Prevent_Invalid_Status_changes</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Account_Deal_Data_by_SKU --></label>
+        <name>Account_Deal_Data_by_SKU</name>
+    </webLinks>
+    <webLinks>
+        <label>Clonar</label>
+        <name>Clone</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_12_Month_Forecasts_for_This_Year --></label>
+        <name>Create_12_Month_Forecasts_for_This_Year</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions --></label>
+        <name>MC4SF__MailChimp_Subscriptions</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Month_Forecast_List --></label>
+        <name>Month_Forecast_List</name>
+    </webLinks>
+</CustomObjectTranslation>

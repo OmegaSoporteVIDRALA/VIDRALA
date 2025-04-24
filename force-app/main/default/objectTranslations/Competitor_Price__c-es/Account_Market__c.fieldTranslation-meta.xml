@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pulls the Competitor Market field from the Account --></help>
+    <label>Mercado del competidor</label>
+    <name>Account_Market__c</name>
+</CustomFieldTranslation>

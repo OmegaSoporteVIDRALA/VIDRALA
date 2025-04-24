@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates that a Credit Application form has been completed by the customer and uploaded against the account. --></help>
+    <label>Formulario de crédito adjunto</label>
+    <name>Credit_Form_Attached__c</name>
+</CustomFieldTranslation>

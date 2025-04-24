@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Layer Pads --></label>
+    <name>Layer_Pads__c</name>
+    <picklistValues>
+        <masterLabel>Cardboard</masterLabel>
+        <translation><!-- Cardboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plastic</masterLabel>
+        <translation><!-- Plastic --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

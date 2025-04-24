@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Month_Delivery__c</fullName>
+    <description>Is the month of the delivery date equal to the month before today&apos;s month?</description>
+    <formula>IF($Setup.Current_Month__c.Last_Delivery_Month__c &gt; 0,
+  AND(
+    MONTH(DATEVALUE(Planned_Delivery_Date__c)) == $Setup.Current_Month__c.Last_Delivery_Month__c,
+    YEAR(DATEVALUE(Planned_Delivery_Date__c)) == $Setup.Current_Month__c.Year__c
+  ),
+  AND(
+    MONTH(DATEVALUE(Planned_Delivery_Date__c)) == IF(MONTH(TODAY()-1) &gt; 1, MONTH(TODAY()-1) - 1, 12),
+    YEAR(DATEVALUE(Planned_Delivery_Date__c)) == IF(MONTH(TODAY()-1) &gt; 1, YEAR(TODAY()-1), YEAR(TODAY()-1) - 1)
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Last Month Delivery</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

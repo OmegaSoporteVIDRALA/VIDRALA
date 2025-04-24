@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Initiated</fullName>
+    <active>true</active>
+    <description>MPA&apos;s that have been initiated by Account Managers or Business Development</description>
+    <label>Sales Initiated</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New - Unsubmitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Planning Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Balance_Replacement_Equipment_Config__c</picklist>
+        <values>
+            <fullName>Double Gob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Double%2FTriple Gob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quad Gob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Gob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tandem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triple Gob</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Balance_Replacement_Equipment_Machine__c</picklist>
+        <values>
+            <fullName>AIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Balance_Replacement_Equipment_Plant__c</picklist>
+        <values>
+            <fullName>Corsico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derrylin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Colour__c</picklist>
+        <values>
+            <fullName>Amber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autumn Leaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mallaca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Decoration__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hot_or_Cold_Filled__c</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mould_Type__c</picklist>
+        <values>
+            <fullName>AIS DG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIS SG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIS TG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIS Tandem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS DG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS DG%2FTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS QG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS TG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Bottle__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Organization_Text__c</picklist>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Organization__c</picklist>
+        <values>
+            <fullName>EN60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VD10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VD30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trial_Equipment_Config__c</picklist>
+        <values>
+            <fullName>Double Gob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Double%2FTriple Gob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quad Gob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Gob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triple Gob</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trial_Equipment_Machine_Type__c</picklist>
+        <values>
+            <fullName>AIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trial_Equipment_Plant__c</picklist>
+        <values>
+            <fullName>Corsico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derrylin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Set_Requested__c</picklist>
+        <values>
+            <fullName>AIS DG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIS SG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIS TG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIS Tandem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS DG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS DG%2FTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS QG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIS TG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Who_Pays_For_Moulds__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encirc</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

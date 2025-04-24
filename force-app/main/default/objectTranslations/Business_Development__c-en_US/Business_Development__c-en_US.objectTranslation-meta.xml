@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Business Development</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Business Developments</value>
+    </caseValues>
+    <layouts>
+        <layout>Business Development Layout</layout>
+        <sections>
+            <label><!-- Comments/Next Steps (Start with Date) --></label>
+            <section>Comments/Next Steps (Start with Date)</section>
+        </sections>
+        <sections>
+            <label><!-- Converted Details --></label>
+            <section>Converted Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Product details --></label>
+            <section>Product details</section>
+        </sections>
+        <sections>
+            <label><!-- Qualified Out --></label>
+            <section>Qualified Out</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Convert --></label>
+        <name>Convert</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

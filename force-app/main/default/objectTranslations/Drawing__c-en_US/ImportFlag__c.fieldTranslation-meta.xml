@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- System field used during data import --></help>
+    <label><!-- Import Flag --></label>
+    <name>ImportFlag__c</name>
+</CustomFieldTranslation>

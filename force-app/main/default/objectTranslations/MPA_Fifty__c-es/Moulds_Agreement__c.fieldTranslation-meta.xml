@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Who Pays For Moulds --></help>
+    <label>Acuerdo moldes</label>
+    <name>Moulds_Agreement__c</name>
+    <picklistValues>
+        <masterLabel>Cliente 100% (100% Customer)</masterLabel>
+        <translation><!-- Cliente 100% (100% Customer) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sobre precio modelo (In the product price)</masterLabel>
+        <translation><!-- Sobre precio modelo (In the product price) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sólo valor residual (Only remaining value)</masterLabel>
+        <translation><!-- Sólo valor residual (Only remaining value) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vidrala 100%  (100% Vidrala)</masterLabel>
+        <translation><!-- Vidrala 100%  (100% Vidrala) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

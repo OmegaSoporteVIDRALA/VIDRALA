@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please select correct Account to reference the Customer Filling Site for this MPA --></help>
+    <label><!-- Customer Filling Site --></label>
+    <name>Customer_Filling_Site__c</name>
+    <relationshipLabel><!-- MPAs (Customer Filling Site) --></relationshipLabel>
+</CustomFieldTranslation>

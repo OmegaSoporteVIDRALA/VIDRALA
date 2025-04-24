@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>FailedLoadDataBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FailedLoadDataBody</shortDescription>
+        <value>The data load to dispatch staging was unsuccessful.</value>
+    </labels>
+    <labels>
+        <fullName>FailedLoadDataSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FailedLoadDataSubject</shortDescription>
+        <value>Dispatch Staging Data Load Unsuccessful</value>
+    </labels>
+    <labels>
+        <fullName>SalesOrg_Italy_Checkbox_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SalesOrg Italy Checkbox Label</shortDescription>
+        <value>Italy</value>
+    </labels>
+    <labels>
+        <fullName>SalesOrg_Selection_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>12 Month Forecast SalesOrg Selection Label</shortDescription>
+        <value>Please select the Sales Organisation.</value>
+    </labels>
+    <labels>
+        <fullName>SalesOrg_Spain_Checkbox_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SalesOrg Spain Checkbox Label</shortDescription>
+        <value>Spain</value>
+    </labels>
+    <labels>
+        <fullName>SalesOrg_UK_Checkbox_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sales Org UK Checkbox Labal</shortDescription>
+        <value>UK</value>
+    </labels>
+    <labels>
+        <fullName>SuccessLoadDataBody</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SuccessLoadDataBody</shortDescription>
+        <value>Data was successfully loaded into dispatch staging.
+{0} records were insert.</value>
+    </labels>
+    <labels>
+        <fullName>SuccessLoadDataSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SuccessLoadDataSubject</shortDescription>
+        <value>Dispatch Staging Data Loaded Successfully</value>
+    </labels>
+    <labels>
+        <fullName>UserNameToSendNotificationEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Name To Send Notification Email</shortDescription>
+        <value>Miles Dinneen,Lynn McCann,Vicky Craven</value>
+    </labels>
+</CustomLabels>

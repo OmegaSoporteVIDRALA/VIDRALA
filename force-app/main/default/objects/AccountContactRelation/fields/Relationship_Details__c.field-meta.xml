@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_Details__c</fullName>
+    <description>Field To help others know what role the Contact played on the account. And anything notable that should be recorded.</description>
+    <inlineHelpText>To help others know what role the Contact played on the account. And anything notable that should be recorded.</inlineHelpText>
+    <label>Relationship Details</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

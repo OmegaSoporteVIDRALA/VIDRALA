@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cuota Proveedores</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cuotas Proveedores</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Supplier Share Layout</layout>
+        <sections>
+            <label><!-- Competitor Price --></label>
+            <section>Competitor Price</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Supplier share by product</layout>
+        <sections>
+            <label><!-- Competitor Price --></label>
+            <section>Competitor Price</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Cuota Proveedores</nameFieldLabel>
+    <recordTypes>
+        <description><!-- Incluimos en este record type las cuotas totales de cada proveedor sin diferenciar por producto --></description>
+        <label><!-- CUOTA GENERAL --></label>
+        <name>CUOTA_GENERAL</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- En este record type añadimos las cuotas diferenciadas por producto --></description>
+        <label><!-- CUOTA POR PRODUCTO --></label>
+        <name>CUOTA_POR_PRODUCTO</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- No ha sido informado el campo &quot;Capacidad total de compra&quot; en la cuenta --></errorMessage>
+        <name>If_purchasing_power_null_dont_create</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No Product is selected --></errorMessage>
+        <name>No_Product_then_no_units_can_be_entered</name>
+    </validationRules>
+</CustomObjectTranslation>

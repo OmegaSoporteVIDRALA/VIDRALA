@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Can or would Encirc make the product? --></help>
+    <label><!-- Able and Willing to Make the Product? --></label>
+    <name>Able_and_Willing_to_Make_the_Product__c</name>
+</CustomFieldTranslation>

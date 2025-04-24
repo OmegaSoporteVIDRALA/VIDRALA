@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Define how much of the Opportunity will realistically be expected to land in this FY. eg if the Opportunity is worth 30m volume over 3 years but will take 2 months to setup and it’s April now then field = 5m --></help>
+    <label>Volumen esperado año en curso (000)</label>
+    <name>Expected_Current_FY_Volume_000_s__c</name>
+</CustomFieldTranslation>

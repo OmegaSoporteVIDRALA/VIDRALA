@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interests__c</fullName>
+    <label>Interests</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>American Football</fullName>
+                <default>false</default>
+                <label>American Football</label>
+            </value>
+            <value>
+                <fullName>Arts &amp; Media</fullName>
+                <default>false</default>
+                <label>Arts &amp; Media</label>
+            </value>
+            <value>
+                <fullName>Car Racing</fullName>
+                <default>false</default>
+                <label>Car Racing</label>
+            </value>
+            <value>
+                <fullName>Cycling</fullName>
+                <default>false</default>
+                <label>Cycling</label>
+            </value>
+            <value>
+                <fullName>Football</fullName>
+                <default>false</default>
+                <label>Football</label>
+            </value>
+            <value>
+                <fullName>GAA</fullName>
+                <default>false</default>
+                <label>GAA</label>
+            </value>
+            <value>
+                <fullName>Golf</fullName>
+                <default>false</default>
+                <label>Golf</label>
+            </value>
+            <value>
+                <fullName>Horse Racing</fullName>
+                <default>false</default>
+                <label>Horse Racing</label>
+            </value>
+            <value>
+                <fullName>Live Music</fullName>
+                <default>false</default>
+                <label>Live Music</label>
+            </value>
+            <value>
+                <fullName>Music</fullName>
+                <default>false</default>
+                <label>Music</label>
+            </value>
+            <value>
+                <fullName>Other Sports</fullName>
+                <default>false</default>
+                <label>Other Sports</label>
+            </value>
+            <value>
+                <fullName>Rugby</fullName>
+                <default>false</default>
+                <label>Rugby</label>
+            </value>
+            <value>
+                <fullName>Running</fullName>
+                <default>false</default>
+                <label>Running</label>
+            </value>
+            <value>
+                <fullName>Spa</fullName>
+                <default>false</default>
+                <label>Spa</label>
+            </value>
+            <value>
+                <fullName>Theatre</fullName>
+                <default>false</default>
+                <label>Theatre</label>
+            </value>
+            <value>
+                <fullName>Wine</fullName>
+                <default>false</default>
+                <label>Wine</label>
+            </value>
+            <value>
+                <fullName>Equestrian</fullName>
+                <default>false</default>
+                <label>Equestrian</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Hurling</fullName>
+                <default>false</default>
+                <label>Hurling</label>
+            </value>
+            <value>
+                <fullName>Walking</fullName>
+                <default>false</default>
+                <label>Walking</label>
+            </value>
+            <value>
+                <fullName>Basketball</fullName>
+                <default>false</default>
+                <label>Basketball</label>
+            </value>
+            <value>
+                <fullName>Gym</fullName>
+                <default>false</default>
+                <label>Gym</label>
+            </value>
+            <value>
+                <fullName>Motorbikes</fullName>
+                <default>false</default>
+                <label>Motorbikes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

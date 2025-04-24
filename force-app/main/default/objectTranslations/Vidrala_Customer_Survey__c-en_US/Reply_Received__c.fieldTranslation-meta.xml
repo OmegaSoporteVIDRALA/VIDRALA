@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What date did we receive the reply --></help>
+    <label><!-- Reply Received --></label>
+    <name>Reply_Received__c</name>
+</CustomFieldTranslation>

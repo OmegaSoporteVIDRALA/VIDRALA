@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Converts the BD record to a Opportunity or Lead</description>
+    <flowDefinition>Create_New_BD_Opp_or_Lead</flowDefinition>
+    <label>Convert</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

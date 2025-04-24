@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Drawing_Reference_Number</fullName>
+    <active>true</active>
+    <description>If &quot;Competitor_s_Drawing_Attached__c &quot; is Yes then User must enter a value for &quot;Competitor_s_Reference_Number__c&quot;</description>
+    <errorConditionFormula>ISPICKVAL(Competitor_s_Drawing_Attached__c , &quot;Yes&quot;)
+
+&amp;&amp;
+
+ISBLANK( Competitor_s_Reference_Number__c )</errorConditionFormula>
+    <errorDisplayField>Competitor_s_Reference_Number__c</errorDisplayField>
+    <errorMessage>If you are going to upload a competitor&apos;s drawing you must enter the reference for that drawing</errorMessage>
+</ValidationRule>

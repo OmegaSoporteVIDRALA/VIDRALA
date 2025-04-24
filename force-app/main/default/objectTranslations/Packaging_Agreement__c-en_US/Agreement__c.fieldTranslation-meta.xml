@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Agreement --></label>
+    <name>Agreement__c</name>
+    <picklistValues>
+        <masterLabel>Abono buenos y a reparar</masterLabel>
+        <translation><!-- Abono buenos y a reparar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Abono buenos y a reparar Italia</masterLabel>
+        <translation><!-- Abono buenos y a reparar Italia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Abono todos</masterLabel>
+        <translation><!-- Abono todos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Depósito</masterLabel>
+        <translation><!-- Depósito --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gratuito</masterLabel>
+        <translation><!-- Gratuito --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

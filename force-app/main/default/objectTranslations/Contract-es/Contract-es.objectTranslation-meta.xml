@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Contract Layout Fifty (Annual)</layout>
+        <sections>
+            <label><!-- Volume Allowance --></label>
+            <section>Volume Allowance</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contract Layout Fifty (Specific Product)</layout>
+        <sections>
+            <label><!-- Product Section --></label>
+            <section>Product Section</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Encirc Contract --></description>
+        <label><!-- Contract (Encirc) --></label>
+        <name>Contract_Encirc</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Large/global - includes all legal agreements --></description>
+        <label>Contrato general</label>
+        <name>Customer_Annual</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Small - Contract for Specific Product, Bespoke Bottle --></description>
+        <label>Contrato de un producto</label>
+        <name>Specific_Product</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Percentage and Moulds Price in Product must be filled in --></errorMessage>
+        <name>In_The_Product_Price_Required_fields</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Merge --></label>
+        <name>APXTConga4__Conga_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+</CustomObjectTranslation>

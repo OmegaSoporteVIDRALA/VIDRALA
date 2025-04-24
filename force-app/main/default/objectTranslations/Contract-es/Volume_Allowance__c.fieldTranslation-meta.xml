@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicar el volumen acordado para el año de vigencia del contrato, o en caso de tener una vigencia mayor, el volumen correspondiente al primer año --></help>
+    <label>Volumen 1er año</label>
+    <name>Volume_Allowance__c</name>
+</CustomFieldTranslation>

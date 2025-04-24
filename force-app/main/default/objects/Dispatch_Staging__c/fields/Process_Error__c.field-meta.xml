@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Process_Error__c</fullName>
+    <description>Error Message associated with attempted batch load to Dispatch object</description>
+    <inlineHelpText>Error Message associated with attempted batch load to Dispatch object</inlineHelpText>
+    <label>Process Error</label>
+    <length>1000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

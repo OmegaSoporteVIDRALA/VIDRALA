@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Exclude this Haulier from OTIF Reporting --></help>
+    <label><!-- Exclude from OTIF --></label>
+    <name>Exclude_from_OTIF__c</name>
+</CustomFieldTranslation>

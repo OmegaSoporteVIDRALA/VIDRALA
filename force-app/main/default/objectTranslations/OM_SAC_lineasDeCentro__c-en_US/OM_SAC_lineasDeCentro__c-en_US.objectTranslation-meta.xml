@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lineas de Centro</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lineas de Centro</value>
+    </caseValues>
+    <layouts>
+        <layout>Linea Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Despaletizadora --></label>
+            <section>Despaletizadora</section>
+        </sections>
+        <sections>
+            <label><!-- Encajado/Paletizado --></label>
+            <section>Encajado/Paletizado</section>
+        </sections>
+        <sections>
+            <label><!-- Encapsulado (sobre encapsulado) --></label>
+            <section>Encapsulado (sobre encapsulado)</section>
+        </sections>
+        <sections>
+            <label><!-- Etiquetado --></label>
+            <section>Etiquetado</section>
+        </sections>
+        <sections>
+            <label><!-- Lavado limpieza botellas vacías --></label>
+            <section>Lavado limpieza botellas vacías</section>
+        </sections>
+        <sections>
+            <label><!-- Llenadora --></label>
+            <section>Llenadora</section>
+        </sections>
+        <sections>
+            <label><!-- Pasteurizado --></label>
+            <section>Pasteurizado</section>
+        </sections>
+        <sections>
+            <label><!-- Puntos críticos de la línea --></label>
+            <section>Puntos críticos de la línea</section>
+        </sections>
+        <sections>
+            <label><!-- Taponado --></label>
+            <section>Taponado</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllProducts</fullName>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>Colour__c</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>Status__c</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Account__c</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <columns>Is_Archived__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.LAST_UPDATE</field>
+        <operation>notEqual</operation>
+        <value>2/4/2016 12:00 AM,2/25/2016 12:00 AM,7/5/2016 12:00 AM,7/15/2016 12:00 AM</value>
+    </filters>
+    <label>All Products</label>
+</ListView>

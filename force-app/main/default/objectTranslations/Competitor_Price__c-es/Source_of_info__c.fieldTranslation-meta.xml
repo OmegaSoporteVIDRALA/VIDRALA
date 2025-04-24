@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Fuente de información</label>
+    <name>Source_of_info__c</name>
+    <picklistValues>
+        <masterLabel>Estimación interna (Own estimation)</masterLabel>
+        <translation><!-- Estimación interna (Own estimation) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facilitado por el cliente (Provided by customer)</masterLabel>
+        <translation><!-- Facilitado por el cliente (Provided by customer) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

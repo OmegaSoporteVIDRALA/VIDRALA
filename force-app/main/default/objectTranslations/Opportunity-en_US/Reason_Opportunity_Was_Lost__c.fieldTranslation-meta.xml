@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason Opportunity Was Lost --></label>
+    <name>Reason_Opportunity_Was_Lost__c</name>
+    <picklistValues>
+        <masterLabel>Lost: Design</masterLabel>
+        <translation><!-- Lost: Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost: Legals</masterLabel>
+        <translation><!-- Lost: Legals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost: Other</masterLabel>
+        <translation><!-- Lost: Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost: Price</masterLabel>
+        <translation><!-- Lost: Price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost: Quality</masterLabel>
+        <translation><!-- Lost: Quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost: Timescales</masterLabel>
+        <translation><!-- Lost: Timescales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualified out: capacity</masterLabel>
+        <translation><!-- Qualified out: capacity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualified out: design</masterLabel>
+        <translation><!-- Qualified out: design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualified out: price</masterLabel>
+        <translation><!-- Qualified out: price --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qualified out: strategic</masterLabel>
+        <translation><!-- Qualified out: strategic --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

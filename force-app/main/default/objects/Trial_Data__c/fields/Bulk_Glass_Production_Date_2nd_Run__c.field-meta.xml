@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bulk_Glass_Production_Date_2nd_Run__c</fullName>
+    <description>Bulk Glass Production Date 2nd Run</description>
+    <label>Bulk Glass Production Date 2nd Run</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

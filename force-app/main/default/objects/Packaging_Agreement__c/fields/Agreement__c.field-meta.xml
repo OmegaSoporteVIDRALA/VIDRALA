@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreement__c</fullName>
+    <label>Agreement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abono buenos y a reparar</fullName>
+                <default>false</default>
+                <label>Abono buenos y a reparar</label>
+            </value>
+            <value>
+                <fullName>Abono buenos y a reparar Italia</fullName>
+                <default>false</default>
+                <label>Abono buenos y a reparar Italia</label>
+            </value>
+            <value>
+                <fullName>Abono todos</fullName>
+                <default>false</default>
+                <label>Abono todos</label>
+            </value>
+            <value>
+                <fullName>Depósito</fullName>
+                <default>false</default>
+                <label>Depósito</label>
+            </value>
+            <value>
+                <fullName>Gratuito</fullName>
+                <default>false</default>
+                <label>Gratuito</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

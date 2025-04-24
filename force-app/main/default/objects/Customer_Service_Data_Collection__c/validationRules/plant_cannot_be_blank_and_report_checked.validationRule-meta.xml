@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>plant_cannot_be_blank_and_report_checked</fullName>
+    <active>true</active>
+    <description>&quot;report complete&quot; can not be ticked if the &quot;plant field&quot; has not be filled in</description>
+    <errorConditionFormula>ISPICKVAL( Plant__c ,&apos;&apos; ) &amp;&amp;  Report_complete__c = true</errorConditionFormula>
+    <errorDisplayField>Report_complete__c</errorDisplayField>
+    <errorMessage>&quot;report complete&quot; can not be ticked if the &quot;plant field&quot; has not be filled in</errorMessage>
+</ValidationRule>
