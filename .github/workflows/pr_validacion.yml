@@ -90,9 +90,9 @@ jobs:
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
         run: |
           TEST_CLASSES=$(find force-app/main/default/pmd/ -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
-          sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json
+          sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json || exit 1
 
       - name: Validate Salesforce components
         if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "integra" ]]
         run: |
-         sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel NoTestRun --json
+         sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel NoTestRun --json || exit 1
