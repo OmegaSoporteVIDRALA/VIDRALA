@@ -1,0 +1,98 @@
+name: Validate Salesforce PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - integra
+      - uat
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Set Salesforce Environment Variables
+        id: set_sf_env
+        run: |
+          if [[ "${{ github.base_ref }}" == "integra" ]]; then
+            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
+          elif [[ "${{ github.base_ref }}" == "uat" ]]; then
+            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
+          elif [[ "${{ github.base_ref }}" == "main" ]]; then
+            echo "LOGIN_URL=https://login.salesforce.com" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_PROD }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_PROD }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
+          else
+            echo "Branch not supported"
+            exit 1
+          fi
+
+      - name: Authenticate with Salesforce (CheckOnly)
+        uses: amitsingh-007/sfdx-authenticate@v1.2
+        with:
+          client-id: ${{ env.CLIENT_ID }}
+          username: ${{ env.USERNAME }}
+          jwt-key: ${{ env.JWT_KEY }}
+          instance-url: ${{ env.LOGIN_URL }}
+
+      - name: Check if there are Test classes
+        id: check_tests
+        run: |
+          if find force-app/main/default/pmd/ -name '*.cls' | grep -q .; then
+            echo "testfound=true" >> $GITHUB_ENV
+          else
+            echo "testfound=false" >> $GITHUB_ENV
+          fi
+
+      - name: Install PMD
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
+        run: |
+          wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.55.0/pmd-bin-6.55.0.zip
+          unzip pmd-bin-6.55.0.zip
+          mv pmd-bin-6.55.0 pmd
+
+      - name: Run PMD on test classes
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
+        run: |
+          ./pmd/bin/run.sh pmd -d force-app/main/default/pmd/ -R config/apex-ruleset.xml -f sarif -r pmd-report.sarif
+
+      - name: Upload PMD SARIF report
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: pmd-report.sarif
+
+      - name: Fail if PMD issues found
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
+        run: |
+          issues=$(${{ env.PMD_PATH }}/run.sh pmd -d $SRC_FOLDER -R apex-apexunit.xml -f text | wc -l)
+          if [ "$issues" -gt "0" ]; then
+            echo "PMD found issues: $issues"
+            exit 1
+          fi
+
+      - name: Run Apex tests
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
+        run: |
+          TEST_CLASSES=$(find force-app/main/default/pmd/ -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
+          sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json
+
+      - name: Validate Salesforce components
+        if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "integra" ]]
+        run: |
+         sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel NoTestRun --json
