@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Custom Apex Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.github.io/pmd-6.55.0/pmd-6.55.0.xsd">
+    <description>Custom PMD ruleset for Salesforce Apex development</description>
+
+    <!-- ✅ Mejores prácticas generales -->
+    <rule ref="category/apex/bestpractices.xml">
+        <exclude name="AvoidGlobalModifier" />  <!-- Permitir métodos @global si es necesario -->
+    </rule>
+
+    <!-- ❌ Errores comunes que debemos evitar -->
+    <rule ref="category/apex/errorprone.xml">
+        <exclude name="EmptyCatchBlock" />  <!-- A veces un catch vacío es válido -->
+        <exclude name="AvoidDirectAccessTriggerMap" />  <!-- Esta regla no es crítica -->
+    </rule>
+
+    <!-- 🚀 Performance: Evita consultas SOQL/Mixed DML en lugares prohibidos -->
+    <rule ref="category/apex/performance.xml">
+        <exclude name="AvoidNestedQueries" />  <!-- A veces es necesario en tests -->
+    </rule>
+
+    <!-- 🔒 Seguridad: Evita logs y hardcoded IDs -->
+    <rule ref="category/apex/security.xml">
+        <exclude name="AvoidHardcodedId" />  <!-- Evitar hardcoded IDs en código -->
+        <exclude name="AvoidSystemDebug" />  <!-- Permitir System.debug en entornos no productivos -->
+    </rule>
+
+    <!-- 🏗️ Buen diseño y estructura -->
+    <rule ref="category/apex/design.xml">
+        <exclude name="CyclomaticComplexity" />  <!-- No queremos falsos positivos aquí -->
+        <exclude name="ExcessiveClassLength" />  <!-- A veces una clase larga es necesaria -->
+        <exclude name="ExcessiveMethodLength" />  <!-- Igual para métodos largos -->
+    </rule>
+
+    <!-- 🔤 Nomenclatura (nombres claros y coherentes) -->
+    <rule ref="category/apex/naming.xml">
+        <exclude name="AvoidMethodNameAsVariableName" />  <!-- Permitir si tiene sentido -->
+    </rule>
+
+    <!-- ⚠️ Validación de pruebas (Test Classes) -->
+    <rule ref="category/apex/test.xml">
+        <exclude name="UseAssertInTests" />  <!-- A veces los tests son validaciones indirectas -->
+    </rule>
+
+</ruleset>
