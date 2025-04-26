@@ -1,0 +1,48 @@
+name: Deploy after Validation
+
+on:
+  workflow_run:
+    workflows: ["Validate Pull Request"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      PACKAGE_XML: force-app/main/manifest/package.xml
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set Salesforce Environment Variables
+        id: set_sf_env
+        run: |
+          if [[ "${{ github.event.workflow_run.head_branch }}" == "integra" ]]; then
+            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
+          elif [[ "${{ github.event.workflow_run.head_branch }}" == "uat" ]]; then
+            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
+          else
+            exit 1
+          fi
+
+
+      - name: Authenticate with Salesforce
+        uses: amitsingh-007/sfdx-authenticate@v1.2
+        with:
+          client-id: ${{ env.CLIENT_ID }}
+          username: ${{ env.USERNAME }}
+          jwt-key: ${{ env.JWT_KEY }}
+          instance-url: ${{ env.LOGIN_URL }}
+
+      - name: Deploy to Salesforce
+        run: |
+          sfdx force:source:deploy -x $PACKAGE_XML --json --verbose
