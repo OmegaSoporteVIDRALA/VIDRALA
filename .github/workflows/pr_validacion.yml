@@ -95,7 +95,7 @@ jobs:
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"
           sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json || exit 1
 
-      - name: 📭 Validate Salesforce components
+      - name: Validate Salesforce components
         if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "integra" ]]
         run: |
          echo "📭 No test classes found. Validating components without tests..."
