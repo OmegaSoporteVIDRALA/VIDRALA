@@ -66,7 +66,7 @@ jobs:
           unzip pmd-bin-6.55.0.zip
           mv pmd-bin-6.55.0 pmd
 
-      - name: Run PMD on test classes
+      - name: 🔍 Run PMD on test classes
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
         run: |
           ./pmd/bin/run.sh pmd -d force-app/main/default/pmd/ -R config/apex-ruleset.xml -f sarif -r pmd-report.sarif
@@ -77,22 +77,26 @@ jobs:
         with:
           sarif_file: pmd-report.sarif
 
-      - name: Fail if PMD issues found
+      - name: ❌ Fail if PMD issues found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
         run: |
           issues=$(${{ env.PMD_PATH }}/run.sh pmd -d $SRC_FOLDER -R apex-apexunit.xml -f text | wc -l)
           if [ "$issues" -gt "0" ]; then
-            echo "PMD found issues: $issues"
+            echo "❌ PMD found issues: $issues"
             exit 1
+          else
+            echo "✅ No issues on PMD."
           fi
 
-      - name: Run Apex tests
+      - name: 🤖 Run Apex tests if it was found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
         run: |
           TEST_CLASSES=$(find force-app/main/default/pmd/ -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
+          echo "🧪 Validating components with specific tests: $TEST_CLASSES"
           sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json || exit 1
 
-      - name: Validate Salesforce components
+      - name: 📭 Validate Salesforce components
         if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "integra" ]]
         run: |
+         echo "📭 No test classes found. Validating components without tests..."
          sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel NoTestRun --json || exit 1
