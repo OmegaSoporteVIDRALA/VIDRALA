@@ -1,108 +1,126 @@
-<h1 align="center">🚀 CI/CD Salesforce - Powered by GitHub Actions</h1>
-
+<!-- Banner image -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Build-Automated-blue?style=for-the-badge&logo=github-actions" alt="Build Status">
-  <img src="https://img.shields.io/badge/Salesforce-Deployment-success?style=for-the-badge&logo=salesforce" alt="Salesforce Deployment">
+  <img src="C:\Users\sdelca01\Downloads\VIDRALA\vidrala.png" alt="CI/CD Salesforce Vidrala" style="width:100%;" />
 </p>
 
+# 🚀 CI/CD Salesforce - Powered by GitHub Actions
+
 <p align="center">
-  <b>Automated validation, testing, and deployment for Salesforce metadata and Apex code using GitHub Actions.</b>
+            
+  <img src="https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/pr_validacion.yml/badge.svg" alt="Validate Workflow Status">
+  <img src="https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/deploy.yml/badge.svg" alt="Deploy Workflow Status">
 </p>
 
-🎯 Flujo de PR:
+---
 
-            Al crear una PR hacia integra, uat o main:
+<details>
+<summary>🇪🇸 Español</summary>
 
-                        1.Si hay clases en la carpeta específica (force-app/main/default/pmd/):
-                                    Ejecutar validación PMD.
-                                    Si PMD falla ➔ falla la PR (no se puede mergear).
+## 📦 Descripción general del flujo
 
-                        2.Si PMD pasa:
-                                    Buscar clases de test en la misma carpeta (force-app/main/default/pmd/).
-                                    Si hay tests, lanzar validación de componentes y esas clases test (checkonly RunSpecifiedTests ).
-                                    Si no hay tests, simplemente validar que los componentes Salesforce se puedan desplegar (checkonly).
+### 1. `validate.yml`
+- Analiza código Apex con **PMD** si existen clases.
+- Realiza un **CheckOnly deploy** usando `package.xml`.
+- Ejecuta solo las clases de test encontradas (si las hay).
+- La PR se bloquea si falla alguna validación.
 
-                        3.Si todas las validaciones van bien, permitir completar la PR.
+### 2. `deploy.yml`
+- Se lanza si `validate.yml` termina correctamente.
+- Despliega en función de la rama destino:
+  - `integra` → Sandbox Integra
+  - `uat` → Sandbox UAT
+  - `main` → Producción
 
-🎯 Flujo de Deploy:
+## 🔐 Autenticación
 
-            Cuando se complete la PR (merge) en integra, uat o main:
-            Hacer un despliegue real (force:source:deploy) en el entorno correspondiente.
+- Usa secrets de GitHub distintos para cada entorno.
+- Autenticación vía JWT OAuth dinámico.
 
+## 🛠️ Tecnologías usadas
 
-📖 README - GitHub Actions: Validación y Despliegue Salesforce
+- Salesforce CLI (`sfdx`)
+- GitHub Actions
+- PMD (análisis estático)
+- JWT OAuth Flow
 
-🚀 Introducción
-            Este repositorio automatiza la validación y el despliegue de cambios en Salesforce usando GitHub Actions.
-            El proceso está dividido en dos flujos:
-                        validate.yml ➔ Valida cambios en las Pull Requests.
-                        deploy.yml ➔ Despliega automáticamente si la validación fue exitosa.
+## ✅ Estado del CI/CD
 
-🔍 validate.yml (Validación)
-Este flujo se activa cuando se crea o actualiza una Pull Request (PR) hacia las ramas:
+| Workflow         | Estado automático |
+|------------------|-------------------|
+| Validación PR    | ![Validate](https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/pr_validacion.yml/badge.svg) |
+| Despliegue final | ![Deploy](https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/deploy.yml/badge.svg)     |
 
-integra
+## 🤝 Contribución
 
-uat
+Haz PR a `integra`, `uat` o `main` según el entorno.  
+El sistema validará y desplegará automáticamente.
 
-main
+## 🔒 Seguridad
 
-Pasos principales:
+Este repositorio utiliza `GitHub Secrets` como:
+- `SF_USERNAME_INTEGRA`, `SF_JWT_KEY_INTEGRA`, etc.
 
-Instala PMD para análisis estático de código Apex.
+Nunca subas claves al repositorio.
 
-Revisa si hay clases Apex en una carpeta específica (src/classes):
+## 📄 Licencia
 
-Si hay, ejecuta PMD.
+MIT
 
-Si PMD encuentra errores, falla la PR.
+</details>
 
-Detecta automáticamente el entorno de Salesforce:
+---
 
-PR a integra o uat ➔ Login a test.salesforce.com (Sandbox).
+<details>
+<summary>🇬🇧 English</summary>
 
-PR a main ➔ Login a login.salesforce.com (Producción).
+## 📦 Workflow Overview
 
-Se conecta a Salesforce usando JWT.
+### 1. `validate.yml`
+- Runs **PMD** static analysis if Apex classes are found.
+- Performs a **CheckOnly deploy** using `package.xml`.
+- Executes only test classes found (if any).
+- Fails the PR if validation does not pass.
 
-Realiza un CheckOnly:
+### 2. `deploy.yml`
+- Triggered after successful validation.
+- Deploys to the correct Salesforce org depending on the PR branch:
+  - `integra` → Integra sandbox
+  - `uat` → UAT sandbox
+  - `main` → Production org
 
-Si hay clases de test (src/classes/tests), corre RunSpecifiedTests.
+## 🔐 Authentication
 
-Si no hay tests, realiza despliegue NoTestRun.
+- Uses different GitHub Secrets per environment.
+- Dynamic connection via JWT OAuth Flow.
 
-🚀 deploy.yml (Despliegue)
-Este flujo se activa solo si la validación fue exitosa.
+## 🛠️ Technologies
 
-Pasos principales:
+- Salesforce CLI (`sfdx`)
+- GitHub Actions
+- PMD (Apex static analysis)
+- JWT OAuth Flow
 
-Detecta la rama de destino (head_branch).
+## ✅ CI/CD Status
 
-Carga las claves Salesforce correctas según la rama:
+| Workflow         | Status Badge |
+|------------------|--------------|
+| PR Validation    | ![Validate](https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/pr_validacion.yml/badge.svg) |
+| Final Deployment | ![Deploy](https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/deploy.yml/badge.svg)     |
 
-integra ➔ Sandbox Integra
+## 🤝 Contributing
 
-uat ➔ Sandbox UAT
+Create a PR to the appropriate branch (`integra`, `uat`, or `main`).  
+CI/CD handles the rest.
 
-main ➔ Producción
+## 🔒 Security
 
-Autentica usando JWT.
+This repo uses secrets like:
+- `SF_USERNAME_INTEGRA`, `SF_JWT_KEY_INTEGRA`, etc.
 
-Despliega los componentes del package.xml en Salesforce.
+⚠️ Never commit credentials.
 
-🛡️ Variables y Secrets usados
-Debes configurar los siguientes secrets en GitHub:
+## 📄 License
 
+MIT
 
-Secrets	Descripción	Para qué entorno
-SFDX_CLIENT_ID_INTEGRA	Client ID OAuth JWT	Integra
-SFDX_USERNAME_INTEGRA	Username Salesforce	Integra
-SFDX_JWT_KEY_INTEGRA	Private key JWT	Integra
-SFDX_CLIENT_ID_UAT	Client ID OAuth JWT	UAT
-SFDX_USERNAME_UAT	Username Salesforce	UAT
-SFDX_JWT_KEY_UAT	Private key JWT	UAT
-SFDX_CLIENT_ID_PROD	Client ID OAuth JWT	Producción
-SFDX_USERNAME_PROD	Username Salesforce	Producción
-SFDX_JWT_KEY_PROD	Private key JWT	Producción
-
-
+</details>
