@@ -43,6 +43,6 @@ jobs:
           jwt-key: ${{ env.JWT_KEY }}
           instance-url: ${{ env.LOGIN_URL }}
 
-      - name: Deploy to Salesforce
+      - name: 🚀 Deploy to Salesforce
         run: |
           sfdx force:source:deploy -x $PACKAGE_XML --json --verbose
