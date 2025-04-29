@@ -14,63 +14,6 @@
 ---
 
 <details>
-<summary>🇪🇸 Español</summary>
-
-## 📦 Descripción general del flujo
-
-### 1. `validate.yml`
-- Analiza código Apex con **PMD** si existen clases.
-- Realiza un **CheckOnly deploy** usando `package.xml`.
-- Ejecuta solo las clases de test encontradas (si las hay).
-- La PR se bloquea si falla alguna validación.
-
-### 2. `deploy.yml`
-- Se lanza si `validate.yml` termina correctamente.
-- Despliega en función de la rama destino:
-  - `integra` → Sandbox Integra
-  - `uat` → Sandbox UAT
-  - `main` → Producción
-
-## 🔐 Autenticación
-
-- Usa secrets de GitHub distintos para cada entorno.
-- Autenticación vía JWT OAuth dinámico.
-
-## 🛠️ Tecnologías usadas
-
-- Salesforce CLI (`sfdx`)
-- GitHub Actions
-- PMD (análisis estático)
-- JWT OAuth Flow
-
-## ✅ Estado del CI/CD
-
-| Workflow         | Estado automático |
-|------------------|-------------------|
-| Validación PR    | ![Validate](https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/pr_validacion.yml/badge.svg) |
-| Despliegue final | ![Deploy](https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/deploy.yml/badge.svg)     |
-
-## 🤝 Contribución
-
-Haz PR a `integra`, `uat` o `main` según el entorno.  
-El sistema validará y desplegará automáticamente.
-
-## 🔒 Seguridad
-
-Este repositorio utiliza `GitHub Secrets` como:
-- `SF_USERNAME_INTEGRA`, `SF_JWT_KEY_INTEGRA`, etc.
-
-Nunca subas claves al repositorio.
-
-## 📄 Licencia
-
-MIT
-
-</details>
-
----
-
-<details>
 <summary>🇬🇧 English</summary>
 
 ## 📦 Workflow Overview
@@ -120,6 +63,63 @@ This repo uses secrets like:
 ⚠️ Never commit credentials.
 
 ## 📄 License
+
+MIT
+
+</details>
+
+------
+
+<details>
+<summary>🇪🇸 Español</summary>
+
+## 📦 Descripción general del flujo
+
+### 1. `validate.yml`
+- Analiza código Apex con **PMD** si existen clases.
+- Realiza un **CheckOnly deploy** usando `package.xml`.
+- Ejecuta solo las clases de test encontradas (si las hay).
+- La PR se bloquea si falla alguna validación.
+
+### 2. `deploy.yml`
+- Se lanza si `validate.yml` termina correctamente.
+- Despliega en función de la rama destino:
+  - `integra` → Sandbox Integra
+  - `uat` → Sandbox UAT
+  - `main` → Producción
+
+## 🔐 Autenticación
+
+- Usa secrets de GitHub distintos para cada entorno.
+- Autenticación vía JWT OAuth dinámico.
+
+## 🛠️ Tecnologías usadas
+
+- Salesforce CLI (`sfdx`)
+- GitHub Actions
+- PMD (análisis estático)
+- JWT OAuth Flow
+
+## ✅ Estado del CI/CD
+
+| Workflow         | Estado automático |
+|------------------|-------------------|
+| Validación PR    | ![Validate](https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/pr_validacion.yml/badge.svg) |
+| Despliegue final | ![Deploy](https://github.com/OmegaSoporteVIDRALA/VIDRALA/actions/workflows/deploy.yml/badge.svg)     |
+
+## 🤝 Contribución
+
+Haz PR a `integra`, `uat` o `main` según el entorno.  
+El sistema validará y desplegará automáticamente.
+
+## 🔒 Seguridad
+
+Este repositorio utiliza `GitHub Secrets` como:
+- `SF_USERNAME_INTEGRA`, `SF_JWT_KEY_INTEGRA`, etc.
+
+Nunca subas claves al repositorio.
+
+## 📄 Licencia
 
 MIT
 
