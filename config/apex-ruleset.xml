@@ -23,15 +23,15 @@
 
     <!-- 🔒 Seguridad: Evita logs y hardcoded IDs -->
     <rule ref="category/apex/security.xml">
-        <exclude name="AvoidHardcodedId" />  <!-- Evitar hardcoded IDs en código -->
-        <exclude name="AvoidSystemDebug" />  <!-- Permitir System.debug en entornos no productivos -->
+        <!--<exclude name="AvoidHardcodedId" />   Evitar hardcoded IDs en código -->
+       <!-- <exclude name="AvoidSystemDebug" />  Permitir System.debug en entornos no productivos -->
     </rule>
 
     <!-- 🏗️ Buen diseño y estructura -->
     <rule ref="category/apex/design.xml">
         <exclude name="CyclomaticComplexity" />  <!-- No queremos falsos positivos aquí -->
         <exclude name="ExcessiveClassLength" />  <!-- A veces una clase larga es necesaria -->
-        <exclude name="ExcessiveMethodLength" />  <!-- Igual para métodos largos -->
+       <!-- <exclude name="ExcessiveMethodLength" />   Igual para métodos largos -->
     </rule>
 
     <!-- 🔤 Nomenclatura (nombres claros y coherentes) -->
