@@ -6,7 +6,7 @@
     <description>Custom PMD ruleset for Salesforce Apex development</description>
 
     <!-- ✅ Mejores prácticas generales -->
-    <rule ref="category/apex/bestpractices.xml">
+    <rule ref="category/apex/./pmd-bin/bin/run.sh rulesets.xml">
         <exclude name="AvoidGlobalModifier" />  <!-- Permitir métodos @global si es necesario -->
     </rule>
 
@@ -18,7 +18,7 @@
 
     <!-- 🚀 Performance: Evita consultas SOQL/Mixed DML en lugares prohibidos -->
     <rule ref="category/apex/performance.xml">
-        <exclude name="AvoidNestedQueries" />  <!-- A veces es necesario en tests -->
+        <!--<exclude name="AvoidNestedQueries" />   A veces es necesario en tests -->
     </rule>
 
     <!-- 🔒 Seguridad: Evita logs y hardcoded IDs -->
