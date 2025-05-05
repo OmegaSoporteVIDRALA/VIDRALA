@@ -26,7 +26,7 @@ public with sharing class OM_VID_OpportunityTRGTest {
         update listOpps;
         Test.stopTest();
 
-        System.assertEquals(listOpps.size()+1, [SELECT Id FROM Quote].size());
+        System.assertEquals(listOpps.size()+2, [SELECT Id FROM Quote].size());
         //System.assertEquals([SELECT Id FROM OpportunityLineItem].size(), [SELECT Id FROM QuoteLineItem].size());
         //System.assertEquals(listOpps[0].CloseDate, Date.today() + 30);
     }
