@@ -90,24 +90,25 @@ jobs:
       - name: 🔍 Run PMD on test classes
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         run: |
-          ./pmd-bin/bin/run.sh pmd -d ./pmd -R ./config/apex-ruleset.xml -f sarif -r ./config/report/pmd-report.sarif
+          mkdir -p reports/pmd
+          ./pmd-bin/bin/run.sh pmd \
+            -d ./pmd \
+            -R ./config/apex-ruleset.xml \
+            -f html \
+            -r /pmd/reports/pmd-report.html
+          status=$?
+          echo "PMD exit status: $status"
+          if [ "$status" -ne 0 ]; then
+            echo "❌ PMD encontró problemas"
+            exit $status
+          fi 
 
-      - name: ✉️ Upload PMD SARIF report
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
-        uses: github/codeql-action/upload-sarif@v2
+      - name: 📎 Guardar reporte de PMD como artefacto
+        uses: actions/upload-artifact@v3
+        if: always()  # Guardar incluso si el paso anterior falló
         with:
-          sarif_file: pmd-report.sarif
-
-      - name: ⚠️ Fail if PMD issues found
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
-        run: |
-          issues=./pmd-bin/bin/run.sh pmd pmd -d ./pmd -R apex-apexunit.xml -f text | wc -l)
-          if [ "$issues" -gt "0" ]; then
-            echo "❌ PMD found issues: $issues"
-            exit 1
-          else
-            echo "✅ No issues on PMD."
-          fi
+          name: pmd-report
+          path: reports/pmd/pmd-report.html
 
       - name: 🤖 Run Apex tests if it was found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
