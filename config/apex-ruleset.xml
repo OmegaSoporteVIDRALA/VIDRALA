@@ -6,7 +6,7 @@
     <description>Custom PMD ruleset for Salesforce Apex development</description>
 
     <!-- ✅ Mejores prácticas generales -->
-    <rule ref="category/apex/./pmd-bin/bin/run.sh rulesets.xml">
+    <rule ref="category/apex/bestpractices.xml">
         <exclude name="AvoidGlobalModifier" />  <!-- Permitir métodos @global si es necesario -->
     </rule>
 
