@@ -78,7 +78,6 @@ jobs:
           else
             echo "testfound=false" >> $GITHUB_ENV
           fi
-          echo "env.testfound"
 
       - name: 🧰 Install PMD
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
@@ -91,7 +90,7 @@ jobs:
       - name: 🔍 Run PMD on test classes
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         run: |
-          ./pmd-bin/bin/run.sh pmd -d ./pmd -R config/apex-ruleset.xml -f sarif -r pmd-report.sarif
+          ./pmd-bin/bin/run.sh pmd -d ./pmd -R ./config/apex-ruleset.xml -f sarif -r ./config/report/pmd-report.sarif
 
       - name: ✉️ Upload PMD SARIF report
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
