@@ -32,28 +32,13 @@ jobs:
       - name: Set Salesforce Environment Variables
         id: set_sf_env
         run: |
-          BASE_REF="${GITHUB_BASE_REF}"
-          if [[ "$BASE_REF" == "INTEGRA" ]]; then
+          BASE_REF=${{ github.base_ref }}
+          if [[ "$BASE_REF" == "UAT" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
             echo "$BASE_REF"
-          elif [[ "$BASE_REF" == "UAT" ]]; then
-            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
-            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
-            echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
-            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
-            echo "$BASE_REF"
-          elif [[ "$BASE_REF" == "MAIN" ]]; then
-            echo "LOGIN_URL=https://login.salesforce.com" >> $GITHUB_ENV
-            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_PROD }}" >> $GITHUB_ENV
-            echo "USERNAME=${{ secrets.SFDX_USERNAME_PROD }}" >> $GITHUB_ENV
-            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
-            echo "$BASE_REF"
-          else
-            echo "Branch not supported"
-            exit 1
           fi
 
       - name: Install Salesforce CLI
