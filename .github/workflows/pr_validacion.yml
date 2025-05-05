@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
+      - name: ⬇️ Checkout repository
         uses: actions/checkout@v3
         
-      - name: Checkout code
+      - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
      # - name: Determine target branch
@@ -25,9 +25,6 @@ jobs:
         #    echo "❌ Deployment only allowed to integra, uat or main branches."
        #     exit 1
        #   fi
-
-      - name: Entorno
-        run:  echo ${{ github.base_ref }}
 
       - name: ✒️ Set Salesforce Environment Variables
         id: set_sf_env
@@ -73,7 +70,7 @@ jobs:
             --setdefaultdevhubusername \
             --instanceurl "$SFDX_URL"
 
-      - name: 🔍 Check if there are Test classes
+      - name: 📂 Check if there are Test classes
         id: check_tests
         run: |
           if find ./pmd -name '*.cls' | grep -q .; then
@@ -81,30 +78,31 @@ jobs:
           else
             echo "testfound=false" >> $GITHUB_ENV
           fi
+          echo env.testfound
 
-      - name: ⏳ Install PMD
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "uat" ]]
+      - name: 🧰 Install PMD
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         run: |
           wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.55.0/pmd-bin-6.55.0.zip
           unzip pmd-bin-6.55.0.zip
           mv pmd-bin-6.55.0 pmd
           echo "PMD_PATH=$(pwd)/pmd-bin-6.55.0/bin" >> $GITHUB_ENV
 
-      - name: ✉️ Run PMD on test classes
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "uat" ]]
+      - name: 🔍 Run PMD on test classes
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         run: |
-          ${{ env.PMD_PATH }}/run.sh pmd -d ./pmd -R config/apex-ruleset.xml -f sarif -r pmd-report.sarif
+          ./pmd-bin/bin/run.sh pmd -d ./pmd -R config/apex-ruleset.xml -f sarif -r pmd-report.sarif
 
-      - name: ⛹ Upload PMD SARIF report
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "uat" ]]
+      - name: ✉️ Upload PMD SARIF report
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: pmd-report.sarif
 
       - name: ⚠️ Fail if PMD issues found
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "uat" ]]
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         run: |
-          issues=$(${{ env.PMD_PATH }}/run.sh pmd -d ./pmd -R apex-apexunit.xml -f text | wc -l)
+          issues=./pmd-bin/bin/run.sh pmd pmd -d ./pmd -R apex-apexunit.xml -f text | wc -l)
           if [ "$issues" -gt "0" ]; then
             echo "❌ PMD found issues: $issues"
             exit 1
@@ -113,14 +111,14 @@ jobs:
           fi
 
       - name: 🤖 Run Apex tests if it was found
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "uat" ]]
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         run: |
           TEST_CLASSES=$(find ./pmd -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"
           sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json || exit 1
 
       - name: ⏰ Validate Salesforce components
-        if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "uat" ]]
+        if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "UAT" ]]
         run: |
          echo "📭 No test classes found. Validating components without tests..."
          sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel NoTestRun --json || exit 1
