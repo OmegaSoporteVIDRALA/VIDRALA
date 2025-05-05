@@ -15,16 +15,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Determine target branch
-        id: check_branch
-        run: |
-          echo "TARGET_BRANCH=${{ github.event.workflow_run.pull_requests[0].base.ref }}" >> $GITHUB_ENV
-          BRANCH="${{ github.event.workflow_run.pull_requests[0].base.ref }}"
-          echo "Target branch is $BRANCH"
-          if [[ "$BRANCH" != "integra" && "$BRANCH" != "uat" && "$BRANCH" != "main" ]]; then
-            echo "❌ Deployment only allowed to integra, uat or main branches."
-            exit 1
-          fi
+     # - name: Determine target branch
+       # id: check_branch
+       # run: |
+       #   echo "TARGET_BRANCH=${{ github.event.workflow_run.pull_requests[0].base.ref }}" >> $GITHUB_ENV
+        ##  BRANCH="${{ github.event.workflow_run.pull_requests[0].base.ref }}"
+        #  echo "Target branch is $BRANCH"
+       #   if [[ "$BRANCH" != "integra" && "$BRANCH" != "uat" && "$BRANCH" != "main" ]]; then
+        #    echo "❌ Deployment only allowed to integra, uat or main branches."
+       #     exit 1
+       #   fi
+
+      - name: Entorno
+        run:  echo ${{ github.base_ref }}
 
       - name: Set Salesforce Environment Variables
         id: set_sf_env
