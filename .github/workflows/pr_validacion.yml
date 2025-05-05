@@ -95,7 +95,7 @@ jobs:
             -d ./pmd \
             -R ./config/apex-ruleset.xml \
             -f html \
-            -r /pmd/reports/pmd-report.html
+            -r ./pmd/reports/pmd-report.html
           status=$?
           echo "PMD exit status: $status"
           if [ "$status" -ne 0 ]; then
@@ -117,7 +117,7 @@ jobs:
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"
           sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json || exit 1
 
-      - name: ⏰ Validate Salesforce components
+      - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "UAT" ]]
         run: |
          echo "📭 No test classes found. Validating components without tests..."
