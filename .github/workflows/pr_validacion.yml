@@ -104,7 +104,7 @@ jobs:
           fi 
 
       - name: 📎 Guardar reporte de PMD como artefacto
-        uses: actions/upload-artifact@8f57d6056c5cc5f7e67d6a8b9aaf97e4d032c10d
+        uses: actions/upload-artifact@v4
         if: always()  # Guardar incluso si el paso anterior falló
         with:
           name: pmd-report
