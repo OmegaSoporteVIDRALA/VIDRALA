@@ -49,14 +49,6 @@ jobs:
             exit 1
           fi
 
-      - name: Authenticate with Salesforce (CheckOnly)
-        uses: https://github.com/OmegaSoporteVIDRALA/VIDRALA/sfdx-authenticate@v1.2
-        with:
-          client-id: ${{ env.CLIENT_ID }}
-          username: ${{ env.USERNAME }}
-          jwt-key: ${{ env.JWT_KEY }}
-          instance-url: ${{ env.LOGIN_URL }}
-
       - name: Install Salesforce CLI
         run: |
           npm install --global sfdx-cli
