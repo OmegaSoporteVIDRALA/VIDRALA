@@ -50,12 +50,31 @@ jobs:
           fi
 
       - name: Authenticate with Salesforce (CheckOnly)
-        uses: amitsingh-007/sfdx-authenticate@v1.2
+        uses: https://github.com/OmegaSoporteVIDRALA/VIDRALA/sfdx-authenticate@v1.2
         with:
           client-id: ${{ env.CLIENT_ID }}
           username: ${{ env.USERNAME }}
           jwt-key: ${{ env.JWT_KEY }}
           instance-url: ${{ env.LOGIN_URL }}
+
+      - name: Install Salesforce CLI
+        run: |
+          npm install --global sfdx-cli
+
+      - name: Authenticate with Salesforce using JWT
+        env:
+          SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
+          SFDX_JWT_KEY: ${{ env.JWT_KEY }}
+          SFDX_USERNAME: ${{ env.USERNAME }}
+          SFDX_URL: ${{ env.LOGIN_URL }}
+        run: |
+          echo "$SFDX_JWT_KEY" > server.key
+          sfdx auth:jwt:grant \
+            --clientid "$SFDX_CLIENT_ID" \
+            --jwtkeyfile server.key \
+            --username "$SFDX_USERNAME" \
+            --setdefaultdevhubusername \
+            --instanceurl "$SFDX_URL"
 
       - name: Check if there are Test classes
         id: check_tests
