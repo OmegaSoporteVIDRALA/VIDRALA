@@ -10,21 +10,21 @@
     <rule ref="category/apex/bestpractices.xml"/>
 
     <!-- Errores comunes -->
-    <rule ref="category/apex/errorprone.xml"/>
-        <exclude name="EmptyStatementBlock" /> <!-- Excluir bloques vacíos como "if () {}" -->
-        <exclude name="EmptyIfStmt" /> <!-- Excluir IFs vacíos intencionales -->
+    <rule ref="category/apex/errorprone.xml">
+        <exclude name="EmptyStatementBlock"/> <!-- Excluir bloques vacíos como "if () {}" -->
+        <exclude name="EmptyIfStmt"/> <!-- Excluir IFs vacíos intencionales -->
     </rule>
     <!-- Diseño y estructura -->
     <rule ref="category/apex/design.xml">
-        <exclude name="ExcessiveParameterList" />
-        <exclude name="CyclomaticComplexity" />
-        <exclude name="ExcessiveClassLength" />
-        <exclude name="CognitiveComplexity" /> <!-- Excluir métodos con lógica compleja permitida -->
+        <exclude name="ExcessiveParameterList"/>
+        <exclude name="CyclomaticComplexity"/>
+        <exclude name="ExcessiveClassLength"/>
+        <exclude name="CognitiveComplexity"/> <!-- Excluir métodos con lógica compleja permitida -->
     </rule>
     <rule ref="category/apex/test.xml">
-        <exclude name="UseAssertInTests" />
-        <exclude name="ApexUnitTestClassShouldHaveRunAs" />
-        <exclude name="ApexUnitTestClassShouldHaveRunAs" /> <!-- Permitir tests sin System.runAs -->
-        <exclude name="ApexAssertionsShouldIncludeMessage" /> <!-- Permitir asserts sin mensajes -->
+        <exclude name="UseAssertInTests"/>
+        <exclude name="ApexUnitTestClassShouldHaveRunAs"/>
+        <exclude name="ApexUnitTestClassShouldHaveRunAs"/> <!-- Permitir tests sin System.runAs -->
+        <exclude name="ApexAssertionsShouldIncludeMessage"/> <!-- Permitir asserts sin mensajes -->
     </rule>
 </ruleset>
