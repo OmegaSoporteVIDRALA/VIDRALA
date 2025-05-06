@@ -26,7 +26,7 @@ jobs:
        #     exit 1
        #   fi
       - name: 📝 Verificar variables de entorno
-        run: echo "${{ secrets.SFDX_CLIENT_ID_UAT }}"
+        run: echo "${{ github.SFDX_CLIENT_ID_UAT }}"
 
 
       - name: ✒️ Set Salesforce Environment Variables
