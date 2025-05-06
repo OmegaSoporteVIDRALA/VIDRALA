@@ -28,30 +28,19 @@ jobs:
       - name: 📝 Verificar variables de entorno
         run: echo "${{ github.SFDX_CLIENT_ID_UAT }}"
 
+      - name: Crear archivo JWT desde secreto
+        run: echo "${{ secrets.SFDX_JWT_KEY }}" > server.key
 
-      - name: ✒️ Set Salesforce Environment Variables
-        id: set_sf_env
+      - name: Verificar existencia y tamaño del archivo JWT
         run: |
-          BASE_REF=${{ github.base_ref }}
-          if [[ "$BASE_REF" == "INTEGRA" ]]; then
-            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
-            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
-            echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
-            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
+          if [ -f server.key ]; then
+            echo "✅ Archivo 'server.key' creado correctamente."
+            ls -lh server.key
+          else
+            echo "❌ No se encontró el archivo 'server.key'."
+            exit 1
           fi
-          if [[ "$BASE_REF" == "UAT" ]]; then
-            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
-            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
-            echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
-            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
-          fi
-          if [[ "$BASE_REF" == "MAIN" ]]; then
-            echo "LOGIN_URL=https://login.salesforce.com" >> $GITHUB_ENV
-            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_PROD }}" >> $GITHUB_ENV
-            echo "USERNAME=${{ secrets.SFDX_USERNAME_PROD }}" >> $GITHUB_ENV
-            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
-          fi
-
+          
       - name: ⏳ Install Salesforce CLI
         run: |
           curl -sL https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-x64.tar.xz -o sfdx.tar.xz
