@@ -94,6 +94,15 @@ jobs:
           mv pmd/pmd-bin-6.55.0 pmd-bin
           chmod +x pmd-bin/bin/run.sh
 
+      - name: 📦 Verificar configuración antes de ejecutar PMD
+        run: |
+          echo "Ruta de PMD: ./pmd-bin/bin/run.sh"
+          echo "Ruta de clases Apex: ./pmd/classes"
+          echo "Configuración de reglas: ./config/apex-ruleset.xml"
+          ls -la ./pmd
+          ls -la ./pmd/classes 
+          ls -la ./config/ 
+
       - name: 🔍 Run PMD on test classes
         if: env.testfound == 'true' &&  github.base_ref  == 'UAT' 
         run: |
@@ -101,14 +110,7 @@ jobs:
           ./pmd-bin/bin/run.sh pmd \
             -d ./pmd/classes \
             -R ./config/apex-ruleset.xml \
-            -f xml > ./pmd/pmd-report.xml
-          RESULT=$?
-          if [ $RESULT -eq 1 ] || [ $RESULT -eq 4 ]; then
-            echo "⚠️ PMD encontró violaciones de reglas (exit code $RESULT), pero no se falla el workflow."
-            exit 0
-          else
-            exit $RESULT
-          fi
+            -f xml -v > ./pmd/pmd-report.xml
 
       - name: 📄 Ver contenido del reporte PMD
         run: cat ./pmd/report/pmd-report.xml
