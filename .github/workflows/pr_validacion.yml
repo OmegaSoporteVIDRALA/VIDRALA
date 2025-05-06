@@ -39,9 +39,9 @@ jobs:
           fi
           if [[ "$BASE_REF" == "UAT" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
-            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
-            echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
-            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
             echo "$BASE_REF"
           fi
           if [[ "$BASE_REF" == "MAIN" ]]; then
@@ -70,6 +70,9 @@ jobs:
             --username "$SFDX_USERNAME" \
             --setdefaultdevhubusername \
             --instanceurl "$SFDX_URL"
+      - name: Verify Authentication
+        run: |
+          sfdx force:org:list
 
       - name: 📂 Check if there are Test classes
         id: check_tests
