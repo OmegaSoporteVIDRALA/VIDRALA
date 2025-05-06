@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="Custom Apex Rules with Exclusions"
+<ruleset name="Basic Apex Rules"
          xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.github.io/pmd-6.55.0/pmd-6.55.0.xsd">
+    
+    <description>Basic PMD ruleset for Salesforce Apex development</description>
 
-    <description>PMD ruleset for Apex development with common exclusions</description>
+    <!-- Buenas prácticas generales -->
+    <rule ref="category/apex/bestpractices.xml"/>
 
-    <!--✅ Buenas prácticas generales -->
-    <rule ref="category/apex/bestpractices.xml">
-        <exclude name="ApexUnitTestClassShouldHaveAsserts" />
-    </rule>
+    <!-- Errores comunes -->
+    <rule ref="category/apex/errorprone.xml"/>
 
-    <!--❌ Errores comunes -->
-    <rule ref="category/apex/errorprone.xml">
-        <exclude name="EmptyCatchBlock" />
-        <exclude name="AvoidDirectAccessTriggerMap" />
-    </rule>
-
-    <!--🏗️ Diseño y estructura -->
-    <rule ref="category/apex/design.xml">
-        <exclude name="CyclomaticComplexity" />
-        <exclude name="ExcessiveClassLength" />
-    </rule>
+    <!-- Diseño y estructura -->
+    <rule ref="category/apex/design.xml"/>
 
 </ruleset>
