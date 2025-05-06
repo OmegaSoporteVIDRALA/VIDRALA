@@ -106,15 +106,6 @@ jobs:
           else
             exit $RESULT
           fi
-      - name: 📄 Verificar que el reporte fue generado
-        run: ls -la ./pmd/pmd-report.xml
-
-      - name: 📦 Subir reporte PMD como artefacto
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: pmd-report
-          path: ./pmd/pmd-report.xml
 
       - name: 🤖 Run Apex tests if it was found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
