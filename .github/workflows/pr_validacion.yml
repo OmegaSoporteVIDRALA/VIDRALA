@@ -78,9 +78,12 @@ jobs:
           else
             echo "testfound=false" >> $GITHUB_ENV
           fi
+      # Limpiar caché (opcional)
+      - name: Limpiar caché de GitHub Actions (opcional)
+        run: rm -rf ~/.cache
 
       - name: 🧰 Install PMD
-        if: env.testfound == 'true' &&  github.base_ref  == 'UAT' 
+        if: env.testfound == 'true' && github.base_ref  == 'UAT' 
         run: |
           curl -L -o pmd.zip https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.55.0/pmd-bin-6.55.0.zip
           unzip pmd.zip -d pmd
