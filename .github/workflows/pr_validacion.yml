@@ -83,6 +83,9 @@ jobs:
       - name: Limpiar caché de GitHub Actions (opcional)
         run: rm -rf ~/.cache
 
+      - name: 📄 Ver contenido de las reglas
+        run: cat ./config/apex-ruleset.xml
+
       - name: 🧰 Install PMD
         if: env.testfound == 'true' && github.base_ref  == 'UAT' 
         run: |
@@ -106,7 +109,7 @@ jobs:
           else
             exit $RESULT
           fi
-          
+
       - name: 📄 Ver contenido del reporte PMD
         run: cat ./pmd/report/pmd-report.xml
 
