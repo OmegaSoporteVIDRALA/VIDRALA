@@ -41,17 +41,21 @@ jobs:
             exit 1
           fi
 
-      - name: ⏳ Install Salesforce CLI
+      - name: 🔧 Instalar Salesforce CLI
         run: |
-          npm install --global sfdx-cli
+          npm install --global @salesforce/cli
 
-      - name: Salesforce Authentication
+      - name: 🔐 Autenticarse en Salesforce con JWT
         run: |
           echo "${{ secrets.SFDX_JWT_KEY_UAT }}" > server.key
-          ls -l server.key  # Verifica que el archivo se haya creado correctamente
-          sf org login jwt --client-id ${{ secrets.SFDX_CLIENT_ID_UAT }} --jwt-key-file server.key --username ${{ secrets.SFDX_USERNAME_UAT }} --alias EDP  
+          sf org login jwt \
+            --client-id ${{ secrets.SFDX_CLIENT_ID_UAT }} \
+            --jwt-key-file server.key \
+            --username ${{ secrets.SFDX_USERNAME_UAT }} \
+            --alias test-org \
+            --instance-url "$SFDX_URL"
      
-      - name: Verify Authentication
+      - name: ✍ Verify Authentication
         run: |
           sfdx force:org:list
 
