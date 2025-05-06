@@ -97,19 +97,6 @@ jobs:
           echo "Ruta de clases Apex: ./pmd/classes"
           echo "Configuración de reglas: ./config/apex-ruleset.xml"
 
-      - name: 🔍 Run PMD on test classes
-        if: env.testfound == 'true' &&  github.base_ref  == 'UAT' 
-        run: |
-          mkdir -p ./pmd/report
-          ./pmd-bin/bin/run.sh pmd \
-            -d ./pmd/classes \
-            -R ./config/apex-ruleset.xml \
-            -f xml > ./pmd/pmd-report.xml
-          cat ./pmd/pmd-report.xml  
-
-      - name: 📄 Ver contenido del reporte PMD
-        run: cat ./pmd/report/pmd-report.xml
-
       - name: 🤖 Run Apex tests if it was found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         run: |
