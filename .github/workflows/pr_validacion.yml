@@ -40,13 +40,10 @@ jobs:
             echo "❌ No se encontró el archivo 'server.key'."
             exit 1
           fi
-          
+
       - name: ⏳ Install Salesforce CLI
         run: |
-          curl -sL https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-x64.tar.xz -o sfdx.tar.xz
-          mkdir -p sfdx
-          tar xJf sfdx.tar.xz -C sfdx
-          ./sfdx/install
+          npm install --global sfdx-cli
 
       - name: Salesforce Authentication
         run: |
