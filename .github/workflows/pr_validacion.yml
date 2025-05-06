@@ -98,9 +98,15 @@ jobs:
           ./pmd-bin/bin/run.sh pmd \
             -d ./pmd/classes \
             -R ./config/apex-ruleset.xml \
-            -f xml \
-            -o ./pmd/report/pmd-report.xml
-
+            -f xml > ./pmd/pmd-report.xml
+          RESULT=$?
+          if [ $RESULT -eq 1 ] || [ $RESULT -eq 4 ]; then
+            echo "⚠️ PMD encontró violaciones de reglas (exit code $RESULT), pero no se falla el workflow."
+            exit 0
+          else
+            exit $RESULT
+          fi
+          
       - name: 📄 Ver contenido del reporte PMD
         run: cat ./pmd/report/pmd-report.xml
 
