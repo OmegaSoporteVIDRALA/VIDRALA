@@ -105,6 +105,7 @@ jobs:
             -d ./pmd/classes \
             -R ./config/apex-ruleset.xml \
             -f xml > ./pmd/pmd-report.xml
+          cat ./pmd/pmd-report.xml  
 
       - name: 📄 Ver contenido del reporte PMD
         run: cat ./pmd/report/pmd-report.xml
