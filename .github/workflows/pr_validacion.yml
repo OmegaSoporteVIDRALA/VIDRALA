@@ -26,10 +26,7 @@ jobs:
        #     exit 1
        #   fi
       - name: 📝 Verificar variables de entorno
-        run: |
-          echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}"
-          echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}"
-          echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}"
+        run: echo "${{ secrets.SFDX_CLIENT_ID_UAT }}"
 
 
       - name: ✒️ Set Salesforce Environment Variables
@@ -54,26 +51,20 @@ jobs:
             echo "USERNAME=${{ secrets.SFDX_USERNAME_PROD }}" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
           fi
-        
 
       - name: ⏳ Install Salesforce CLI
         run: |
-          npm install --global sfdx-cli
+          curl -sL https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-x64.tar.xz -o sfdx.tar.xz
+          mkdir -p sfdx
+          tar xJf sfdx.tar.xz -C sfdx
+          ./sfdx/install
 
-      - name: ✍ Authenticate with Salesforce using JWT
-        env:
-          SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
-          SFDX_JWT_KEY: ${{ env.JWT_KEY }}
-          SFDX_USERNAME: ${{ env.USERNAME }}
-          SFDX_URL: ${{ env.LOGIN_URL }}
+      - name: Salesforce Authentication
         run: |
-          echo "$SFDX_JWT_KEY" > server.key
-          sfdx auth:jwt:grant \
-            --clientid "$SFDX_CLIENT_ID" \
-            --jwtkeyfile server.key \
-            --username "$SFDX_USERNAME" \
-            --setdefaultdevhubusername \
-            --instanceurl "$SFDX_URL"
+          echo "${{ secrets.SFDX_JWT_KEY_UAT }}" > server.key
+          ls -l server.key  # Verifica que el archivo se haya creado correctamente
+          sf org login jwt --client-id ${{ secrets.SFDX_CLIENT_ID_UAT }} --jwt-key-file server.key --username ${{ secrets.SFDX_USERNAME_UAT }} --alias EDP  
+     
       - name: Verify Authentication
         run: |
           sfdx force:org:list
