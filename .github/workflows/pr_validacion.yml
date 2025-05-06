@@ -94,7 +94,7 @@ jobs:
       - name: 🔍 Run PMD on test classes
         if: env.testfound == 'true' &&  github.base_ref  == 'UAT' 
         run: |
-          mkdir -p reports/pmd
+          mkdir -p ./pmd/report
           ./pmd-bin/bin/run.sh pmd \
             -d ./pmd/classes \
             -R ./config/apex-ruleset.xml \
