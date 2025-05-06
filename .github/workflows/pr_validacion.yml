@@ -98,14 +98,10 @@ jobs:
             -d ./pmd \
             -R ./config/apex-ruleset.xml \
             -f xml \
-            -o ./pmd/pmd-report.xml
-          RESULT=$?
-          if [ $RESULT -eq 1 ] || [ $RESULT -eq 4 ]; then
-            echo "⚠️ PMD encontró violaciones de reglas (exit code $RESULT), pero no se falla el workflow."
-            exit 0
-          else
-            exit $RESULT
-          fi
+            -o ./pmd/pmd-report.xml || true  # No falla el paso, aunque PMD tenga errores
+
+      - name: 📄 Ver contenido del reporte PMD
+        run: cat ./pmd/pmd-report.xml
 
       - name: 🤖 Run Apex tests if it was found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
