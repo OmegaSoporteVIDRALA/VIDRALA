@@ -21,10 +21,4 @@
         <exclude name="ExcessiveClassLength"/>
         <exclude name="CognitiveComplexity"/> <!-- Excluir métodos con lógica compleja permitida -->
     </rule>
-    <rule ref="category/apex/test.xml">
-        <exclude name="UseAssertInTests"/>
-        <exclude name="ApexUnitTestClassShouldHaveRunAs"/>
-        <exclude name="ApexUnitTestClassShouldHaveRunAs"/> <!-- Permitir tests sin System.runAs -->
-        <exclude name="ApexAssertionsShouldIncludeMessage"/> <!-- Permitir asserts sin mensajes -->
-    </rule>
 </ruleset>
