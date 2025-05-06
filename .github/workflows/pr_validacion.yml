@@ -25,6 +25,12 @@ jobs:
         #    echo "❌ Deployment only allowed to integra, uat or main branches."
        #     exit 1
        #   fi
+      - name: 📝 Verificar variables de entorno
+        run: |
+          echo "CLIENT_ID=$SFDX_CLIENT_ID_UAT"
+          echo "USERNAME=$SFDX_USERNAME_UAT"
+          echo "JWT_KEY=$SFDX_JWT_KEY_UAT"
+
 
       - name: ✒️ Set Salesforce Environment Variables
         id: set_sf_env
@@ -38,9 +44,9 @@ jobs:
           fi
           if [[ "$BASE_REF" == "UAT" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
-            echo "CLIENT_ID=secrets.SFDX_CLIENT_ID_UAT >> $GITHUB_ENV
-            echo "USERNAME=secrets.SFDX_USERNAME_UAT" >> $GITHUB_ENV
-            echo "JWT_KEY=secrets.SFDX_JWT_KEY_UAT" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
           fi
           if [[ "$BASE_REF" == "MAIN" ]]; then
             echo "LOGIN_URL=https://login.salesforce.com" >> $GITHUB_ENV
