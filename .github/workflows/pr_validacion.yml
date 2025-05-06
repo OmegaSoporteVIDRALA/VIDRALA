@@ -52,8 +52,7 @@ jobs:
             --client-id ${{ secrets.SFDX_CLIENT_ID_UAT }} \
             --jwt-key-file server.key \
             --username ${{ secrets.SFDX_USERNAME_UAT }} \
-            --alias test-org \
-            --instance-url "$SFDX_URL"
+            --instance-url https://test.salesforce.com
      
       - name: ✍ Verify Authentication
         run: |
