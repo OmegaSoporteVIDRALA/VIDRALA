@@ -79,9 +79,6 @@ jobs:
           else
             echo "testfound=false" >> $GITHUB_ENV
           fi
-      # Limpiar caché (opcional)
-      - name: Limpiar caché de GitHub Actions (opcional)
-        run: rm -rf ~/.cache
 
       - name: 📄 Ver contenido de las reglas
         run: cat ./config/apex-ruleset.xml
@@ -99,9 +96,6 @@ jobs:
           echo "Ruta de PMD: ./pmd-bin/bin/run.sh"
           echo "Ruta de clases Apex: ./pmd/classes"
           echo "Configuración de reglas: ./config/apex-ruleset.xml"
-          ls -la ./pmd
-          ls -la ./pmd/classes 
-          ls -la ./config/ 
 
       - name: 🔍 Run PMD on test classes
         if: env.testfound == 'true' &&  github.base_ref  == 'UAT' 
@@ -110,7 +104,7 @@ jobs:
           ./pmd-bin/bin/run.sh pmd \
             -d ./pmd/classes \
             -R ./config/apex-ruleset.xml \
-            -f xml -v > ./pmd/pmd-report.xml
+            -f xml > ./pmd/pmd-report.xml
 
       - name: 📄 Ver contenido del reporte PMD
         run: cat ./pmd/report/pmd-report.xml
