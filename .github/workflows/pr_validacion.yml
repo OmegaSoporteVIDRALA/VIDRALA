@@ -27,9 +27,9 @@ jobs:
        #   fi
       - name: 📝 Verificar variables de entorno
         run: |
-          echo "CLIENT_ID=$SFDX_CLIENT_ID_UAT"
-          echo "USERNAME=$SFDX_USERNAME_UAT"
-          echo "JWT_KEY=$SFDX_JWT_KEY_UAT"
+          echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}"
+          echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}"
+          echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}"
 
 
       - name: ✒️ Set Salesforce Environment Variables
