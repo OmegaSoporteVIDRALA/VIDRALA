@@ -51,6 +51,7 @@ jobs:
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
             echo "$BASE_REF"
           fi
+
       - name: ⏳ Install Salesforce CLI
         run: |
           npm install --global sfdx-cli
@@ -73,7 +74,7 @@ jobs:
       - name: 📂 Check if there are Test classes
         id: check_tests
         run: |
-          if find ./pmd -name '*.cls' | grep -q .; then
+          if find ./pmd/classes -name '*.cls' | grep -q .; then
             echo "testfound=true" >> $GITHUB_ENV
           else
             echo "testfound=false" >> $GITHUB_ENV
@@ -95,18 +96,18 @@ jobs:
         run: |
           mkdir -p reports/pmd
           ./pmd-bin/bin/run.sh pmd \
-            -d ./pmd \
+            -d ./pmd/classes \
             -R ./config/apex-ruleset.xml \
             -f xml \
-            -o ./pmd/pmd-report.xml || true  # No falla el paso, aunque PMD tenga errores
+            -o ./pmd/report/pmd-report.xml
 
       - name: 📄 Ver contenido del reporte PMD
-        run: cat ./pmd/pmd-report.xml
+        run: cat ./pmd/report/pmd-report.xml
 
       - name: 🤖 Run Apex tests if it was found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
         run: |
-          TEST_CLASSES=$(find ./pmd -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
+          TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"
           sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json || exit 1
 
