@@ -9,7 +9,6 @@
     <!--✅ Buenas prácticas generales -->
     <rule ref="category/apex/bestpractices.xml">
         <exclude name="ApexUnitTestClassShouldHaveAsserts" />
-        <exclude name="EmptyIfStmt" />
     </rule>
 
     <!--❌ Errores comunes -->
@@ -22,7 +21,6 @@
     <rule ref="category/apex/design.xml">
         <exclude name="CyclomaticComplexity" />
         <exclude name="ExcessiveClassLength" />
-        <exclude name="ExcessiveMethodLength" />
     </rule>
 
 </ruleset>
