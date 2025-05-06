@@ -94,7 +94,8 @@ jobs:
           ./pmd-bin/bin/run.sh pmd \
             -d ./pmd \
             -R ./config/apex-ruleset.xml \
-            -f text
+            -f xml \
+            -o pmd-report.xml
           RESULT=$?
           if [ $RESULT -eq 1 ] || [ $RESULT -eq 4 ]; then
             echo "⚠️ PMD encontró violaciones de reglas (exit code $RESULT), pero no se falla el workflow."
@@ -103,12 +104,12 @@ jobs:
             exit $RESULT
           fi
 
-     # - name: 📎 Guardar reporte de PMD como artefacto
-      #  uses: actions/upload-artifact@v4
-      #  if: always()  # Guardar incluso si el paso anterior falló
-      #  with:
-       #   name: pmd-report
-       #   path: reports/pmd/pmd-report.html
+      - name: 📦 Subir reporte PMD como artefacto
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: pmd-report
+          path: ./pmd/pmd-report.xml
 
       - name: 🤖 Run Apex tests if it was found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
