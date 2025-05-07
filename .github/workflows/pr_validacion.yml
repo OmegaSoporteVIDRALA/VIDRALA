@@ -123,6 +123,7 @@ jobs:
 
           # Extraer ApexClass
           APEX_CLASSES=$(xmllint --xpath "//types[name='ApexClass']/members/text()" "$PACKAGE_XML" 2>/dev/null || true)
+          echo "CLASSES $APEX_CLASSES"
 
           # Extraer ApexTrigger
           APEX_TRIGGERS=$(xmllint --xpath "//types[name='ApexTrigger']/members/text()" "$PACKAGE_XML" 2>/dev/null || true)
