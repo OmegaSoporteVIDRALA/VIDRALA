@@ -56,6 +56,16 @@ jobs:
             echo "EOF" >> $GITHUB_ENV
           fi
 
+      - name: Verificar existencia y tamaño del archivo JWT
+        run: |
+          if [ -f server.key ]; then
+            echo "✅ Archivo 'server.key' creado correctamente."
+            ls -lh server.key
+          else
+            echo "❌ No se encontró el archivo 'server.key'."
+            exit 1
+          fi   
+
       - name: 🔧 Instalar Salesforce CLI
         run: |
           npm install --global @salesforce/cli
@@ -103,7 +113,12 @@ jobs:
         run: |
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"
-          sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json || exit 1
+          sf project deploy start \
+            --manifest force-app/main/manifest/package.xml \
+            --test-level RunSpecifiedTests \
+            --runtests "$TEST_CLASSES" \
+            --dry-run \
+            --json || exit 1
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "UAT" ]]
