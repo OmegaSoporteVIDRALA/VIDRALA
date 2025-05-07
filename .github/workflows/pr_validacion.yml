@@ -58,7 +58,7 @@ jobs:
             exit 1
           fi
 
-      - name: Verificar existencia y tamaño del archivo JWT
+      - name: ✍ Verificar existencia y tamaño del archivo JWT
         run: |
           echo "${{ env.JWT_KEY }}" > server.key
           if [ -f server.key ]; then
@@ -139,7 +139,7 @@ jobs:
           echo "✅ Archivos movidos a $DEST_DIR"
 
 
-      - name: 📂 Check if there are Test classes
+      - name: 🔍 Check if there are Test classes
         id: check_tests
         run: |
           if find ./pmd/classes -name '*.cls' | grep -q .; then
@@ -177,4 +177,4 @@ jobs:
          sf deploy metadata validate \
             --target-org SF \
             --manifest ./manifest/package.xml \
-            --test-level NoTestRun || exit 1
+            --test-level RunLocalTests  || exit 1
