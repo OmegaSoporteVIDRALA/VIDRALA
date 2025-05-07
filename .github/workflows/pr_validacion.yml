@@ -73,6 +73,24 @@ jobs:
         run: |
           npm install --global sfdx-cli
      
+      - name: 🧪 Verificar CLI instalada
+        run: |
+          echo "🔍 Verificando CLI instalada..."
+          
+          if command -v sf &> /dev/null; then
+            echo "✅ sf CLI instalada:"
+            sf --version
+          else
+            echo "❌ sf CLI NO está instalada."
+          fi
+
+          if command -v sfdx &> /dev/null; then
+            echo "✅ sfdx CLI instalada:"
+            sfdx --version
+          else
+            echo "❌ sfdx CLI NO está instalada."
+          fi
+
       - name: 🔐 Autenticarse en Salesforce con JWT
         env:
           SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
