@@ -124,7 +124,7 @@ jobs:
             --tests "$TEST_CLASSES" \
             --wait 10 || exit 1
             
-      - name: ⏰ Validate Salesforce components if no Apex tests was found without generating quick deploy in Salesforce
+      - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false'
         run: |
          echo "📭 No test classes found. Validating components without tests..."
