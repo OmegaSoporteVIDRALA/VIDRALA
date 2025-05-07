@@ -58,6 +58,7 @@ jobs:
 
       - name: Verificar existencia y tamaño del archivo JWT
         run: |
+          echo "${{ env.JWT_KEY }}" > server.key
           if [ -f server.key ]; then
             echo "✅ Archivo 'server.key' creado correctamente."
             ls -lh server.key
