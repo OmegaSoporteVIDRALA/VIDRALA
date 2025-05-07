@@ -174,7 +174,7 @@ jobs:
         if: env.testfound == 'false'
         run: |
          echo "📭 No test classes found. Validating components without tests..."
-         sf deploy metadata validate \   
+         sf project deploy validate \   
             --manifest ./manifest/package.xml \
             --metadata-dir ./manifest_only/ \
             --target-org SF \
