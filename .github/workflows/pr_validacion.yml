@@ -115,13 +115,12 @@ jobs:
         run: |
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"
-          sf project deploy start \
+          sf deploy metadata validate \
+            --target-org SF \
             --manifest manifest/package.xml \
             --test-level RunSpecifiedTests \
-            --runtests "$TEST_CLASSES" \
-            --target-org SF \
-            --dry-run \
-            --json || exit 1
+            --tests "$TEST_CLASSES" \
+            --wait 10 || exit 1
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "UAT" ]]
