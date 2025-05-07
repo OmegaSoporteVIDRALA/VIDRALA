@@ -112,31 +112,26 @@ jobs:
           echo "🔍 Analizando package.xml..."
 
           # Extraer ApexClass
-          CLASS_NAMES=$(xmllint --xpath "//types/name[text()='ApexClass']/following-sibling::members" "$PACKAGE_XML" | sed 's/<members>//g' | sed 's/<\/members>//g')
+          CLASS_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexClass']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
           echo "📚 Resultado de APEX_CLASSES: '$APEX_CLASSES'"
 
           # Extraer ApexTrigger
-          TRIGGER_NAMES=$(xmllint --xpath "//types/name[text()='ApexTrigger']/following-sibling::members" "$PACKAGE_XML" | sed 's/<members>//g' | sed 's/<\/members>//g')
+          TRIGGER_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexTrigger']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
           echo "🧩 Resultado de APEX_TRIGGERS: '$APEX_TRIGGERS'"
 
-          # Mover las clases y triggers listados en el package.xml a la carpeta de despliegue
-          for CLASS in $CLASS_NAMES; do
-            if [ -f "$SOURCE_DIR/$CLASS.cls" ]; then
-              mv "$SOURCE_DIR/$CLASS.cls" "$DEST_DIR_CLASSES/"
-            fi
-            if [ -f "$SOURCE_DIR/$CLASS.cls-meta.xml" ]; then
-              mv "$SOURCE_DIR/$CLASS.cls-meta.xml" "$DEST_DIR_CLASSES/"
-            fi
+          # Copiar clases
+          IFS=$'\n'
+          for class in $CLASS_NAMES; do
+            echo "📦 Copiando clase: $class"
+            cp "force-app/main/default/classes/${class}.cls" "$DEST_DIR/" 2>/dev/null
+            cp "force-app/main/default/classes/${class}.cls-meta.xml" "$DEST_DIR/" 2>/dev/null
           done
 
-          # Mover ApexTriggers
-          for TRIGGER in $TRIGGER_NAMES; do
-            if [ -f "$TRIGGERS_DIR/$TRIGGER.trigger" ]; then
-              mv "$TRIGGERS_DIR/$TRIGGER.trigger" "$DEST_DIR_TRIGGERS/"
-            fi
-            if [ -f "$TRIGGERS_DIR/$TRIGGER.trigger-meta.xml" ]; then
-              mv "$TRIGGERS_DIR/$TRIGGER.trigger-meta.xml" "$DEST_DIR_TRIGGERS/"
-            fi
+          # Copiar triggers
+          for trigger in $TRIGGER_NAMES; do
+            echo "📦 Copiando trigger: $trigger"
+            cp "force-app/main/default/triggers/${trigger}.trigger" "$DEST_DIR/" 2>/dev/null
+            cp "force-app/main/default/triggers/${trigger}.trigger-meta.xml" "$DEST_DIR/" 2>/dev/null
           done
 
           echo "✅ Archivos movidos a $DEST_DIR"
