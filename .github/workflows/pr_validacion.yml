@@ -72,7 +72,6 @@ jobs:
       - name: 🔧 Instalar Salesforce CLI
         run: |
           npm install --global @salesforce/cli
-          sf plugins install @salesforce/sfdx-plugin
 
       - name: 🔐 Autenticarse en Salesforce con JWT
         env:
