@@ -224,7 +224,7 @@ jobs:
           echo "📭 No test classes found. Validating components without tests..."
 
           # Ejecutar validación sin incluir Apex clases si no hay tests
-           sf project deploy validate \
+           sf deploy metadata validate \
               --metadata-dir manifest_only \
               --target-org SF \
               --test-level RunLocalTests || exit 1
