@@ -15,7 +15,7 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
-     # - name: Determine target branch
+     # - name: ✒️ Determine target branch
        # id: check_branch
        # run: |
        #   echo "TARGET_BRANCH=${{ github.event.workflow_run.pull_requests[0].base.ref }}" >> $GITHUB_ENV
@@ -25,20 +25,28 @@ jobs:
         #    echo "❌ Deployment only allowed to integra, uat or main branches."
        #     exit 1
        #   fi
-      - name: 📝 Verificar variables de entorno
-        run: echo "${{ github.SFDX_CLIENT_ID_UAT }}"
-
-      - name: Crear archivo JWT desde secreto
-        run: echo "${{ secrets.SFDX_JWT_KEY }}" > server.key
-
-      - name: Verificar existencia y tamaño del archivo JWT
+        
+      - name: 📝 Set Salesforce Environment Variables
+        id: set_sf_env
         run: |
-          if [ -f server.key ]; then
-            echo "✅ Archivo 'server.key' creado correctamente."
-            ls -lh server.key
-          else
-            echo "❌ No se encontró el archivo 'server.key'."
-            exit 1
+          BASE_REF=${{ github.base_ref }}
+          if [[ "$BASE_REF" == "INTEGRA" ]]; then
+            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
+          fi
+          if [[ "$BASE_REF" == "UAT" ]]; then
+            echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
+          fi
+          if [[ "$BASE_REF" == "MAIN" ]]; then
+            echo "LOGIN_URL=https://login.salesforce.com" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_PROD }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_PROD }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
           fi
 
       - name: 🔧 Instalar Salesforce CLI
@@ -46,13 +54,18 @@ jobs:
           npm install --global @salesforce/cli
 
       - name: 🔐 Autenticarse en Salesforce con JWT
+        env:
+          SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
+          SFDX_JWT_KEY: ${{ env.JWT_KEY }}
+          SFDX_USERNAME: ${{ env.USERNAME }}
+          SFDX_URL: ${{ env.LOGIN_URL }}
         run: |
           echo "${{ secrets.SFDX_JWT_KEY_UAT }}" > server.key
           sf org login jwt \
-            --client-id ${{ secrets.SFDX_CLIENT_ID_UAT }} \
+            --client-id "$SFDX_CLIENT_ID" \
             --jwt-key-file server.key \
-            --username ${{ secrets.SFDX_USERNAME_UAT }} \
-            --instance-url https://test.salesforce.com
+            --username "$SFDX_USERNAME" \
+            --instance-url "$SFDX_URL"
      
       - name: ✍ Verify Authentication
         run: |
@@ -77,12 +90,6 @@ jobs:
           unzip pmd.zip -d pmd
           mv pmd/pmd-bin-6.55.0 pmd-bin
           chmod +x pmd-bin/bin/run.sh
-
-      - name: 📦 Verificar configuración antes de ejecutar PMD
-        run: |
-          echo "Ruta de PMD: ./pmd-bin/bin/run.sh"
-          echo "Ruta de clases Apex: ./pmd/classes"
-          echo "Configuración de reglas: ./config/apex-ruleset.xml"
 
       - name: 🤖 Run Apex tests if it was found
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
