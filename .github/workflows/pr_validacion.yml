@@ -68,23 +68,10 @@ jobs:
             echo "❌ No se encontró el archivo 'server.key'."
             exit 1
           fi   
- 
-      - name: 🔧 Set up Salesforce CLI (sfdx)
+
+      - name: 🔧 Instalar Salesforce CLI
         run: |
-          # Descargar el archivo de Salesforce CLI
-          curl -L https://developer.salesforce.com/media/salesforce-cli/sfdx-linux_amd64.tar.xz -o sfdx-linux.tar.xz
-          
-          # Verificar que el archivo se haya descargado correctamente
-          ls -lh sfdx-linux.tar.xz
-
-          # Descomprimir el archivo
-          mkdir sfdx
-          tar -xvf sfdx-linux.tar.xz -C sfdx
-          ls -lh sfdx
-
-          # Instalar Salesforce CLI
-          ./sfdx/install
-          export PATH=$PATH:$(pwd)/sfdx
+          npm install --global @salesforce/cli
 
       - name: 🔐 Autenticarse en Salesforce con JWT
         env:
@@ -94,11 +81,11 @@ jobs:
           SFDX_URL: ${{ env.LOGIN_URL }}
         run: |
           echo "$SFDX_JWT_KEY" > server.key
-          sfdx force:auth:jwt:grant \
-            --clientid "$SFDX_CLIENT_ID" \
-            --jwtkeyfile server.key \
+          sf org login jwt \
+            --client-id "$SFDX_CLIENT_ID" \
+            --jwt-key-file server.key \
             --username "$SFDX_USERNAME" \
-            --instanceurl "$SFDX_URL" \
+            --instance-url "$SFDX_URL" \
             --alias SF
      
       - name: ✍ Verify Authentication
@@ -141,10 +128,10 @@ jobs:
         if: env.testfound == 'false'
         run: |
          echo "📭 No test classes found. Validating components without tests..."
-          sfdx force:source:deploy \
-            --targetusername "$SFDX_USERNAME" \
+         sf deploy metadata validate \
+            --target-org SF \
             --manifest manifest/package.xml \
-            --checkonly \
-            --testlevel NoTestRun || exit 1
+            --test-level RunLocalTests
+            --wait 10 || exit 1
 
             
