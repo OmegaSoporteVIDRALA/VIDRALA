@@ -3,7 +3,7 @@
     <fullName>ClienteVIP__c</fullName>
     <description>Vidrala require - this is how they score clients at the end of the year i.e. yes we want them</description>
     <label>Scoring</label>
-    <required>true</required>
+    <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <type>Picklist</type>
