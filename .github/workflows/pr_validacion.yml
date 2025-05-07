@@ -112,36 +112,26 @@ jobs:
           mv pmd/pmd-bin-6.55.0 pmd-bin
           chmod +x pmd-bin/bin/run.sh
 
-      - name: 🤖 Run Apex tests if it was found generating quick deploy in Salesforce
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "MAIN" ]]
+      - name: 🤖 Run Apex tests if it was found 
+        if: env.testfound == 'true'
         run: |
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
-          echo "Validating components with specific tests: $TEST_CLASSES...."
+          echo "🧪 Validating components with specific tests: $TEST_CLASSES...."
           sf deploy metadata validate \
             --manifest manifest/package.xml \
             --target-org SF \
             --test-level RunSpecifiedTests \
             --tests "$TEST_CLASSES" \
-            --async || exit 1
-      
-      - name: 🧪 Run Apex tests if it was found without generating quick deploy in Salesforce
-        if: ${{ env.testfound == 'true' && github.base_ref != 'MAIN' }}
-        run: |
-          TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
-          echo "Validating components with specific tests: $TEST_CLASSES...."
-          sf deploy metadata validate \
-            --target-org SF \
-            --manifest manifest/package.xml \
-            --test-level RunSpecifiedTests \
-            --tests "$TEST_CLASSES" || exit 1
+            --wait 10 || exit 1
             
       - name: ⏰ Validate Salesforce components if no Apex tests was found without generating quick deploy in Salesforce
-        if: ${{ env.testfound == 'false' && github.base_ref != 'MAIN' }}
+        if: env.testfound == 'false'
         run: |
          echo "📭 No test classes found. Validating components without tests..."
          sf deploy metadata validate \
             --target-org SF \
             --manifest manifest/package.xml \
-            --test-level NoTestRun || exit 1
+            --test-level NoTestRun \
+            --wait 10 || exit 1
 
             
