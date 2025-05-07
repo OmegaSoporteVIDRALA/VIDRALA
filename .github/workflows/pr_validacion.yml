@@ -92,9 +92,6 @@ jobs:
         run: |
           sfdx force:org:list
 
-      - name: 🛠️ Instalar xmllint
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
-
       - name: 🧹 Vaciar directorio de clases temporales
         run: |
           echo "Vaciando el directorio ./pmd/classes..."
@@ -122,41 +119,64 @@ jobs:
       - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
         if: steps.analyze_package.outputs.generate_manifest_only == 'false'
         run: |
+          # 🛠️ Instalar xmllint si no está disponible
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+
           # Directorios de origen y destino
           PACKAGE_XML="./manifest/package.xml"
           DEST_DIR="./pmd/classes"
           SRC_CLASSES_DIR="./force-app/main/default/classes"
           SRC_TRIGGERS_DIR="./force-app/main/default/triggers"
 
-          echo "📦 Package path: $PACKAGE_XML"
-
-          echo "🔍 Analizando package.xml..."
+          echo "📦 Analizando: $PACKAGE_XML"
 
           # Extraer ApexClass
           CLASS_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexClass']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
-          echo "📚 Resultado de APEX_CLASSES: '$CLASS_NAMES'"
 
           # Extraer ApexTrigger
           TRIGGER_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexTrigger']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
-          echo "🧩 Resultado de APEX_TRIGGERS: '$TRIGGER_NAMES'"
+
+          # Separar múltiples entradas si vienen en una sola línea
+          CLASS_NAMES=$(echo "$CLASS_NAMES" | tr ' ' '\n')
+          TRIGGER_NAMES=$(echo "$TRIGGER_NAMES" | tr ' ' '\n')
+
+          echo "📚 Clases a copiar:"
+          echo "$CLASS_NAMES"
+          echo "🧩 Triggers a copiar:"
+          echo "$TRIGGER_NAMES"
+
+          # Crear el directorio destino si no existe
+          mkdir -p "$DEST_DIR"
 
           # Copiar clases
-          IFS=$'\n'
           for class in $CLASS_NAMES; do
-            echo "📦 Copiando clase: $class"
-            cp "force-app/main/default/classes/${class}.cls" "$DEST_DIR/" 2>/dev/null
-            cp "force-app/main/default/classes/${class}.cls-meta.xml" "$DEST_DIR/" 2>/dev/null
+            echo "➡️ Procesando clase: '$class'"
+            if [[ -f "$SRC_CLASSES_DIR/${class}.cls" ]]; then
+              cp "$SRC_CLASSES_DIR/${class}.cls" "$DEST_DIR/"
+              cp "$SRC_CLASSES_DIR/${class}.cls-meta.xml" "$DEST_DIR/"
+              echo "✅ Clase copiada: $class"
+            else
+              echo "⚠️ Clase no encontrada: $class"
+            fi
           done
 
           # Copiar triggers
           for trigger in $TRIGGER_NAMES; do
-            echo "📦 Copiando trigger: $trigger"
-            cp "force-app/main/default/triggers/${trigger}.trigger" "$DEST_DIR/" 2>/dev/null
-            cp "force-app/main/default/triggers/${trigger}.trigger-meta.xml" "$DEST_DIR/" 2>/dev/null
+            echo "➡️ Procesando trigger: '$trigger'"
+            if [[ -f "$SRC_TRIGGERS_DIR/${trigger}.trigger" ]]; then
+              cp "$SRC_TRIGGERS_DIR/${trigger}.trigger" "$DEST_DIR/"
+              cp "$SRC_TRIGGERS_DIR/${trigger}.trigger-meta.xml" "$DEST_DIR/"
+              echo "✅ Trigger copiado: $trigger"
+            else
+              echo "⚠️ Trigger no encontrado: $trigger"
+            fi
           done
 
-          echo "✅ Archivos movidos a $DEST_DIR"
+          # Verificar los archivos copiados en el directorio destino
+          echo "📂 Archivos en el directorio $DEST_DIR después de la copia:"
+          ls -l "$DEST_DIR"
 
+          echo "✅ Archivos movidos a $DEST_DIR"
 
       - name: 🔍 Check if there are Test classes
         id: check_tests
