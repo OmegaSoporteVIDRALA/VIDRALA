@@ -225,5 +225,4 @@ jobs:
          sf deploy metadata validate \  
             --manifest ./manifest/package.xml \
             --target-org SF \
-            --test-level RunLocalTests \
-            --dry-run || exit 1
+            --test-level RunLocalTests || exit 1
