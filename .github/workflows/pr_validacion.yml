@@ -119,48 +119,6 @@ jobs:
             echo "generate_manifest_only=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: 📦 Preparar manifest_only sin clases ni triggers
-        if: steps.analyze_package.outputs.generate_manifest_only == 'true'
-        run: |
-          mkdir -p manifest_only
-          SRC_BASE="force-app/main/default"
-          DEST_BASE="manifest_only"
-
-          # Eliminar namespace para facilitar XPath
-          sed 's/xmlns="[^"]*"//' ./manifest/package.xml > clean-package.xml
-
-          # Extraer todos los pares tipo/miembro del XML
-          types=()
-          while IFS= read -r type_block; do
-            type=$(echo "$type_block" | xmllint --xpath 'string(//types/name)' - 2>/dev/null)
-            echo "$type_block" | xmllint --xpath '//types/members/text()' - 2>/dev/null | tr ' ' '\n' | while read member; do
-              if [ -n "$member" ]; then
-                # Ruta de tipo: convierte ApexPage → pages, ApexClass → classes, etc.
-                folder=$(echo "$type" | sed -e 's/\([A-Z]\)/ \1/g' | awk '{print tolower($0)}' | tr -d ' ' | sed 's/\b\(.\)/\u\1/g' | tr '[:upper:]' '[:lower:]')
-                
-                # Ruta especial si existen nombres estándar
-                case "$type" in
-                  ApexClass) folder="classes" ;;
-                  ApexTrigger) folder="triggers" ;;
-                  ApexPage) folder="pages" ;;
-                  ApexComponent) folder="components" ;;
-                  StaticResource) folder="staticresources" ;;
-                  CustomObject) folder="objects" ;;
-                esac
-
-                src_dir="$SRC_BASE/$folder"
-                dest_dir="$DEST_BASE/$folder"
-                mkdir -p "$dest_dir"
-
-                # Copiar archivos que coincidan con el nombre del miembro
-                find "$src_dir" -maxdepth 1 -type f -name "$member*" -exec cp {} "$dest_dir/" \; 2>/dev/null || true
-              fi
-            done
-          done < <(csplit -sz clean-package.xml '/<types>/+1' '{*}' | grep -v '^\s*$')
-
-          echo "✅ Todos los componentes del package.xml copiados a manifest_only"
-          find manifest_only -type f
-
       - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
         if: steps.analyze_package.outputs.generate_manifest_only == 'false'
         run: |
@@ -238,6 +196,7 @@ jobs:
 
           # Ejecutar validación sin incluir Apex clases si no hay tests
            sf deploy metadata validate \
-              --metadata-dir ./manifest_only \
+              --manifest ./manifest/package.xml \
               --target-org SF \
-              --test-level RunLocalTests || exit 1
+              --test-level RunSpecifiedTests \
+              --tests DummyClass || exit 1
