@@ -100,9 +100,57 @@ jobs:
           echo "Vaciando el directorio ./pmd/classes..."
           rm -rf ./pmd/classes/{*,.*} || true
 
-      - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
+      - name: 🔍 Analizar package.xml para buscar ApexClass o ApexTrigger
+        id: analyze_package
         run: |
+          PACKAGE_XML="./manifest/package.xml"
+          TEMP_XML=$(mktemp)
+          sed 's/xmlns="[^"]*"//' "$PACKAGE_XML" > "$TEMP_XML"
 
+          APEX_CLASS_COUNT=$(xmllint --xpath "count(//types[name='ApexClass'])" "$TEMP_XML")
+          TRIGGER_COUNT=$(xmllint --xpath "count(//types[name='ApexTrigger'])" "$TEMP_XML")
+
+          echo "Apex classes: $APEX_CLASS_COUNT"
+          echo "Triggers: $TRIGGER_COUNT"
+
+          if [ "$APEX_CLASS_COUNT" -eq 0 ] && [ "$TRIGGER_COUNT" -eq 0 ]; then
+            echo "generate_manifest_only=true" >> $GITHUB_OUTPUT
+          else
+            echo "generate_manifest_only=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📦 Preparar manifest_only desde package.xml
+        if: steps.analyze_package.outputs.generate_manifest_only == 'true'
+        run: |
+          SOURCE_DIR="./force-app"
+          DEST_DIR="./manifest_only"
+          PACKAGE_XML="./manifest/package.xml"
+
+          rm -rf "$DEST_DIR"
+          mkdir -p "$DEST_DIR"
+
+          CLEAN_XML=$(mktemp)
+          # Eliminar xmlns para poder usar xpath más fácilmente
+          sed 's/xmlns="[^"]*"//' "$PACKAGE_XML" > "$CLEAN_XML"
+
+          mapfile -t TYPES < <(xmllint --xpath "//types" "$CLEAN_XML" 2>/dev/null | grep -oPm1 "(?<=<name>)[^<]+")
+          for TYPE in "${TYPES[@]}"; do
+            mapfile -t MEMBERS < <(xmllint --xpath "//types[name='$TYPE']/members/text()" "$CLEAN_XML" 2>/dev/null | tr ' ' '\n')
+            for MEMBER in "${MEMBERS[@]}"; do
+              FILES=$(find "$SOURCE_DIR" -type f -regextype posix-extended \
+                      \( -iname "${MEMBER}.*" -o -iname "${MEMBER}-meta.xml" \) 2>/dev/null || true)
+              for FILE in $FILES; do
+                DEST_PATH="$DEST_DIR/$(dirname "$FILE" | cut -d/ -f2-)"
+                mkdir -p "$DEST_PATH"
+                cp "$FILE" "$DEST_PATH/"
+              done
+            done
+          done
+          rm "$CLEAN_XML"
+
+      - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
+        if: steps.analyze_package.outputs.generate_manifest_only == 'false'
+        run: |
           # Directorios de origen y destino
           PACKAGE_XML="./manifest/package.xml"
           DEST_DIR="./pmd/classes"
@@ -174,8 +222,9 @@ jobs:
         if: env.testfound == 'false'
         run: |
          echo "📭 No test classes found. Validating components without tests..."
-         sf project deploy validate \   
+         sf project deploy start \   
             --manifest ./manifest/package.xml \
             --metadata-dir ./manifest_only/ \
             --target-org SF \
-            --test-level RunLocalTests  || exit 1
+            --test-level RunLocalTests \
+            --dry-run || exit 1
