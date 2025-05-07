@@ -122,35 +122,43 @@ jobs:
       - name: 📦 Preparar manifest_only sin clases ni triggers
         if: steps.analyze_package.outputs.generate_manifest_only == 'true'
         run: |
-          SOURCE_DIR="./force-app"
-          DEST_DIR="./manifest_only/force-app/main/default"
-          PACKAGE_XML="./manifest/package.xml"
+          mkdir -p manifest_only
+          SRC_BASE="force-app/main/default"
+          DEST_BASE="manifest_only"
 
-          rm -rf "$DEST_DIR"
-          mkdir -p "$DEST_DIR"
+          # Eliminar namespace para facilitar XPath
+          sed 's/xmlns="[^"]*"//' ./manifest/package.xml > clean-package.xml
 
-          CLEAN_XML=$(mktemp)
-          # Eliminar xmlns para poder usar xpath más fácilmente
-          sed 's/xmlns="[^"]*"//' "$PACKAGE_XML" > "$CLEAN_XML"
+          # Extraer todos los pares tipo/miembro del XML
+          types=()
+          while IFS= read -r type_block; do
+            type=$(echo "$type_block" | xmllint --xpath 'string(//types/name)' - 2>/dev/null)
+            echo "$type_block" | xmllint --xpath '//types/members/text()' - 2>/dev/null | tr ' ' '\n' | while read member; do
+              if [ -n "$member" ]; then
+                # Ruta de tipo: convierte ApexPage → pages, ApexClass → classes, etc.
+                folder=$(echo "$type" | sed -e 's/\([A-Z]\)/ \1/g' | awk '{print tolower($0)}' | tr -d ' ' | sed 's/\b\(.\)/\u\1/g' | tr '[:upper:]' '[:lower:]')
+                
+                # Ruta especial si existen nombres estándar
+                case "$type" in
+                  ApexClass) folder="classes" ;;
+                  ApexTrigger) folder="triggers" ;;
+                  ApexPage) folder="pages" ;;
+                  ApexComponent) folder="components" ;;
+                  StaticResource) folder="staticresources" ;;
+                  CustomObject) folder="objects" ;;
+                esac
 
-          mapfile -t TYPES < <(xmllint --xpath "//types" "$CLEAN_XML" 2>/dev/null | grep -oPm1 "(?<=<name>)[^<]+")
-          for TYPE in "${TYPES[@]}"; do
-            mapfile -t MEMBERS < <(xmllint --xpath "//types[name='$TYPE']/members/text()" "$CLEAN_XML" 2>/dev/null | tr ' ' '\n')
-            for MEMBER in "${MEMBERS[@]}"; do
-              FILES=$(find "$SOURCE_DIR" -type f -regextype posix-extended \
-                      \( -iname "${MEMBER}.*" -o -iname "${MEMBER}-meta.xml" \) 2>/dev/null || true)
-              for FILE in $FILES; do
-                DEST_PATH="$DEST_DIR/$(dirname "$FILE" | cut -d/ -f2-)"
-                mkdir -p "$DEST_PATH"
-                cp "$FILE" "$DEST_PATH/"
-              done
+                src_dir="$SRC_BASE/$folder"
+                dest_dir="$DEST_BASE/$folder"
+                mkdir -p "$dest_dir"
+
+                # Copiar archivos que coincidan con el nombre del miembro
+                find "$src_dir" -maxdepth 1 -type f -name "$member*" -exec cp {} "$dest_dir/" \; 2>/dev/null || true
+              fi
             done
-          done
-          rm "$CLEAN_XML"
+          done < <(csplit -sz clean-package.xml '/<types>/+1' '{*}' | grep -v '^\s*$')
 
-      - name: 📂 Mostrar contenido de manifest_only
-        run: |
-          echo "Contenido de manifest_only:"
+          echo "✅ Todos los componentes del package.xml copiados a manifest_only"
           find manifest_only -type f
 
       - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
