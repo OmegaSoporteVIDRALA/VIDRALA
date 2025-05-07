@@ -83,7 +83,8 @@ jobs:
             --client-id "$SFDX_CLIENT_ID" \
             --jwt-key-file server.key \
             --username "$SFDX_USERNAME" \
-            --instance-url "$SFDX_URL"
+            --instance-url "$SFDX_URL" \
+            --alias SF
      
       - name: ✍ Verify Authentication
         run: |
@@ -118,6 +119,7 @@ jobs:
             --manifest manifest/package.xml \
             --test-level RunSpecifiedTests \
             --runtests "$TEST_CLASSES" \
+            --target-org SF \
             --dry-run \
             --json || exit 1
 
