@@ -110,6 +110,50 @@ jobs:
         run: |
           sfdx force:org:list
 
+      - name: 📂 Mover Apex Classes y Triggers listados en package.xml
+        run: |
+          PACKAGE_XML="manifest/package.xml"
+          DEST_DIR="pmd/classes"
+          SRC_CLASSES_DIR="force-app/main/default/classes"
+          SRC_TRIGGERS_DIR="force-app/main/default/triggers"
+
+          mkdir -p "$DEST_DIR"
+
+          echo "🔍 Analizando package.xml..."
+
+          # Extraer ApexClass
+          APEX_CLASSES=$(xmllint --xpath "//types[name='ApexClass']/members/text()" "$PACKAGE_XML" 2>/dev/null || true)
+
+          # Extraer ApexTrigger
+          APEX_TRIGGERS=$(xmllint --xpath "//types[name='ApexTrigger']/members/text()" "$PACKAGE_XML" 2>/dev/null || true)
+
+          # Mover ApexClass
+          if [ ! -z "$APEX_CLASSES" ]; then
+            echo "📚 Clases Apex encontradas: $APEX_CLASSES"
+            IFS=' ' read -r -a CLASS_ARRAY <<< "$APEX_CLASSES"
+            for cls in "${CLASS_ARRAY[@]}"; do
+              for ext in ".cls" "-meta.xml"; do
+                FILE="$SRC_CLASSES_DIR/${cls}${ext}"
+                [ -f "$FILE" ] && mv "$FILE" "$DEST_DIR/"
+              done
+            done
+          fi
+
+          # Mover ApexTriggers
+          if [ ! -z "$APEX_TRIGGERS" ]; then
+            echo "🧩 Triggers encontrados: $APEX_TRIGGERS"
+            IFS=' ' read -r -a TRIGGER_ARRAY <<< "$APEX_TRIGGERS"
+            for trg in "${TRIGGER_ARRAY[@]}"; do
+              for ext in ".trigger" "-meta.xml"; do
+                FILE="$SRC_TRIGGERS_DIR/${trg}${ext}"
+                [ -f "$FILE" ] && mv "$FILE" "$DEST_DIR/"
+              done
+            done
+          fi
+
+          echo "✅ Archivos movidos a $DEST_DIR"
+
+
       - name: 📂 Check if there are Test classes
         id: check_tests
         run: |
@@ -149,7 +193,7 @@ jobs:
          sf deploy metadata validate \
             --target-org SF \
             --manifest manifest/package.xml \
-            --test-level NoTestRun \
+            --test-level RunLocalTests \
             --json || exit 1
 
             
