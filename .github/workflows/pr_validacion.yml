@@ -81,12 +81,12 @@ jobs:
           SFDX_URL: ${{ env.LOGIN_URL }}
         run: |
           echo "$SFDX_JWT_KEY" > server.key
-          sf org login jwt \
+          sfdx auth:jwt:grant \
             --client-id "$SFDX_CLIENT_ID" \
             --jwt-key-file server.key \
             --username "$SFDX_USERNAME" \
             --instance-url "$SFDX_URL" \
-            --alias SF
+            --setalias SF
 
       - name: ✍ Verify Authentication
         run: |
