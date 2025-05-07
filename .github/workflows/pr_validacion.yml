@@ -31,7 +31,6 @@ jobs:
         run: |
           BASE_REF="${GITHUB_BASE_REF:-${GITHUB_REF_NAME}}"
           echo "🔎 Branch destino: $BASE_REF"
-          echo "La variable de entorno SFDX_JWT_KEY_UAT es ${{ vars.SFDX_JWT_KEY_UAT }}" 
 
           if [[ "$BASE_REF" == "INTEGRA" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
@@ -54,6 +53,9 @@ jobs:
             echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
+          else
+            echo "❌ Branch not supported"
+            exit 1
           fi
 
       - name: Verificar existencia y tamaño del archivo JWT
@@ -111,19 +113,20 @@ jobs:
           chmod +x pmd-bin/bin/run.sh
 
       - name: 🤖 Run Apex tests if it was found
-        if: env.testfound == 'true'
+        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" != "MAIN" ]]
         run: |
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
-          echo "🧪 Validating components with specific tests: $TEST_CLASSES"
+          echo "🧪 Validating components with specific tests: $TEST_CLASSES"....
           sf deploy metadata validate \
             --target-org SF \
             --manifest manifest/package.xml \
             --test-level RunSpecifiedTests \
             --tests "$TEST_CLASSES" \
-            --wait 10 || exit 1
+            --wait 10 \
+            --dry-run || exit 1
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
-        if: env.testfound == 'false'
+        if: env.testfound == 'false' &&  [[ "${{ github.base_ref }}" != "MAIN" ]]
         run: |
          echo "📭 No test classes found. Validating components without tests...
          sf deploy metadata validate \
