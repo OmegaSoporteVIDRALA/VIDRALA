@@ -100,10 +100,10 @@ jobs:
         run: |
           echo "$SFDX_JWT_KEY" > server.key
           sfdx force:auth:jwt:grant \
-            --client-id "$SFDX_CLIENT_ID" \
-            --jwt-key-file server.key \
+            --clientid "$SFDX_CLIENT_ID" \
+            --jwtkeyfile server.key \
             --username "$SFDX_USERNAME" \
-            --instance-url "$SFDX_URL" \
+            --instanceurl "$SFDX_URL" \
             --setalias SF
 
       - name: ✍ Verify Authentication
