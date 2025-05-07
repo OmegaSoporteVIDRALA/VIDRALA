@@ -131,7 +131,6 @@ jobs:
          sf deploy metadata validate \
             --target-org SF \
             --manifest manifest/package.xml \
-            --test-level NoTestRun \
             --wait 10 || exit 1
 
             

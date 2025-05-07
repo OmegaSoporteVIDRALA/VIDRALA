@@ -77,5 +77,4 @@ jobs:
           sf deploy metadata \
             --target-org SF \
             --manifest manifest/package.xml \
-            --test-level NoTestRun \
             --wait 10
