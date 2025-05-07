@@ -221,8 +221,14 @@ jobs:
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false'
         run: |
-         echo "📭 No test classes found. Validating components without tests..."
-         sf deploy metadata validate \  
-            --manifest ./manifest/package.xml \
-            --target-org SF \
-            --test-level RunLocalTests || exit 1
+          echo "📭 No test classes found. Validating components without tests..."
+
+          # Elimina namespace XML para que sf CLI no lo interprete mal
+          sed 's/xmlns="[^"]*"//' ./manifest/package.xml > clean-package.xml
+
+          # Ejecutar validación sin incluir Apex clases si no hay tests
+
+           sf project deploy validate \  
+              --manifest clean-package.xml \
+              --target-org SF \
+              --test-level RunLocalTests || exit 1
