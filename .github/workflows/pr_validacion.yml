@@ -110,11 +110,11 @@ jobs:
           echo "🔍 Analizando package.xml..."
 
           # Extraer ApexClass
-          CLASS_NAMES=$(xmllint --xpath "//types/name[text()='ApexClass']/following-sibling::members" package.xml | sed 's/<members>//g' | sed 's/<\/members>//g')
+          CLASS_NAMES=$(xmllint --xpath "//types/name[text()='ApexClass']/following-sibling::members" "$PACKAGE_PATH" | sed 's/<members>//g' | sed 's/<\/members>//g')
           echo "📚 Resultado de APEX_CLASSES: '$APEX_CLASSES'"
 
           # Extraer ApexTrigger
-          TRIGGER_NAMES=$(xmllint --xpath "//types/name[text()='ApexTrigger']/following-sibling::members" package.xml | sed 's/<members>//g' | sed 's/<\/members>//g')
+          TRIGGER_NAMES=$(xmllint --xpath "//types/name[text()='ApexTrigger']/following-sibling::members" "$PACKAGE_PATH" | sed 's/<members>//g' | sed 's/<\/members>//g')
           echo "🧩 Resultado de APEX_TRIGGERS: '$APEX_TRIGGERS'"
 
           # Mover las clases y triggers listados en el package.xml a la carpeta de despliegue
