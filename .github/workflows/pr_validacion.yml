@@ -118,7 +118,7 @@ jobs:
           TRIGGER_COUNT=$(echo "$TRIGGER_NAMES" | wc -w)
           echo "🧩 Número de triggers en el package.xml: $TRIGGER_COUNT"
 
-          if [ "$APEX_CLASS_COUNT" -eq 0 ] || [ "$TRIGGER_COUNT" -eq 0 ]; then
+          if [ "$CLASS_COUNT" -eq 0 ] && [ "$TRIGGER_COUNT" -eq 0 ]; then
             echo "generate_manifest_only=true" >> $GITHUB_OUTPUT
           else
             echo "generate_manifest_only=false" >> $GITHUB_OUTPUT
