@@ -115,7 +115,7 @@ jobs:
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"
           sf project deploy start \
-            --manifest force-app/main/manifest/package.xml \
+            --manifest manifest/package.xml \
             --test-level RunSpecifiedTests \
             --runtests "$TEST_CLASSES" \
             --dry-run \
