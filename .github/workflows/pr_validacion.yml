@@ -103,17 +103,22 @@ jobs:
       - name: 🔍 Analizar package.xml para buscar ApexClass o ApexTrigger
         id: analyze_package
         run: |
+          # Ruta al package.xml
           PACKAGE_XML="./manifest/package.xml"
-          TEMP_XML=$(mktemp)
-          sed 's/xmlns="[^"]*"//' "$PACKAGE_XML" > "$TEMP_XML"
 
-          CLASS_COUNT=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexClass']/../*[local-name()='members']/text()" "$TEMP_XML" | wc -w)
-          TRIGGER_COUNT=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexTrigger']/../*[local-name()='members']/text()" "$TEMP_XML" | wc -w)
+          echo "📦 Analizando el archivo package.xml: $PACKAGE_XML"
 
-          echo "📚 Apex classes: $APEX_CLASS_COUNT"
-          echo "🧩 Triggers: $TRIGGER_COUNT"
+          # Contar ApexClass
+          CLASS_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexClass']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
+          CLASS_COUNT=$(echo "$CLASS_NAMES" | wc -w)
+          echo "📚 Número de clases Apex en el package.xml: $CLASS_COUNT"
 
-          if [ "$APEX_CLASS_COUNT" -eq 0 ] && [ "$TRIGGER_COUNT" -eq 0 ]; then
+          # Contar ApexTrigger
+          TRIGGER_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexTrigger']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
+          TRIGGER_COUNT=$(echo "$TRIGGER_NAMES" | wc -w)
+          echo "🧩 Número de triggers en el package.xml: $TRIGGER_COUNT"
+
+          if [ "$APEX_CLASS_COUNT" -eq 0 ] || [ "$TRIGGER_COUNT" -eq 0 ]; then
             echo "generate_manifest_only=true" >> $GITHUB_OUTPUT
           else
             echo "generate_manifest_only=false" >> $GITHUB_OUTPUT
