@@ -119,6 +119,7 @@ jobs:
             echo "generate_manifest_only=false" >> $GITHUB_OUTPUT
           fi
 
+
       - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
         if: steps.analyze_package.outputs.generate_manifest_only == 'false'
         run: | 
