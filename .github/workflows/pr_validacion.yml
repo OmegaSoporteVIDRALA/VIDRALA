@@ -92,6 +92,9 @@ jobs:
         run: |
           sfdx force:org:list
 
+      - name: 🛠️ Instalar xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
       - name: 🧹 Vaciar directorio de clases temporales
         run: |
           echo "Vaciando el directorio ./pmd/classes..."
@@ -118,10 +121,7 @@ jobs:
 
       - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
         if: steps.analyze_package.outputs.generate_manifest_only == 'false'
-        run: |
-          # 🛠️ Instalar xmllint si no está disponible
-          sudo apt-get update && sudo apt-get install -y libxml2-utils
-
+        run: | 
           # Directorios de origen y destino
           PACKAGE_XML="./manifest/package.xml"
           DEST_DIR="./pmd/classes"
@@ -177,6 +177,7 @@ jobs:
           ls -l "$DEST_DIR"
 
           echo "✅ Archivos movidos a $DEST_DIR"
+
 
       - name: 🔍 Check if there are Test classes
         id: check_tests
