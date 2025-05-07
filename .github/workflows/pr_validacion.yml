@@ -228,7 +228,7 @@ jobs:
 
           # Ejecutar validación sin incluir Apex clases si no hay tests
 
-           sf project deploy validate \  
+           sf project deploy validate \
               --manifest clean-package.xml \
               --target-org SF \
               --test-level RunLocalTests || exit 1
