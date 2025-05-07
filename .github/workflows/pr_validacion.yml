@@ -119,11 +119,11 @@ jobs:
             echo "generate_manifest_only=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: 📦 Preparar manifest_only desde package.xml
+      - name: 📦 Preparar manifest_only sin clases ni triggers
         if: steps.analyze_package.outputs.generate_manifest_only == 'true'
         run: |
           SOURCE_DIR="./force-app"
-          DEST_DIR="./manifest_only"
+          DEST_DIR="./manifest_only/force-app/main/default"
           PACKAGE_XML="./manifest/package.xml"
 
           rm -rf "$DEST_DIR"
@@ -147,6 +147,11 @@ jobs:
             done
           done
           rm "$CLEAN_XML"
+
+      - name: 📂 Mostrar contenido de manifest_only
+        run: |
+          echo "Contenido de manifest_only:"
+          find manifest_only -type f
 
       - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
         if: steps.analyze_package.outputs.generate_manifest_only == 'false'
@@ -225,6 +230,6 @@ jobs:
 
           # Ejecutar validación sin incluir Apex clases si no hay tests
            sf deploy metadata validate \
-              --metadata-dir manifest_only \
+              --metadata-dir ./manifest_only \
               --target-org SF \
               --test-level RunLocalTests || exit 1
