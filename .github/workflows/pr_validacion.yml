@@ -99,7 +99,7 @@ jobs:
           SFDX_URL: ${{ env.LOGIN_URL }}
         run: |
           echo "$SFDX_JWT_KEY" > server.key
-          sfdx auth:jwt:grant \
+          sfdx force:auth:jwt:grant \
             --client-id "$SFDX_CLIENT_ID" \
             --jwt-key-file server.key \
             --username "$SFDX_USERNAME" \
