@@ -68,12 +68,21 @@ jobs:
             echo "❌ No se encontró el archivo 'server.key'."
             exit 1
           fi   
-
+ 
       - name: 🔧 Set up Salesforce CLI (sfdx)
         run: |
-          curl https://developer.salesforce.com/media/salesforce-cli/sfdx-linux_amd64.tar.xz -o sfdx-linux.tar.xz
+          # Descargar el archivo de Salesforce CLI
+          curl -L https://developer.salesforce.com/media/salesforce-cli/sfdx-linux_amd64.tar.xz -o sfdx-linux.tar.xz
+          
+          # Verificar que el archivo se haya descargado correctamente
+          ls -lh sfdx-linux.tar.xz
+
+          # Descomprimir el archivo
           mkdir sfdx
           tar -xvf sfdx-linux.tar.xz -C sfdx
+          ls -lh sfdx
+
+          # Instalar Salesforce CLI
           ./sfdx/install
           export PATH=$PATH:$(pwd)/sfdx
 
