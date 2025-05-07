@@ -146,10 +146,11 @@ jobs:
         if: env.testfound == 'false'
         run: |
          echo "📭 No test classes found. Validating components without tests..."
-         sf deploy metadata validate \
-            --target-org SF \
-            --manifest manifest/package.xml \
-            --test-level RunLocalTests
-            --wait 10 || exit 1
+         sfdx force:source:deploy \
+            -x manifest/package.xml \
+            --checkonly \
+            --testlevel NoTestRun \
+            --targetusername SF \
+            --json || exit 1
 
             
