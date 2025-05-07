@@ -72,24 +72,9 @@ jobs:
       - name: 🔧 Instalar Salesforce CLI
         run: |
           npm install --global @salesforce/cli
-          
-      - name: 🧪 Verificar CLI instalada
-        run: |
-          echo "🔍 Verificando CLI instalada..."
-          
-          if command -v sf &> /dev/null; then
-            echo "✅ sf CLI instalada:"
-            sf --version
-          else
-            echo "❌ sf CLI NO está instalada."
-          fi
-
-          if command -v sfdx &> /dev/null; then
-            echo "✅ sfdx CLI instalada:"
-            sfdx --version
-          else
-            echo "❌ sfdx CLI NO está instalada."
-          fi
+      
+      - name: 🛠️ Instalar xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
       - name: 🔐 Autenticarse en Salesforce con JWT
         env:
@@ -110,7 +95,7 @@ jobs:
         run: |
           sfdx force:org:list
 
-      - name: 📂 Mover Apex Classes y Triggers listados en package.xml
+      - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
         run: |
           PACKAGE_XML="manifest/package.xml"
           DEST_DIR="pmd/classes"
@@ -123,10 +108,11 @@ jobs:
 
           # Extraer ApexClass
           APEX_CLASSES=$(xmllint --xpath "//types[name='ApexClass']/members/text()" "$PACKAGE_XML" 2>/dev/null || true)
-          echo "CLASSES $APEX_CLASSES"
+          echo "🧪 Resultado de APEX_CLASSES: '$APEX_CLASSES'"
 
           # Extraer ApexTrigger
           APEX_TRIGGERS=$(xmllint --xpath "//types[name='ApexTrigger']/members/text()" "$PACKAGE_XML" 2>/dev/null || true)
+          echo "🧪 Resultado de APEX_CLASSES: '$APEX_TRIGGERS'"
 
           # Mover ApexClass
           if [ ! -z "$APEX_CLASSES" ]; then
@@ -135,7 +121,7 @@ jobs:
             for cls in "${CLASS_ARRAY[@]}"; do
               for ext in ".cls" "-meta.xml"; do
                 FILE="$SRC_CLASSES_DIR/${cls}${ext}"
-                [ -f "$FILE" ] && mv "$FILE" "$DEST_DIR/"
+                [ -f "$FILE" ] && cp "$FILE" "$DEST_DIR/"
               done
             done
           fi
@@ -147,7 +133,7 @@ jobs:
             for trg in "${TRIGGER_ARRAY[@]}"; do
               for ext in ".trigger" "-meta.xml"; do
                 FILE="$SRC_TRIGGERS_DIR/${trg}${ext}"
-                [ -f "$FILE" ] && mv "$FILE" "$DEST_DIR/"
+                [ -f "$FILE" ] && cp "$FILE" "$DEST_DIR/"
               done
             done
           fi
