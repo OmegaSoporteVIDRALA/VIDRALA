@@ -113,11 +113,11 @@ jobs:
 
           # Extraer ApexClass
           CLASS_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexClass']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
-          echo "📚 Resultado de APEX_CLASSES: '$APEX_CLASSES'"
+          echo "📚 Resultado de APEX_CLASSES: '$CLASS_NAMES'"
 
           # Extraer ApexTrigger
           TRIGGER_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexTrigger']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
-          echo "🧩 Resultado de APEX_TRIGGERS: '$APEX_TRIGGERS'"
+          echo "🧩 Resultado de APEX_TRIGGERS: '$TRIGGER_NAMES'"
 
           # Copiar clases
           IFS=$'\n'
@@ -166,8 +166,7 @@ jobs:
             --manifest ./manifest/package.xml \
             --target-org SF \
             --test-level RunSpecifiedTests \
-            --tests "$TEST_CLASSES" \
-            --json || exit 1
+            --tests "$TEST_CLASSES" || exit 1
             
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false'
