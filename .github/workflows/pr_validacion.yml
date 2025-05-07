@@ -111,7 +111,7 @@ jobs:
           chmod +x pmd-bin/bin/run.sh
 
       - name: 🤖 Run Apex tests if it was found
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "UAT" ]]
+        if: env.testfound == 'true'
         run: |
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"
@@ -123,7 +123,11 @@ jobs:
             --wait 10 || exit 1
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
-        if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "UAT" ]]
+        if: env.testfound == 'false'
         run: |
-         echo "📭 No test classes found. Validating components without tests..."
-         sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel NoTestRun --json || exit 1
+         echo "📭 No test classes found. Validating components without tests...
+         sf deploy metadata validate \
+            --target-org SF \
+            --manifest manifest/package.xml \
+            --test-level NoTestRun \
+            --wait 10 || exit 1
