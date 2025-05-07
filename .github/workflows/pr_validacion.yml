@@ -72,9 +72,6 @@ jobs:
       - name: 🔧 Instalar Salesforce CLI
         run: |
           npm install --global @salesforce/cli
-      
-      - name: 🛠️ Instalar xmllint
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
       - name: 🔐 Autenticarse en Salesforce con JWT
         env:
@@ -95,12 +92,16 @@ jobs:
         run: |
           sfdx force:org:list
 
+      - name: 🛠️ Instalar xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
       - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
         run: |
-          PACKAGE_XML="manifest/package.xml"
-          DEST_DIR="pmd/classes"
-          SRC_CLASSES_DIR="force-app/main/default/classes"
-          SRC_TRIGGERS_DIR="force-app/main/default/triggers"
+          # Directorios de origen y destino
+          PACKAGE_XML="./manifest/package.xml"
+          DEST_DIR="./pmd/classes"
+          SRC_CLASSES_DIR="./force-app/main/default/classes"
+          SRC_TRIGGERS_DIR="./force-app/main/default/triggers"
 
           mkdir -p "$DEST_DIR"
 
@@ -112,7 +113,7 @@ jobs:
 
           # Extraer ApexTrigger
           APEX_TRIGGERS=$(xmllint --xpath "//types[name='ApexTrigger']/members/text()" "$PACKAGE_XML" 2>/dev/null || true)
-          echo "🧪 Resultado de APEX_CLASSES: '$APEX_TRIGGERS'"
+          echo "🧪 Resultado de APEX_TRIGGERS: '$APEX_TRIGGERS'"
 
           # Mover ApexClass
           if [ ! -z "$APEX_CLASSES" ]; then
@@ -167,7 +168,7 @@ jobs:
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES...."
           sf deploy metadata validate \
-            --manifest manifest/package.xml \
+            --manifest ./manifest/package.xml \
             --target-org SF \
             --test-level RunSpecifiedTests \
             --tests "$TEST_CLASSES" \
@@ -179,7 +180,7 @@ jobs:
          echo "📭 No test classes found. Validating components without tests..."
          sf deploy metadata validate \
             --target-org SF \
-            --manifest manifest/package.xml \
+            --manifest ./manifest/package.xml \
             --test-level RunLocalTests \
             --json || exit 1
 
