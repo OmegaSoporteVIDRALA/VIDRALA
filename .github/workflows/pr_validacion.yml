@@ -72,6 +72,7 @@ jobs:
       - name: 🔧 Instalar Salesforce CLI
         run: |
           npm install --global @salesforce/cli
+          sf plugins install @salesforce/sfdx-plugin
 
       - name: 🔐 Autenticarse en Salesforce con JWT
         env:
@@ -117,13 +118,12 @@ jobs:
         run: |
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"....
-          sf deploy metadata validate \
-            --target-org SF \
-            --manifest manifest/package.xml \
-            --test-level RunSpecifiedTests \
-            --tests "$TEST_CLASSES" \
-            --wait 10 \
-            --dry-run || exit 1
+          sfdx force:source:deploy \
+            -x manifest/package.xml \
+            --targetusername SF \
+            --checkonly \
+            --testlevel  "$TEST_CLASSES" \
+            --wait 10 || exit 1
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false' &&  [[ "${{ github.base_ref }}" != "MAIN" ]]
