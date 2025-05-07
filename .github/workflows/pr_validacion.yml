@@ -29,6 +29,9 @@ jobs:
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
         run: |
+          BASE_REF="${GITHUB_BASE_REF:-${GITHUB_REF_NAME}}"
+          echo "🔎 Branch destino: $BASE_REF"
+
           if [[ "$BASE_REF" == "INTEGRA" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
@@ -57,7 +60,7 @@ jobs:
           SFDX_USERNAME: ${{ env.USERNAME }}
           SFDX_URL: ${{ env.LOGIN_URL }}
         run: |
-          echo "${{ secrets.SFDX_JWT_KEY_UAT }}" > server.key
+          echo "$JWT_KEY" > server.key
           sf org login jwt \
             --client-id "$SFDX_CLIENT_ID" \
             --jwt-key-file server.key \
