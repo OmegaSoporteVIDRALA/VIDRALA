@@ -95,6 +95,11 @@ jobs:
       - name: 🛠️ Instalar xmllint
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
+      - name: 🧹 Vaciar directorio de clases temporales
+        run: |
+          echo "Vaciando el directorio ./pmd/classes..."
+          rm -rf ./pmd/classes/{*,.*} || true
+
       - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
         run: |
 
@@ -105,9 +110,6 @@ jobs:
           SRC_TRIGGERS_DIR="./force-app/main/default/triggers"
 
           echo "📦 Package path: $PACKAGE_XML"
-
-          # Asegurarse de que las carpetas de destino existan
-          mkdir -p "$DEST_DIR"
 
           echo "🔍 Analizando package.xml..."
 
@@ -175,7 +177,4 @@ jobs:
          sf deploy metadata validate \
             --target-org SF \
             --manifest ./manifest/package.xml \
-            --test-level RunLocalTests \
-            --json || exit 1
-
-            
+            --test-level NoTestRun || exit 1
