@@ -69,29 +69,25 @@ jobs:
             exit 1
           fi   
 
-      - name: Download Salesforce CLI
+      - name: 🔧 Instalar Salesforce CLI (sfdx)
         run: |
-         # Descargar el archivo tar.xz de Salesforce CLI
-         curl -L https://developer.salesforce.com/media/salesforce-cli/sfdx-linux_amd64.tar.xz -o sfdx-linux.tar.xz
-
-      - name: Extract Salesforce CLI
-        run: |
-          # Descomprimir el archivo
-          mkdir sfdx
-          tar -xvf sfdx-linux.tar.xz -C sfdx
-
-      - name: Install Salesforce CLI
-        run: |
-          # Instalar Salesforce CLI
-          ./sfdx/install
-          export PATH=$PATH:$(pwd)/sfdx
-
-      - name: Verify Salesforce CLI Installation
-        run: |
-          # Verificar la instalación de Salesforce CLI
-          sfdx --version
-          sfdx --help
+          npm install --global sfdx-cli
      
+      - name: 🔐 Autenticarse en Salesforce con JWT
+        env:
+          SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
+          SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_UAT }}
+          SFDX_USERNAME: ${{ env.USERNAME }}
+          SFDX_URL: ${{ env.LOGIN_URL }}
+        run: |
+          echo "$SFDX_JWT_KEY" > server.key
+          sf org login jwt \
+            --client-id "$SFDX_CLIENT_ID" \
+            --jwt-key-file server.key \
+            --username "$SFDX_USERNAME" \
+            --instance-url "$SFDX_URL" \
+            --alias SF
+
       - name: ✍ Verify Authentication
         run: |
           sfdx force:org:list
