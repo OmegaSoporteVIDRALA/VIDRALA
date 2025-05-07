@@ -112,18 +112,18 @@ jobs:
           mv pmd/pmd-bin-6.55.0 pmd-bin
           chmod +x pmd-bin/bin/run.sh
 
-      - name: 🤖 Run Apex tests if it was found
+      - name: 🤖 Run Apex tests if it was found generating quick deploy in Salesforce
         if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" != "MAIN" ]]
         run: |
           TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
           echo "🧪 Validating components with specific tests: $TEST_CLASSES"....
-          sfdx force:source:deploy \
-            -x manifest/package.xml \
-            --targetusername SF \
-            --checkonly \
-            --testlevel  "$TEST_CLASSES" \
-            --wait 10 || exit 1
-
+          sf deploy metadata validate \
+            --manifest manifest/package.xml \
+            --target-org SF \
+            --test-level RunSpecifiedTests \
+            --tests "$TEST_CLASSES" \
+            --async || exit 1
+            
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false' &&  [[ "${{ github.base_ref }}" != "MAIN" ]]
         run: |
