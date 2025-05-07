@@ -66,7 +66,7 @@ jobs:
           SFDX_USERNAME: ${{ env.USERNAME }}
           SFDX_URL: ${{ env.LOGIN_URL }}
         run: |
-          echo "$JWT_KEY" > server.key
+          echo "$SFDX_JWT_KEY" > server.key
           sf org login jwt \
             --client-id "$SFDX_CLIENT_ID" \
             --jwt-key-file server.key \
