@@ -16,7 +16,6 @@ public with sharing class OM_VID_OpportunityTRGHandler {
 
 	public static Boolean getbyPassApex(){
 		return byPassApex;
-        
 	}
 
     public static void execute(
