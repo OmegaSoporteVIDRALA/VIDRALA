@@ -222,13 +222,15 @@ jobs:
           mkdir -p .gh-deploy-data
           echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
 
-      - name: 📤 Commit deployment ID
+      - name: 📤 Upload validated deploy ID as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: validated-deploy-id
+          path: .gh-deploy-data/validated-deploy-id.txt
+
+      - name: 🧹 Clean deployment data folder
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .gh-deploy-data/validated-deploy-id.txt
-          git commit -m "Add validated deploy ID [skip ci]"
-          git push
+          rm -rf .gh-deploy-data
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false'
