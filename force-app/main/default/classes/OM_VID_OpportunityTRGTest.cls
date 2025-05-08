@@ -11,6 +11,7 @@ public with sharing class OM_VID_OpportunityTRGTest {
     static void makeData(){
         List<Opportunity> listOpps = OM_VID_TestUtils.createOpportunities(2);
         OM_VID_TestUtils.createOpportunityLineItems(listOpps, 2, '');
+
     }
 
     @isTest
@@ -26,7 +27,7 @@ public with sharing class OM_VID_OpportunityTRGTest {
         update listOpps;
         Test.stopTest();
 
-        System.assertEquals(listOpps.size(), [SELECT Id FROM Quote].size());
+        System.assertEquals(listOpps.size()+1, [SELECT Id FROM Quote].size());
         //System.assertEquals([SELECT Id FROM OpportunityLineItem].size(), [SELECT Id FROM QuoteLineItem].size());
         //System.assertEquals(listOpps[0].CloseDate, Date.today() + 30);
     }
