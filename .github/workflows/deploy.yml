@@ -1,26 +1,23 @@
 name: 🚀 Deploy after Merge to Integra or UAT
 
 on:
-  workflow_run:
-    workflows: ["📝 Validate Salesforce PR"]
-    types:
-      - completed
+  pull_request:
+    types: [closed]
+    branches:
+      - INTEGRA
+      - UAT
 
 jobs:
 
   deploy:
-    if: >
-      ${{ github.event.workflow_run.conclusion == 'success' &&
-          github.event.workflow_run.pull_requests[0].merged == true &&
-          (github.event.workflow_run.pull_requests[0].base.ref == 'INTEGRA' ||
-           github.event.workflow_run.pull_requests[0].base.ref == 'UAT') }}
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout the Pull Request merge commit
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
 
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
@@ -70,17 +67,25 @@ jobs:
         run: |
           sfdx force:org:list
           
-      - name: 📥 Download validated deploy ID artifact
+      - name: 📥 Descargar artifact validated-deploy-id
         uses: actions/download-artifact@v4
         with:
           name: validated-deploy-id
           path: .gh-deploy-data
 
+      - name: 🕵️ Verificar existencia del archivo validated-deploy-id.txt
+        run: |
+          if [ ! -f .gh-deploy-data/validated-deploy-id.txt ]; then
+            echo "❌ No se encontró el archivo validated-deploy-id.txt. Abortando."
+            exit 1
+          fi
+          echo "✅ Archivo validated-deploy-id.txt encontrado correctamente."
+
       - name: 📖 Read Deployment ID
         id: read_id
         run: |
           DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
-          echo "✅ Deployment ID encontrado: $DEPLOY_ID"
+          echo "🔁 Quick deploying job ID: $DEPLOY_ID"
           echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
 
       - name: 🚀 Quick Deploy
