@@ -2,23 +2,22 @@ name: 🚀 Deploy after Merge to Integra or UAT
 
 on:
   workflow_run:
-    workflows: ["📝 Validate Salesforce PR"]  # nombre exacto del otro workflow
+    workflows: ["📝 Validate Salesforce PR"] 
     types:
       - completed
 
 jobs:
 
   deploy:
-    if: >
-      ${{ github.event.workflow_run.conclusion == 'success' &&
-          github.event.workflow_run.pull_requests[0].merged == true }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the Pull Request merge commit
+      - name: 🔄 Checkout repo al commit del workflow anterior
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.merge_commit_sha }}
+          repository: ${{ github.event.repository.full_name }}
+          ref: ${{ github.event.workflow_run.head_commit.id }}
 
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
