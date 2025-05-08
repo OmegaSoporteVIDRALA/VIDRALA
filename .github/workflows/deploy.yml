@@ -70,26 +70,22 @@ jobs:
         run: |
           sfdx force:org:list
           
-      - name: 📥 Download validated deploy ID
+      - name: 📥 Download validated deploy ID artifact
         uses: actions/download-artifact@v4
         with:
           name: validated-deploy-id
+          path: .gh-deploy-data
 
-      - name: 🔍 Verificar si el artifact fue descargado
+      - name: 📖 Read Deployment ID
+        id: read_id
         run: |
-          if [ ! -f "./validated-deploy-id.txt" ]; then
-            echo "❌ No se pudo encontrar el artifact validated-deploy-id. Abortando el despliegue."
-            exit 1
-          fi
-
-      - name: 🔍 Extraer ID de despliegue validado
-        run: |
-          DEPLOY_ID=$(cat validated-deploy-id.txt)
-          echo "🔁 Quick deploying job ID: $DEPLOY_ID"
+          DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
+          echo "✅ Deployment ID encontrado: $DEPLOY_ID"
           echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
 
       - name: 🚀 Quick Deploy
         run: |
+          echo "Realizando quick deploy con ID: $DEPLOY_ID"
           sf deploy metadata quick \
             --target-org SF \
             --job-id "$DEPLOY_ID"
