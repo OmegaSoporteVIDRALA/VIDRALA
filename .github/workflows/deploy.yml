@@ -75,9 +75,17 @@ jobs:
         with:
           name: validated-deploy-id
 
+      - name: 🔍 Verificar si el artifact fue descargado
+        run: |
+          if [ ! -f "./validated-deploy-id.txt" ]; then
+            echo "❌ No se pudo encontrar el artifact validated-deploy-id. Abortando el despliegue."
+            exit 1
+          fi
+
       - name: 🔍 Extraer ID de despliegue validado
         run: |
           DEPLOY_ID=$(cat validated-deploy-id.txt)
+          echo "🔁 Quick deploying job ID: $DEPLOY_ID"
           echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
 
       - name: 🚀 Quick Deploy
@@ -85,3 +93,7 @@ jobs:
           sf deploy metadata quick \
             --target-org SF \
             --job-id "$DEPLOY_ID"
+
+      - name: 🧹 Limpiar carpetas ocultas
+        run: |
+          rm -rf .gh-deploy-data || true
