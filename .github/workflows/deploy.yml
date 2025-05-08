@@ -1,4 +1,4 @@
-name: Deploy after Validation
+name: 🚀 Deploy after Validation
 
 on:
   workflow_run:
@@ -7,18 +7,24 @@ on:
       - completed
 
 jobs:
+
   deploy:
     if: >
       ${{
         github.event.workflow_run.conclusion == 'success' &&
         (
-          github.event.workflow_run.head_branch == 'INTEGRA' ||
-          github.event.workflow_run.head_branch == 'UAT'
+          github.event.workflow_run.head_branch == 'integra' ||
+          github.event.workflow_run.head_branch == 'uat'
         )
       }}
     runs-on: ubuntu-latest
 
     steps:
+      - name: 🔍 Debug Info
+        run: |
+          echo "head_branch: ${{ github.event.workflow_run.head_branch }}"
+          echo "conclusion: ${{ github.event.workflow_run.conclusion }}"
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -77,4 +83,5 @@ jobs:
           sf deploy metadata \
             --target-org SF \
             --manifest manifest/package.xml \
+            --testlevel RunLocalTests \
             --wait 10
