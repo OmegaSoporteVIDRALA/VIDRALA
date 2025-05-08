@@ -1,48 +1,79 @@
-name: Deploy after Validation
+name: 🚀 Deploy after Merge to Integra or UAT
 
 on:
-  workflow_run:
-    workflows: ["Validate Pull Request"]
-    types:
-      - completed
+  push:
+    branches:
+      - INTEGRA
+      - UAT
 
 jobs:
+
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    env:
-      PACKAGE_XML: force-app/main/manifest/package.xml
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set Salesforce Environment Variables
+      - name: 📥 Download validated deploy ID
+        uses: actions/download-artifact@v4
+        with:
+          name: validated-deploy-id
+
+      - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
         run: |
-          if [[ "${{ github.event.workflow_run.head_branch }}" == "integra" ]]; then
+          BASE_REF=$(echo "${GITHUB_REF##*/}")
+          echo "🔎 Branch destino: $BASE_REF"
+
+          if [[ "$BASE_REF" == "INTEGRA" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
+            echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
-          elif [[ "${{ github.event.workflow_run.head_branch }}" == "uat" ]]; then
+            echo "EOF" >> $GITHUB_ENV
+          elif [[ "$BASE_REF" == "UAT" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
+            echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
           else
+            echo "❌ Branch not supported"
             exit 1
           fi
 
-
-      - name: Authenticate with Salesforce
-        uses: amitsingh-007/sfdx-authenticate@v1.2
-        with:
-          client-id: ${{ env.CLIENT_ID }}
-          username: ${{ env.USERNAME }}
-          jwt-key: ${{ env.JWT_KEY }}
-          instance-url: ${{ env.LOGIN_URL }}
-
-      - name: 🚀 Deploy to Salesforce
+      - name: 🔧 Instalar Salesforce CLI
         run: |
-          sfdx force:source:deploy -x $PACKAGE_XML --json --verbose
+          npm install --global @salesforce/cli
+
+      - name: 🔐 Autenticarse en Salesforce con JWT
+        env:
+          SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
+          SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_UAT }}
+          SFDX_USERNAME: ${{ env.USERNAME }}
+          SFDX_URL: ${{ env.LOGIN_URL }}
+        run: |
+          echo "$SFDX_JWT_KEY" > server.key
+          sf org login jwt \
+            --client-id "$SFDX_CLIENT_ID" \
+            --jwt-key-file server.key \
+            --username "$SFDX_USERNAME" \
+            --instance-url "$SFDX_URL" \
+            --alias SF
+     
+      - name: ✍ Verify Authentication
+        run: |
+          sfdx force:org:list
+
+      - name: 🚀 Quick Deploy
+        run: |
+          DEPLOY_ID=$(cat validated-deploy-id.txt)
+          echo "🔁 Quick deploying job ID: $DEPLOY_ID"
+          echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
+
+          sf deploy metadata quick \
+            --target-org SF \
+            --job-id "$DEPLOY_ID"
