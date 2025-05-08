@@ -1,6 +1,8 @@
 <!-- Banner image -->
-
-<img src="assets/vidrala.jpg"/> CI/CD Salesforce - Powered by GitHub Actions
+<p align="left">
+  <img src="assets/vidrala.jpg" alt="CI/CD Salesforce Vidrala"/>
+</p>
+# 🚀 CI/CD Salesforce - Powered by GitHub Actions
 
 <p align="center">
             
