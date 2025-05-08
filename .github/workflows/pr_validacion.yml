@@ -225,7 +225,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: validated-deploy-id
-          path: validation-result.txt
+          path: validated-deploy-id.txt
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false'
