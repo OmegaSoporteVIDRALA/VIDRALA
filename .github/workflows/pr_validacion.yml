@@ -6,6 +6,7 @@ on:
 
 jobs:
   validate:
+    name : Salesforce Validation
     runs-on: ubuntu-latest
     
     steps:
@@ -214,8 +215,18 @@ jobs:
             --manifest ./manifest/package.xml \
             --target-org SF \
             --test-level RunSpecifiedTests \
-            --tests "$TEST_CLASSES" || exit 1
-            
+            --tests "$TEST_CLASSES" \
+            --json > validation-result.json || exit 1
+
+          jq -r '.result.id' validation-result.json > validated-deploy-id.txt
+          echo "DEPLOYMENT_ID=$(cat validated-deploy-id.txt)" >> $GITHUB_ENV 
+
+      - name: 📤 Save Deployment ID
+        uses: actions/upload-artifact@v4
+        with:
+          name: validated-deploy-id
+          path: validation-result.txt
+
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false'
         run: |
