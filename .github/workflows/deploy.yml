@@ -1,28 +1,26 @@
 name: 🚀 Deploy after Merge to Integra or UAT
 
 on:
-  pull_request:
-    types: [closed]
-    branches:
-      - INTEGRA
-      - UAT
+  workflow_run:
+    workflows: ["📝 Validate Salesforce PR"]
+    types:
+      - completed
 
 jobs:
 
   deploy:
-    if: github.event.pull_request.merged == true
+    if: >
+      ${{ github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.pull_requests[0].merged == true &&
+          (github.event.workflow_run.pull_requests[0].base.ref == 'INTEGRA' ||
+           github.event.workflow_run.pull_requests[0].base.ref == 'UAT') }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout the Pull Request merge commit
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.merge_commit_sha }}
-
-      - name: ⬇️ Checkout destination branch with tracking
-        run: |
-          git fetch origin ${{ github.event.pull_request.base.ref }}
-          git checkout -b target-branch origin/${{ github.event.pull_request.base.ref }}
+          ref: ${{ github.event.workflow_run.head_sha }}
 
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
@@ -71,17 +69,15 @@ jobs:
       - name: ✍ Verify Authentication
         run: |
           sfdx force:org:list
-
-      - name: 📥 Read validated deploy ID
-        id: read_id
-        run: |
-          DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
-          echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
+          
+      - name: 📥 Download validated deploy ID
+        uses: actions/download-artifact@v4
+        with:
+          name: validated-deploy-id
 
       - name: 🔍 Extraer ID de despliegue validado
         run: |
           DEPLOY_ID=$(cat validated-deploy-id.txt)
-          echo "🔁 Quick deploying job ID: $DEPLOY_ID"
           echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
 
       - name: 🚀 Quick Deploy
@@ -89,15 +85,3 @@ jobs:
           sf deploy metadata quick \
             --target-org SF \
             --job-id "$DEPLOY_ID"
-
-      - name: 🧽 Limpiar archivo de deployment ID
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
-          git fetch origin ${{ github.event.pull_request.base.ref }}
-          git checkout -b target-branch origin/${{ github.event.pull_request.base.ref }}
-      
-          git rm -f .gh-deploy-data/validated-deploy-id.txt || true
-          git commit -m "🧹 Clean validated deploy ID after use" || echo "Nada que commitear"
-          git push origin target-branch
