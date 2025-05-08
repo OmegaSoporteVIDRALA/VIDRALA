@@ -67,11 +67,11 @@ jobs:
         run: |
           sfdx force:org:list
 
-      - name: 📥 Download validated deploy ID
-        uses: actions/download-artifact@v4
-        with:
-          name: validated-deploy-id
-          path: ./
+      - name: 📥 Read validated deploy ID
+        id: read_id
+        run: |
+          DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
+          echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
 
       - name: 🔍 Extraer ID de despliegue validado
         run: |
@@ -84,3 +84,11 @@ jobs:
           sf deploy metadata quick \
             --target-org SF \
             --job-id "$DEPLOY_ID"
+
+      - name: 🧹 Delete temporary deploy ID
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git rm .gh-deploy-data/validated-deploy-id.txt
+          git commit -m "Cleanup deploy ID [skip ci]"
+          git push
