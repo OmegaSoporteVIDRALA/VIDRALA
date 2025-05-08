@@ -217,15 +217,18 @@ jobs:
             --test-level RunSpecifiedTests \
             --tests "$TEST_CLASSES" \
             --json > validation-result.json || exit 1
+            
+          DEPLOY_ID=$(jq -r '.result.id' validation-result.json)
+          mkdir -p .gh-deploy-data
+          echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
 
-          jq -r '.result.id' validation-result.json > validated-deploy-id.txt
-          echo "DEPLOYMENT_ID=$(cat validated-deploy-id.txt)" >> $GITHUB_ENV 
-
-      - name: 📤 Save Deployment ID
-        uses: actions/upload-artifact@v4
-        with:
-          name: validated-deploy-id
-          path: validated-deploy-id.txt
+      - name: 📤 Commit deployment ID
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .gh-deploy-data/validated-deploy-id.txt
+          git commit -m "Add validated deploy ID [skip ci]"
+          git push
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false'
