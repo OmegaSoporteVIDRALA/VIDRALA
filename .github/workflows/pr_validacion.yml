@@ -215,7 +215,7 @@ jobs:
             --manifest ./manifest/package.xml \
             --target-org SF \
             --test-level RunSpecifiedTests \
-            --tests "$TEST_CLASSES" 
+            --tests "$TEST_CLASSES" \
             --json > validation-result.json || exit 1
 
           echo "DEPLOYMENT_ID=$(jq -r '.result.id' validation-result.json)" >> $GITHUB_ENV  
