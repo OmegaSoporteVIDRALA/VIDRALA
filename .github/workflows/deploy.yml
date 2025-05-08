@@ -1,7 +1,8 @@
 name: 🚀 Deploy after Merge to Integra or UAT
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - INTEGRA
       - UAT
@@ -9,16 +10,14 @@ on:
 jobs:
 
   deploy:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: 📥 Download validated deploy ID
-        uses: actions/download-artifact@v4
         with:
-          name: validated-deploy-id
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
 
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
@@ -68,12 +67,20 @@ jobs:
         run: |
           sfdx force:org:list
 
-      - name: 🚀 Quick Deploy
+      - name: 📥 Download validated deploy ID
+        uses: actions/download-artifact@v4
+        with:
+          name: validated-deploy-id
+          path: ./
+
+      - name: 🔍 Extraer ID de despliegue validado
         run: |
           DEPLOY_ID=$(cat validated-deploy-id.txt)
           echo "🔁 Quick deploying job ID: $DEPLOY_ID"
           echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
 
+      - name: 🚀 Quick Deploy
+        run: |
           sf deploy metadata quick \
             --target-org SF \
             --job-id "$DEPLOY_ID"
