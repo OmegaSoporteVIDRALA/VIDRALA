@@ -1,6 +1,6 @@
 <!-- Banner image -->
 <p align="center">
-  <img src="src="assets/vidrala.png"" alt="CI/CD Salesforce Vidrala"/>
+  <img src="src="assets/vidrala.jpg"" alt="CI/CD Salesforce Vidrala"/>
 </p>
 
 # 🚀 CI/CD Salesforce - Powered by GitHub Actions
