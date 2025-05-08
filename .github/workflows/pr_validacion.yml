@@ -1,4 +1,4 @@
-name: Validate Salesforce PR
+name: 📝 Validate Salesforce PR
 
 on:
   pull_request:
