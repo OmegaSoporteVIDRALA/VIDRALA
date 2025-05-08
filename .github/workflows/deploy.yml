@@ -1,39 +1,29 @@
-name: 🚀 Deploy after Validation
+name: 🚀 Deploy after Merge to Integra or UAT
 
 on:
-  workflow_run:
-    workflows: ["Validate Salesforce PR"]
-    types:
-      - completed
+  push:
+    branches:
+      - INTEGRA
+      - UAT
 
 jobs:
 
   deploy:
-    if: >
-      ${{
-        github.event.workflow_run.conclusion == 'success' &&
-        (
-          github.event.workflow_run.head_branch == 'Integra' ||
-          github.event.workflow_run.head_branch == 'UAT'
-        )
-      }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🔍 Debug Info
-        run: |
-          echo "head_branch: ${{ github.event.workflow_run.head_branch }}"
-          echo "conclusion: ${{ github.event.workflow_run.conclusion }}"
-
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: 📥 Download validated deploy ID
+        uses: actions/download-artifact@v4
         with:
-          ref: ${{ github.event.workflow_run.head_branch }}
+          name: validated-deploy-id
 
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
         run: |
-          BASE_REF="${{ github.event.workflow_run.head_branch }}"
+          BASE_REF=$(echo "${GITHUB_REF##*/}")
           echo "🔎 Branch destino: $BASE_REF"
 
           if [[ "$BASE_REF" == "INTEGRA" ]]; then
@@ -78,10 +68,11 @@ jobs:
         run: |
           sfdx force:org:list
 
-      - name: 🚀 Desplegar a Salesforce
+      - name: 🚀 Quick Deploy
         run: |
-          sf deploy metadata \
+          DEPLOY_ID=$(jq -r '.result.id' validation-result.json)
+          echo "Quick deploying job ID: $DEPLOY_ID"
+
+          sf deploy metadata quick \
             --target-org SF \
-            --manifest manifest/package.xml \
-            --testlevel RunLocalTests \
-            --wait 10
+            --job-id "$DEPLOY_ID"
