@@ -227,10 +227,7 @@ jobs:
         with:
           name: validated-deploy-id
           path: .gh-deploy-data/validated-deploy-id.txt
-
-      - name: 🧹 Clean deployment data folder
-        run: |
-          rm -rf .gh-deploy-data
+          retention-days: 1  # importante para evitar expiraciones prematuras
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
         if: env.testfound == 'false'
