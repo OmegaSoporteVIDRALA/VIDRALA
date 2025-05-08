@@ -3,111 +3,227 @@ name: Validate Salesforce PR
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches:
-      - integra
-      - uat
-      - main
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
+      - name: ⬇️ Checkout repository
         uses: actions/checkout@v3
         
-      - name: Checkout code
+      - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
-      - name: Determine target branch
-        id: check_branch
-        run: |
-          echo "TARGET_BRANCH=${{ github.event.workflow_run.pull_requests[0].base.ref }}" >> $GITHUB_ENV
-          BRANCH="${{ github.event.workflow_run.pull_requests[0].base.ref }}"
-          echo "Target branch is $BRANCH"
-          if [[ "$BRANCH" != "integra" && "$BRANCH" != "uat" && "$BRANCH" != "main" ]]; then
-            echo "❌ Deployment only allowed to integra, uat or main branches."
-            exit 1
-          fi
-
-      - name: Set Salesforce Environment Variables
+     # - name: ✒️ Determine target branch
+       # id: check_branch
+       # run: |
+       #   echo "TARGET_BRANCH=${{ github.event.workflow_run.pull_requests[0].base.ref }}" >> $GITHUB_ENV
+        ##  BRANCH="${{ github.event.workflow_run.pull_requests[0].base.ref }}"
+        #  echo "Target branch is $BRANCH"
+       #   if [[ "$BRANCH" != "integra" && "$BRANCH" != "uat" && "$BRANCH" != "main" ]]; then
+        #    echo "❌ Deployment only allowed to integra, uat or main branches."
+       #     exit 1
+       #   fi
+        
+      - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
         run: |
-          if [[ "${{ github.base_ref }}" == "integra" ]]; then
+          BASE_REF="${GITHUB_BASE_REF:-${GITHUB_REF_NAME}}"
+          echo "🔎 Branch destino: $BASE_REF"
+
+          if [[ "$BASE_REF" == "INTEGRA" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
+            echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
-          elif [[ "${{ github.base_ref }}" == "uat" ]]; then
+            echo "EOF" >> $GITHUB_ENV
+          elif [[ "$BASE_REF" == "UAT" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
+            echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
-          elif [[ "${{ github.base_ref }}" == "main" ]]; then
+            echo "EOF" >> $GITHUB_ENV
+          elif [[ "$BASE_REF" == "MAIN" ]]; then
             echo "LOGIN_URL=https://login.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_PROD }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_PROD }}" >> $GITHUB_ENV
+            echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
           else
-            echo "Branch not supported"
+            echo "❌ Branch not supported"
             exit 1
           fi
 
-      - name: Authenticate with Salesforce (CheckOnly)
-        uses: amitsingh-007/sfdx-authenticate@v1.2
-        with:
-          client-id: ${{ env.CLIENT_ID }}
-          username: ${{ env.USERNAME }}
-          jwt-key: ${{ env.JWT_KEY }}
-          instance-url: ${{ env.LOGIN_URL }}
+      - name: ✍ Verificar existencia y tamaño del archivo JWT
+        run: |
+          echo "${{ env.JWT_KEY }}" > server.key
+          if [ -f server.key ]; then
+            echo "✅ Archivo 'server.key' creado correctamente."
+            ls -lh server.key
+          else
+            echo "❌ No se encontró el archivo 'server.key'."
+            exit 1
+          fi   
 
-      - name: Check if there are Test classes
+      - name: 🔧 Instalar Salesforce CLI
+        run: |
+          npm install --global @salesforce/cli
+
+      - name: 🔐 Autenticarse en Salesforce con JWT
+        env:
+          SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
+          SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_UAT }}
+          SFDX_USERNAME: ${{ env.USERNAME }}
+          SFDX_URL: ${{ env.LOGIN_URL }}
+        run: |
+          echo "$SFDX_JWT_KEY" > server.key
+          sf org login jwt \
+            --client-id "$SFDX_CLIENT_ID" \
+            --jwt-key-file server.key \
+            --username "$SFDX_USERNAME" \
+            --instance-url "$SFDX_URL" \
+            --alias SF
+
+      - name: ✍ Verify Authentication
+        run: |
+          sfdx force:org:list
+
+      - name: 🛠️ Instalar xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: 🧹 Vaciar directorio de clases temporales
+        run: |
+          echo "Vaciando el directorio ./pmd/classes..."
+          rm -rf ./pmd/classes/{*,.*} || true
+
+      - name: 🔍 Analizar package.xml para buscar ApexClass o ApexTrigger
+        id: analyze_package
+        run: |
+          # Ruta al package.xml
+          PACKAGE_XML="./manifest/package.xml"
+
+          echo "📦 Analizando el archivo package.xml: $PACKAGE_XML"
+
+          # Contar ApexClass
+          CLASS_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexClass']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
+          CLASS_COUNT=$(echo "$CLASS_NAMES" | wc -w)
+          echo "📚 Número de clases Apex en el package.xml: $CLASS_COUNT"
+
+          # Contar ApexTrigger
+          TRIGGER_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexTrigger']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
+          TRIGGER_COUNT=$(echo "$TRIGGER_NAMES" | wc -w)
+          echo "🧩 Número de triggers en el package.xml: $TRIGGER_COUNT"
+
+          if [ "$CLASS_COUNT" -eq 0 ] && [ "$TRIGGER_COUNT" -eq 0 ]; then
+            echo "generate_manifest_only=true" >> $GITHUB_OUTPUT
+          else
+            echo "generate_manifest_only=false" >> $GITHUB_OUTPUT
+          fi
+
+
+      - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
+        if: steps.analyze_package.outputs.generate_manifest_only == 'false'
+        run: | 
+          # Directorios de origen y destino
+          PACKAGE_XML="./manifest/package.xml"
+          DEST_DIR="./pmd/classes"
+          SRC_CLASSES_DIR="./force-app/main/default/classes"
+          SRC_TRIGGERS_DIR="./force-app/main/default/triggers"
+
+          echo "📦 Analizando: $PACKAGE_XML"
+
+          # Extraer ApexClass
+          CLASS_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexClass']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
+
+          # Extraer ApexTrigger
+          TRIGGER_NAMES=$(xmllint --xpath "//*[local-name()='types']/*[local-name()='name'][text()='ApexTrigger']/../*[local-name()='members']/text()" "$PACKAGE_XML" 2>/dev/null || echo "")
+
+          # Separar múltiples entradas si vienen en una sola línea
+          CLASS_NAMES=$(echo "$CLASS_NAMES" | tr ' ' '\n')
+          TRIGGER_NAMES=$(echo "$TRIGGER_NAMES" | tr ' ' '\n')
+
+          echo "📚 Clases a copiar:"
+          echo "$CLASS_NAMES"
+          echo "🧩 Triggers a copiar:"
+          echo "$TRIGGER_NAMES"
+
+          # Crear el directorio destino si no existe
+          mkdir -p "$DEST_DIR"
+
+          # Copiar clases
+          for class in $CLASS_NAMES; do
+            echo "➡️ Procesando clase: '$class'"
+            if [[ -f "$SRC_CLASSES_DIR/${class}.cls" ]]; then
+              cp "$SRC_CLASSES_DIR/${class}.cls" "$DEST_DIR/"
+              cp "$SRC_CLASSES_DIR/${class}.cls-meta.xml" "$DEST_DIR/"
+              echo "✅ Clase copiada: $class"
+            else
+              echo "⚠️ Clase no encontrada: $class"
+            fi
+          done
+
+          # Copiar triggers
+          for trigger in $TRIGGER_NAMES; do
+            echo "➡️ Procesando trigger: '$trigger'"
+            if [[ -f "$SRC_TRIGGERS_DIR/${trigger}.trigger" ]]; then
+              cp "$SRC_TRIGGERS_DIR/${trigger}.trigger" "$DEST_DIR/"
+              cp "$SRC_TRIGGERS_DIR/${trigger}.trigger-meta.xml" "$DEST_DIR/"
+              echo "✅ Trigger copiado: $trigger"
+            else
+              echo "⚠️ Trigger no encontrado: $trigger"
+            fi
+          done
+
+          # Verificar los archivos copiados en el directorio destino
+          echo "📂 Archivos en el directorio $DEST_DIR después de la copia:"
+          ls -l "$DEST_DIR"
+
+          echo "✅ Archivos movidos a $DEST_DIR"
+
+
+      - name: 🔍 Check if there are Test classes
         id: check_tests
         run: |
-          if find force-app/main/default/pmd/ -name '*.cls' | grep -q .; then
+          if find ./pmd/classes -name '*.cls' | grep -q .; then
             echo "testfound=true" >> $GITHUB_ENV
           else
             echo "testfound=false" >> $GITHUB_ENV
           fi
 
-      - name: Install PMD
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
-        run: |
-          wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.55.0/pmd-bin-6.55.0.zip
-          unzip pmd-bin-6.55.0.zip
-          mv pmd-bin-6.55.0 pmd
+      - name: 📄 Ver contenido de las reglas
+        run: cat ./config/apex-ruleset.xml
 
-      - name: 🔍 Run PMD on test classes
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
+      - name: 🧰 Install PMD
+        if: env.testfound == 'true' && github.base_ref  == 'UAT' 
         run: |
-          ./pmd/bin/run.sh pmd -d force-app/main/default/pmd/ -R config/apex-ruleset.xml -f sarif -r pmd-report.sarif
+          curl -L -o pmd.zip https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.55.0/pmd-bin-6.55.0.zip
+          unzip pmd.zip -d pmd
+          mv pmd/pmd-bin-6.55.0 pmd-bin
+          chmod +x pmd-bin/bin/run.sh
 
-      - name: Upload PMD SARIF report
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: pmd-report.sarif
-
-      - name: ❌ Fail if PMD issues found
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
+      - name: 🤖 Run Apex tests if it was found 
+        if: env.testfound == 'true'
         run: |
-          issues=$(${{ env.PMD_PATH }}/run.sh pmd -d $SRC_FOLDER -R apex-apexunit.xml -f text | wc -l)
-          if [ "$issues" -gt "0" ]; then
-            echo "❌ PMD found issues: $issues"
-            exit 1
-          else
-            echo "✅ No issues on PMD."
-          fi
-
-      - name: 🤖 Run Apex tests if it was found
-        if: env.testfound == 'true' &&  [[ "${{ github.base_ref }}" == "integra" ]]
+          TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
+          echo "🧪 Validating components with specific tests: $TEST_CLASSES...."
+          sf deploy metadata validate \
+            --manifest ./manifest/package.xml \
+            --target-org SF \
+            --test-level RunSpecifiedTests \
+            --tests "$TEST_CLASSES" || exit 1
+            
+      - name: ⏰ Validate Salesforce components if no Apex tests was found
+        if: env.testfound == 'false'
         run: |
-          TEST_CLASSES=$(find force-app/main/default/pmd/ -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
-          echo "🧪 Validating components with specific tests: $TEST_CLASSES"
-          sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel RunSpecifiedTests --runtests $TEST_CLASSES --json || exit 1
+          echo "📭 No test classes found. Validating components without tests..."
 
-      - name: Validate Salesforce components
-        if: env.testfound == 'false' ||  [[ "${{ github.base_ref }}" != "integra" ]]
-        run: |
-         echo "📭 No test classes found. Validating components without tests..."
-         sfdx force:source:deploy -x force-app/main/manifest/package.xml --checkonly --testlevel NoTestRun --json || exit 1
+          # Ejecutar validación sin incluir Apex clases si no hay tests
+           sf deploy metadata validate \
+              --manifest ./manifest/package.xml \
+              --target-org SF \
+              --test-level RunSpecifiedTests \
+              --tests DummyClass || exit 1

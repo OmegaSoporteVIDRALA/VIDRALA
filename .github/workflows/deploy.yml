@@ -1,48 +1,87 @@
-name: Deploy after Validation
+name: 🚀 Deploy after Validation
 
 on:
   workflow_run:
-    workflows: ["Validate Pull Request"]
+    workflows: ["Validate Salesforce PR"]
     types:
       - completed
 
 jobs:
+
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: >
+      ${{
+        github.event.workflow_run.conclusion == 'success' &&
+        (
+          github.event.workflow_run.head_branch == 'Integra' ||
+          github.event.workflow_run.head_branch == 'UAT'
+        )
+      }}
     runs-on: ubuntu-latest
-    env:
-      PACKAGE_XML: force-app/main/manifest/package.xml
 
     steps:
+      - name: 🔍 Debug Info
+        run: |
+          echo "head_branch: ${{ github.event.workflow_run.head_branch }}"
+          echo "conclusion: ${{ github.event.workflow_run.conclusion }}"
+
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
 
-      - name: Set Salesforce Environment Variables
+      - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
         run: |
-          if [[ "${{ github.event.workflow_run.head_branch }}" == "integra" ]]; then
+          BASE_REF="${{ github.event.workflow_run.head_branch }}"
+          echo "🔎 Branch destino: $BASE_REF"
+
+          if [[ "$BASE_REF" == "INTEGRA" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
+            echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_INTEGRA }}" >> $GITHUB_ENV
-          elif [[ "${{ github.event.workflow_run.head_branch }}" == "uat" ]]; then
+            echo "EOF" >> $GITHUB_ENV
+          elif [[ "$BASE_REF" == "UAT" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_UAT }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_UAT }}" >> $GITHUB_ENV
+            echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
           else
+            echo "❌ Branch not supported"
             exit 1
           fi
 
-
-      - name: Authenticate with Salesforce
-        uses: amitsingh-007/sfdx-authenticate@v1.2
-        with:
-          client-id: ${{ env.CLIENT_ID }}
-          username: ${{ env.USERNAME }}
-          jwt-key: ${{ env.JWT_KEY }}
-          instance-url: ${{ env.LOGIN_URL }}
-
-      - name: 🚀 Deploy to Salesforce
+      - name: 🔧 Instalar Salesforce CLI
         run: |
-          sfdx force:source:deploy -x $PACKAGE_XML --json --verbose
+          npm install --global @salesforce/cli
+
+      - name: 🔐 Autenticarse en Salesforce con JWT
+        env:
+          SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
+          SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_UAT }}
+          SFDX_USERNAME: ${{ env.USERNAME }}
+          SFDX_URL: ${{ env.LOGIN_URL }}
+        run: |
+          echo "$SFDX_JWT_KEY" > server.key
+          sf org login jwt \
+            --client-id "$SFDX_CLIENT_ID" \
+            --jwt-key-file server.key \
+            --username "$SFDX_USERNAME" \
+            --instance-url "$SFDX_URL" \
+            --alias SF
+     
+      - name: ✍ Verify Authentication
+        run: |
+          sfdx force:org:list
+
+      - name: 🚀 Desplegar a Salesforce
+        run: |
+          sf deploy metadata \
+            --target-org SF \
+            --manifest manifest/package.xml \
+            --testlevel RunLocalTests \
+            --wait 10
