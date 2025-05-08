@@ -14,10 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout the Pull Request merge commit
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.merge_commit_sha }}
+
+      - name: ⬇️ Checkout destination branch with tracking
+        run: |
+          git fetch origin ${{ github.event.pull_request.base.ref }}
+          git checkout -b target-branch origin/${{ github.event.pull_request.base.ref }}
 
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
@@ -85,10 +90,14 @@ jobs:
             --target-org SF \
             --job-id "$DEPLOY_ID"
 
-      - name: 🧹 Delete temporary deploy ID
+      - name: 🧽 Limpiar archivo de deployment ID
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git rm .gh-deploy-data/validated-deploy-id.txt
-          git commit -m "Cleanup deploy ID [skip ci]"
-          git push
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin ${{ github.event.pull_request.base.ref }}
+          git checkout -b target-branch origin/${{ github.event.pull_request.base.ref }}
+
+          git rm -f .gh-deploy-data/validated-deploy-id.txt || true
+          git commit -m "🧹 Clean validated deploy ID after use" || echo "Nada que commitear"
+          git push origin target-branch
