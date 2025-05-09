@@ -19,7 +19,11 @@ jobs:
         run: |
           sudo apt update
           sudo apt install gh -y
-
+          
+      - name: 🔍 Debug branch name
+        run: |
+          echo "Branch actual: ${{ github.ref_name }}"
+          
       - name: 🔎 Verificar si el commit viene de un merge de PR
         id: check_pr
         env:
