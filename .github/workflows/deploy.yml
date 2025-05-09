@@ -94,36 +94,39 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          echo "🔍 Buscando último run exitoso del workflow de validación..."
-          MERGE_COMMIT_SHA=${{ github.sha }}
-          MATCHED=false
+          echo "🔍 Buscando PR mergeada para el SHA: $GITHUB_SHA"
 
-          for run_id in $(gh run list \
-            --workflow "📝 Validate Salesforce PR" \
-            --limit 200 \
-            --json databaseId,conclusion,createdAt \
-            --jq 'sort_by(.createdAt) | reverse | .[] | select(.conclusion == "success") | .databaseId'); do
-            
-            echo "🔎 Analizando run ID: $run_id"
-            rm -rf .gh-temp
+          # Buscar PR cuyo merge commit coincida con el SHA actual
+          PR_INFO=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --json number,mergeCommit --jq ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
+          if [ -z "$PR_INFO" ]; then
+            echo "❌ No se encontró PR mergeada que coincida con el SHA actual."
+            exit 1
+          fi
+
+          PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
+          echo "✅ PR encontrada: #$PR_NUMBER"
+
+          echo "🔎 Buscando runs exitosos del workflow de validación para esa PR..."
+
+          MATCHED=false
+          for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --pr "$PR_NUMBER" --json databaseId,conclusion -q '[.[] | select(.conclusion == "success")].databaseId'); do
+            echo "🔍 Analizando run ID: $run_id"
             mkdir -p .gh-temp
             gh run download "$run_id" -n validated-deploy-id -D .gh-temp
 
-            if [ -f ".gh-temp/merge-sha.txt" ]; then
-              VALIDATED_MERGE_SHA=$(cat .gh-temp/merge-sha.txt)
-              echo "Comparando merge commit: $VALIDATED_MERGE_SHA con actual: $PR_HEAD_SHA"
-              if [ "$VALIDATED_MERGE_SHA" == "$PR_HEAD_SHA" ]; then
-                echo "✅ Validación encontrada para este merge."
-                mkdir -p .gh-deploy-data
-                cp .gh-temp/* .gh-deploy-data/
-                MATCHED=true
-                break
-              fi
+            if [ -f .gh-temp/commit.txt ]; then
+              VALIDATED_SHA=$(cat .gh-temp/commit.txt)
+              echo "Validado SHA: $VALIDATED_SHA"
+              cp -r .gh-temp .gh-deploy-data
+              MATCHED=true
+              break
             fi
+
+            rm -rf .gh-temp
           done
 
           if [ "$MATCHED" = false ]; then
-            echo "❌ No se encontró una validación que coincida con el merge actual."
+            echo "❌ No se encontró un artifact válido para la PR mergeada."
             exit 1
           fi
 
