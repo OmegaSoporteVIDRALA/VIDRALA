@@ -42,6 +42,30 @@ jobs:
             echo "PR_HEAD_SHA=$HEAD_SHA" >> $GITHUB_ENV
           fi
 
+      - name: 📦 Obtener SHA del PR desde el merge commit
+        id: find_pr_sha
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          echo "HEAD SHA: $GITHUB_SHA"
+          echo "Branch destino: $GITHUB_REF_NAME"
+
+          # Buscar PRs que fueron mergeados a este branch y cuyo commit coincide con el actual
+          PR_INFO=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --limit 20 --json mergeCommit,headRefOid,number | jq -c ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
+
+          if [ -z "$PR_INFO" ]; then
+            echo "❌ Este commit no proviene de un merge de PR válido."
+            exit 1
+          fi
+
+          PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
+          PR_HEAD_SHA=$(echo "$PR_INFO" | jq -r '.headRefOid')
+
+          echo "✅ PR #$PR_NUMBER encontrado. SHA original del PR: $PR_HEAD_SHA"
+
+          echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
+          echo "PR_HEAD_SHA=$PR_HEAD_SHA" >> $GITHUB_ENV
+
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
         run: |
@@ -94,25 +118,22 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          echo "🔍 Buscando PR mergeada para el SHA: $GITHUB_SHA"
-
-          PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
-          echo "✅ PR encontrada: #$PR_NUMBER"
-          MERGE_COMMIT_SHA=${{ github.sha }}
-           echo "✅ MERGE_COMMIT_SHA encontrada: #$MERGE_COMMIT_SHA"
-          echo "🔎 Buscando runs exitosos del workflow de validación..."
-
           MATCHED=false
-          
-          for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --limit 10 --json databaseId,conclusion -q '[.[] | select(.conclusion == "success")].databaseId'); do
+          TARGET_SHA=${{ env.PR_HEAD_SHA }}
+
+          echo "🎯 Buscando artifacts con commit SHA: $TARGET_SHA"
+
+          for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --limit 20 --json databaseId,conclusion | jq -r '.[] | select(.conclusion == "success") | .databaseId'); do
             echo "🔎 Analizando run ID: $run_id"
+
+            mkdir -p .gh-temp
             gh run download "$run_id" -n validated-deploy-id -D .gh-temp
 
             if [ -f .gh-temp/commit.txt ]; then
               VALIDATED_SHA=$(cat .gh-temp/commit.txt)
-              echo "Comparando merge commit: $VALIDATED_SHA con actual: $MERGE_COMMIT_SHA"
-              if [ "$VALIDATED_SHA" == "$MERGE_COMMIT_SHA" ]; then
-                echo "✅ Validación encontrada para este merge."
+              echo "🔁 Comparando: validado=$VALIDATED_SHA vs esperado=$TARGET_SHA"
+              if [ "$VALIDATED_SHA" == "$TARGET_SHA" ]; then
+                echo "✅ Match encontrado con run $run_id"
                 mv .gh-temp .gh-deploy-data
                 MATCHED=true
                 break
@@ -122,7 +143,7 @@ jobs:
           done
 
           if [ "$MATCHED" = false ]; then
-            echo "❌ No se encontró un validation que coincida con el merge."
+            echo "❌ No se encontró un validation que coincida con el SHA del PR"
             exit 1
           fi
           
