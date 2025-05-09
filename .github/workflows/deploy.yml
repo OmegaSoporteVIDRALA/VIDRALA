@@ -129,7 +129,6 @@ jobs:
             echo "❌ No se encontró un artifact válido para la PR mergeada."
             exit 1
           fi
-
           
       - name: 📖 Read deploy ID
         id: read_id
