@@ -1,23 +1,19 @@
 name: 🚀 Deploy after Merge to Integra or UAT
 
 on:
-  workflow_run:
-    workflows: ["📝 Validate Salesforce PR"] 
-    types:
-      - completed
+  push:
+    branches:
+      - INTEGRA
+      - UAT
 
 jobs:
 
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🔄 Checkout repo al commit del workflow anterior
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.repository.full_name }}
-          ref: ${{ github.event.workflow_run.head_commit.id }}
 
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
@@ -66,35 +62,24 @@ jobs:
       - name: ✍ Verify Authentication
         run: |
           sfdx force:org:list
-          
-      - name: 📥 Descargar artifact validated-deploy-id
-        uses: actions/download-artifact@v4
+
+      - name: 📥 Download last successful run artifact
+        uses: dawidd6/action-download-artifact@v3
         with:
+          workflow: validate-salesforce-pr.yml
           name: validated-deploy-id
           path: .gh-deploy-data
-
-      - name: 🕵️ Verificar existencia del archivo validated-deploy-id.txt
-        run: |
-          if [ ! -f .gh-deploy-data/validated-deploy-id.txt ]; then
-            echo "❌ No se encontró el archivo validated-deploy-id.txt. Abortando."
-            exit 1
-          fi
-          echo "✅ Archivo validated-deploy-id.txt encontrado correctamente."
-
-      - name: 📖 Read Deployment ID
+          branch: ${{ github.ref_name }}
+          
+      - name: 📖 Read deploy ID
         id: read_id
         run: |
           DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
-          echo "🔁 Quick deploying job ID: $DEPLOY_ID"
           echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
-
+          
       - name: 🚀 Quick Deploy
         run: |
-          echo "Realizando quick deploy con ID: $DEPLOY_ID"
+          echo "🔁 Quick deploying job ID: $DEPLOY_ID"
           sf deploy metadata quick \
             --target-org SF \
             --job-id "$DEPLOY_ID"
-
-      - name: 🧹 Limpiar carpetas ocultas
-        run: |
-          rm -rf .gh-deploy-data || true
