@@ -26,6 +26,10 @@ jobs:
         #    echo "❌ Deployment only allowed to integra, uat or main branches."
        #     exit 1
        #   fi
+       
+      - name: 🔍 Debug branch name
+        run: |
+          echo "Branch actual: ${{ github.ref_name }}"
         
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
