@@ -93,8 +93,6 @@ jobs:
           
           # Obtener el commit SHA del merge actual
           MERGE_COMMIT_SHA=${{ github.sha }}
-          DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
-          VALIDATED_SHA=$(cat .gh-deploy-data/commit.txt)
 
           MATCHED=false
 
