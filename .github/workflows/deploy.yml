@@ -90,19 +90,35 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           echo "🔍 Buscando último run exitoso del workflow de validación..."
-          WORKFLOW_RUN_ID=$(gh run list \
-            --workflow "📝 Validate Salesforce PR" \
-            --limit 1 \
-            --json databaseId,status,conclusion,name \
-            -q '[.[] | select(.conclusion=="success")][0].databaseId')
+          
+          # Obtener el commit SHA del merge actual
+          MERGE_COMMIT_SHA=${{ github.sha }}
+          
+          MATCHED=false
 
-          if [ -z "$WORKFLOW_RUN_ID" ]; then
-            echo "❌ No se encontró un run válido del workflow."
+          # Buscar entre los últimos run exitosos del workflow de validación
+          for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --limit 10 --json databaseId,conclusion -q '[.[] | select(.conclusion == "success")].databaseId'); do
+            # Descargar los artifacts del run
+            gh run download "$run_id" -n validated-deploy-id -D .gh-temp
+            
+            # 🔍 Verificar si se encuentra el commit SHA en el artifact
+            if [ -f .gh-temp/commit.txt ]; then
+              VALIDATED_SHA=$(cat .gh-temp/commit.txt)
+              if [ "$VALIDATED_SHA" == "$MERGE_COMMIT_SHA" ]; then
+                echo "✅ Validación encontrada para este merge."
+                cp -r .gh-temp .gh-deploy-data
+                MATCHED=true
+                break
+              fi
+            fi
+            rm -rf .gh-temp
+          done
+
+          # Si no se encontró un match válido, abortar
+          if [ "$MATCHED" = false ]; then
+            echo "❌ No se encontró un validation que coincida con el merge."
             exit 1
           fi
-
-          echo "✅ Descargando artifacts del run $WORKFLOW_RUN_ID"
-          gh run download "$WORKFLOW_RUN_ID" -n validated-deploy-id -D .gh-deploy-data
           
       - name: 📖 Read deploy ID
         id: read_id
