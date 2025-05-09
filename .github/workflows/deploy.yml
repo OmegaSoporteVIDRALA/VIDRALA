@@ -123,7 +123,12 @@ jobs:
       - name: 📖 Read deploy ID
         id: read_id
         run: |
+          if [ ! -f .gh-deploy-data/validated-deploy-id.txt ]; then
+            echo "❌ No se encontró el archivo validated-deploy-id.txt"
+            exit 1
+          fi
           DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
+          echo "✅ Deployment ID encontrado: $DEPLOY_ID"
           echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
           
       - name: 🚀 Quick Deploy
