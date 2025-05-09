@@ -11,7 +11,8 @@ public with sharing class OM_VID_OpportunityTRGHandler {
     private static Boolean byPassApex = false;
 
 	public static void setbyPassApex(Boolean skip){
-		byPassApex = skip;    
+		byPassApex = skip;  
+          
 	}
 
 	public static Boolean getbyPassApex(){
