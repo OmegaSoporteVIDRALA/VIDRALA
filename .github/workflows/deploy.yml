@@ -93,21 +93,17 @@ jobs:
           
           # Obtener el commit SHA del merge actual
           MERGE_COMMIT_SHA=${{ github.sha }}
-          
+          DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
+          VALIDATED_SHA=$(cat .gh-deploy-data/commit.txt)
+
           MATCHED=false
 
           # Buscar entre los últimos run exitosos del workflow de validación
           for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --limit 10 --json databaseId,conclusion -q '[.[] | select(.conclusion == "success")].databaseId'); do
             # Descargar los artifacts del run
-            gh run download "$run_id" -n validated-deploy-id -D .gh-temp
+            gh run download "$run_id" -n validated-deploy-id -D .gh-deploy-data
             
-            # 🔍 Verificar si se encuentra el commit SHA en el artifact
-            echo "MERGE_COMMIT_SHA-: $MERGE_COMMIT_SHA"
-            DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
-            echo "DEPLOY_ID-: $DEPLOY_ID"
-            VALIDATED_SHA=$(cat .gh-deploy-data/commit.txt)
-            echo "VALIDATED_SHA-: $VALIDATED_SHA"
-            
+            # 🔍 Verificar si se encuentra el commit SHA en el artifact            
             if [ -f .gh-deploy-data/commit.txt ]; then
               VALIDATED_SHA=$(cat .gh-deploy-data/commit.txt)
               if [ "$VALIDATED_SHA" == "$MERGE_COMMIT_SHA" ]; then
