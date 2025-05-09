@@ -96,41 +96,33 @@ jobs:
         run: |
           echo "🔍 Buscando PR mergeada para el SHA: $GITHUB_SHA"
 
-          PR_INFO=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --json number,mergeCommit --jq ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
-          if [ -z "$PR_INFO" ]; then
-            echo "❌ No se encontró PR mergeada que coincida con el SHA actual."
-            exit 1
-          fi
-
           PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
           echo "✅ PR encontrada: #$PR_NUMBER"
-
+          MERGE_COMMIT_SHA=${{ github.sha }}
+           echo "✅ MERGE_COMMIT_SHA encontrada: #$MERGE_COMMIT_SHA"
           echo "🔎 Buscando runs exitosos del workflow de validación..."
 
           MATCHED=false
-          for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --branch "$GITHUB_REF_NAME" --json databaseId,conclusion -q '[.[] | select(.conclusion == "success")].databaseId'); do
-            echo "🔍 Analizando run ID: $run_id"
-            mkdir -p .gh-temp
+          
+          for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --limit 10 --json databaseId,conclusion -q '[.[] | select(.conclusion == "success")].databaseId'); do
+            echo "🔎 Analizando run ID: $run_id"
             gh run download "$run_id" -n validated-deploy-id -D .gh-temp
 
             if [ -f .gh-temp/commit.txt ]; then
               VALIDATED_SHA=$(cat .gh-temp/commit.txt)
-              echo "✅ SHA validado en ese run: $VALIDATED_SHA"
-
-              if [ "$VALIDATED_SHA" == "$GITHUB_SHA" ]; then
-                echo "✅ Coincide el SHA validado con el SHA actual."
-                cp -r .gh-temp .gh-deploy-data
+              echo "Comparando merge commit: $VALIDATED_SHA con actual: $MERGE_COMMIT_SHA"
+              if [ "$VALIDATED_SHA" == "$MERGE_COMMIT_SHA" ]; then
+                echo "✅ Validación encontrada para este merge."
+                mv .gh-temp .gh-deploy-data
                 MATCHED=true
                 break
-              else
-                echo "❌ No coincide, limpiando temporal..."
-                rm -rf .gh-temp
               fi
             fi
+            rm -rf .gh-temp
           done
 
           if [ "$MATCHED" = false ]; then
-            echo "❌ No se encontró un artifact válido que coincida con el SHA actual."
+            echo "❌ No se encontró un validation que coincida con el merge."
             exit 1
           fi
           
