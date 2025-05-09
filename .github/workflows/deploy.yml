@@ -31,7 +31,7 @@ jobs:
 
           if [ -z "$MERGE_COMMIT" ]; then
             echo "❌ Este commit no proviene de un merge de una PR. Cancelando..."
-            exit 1
+            exit 78
           else
             echo "✅ Commit originado desde PR #$PR_NUMBER"
             echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
@@ -59,7 +59,7 @@ jobs:
             echo "EOF" >> $GITHUB_ENV
           else
             echo "❌ Branch not supported"
-            exit 1
+            exit 78
           fi
 
       - name: 🔧 Instalar Salesforce CLI
@@ -91,7 +91,7 @@ jobs:
         run: |
           echo "🔍 Buscando último run exitoso del workflow de validación..."
           WORKFLOW_RUN_ID=$(gh run list \
-            --workflow pr_validacion.yml \
+            --workflow "📝 Validate Salesforce PR" \
             --branch ${{ github.ref_name }} \
             --limit 1 \
             --json databaseId,status,conclusion \
@@ -99,7 +99,7 @@ jobs:
 
           if [ -z "$WORKFLOW_RUN_ID" ]; then
             echo "❌ No se encontró un run válido del workflow."
-            exit 1
+            exit 78
           fi
 
           echo "✅ Descargando artifacts del run $WORKFLOW_RUN_ID"
