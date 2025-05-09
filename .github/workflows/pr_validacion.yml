@@ -226,8 +226,6 @@ jobs:
           mkdir -p .gh-deploy-data
           echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
       
-      - name: 🔖 Guardar nombre de rama base
-        run: echo "${{ github.base_ref }}" > branch.txt
 
       - name: 📤 Upload validated deploy ID as artifact
         uses: actions/upload-artifact@v4
@@ -235,7 +233,6 @@ jobs:
           name: validated-deploy-id
           path: |
             .gh-deploy-data/validated-deploy-id.txt
-            .gh-deploy-data/branch.txt
           retention-days: 1  # importante para evitar expiraciones prematuras
 
       - name: ⏰ Validate Salesforce components if no Apex tests was found
