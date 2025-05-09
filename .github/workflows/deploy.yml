@@ -25,16 +25,21 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          echo "HEAD SHA: $GITHUB_SHA"
+          echo "HEAD SHA (merge commit): $GITHUB_SHA"
           echo "GH_TOKEN: $ GH_TOKEN"
-          MERGE_COMMIT=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --json mergeCommit --jq ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
 
-          if [ -z "$MERGE_COMMIT" ]; then
+          echo "Buscando PR que tenga ese SHA como mergeCommit..."
+          PR_INFO=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --json number,mergeCommit,headRefOid --jq ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
+
+          if [ -z "$PR_INFO" ]; then
             echo "❌ Este commit no proviene de un merge de una PR. Cancelando..."
             exit 1
           else
-            echo "✅ Commit originado desde PR #$PR_NUMBER"
+            PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
+            HEAD_SHA=$(echo "$PR_INFO" | jq -r '.headRefOid')
+            echo "✅ Commit originado desde PR #$PR_NUMBER con HEAD_SHA: $HEAD_SHA"
             echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
+            echo "PR_HEAD_SHA=$HEAD_SHA" >> $GITHUB_ENV
           fi
 
       - name: 📝 Set Salesforce Environment Variables
@@ -106,8 +111,8 @@ jobs:
 
             if [ -f ".gh-temp/merge-sha.txt" ]; then
               VALIDATED_MERGE_SHA=$(cat .gh-temp/merge-sha.txt)
-              echo "Comparando merge commit: $VALIDATED_MERGE_SHA con actual: $MERGE_COMMIT_SHA"
-              if [ "$VALIDATED_MERGE_SHA" == "$MERGE_COMMIT_SHA" ]; then
+              echo "Comparando merge commit: $VALIDATED_MERGE_SHA con actual: $PR_HEAD_SHA"
+              if [ "$VALIDATED_MERGE_SHA" == "$PR_HEAD_SHA" ]; then
                 echo "✅ Validación encontrada para este merge."
                 mkdir -p .gh-deploy-data
                 cp .gh-temp/* .gh-deploy-data/
