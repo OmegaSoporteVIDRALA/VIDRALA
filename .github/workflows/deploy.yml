@@ -92,7 +92,7 @@ jobs:
           echo "🔍 Buscando último run exitoso del workflow de validación..."
           MERGE_COMMIT_SHA=${{ github.sha }}
           MATCHED=false
-          
+
           for run_id in $(gh run list \
             --workflow "📝 Validate Salesforce PR" \
             --limit 200 \
