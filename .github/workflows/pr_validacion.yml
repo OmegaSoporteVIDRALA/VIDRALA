@@ -228,7 +228,7 @@ jobs:
           
       - name: 📝 Guardar commit SHA
         run: |
-          echo "${{ github.sha }}" > commit.txt     
+          echo "${{ github.event.pull_request.head.sha }}" > .gh-deploy-data/commit.txt     
 
       - name: 📤 Upload validated deploy ID as artifact
         uses: actions/upload-artifact@v4
