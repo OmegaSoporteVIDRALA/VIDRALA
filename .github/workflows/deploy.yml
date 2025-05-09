@@ -15,6 +15,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: 🧰 Instalar GitHub CLI
+        run: |
+          sudo apt update
+          sudo apt install gh -y
+
+      - name: 🔎 Verificar si el commit viene de un merge de PR
+        id: check_pr
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          echo "HEAD SHA: $GITHUB_SHA"
+          MERGE_COMMIT=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --json mergeCommit --jq ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
+
+          if [ -z "$MERGE_COMMIT" ]; then
+            echo "❌ Este commit no proviene de un merge de una PR. Cancelando..."
+            exit 1
+          else
+            echo "✅ Commit originado desde PR #$PR_NUMBER"
+            echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
+          fi
+
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
         run: |
