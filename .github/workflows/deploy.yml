@@ -102,8 +102,9 @@ jobs:
             gh run download "$run_id" -n validated-deploy-id -D .gh-temp
             
             # 🔍 Verificar si se encuentra el commit SHA en el artifact
-            if [ -f .gh-temp/commit.txt ]; then
-              VALIDATED_SHA=$(cat .gh-temp/commit.txt)
+            echo "MERGE_COMMIT_SHA-: $MERGE_COMMIT_SHA"
+            if [ -f .gh-deploy-data/commit.txt ]; then
+              VALIDATED_SHA=$(cat .gh-deploy-data/commit.txt)
               if [ "$VALIDATED_SHA" == "$MERGE_COMMIT_SHA" ]; then
                 echo "✅ Validación encontrada para este merge."
                 cp -r .gh-temp .gh-deploy-data
