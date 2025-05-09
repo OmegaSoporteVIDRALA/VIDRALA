@@ -26,6 +26,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           echo "HEAD SHA: $GITHUB_SHA"
+          echo "GH_TOKEN: $ GH_TOKEN"
           MERGE_COMMIT=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --json mergeCommit --jq ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
 
           if [ -z "$MERGE_COMMIT" ]; then
@@ -84,13 +85,25 @@ jobs:
         run: |
           sfdx force:org:list
 
-      - name: 📥 Download last successful run artifact
-        uses: dawidd6/action-download-artifact@v3
-        with:
-          workflow: validate-salesforce-pr.yml
-          name: validated-deploy-id
-          path: .gh-deploy-data
-          branch: ${{ github.ref_name }}
+      - name: 📥 Descargar último artifact validado
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          echo "🔍 Buscando último run exitoso del workflow de validación..."
+          WORKFLOW_RUN_ID=$(gh run list \
+            --workflow pr_validacion.yml \
+            --branch ${{ github.ref_name }} \
+            --limit 1 \
+            --json databaseId,status,conclusion \
+            -q '.[0].databaseId')
+
+          if [ -z "$WORKFLOW_RUN_ID" ]; then
+            echo "❌ No se encontró un run válido del workflow."
+            exit 1
+          fi
+
+          echo "✅ Descargando artifacts del run $WORKFLOW_RUN_ID"
+          gh run download "$WORKFLOW_RUN_ID" -n validated-deploy-id -D .gh-deploy-data
           
       - name: 📖 Read deploy ID
         id: read_id
