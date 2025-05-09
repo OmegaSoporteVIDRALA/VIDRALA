@@ -19,17 +19,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install gh -y
-
-      - name: 📖 Leer nombre de rama de PR
-        id: read_branch
-        run: |
-          BRANCH=$(cat .gh-deploy-data/branch.txt)
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-          
-      - name: 🔍 Debug branch name
-        run: |
-          echo "Branch actual: $BRANCH"
-          
+                    
       - name: 🔎 Verificar si el commit viene de un merge de PR
         id: check_pr
         env:
@@ -102,7 +92,7 @@ jobs:
           echo "🔍 Buscando último run exitoso del workflow de validación..."
           WORKFLOW_RUN_ID=$(gh run list \
             --workflow "📝 Validate Salesforce PR" \
-            --limit 4 \
+            --limit 1 \
             --json databaseId,status,conclusion,name \
             -q '[.[] | select(.conclusion=="success")][0].databaseId')
 
