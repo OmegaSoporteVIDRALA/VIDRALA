@@ -103,6 +103,11 @@ jobs:
             
             # 🔍 Verificar si se encuentra el commit SHA en el artifact
             echo "MERGE_COMMIT_SHA-: $MERGE_COMMIT_SHA"
+            DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
+            echo "DEPLOY_ID-: $DEPLOY_ID"
+            VALIDATED_SHA=$(cat .gh-deploy-data/commit.txt)
+            echo "VALIDATED_SHA-: $VALIDATED_SHA"
+            
             if [ -f .gh-deploy-data/commit.txt ]; then
               VALIDATED_SHA=$(cat .gh-deploy-data/commit.txt)
               if [ "$VALIDATED_SHA" == "$MERGE_COMMIT_SHA" ]; then
