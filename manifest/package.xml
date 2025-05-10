@@ -5,7 +5,8 @@
 		<name>CustomField</name>
 	</types>
 	<types>
-		<members>DummyClass</members>
+		<members>OM_VID_OpportunityTRGHandler</members>
+		<members>OM_VID_OpportunityTRGTest</members>
 		<name>ApexClass</name>
 	</types>
 	<version>63.0</version>
