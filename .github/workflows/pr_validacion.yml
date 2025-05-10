@@ -219,7 +219,7 @@ jobs:
           TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
 
           if [ -n "$TEST_CLASSES" ]; then
-            echo "🧪 Clases de test encontradas: $TEST_CLASSES"
+            echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
             sf deploy metadata validate \
               --manifest ./manifest/package.xml \
               --target-org SF \
@@ -227,7 +227,7 @@ jobs:
               --tests "$TEST_CLASSES" \
               --json > validation-result.json || exit 1
           else
-            echo "⚠️ No se encontraron clases de test."
+            echo "⚠️ No se encontraron clases de test. Validando solo los componentes"
             sf deploy metadata validate \
               --manifest ./manifest/package.xml \
               --target-org SF \
