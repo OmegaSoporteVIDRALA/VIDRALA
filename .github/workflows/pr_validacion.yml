@@ -241,21 +241,16 @@ jobs:
               --json > validation-result.json || VALIDATION_EXIT_CODE=$?
           fi
 
-          mkdir -p .gh-deploy-data
-           jq -r '.result.id' validation-result.json > .gh-deploy-data/validated-deploy-id.txt || true
+          echo "🧾 Resultado de la validación:"
+          cat validation-result.json | jq
 
           DEPLOY_ID=$(jq -r '.result.id' validation-result.json)
-          mkdir -p .gh-deploy-data
-          echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
+          if [ -n "$DEPLOY_ID" ]; then
+            mkdir -p .gh-deploy-data
+            echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
+          fi
 
           exit $VALIDATION_EXIT_CODE
-
-      - name: 📤 Subir validation-result.json como artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: validation-result
-          path: validation-result.json
 
       - name: 📝 Guardar commit SHA
         run: |
