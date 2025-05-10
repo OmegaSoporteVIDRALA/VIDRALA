@@ -204,9 +204,6 @@ jobs:
           ' ./manifest/package.xml > ./manifest/package.tmp.xml
           mv ./manifest/package.tmp.xml ./manifest/package.xml
 
-          echo "🧐 Verificar contenido actualizado del package.xml"
-          cat ./manifest/package.xml
-
       - name: 📄 Ver contenido de las reglas
         run: cat ./config/apex-ruleset.xml
 
@@ -220,7 +217,7 @@ jobs:
 
       - name: 🤖 Validar todo el package.xml (con o sin clases de test)
         run: |
-          echo "🧐 Verificar contenido actualizado del package.xml"
+          echo "🧐 Verificar contenido del package.xml"
           cat ./manifest/package.xml
 
           echo "📦 Buscando clases de test..."
@@ -233,7 +230,7 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests "$TEST_CLASSES" \
-              --json > validation-result.json || exit 1
+              --json > validation-result.json || VALIDATION_EXIT_CODE=$?
           else
             echo "⚠️ No se encontraron clases de test."
             sf deploy metadata validate \
@@ -241,12 +238,24 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests DummyClassTest \
-              --json > validation-result.json || exit 1
+              --json > validation-result.json || VALIDATION_EXIT_CODE=$?
           fi
+
+          mkdir -p .gh-deploy-data
+           jq -r '.result.id' validation-result.json > .gh-deploy-data/validated-deploy-id.txt || true
 
           DEPLOY_ID=$(jq -r '.result.id' validation-result.json)
           mkdir -p .gh-deploy-data
           echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
+
+          exit $VALIDATION_EXIT_CODE
+
+      - name: 📤 Subir validation-result.json como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-result
+          path: validation-result.json
 
       - name: 📝 Guardar commit SHA
         run: |
