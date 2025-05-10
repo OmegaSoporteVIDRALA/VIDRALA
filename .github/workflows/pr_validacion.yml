@@ -220,6 +220,9 @@ jobs:
 
       - name: 🤖 Validar todo el package.xml (con o sin clases de test)
         run: |
+          echo "🧐 Verificar contenido actualizado del package.xml"
+          cat ./manifest/package.xml
+
           echo "📦 Buscando clases de test..."
           TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
 
@@ -237,7 +240,7 @@ jobs:
               --manifest ./manifest/package.xml \
               --target-org SF \
               --test-level RunSpecifiedTests \
-              --tests DummyClass \
+              --tests DummyClassTest \
               --json > validation-result.json || exit 1
           fi
 
