@@ -221,7 +221,7 @@ jobs:
           cat ./manifest/package.xml
 
           echo "📦 Buscando clases de test..."
-          TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
+          TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd' ', -)
 
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES"
