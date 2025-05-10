@@ -189,6 +189,19 @@ jobs:
 
           echo "✅ Archivos movidos a $DEST_DIR"
 
+      - name: ➕ Añadir DummyClassTest si no hay tests
+        if: steps.analyze_package.outputs.generate_manifest_only == 'true'
+        run: |
+          # Añadir bloque <types> de ApexClass justo antes del </Package>
+          sed -i '/<\/Package>/i\
+          <types>\n\
+            <members>DummyClassTest</members>\n\
+            <name>ApexClass</name>\n\
+          </types>' ./manifest/package.xml
+
+          echo "🧐 Verificar contenido actualizado del package.xml"
+          cat ./manifest/package.xml
+
       - name: 📄 Ver contenido de las reglas
         run: cat ./config/apex-ruleset.xml
 
@@ -207,7 +220,6 @@ jobs:
 
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES"
-            echo "🚀 Ejecutando validación con RunSpecifiedTests"
             sf deploy metadata validate \
               --manifest ./manifest/package.xml \
               --target-org SF \
@@ -215,7 +227,7 @@ jobs:
               --tests "$TEST_CLASSES" \
               --json > validation-result.json || exit 1
           else
-            echo "⚠️ No se encontraron clases de test. Usando RunLocalTests"
+            echo "⚠️ No se encontraron clases de test."
             sf deploy metadata validate \
               --manifest ./manifest/package.xml \
               --target-org SF \
