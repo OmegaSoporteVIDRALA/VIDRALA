@@ -4,5 +4,9 @@
 		<members>Company_Registration_Number__c</members>
 		<name>CustomField</name>
 	</types>
+	<types>
+		<members>DummyClass</members>
+		<name>ApexClass</name>
+	</types>
 	<version>63.0</version>
 </Package>
