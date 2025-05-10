@@ -189,12 +189,14 @@ jobs:
 
           echo "✅ Archivos movidos a $DEST_DIR"
 
-      - name: ➕ Añadir DummyClass si no hay tests
+      - name: ➕ Añadir DummyClassTest si no hay tests
         if: steps.analyze_package.outputs.generate_manifest_only == 'true'
         run: |
-          echo "📦 Añadiendo DummyClass al package.xml"
           awk '/<\/types>/ && !x { print "    <members>DummyClassTest</members>\n    <name>ApexClass</name>"; x=1 } 1' ./manifest/package.xml > ./manifest/package.tmp.xml
           mv ./manifest/package.tmp.xml ./manifest/package.xml
+
+          echo "🧐 Verificar contenido actualizado del package.xml"
+          cat ./manifest/package.xml
 
       - name: 📄 Ver contenido de las reglas
         run: cat ./config/apex-ruleset.xml

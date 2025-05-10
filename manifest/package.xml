@@ -3,6 +3,6 @@
 	<types>
 		<members>Account.Company_Registration_Number__c</members>
 		<name>CustomField</name>
-	</types>
+	</types> 
 	<version>63.0</version>
 </Package>
