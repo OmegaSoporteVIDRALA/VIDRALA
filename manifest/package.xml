@@ -3,7 +3,13 @@
 	<types>
 		<members>OM_VID_Constants</members>
 		<members>OM_VID_ConstantsTest</members>
+		<members>ChangePasswordController</members>
+		<members>ChangePasswordControllerTest</members>		
 		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Account.Company_Registration_Number__c</members>		
+		<name>CustomField</name>
 	</types>
 	<version>63.0</version>
 </Package>
