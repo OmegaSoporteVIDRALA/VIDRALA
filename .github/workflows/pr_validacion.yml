@@ -192,8 +192,12 @@ jobs:
       - name: ➕ Añadir DummyClassTest si no hay tests
         if: steps.analyze_package.outputs.generate_manifest_only == 'true'
         run: |
-          awk '/<\/types>/ && !x { print "    <members>DummyClassTest</members>\n    <name>ApexClass</name>"; x=1 } 1' ./manifest/package.xml > ./manifest/package.tmp.xml
-          mv ./manifest/package.tmp.xml ./manifest/package.xml
+          # Añadir bloque <types> de ApexClass justo antes del </Package>
+          sed -i '/<\/Package>/i\
+          <types>\n\
+            <members>DummyClassTest</members>\n\
+            <name>ApexClass</name>\n\
+          </types>' ./manifest/package.xml
 
           echo "🧐 Verificar contenido actualizado del package.xml"
           cat ./manifest/package.xml
