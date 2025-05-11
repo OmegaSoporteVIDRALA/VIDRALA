@@ -66,6 +66,20 @@ jobs:
           echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
           echo "PR_HEAD_SHA=$PR_HEAD_SHA" >> $GITHUB_ENV
 
+      - name: 🧐 Verificar contenido del package.xml
+        run: cat ./manifest/package.xml         
+
+      - name: 🤖 Verificar si hay clases
+        run: |
+          echo "📦 Buscando clases de test..."
+          TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd' ' -)
+
+          if [ -n "$TEST_CLASSES" ]; then
+            echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
+          else
+            echo "⚠️ No se encontraron clases de test. Validando solo los componentes"
+          fi
+
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
         run: |
