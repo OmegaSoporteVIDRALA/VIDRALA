@@ -190,7 +190,7 @@ jobs:
           echo "✅ Archivos movidos a $DEST_DIR"
 
       - name: ➕ Añadir DummyClassTest si no hay tests
-        if: steps.analyze_package.outputs.generate_manifest_only == 'true'
+        if: steps.analyze_package.outputs.generate_manifest_only == 'false'
         run: |
           # Añadir bloque <types> de ApexClass justo antes del </Package>
           sed -i '/<\/Package>/i\
