@@ -15,7 +15,6 @@ public with sharing class OM_VID_ConstantsTest {
         System.assertEquals(OM_VID_Constants.quoteName, 'Quote');
         System.assertEquals(OM_VID_Constants.oppName, 'Opportunity');
         System.assertEquals(OM_VID_Constants.fiftyTemplateName, '_Email_de_Oferta');
-        System.assertEquals(OM_VID_Constants.errorContentVersion, 'No existe un documento de Oferta asociado que poder enviar');
-        
+        System.assertEquals(OM_VID_Constants.errorContentVersion, 'No existe un documento de Oferta asociado que poder enviar'); 
     }
 }

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>OM_VID_Constants</members>
-		<members>OM_VID_ConstantsTest</members>
 		<members>DummyClassTest</members>
 		<name>ApexClass</name>
 	</types> 
