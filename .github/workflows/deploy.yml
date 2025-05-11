@@ -120,24 +120,19 @@ jobs:
         run: |
           MATCHED=false
           TARGET_SHA=${{ env.PR_HEAD_SHA }}
-
-          echo "🎯 Buscando artifacts con commit SHA: $TARGET_SHA"
+          ARTIFACT_NAME="validated-deploy-id-${TARGET_SHA}"
+          
+          echo "🎯 Buscando artifacts con nombre: $ARTIFACT_NAME"
 
           for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --limit 20 --json databaseId,conclusion | jq -r '.[] | select(.conclusion == "success") | .databaseId'); do
             echo "🔎 Analizando run ID: $run_id"
-
             mkdir -p .gh-temp
-            gh run download "$run_id" -n validated-deploy-id -D .gh-temp
 
-            if [ -f .gh-temp/commit.txt ]; then
-              VALIDATED_SHA=$(cat .gh-temp/commit.txt)
-              echo "🔁 Comparando: validado=$VALIDATED_SHA vs esperado=$TARGET_SHA"
-              if [ "$VALIDATED_SHA" == "$TARGET_SHA" ]; then
-                echo "✅ Match encontrado con run $run_id"
-                mv .gh-temp .gh-deploy-data
-                MATCHED=true
-                break
-              fi
+            if gh run download "$run_id" -n "$ARTIFACT_NAME" -D .gh-temp 2>/dev/null; then
+              echo "✅ Artifact $ARTIFACT_NAME encontrado en run $run_id"
+              mv .gh-temp .gh-deploy-data
+              MATCHED=true
+              break
             fi
             rm -rf .gh-temp
           done
