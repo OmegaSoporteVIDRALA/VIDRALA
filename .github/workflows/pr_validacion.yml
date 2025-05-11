@@ -254,7 +254,7 @@ jobs:
       - name: 📤 Upload validated deploy ID as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: validated-deploy-id
+          name: validated-deploy-id-${{ github.event.pull_request.head.sha }}
           path: |
             .gh-deploy-data/validated-deploy-id.txt
             .gh-deploy-data/commit.txt
