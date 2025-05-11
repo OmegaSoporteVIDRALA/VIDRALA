@@ -16,16 +16,24 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
-     # - name: ✒️ Determine target branch
-       # id: check_branch
-       # run: |
-       #   echo "TARGET_BRANCH=${{ github.event.workflow_run.pull_requests[0].base.ref }}" >> $GITHUB_ENV
-        ##  BRANCH="${{ github.event.workflow_run.pull_requests[0].base.ref }}"
-        #  echo "Target branch is $BRANCH"
-       #   if [[ "$BRANCH" != "integra" && "$BRANCH" != "uat" && "$BRANCH" != "main" ]]; then
-        #    echo "❌ Deployment only allowed to integra, uat or main branches."
-       #     exit 1
-       #   fi
+      - name: 🚫 Verificar si hay otros PRs abiertos hacia la misma rama
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          CURRENT_PR=${{ github.event.pull_request.number }}
+          BASE_BRANCH=${{ github.event.pull_request.base.ref }}
+
+          echo "🔍 Buscando PRs abiertos hacia '$BASE_BRANCH' (excluyendo el actual: #$CURRENT_PR)"
+
+          OPEN_PRS=$(gh pr list --state open --base "$BASE_BRANCH" --json number | jq -r ".[] | select(.number != $CURRENT_PR) | .number")
+
+          if [ -n "$OPEN_PRS" ]; then
+            echo "❌ Hay otros PRs abiertos hacia '$BASE_BRANCH':"
+            echo "$OPEN_PRS"
+            exit 1
+          else
+            echo "✅ No hay otros PRs abiertos hacia '$BASE_BRANCH'. Continuando validación..."
+          fi
        
       - name: 🔍 Debug branch name
         run: |
