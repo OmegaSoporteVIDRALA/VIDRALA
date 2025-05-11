@@ -216,7 +216,7 @@ jobs:
       - name: 🤖 Validar todo el package.xml (con o sin clases de test)
         run: |
           echo "📦 Buscando clases de test..."
-          TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
+          TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd' ' -)
 
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
@@ -236,9 +236,14 @@ jobs:
               --json > validation-result.json || exit 1
           fi
 
+          echo "🧾 Resultado de la validación:"
+          cat validation-result.json | jq
+
           DEPLOY_ID=$(jq -r '.result.id' validation-result.json)
-          mkdir -p .gh-deploy-data
-          echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
+          if [ -n "$DEPLOY_ID" ]; then
+            mkdir -p .gh-deploy-data
+            echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
+          fi
 
       - name: 📝 Guardar commit SHA
         run: |
