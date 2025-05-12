@@ -12,6 +12,7 @@ public with sharing class OM_VID_Constants {
     public static final String quoteName {get{return 'Quote';}}  
     public static final String oppName {get{return 'Opportunity';}}
     public static final String fiftyTemplateName {get{return '_Email_de_Oferta';}}
+    
     public static final String errorContentVersion {get{return 'No existe un documento de Oferta asociado que poder enviar';}}
     
 }
