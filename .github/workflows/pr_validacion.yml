@@ -16,24 +16,44 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
-      - name: 🚫 Verificar si hay otros PRs abiertos hacia la misma rama
+      - name: 🚫 Bloquear si hay PR abierto validado hacia la misma rama
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          CURRENT_PR=${{ github.event.pull_request.number }}
-          BASE_BRANCH=${{ github.event.pull_request.base.ref }}
+          BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
+          CURRENT_PR_NUMBER=${{ github.event.pull_request.number }}
+          echo "🔎 Buscando otros PR abiertos hacia $BASE_BRANCH (excepto el actual: #$CURRENT_PR_NUMBER)"
 
-          echo "🔍 Buscando PRs abiertos hacia '$BASE_BRANCH' (excluyendo el actual: #$CURRENT_PR)"
+          OPEN_PRS=$(gh pr list --state open --base "$BASE_BRANCH" --json number,headRefOid --jq '.[] | select(.number != '"$CURRENT_PR_NUMBER"')')
 
-          OPEN_PRS=$(gh pr list --state open --base "$BASE_BRANCH" --json number | jq -r ".[] | select(.number != $CURRENT_PR) | .number")
-
-          if [ -n "$OPEN_PRS" ]; then
-            echo "❌ Hay otros PRs abiertos hacia '$BASE_BRANCH':"
-            echo "$OPEN_PRS"
-            exit 1
-          else
-            echo "✅ No hay otros PRs abiertos hacia '$BASE_BRANCH'. Continuando validación..."
+          if [ -z "$OPEN_PRS" ]; then
+            echo "✅ No hay otros PR abiertos hacia $BASE_BRANCH"
+            exit 0
           fi
+
+          for ROW in $(echo "$OPEN_PRS" | jq -c '.'); do
+            SHA=$(echo "$ROW" | jq -r '.headRefOid')
+            ARTIFACT_NAME="validated-deploy-id-$SHA"
+
+            echo "🔍 Buscando artifact para PR con SHA: $SHA"
+            MATCHED=false
+
+            for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --json databaseId,conclusion,event,headSha --jq '.[] | select(.conclusion == "success") | .databaseId'); do
+              mkdir -p .check-temp
+              gh run download "$run_id" -n "$ARTIFACT_NAME" -D .check-temp || continue
+
+              if [ -f .check-temp/commit.txt ]; then
+                ARTIFACT_SHA=$(cat .check-temp/commit.txt)
+                if [ "$ARTIFACT_SHA" == "$SHA" ]; then
+                  echo "❌ Ya existe un PR abierto hacia $BASE_BRANCH validado exitosamente (SHA: $SHA)"
+                  exit 1
+                fi
+              fi
+              rm -rf .check-temp
+            done
+          done
+
+          echo "✅ Ningún PR abierto hacia $BASE_BRANCH ha sido validado aún"
        
       - name: 🔍 Debug branch name
         run: |
@@ -267,4 +287,4 @@ jobs:
             .gh-deploy-data/validated-deploy-id.txt
             .gh-deploy-data/commit.txt
             .gh-deploy-data/merge-sha.txt
-          retention-days: 1  # importante para evitar expiraciones prematuras
+          retention-days: 15  # importante para evitar expiraciones prematuras
