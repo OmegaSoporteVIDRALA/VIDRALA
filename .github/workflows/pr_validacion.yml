@@ -16,7 +16,7 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
-      - name: 🚫 Verificar si hay otros PRs abiertos hacia la misma rama
+      - name: 🚫 Verificar si hay otro PR abierto validado hacia la misma rama
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
@@ -25,15 +25,31 @@ jobs:
 
           echo "🔍 Buscando PRs abiertos hacia '$BASE_BRANCH' (excluyendo el actual: #$CURRENT_PR)"
 
-          OPEN_PRS=$(gh pr list --state open --base "$BASE_BRANCH" --json number | jq -r ".[] | select(.number != $CURRENT_PR) | .number")
+          OPEN_PRS=$(gh pr list --state open --base "$BASE_BRANCH" --json number,headRefOid | jq -c ".[] | select(.number != $CURRENT_PR)")
 
-          if [ -n "$OPEN_PRS" ]; then
-            echo "❌ Hay otros PRs abiertos hacia '$BASE_BRANCH':"
-            echo "$OPEN_PRS"
-            exit 1
-          else
-            echo "✅ No hay otros PRs abiertos hacia '$BASE_BRANCH'. Continuando validación..."
-          fi
+          for pr in $OPEN_PRS; do
+            PR_NUMBER=$(echo "$pr" | jq -r '.number')
+            HEAD_SHA=$(echo "$pr" | jq -r '.headRefOid')
+
+            echo "🔎 Verificando PR #$PR_NUMBER con SHA $HEAD_SHA"
+
+            MATCHED=false
+            for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --limit 30 --json databaseId,conclusion | jq -r '.[] | select(.conclusion == "success") | .databaseId'); do
+              mkdir -p .gh-temp
+              gh run download "$run_id" -n validated-deploy-id -D .gh-temp || continue
+
+              if [ -f .gh-temp/commit.txt ]; then
+                VALIDATED_SHA=$(cat .gh-temp/commit.txt)
+                if [ "$VALIDATED_SHA" == "$HEAD_SHA" ]; then
+                  echo "❌ PR #$PR_NUMBER ya fue validado. Bloqueando validación de este PR."
+                  exit 1
+                fi
+              fi
+              rm -rf .gh-temp
+            done
+          done
+
+          echo "✅ No hay PRs abiertos ya validados hacia '$BASE_BRANCH'"i
        
       - name: 🔍 Debug branch name
         run: |
