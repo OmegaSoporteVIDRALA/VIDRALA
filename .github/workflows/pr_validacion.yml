@@ -245,6 +245,7 @@ jobs:
         if: ${{ hashFiles('pmd/classes/**/*.cls') != '' }}
         run: |
           echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
+          mkdir -p ./pmd/report
           pmd check \
             --dir ./pmd/classes \
             --rulesets ./config/apex-ruleset.xml \
