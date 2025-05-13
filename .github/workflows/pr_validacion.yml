@@ -244,13 +244,10 @@ jobs:
           chmod +x ./pmd/pmd-bin-6.55.0
           echo "$GITHUB_WORKSPACE/pmd/pmd-bin-6.55.0/bin" >> $GITHUB_PATH
 
-      - name: 🔍 Check PMD installation
-        run: |
-          ls -l ./pmd/pmd-bin-6.55.0/bin
-          ./pmd/pmd-bin-6.55.0/bin/run.sh pmd --version
-
       - name: 📡 Ejecutar PMD sobre ./pmd/classes
         if: ${{ hashFiles('pmd/classes/**/*.cls') != '' }}
+        id: pmd_check
+        continue-on-error: true
         run: |
           echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
           mkdir -p ./pmd/report
@@ -260,15 +257,14 @@ jobs:
             -R category/apex/bestpractices.xml \
             -f text > ./pmd/report/pmd-report.txt
 
-          echo "📄 Resultado del análisis PMD:"
-          cat ./pmd/report/pmd-report.txt
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
 
-          if grep -q "^\[.*\]" ./pmd/report/pmd-report.txt; then
-            echo "❌ PMD violations found."
-            exit 1
-          else
-            echo "✅ No PMD violations found."
-          fi
+      - name: 📄 Mostrar reporte PMD
+        if: steps.pmd_check.outputs.exit_code != '0'
+        run: |
+          echo "❌ PMD violations found."
+          cat ./pmd/report/pmd-report.txt
+          exit 1
 
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
         run: |
