@@ -257,7 +257,7 @@ jobs:
             -d ./pmd/classes \
             -R category/apex/bestpractices.xml \
             -f json \
-            -r ./pmd/report/pmd-report.json
+            -r ./pmd/report/pmd-report.json || EXIT_CODE=$?
 
             # Si la ejecución fue exitosa, EXIT_CODE estará vacío. Forzar 0 si no hubo error
             EXIT_CODE=${EXIT_CODE:-0}
