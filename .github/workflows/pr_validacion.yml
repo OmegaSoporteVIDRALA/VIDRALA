@@ -240,21 +240,27 @@ jobs:
           mkdir -p ./pmd/zip
           unzip pmd.zip -d ./pmd/zip
           mv ./pmd/zip/pmd-bin-6.55.0 ./pmd
-          find ./pmd -type d
+          find ./pmd
           chmod +x ./pmd/pmd-bin-6.55.0
           echo "$GITHUB_WORKSPACE/pmd/pmd-bin-6.55.0/bin" >> $GITHUB_PATH
+
+      - name: 🔍 Check PMD installation
+        run: |
+          ls -l ./pmd/pmd-bin-6.55.0/bin
+          ./pmd/pmd-bin-6.55.0/bin/run.sh pmd --version
 
       - name: 📡 Ejecutar PMD sobre ./pmd/classes
         if: ${{ hashFiles('pmd/classes/**/*.cls') != '' }}
         run: |
           echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
           mkdir -p ./pmd/report
-          pmd check --no-cache \
-            --dir ./pmd/classes \
-            --rulesets category/apex/bestpractices.xml \
-            --format text > ./pmd/report/pmd-report.txt
+          chmod +x ./pmd/pmd-bin-6.55.0/bin/run.sh
+          ./pmd/pmd-bin-6.55.0/bin/run.sh pmd \
+            -d ./pmd/classes \
+            -R category/apex/bestpractices.xml \
+            -f text > ./pmd/report/pmd-report.txt
 
-          echo "🔎 PMD Report:"
+          echo "📄 Resultado del análisis PMD:"
           cat ./pmd/report/pmd-report.txt
 
           if grep -q "^\[.*\]" ./pmd/report/pmd-report.txt; then
