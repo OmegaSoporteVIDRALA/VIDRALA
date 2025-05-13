@@ -260,7 +260,6 @@ jobs:
           echo "exit_code=$?" >> $GITHUB_OUTPUT
 
       - name: 📄 Mostrar reporte PMD
-        if: steps.pmd_check.outputs.exit_code != '0'
         run: |
           echo "❌ PMD violations found."
           cat ./pmd/report/pmd-report.txt
