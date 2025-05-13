@@ -249,7 +249,7 @@ jobs:
         run: |
           echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
           mkdir -p ./pmd/report
-          ./pmd/bin/run.sh pmd check \
+          java -cp "pmd/lib/*" net.sourceforge.pmd.PMD \
             --dir ./pmd/classes \
             --rulesets ./config/apex-ruleset.xml \
             --format text \
