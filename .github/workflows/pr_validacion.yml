@@ -258,10 +258,12 @@ jobs:
             -f json \
             -r ./pmd/report/pmd-report.json
 
-          echo "PMD_EXIT_CODE=$?" >> $GITHUB_ENV
+          EXIT_CODE=$?
+          echo "exit_code=${EXIT_CODE}" >> "$GITHUB_OUTPUT"
         continue-on-error: true
 
       - name: 📤 Subir reporte PMD como artifact si hay errores
+        if: steps.pmd_check.outputs.exit_code != '0'
         uses: actions/upload-artifact@v4
         with:
           name: pmd-report
@@ -269,7 +271,7 @@ jobs:
           retention-days: 5
 
       - name: 📄 Mostrar reporte PMD
-        if: env.PMD_EXIT_CODE != '0'
+        if: steps.pmd_check.outputs.exit_code != '0'
         run: |
           echo "❌ PMD violations found."
           cat ./pmd/report/pmd-report.json
