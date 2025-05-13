@@ -242,16 +242,17 @@ jobs:
           mv ./pmd/zip/pmd-bin-6.55.0 ./pmd
           find ./pmd -type d
           chmod +x ./pmd/pmd-bin-6.55.0
+          echo "$GITHUB_WORKSPACE/pmd/pmd-bin-6.55.0/bin" >> $GITHUB_PATH
 
       - name: 📡 Ejecutar PMD sobre ./pmd/classes
         if: ${{ hashFiles('pmd/classes/**/*.cls') != '' }}
         run: |
           echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
           mkdir -p ./pmd/report
-          ./pmd/pmd-bin-6.55.0/bin/pmd \
-            -d ./pmd/classes \
-            -R category/apex/bestpractices.xml \
-            -f text > ./pmd/report/pmd-report.txt
+          pmd check --no-cache \
+            --dir ./pmd/classes \
+            --rulesets category/apex/bestpractices.xml \
+            --format text > ./pmd/report/pmd-report.txt
 
           echo "🔎 PMD Report:"
           cat ./pmd/report/pmd-report.txt
