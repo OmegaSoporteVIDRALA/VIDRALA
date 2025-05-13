@@ -241,7 +241,7 @@ jobs:
           unzip pmd.zip -d ./pmd/zip
           mv ./pmd/zip/pmd-bin-6.55.0 ./pmd
           find ./pmd -type d
-          chmod +x .pmd/pmd-bin-6.55.0
+          chmod +x ./pmd/pmd-bin-6.55.0
 
       - name: 📡 Ejecutar PMD sobre ./pmd/classes
         if: ${{ hashFiles('pmd/classes/**/*.cls') != '' }}
