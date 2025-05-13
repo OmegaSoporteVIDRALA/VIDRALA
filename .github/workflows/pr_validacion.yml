@@ -248,11 +248,11 @@ jobs:
         run: |
           echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
           mkdir -p ./pmd/report
-          ./pmd/pmd-bin-6.55.0/bin/run.sh pmd check \
-            --dir ./pmd/classes \
-            --rulesets ./config/apex-ruleset.xml \
-            --format text \
-            --report-file ./pmd/report/pmd-report.txt 
+          ./pmd/pmd-bin-6.55.0/bin/ pmd \
+            -d ./pmd/classes \
+            -R category/apex/bestpractices.xml \
+            -f text > ./pmd/report/pmd-report.txt
+
 
           echo "🔎 PMD Report:"
           cat ./pmd/report/pmd-report.txt
