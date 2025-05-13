@@ -262,11 +262,11 @@ jobs:
             # Si la ejecución fue exitosa, EXIT_CODE estará vacío. Forzar 0 si no hubo error
             EXIT_CODE=${EXIT_CODE:-0}
             echo "Código de salida de PMD: $EXIT_CODE"
-            echo $EXIT_CODE > >> "$GITHUB_OUTPUT"
+            echo $EXIT_CODE >> $GITHUB_ENV
         continue-on-error: true
 
       - name: 📤 Subir reporte PMD como artifact si hay errores
-        if: steps.pmd_check.outputs.exit_code != '0'
+        if: env.PMD_EXIT_CODE != '0'
         uses: actions/upload-artifact@v4
         id: pmd_update
         with:
@@ -275,7 +275,7 @@ jobs:
           retention-days: 5
 
       - name: 🛑 Mostrar reporte PMD
-        if: steps.pmd_check.outputs.exit_code != '0'
+        if: env.PMD_EXIT_CODE != '0'
         run: |
           echo "❌ PMD violations found."
           cat ./pmd/report/pmd-report.json
