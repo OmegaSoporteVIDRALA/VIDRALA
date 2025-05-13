@@ -240,8 +240,8 @@ jobs:
           mkdir -p ./pmd/zip
           unzip pmd.zip -d ./pmd/zip
           mv ./pmd/zip/pmd-bin-6.55.0 ./pmd
-          find ./pmd -mindepth 1 -maxdepth 1 -type d
-          chmod +x ./pmd/bin/pmd
+          find ./pmd -type d
+          chmod +x ./pmd/pmd-bin-6.55.0
 
       - name: ➕ Agregar PMD al PATH
         run: echo "$GITHUB_WORKSPACE/pmd/bin" >> $GITHUB_PATH
@@ -251,7 +251,7 @@ jobs:
         run: |
           echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
           mkdir -p ./pmd/report
-          ./pmd/bin/pmd \
+          ./pmd/pmd-bin-6.55.0 \
             --dir ./pmd/classes \
             --rulesets ./config/apex-ruleset.xml \
             --format text \
