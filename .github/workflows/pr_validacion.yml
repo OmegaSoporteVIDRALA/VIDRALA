@@ -247,30 +247,32 @@ jobs:
       - name: 📡 Ejecutar PMD sobre ./pmd/classes
         if: ${{ hashFiles('pmd/classes/**/*.cls') != '' }}
         id: pmd_check
-        continue-on-error: true
         run: |
           echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
           mkdir -p ./pmd/report
           chmod +x ./pmd/pmd-bin-6.55.0/bin/run.sh
+
           ./pmd/pmd-bin-6.55.0/bin/run.sh pmd \
             -d ./pmd/classes \
             -R category/apex/bestpractices.xml \
-            -f html > ./pmd/report/pmd-report.html
+            -f json \
+            -r ./pmd/report/pmd-report.json
 
-          echo "exit_code=$?" >> $GITHUB_OUTPUT
+          echo "PMD_EXIT_CODE=$?" >> $GITHUB_ENV
+        continue-on-error: true
 
       - name: 📤 Subir reporte PMD como artifact si hay errores
         uses: actions/upload-artifact@v4
         with:
           name: pmd-report
-          path: ./pmd/report/pmd-report.html
+          path: ./pmd/report/pmd-report.json
           retention-days: 5
 
       - name: 📄 Mostrar reporte PMD
-        if: steps.pmd_check.outputs.exit_code != '0'
+        if: env.PMD_EXIT_CODE != '0'
         run: |
           echo "❌ PMD violations found."
-          cat ./pmd/report/pmd-report.txt
+          cat ./pmd/report/pmd-report.json
           exit 1
 
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
