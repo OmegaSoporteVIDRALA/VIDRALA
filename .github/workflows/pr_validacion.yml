@@ -266,7 +266,6 @@ jobs:
         continue-on-error: true
 
       - name: 📤 Subir reporte PMD como artifact si hay errores
-        if: env.PMD_EXIT_CODE != '0'
         uses: actions/upload-artifact@v4
         id: pmd_update
         with:
@@ -274,11 +273,14 @@ jobs:
           path: ./pmd/report/pmd-report.json
           retention-days: 5
 
-      - name: 🛑 Review artifact
-        if: env.PMD_EXIT_CODE != '0'
+      - name: 🛑 Fallar si hay errores PMD
         run: |
-          echo "❌ PMD violations found.Review the artifact attached to the workflow"
-          exit 1
+          count=$(jq '[.files[].violations[]] | length' ./pmd/report/pmd-report.json)
+          echo "violations found: $count"
+          if [ "$count" -gt 0 ]; then
+            echo "❌  PMD violations found.Review the artifact attached to the workflow"
+            exit 1
+          fi
 
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
         run: |
