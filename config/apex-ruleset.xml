@@ -35,6 +35,7 @@
         <exclude name="IfElseStmtsMustUseBraces"/><!--Avoid using if..else statements without using surrounding braces.-->
         <exclude name="IfStmtsMustUseBraces"/><!--Avoid using if statements without using braces to surround the code block. -->
         <exclude name="LocalVariableNamingConventions"/><!--This rule reports variable declarations which do not match the regex that applies to their specific kind (e.g. local variable, or final local variable).-->
+        <exclude name="VariableNamingConventions"/>
         <exclude name="OneDeclarationPerLine"/><!--Apex allows the use of several variables declaration of the same type on one line-->
         <exclude name="PropertyNamingConventions"/><!--This rule reports property declarations which do not match the regex that applies to their specific kind (e.g. static property, or instance property)-->
         <exclude name="WhileLoopsMustUseBraces"/><!--Avoid using ‘while’ statements without using braces to surround the code block. -->
