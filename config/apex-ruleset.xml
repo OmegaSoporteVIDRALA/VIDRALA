@@ -21,13 +21,6 @@
         <exclude name="ApexUnitTestShouldNotUseSeeAllDataTrue"/><!--Apex unit tests should not use @isTest(seeAllData=true) because it opens up the existing database data for unexpected modification by tests.-->
         <exclude name="AvoidGlobalModifier"/><!--Global classes should be avoided (especially in managed packages) as they can never be deleted or changed in signature-->
         <exclude name="DebugsShouldUseLoggingLevel"/><!--The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum.-->
-        <exclude name="EmptyCatchBlock"/><!--Empty Catch Block finds instances where an exception is caught, but nothing is done-->
-        <exclude name="EmptyIfStmt"/><!--Empty If Statement finds instances where a condition is checked but nothing is done about it.-->
-        <exclude name="EmptyStatementBlock"/><!--Empty block statements serve no purpose and should be removed.-->
-        <exclude name="AvoidDirectAccessTriggerMap"/><!--Avoid directly accessing Trigger.old and Trigger.new as it can lead to a bug.-->
-        <exclude name="AvoidNonExistentAnnotations"/><!-- This will prevent users of garbage annotations from being able to use legitimate annotations added to Apex in the future-->
-        <exclude name="EmptyTryOrFinallyBlock"/><!--Avoid empty try or finally blocks - what’s the point?-->
-        <exclude name="EmptyWhileStmt"/><!--Empty While Statement finds all instances where a while statement does nothing.-->
         <exclude name="TestMethodsMustBeInTestClasses"/><!--Test methods marked as a testMethod or annotated with @IsTest, but not residing in a test class should be moved to a proper class 
                                                              or have the @IsTest annotation added to the class.-->
     </rule>
@@ -60,8 +53,6 @@
         <exclude name="CognitiveComplexity"/><!--Methods that are highly complex are difficult to read and more costly to maintain.-->
         <exclude name="CyclomaticComplexity"/><!--The complexity of methods directly affects maintenance costs and readability.-->
         <exclude name="AvoidDeeplyNestedIfStmts"/><!--Avoid creating deeply nested if-then statements since they are harder to read and error-prone to maintain.-->
-        <exclude name="OverrideBothEqualsAndHashcode"/><!--Override both public Boolean equals(Object obj), and public Integer hashCode(), or override neither.-->
-        <exclude name="MethodWithSameNameAsEnclosingClass"/><!--Non-constructor methods should not have the same name as the enclosing class.-->
     </rule>
 
     <!-- 🚀 Performance: Rules that flag suboptimal code.-->
@@ -83,9 +74,8 @@
         <exclude name="ApexCRUDViolation"/> <!--The rule validates you are checking for access permissions before a SOQL/SOSL/DML operation-->
         <exclude name="ApexDangerousMethods"/> <!--Checks against calling dangerous methods-->
         <exclude name="ApexSharingViolations"/> <!--Detect classes declared without explicit sharing mode if DML methods are used-->
-        <exclude name="AvoidHardcodingId"/><!-- It is essential to avoid hardcoding IDs in the Apex code between sandbox and production environments-->
+        <!--<exclude name="AvoidHardcodingId"/> It is essential to avoid hardcoding IDs in the Apex code between sandbox and production environments-->
         <exclude name="ApexCSRF"/><!--Having DML operations in Apex class constructor or initializers can have unexpected side effects: By just accessing a page, the DML 
         statements would be executed and the database would be modified.-->
-        <exclude name="InaccessibleAuraEnabledGetter"/><!--he update prevents access to private or protected Apex getters from Aura and Lightning Web Components.-->
     </rule>
 </ruleset>
