@@ -262,7 +262,7 @@ jobs:
             # Si la ejecución fue exitosa, EXIT_CODE estará vacío. Forzar 0 si no hubo error
             EXIT_CODE=${EXIT_CODE:-0}
             echo "Código de salida de PMD: $EXIT_CODE"
-            echo $EXIT_CODE >> $GITHUB_ENV
+            echo "PMD_EXIT_CODE=$EXIT_CODE" >> $GITHUB_ENV
         continue-on-error: true
 
       - name: 📤 Subir reporte PMD como artifact si hay errores
