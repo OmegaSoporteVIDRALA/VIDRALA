@@ -274,11 +274,10 @@ jobs:
           path: ./pmd/report/pmd-report.json
           retention-days: 5
 
-      - name: 🛑 Mostrar reporte PMD
+      - name: 🛑 Review artifact
         if: env.PMD_EXIT_CODE != '0'
         run: |
-          echo "❌ PMD violations found."
-          cat ./pmd/report/pmd-report.json
+          echo "❌ PMD violations found.Review the artifact attached to the workflow"
           exit 1
 
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
