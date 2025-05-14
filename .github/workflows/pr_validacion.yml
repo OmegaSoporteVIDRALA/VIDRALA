@@ -276,10 +276,10 @@ jobs:
       - name: 🛑 Fallar si hay errores PMD
         run: |
           if [ -s ./pmd/report/pmd-report.json ]; then
-            echo "✅ El archivo tiene contenido."
-          else
-            echo "❌ El archivo está vacío."
+            echo "❌ El archivo tiene contenido."
             exit 1
+          else
+            echo "✅ El archivo está vacío."
           fi
 
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
