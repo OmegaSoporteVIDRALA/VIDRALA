@@ -12,7 +12,7 @@
 
     <!-- ✅ Best Practices:Rules which enforce generally accepted best practices.  -->
     
-        <rule ref="category/apex/bestpractices.xml/AvoidLogicInTriggers" disabled="true"/><!--As triggers do not allow methods like regular classes they are less flexible and suited to apply good encapsulation style-->
+        <rule ref="category/apex/bestpractices.xml/AvoidLogicInTrigger" disabled="true"/><!--As triggers do not allow methods like regular classes they are less flexible and suited to apply good encapsulation style-->
         <rule ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveAsserts" disabled="true"/><!--Apex unit tests should include at least one assertion-->
         <rule ref="category/apex/bestpractices.xml/ApexAssertionsShouldIncludeMessage" disabled="true"/><!--The second parameter of System.assert/third parameter of System.assertEquals/System.assertNotEquals is a message-->
         <rule ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveRunAs" disabled="true"/><!--Apex unit tests should include at least one runAs method.-->
