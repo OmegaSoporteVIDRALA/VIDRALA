@@ -255,7 +255,7 @@ jobs:
 
           ./pmd/pmd-bin-6.55.0/bin/run.sh pmd \
             -d ./pmd/classes \
-            -R category/apex/bestpractices.xml \
+            -R ./config/apex-ruleset.xml \
             -f json \
             -r ./pmd/report/pmd-report.json || EXIT_CODE=$?
 
