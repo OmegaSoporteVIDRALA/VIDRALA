@@ -73,7 +73,6 @@
 
     <!-- 🔒 Security: Rules that flag potential security flaws -->
         <rule ref="category/apex/security.xml/ApexSOQLInjection" disabled="true"/><!--Detects the usage of untrusted / unescaped variables in DML queries.-->
-        <rule ref="category/apex/security.xml/ApexCryptoAPI" disabled="true"/> <!-- The rule makes sure you are using randomly generated IVs and keys for Crypto calls -->
         <rule ref="category/apex/security.xml/ApexXSSFromURLParam" disabled="true"/><!--Makes sure that all values obtained from URL parameters are properly escaped / sanitized to avoid XSS attacks.-->
         <rule ref="category/apex/security.xml/ApexXSSFromEscapeFalse" disabled="true"/><!--Reports on calls to addError with disabled escaping.-->
         <rule ref="category/apex/security.xml/ApexSuggestUsingNamedCred" disabled="true"/> <!--Detects hardcoded credentials used in requests to an endpoint.-->
