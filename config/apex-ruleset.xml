@@ -24,7 +24,6 @@
         <!-- 🔤 Code Style: Rules which enforce a specific coding style. -->
         <rule ref="category/apex/codestyle.xml/FieldNamingConventions" disabled="true"/><!--Configurable naming conventions for field declarations.-->
         <rule ref="category/apex/codestyle.xml/MethodNamingConventions" disabled="true"/><!--This rule reports method declarations which do not match the regex that applies to their specific kind (e.g. static method, or test method)-->
-        <rule ref="category/apex/codestyle.xml/VariableNamingConventions" disabled="true"/><!--Currently, it checks for final variables that should be fully capitalized and non-final variables that should not include underscores-->
         <rule ref="category/apex/codestyle.xml/ClassNamingConventions" disabled="true"/><!--This rule reports type declarations which do not match the regex that applies to their specific kind (e.g. enum or interface)..-->
         <rule ref="category/apex/codestyle.xml/FieldDeclarationsShouldBeAtStart" disabled="true"/><!--Field declarations should appear before method declarations within a class.-->
         <rule ref="category/apex/codestyle.xml/ForLoopsMustUseBraces" disabled="true"/><!--Avoid using ‘for’ statements without using surrounding braces.-->
@@ -45,7 +44,6 @@
         <rule ref="category/apex/design.xml/NcssTypeCount" disabled="true"/><!--This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of lines of code for a given type.-->
         <rule ref="category/apex/design.xml/StdCyclomaticComplexity" disabled="true"/><!--Complexity directly affects maintenance costs is determined by the number of decision points in a method plus one for the method entry.-->
         <rule ref="category/apex/design.xml/TooManyFields" disabled="true"/><!--Classes that have too many fields can become unwieldy and could be redesigned to have fewer fields, possibly through grouping related fields in new objects-->
-        <rule ref="category/apex/design.xml/ExcessiveMethodLength" disabled="true"/><!--When methods are excessively long this usually indicates that the method is doing more than its name/signature might suggest-->
         <rule ref="category/apex/design.xml/CognitiveComplexity" disabled="true"/><!--Methods that are highly complex are difficult to read and more costly to maintain.-->
         <rule ref="category/apex/design.xml/CyclomaticComplexity" disabled="true"/><!--The complexity of methods directly affects maintenance costs and readability.-->
         <rule ref="category/apex/design.xml/AvoidDeeplyNestedIfStmts" disabled="true"/><!--Avoid creating deeply nested if-then statements since they are harder to read and error-prone to maintain.-->
