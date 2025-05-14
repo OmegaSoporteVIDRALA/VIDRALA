@@ -275,10 +275,23 @@ jobs:
 
       - name: 🛑 Fallar si hay errores PMD
         run: |
-          count=$(jq '[.files[].violations[]] | length' ./pmd/report/pmd-report.json)
-          echo "violations found: $count"
-          if [ "$count" -gt 0 ]; then
-            echo "❌  PMD violations found.Review the artifact attached to the workflow"
+          if [ ! -f ./pmd/report/pmd-report.json ]; then
+            echo "❌ No se encontró el archivo de reporte de PMD."
+            exit 1
+          fi
+
+          count=$(jq '[.files[].violations[]] | length' ./pmd/report/pmd-report.json 2>/dev/null || echo 0)
+
+          if [[ "$count" =~ ^[0-9]+$ ]]; then
+            echo "🔍 Violaciones encontradas: $count"
+            if [ "$count" -gt 0 ]; then
+              echo "❌ PMD encontró errores. Revisa el reporte."
+              exit 1
+            else
+              echo "✅ No se encontraron violaciones PMD."
+            fi
+          else
+            echo "⚠️ No se pudo analizar el archivo pmd-report.json correctamente."
             exit 1
           fi
 
