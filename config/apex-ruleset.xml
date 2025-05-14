@@ -66,9 +66,6 @@
                                                             or have the @IsTest annotation added to the class.-->
 
     <!-- 🚀 Performance: Rules that flag suboptimal code.-->
-        <rule ref="category/apex/performance.xml/AvoidDmlStatementsInLoops" disabled="true"/><!--Avoid DML statements inside loops to avoid hitting the DML governor limit.-->
-        <rule ref="category/apex/performance.xml/AvoidSoqlInLoops" disabled="true"/><!--New objects created within loops should be checked to see if they can created outside them and reused.-->
-        <rule ref="category/apex/performance.xml/AvoidSoslInLoops" disabled="true"/><!--Sosl calls within loops can cause governor limit exceptions.-->
         <rule ref="category/apex/performance.xml/EagerlyLoadedDescribeSObjectResult" disabled="true"/><!--This rule finds DescribeSObjectResults which could have been loaded eagerly via SObjectType.getDescribe().-->
         <rule ref="category/apex/performance.xml/AvoidDebugStatements" disabled="true"/> <!--Debug statements contribute to longer transactions and consume Apex CPU time even when debug logs are not being captured.-->
         <rule ref="category/apex/performance.xml/OperationWithLimitsInLoop" disabled="true"/><!--Database class methods, DML operations, SOQL queries, SOSL queries, Approval class methods, Email sending,async scheduling or queueing within
@@ -76,7 +73,6 @@
 
     <!-- 🔒 Security: Rules that flag potential security flaws -->
         <rule ref="category/apex/security.xml/ApexSOQLInjection" disabled="true"/><!--Detects the usage of untrusted / unescaped variables in DML queries.-->
-        <rule ref="category/apex/security.xml/ApexCrossSiteScripting" disabled="true"/><!--checks for potential Cross-Site Scripting (XSS) vulnerabilities in Apex code when using URL parameters-->
         <rule ref="category/apex/security.xml/ApexCryptoAPI" disabled="true"/> <!-- The rule makes sure you are using randomly generated IVs and keys for Crypto calls -->
         <rule ref="category/apex/security.xml/ApexXSSFromURLParam" disabled="true"/><!--Makes sure that all values obtained from URL parameters are properly escaped / sanitized to avoid XSS attacks.-->
         <rule ref="category/apex/security.xml/ApexXSSFromEscapeFalse" disabled="true"/><!--Reports on calls to addError with disabled escaping.-->
