@@ -14,8 +14,6 @@
 
 ---
 
-# ⚙️ GitHub Actions – Salesforce Component Validation and Deployment
-
 Este repositorio utiliza **GitHub Actions** para automatizar la validación de código Apex con **PMD** y el posterior despliegue con **Salesforce CLI (`sf`)**, siguiendo buenas prácticas CI/CD.
 
 This repository uses **GitHub Actions** to automate Apex code validation with **PMD** and subsequent deployment using **Salesforce CLI (`sf`)**, following CI/CD best practices.
