@@ -1,47 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="Custom Apex Rules"
+<ruleset name="Salesforce-Apex-Strict"
          xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.github.io/pmd-6.55.0/pmd-6.55.0.xsd">
-    <description>Custom PMD ruleset for Salesforce Apex development</description>
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 
+                             http://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+         xmlns:fn="http://www.w3.org/2005/xpath-functions">
 
-    <!-- ✅ Mejores prácticas generales -->
+    <description>
+        Custom PMD rule set for Salesforce Apex classes to align with Salesforce best practices and internal validation. <!--Link to rules: https://docs.pmd-code.org/pmd-doc-6.55.0/pmd_rules_apex.html-->
+    </description>
+
+    <!-- ✅ Best Practices:Rules which enforce generally accepted best practices.  -->
     <rule ref="category/apex/bestpractices.xml">
-        <exclude name="AvoidGlobalModifier" />  <!-- Permitir métodos @global si es necesario -->
+        <exclude name="AvoidLogicInTrigger"/><!--As triggers do not allow methods like regular classes they are less flexible and suited to apply good encapsulation style-->
+        <exclude name="ApexUnitTestClassShouldHaveAsserts"/><!--Apex unit tests should include at least one assertion-->
+        <exclude name="ApexAssertionsShouldIncludeMessage"/><!--The second parameter of System.assert/third parameter of System.assertEquals/System.assertNotEquals is a message-->
+        <exclude name="ApexUnitTestClassShouldHaveRunAs"/><!--Apex unit tests should include at least one runAs method.-->
+        <exclude name="ApexUnitTestMethodShouldHaveIsTestAnnotation"/><!--Apex test methods should have @isTest annotation instead of the testMethod keyword,as testMethod is deprecated.-->
+        <exclude name="ApexUnitTestShouldNotUseSeeAllDataTrue"/><!--Apex unit tests should not use @isTest(seeAllData=true) because it opens up the existing database data for unexpected modification by tests.-->
+        <exclude name="AvoidGlobalModifier"/><!--Global classes should be avoided (especially in managed packages) as they can never be deleted or changed in signature-->
+        <exclude name="DebugsShouldUseLoggingLevel"/><!--The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum.-->
     </rule>
 
-    <!-- ❌ Errores comunes que debemos evitar -->
-    <rule ref="category/apex/errorprone.xml">
-        <exclude name="EmptyCatchBlock" />  <!-- A veces un catch vacío es válido -->
-        <exclude name="AvoidDirectAccessTriggerMap" />  <!-- Esta regla no es crítica -->
+    <!-- 🔤 Code Style: Rules which enforce a specific coding style. -->
+    <rule ref="category/apex/codestyle.xml">
+        <exclude name="FieldNamingConventions"/><!--Configurable naming conventions for field declarations.-->
+        <exclude name="MethodNamingConventions"/><!--This rule reports method declarations which do not match the regex that applies to their specific kind (e.g. static method, or test method)-->
+        <exclude name="ClassNamingConventions"/><!--This rule reports type declarations which do not match the regex that applies to their specific kind (e.g. enum or interface)..-->
+        <exclude name="FieldDeclarationsShouldBeAtStart"/><!--Field declarations should appear before method declarations within a class.-->
+        <exclude name="ForLoopsMustUseBraces"/><!--Avoid using ‘for’ statements without using surrounding braces.-->
+        <exclude name="FormalParameterNamingConventions"/><!--Configurable naming conventions for formal parameters of methods. -->
+        <exclude name="IfElseStmtsMustUseBraces"/><!--Avoid using if..else statements without using surrounding braces.-->
+        <exclude name="IfStmtsMustUseBraces"/><!--Avoid using if statements without using braces to surround the code block. -->
+        <exclude name="LocalVariableNamingConventions"/><!--This rule reports variable declarations which do not match the regex that applies to their specific kind (e.g. local variable, or final local variable).-->
+        <exclude name="VariableNamingConventions"/>
+        <exclude name="OneDeclarationPerLine"/><!--Apex allows the use of several variables declaration of the same type on one line-->
+        <exclude name="PropertyNamingConventions"/><!--This rule reports property declarations which do not match the regex that applies to their specific kind (e.g. static property, or instance property)-->
+        <exclude name="WhileLoopsMustUseBraces"/><!--Avoid using ‘while’ statements without using braces to surround the code block. -->
     </rule>
 
-    <!-- 🚀 Performance: Evita consultas SOQL/Mixed DML en lugares prohibidos -->
-    <rule ref="category/apex/performance.xml">
-        <exclude name="AvoidNestedQueries" />  <!-- A veces es necesario en tests -->
-    </rule>
-
-    <!-- 🔒 Seguridad: Evita logs y hardcoded IDs -->
-    <rule ref="category/apex/security.xml">
-        <exclude name="AvoidHardcodedId" />  <!-- Evitar hardcoded IDs en código -->
-        <exclude name="AvoidSystemDebug" />  <!-- Permitir System.debug en entornos no productivos -->
-    </rule>
-
-    <!-- 🏗️ Buen diseño y estructura -->
+    <!-- 🏗️ Design: Rules that help you discover design issues. -->
     <rule ref="category/apex/design.xml">
-        <exclude name="CyclomaticComplexity" />  <!-- No queremos falsos positivos aquí -->
-        <exclude name="ExcessiveClassLength" />  <!-- A veces una clase larga es necesaria -->
-        <exclude name="ExcessiveMethodLength" />  <!-- Igual para métodos largos -->
+        <exclude name="ExcessiveClassLength"/><!--Excessive class file lengths are usually indications that the class may be burdened with excessive responsibilities that could be provided by external classes or functions.-->
+        <exclude name="ExcessiveParameterList"/><!--Methods with numerous parameters are a challenge to maintain, especially if most of them share the same datatype.-->
+        <exclude name="ExcessivePublicCount"/><!--Classes with large numbers of public methods and attributes require disproportionate testing efforts since combinational side effects grow rapidly and increase risk.-->
+        <exclude name="NcssConstructorCount"/><!--This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of lines of code for a given constructor-->
+        <exclude name="NcssMethodCount"/><!--This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of lines of code for a given method-->
+        <exclude name="NcssTypeCount"/><!--This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of lines of code for a given type.-->
+        <exclude name="StdCyclomaticComplexity"/><!--Complexity directly affects maintenance costs is determined by the number of decision points in a method plus one for the method entry.-->
+        <exclude name="TooManyFields"/><!--Classes that have too many fields can become unwieldy and could be redesigned to have fewer fields, possibly through grouping related fields in new objects-->
+        <exclude name="CognitiveComplexity"/><!--Methods that are highly complex are difficult to read and more costly to maintain.-->
+        <exclude name="CyclomaticComplexity"/><!--The complexity of methods directly affects maintenance costs and readability.-->
+        <exclude name="AvoidDeeplyNestedIfStmts"/><!--Avoid creating deeply nested if-then statements since they are harder to read and error-prone to maintain.-->
     </rule>
 
-    <!-- 🔤 Nomenclatura (nombres claros y coherentes) -->
-    <rule ref="category/apex/naming.xml">
-        <exclude name="AvoidMethodNameAsVariableName" />  <!-- Permitir si tiene sentido -->
+    <!-- 🚀 Performance: Rules that flag suboptimal code.-->
+    <rule ref="category/apex/performance.xml">
+        <exclude name="EagerlyLoadedDescribeSObjectResult"/><!--This rule finds DescribeSObjectResults which could have been loaded eagerly via SObjectType.getDescribe().-->
+        <exclude name="AvoidDebugStatements"/> <!--Debug statements contribute to longer transactions and consume Apex CPU time even when debug logs are not being captured.-->
+        <exclude name="OperationWithLimitsInLoop"/><!--Database class methods, DML operations, SOQL queries, SOSL queries, Approval class methods, Email sending,async scheduling or queueing within
+                                                       loops can cause governor limit exceptions. Instead, try to batch up the data into a list and invoke the operation once on that list of data outside the loop.-->
     </rule>
 
-    <!-- ⚠️ Validación de pruebas (Test Classes) -->
-    <rule ref="category/apex/test.xml">
-        <exclude name="UseAssertInTests" />  <!-- A veces los tests son validaciones indirectas -->
+    <!-- 🔒 Security: Rules that flag potential security flaws -->
+    <rule ref="category/apex/security.xml">
+        <exclude name="ApexSOQLInjection"/><!--Detects the usage of untrusted / unescaped variables in DML queries.-->
+        <exclude name="ApexXSSFromURLParam"/><!--Makes sure that all values obtained from URL parameters are properly escaped / sanitized to avoid XSS attacks.-->
+        <exclude name="ApexXSSFromEscapeFalse"/><!--Reports on calls to addError with disabled escaping.-->
+        <exclude name="ApexSuggestUsingNamedCred"/> <!--Detects hardcoded credentials used in requests to an endpoint.-->
+        <exclude name="ApexOpenRedirect"/> <!--Checks against redirects to user-controlled locations. This prevents attackers from redirecting users to phishing sites.-->
+        <exclude name="ApexInsecureEndpoint"/> <!--Checks against accessing endpoints under plain http. You should always use https for security.-->
+        <exclude name="ApexCRUDViolation"/> <!--The rule validates you are checking for access permissions before a SOQL/SOSL/DML operation-->
+        <exclude name="ApexDangerousMethods"/> <!--Checks against calling dangerous methods-->
+        <exclude name="ApexSharingViolations"/> <!--Detect classes declared without explicit sharing mode if DML methods are used-->
+        <exclude name="ApexCSRF"/><!--Having DML operations in Apex class constructor or initializers can have unexpected side effects: By just accessing a page, the DML 
+                                      statements would be executed and the database would be modified.-->
     </rule>
-
 </ruleset>
