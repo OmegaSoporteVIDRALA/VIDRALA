@@ -15,10 +15,59 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 📥 Download validated deploy ID
-        uses: actions/download-artifact@v4
-        with:
-          name: validated-deploy-id
+      - name: 🧰 Instalar GitHub CLI
+        run: |
+          sudo apt update
+          sudo apt install gh -y
+                    
+      - name: 🔎 Verificar si el commit viene de un merge de PR
+        id: check_pr
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          echo "HEAD SHA (merge commit): $GITHUB_SHA"
+          echo "GH_TOKEN: $ GH_TOKEN"
+
+          echo "Buscando PR que tenga ese SHA como mergeCommit..."
+          PR_INFO=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --json number,mergeCommit,headRefOid --jq ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
+
+          if [ -z "$PR_INFO" ]; then
+            echo "❌ Este commit no proviene de un merge de una PR. Cancelando..."
+            exit 1
+          else
+            PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
+            HEAD_SHA=$(echo "$PR_INFO" | jq -r '.headRefOid')
+            echo "✅ Commit originado desde PR #$PR_NUMBER con HEAD_SHA: $HEAD_SHA"
+            echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
+            echo "PR_HEAD_SHA=$HEAD_SHA" >> $GITHUB_ENV
+          fi
+
+      - name: 📦 Obtener SHA del PR desde el merge commit
+        id: find_pr_sha
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          echo "HEAD SHA: $GITHUB_SHA"
+          echo "Branch destino: $GITHUB_REF_NAME"
+
+          # Buscar PRs que fueron mergeados a este branch y cuyo commit coincide con el actual
+          PR_INFO=$(gh pr list --state merged --base "$GITHUB_REF_NAME" --limit 20 --json mergeCommit,headRefOid,number | jq -c ".[] | select(.mergeCommit.oid == \"$GITHUB_SHA\")")
+
+          if [ -z "$PR_INFO" ]; then
+            echo "❌ Este commit no proviene de un merge de PR válido."
+            exit 1
+          fi
+
+          PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
+          PR_HEAD_SHA=$(echo "$PR_INFO" | jq -r '.headRefOid')
+
+          echo "✅ PR #$PR_NUMBER encontrado. SHA original del PR: $PR_HEAD_SHA"
+
+          echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
+          echo "PR_HEAD_SHA=$PR_HEAD_SHA" >> $GITHUB_ENV
+
+      - name: 🧐 Verificar contenido del package.xml
+        run: cat ./manifest/package.xml         
 
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
@@ -67,13 +116,49 @@ jobs:
       - name: ✍ Verify Authentication
         run: |
           sfdx force:org:list
+          
+      - name: 📥 Descargar último artifact validado
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          MATCHED=false
+          TARGET_SHA=${{ env.PR_HEAD_SHA }}
+          ARTIFACT_NAME="validated-deploy-id-${TARGET_SHA}"
+          
+          echo "🎯 Buscando artifacts con nombre: $ARTIFACT_NAME"
 
+          for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --limit 20 --json databaseId,conclusion | jq -r '.[] | select(.conclusion == "success") | .databaseId'); do
+            echo "🔎 Analizando run ID: $run_id"
+            mkdir -p .gh-temp
+
+            if gh run download "$run_id" -n "$ARTIFACT_NAME" -D .gh-temp 2>/dev/null; then
+              echo "✅ Artifact $ARTIFACT_NAME encontrado en run $run_id"
+              mv .gh-temp .gh-deploy-data
+              MATCHED=true
+              break
+            fi
+            rm -rf .gh-temp
+          done
+
+          if [ "$MATCHED" = false ]; then
+            echo "❌ No se encontró un validation que coincida con el SHA del PR"
+            exit 1
+          fi
+          
+      - name: 📖 Read deploy ID
+        id: read_id
+        run: |
+          if [ ! -f .gh-deploy-data/validated-deploy-id.txt ]; then
+            echo "❌ No se encontró el archivo validated-deploy-id.txt"
+            exit 1
+          fi
+          DEPLOY_ID=$(cat .gh-deploy-data/validated-deploy-id.txt)
+          echo "✅ Deployment ID encontrado: $DEPLOY_ID"
+          echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
+          
       - name: 🚀 Quick Deploy
         run: |
-          DEPLOY_ID=$(cat validated-deploy-id.txt)
           echo "🔁 Quick deploying job ID: $DEPLOY_ID"
-          echo "DEPLOY_ID=$DEPLOY_ID" >> $GITHUB_ENV
-
           sf deploy metadata quick \
             --target-org SF \
             --job-id "$DEPLOY_ID"
