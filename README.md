@@ -23,10 +23,12 @@ This repository uses **GitHub Actions** to automate Apex code validation with **
 ### 1. `📝 Validate Salesforce PR`
 Se ejecuta automáticamente al crear o actualizar una PR. / This workflow runs automatically when a pull request is created or updated.
 
-- 🧪 **Validación de metadata Salesforce** / **Salesforce metadata validation**
+- 🧭 **La validación comenzará cuando no hay pr abiertos validados** / **Validation will start when there are no open validated pr**
 - 🧹 **Análisis estático con PMD** / **Static analysis with PMD**
-- ✅ Guarda resultados si hay errores de PMD / Saves results as artifact if PMD errors exist
-- ❌ Muestra errores y detiene ejecución / Shows violations and stops pipeline
+- ✅ La ejecución continua si no hay errores / Execution continues if there are no errors
+- ❌ Guarda resultados y detiene ejecución si hay errores / Saves results as artifact and stops pipeline
+- 🧪 **Validación de metadata Salesforce con clases test en caso de que las haya en el package** / **Validate Salesforce metadata with test classes if they exist in the package**
+- 🧱 **Validación de metadata Salesforce sin clases test cuando no hay** / **Validating Salesforce metadata without test classes when there is no**
 
 > Solo se ejecuta si hay clases `.cls` modificadas / Only runs if `.cls` classes are changed.
 

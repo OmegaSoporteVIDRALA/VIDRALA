@@ -21,8 +21,6 @@
         <exclude name="ApexUnitTestShouldNotUseSeeAllDataTrue"/><!--Apex unit tests should not use @isTest(seeAllData=true) because it opens up the existing database data for unexpected modification by tests.-->
         <exclude name="AvoidGlobalModifier"/><!--Global classes should be avoided (especially in managed packages) as they can never be deleted or changed in signature-->
         <exclude name="DebugsShouldUseLoggingLevel"/><!--The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum.-->
-       <!-- <exclude name="TestMethodsMustBeInTestClasses"/>Test methods marked as a testMethod or annotated with @IsTest, but not residing in a test class should be moved to a proper class 
-                                                             or have the @IsTest annotation added to the class.-->
     </rule>
 
     <rule ref="category/apex/codestyle.xml">
@@ -75,8 +73,7 @@
         <exclude name="ApexCRUDViolation"/> <!--The rule validates you are checking for access permissions before a SOQL/SOSL/DML operation-->
         <exclude name="ApexDangerousMethods"/> <!--Checks against calling dangerous methods-->
         <exclude name="ApexSharingViolations"/> <!--Detect classes declared without explicit sharing mode if DML methods are used-->
-        <!--<exclude name="AvoidHardcodingId"/> It is essential to avoid hardcoding IDs in the Apex code between sandbox and production environments-->
         <exclude name="ApexCSRF"/><!--Having DML operations in Apex class constructor or initializers can have unexpected side effects: By just accessing a page, the DML 
-        statements would be executed and the database would be modified.-->
+                                      statements would be executed and the database would be modified.-->
     </rule>
 </ruleset>
