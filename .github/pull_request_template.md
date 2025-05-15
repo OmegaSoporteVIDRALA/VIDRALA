@@ -1,7 +1,9 @@
 # 🚀 Pull Request
 
 ## 📜 Descripción / Description
-<!-- Breve descripción general del cambio realizado en este PR / Brief overview of the change made in this PR. -->
+  Breve descripción general del cambio realizado en este PR / Brief overview of the change made in this PR. 
+
+---
 
 ## 🔧 ¿Qué ha sido modificado? / What Has Been Modified?
 Selecciona lo que aplica: / Select what applies:
@@ -18,10 +20,10 @@ Selecciona lo que aplica: / Select what applies:
 
 ## ⚡ Funcionalidad / Functionality
 - **Objetivo principal / Main Goal:**  
-  <!-- Qué intenta conseguir este PR / What this PR is trying to achieve-->
+    Qué intenta conseguir este PR / What this PR is trying to achieve
 
 - **¿Cómo resuelve el problema? / How does it solve the issue?**  
-  <!-- Describe la solución aportada / Describe the solution provided-->
+    Describe la solución aportada / Describe the solution provided
 
 ---
 
