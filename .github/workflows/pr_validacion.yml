@@ -16,16 +16,48 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
-     # - name: ✒️ Determine target branch
-       # id: check_branch
-       # run: |
-       #   echo "TARGET_BRANCH=${{ github.event.workflow_run.pull_requests[0].base.ref }}" >> $GITHUB_ENV
-        ##  BRANCH="${{ github.event.workflow_run.pull_requests[0].base.ref }}"
-        #  echo "Target branch is $BRANCH"
-       #   if [[ "$BRANCH" != "integra" && "$BRANCH" != "uat" && "$BRANCH" != "main" ]]; then
-        #    echo "❌ Deployment only allowed to integra, uat or main branches."
-       #     exit 1
-       #   fi
+      - name: 🚫 Bloquear si hay PR abierto validado hacia la misma rama
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
+          CURRENT_PR_NUMBER=${{ github.event.pull_request.number }}
+          echo "🔎 Buscando otros PR abiertos hacia $BASE_BRANCH (excepto el actual: #$CURRENT_PR_NUMBER)"
+
+          OPEN_PRS=$(gh pr list --state open --base "$BASE_BRANCH" --json number,headRefOid --jq '.[] | select(.number != '"$CURRENT_PR_NUMBER"')')
+
+          if [ -z "$OPEN_PRS" ]; then
+            echo "✅ No hay otros PR abiertos hacia $BASE_BRANCH"
+            exit 0
+          fi
+
+          for ROW in $(echo "$OPEN_PRS" | jq -c '.'); do
+            SHA=$(echo "$ROW" | jq -r '.headRefOid')
+            ARTIFACT_NAME="validated-deploy-id-$SHA"
+
+            echo "🔍 Buscando artifact para PR con SHA: $SHA"
+            MATCHED=false
+
+            for run_id in $(gh run list --workflow "📝 Validate Salesforce PR" --json databaseId,conclusion,event,headSha --jq '.[] | select(.conclusion == "success") | .databaseId'); do
+              mkdir -p .check-temp
+              gh run download "$run_id" -n "$ARTIFACT_NAME" -D .check-temp || continue
+
+              if [ -f .check-temp/commit.txt ]; then
+                ARTIFACT_SHA=$(cat .check-temp/commit.txt)
+                if [ "$ARTIFACT_SHA" == "$SHA" ]; then
+                  echo "❌ Ya existe un PR abierto hacia $BASE_BRANCH validado exitosamente (SHA: $SHA)"
+                  exit 1
+                fi
+              fi
+              rm -rf .check-temp
+            done
+          done
+
+          echo "✅ Ningún PR abierto hacia $BASE_BRANCH ha sido validado aún"
+       
+      - name: 🔍 Debug branch name
+        run: |
+          echo "Branch actual: ${{ github.ref_name }}"
         
       - name: 📝 Set Salesforce Environment Variables
         id: set_sf_env
@@ -74,7 +106,7 @@ jobs:
         run: |
           npm install --global @salesforce/cli
 
-      - name: 🔐 Autenticarse en Salesforce con JWT
+      - name: 🛂 Autenticarse en Salesforce con JWT
         env:
           SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
           SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_UAT }}
@@ -100,8 +132,9 @@ jobs:
         run: |
           echo "Vaciando el directorio ./pmd/classes..."
           rm -rf ./pmd/classes/{*,.*} || true
+          rm -rf ./pmd/report/{*,.*} || true
 
-      - name: 🔍 Analizar package.xml para buscar ApexClass o ApexTrigger
+      - name: 🧼 Analizar package.xml para buscar ApexClass o ApexTrigger
         id: analyze_package
         run: |
           # Ruta al package.xml
@@ -126,7 +159,7 @@ jobs:
           fi
 
 
-      - name: 📂 Copiar Apex Classes y Triggers listados en package.xml
+      - name: 🗂️ Copiar Apex Classes y Triggers listados en package.xml
         if: steps.analyze_package.outputs.generate_manifest_only == 'false'
         run: | 
           # Directorios de origen y destino
@@ -185,56 +218,115 @@ jobs:
 
           echo "✅ Archivos movidos a $DEST_DIR"
 
-
-      - name: 🔍 Check if there are Test classes
-        id: check_tests
+      - name: ➕ Añadir DummyClassTest si no hay tests
+        if: steps.analyze_package.outputs.generate_manifest_only == 'true'
         run: |
-          if find ./pmd/classes -name '*.cls' | grep -q .; then
-            echo "testfound=true" >> $GITHUB_ENV
-          else
-            echo "testfound=false" >> $GITHUB_ENV
-          fi
+          # Añadir bloque <types> de ApexClass justo antes del </Package>
+          sed -i '/<\/Package>/i\
+          <types>\n\
+            <members>DummyClassTest</members>\n\
+            <name>ApexClass</name>\n\
+          </types>' ./manifest/package.xml
+
+          echo "🧐 Verificar contenido actualizado del package.xml"
+          cat ./manifest/package.xml
 
       - name: 📄 Ver contenido de las reglas
         run: cat ./config/apex-ruleset.xml
 
-      - name: 🧰 Install PMD
-        if: env.testfound == 'true' && github.base_ref  == 'UAT' 
+      - name: 🧵 Install PMD
+        if: steps.analyze_package.outputs.generate_manifest_only == 'false' 
         run: |
           curl -L -o pmd.zip https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.55.0/pmd-bin-6.55.0.zip
-          unzip pmd.zip -d pmd
-          mv pmd/pmd-bin-6.55.0 pmd-bin
-          chmod +x pmd-bin/bin/run.sh
+          mkdir -p ./pmd/zip
+          unzip pmd.zip -d ./pmd/zip
+          mv ./pmd/zip/pmd-bin-6.55.0 ./pmd
+          find ./pmd
+          chmod +x ./pmd/pmd-bin-6.55.0
+          echo "$GITHUB_WORKSPACE/pmd/pmd-bin-6.55.0/bin" >> $GITHUB_PATH
 
-      - name: 🤖 Run Apex tests if it was found 
-        if: env.testfound == 'true'
+      - name: 📡 Ejecutar PMD sobre ./pmd/classes
+        if: ${{ hashFiles('pmd/classes/**/*.cls') != '' }}
+        id: pmd_check
         run: |
-          TEST_CLASSES=$(find ./pmd/classes -name "*Test.cls" -exec basename {} .cls \; | paste -sd, -)
-          echo "🧪 Validating components with specific tests: $TEST_CLASSES...."
-          sf deploy metadata validate \
-            --manifest ./manifest/package.xml \
-            --target-org SF \
-            --test-level RunSpecifiedTests \
-            --tests "$TEST_CLASSES" \
-            --json > validation-result.json || exit 1
+          echo "⏳ Ejecutando PMD sobre ./pmd/classes..."
+          mkdir -p ./pmd/report
+          chmod +x ./pmd/pmd-bin-6.55.0/bin/run.sh
 
-          jq -r '.result.id' validation-result.json > validated-deploy-id.txt
-          echo "DEPLOYMENT_ID=$(cat validated-deploy-id.txt)" >> $GITHUB_ENV 
+          ./pmd/pmd-bin-6.55.0/bin/run.sh pmd \
+            -d ./pmd/classes \
+            -R ./config/apex-ruleset.xml \
+            -f json \
+            -r ./pmd/report/pmd-report.json || EXIT_CODE=$?
 
-      - name: 📤 Save Deployment ID
+            # Si la ejecución fue exitosa, EXIT_CODE estará vacío. Forzar 0 si no hubo error
+            EXIT_CODE=${EXIT_CODE:-0}
+            echo "Código de salida de PMD: $EXIT_CODE"
+            echo "PMD_EXIT_CODE=$EXIT_CODE" >> $GITHUB_ENV
+        continue-on-error: true
+
+      - name: 📤 Subir reporte PMD como artifact si hay errores
         uses: actions/upload-artifact@v4
+        id: pmd_update
         with:
-          name: validated-deploy-id
-          path: validation-result.txt
+          name: pmd-report
+          path: ./pmd/report/pmd-report.json
+          retention-days: 15
 
-      - name: ⏰ Validate Salesforce components if no Apex tests was found
-        if: env.testfound == 'false'
+      - name: 🛑 Fallar si hay errores PMD
         run: |
-          echo "📭 No test classes found. Validating components without tests..."
+          LINE_COUNT=$(wc -l < ./pmd/report/pmd-report.json)
+          echo "El archivo tiene $LINE_COUNT líneas"
 
-          # Ejecutar validación sin incluir Apex clases si no hay tests
-           sf deploy metadata validate \
+          if [ "$LINE_COUNT" -gt 9 ]; then
+            echo "❌  PMD violations found.Review the artifact attached to the workflow"
+            exit 1
+          fi
+
+      - name: 🧭 Validar todo el package.xml (con o sin clases de test)
+        run: |
+          echo "⏳ Buscando clases de test..."
+          TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd' ' -)
+
+          if [ -n "$TEST_CLASSES" ]; then
+            echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
+            sf deploy metadata validate \
               --manifest ./manifest/package.xml \
               --target-org SF \
               --test-level RunSpecifiedTests \
-              --tests DummyClass || exit 1
+              --tests "$TEST_CLASSES" \
+              --json > validation-result.json || exit 1
+          else
+            echo "🧱 No se encontraron clases de test. Validando solo los componentes"
+            sf deploy metadata validate \
+              --manifest ./manifest/package.xml \
+              --target-org SF \
+              --test-level RunSpecifiedTests \
+              --tests DummyClass \
+              --json > validation-result.json || exit 1
+          fi
+
+          echo "📢 Resultado de la validación:"
+          cat validation-result.json | jq
+
+          DEPLOY_ID=$(jq -r '.result.id' validation-result.json)
+          if [ -n "$DEPLOY_ID" ]; then
+            mkdir -p .gh-deploy-data
+            echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
+          fi
+
+      - name: 📬 Guardar commit SHA
+        run: |
+          mkdir -p .gh-deploy-data
+          echo "${{ github.event.pull_request.head.sha }}" > .gh-deploy-data/commit.txt
+          echo "${{ github.event.pull_request.merge_commit_sha || github.sha }}" > .gh-deploy-data/merge-sha.txt  
+
+      - name: 📤 Upload validated deploy ID as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: validated-deploy-id-${{ github.event.pull_request.head.sha }}
+          path: |
+            .gh-deploy-data/validated-deploy-id.txt
+            .gh-deploy-data/commit.txt
+            .gh-deploy-data/merge-sha.txt
+          retention-days: 15  # importante para evitar expiraciones prematuras
