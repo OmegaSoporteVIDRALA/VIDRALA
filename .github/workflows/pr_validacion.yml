@@ -271,15 +271,16 @@ jobs:
         with:
           name: pmd-report
           path: ./pmd/report/pmd-report.json
-          retention-days: 5
+          retention-days: 15
 
       - name: 🛑 Fallar si hay errores PMD
         run: |
-          if [ -s ./pmd/report/pmd-report.json ]; then
-            echo "❌ El archivo tiene contenido."
+          LINE_COUNT=$(wc -l < ./pmd/report/pmd-report.json)
+          echo "El archivo tiene $LINE_COUNT líneas"
+
+          if [ "$LINE_COUNT" -gt 9 ]; then
+            echo "❌  PMD violations found.Review the artifact attached to the workflow"
             exit 1
-          else
-            echo "✅ El archivo está vacío."
           fi
 
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
