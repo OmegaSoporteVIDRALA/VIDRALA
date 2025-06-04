@@ -3,7 +3,7 @@
     <fullName>Market__c</fullName>
     <description>Market that holds the Budget</description>
     <label>Market</label>
-    <required>false</required>
+    <required>true</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <type>Picklist</type>
