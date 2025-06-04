@@ -20,9 +20,10 @@ public with sharing class OM_VID_OpportunityTRGTest {
 
         Test.startTest();
         for(Opportunity opp : listOpps){
-            opp.StageName = OM_VID_Constants.opportunityStatusQuotation;
-        }
+            opp.StageName = OM_VID_Constants.opportunityStatusQuotation;    
+        } 
 
+        
         update listOpps;
         Test.stopTest();
 
