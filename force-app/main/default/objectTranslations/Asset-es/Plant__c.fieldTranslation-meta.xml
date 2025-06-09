@@ -7,6 +7,10 @@
         <translation><!-- Aiala Vidrio --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Almacén externo</masterLabel>
+        <translation><!-- Almacén externo --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Castellar Vidrio</masterLabel>
         <translation><!-- Castellar Vidrio --></translation>
     </picklistValues>

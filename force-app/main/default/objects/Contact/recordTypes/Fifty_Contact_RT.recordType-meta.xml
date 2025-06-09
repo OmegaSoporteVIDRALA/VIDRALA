@@ -11,6 +11,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Australian Vintage</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Benchmark Drinks</fullName>
             <default>false</default>
         </values>
@@ -99,7 +103,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Tesco</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>VSPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vinarchy</fullName>
             <default>false</default>
         </values>
         <values>

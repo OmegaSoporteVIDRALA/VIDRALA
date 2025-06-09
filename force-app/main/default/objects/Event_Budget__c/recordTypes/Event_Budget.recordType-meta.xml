@@ -214,6 +214,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Awards</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>BEN</fullName>
             <default>false</default>
         </values>

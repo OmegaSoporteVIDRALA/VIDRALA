@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Customer Class --></label>
+    <name>OM_VID_CustomerClass__c</name>
+    <picklistValues>
+        <masterLabel>Competitor</masterLabel>
+        <translation>Competidor</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer</masterLabel>
+        <translation>Cliente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Distributor</masterLabel>
+        <translation>Distribuidor</translation>
+    </picklistValues>
+</CustomFieldTranslation>

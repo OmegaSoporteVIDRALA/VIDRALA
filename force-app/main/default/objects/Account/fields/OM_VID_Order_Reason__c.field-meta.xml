@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_VID_Order_Reason__c</fullName>
+    <label>Order Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>vacio</fullName>
+                <default>false</default>
+                <label>Todos</label>
+            </value>
+            <value>
+                <fullName>105</fullName>
+                <default>false</default>
+                <label>105 - Devolución por error de carga</label>
+            </value>
+            <value>
+                <fullName>106</fullName>
+                <default>false</default>
+                <label>106 - Devolución por mercancía defecuosa</label>
+            </value>
+            <value>
+                <fullName>107</fullName>
+                <default>false</default>
+                <label>107 - Devolución por defectos de embalaje</label>
+            </value>
+            <value>
+                <fullName>108</fullName>
+                <default>false</default>
+                <label>107 - Devolución por error en la toma de pedido</label>
+            </value>
+            <value>
+                <fullName>109</fullName>
+                <default>false</default>
+                <label>109 - Devolución p error en pedido del cliente</label>
+            </value>
+            <value>
+                <fullName>110</fullName>
+                <default>false</default>
+                <label>110 - Devolución por retraso en la entrega</label>
+            </value>
+            <value>
+                <fullName>111</fullName>
+                <default>false</default>
+                <label>111- Devolución por pedido anulado p cliente</label>
+            </value>
+            <value>
+                <fullName>112</fullName>
+                <default>false</default>
+                <label>112- Devol por incumplimiento restricciones cte</label>
+            </value>
+            <value>
+                <fullName>114</fullName>
+                <default>false</default>
+                <label>114 - Devolución por recompra al cliente</label>
+            </value>
+            <value>
+                <fullName>115</fullName>
+                <default>false</default>
+                <label>115 - Devolución por botellas rotas</label>
+            </value>
+            <value>
+                <fullName>116</fullName>
+                <default>false</default>
+                <label>116 - Devolución por daños en el transporte</label>
+            </value>
+            <value>
+                <fullName>117</fullName>
+                <default>false</default>
+                <label>117 - Devolución por diferencia de cantidad</label>
+            </value>
+            <value>
+                <fullName>118</fullName>
+                <default>false</default>
+                <label>118 - Devolución por muestra gratis</label>
+            </value>
+            <value>
+                <fullName>119</fullName>
+                <default>false</default>
+                <label>119 - Devolución por diferencia de precio</label>
+            </value>
+            <value>
+                <fullName>121</fullName>
+                <default>false</default>
+                <label>121 - Devolución por carga palets mal estado</label>
+            </value>
+            <value>
+                <fullName>122</fullName>
+                <default>false</default>
+                <label>122 - Devolución por gesto comercial</label>
+            </value>
+            <value>
+                <fullName>123</fullName>
+                <default>false</default>
+                <label>123 - Devolución por calidad preventiva</label>
+            </value>
+            <value>
+                <fullName>124</fullName>
+                <default>false</default>
+                <label>124 - Devolução em rota /Anulação cliente</label>
+            </value>
+            <value>
+                <fullName>125</fullName>
+                <default>false</default>
+                <label>125 - Devolução em rota /paletes danificadas</label>
+            </value>
+            <value>
+                <fullName>899</fullName>
+                <default>false</default>
+                <label>899 - Abono por sobretaxa energética</label>
+            </value>
+            <value>
+                <fullName>900</fullName>
+                <default>false</default>
+                <label>900 - Abono calidad afecta precio</label>
+            </value>
+            <value>
+                <fullName>901</fullName>
+                <default>false</default>
+                <label>901 - Abono por anulación CONAI</label>
+            </value>
+            <value>
+                <fullName>902</fullName>
+                <default>false</default>
+                <label>902 - Abono p indemnización p problems calidad</label>
+            </value>
+            <value>
+                <fullName>903</fullName>
+                <default>false</default>
+                <label>903 - Abono por defecto de embalaje</label>
+            </value>
+            <value>
+                <fullName>904</fullName>
+                <default>false</default>
+                <label>904 - Abono por error de carga</label>
+            </value>
+            <value>
+                <fullName>905</fullName>
+                <default>false</default>
+                <label>905 - Abono por error en la toma de pedido</label>
+            </value>
+            <value>
+                <fullName>906</fullName>
+                <default>false</default>
+                <label>906 - Abono por diferencia de precio</label>
+            </value>
+            <value>
+                <fullName>907</fullName>
+                <default>false</default>
+                <label>907 - Abono por liquidación de rappel unitario</label>
+            </value>
+            <value>
+                <fullName>908</fullName>
+                <default>false</default>
+                <label>908 - Abono p liquidación de rappel p consumo</label>
+            </value>
+            <value>
+                <fullName>909</fullName>
+                <default>false</default>
+                <label>909 - Abono p devolución de palets</label>
+            </value>
+            <value>
+                <fullName>910</fullName>
+                <default>false</default>
+                <label>910 - Abono por devoluc de separadores plásticos</label>
+            </value>
+            <value>
+                <fullName>912</fullName>
+                <default>false</default>
+                <label>912 - Abono por retraso en la entrega</label>
+            </value>
+            <value>
+                <fullName>913</fullName>
+                <default>false</default>
+                <label>913 - Abono por daños en el transporte</label>
+            </value>
+            <value>
+                <fullName>914</fullName>
+                <default>false</default>
+                <label>914 - Abono por transporte</label>
+            </value>
+            <value>
+                <fullName>916</fullName>
+                <default>false</default>
+                <label>915 - Cargo por gastos finacieros</label>
+            </value>
+            <value>
+                <fullName>917</fullName>
+                <default>false</default>
+                <label>917 - Cargo por diferencia de precio</label>
+            </value>
+            <value>
+                <fullName>918</fullName>
+                <default>false</default>
+                <label>918 - Cargo por suspensión de pagos</label>
+            </value>
+            <value>
+                <fullName>919</fullName>
+                <default>false</default>
+                <label>919 - Cargo de coste por transporte</label>
+            </value>
+            <value>
+                <fullName>920</fullName>
+                <default>false</default>
+                <label>920 - Cargo por mercancía denegada</label>
+            </value>
+            <value>
+                <fullName>921</fullName>
+                <default>false</default>
+                <label>921 - Cargo CONAI</label>
+            </value>
+            <value>
+                <fullName>922</fullName>
+                <default>false</default>
+                <label>922 - Cargo por daños</label>
+            </value>
+            <value>
+                <fullName>924</fullName>
+                <default>false</default>
+                <label>924 - Abono por devolución de palets</label>
+            </value>
+            <value>
+                <fullName>925</fullName>
+                <default>false</default>
+                <label>925 - Cargo venta grupage</label>
+            </value>
+            <value>
+                <fullName>926</fullName>
+                <default>false</default>
+                <label>926 - Débito de separadores plásticos</label>
+            </value>
+            <value>
+                <fullName>927</fullName>
+                <default>false</default>
+                <label>927 - Débito devolução mercadoria mau estado</label>
+            </value>
+            <value>
+                <fullName>928</fullName>
+                <default>false</default>
+                <label>928 - Cargo factura errónea: mueve euros y ton</label>
+            </value>
+            <value>
+                <fullName>929</fullName>
+                <default>false</default>
+                <label>929 - Cargo facturación moldes</label>
+            </value>
+            <value>
+                <fullName>930</fullName>
+                <default>false</default>
+                <label>930 - Cargo por sobretaxa energética</label>
+            </value>
+            <value>
+                <fullName>999</fullName>
+                <default>false</default>
+                <label>999 - Pedido Web</label>
+            </value>
+            <value>
+                <fullName>#</fullName>
+                <default>false</default>
+                <label>Sin Asignar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

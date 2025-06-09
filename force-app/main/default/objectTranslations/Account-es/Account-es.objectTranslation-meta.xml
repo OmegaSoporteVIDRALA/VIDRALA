@@ -111,10 +111,6 @@
             <section>Descriptoin</section>
         </sections>
         <sections>
-            <label><!-- Revenue --></label>
-            <section>Revenue</section>
-        </sections>
-        <sections>
             <label><!-- Supplier Share Infomation --></label>
             <section>Supplier Share Infomation</section>
         </sections>
@@ -159,6 +155,10 @@
         <label>Financiero Panaeuropeo</label>
         <name>Pan_Euro_Parent_Financials</name>
     </quickActions>
+    <quickActions>
+        <label><!-- Vidrala Financials --></label>
+        <name>Vidrala_Financials</name>
+    </quickActions>
     <recordTypes>
         <description><!-- Competitor --></description>
         <label>Competidor</label>
@@ -196,6 +196,14 @@
     <recordTypes>
         <label><!-- Investors &amp; Owners --></label>
         <name>Investors_Owners</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Ship to party --></label>
+        <name>OM_VID_Destinatario</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Grupo --></label>
+        <name>OM_VID_Grupo</name>
     </recordTypes>
     <recordTypes>
         <description><!-- Any other type --></description>

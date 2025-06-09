@@ -136,37 +136,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Incoterm__c</picklist>
-        <values>
-            <fullName>CFR</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CIF</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CIP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DAP</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>EX WORKS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>FCA</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>FOB</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>LeadSource</picklist>
         <values>
             <fullName>Business Development Internal</fullName>

@@ -2,7 +2,7 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>Tab</actionName>
-        <content>Fifty_Home_Page</content>
+        <content>Vidrala_Home_Page_Admins1</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -24,14 +24,6 @@
     <label>Vidrala</label>
     <navType>Standard</navType>
     <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>Fifty_Home_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
         <actionName>View</actionName>
         <content>AccountFinancialAdjustment</content>
         <formFactor>Small</formFactor>
@@ -105,35 +97,11 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>Tab</actionName>
-        <content>Fifty_Home_Page</content>
+        <content>Vidrala_Home_Page_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
         <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>Fifty_Home_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>Fifty_Home_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>Fifty_Home_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>Tab</actionName>
@@ -806,262 +774,760 @@
         <profile>System Administrator Fifty</profile>
     </profileActionOverrides>
     <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Lead_Fifty</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Lead</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Lead_Fifty</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Lead</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Lead_Fifty</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Lead</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Lead_Fifty</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Lead</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Specific_Product</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Specific_Product</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Specific_Product</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Specific_Product</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Specific_Product</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Specific_Product</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Customer_Annual</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Customer_Annual</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Customer_Annual</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Customer_Annual</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Customer_Annual</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contract</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contract</pageOrSobjectType>
+        <recordType>Contract.Customer_Annual</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Customer_Visit_Report</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Customer_Visit_Report</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Customer_Visit_Report</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Customer_Visit_Report</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Customer_Visit_Report</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Customer_Visit_Report</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Quote</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Quote</pageOrSobjectType>
+        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Quote</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Quote</pageOrSobjectType>
+        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Quote</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Quote</pageOrSobjectType>
+        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Quote</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Quote</pageOrSobjectType>
+        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Quote</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Quote</pageOrSobjectType>
+        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Quote</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Quote</pageOrSobjectType>
+        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator test</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator test</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Fifty SAC Calidad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customers</recordType>
+        <type>Flexipage</type>
+        <profile>Fifty SAC Calidad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator test</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator test</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Fifty SAC Calidad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>GrupoClienteRecordPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Grupo</recordType>
+        <type>Flexipage</type>
+        <profile>Fifty SAC Calidad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator test</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator test</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Fifty SAC Calidad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_destinatarioDeMercancia</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OM_VID_Destinatario</recordType>
+        <type>Flexipage</type>
+        <profile>Fifty SAC Calidad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Support</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>System Administrator test</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>System Administrator test</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>System Administrator Fifty</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Integration User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Fifty SAC Calidad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>OM_SAC_Product</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Fifty SAC Calidad</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
         <actionName>Tab</actionName>
-        <content>Fifty_Home_Page</content>
+        <content>Vidrala_Home_Page_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
+        <profile>Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>Tab</actionName>
-        <content>Fifty_Home_Page</content>
+        <content>Vidrala_Home_Page_Admins1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Vidrala_Home_Page_Admins1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
         <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Specific_Product</recordType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Specific_Product</recordType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Specific_Product</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Specific_Product</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Specific_Product</recordType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Specific_Product</recordType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Customer_Annual</recordType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Customer_Annual</recordType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Customer_Annual</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Customer_Annual</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Customer_Annual</recordType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Contract</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contract</pageOrSobjectType>
-        <recordType>Contract.Customer_Annual</recordType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Customer_Visit_Report</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Customer_Visit_Report</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Customer_Visit_Report</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Customer_Visit_Report</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Customer_Visit_Report</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Customer_Visit_Report</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
-        <type>Flexipage</type>
-        <profile>Vidrala Europe Support</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <recordType>Quote.OM_VID_Quote_Fifty</recordType>
-        <type>Flexipage</type>
-        <profile>Virdala Europe Sales</profile>
     </profileActionOverrides>
     <tabs>standard-MobileHome</tabs>
     <tabs>standard-home</tabs>
@@ -1082,6 +1548,9 @@
     <tabs>Customer_Contact_Report__c</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Bottle__c</tabs>
+    <tabs>IntegrationMessage__c</tabs>
+    <tabs>SAP_Material_Code__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Vidrala_UtilityBar</utilityBar>
 </CustomApplication>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_VID_AgreedTerms__c</fullName>
+    <label>Agreed Terms</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ZD</fullName>
+                <default>false</default>
+                <label>Daily Invoicing</label>
+            </value>
+            <value>
+                <fullName>ZM</fullName>
+                <default>false</default>
+                <label>Monthly Invoicing</label>
+            </value>
+            <value>
+                <fullName>ZQ</fullName>
+                <default>false</default>
+                <label>Bi-weekly invoicing</label>
+            </value>
+            <value>
+                <fullName>ZS</fullName>
+                <default>false</default>
+                <label>Weekly invoicing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

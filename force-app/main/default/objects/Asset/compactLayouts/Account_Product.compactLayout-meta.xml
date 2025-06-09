@@ -3,7 +3,12 @@
     <fullName>Account_Product</fullName>
     <fields>Name</fields>
     <fields>AccountId</fields>
-    <fields>Product2Id</fields>
     <fields>ProductCode</fields>
+    <fields>Product2Id</fields>
+    <fields>Incoterms__c</fields>
+    <fields>Material__c</fields>
+    <fields>Plant__c</fields>
+    <fields>Price_1000__c</fields>
+    <fields>Price_ton__c</fields>
     <label>Account Product</label>
 </CompactLayout>

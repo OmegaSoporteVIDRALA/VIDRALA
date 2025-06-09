@@ -218,4 +218,12 @@
         </columns>
         <masterLabel>Assets</masterLabel>
     </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>OM_MaterialDescriptionRef__c</field>
+            <table>Asset</table>
+        </columns>
+        <masterLabel>Account Products</masterLabel>
+    </sections>
 </ReportType>

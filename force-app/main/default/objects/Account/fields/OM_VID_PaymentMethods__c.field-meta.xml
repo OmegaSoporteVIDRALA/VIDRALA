@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_VID_PaymentMethods__c</fullName>
+    <label>Payment Methods</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>Immediate payment without deduction</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>Cash against documents</label>
+            </value>
+            <value>
+                <fullName>12</fullName>
+                <default>false</default>
+                <label>Documentary remittance to 60 days against delivery</label>
+            </value>
+            <value>
+                <fullName>AF00</fullName>
+                <default>false</default>
+                <label>C. conf al contado</label>
+            </value>
+            <value>
+                <fullName>AF15</fullName>
+                <default>false</default>
+                <label>C. conf a 15 días</label>
+            </value>
+            <value>
+                <fullName>AF30</fullName>
+                <default>false</default>
+                <label>C. conf a 30 días</label>
+            </value>
+            <value>
+                <fullName>AF35</fullName>
+                <default>false</default>
+                <label>C. conf a 35 días</label>
+            </value>
+            <value>
+                <fullName>AF3B</fullName>
+                <default>false</default>
+                <label>C. conf a 30 días (20)</label>
+            </value>
+            <value>
+                <fullName>AF3C</fullName>
+                <default>false</default>
+                <label>C. conf a 30 días (15)</label>
+            </value>
+            <value>
+                <fullName>AF4A</fullName>
+                <default>false</default>
+                <label>C. conf a 45 días (30)</label>
+            </value>
+            <value>
+                <fullName>AF4B</fullName>
+                <default>false</default>
+                <label>C. conf a 45 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AF5B</fullName>
+                <default>false</default>
+                <label>C. conf a 55 días (30)</label>
+            </value>
+            <value>
+                <fullName>AF60</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días</label>
+            </value>
+            <value>
+                <fullName>AF6A</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (1,15)</label>
+            </value>
+            <value>
+                <fullName>AF6B</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (15)</label>
+            </value>
+            <value>
+                <fullName>AF6C</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AF6D</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (25)</label>
+            </value>
+            <value>
+                <fullName>AF6E</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (10,20,30)</label>
+            </value>
+            <value>
+                <fullName>AF6F</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AF6G</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (10)</label>
+            </value>
+            <value>
+                <fullName>AF6I</fullName>
+                <default>false</default>
+                <label>C. conf a 65 días (25)</label>
+            </value>
+            <value>
+                <fullName>AF6J</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (12,27)</label>
+            </value>
+            <value>
+                <fullName>AF6K</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (12,26)</label>
+            </value>
+            <value>
+                <fullName>AF6L</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (20)</label>
+            </value>
+            <value>
+                <fullName>AF6M</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AF6N</fullName>
+                <default>false</default>
+                <label>Confirminf a 60 días, día fijo 30</label>
+            </value>
+            <value>
+                <fullName>AF6O</fullName>
+                <default>false</default>
+                <label>C. conf a 60 días (17)</label>
+            </value>
+            <value>
+                <fullName>AF70</fullName>
+                <default>false</default>
+                <label>C. conf a 70 días</label>
+            </value>
+            <value>
+                <fullName>AF75</fullName>
+                <default>false</default>
+                <label>C. conf a 75 días (5,15,25)</label>
+            </value>
+            <value>
+                <fullName>AF7A</fullName>
+                <default>false</default>
+                <label>C. conf a 75 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AF7B</fullName>
+                <default>false</default>
+                <label>C. conf a 75 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AF7C</fullName>
+                <default>false</default>
+                <label>C. conf a 75 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AF7D</fullName>
+                <default>false</default>
+                <label>C. conf a 70 días (15)</label>
+            </value>
+            <value>
+                <fullName>AF7E</fullName>
+                <default>false</default>
+                <label>C. conf a 75 días (30)</label>
+            </value>
+            <value>
+                <fullName>AF7F</fullName>
+                <default>false</default>
+                <label>C. conf a 70 días (30)</label>
+            </value>
+            <value>
+                <fullName>AF7G</fullName>
+                <default>false</default>
+                <label>C. conf a 75 días (10)</label>
+            </value>
+            <value>
+                <fullName>AF7H</fullName>
+                <default>false</default>
+                <label>C. conf a 75 días</label>
+            </value>
+            <value>
+                <fullName>AF85</fullName>
+                <default>false</default>
+                <label>C. conf a 85 días</label>
+            </value>
+            <value>
+                <fullName>AF8M</fullName>
+                <default>false</default>
+                <label>C. conf a 80 días (5,15,25)</label>
+            </value>
+            <value>
+                <fullName>AF8T</fullName>
+                <default>false</default>
+                <label>C. conf a 85 días (10)</label>
+            </value>
+            <value>
+                <fullName>AF90</fullName>
+                <default>false</default>
+                <label>C. conf a 90 días</label>
+            </value>
+            <value>
+                <fullName>AF9A</fullName>
+                <default>false</default>
+                <label>C. conf a 90 días (5,15,25)</label>
+            </value>
+            <value>
+                <fullName>AF9B</fullName>
+                <default>false</default>
+                <label>C. conf a 90 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AF9G</fullName>
+                <default>false</default>
+                <label>C. conf a 90 días (15)</label>
+            </value>
+            <value>
+                <fullName>AF9I</fullName>
+                <default>false</default>
+                <label>C. conf a 90 días (25)</label>
+            </value>
+            <value>
+                <fullName>AF9L</fullName>
+                <default>false</default>
+                <label>C. conf a 90 días (20)</label>
+            </value>
+            <value>
+                <fullName>AI00</fullName>
+                <default>false</default>
+                <label>Cash Payment</label>
+            </value>
+            <value>
+                <fullName>AI30</fullName>
+                <default>false</default>
+                <label>C. cheque a 30 días</label>
+            </value>
+            <value>
+                <fullName>AI45</fullName>
+                <default>false</default>
+                <label>C. efectivo a 45 días</label>
+            </value>
+            <value>
+                <fullName>AI60</fullName>
+                <default>false</default>
+                <label>C. en efectivo a 60 días</label>
+            </value>
+            <value>
+                <fullName>AIAD</fullName>
+                <default>false</default>
+                <label>C. en efectivo adelantado</label>
+            </value>
+            <value>
+                <fullName>AJ60</fullName>
+                <default>false</default>
+                <label>C. letra aceptada a 60 días</label>
+            </value>
+            <value>
+                <fullName>AJ6A</fullName>
+                <default>false</default>
+                <label>C. letr acep 60 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AJ90</fullName>
+                <default>false</default>
+                <label>C. letra aceptada a 90 días</label>
+            </value>
+            <value>
+                <fullName>AK30</fullName>
+                <default>false</default>
+                <label>C. letr frn a 30 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AK4A</fullName>
+                <default>false</default>
+                <label>C.letr frn a 45 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AK4B</fullName>
+                <default>false</default>
+                <label>C. letra fancesa a 45 días dd fm (15)</label>
+            </value>
+            <value>
+                <fullName>AK60</fullName>
+                <default>false</default>
+                <label>C. letra francesa a 60 días</label>
+            </value>
+            <value>
+                <fullName>AK6A</fullName>
+                <default>false</default>
+                <label>C.letr frn a 60 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AK6B</fullName>
+                <default>false</default>
+                <label>C.letr frn a 60 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AK6C</fullName>
+                <default>false</default>
+                <label>C.letr frn a 60 días (FM,5)</label>
+            </value>
+            <value>
+                <fullName>AK6D</fullName>
+                <default>false</default>
+                <label>C.letr frn a 60 días (FM,10)</label>
+            </value>
+            <value>
+                <fullName>AK6E</fullName>
+                <default>false</default>
+                <label>C.letr frn a 60 días (FM,15)</label>
+            </value>
+            <value>
+                <fullName>AK6F</fullName>
+                <default>false</default>
+                <label>C.letr frn a 60 días (FE)</label>
+            </value>
+            <value>
+                <fullName>AK6G</fullName>
+                <default>false</default>
+                <label>C.letr frn a 60 días (FM,15) antes dia 27</label>
+            </value>
+            <value>
+                <fullName>AK9A</fullName>
+                <default>false</default>
+                <label>C.letr frn a 90 días (10)</label>
+            </value>
+            <value>
+                <fullName>AK9B</fullName>
+                <default>false</default>
+                <label>C.letr frn a 90 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AM00</fullName>
+                <default>false</default>
+                <label>C. cheque al contado</label>
+            </value>
+            <value>
+                <fullName>AM15</fullName>
+                <default>false</default>
+                <label>Bank Check 15 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AM30</fullName>
+                <default>false</default>
+                <label>Bank Check 30 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AM3B</fullName>
+                <default>false</default>
+                <label>Bank Check 30 days End of month</label>
+            </value>
+            <value>
+                <fullName>AM3C</fullName>
+                <default>false</default>
+                <label>C.  cheque a 30 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AM45</fullName>
+                <default>false</default>
+                <label>Bank Check 45 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AM4F</fullName>
+                <default>false</default>
+                <label>Bank Check 45 days End of month</label>
+            </value>
+            <value>
+                <fullName>AM60</fullName>
+                <default>false</default>
+                <label>Bank Check 60 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AM6A</fullName>
+                <default>false</default>
+                <label>Bank Check 60 days invoice date (25)</label>
+            </value>
+            <value>
+                <fullName>AM6B</fullName>
+                <default>false</default>
+                <label>Bank Check 60 days invoice date (26)</label>
+            </value>
+            <value>
+                <fullName>AM6C</fullName>
+                <default>false</default>
+                <label>Bank Check 60 days invoice date (FM)</label>
+            </value>
+            <value>
+                <fullName>AM6D</fullName>
+                <default>false</default>
+                <label>Cheque a 60 días fin de mes 15</label>
+            </value>
+            <value>
+                <fullName>AM75</fullName>
+                <default>false</default>
+                <label>Bank Check 75 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AM7A</fullName>
+                <default>false</default>
+                <label>Bank Check, 75 days end of month</label>
+            </value>
+            <value>
+                <fullName>AM90</fullName>
+                <default>false</default>
+                <label>Bank Check 90 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AM9A</fullName>
+                <default>false</default>
+                <label>Bank Check 90 days invoice date (20)</label>
+            </value>
+            <value>
+                <fullName>AM9B</fullName>
+                <default>false</default>
+                <label>Bank Check 90 days invoice date (30)</label>
+            </value>
+            <value>
+                <fullName>AMAD</fullName>
+                <default>false</default>
+                <label>Bank Check, advanced payment</label>
+            </value>
+            <value>
+                <fullName>AMAN</fullName>
+                <default>false</default>
+                <label>Condición manual</label>
+            </value>
+            <value>
+                <fullName>AN20</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 120 días</label>
+            </value>
+            <value>
+                <fullName>AN30</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días</label>
+            </value>
+            <value>
+                <fullName>AN3B</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AN3C</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AN3D</fullName>
+                <default>false</default>
+                <label>C. g dom.a 30 días (10,20,30)</label>
+            </value>
+            <value>
+                <fullName>AN3E</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AN3F</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (15)</label>
+            </value>
+            <value>
+                <fullName>AN3H</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (20)</label>
+            </value>
+            <value>
+                <fullName>AN3J</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (25)</label>
+            </value>
+            <value>
+                <fullName>AN3K</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (30)</label>
+            </value>
+            <value>
+                <fullName>AN3L</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (17)</label>
+            </value>
+            <value>
+                <fullName>AN3O</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 30 días (10)</label>
+            </value>
+            <value>
+                <fullName>AN45</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 45 días</label>
+            </value>
+            <value>
+                <fullName>AN4A</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 45 días (25)</label>
+            </value>
+            <value>
+                <fullName>AN4E</fullName>
+                <default>false</default>
+                <label>Giro a 49 días (días 10,15)</label>
+            </value>
+            <value>
+                <fullName>AN50</fullName>
+                <default>false</default>
+                <label>C. giro domiciliado a 50 días</label>
+            </value>
+            <value>
+                <fullName>AN5H</fullName>
+                <default>false</default>
+                <label>C. giro dom.a 50 días (20)</label>
+            </value>
+            <value>
+                <fullName>AN60</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días</label>
+            </value>
+            <value>
+                <fullName>AN62</fullName>
+                <default>false</default>
+                <label>C. giro dom. 60 días (15 fm)</label>
+            </value>
+            <value>
+                <fullName>AN6A</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días (1,15)</label>
+            </value>
+            <value>
+                <fullName>AN6B</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (1,15,25)</label>
+            </value>
+            <value>
+                <fullName>AN6C</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días (5)</label>
+            </value>
+            <value>
+                <fullName>AN6D</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AN6F</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días (10)</label>
+            </value>
+            <value>
+                <fullName>AN6G</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AN6H</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AN6I</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (12,27)</label>
+            </value>
+            <value>
+                <fullName>AN6J</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días (15)</label>
+            </value>
+            <value>
+                <fullName>AN6K</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AN6L</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (15,31)</label>
+            </value>
+            <value>
+                <fullName>AN6O</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días (20)</label>
+            </value>
+            <value>
+                <fullName>AN6P</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (20,30)</label>
+            </value>
+            <value>
+                <fullName>AN6Q</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días (25)</label>
+            </value>
+            <value>
+                <fullName>AN6R</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 60 días (30)</label>
+            </value>
+            <value>
+                <fullName>AN6S</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (30,31)</label>
+            </value>
+            <value>
+                <fullName>AN6T</fullName>
+                <default>false</default>
+                <label>C. g dom. a 60 días (15,25)</label>
+            </value>
+            <value>
+                <fullName>AN6Z</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 65 días (30)</label>
+            </value>
+            <value>
+                <fullName>AN75</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 75 días</label>
+            </value>
+            <value>
+                <fullName>AN7A</fullName>
+                <default>false</default>
+                <label>C.  giro dom. a 75 días 1</label>
+            </value>
+            <value>
+                <fullName>AN7B</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 75 días (8,24)</label>
+            </value>
+            <value>
+                <fullName>AN7C</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 70 días (10)</label>
+            </value>
+            <value>
+                <fullName>AN7D</fullName>
+                <default>false</default>
+                <label>C. g dom. a 75 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AN7E</fullName>
+                <default>false</default>
+                <label>C. g dom. a 75 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AN7F</fullName>
+                <default>false</default>
+                <label>C. g dom. a 75 días (14,30)</label>
+            </value>
+            <value>
+                <fullName>AN7G</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 70 días (15)</label>
+            </value>
+            <value>
+                <fullName>AN7I</fullName>
+                <default>false</default>
+                <label>C. g dom. a 75 días (15,28)</label>
+            </value>
+            <value>
+                <fullName>AN7L</fullName>
+                <default>false</default>
+                <label>C. g dom. a 75 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AN7M</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 70 días (20)</label>
+            </value>
+            <value>
+                <fullName>AN7O</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 70 días (25)</label>
+            </value>
+            <value>
+                <fullName>AN7P</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 70 días (30)</label>
+            </value>
+            <value>
+                <fullName>AN7S</fullName>
+                <default>false</default>
+                <label>C. g dom. a 75 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AN7T</fullName>
+                <default>false</default>
+                <label>C. g dom. a 75 días (15)</label>
+            </value>
+            <value>
+                <fullName>AN7U</fullName>
+                <default>false</default>
+                <label>C. g dom. a 75 días (25)</label>
+            </value>
+            <value>
+                <fullName>AN7V</fullName>
+                <default>false</default>
+                <label>C. giro dom 70 días(25 dd FM)</label>
+            </value>
+            <value>
+                <fullName>AN80</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 80 días</label>
+            </value>
+            <value>
+                <fullName>AN83</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 83 días</label>
+            </value>
+            <value>
+                <fullName>AN85</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 85 días</label>
+            </value>
+            <value>
+                <fullName>AN8E</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 85 días (10)</label>
+            </value>
+            <value>
+                <fullName>AN8G</fullName>
+                <default>false</default>
+                <label>C. g dom. a 85 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AN90</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días</label>
+            </value>
+            <value>
+                <fullName>AN9B</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días (5)</label>
+            </value>
+            <value>
+                <fullName>AN9C</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AN9E</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días (10)</label>
+            </value>
+            <value>
+                <fullName>AN9F</fullName>
+                <default>false</default>
+                <label>C. g dom. a 90 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AN9G</fullName>
+                <default>false</default>
+                <label>C. g dom. a 90 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AN9I</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días (15)</label>
+            </value>
+            <value>
+                <fullName>AN9K</fullName>
+                <default>false</default>
+                <label>C. g dom. a 90 días (15,28)</label>
+            </value>
+            <value>
+                <fullName>AN9L</fullName>
+                <default>false</default>
+                <label>C. g dom. a 90 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AN9M</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días (20)</label>
+            </value>
+            <value>
+                <fullName>AN9N</fullName>
+                <default>false</default>
+                <label>C. g dom. a 90 días (20,30)</label>
+            </value>
+            <value>
+                <fullName>AN9O</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días (25)</label>
+            </value>
+            <value>
+                <fullName>AN9P</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días (30)</label>
+            </value>
+            <value>
+                <fullName>AN9Q</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 90 días (22)</label>
+            </value>
+            <value>
+                <fullName>ANFA</fullName>
+                <default>false</default>
+                <label>Cobro fracc. giro dom a 30,60</label>
+            </value>
+            <value>
+                <fullName>ANFB</fullName>
+                <default>false</default>
+                <label>Cobro fracc.giro dom30,60 (15)</label>
+            </value>
+            <value>
+                <fullName>ANFC</fullName>
+                <default>false</default>
+                <label>Cobro fracc giro dom30,60 (30)</label>
+            </value>
+            <value>
+                <fullName>ANFD</fullName>
+                <default>false</default>
+                <label>Cobro fracc. por giro dom60,90</label>
+            </value>
+            <value>
+                <fullName>ANFE</fullName>
+                <default>false</default>
+                <label>Cobro fracc giro do 60,90 (15)</label>
+            </value>
+            <value>
+                <fullName>ANFF</fullName>
+                <default>false</default>
+                <label>Cobro fra.giro do60,90 (15,30)</label>
+            </value>
+            <value>
+                <fullName>ANFG</fullName>
+                <default>false</default>
+                <label>Cobro fracc. giro dom a 60,120</label>
+            </value>
+            <value>
+                <fullName>ANFH</fullName>
+                <default>false</default>
+                <label>Cobro fracc. giro dom a 30,90</label>
+            </value>
+            <value>
+                <fullName>ANFJ</fullName>
+                <default>false</default>
+                <label>Cobro frac giro dom a 30,60,90</label>
+            </value>
+            <value>
+                <fullName>ANFM</fullName>
+                <default>false</default>
+                <label>Cobro fracc. giro dom.60,90 (5,20)</label>
+            </value>
+            <value>
+                <fullName>AQ15</fullName>
+                <default>false</default>
+                <label>C. giro a la vista a 15 días</label>
+            </value>
+            <value>
+                <fullName>AQF1</fullName>
+                <default>false</default>
+                <label>C. Giro vista 15 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AR9A</fullName>
+                <default>false</default>
+                <label>C. recibo a 90 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AS30</fullName>
+                <default>false</default>
+                <label>C. giro no domic a 30 días</label>
+            </value>
+            <value>
+                <fullName>AS60</fullName>
+                <default>false</default>
+                <label>C. giro no domic a 60 días</label>
+            </value>
+            <value>
+                <fullName>AS6H</fullName>
+                <default>false</default>
+                <label>C. g no dom 60 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AS6Q</fullName>
+                <default>false</default>
+                <label>C. g no domic a 60 días (25)</label>
+            </value>
+            <value>
+                <fullName>AS7A</fullName>
+                <default>false</default>
+                <label>C. g no dom 70 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AS90</fullName>
+                <default>false</default>
+                <label>C. giro no domic a 90 días</label>
+            </value>
+            <value>
+                <fullName>AS9C</fullName>
+                <default>false</default>
+                <label>C. g no dom 90 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AS9F</fullName>
+                <default>false</default>
+                <label>C. g no dom 90 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AS9I</fullName>
+                <default>false</default>
+                <label>C. g no domic a 90 días (15)</label>
+            </value>
+            <value>
+                <fullName>AT00</fullName>
+                <default>false</default>
+                <label>Bank Transfer, Cash Payment</label>
+            </value>
+            <value>
+                <fullName>AT01</fullName>
+                <default>false</default>
+                <label>C. tranf. vista contra entrega de documentos</label>
+            </value>
+            <value>
+                <fullName>AT14</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 14 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT15</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 15 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT20</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 120 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT2C</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 120 days end of month</label>
+            </value>
+            <value>
+                <fullName>AT30</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 30 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT3A</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 30 days (10)</label>
+            </value>
+            <value>
+                <fullName>AT3B</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 30 days (20)</label>
+            </value>
+            <value>
+                <fullName>AT3C</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 30 days (25)</label>
+            </value>
+            <value>
+                <fullName>AT3D</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 30 days (30)</label>
+            </value>
+            <value>
+                <fullName>AT3F</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 30 days end of month</label>
+            </value>
+            <value>
+                <fullName>AT3G</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 30 days shipment&apos;s date</label>
+            </value>
+            <value>
+                <fullName>AT3I</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 30 days (10,End of month)</label>
+            </value>
+            <value>
+                <fullName>AT3J</fullName>
+                <default>false</default>
+                <label>C. trans a 30 días (15 dd fm)</label>
+            </value>
+            <value>
+                <fullName>AT3L</fullName>
+                <default>false</default>
+                <label>C. trans a 30 días (15)</label>
+            </value>
+            <value>
+                <fullName>AT45</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 45 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT4A</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 45 days end of month</label>
+            </value>
+            <value>
+                <fullName>AT4B</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 45 days end of month (day 15)</label>
+            </value>
+            <value>
+                <fullName>AT4D</fullName>
+                <default>false</default>
+                <label>C. trans a 45 días dd fm (25)</label>
+            </value>
+            <value>
+                <fullName>AT60</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT6A</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (1,15)</label>
+            </value>
+            <value>
+                <fullName>AT6B</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (5,20)</label>
+            </value>
+            <value>
+                <fullName>AT6C</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (10,25)</label>
+            </value>
+            <value>
+                <fullName>AT6D</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (20)</label>
+            </value>
+            <value>
+                <fullName>AT6E</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (25)</label>
+            </value>
+            <value>
+                <fullName>AT6F</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (30)</label>
+            </value>
+            <value>
+                <fullName>AT6G</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days end of month</label>
+            </value>
+            <value>
+                <fullName>AT6H</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 63 days (end of month)</label>
+            </value>
+            <value>
+                <fullName>AT6I</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (10,end of month)</label>
+            </value>
+            <value>
+                <fullName>AT6J</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (15,end of month)</label>
+            </value>
+            <value>
+                <fullName>AT6K</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (30,end of month)</label>
+            </value>
+            <value>
+                <fullName>AT6L</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days shipment&apos;s date</label>
+            </value>
+            <value>
+                <fullName>AT6M</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (5 dd fm)</label>
+            </value>
+            <value>
+                <fullName>AT6N</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (10)</label>
+            </value>
+            <value>
+                <fullName>AT6O</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (15)</label>
+            </value>
+            <value>
+                <fullName>AT6P</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (10 dd fm)</label>
+            </value>
+            <value>
+                <fullName>AT6R</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 60 days (15,30)</label>
+            </value>
+            <value>
+                <fullName>AT70</fullName>
+                <default>false</default>
+                <label>C. trans a 70 días (15)</label>
+            </value>
+            <value>
+                <fullName>AT75</fullName>
+                <default>false</default>
+                <label>C. trans a 75 días (15)</label>
+            </value>
+            <value>
+                <fullName>AT7A</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 75 days end of month</label>
+            </value>
+            <value>
+                <fullName>AT7B</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 75 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT7C</fullName>
+                <default>false</default>
+                <label>C. trans a 75 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AT7D</fullName>
+                <default>false</default>
+                <label>C. trans a 70 días (25)</label>
+            </value>
+            <value>
+                <fullName>AT7F</fullName>
+                <default>false</default>
+                <label>C. trans a 75 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AT7G</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 73 days End of Month</label>
+            </value>
+            <value>
+                <fullName>AT85</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 85 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT8F</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 180 days end of month</label>
+            </value>
+            <value>
+                <fullName>AT8J</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 85 days (1,16)</label>
+            </value>
+            <value>
+                <fullName>AT8K</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 83 days end of month</label>
+            </value>
+            <value>
+                <fullName>AT90</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 90 days invoice date</label>
+            </value>
+            <value>
+                <fullName>AT9A</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 90 days (5,20)</label>
+            </value>
+            <value>
+                <fullName>AT9B</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 90 days (15)</label>
+            </value>
+            <value>
+                <fullName>AT9C</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 90 days (15,30)</label>
+            </value>
+            <value>
+                <fullName>AT9E</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 90 days (30)</label>
+            </value>
+            <value>
+                <fullName>AT9F</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 90 days (end of month)</label>
+            </value>
+            <value>
+                <fullName>AT9G</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 90 days (10,end of month)</label>
+            </value>
+            <value>
+                <fullName>AT9L</fullName>
+                <default>false</default>
+                <label>Bank Transfer, 90 days shipment&apos;s date</label>
+            </value>
+            <value>
+                <fullName>AT9M</fullName>
+                <default>false</default>
+                <label>C. trans a 90 días</label>
+            </value>
+            <value>
+                <fullName>ATAD</fullName>
+                <default>false</default>
+                <label>Bank transfer, Advanced Payment</label>
+            </value>
+            <value>
+                <fullName>ATFB</fullName>
+                <default>false</default>
+                <label>Cobro fracc. transf a 30,60 (FM)</label>
+            </value>
+            <value>
+                <fullName>ATFC</fullName>
+                <default>false</default>
+                <label>C. transferencia (fecha)</label>
+            </value>
+            <value>
+                <fullName>ATFJ</fullName>
+                <default>false</default>
+                <label>C. Transf. a 130 dias (FM)</label>
+            </value>
+            <value>
+                <fullName>AU15</fullName>
+                <default>false</default>
+                <label>C. pagaré a 15 días</label>
+            </value>
+            <value>
+                <fullName>AU30</fullName>
+                <default>false</default>
+                <label>C. pagaré a 30 días</label>
+            </value>
+            <value>
+                <fullName>AU3B</fullName>
+                <default>false</default>
+                <label>C. pagaré a 30 días (5,25)</label>
+            </value>
+            <value>
+                <fullName>AU3C</fullName>
+                <default>false</default>
+                <label>C. pagaré a 30 días (10)</label>
+            </value>
+            <value>
+                <fullName>AU3D</fullName>
+                <default>false</default>
+                <label>C. pagaré a 30 días (24)</label>
+            </value>
+            <value>
+                <fullName>AU45</fullName>
+                <default>false</default>
+                <label>C. pagare a 45 días</label>
+            </value>
+            <value>
+                <fullName>AU60</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días</label>
+            </value>
+            <value>
+                <fullName>AU6A</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (4)</label>
+            </value>
+            <value>
+                <fullName>AU6B</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (5)</label>
+            </value>
+            <value>
+                <fullName>AU6C</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (5,20)</label>
+            </value>
+            <value>
+                <fullName>AU6E</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AU6F</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (15)</label>
+            </value>
+            <value>
+                <fullName>AU6G</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AU6H</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (20)</label>
+            </value>
+            <value>
+                <fullName>AU6I</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (20,25)</label>
+            </value>
+            <value>
+                <fullName>AU6J</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (22)</label>
+            </value>
+            <value>
+                <fullName>AU6K</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (25)</label>
+            </value>
+            <value>
+                <fullName>AU6L</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (28)</label>
+            </value>
+            <value>
+                <fullName>AU6M</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (30)</label>
+            </value>
+            <value>
+                <fullName>AU6N</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AU6O</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (FM,10)</label>
+            </value>
+            <value>
+                <fullName>AU6P</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (FM,15)</label>
+            </value>
+            <value>
+                <fullName>AU6R</fullName>
+                <default>false</default>
+                <label>C. pagaré a 60 días (10 dd fm)</label>
+            </value>
+            <value>
+                <fullName>AU70</fullName>
+                <default>false</default>
+                <label>C. pagaré a 70 días (1)</label>
+            </value>
+            <value>
+                <fullName>AU75</fullName>
+                <default>false</default>
+                <label>C. pagaré a 75 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AU7B</fullName>
+                <default>false</default>
+                <label>C. pagaré a 70 días (5,25)</label>
+            </value>
+            <value>
+                <fullName>AU7C</fullName>
+                <default>false</default>
+                <label>C. pagaré a 70 días (10)</label>
+            </value>
+            <value>
+                <fullName>AU7D</fullName>
+                <default>false</default>
+                <label>C. pagaré a 70 días (10,15)</label>
+            </value>
+            <value>
+                <fullName>AU7E</fullName>
+                <default>false</default>
+                <label>C. pagaré a 70 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AU7F</fullName>
+                <default>false</default>
+                <label>C. pagaré a 75 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AU7G</fullName>
+                <default>false</default>
+                <label>C. pagaré a 70 días (15)</label>
+            </value>
+            <value>
+                <fullName>AU7H</fullName>
+                <default>false</default>
+                <label>C. pagaré a 75 días (15,25)</label>
+            </value>
+            <value>
+                <fullName>AU7I</fullName>
+                <default>false</default>
+                <label>C. pagaré a 75 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AU7J</fullName>
+                <default>false</default>
+                <label>C. pagaré a 70 días (25)</label>
+            </value>
+            <value>
+                <fullName>AU7K</fullName>
+                <default>false</default>
+                <label>C. pagaré a 70 días (30)</label>
+            </value>
+            <value>
+                <fullName>AU7M</fullName>
+                <default>false</default>
+                <label>C. Pagaré a 75 días</label>
+            </value>
+            <value>
+                <fullName>AU85</fullName>
+                <default>false</default>
+                <label>C. pagaré a 85 días</label>
+            </value>
+            <value>
+                <fullName>AU8G</fullName>
+                <default>false</default>
+                <label>C. pagaré a 85 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AU90</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días</label>
+            </value>
+            <value>
+                <fullName>AU9D</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (10)</label>
+            </value>
+            <value>
+                <fullName>AU9F</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (10,20)</label>
+            </value>
+            <value>
+                <fullName>AU9G</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (10,25)</label>
+            </value>
+            <value>
+                <fullName>AU9H</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (15)</label>
+            </value>
+            <value>
+                <fullName>AU9I</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (15,25)</label>
+            </value>
+            <value>
+                <fullName>AU9J</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (15,30)</label>
+            </value>
+            <value>
+                <fullName>AU9K</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (20)</label>
+            </value>
+            <value>
+                <fullName>AU9L</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (23)</label>
+            </value>
+            <value>
+                <fullName>AU9M</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (25)</label>
+            </value>
+            <value>
+                <fullName>AU9N</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (30)</label>
+            </value>
+            <value>
+                <fullName>AU9O</fullName>
+                <default>false</default>
+                <label>C. pagaré a 90 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AUAD</fullName>
+                <default>false</default>
+                <label>C. pagaré adelantado</label>
+            </value>
+            <value>
+                <fullName>AUFA</fullName>
+                <default>false</default>
+                <label>Cobro frac por pagaré a 60,90</label>
+            </value>
+            <value>
+                <fullName>AUFB</fullName>
+                <default>false</default>
+                <label>Cobro frac por pagaré a 30,60 y 90</label>
+            </value>
+            <value>
+                <fullName>AUFF</fullName>
+                <default>false</default>
+                <label>Cobro frac por pagaré a 30 y 60</label>
+            </value>
+            <value>
+                <fullName>AV3A</fullName>
+                <default>false</default>
+                <label>Documentary Credit, 30 days shipment&apos;s date</label>
+            </value>
+            <value>
+                <fullName>AV6A</fullName>
+                <default>false</default>
+                <label>Documentary Credit, 60 days shipment&apos;s date</label>
+            </value>
+            <value>
+                <fullName>AW2E</fullName>
+                <default>false</default>
+                <label>C. Riba 120 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AW3L</fullName>
+                <default>false</default>
+                <label>C. Riba a 30 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AW60</fullName>
+                <default>false</default>
+                <label>C. Riba a 60 días</label>
+            </value>
+            <value>
+                <fullName>AW6C</fullName>
+                <default>false</default>
+                <label>C. Riba a 60 días (5)</label>
+            </value>
+            <value>
+                <fullName>AW6S</fullName>
+                <default>false</default>
+                <label>C. Riba 60 días (30,31)</label>
+            </value>
+            <value>
+                <fullName>AW9E</fullName>
+                <default>false</default>
+                <label>C. Riba a 90 días (10)</label>
+            </value>
+            <value>
+                <fullName>AW9Q</fullName>
+                <default>false</default>
+                <label>C. Riba 90 días (FM)</label>
+            </value>
+            <value>
+                <fullName>AN6&amp;</fullName>
+                <default>false</default>
+                <label>C.  giro dom. a 60 días (17)</label>
+            </value>
+            <value>
+                <fullName>0010</fullName>
+                <default>false</default>
+                <label>Documentary remitance</label>
+            </value>
+            <value>
+                <fullName>0012</fullName>
+                <default>false</default>
+                <label>Documentary remitance 60 days</label>
+            </value>
+            <value>
+                <fullName>AW90</fullName>
+                <default>false</default>
+                <label>C.Riba a 90 días</label>
+            </value>
+            <value>
+                <fullName>AN4G</fullName>
+                <default>false</default>
+                <label>Giro 45 días (días 10 y 25)</label>
+            </value>
+            <value>
+                <fullName>AF4F</fullName>
+                <default>false</default>
+                <label>Confirming a 49 días (días 10 y 25)</label>
+            </value>
+            <value>
+                <fullName>AWFW</fullName>
+                <default>false</default>
+                <label>Documentary  remitance</label>
+            </value>
+            <value>
+                <fullName>ANFT</fullName>
+                <default>false</default>
+                <label>Cobro frac giro dom a 30,60,85 días</label>
+            </value>
+            <value>
+                <fullName>AM5A</fullName>
+                <default>false</default>
+                <label>Cheque a 52 días</label>
+            </value>
+            <value>
+                <fullName>AT4G</fullName>
+                <default>false</default>
+                <label>Transferencia a 45 días 15</label>
+            </value>
+            <value>
+                <fullName>AF4D</fullName>
+                <default>false</default>
+                <label>Confirming a  41 días (día 15)</label>
+            </value>
+            <value>
+                <fullName>AT08</fullName>
+                <default>false</default>
+                <label>C. transferencia a 8 días</label>
+            </value>
+            <value>
+                <fullName>AT2D</fullName>
+                <default>false</default>
+                <label>Transferencia a 20 días</label>
+            </value>
+            <value>
+                <fullName>0001</fullName>
+                <default>false</default>
+                <label>Pago inmediato sin deducción</label>
+            </value>
+            <value>
+                <fullName>AM4G</fullName>
+                <default>false</default>
+                <label>C. Cheque a 45 días (días 10 y 25)</label>
+            </value>
+            <value>
+                <fullName>AN5B</fullName>
+                <default>false</default>
+                <label>Giro a 52 días (día 15)</label>
+            </value>
+            <value>
+                <fullName>AU4E</fullName>
+                <default>false</default>
+                <label>Pagaré a 45 días (días 15,30)</label>
+            </value>
+            <value>
+                <fullName>AU4C</fullName>
+                <default>false</default>
+                <label>Pagaré a 45 días (día 24)</label>
+            </value>
+            <value>
+                <fullName>AU3G</fullName>
+                <default>false</default>
+                <label>Pagaré a 37 días (día 25)</label>
+            </value>
+            <value>
+                <fullName>AN4C</fullName>
+                <default>false</default>
+                <label>Giro a 41 días (día 22)</label>
+            </value>
+            <value>
+                <fullName>AF4G</fullName>
+                <default>false</default>
+                <label>Confirming a 52 días (días 10 y 25)</label>
+            </value>
+            <value>
+                <fullName>AN4B</fullName>
+                <default>false</default>
+                <label>Giro a 41 días (día 20)</label>
+            </value>
+            <value>
+                <fullName>AN55</fullName>
+                <default>false</default>
+                <label>C. giro dom. a 55 días</label>
+            </value>
+            <value>
+                <fullName>AN3P</fullName>
+                <default>false</default>
+                <label>50 % por adelantado 50 % giro a 30</label>
+            </value>
+            <value>
+                <fullName>AWFU</fullName>
+                <default>false</default>
+                <label>50 % por adelantado 50 %</label>
+            </value>
+            <value>
+                <fullName>AT4I</fullName>
+                <default>false</default>
+                <label>Transferencia a 45 días (día 25)</label>
+            </value>
+            <value>
+                <fullName>AF3F</fullName>
+                <default>false</default>
+                <label>C. Conf a 30 días (días 5 y 20)</label>
+            </value>
+            <value>
+                <fullName>AN4F</fullName>
+                <default>false</default>
+                <label>Giro a 45 días (25)</label>
+            </value>
+            <value>
+                <fullName>AN5D</fullName>
+                <default>false</default>
+                <label>Giro a 56 días</label>
+            </value>
+            <value>
+                <fullName>AU4A</fullName>
+                <default>false</default>
+                <label>C. Pagaré a 45 días (25)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -213,12 +213,14 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Item__c</fields>
+        <fields>OM_Name__c</fields>
         <fields>Date__c</fields>
+        <fields>Sales_Organization__c</fields>
+        <fields>OM_VID_Revenue__c</fields>
         <fields>Tonnes__c</fields>
-        <fields>Revenue__c</fields>
-        <fields>Volume_000_s__c</fields>
-        <fields>Revenue_Per_Tonne__c</fields>
+        <fields>OM_VID_EuroTonne__c</fields>
+        <fields>OM_VID_Volume__c</fields>
+        <fields>Precio_FF__c</fields>
         <relatedList>Actual_Sales_History__c.Account__c</relatedList>
         <sortField>Date__c</sortField>
         <sortOrder>Asc</sortOrder>

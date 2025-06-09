@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sales Admin Pick --></label>
+    <name>Sales_Admin__c</name>
+    <picklistValues>
+        <masterLabel>Angela Boyle</masterLabel>
+        <translation><!-- Angela Boyle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Celine Little</masterLabel>
+        <translation><!-- Celine Little --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clare Sturdee</masterLabel>
+        <translation><!-- Clare Sturdee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deborah Flynn</masterLabel>
+        <translation><!-- Deborah Flynn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dylan Smith</masterLabel>
+        <translation><!-- Dylan Smith --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elaine McGrath</masterLabel>
+        <translation><!-- Elaine McGrath --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emma McDermot</masterLabel>
+        <translation><!-- Emma McDermot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Federica Masperi</masterLabel>
+        <translation><!-- Federica Masperi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ghenet Berhane</masterLabel>
+        <translation><!-- Ghenet Berhane --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Katrina Conlin</masterLabel>
+        <translation><!-- Katrina Conlin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lisa Kelly</masterLabel>
+        <translation><!-- Lisa Kelly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lynn McCann</masterLabel>
+        <translation><!-- Lynn McCann --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meghan Mulligan</masterLabel>
+        <translation><!-- Meghan Mulligan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nicola Cassidy</masterLabel>
+        <translation><!-- Nicola Cassidy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nuala McManus</masterLabel>
+        <translation><!-- Nuala McManus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ronan Rehill</masterLabel>
+        <translation><!-- Ronan Rehill --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spain</masterLabel>
+        <translation><!-- Spain --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>Legal Community</container>
+    <containerType>Network</containerType>
+    <label>Default Navigation</label>
+    <navigationMenuItem>
+        <label>Accounts</label>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Account</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Contacts</label>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Contact</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Commercial Contracts</label>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Commercial_Contracts__c</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Reports</label>
+        <position>4</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Report</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Commercial Contract Status</label>
+        <position>5</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Commercial_Contract_Status__c</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Contracts</label>
+        <position>6</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Contract</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Tasks</label>
+        <position>7</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Task</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+</NavigationMenu>

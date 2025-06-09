@@ -10,6 +10,13 @@
     </caseValues>
     <gender>Masculine</gender>
     <layouts>
+        <layout>ActualSalesHistory Vidrala</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
         <layout>Deal Summary Layout</layout>
         <sections>
             <label><!-- Custom Links --></label>

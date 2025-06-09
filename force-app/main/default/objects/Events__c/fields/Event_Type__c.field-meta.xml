@@ -13,39 +13,7 @@
         <valueSetName>Event_Type</valueSetName>
         <valueSettings>
             <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Golf</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Wembley</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Manchester United</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Driving</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Horse racing</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Grand Prix</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Cricket</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Rugby</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Henley Regatta</valueName>
+            <valueName>Account Manager local activity</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
@@ -53,11 +21,43 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
-            <valueName>Account Manager local activity</valueName>
+            <valueName>Cricket</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Driving</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
             <valueName>Football</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Golf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Grand Prix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Henley Regatta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Horse racing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Manchester United</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Rugby</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD450 Customer Entertainment</controllingFieldValue>
+            <valueName>Wembley</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>SC500 Trade Events</controllingFieldValue>
@@ -78,15 +78,15 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>SD700 Sponsorship/Subscription</controllingFieldValue>
-            <valueName>Kids Out</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>SD700 Sponsorship/Subscription</controllingFieldValue>
             <valueName>BEN</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>SD700 Sponsorship/Subscription</controllingFieldValue>
             <valueName>BFBI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SD700 Sponsorship/Subscription</controllingFieldValue>
+            <valueName>Kids Out</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

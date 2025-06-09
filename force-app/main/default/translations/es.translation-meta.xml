@@ -13,7 +13,7 @@
         <name>Encirc_Lightning_Design</name>
     </customApplications>
     <customApplications>
-        <label><!-- Service Console --></label>
+        <label><!-- Vidrala Service Console --></label>
         <name>OM_SAC_Service_Console</name>
     </customApplications>
     <customApplications>
@@ -4461,6 +4461,10 @@
         <name>bar__UI_Text_barRestoreSelectFiles_Heading</name>
     </customLabels>
     <customLabels>
+        <label><!-- UI_Text_barRestoreSelectFiles_NoFilesFoundForSelectedRecords --></label>
+        <name>bar__UI_Text_barRestoreSelectFiles_NoFilesFoundForSelectedRecords</name>
+    </customLabels>
+    <customLabels>
         <label><!-- UI_Text_barRestoreSelectFiles_SubHeading --></label>
         <name>bar__UI_Text_barRestoreSelectFiles_SubHeading</name>
     </customLabels>
@@ -4553,6 +4557,14 @@
         <name>bar__UI_Text_barRestoreSelectRecords_NoRecordsSubheading</name>
     </customLabels>
     <customLabels>
+        <label><!-- UI_Text_barRestoreSelectRecords_NoResultsHeading --></label>
+        <name>bar__UI_Text_barRestoreSelectRecords_NoResultsHeading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UI_Text_barRestoreSelectRecords_NoResultsSubHeading --></label>
+        <name>bar__UI_Text_barRestoreSelectRecords_NoResultsSubHeading</name>
+    </customLabels>
+    <customLabels>
         <label><!-- UI_Text_barRestoreSelectRecords_No_LinkedEntities --></label>
         <name>bar__UI_Text_barRestoreSelectRecords_No_LinkedEntities</name>
     </customLabels>
@@ -4599,6 +4611,14 @@
     <customLabels>
         <label><!-- UI_Text_barRestoreSelectRecords_SearchPlaceholderFiles --></label>
         <name>bar__UI_Text_barRestoreSelectRecords_SearchPlaceholderFiles</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UI_Text_barRestoreSelectRecords_StartScreenHeading --></label>
+        <name>bar__UI_Text_barRestoreSelectRecords_StartScreenHeading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UI_Text_barRestoreSelectRecords_StartScreenSubHeading --></label>
+        <name>bar__UI_Text_barRestoreSelectRecords_StartScreenSubHeading</name>
     </customLabels>
     <customLabels>
         <label><!-- UI_Text_barRestoreSelectRecords_SubHeading --></label>
@@ -5638,6 +5658,10 @@
         <name>Follow_Up</name>
     </quickActions>
     <quickActions>
+        <label><!-- Guest Community Case --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
         <label><!-- LogACall --></label>
         <name>LogACall</name>
     </quickActions>
@@ -5648,6 +5672,10 @@
     <quickActions>
         <label><!-- NewCase --></label>
         <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Community Case --></label>
+        <name>NewCommunityCase</name>
     </quickActions>
     <quickActions>
         <label><!-- NewContact --></label>
@@ -5680,6 +5708,10 @@
     <reportTypes>
         <label>Modelos del cliente cotizados</label>
         <name>Account_Product</name>
+        <sections>
+            <label><!-- Account Products --></label>
+            <name>Account Products</name>
+        </sections>
         <sections>
             <label><!-- Assets --></label>
             <name>Assets</name>
@@ -5724,6 +5756,10 @@
     <reportTypes>
         <label>Cuentas y modelos cotizados</label>
         <name>Accounts_and_Account_Product</name>
+        <sections>
+            <label><!-- Account Products --></label>
+            <name>Account Products</name>
+        </sections>
         <sections>
             <label><!-- Accounts --></label>
             <name>Accounts</name>
@@ -6258,6 +6294,19 @@
         <sections>
             <label><!-- Vidrala Customer Survey --></label>
             <name>Vidrala Customer Survey</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- commercial contract status w/ activities --></description>
+        <label><!-- commercial contract status w/ activities --></label>
+        <name>commercial_contract_status_w_activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Commercial Contract Status --></label>
+            <name>Commercial Contract Status</name>
         </sections>
     </reportTypes>
     <reportTypes>

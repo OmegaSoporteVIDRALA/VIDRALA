@@ -8,6 +8,10 @@
             <access>VIEWER</access>
             <name>Dispatch</name>
         </network>
+        <network>
+            <access>VIEWER</access>
+            <name>Legal Community</name>
+        </network>
         <workspace>
             <access>INFERRED</access>
             <isManagingWorkspace>true</isManagingWorkspace>

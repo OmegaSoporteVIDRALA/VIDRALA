@@ -656,6 +656,20 @@
         <runAsUser>deliveryteam1@cloudshiftgroup.com</runAsUser>
     </emailServicesAddresses>
     <emailServicesAddresses>
+        <authorizedSenders>l.cazes@vidrala.com</authorizedSenders>
+        <developerName>emailtosalesforce44</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>l.cazes@vidrala.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>l.roux@vidrala.com</authorizedSenders>
+        <developerName>emailtosalesforce45</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>l.roux@vidrala.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
         <authorizedSenders>l.rizzo@vidrala.com</authorizedSenders>
         <developerName>emailtosalesforce5</developerName>
         <isActive>true</isActive>

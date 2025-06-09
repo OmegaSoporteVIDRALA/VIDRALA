@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the sum of all &apos;Grand Total Current Financial Year Tons&apos;s on Child Accounts associated to this account --></help>
+    <label><!-- PGT Current Financial Year Tons --></label>
+    <name>PGT_Current_Financial_Year_Tons__c</name>
+</CustomFieldTranslation>

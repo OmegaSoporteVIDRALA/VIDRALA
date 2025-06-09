@@ -1,0 +1,183 @@
+<template>
+    <template if:true={isInitialScreen}>
+
+        <div class="header-container">
+            <h1>Tabla de Cliente</h1>
+        </div>
+        
+        <div class="info-container">
+            <h2>Elija un mes, un año y una order reason para realizar la búsqueda de Cliente:</h2>
+        </div>
+        <div class="selection-grid">
+
+            <div class="month-container">
+                <lightning-combobox
+                    name="month"
+                    label="Mes Inicio"
+                    value={selectedMonth}
+                    options={monthOptions}
+                    onchange={handleMonthChange}
+                    placeholder="Selecciona un mes"
+                    required
+                    oninvalid={handleInvalidMonth}>
+                </lightning-combobox>
+            </div>
+
+            <div class="year-container">
+                <lightning-combobox
+                    name="year"
+                    label="Año Inicio"
+                    value={selectedYear}
+                    options={yearOptions}
+                    onchange={handleYearChange}
+                    placeholder="Selecciona un año"
+                    required
+                    oninvalid={handleInvalidYear}>
+                </lightning-combobox>
+            </div>
+
+            <div class="month-container">
+                <lightning-combobox
+                    name="monthTo"
+                    label="Mes Fin"
+                    value={selectedMonthTo}
+                    options={monthToOptions}
+                    onchange={handleMonthToChange}
+                    placeholder="Selecciona un mes"
+                    required
+                    oninvalid={handleInvalidMonthTo}>
+                </lightning-combobox>
+            </div>
+            
+            
+
+            <div class="year-container">
+                <lightning-combobox
+                    name="yearTo"
+                    label="Año Fin"
+                    value={selectedYearTo}
+                    options={yearToOptions}
+                    onchange={handleYearToChange}
+                    placeholder="Selecciona un año de fin"
+                    required
+                    oninvalid={handleInvalidYearTo}>
+                </lightning-combobox>
+            </div>
+
+        
+            <div class="order-container">
+                <lightning-dual-listbox
+                    name="order"
+                    label="Motivo de Pedido"
+                    
+                    options={orderOptions}
+                    value={selectedOrder}
+                    onchange={handleOrderChange}
+                    required
+                    oninvalid={handleInvalidOrder}>
+                </lightning-dual-listbox>
+            </div>
+
+        </div>
+        
+        <div class="slds-m-around_medium">
+            <lightning-button
+                label="Buscar"
+                variant="brand"
+                class="slds-m-top_medium"
+                onclick={handleSearch}>
+            </lightning-button>
+        </div>
+    
+</template>
+
+<template if:false={isInitialScreen}>
+    <template if:true={isLoadScreen}>
+        <div class="loading">
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </div>
+    
+    </template>
+</template>
+
+
+
+<template if:false={isSearchScreen}>
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large">
+        <div class="slds-modal__container">
+           
+            <header class="slds-modal__header">
+                <lightning-button-icon
+                    icon-name="utility:close"
+                    variant="bare"
+                    class="slds-modal__close"
+                    onclick={handleBackToSearch}
+                    alternative-text="Cerrar">
+                </lightning-button-icon>
+                <h2 class="slds-modal__title slds-hyphenate">Ventas, Abonos y Devoluciones de modelo</h2>
+            </header>
+
+            
+            <div class="slds-modal__content slds-p-around_medium">
+                <div class="table-container">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th class="header" data-column="fecha" rowspan="2" onclick={handleSort}>Mes. Año<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="ventas" rowspan="2" onclick={handleSort}>Org. Ventas<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="cliente" rowspan="2" onclick={handleSort}>Grupo cliente<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="solicitante" rowspan="2" onclick={handleSort}>Solicitante<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="factura" rowspan="2" onclick={handleSort}>Factura<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="motivo" rowspan="2" onclick={handleSort}>Motivo de pedido<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="lote" rowspan="2" onclick={handleSort}>Lote<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="material" rowspan="2" onclick={handleSort}>Material<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="modelo" rowspan="2" onclick={handleSort}>Modelo<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="albaran" rowspan="2" onclick={handleSort}>Albaran<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="destinatario" rowspan="2" onclick={handleSort}>Destinatario mcia.<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="value0" rowspan="2" onclick={handleSort}>Toneladas<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="value1" rowspan="2" onclick={handleSort}>Unidades<span class="sort-icon">⬍</span></th>
+                                <th class="header" data-column="value2" rowspan="2" onclick={handleSort}>Importe Total<span class="sort-icon">⬍</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={tableData} for:item="row">
+                                <tr key={row.id}>
+                                    <td>{row.fecha}</td>
+                                    <td>{row.ventas}</td>
+                                    <td>{row.cliente}</td>
+                                    <td>{row.solicitante}</td>
+                                    <td>{row.factura}</td>
+                                    <td>{row.motivo}</td>
+                                    <td>{row.lote}</td>
+                                    <td>{row.material}</td>
+                                    <td>{row.modelo}</td>
+                                    <td>{row.albaran}</td>
+                                    <td>{row.destinatario}</td>
+                                    <template if:true={row.value0}>
+                                        <td>{row.value0}</td>
+                                    </template>
+                                    <template if:true={row.value1}>
+                                        <td>{row.value1}</td>
+                                    </template>
+                                    <template if:true={row.value2}>
+                                        <td>{row.value2}</td>
+                                    </template>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <footer class="slds-modal__footer">
+                <lightning-button
+                    label="Volver a Selección de valores"
+                    variant="neutral"
+                    onclick={handleBackToSearch}>
+                </lightning-button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+</template>

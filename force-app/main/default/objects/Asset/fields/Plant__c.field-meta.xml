@@ -11,29 +11,34 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Aiala Vidrio</fullName>
+                <fullName>1010</fullName>
                 <default>false</default>
                 <label>Aiala Vidrio</label>
             </value>
             <value>
-                <fullName>Crisnova Vidrio</fullName>
+                <fullName>1020</fullName>
                 <default>false</default>
                 <label>Crisnova Vidrio</label>
             </value>
             <value>
-                <fullName>Castellar Vidrio</fullName>
+                <fullName>1030</fullName>
                 <default>false</default>
                 <label>Castellar Vidrio</label>
             </value>
             <value>
-                <fullName>Gallo Vidrio</fullName>
+                <fullName>1040</fullName>
                 <default>false</default>
                 <label>Gallo Vidrio</label>
             </value>
             <value>
-                <fullName>Santos Barosa</fullName>
+                <fullName>1090</fullName>
                 <default>false</default>
                 <label>Santos Barosa</label>
+            </value>
+            <value>
+                <fullName>1000</fullName>
+                <default>false</default>
+                <label>Almacén externo</label>
             </value>
         </valueSetDefinition>
     </valueSet>

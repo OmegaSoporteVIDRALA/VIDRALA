@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Senior Sales Admin --></label>
+    <name>Senior_Sales_Admin__c</name>
+    <picklistValues>
+        <masterLabel>Dylan Smith</masterLabel>
+        <translation><!-- Dylan Smith --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elaine McGrath</masterLabel>
+        <translation><!-- Elaine McGrath --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Katrina Conlin</masterLabel>
+        <translation><!-- Katrina Conlin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vicky Craven</masterLabel>
+        <translation><!-- Vicky Craven --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

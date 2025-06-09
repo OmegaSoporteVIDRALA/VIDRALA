@@ -108,35 +108,40 @@ public without sharing class OM_VID_EnviarEmailOfertaController {
 
         if(!drawingList.isEmpty()){
             for(Product2 prod : drawingList){
-                drawingIdSet.add(prod.Drawing__c);
+                if(prod.Drawing__c != null) drawingIdSet.add(prod.Drawing__c);
             }
     
-            List<ContentDocumentLink> documentLinkList = [SELECT id, LinkedEntityId, ContentDocument.LatestPublishedVersionId FROM ContentDocumentLink WHERE LinkedEntityId IN :drawingIdSet];
+            if(!drawingIdSet.isEmpty()){
+                List<ContentDocumentLink> documentLinkList = [SELECT id, LinkedEntityId, ContentDocument.LatestPublishedVersionId FROM ContentDocumentLink WHERE LinkedEntityId IN :drawingIdSet];
             
-            if(!documentLinkList.isEmpty()){
-                for(ContentDocumentLink link : documentLinkList){
-                    mapDrawingIdContentDocumentLink.put(link.linkedEntityId, link);
-                    contentVersionIdSet.add(link.ContentDocument.LatestPublishedVersionId);
-                }
-
-                cvList = [SELECT Id FROM ContentVersion WHERE ID IN :contentVersionIdSet];
-        
-                for(Product2 prod : drawingList){
-                    if(mapDrawingIdContentDocumentLink.get(prod.Drawing__c) != null){
-                        mapProductIdDrawing.put(prod.Id, prod);
+                if(!documentLinkList.isEmpty()){
+                    for(ContentDocumentLink link : documentLinkList){
+                        mapDrawingIdContentDocumentLink.put(link.linkedEntityId, link);
+                        contentVersionIdSet.add(link.ContentDocument.LatestPublishedVersionId);
                     }
-                }
     
-                for(QuoteLineItem qLine : qLineItemList){
-                    System.debug('***entra para: '+qline);
-                    System.debug('***entra para: '+qline.Product2Id);
-                    if(mapProductIdDrawing.get(qLine.Product2Id) == null){
-                        errorMessage += 'El producto ' + qLine.Product2.Name + ' no tiene planos adjuntos; ';
+                    cvList = [SELECT Id FROM ContentVersion WHERE ID IN :contentVersionIdSet];
+            
+                    for(Product2 prod : drawingList){
+                        if(mapDrawingIdContentDocumentLink.get(prod.Drawing__c) != null){
+                            mapProductIdDrawing.put(prod.Id, prod);
+                        }
                     }
+        
+                    for(QuoteLineItem qLine : qLineItemList){
+                        System.debug('***entra para: '+qline);
+                        System.debug('***entra para: '+qline.Product2Id);
+                        if(mapProductIdDrawing.get(qLine.Product2Id) == null){
+                            errorMessage += 'El producto ' + qLine.Product2.Name + ' no tiene planos adjuntos; ';
+                        }
+                    }
+                }else{
+                    errorMessage += 'Ninguno de los productos tiene planos adjuntos';
                 }
             }else{
-                errorMessage += 'Ninguno de los productos tiene planos adjuntos';
-            }
+            	errorMessage += 'Ninguno de los productos tiene planos adjuntos';
+        	}
+            
             
         }else{
             errorMessage += 'Ninguno de los productos tiene planos adjuntos';

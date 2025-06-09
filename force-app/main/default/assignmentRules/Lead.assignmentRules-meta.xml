@@ -19,8 +19,8 @@
             <template>Vidrala_Templates/Te_ha_llegado_un_lead</template>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>l.roux@vidrala.com</assignedTo>
-            <assignedToType>User</assignedToType>
+            <assignedTo>Vidrala_France_Lead_Assignment</assignedTo>
+            <assignedToType>Queue</assignedToType>
             <criteriaItems>
                 <field>Lead.Market__c</field>
                 <operation>equals</operation>

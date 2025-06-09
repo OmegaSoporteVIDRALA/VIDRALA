@@ -345,10 +345,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -546,7 +542,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -840,10 +835,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -1041,7 +1032,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -1339,10 +1329,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -1541,7 +1527,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -1835,10 +1820,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -2036,7 +2017,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -2334,10 +2314,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -2536,7 +2512,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -2830,10 +2805,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -3031,7 +3002,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -3329,10 +3299,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -3531,7 +3497,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -3825,10 +3790,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -4026,7 +3987,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -4324,10 +4284,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -4526,7 +4482,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -4820,10 +4775,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -5021,7 +4972,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -5319,10 +5269,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -5521,7 +5467,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>
@@ -5815,10 +5760,6 @@
             <label>Idioma</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N4I00000EE0KG</field>
-            <label>Incoterm</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N58000000kR6n</field>
             <label>Loss Reason</label>
         </opportunityListFieldsLabelMappings>
@@ -6016,7 +5957,6 @@
             <field>00N58000001vOMb</field>
             <field>00N58000001vONo</field>
             <field>00NQ4000001LtfF</field>
-            <field>00N4I00000EE0KG</field>
             <field>00N58000000kR6n</field>
             <field>00N4I00000EV9CY</field>
             <field>00N58000001FbnA</field>

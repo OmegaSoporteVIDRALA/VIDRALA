@@ -3,7 +3,7 @@
     <fullName>OM_VID_PaymentMethod__c</fullName>
     <description>Shows Related Account&apos;s payment method</description>
     <externalId>false</externalId>
-    <formula>Opportunity.Account.Forma_de_pago__c</formula>
+    <formula>TEXT(Opportunity.Account.OM_VID_PaymentMethods__c )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <inlineHelpText>Forma de pago de la cuenta relacionada</inlineHelpText>
     <label>Payment Method</label>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Actual_Sales_History</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Sales_Organization__c</columns>
+    <columns>Year__c</columns>
+    <columns>Date__c</columns>
+    <columns>OM_ModelRef__c</columns>
+    <columns>SAP_Material_Code__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <columns>Precio_FF__c</columns>
+    <columns>Revenue_Per_Tonne__c</columns>
+    <columns>Tonnes__c</columns>
+    <columns>Volume_000_s__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Actual Sales History</label>
+</ListView>

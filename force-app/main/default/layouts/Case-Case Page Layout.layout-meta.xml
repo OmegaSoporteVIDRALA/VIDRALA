@@ -3,6 +3,7 @@
     <customButtons>Conga_Composer_Parte_de_Apertura</customButtons>
     <customButtons>Conga_Composer_Analisis_de_insatisfaccion</customButtons>
     <emailDefault>false</emailDefault>
+    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -96,6 +97,10 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>OM_SAC_modeloYDenominacion__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OM_SAC_CodigoModelo__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>

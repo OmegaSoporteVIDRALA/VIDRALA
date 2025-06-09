@@ -1,69 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>Golf</fullName>
-        <default>false</default>
-        <label>Golf</label>
-    </customValue>
-    <customValue>
-        <fullName>Wembley</fullName>
-        <default>false</default>
-        <label>Wembley</label>
-    </customValue>
-    <customValue>
-        <fullName>Manchester United</fullName>
-        <default>false</default>
-        <label>Manchester United</label>
-    </customValue>
-    <customValue>
-        <fullName>Driving</fullName>
-        <default>false</default>
-        <label>Driving</label>
-    </customValue>
-    <customValue>
-        <fullName>Horse racing</fullName>
-        <default>false</default>
-        <label>Horse racing</label>
-    </customValue>
-    <customValue>
-        <fullName>Grand Prix</fullName>
-        <default>false</default>
-        <label>Grand Prix</label>
-    </customValue>
-    <customValue>
-        <fullName>Cricket</fullName>
-        <default>false</default>
-        <label>Cricket</label>
-    </customValue>
-    <customValue>
-        <fullName>Rugby</fullName>
-        <default>false</default>
-        <label>Rugby</label>
-    </customValue>
-    <customValue>
-        <fullName>Henley Regatta</fullName>
-        <default>false</default>
-        <label>Henley Regatta</label>
-    </customValue>
-    <customValue>
-        <fullName>Concerts</fullName>
-        <default>false</default>
-        <label>Concerts</label>
-    </customValue>
-    <customValue>
         <fullName>Account Manager local activity</fullName>
         <default>false</default>
         <label>Account Manager local activity</label>
     </customValue>
     <customValue>
-        <fullName>British Glass</fullName>
+        <fullName>Awards</fullName>
         <default>false</default>
-        <label>British Glass</label>
-    </customValue>
-    <customValue>
-        <fullName>Kids Out</fullName>
-        <default>false</default>
-        <label>Kids Out</label>
+        <label>Awards</label>
     </customValue>
     <customValue>
         <fullName>BEN</fullName>
@@ -71,9 +16,39 @@
         <label>BEN</label>
     </customValue>
     <customValue>
+        <fullName>BFBI</fullName>
+        <default>false</default>
+        <label>BFBI</label>
+    </customValue>
+    <customValue>
+        <fullName>British Glass</fullName>
+        <default>false</default>
+        <label>British Glass</label>
+    </customValue>
+    <customValue>
         <fullName>BSDA</fullName>
         <default>false</default>
         <label>BSDA</label>
+    </customValue>
+    <customValue>
+        <fullName>Concerts</fullName>
+        <default>false</default>
+        <label>Concerts</label>
+    </customValue>
+    <customValue>
+        <fullName>Cricket</fullName>
+        <default>false</default>
+        <label>Cricket</label>
+    </customValue>
+    <customValue>
+        <fullName>Driving</fullName>
+        <default>false</default>
+        <label>Driving</label>
+    </customValue>
+    <customValue>
+        <fullName>Football</fullName>
+        <default>false</default>
+        <label>Football</label>
     </customValue>
     <customValue>
         <fullName>Glass Trade Shows/Seminars</fullName>
@@ -81,14 +56,44 @@
         <label>Glass Trade Shows/Seminars</label>
     </customValue>
     <customValue>
-        <fullName>BFBI</fullName>
+        <fullName>Golf</fullName>
         <default>false</default>
-        <label>BFBI</label>
+        <label>Golf</label>
     </customValue>
     <customValue>
-        <fullName>Football</fullName>
+        <fullName>Grand Prix</fullName>
         <default>false</default>
-        <label>Football</label>
+        <label>Grand Prix</label>
+    </customValue>
+    <customValue>
+        <fullName>Henley Regatta</fullName>
+        <default>false</default>
+        <label>Henley Regatta</label>
+    </customValue>
+    <customValue>
+        <fullName>Horse racing</fullName>
+        <default>false</default>
+        <label>Horse racing</label>
+    </customValue>
+    <customValue>
+        <fullName>Kids Out</fullName>
+        <default>false</default>
+        <label>Kids Out</label>
+    </customValue>
+    <customValue>
+        <fullName>Manchester United</fullName>
+        <default>false</default>
+        <label>Manchester United</label>
+    </customValue>
+    <customValue>
+        <fullName>Rugby</fullName>
+        <default>false</default>
+        <label>Rugby</label>
+    </customValue>
+    <customValue>
+        <fullName>Wembley</fullName>
+        <default>false</default>
+        <label>Wembley</label>
     </customValue>
     <customValue>
         <fullName>WSTA</fullName>
@@ -97,5 +102,5 @@
     </customValue>
     <description>Event Types</description>
     <masterLabel>Event Type</masterLabel>
-    <sorted>false</sorted>
+    <sorted>true</sorted>
 </GlobalValueSet>

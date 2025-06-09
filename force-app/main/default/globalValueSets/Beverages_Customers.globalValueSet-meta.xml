@@ -6,6 +6,11 @@
         <label>Accolade</label>
     </customValue>
     <customValue>
+        <fullName>Australian Vintage</fullName>
+        <default>false</default>
+        <label>Australian Vintage</label>
+    </customValue>
+    <customValue>
         <fullName>Benchmark Drinks</fullName>
         <default>false</default>
         <label>Benchmark Drinks</label>
@@ -121,9 +126,19 @@
         <label>Sxollie Cider</label>
     </customValue>
     <customValue>
+        <fullName>Tesco</fullName>
+        <default>false</default>
+        <label>Tesco</label>
+    </customValue>
+    <customValue>
         <fullName>TWE_Treasury Wines</fullName>
         <default>false</default>
         <label>TWE Treasury Wines</label>
+    </customValue>
+    <customValue>
+        <fullName>Vinarchy</fullName>
+        <default>false</default>
+        <label>Vinarchy</label>
     </customValue>
     <customValue>
         <fullName>VSPT</fullName>

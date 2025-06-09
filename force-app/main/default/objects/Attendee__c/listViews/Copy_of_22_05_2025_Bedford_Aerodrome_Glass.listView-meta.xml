@@ -7,12 +7,12 @@
     <columns>Contact__c</columns>
     <columns>Account__c</columns>
     <columns>Beverages_Customer_Contact_Account__c</columns>
+    <columns>Beverages_Customer__c</columns>
     <columns>Account_Owner__c</columns>
     <columns>Tier__c</columns>
     <columns>Status__c</columns>
     <columns>Is_a_Hotel_Required__c</columns>
     <columns>Night_before_event__c</columns>
-    <columns>Night_of_event__c</columns>
     <columns>Dietary_Requirements__c</columns>
     <columns>Dietary_Requirements_Comments__c</columns>
     <columns>General_Member_Comments__c</columns>
@@ -32,5 +32,5 @@
         <operation>equals</operation>
         <value>beverages customers,encirc beverages</value>
     </filters>
-    <label>22.05.25 - Bedford Aerodrome Filling(17)</label>
+    <label>22.05.25 - Bedford Aerodrome Filling(16)</label>
 </ListView>

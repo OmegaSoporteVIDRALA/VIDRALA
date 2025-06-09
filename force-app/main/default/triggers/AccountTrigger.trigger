@@ -7,13 +7,14 @@
    -----------  ------- ------------------  ------------------------------------------------------------------------------
    Nov 2016     1.0     M.Witchalls(Ciber)  Initial Release 
    Mar 2017     1.1     M.Witchalls(Cloud9) Change Month Forecast Owners when Account Owner is changed  
-   Oct 2024     2.0     Globant             Refactored
 ------------------------------------------------------------------------------------------------------------------------ */        
 
-trigger AccountTrigger on Account (after update) {
-    
-    if (trigger.isAfter && trigger.isUpdate) {
-        
-        AccountTriggerHandler.processAccountRecords(trigger.new, trigger.oldMap);
+trigger AccountTrigger on Account (before insert, before update, after insert, after update, before delete) {
+    if(!OM_Utils.shouldSkipTriggerGlobal){
+		OM_VID_AccountTRGHandler.execute(trigger.new, trigger.oldMap, trigger.isBefore, trigger.isAfter, trigger.isInsert, trigger.isUpdate, trigger.isDelete);
+        if (trigger.isAfter && trigger.isUpdate) {
+            
+            AccountTriggerHandler.processAccountRecords(trigger.new, trigger.oldMap);
+        }
     }
 }

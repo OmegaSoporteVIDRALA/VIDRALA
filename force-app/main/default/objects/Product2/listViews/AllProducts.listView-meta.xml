@@ -8,13 +8,24 @@
     <columns>Status__c</columns>
     <columns>PRODUCT2.FAMILY</columns>
     <columns>Account__c</columns>
-    <columns>PRODUCT2.ACTIVE</columns>
-    <columns>Is_Archived__c</columns>
+    <columns>Capacity__c</columns>
+    <columns>Finish__c</columns>
+    <columns>Weight__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>PRODUCT2.LAST_UPDATE</field>
         <operation>notEqual</operation>
         <value>2/4/2016 12:00 AM,2/25/2016 12:00 AM,7/5/2016 12:00 AM,7/15/2016 12:00 AM</value>
     </filters>
-    <label>All Products</label>
+    <filters>
+        <field>PRODUCT2.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Vigente,Vigente - Preguntar fabricar/Pedir moldes</value>
+    </filters>
+    <label>Todos los productos</label>
 </ListView>

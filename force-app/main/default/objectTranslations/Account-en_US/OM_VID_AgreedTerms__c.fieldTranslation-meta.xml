@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Agreed Terms --></label>
+    <name>OM_VID_AgreedTerms__c</name>
+    <picklistValues>
+        <masterLabel>Bi-weekly invoicing</masterLabel>
+        <translation><!-- Bi-weekly invoicing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daily Invoicing</masterLabel>
+        <translation><!-- Daily Invoicing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monthly Invoicing</masterLabel>
+        <translation><!-- Monthly Invoicing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Weekly invoicing</masterLabel>
+        <translation><!-- Weekly invoicing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

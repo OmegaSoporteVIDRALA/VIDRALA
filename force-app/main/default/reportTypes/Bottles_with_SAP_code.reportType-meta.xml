@@ -133,6 +133,21 @@
             <field>Active__c</field>
             <table>Bottle__c.SAP_Material_Codes1__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>OM_Colour__c</field>
+            <table>Bottle__c.SAP_Material_Codes1__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>OM_Description__c</field>
+            <table>Bottle__c.SAP_Material_Codes1__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>OM_ProductRef__c</field>
+            <table>Bottle__c.SAP_Material_Codes1__r</table>
+        </columns>
         <masterLabel>SAP Material Codes</masterLabel>
     </sections>
 </ReportType>

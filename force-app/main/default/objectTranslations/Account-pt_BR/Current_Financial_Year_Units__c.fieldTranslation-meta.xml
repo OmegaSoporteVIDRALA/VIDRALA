@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A sum of Volumes taken form all &apos;Actual Sales History&apos;s associated to this Account --></help>
+    <label><!-- Current Financial Year Units --></label>
+    <name>Current_Financial_Year_Units__c</name>
+</CustomFieldTranslation>

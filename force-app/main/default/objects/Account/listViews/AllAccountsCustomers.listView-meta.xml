@@ -10,6 +10,8 @@
     <columns>Senior_Sales_Admin_Lookup__c</columns>
     <columns>Sales_Admin_Lookup__c</columns>
     <columns>Customer_Service__c</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
     <filterScope>Everything</filterScope>
     <label>All Accounts - Customer</label>
 </ListView>

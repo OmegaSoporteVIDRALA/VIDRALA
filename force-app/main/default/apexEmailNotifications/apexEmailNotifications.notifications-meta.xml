@@ -6,4 +6,7 @@
     <apexEmailNotification>
         <email>thomas.strathearn@globant.com.encirc</email>
     </apexEmailNotification>
+    <apexEmailNotification>
+        <email>garvit.agrawal@globant.com</email>
+    </apexEmailNotification>
 </ApexEmailNotifications>

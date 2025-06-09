@@ -136,6 +136,12 @@
                 <identifier>RecordOM_SAC_Grupo_Cliente__cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.OM_SAC_CodigoModelo__c</fieldItem>
+                <identifier>RecordOM_SAC_CodigoModelo__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-7f60675a-a890-49e8-8b33-f4b1aafd25cc</name>
         <type>Facet</type>
     </flexiPageRegions>

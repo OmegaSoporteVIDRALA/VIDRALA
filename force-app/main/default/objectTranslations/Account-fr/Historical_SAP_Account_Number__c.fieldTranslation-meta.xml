@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If an account has changed name and has been set up with a new account number put the old one in this field --></help>
+    <label><!-- Historical SAP Account Number --></label>
+    <name>Historical_SAP_Account_Number__c</name>
+</CustomFieldTranslation>

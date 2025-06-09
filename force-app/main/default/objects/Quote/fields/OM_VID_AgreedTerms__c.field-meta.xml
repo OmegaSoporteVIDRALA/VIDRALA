@@ -3,7 +3,7 @@
     <fullName>OM_VID_AgreedTerms__c</fullName>
     <description>Shows Related Account&apos;s agreed terms</description>
     <externalId>false</externalId>
-    <formula>Opportunity.Account.Agreed_Terms__c</formula>
+    <formula>TEXT( Opportunity.Account.OM_VID_AgreedTerms__c )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <inlineHelpText>Agreed terms de la cuenta relacionada</inlineHelpText>
     <label>Agreed Terms</label>

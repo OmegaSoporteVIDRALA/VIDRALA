@@ -3,9 +3,9 @@
     <fullName>Tonnes__c</fullName>
     <externalId>false</externalId>
     <label>Tonnes</label>
-    <precision>10</precision>
+    <precision>7</precision>
     <required>false</required>
-    <scale>5</scale>
+    <scale>2</scale>
     <trackFeedHistory>true</trackFeedHistory>
     <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>

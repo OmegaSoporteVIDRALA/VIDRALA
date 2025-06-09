@@ -1,0 +1,1353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Payment Methods --></label>
+    <name>OM_VID_PaymentMethods__c</name>
+    <picklistValues>
+        <masterLabel>50 % por adelantado 50 %</masterLabel>
+        <translation>50 % virement à l&apos;avance et 50 %</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50 % por adelantado 50 % giro a 30</masterLabel>
+        <translation>50 % por adelantado 50 % giro a 30</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 15 days invoice date</masterLabel>
+        <translation>C.cheque a 15 dias</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 30 days End of month</masterLabel>
+        <translation>C. cheque a 30 dias (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 30 days invoice date</masterLabel>
+        <translation>C. cheque a 30 dias</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 45 days End of month</masterLabel>
+        <translation>C.  cheque a 45 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 45 days invoice date</masterLabel>
+        <translation>C.  cheque a 45 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 60 days invoice date</masterLabel>
+        <translation>C. cheque a 60 dias</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 60 days invoice date (25)</masterLabel>
+        <translation>C.cheque a 60 dias (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 60 days invoice date (26)</masterLabel>
+        <translation>C.  cheque a 60 días (26)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 60 days invoice date (FM)</masterLabel>
+        <translation>C.cheque a 60 dias (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 75 days invoice date</masterLabel>
+        <translation>C.  cheque a 75 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 90 days invoice date</masterLabel>
+        <translation>C.cheque a 90 dias</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 90 days invoice date (20)</masterLabel>
+        <translation>C.  cheque a 90 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check 90 days invoice date (30)</masterLabel>
+        <translation>C.  cheque a 90 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check, 75 days end of month</masterLabel>
+        <translation>C. cheque a 75 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Check, advanced payment</masterLabel>
+        <translation>C.cheque adiantado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 120 days end of month</masterLabel>
+        <translation>Recebimento a 120 dias por transferência (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 120 days invoice date</masterLabel>
+        <translation>Recebimento a 120 dias por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 14 days invoice date</masterLabel>
+        <translation>Recebimento a 14 dias por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 15 days invoice date</masterLabel>
+        <translation>Recebimento a 15 dias por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 180 days end of month</masterLabel>
+        <translation>Recebimento a 180 dias por transferência (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 30 days (10)</masterLabel>
+        <translation>Recebimento a 30 dias por transferência (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 30 days (10,End of month)</masterLabel>
+        <translation>Recebimento a 30 dias por transferência (10,FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 30 days (20)</masterLabel>
+        <translation>Recebimento a 30 dias por transferência (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 30 days (25)</masterLabel>
+        <translation>Recebimento a 30 dias por transferência (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 30 days (30)</masterLabel>
+        <translation>Recebimento a 30 dias por transferência (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 30 days end of month</masterLabel>
+        <translation>Recebimento a 30 dias por transferência (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 30 days invoice date</masterLabel>
+        <translation>Recebimento a 30 dias por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 30 days shipment&apos;s date</masterLabel>
+        <translation>Recebimento a 30 dias por transferência (FE)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 45 days end of month</masterLabel>
+        <translation>C. trans a 45 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 45 days end of month (day 15)</masterLabel>
+        <translation>C. trans a 45 días dd fm (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 45 days invoice date</masterLabel>
+        <translation>Recebimento a 45 dias por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (1,15)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (1,15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (10 dd fm)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (10 dd fm)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (10)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (10,25)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (10,end of month)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (10,FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (15)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (15,30)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (15,end of month)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (15,FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (20)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (25)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (30)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (30,end of month)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (30,FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (5 dd fm)</masterLabel>
+        <translation>C.  trans a 60 días (5 dd fm)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days (5,20)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days end of month</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days invoice date</masterLabel>
+        <translation>Recebimento a 60 dias por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 60 days shipment&apos;s date</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (FE)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 63 days (end of month)</masterLabel>
+        <translation>Recebimento a 63 dias por transferência (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 73 days End of Month</masterLabel>
+        <translation>C. trans a 73 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 75 days end of month</masterLabel>
+        <translation>C. trans a 75 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 75 days invoice date</masterLabel>
+        <translation>C. trans a 75 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 83 days end of month</masterLabel>
+        <translation>C. trans a 83 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 85 days (1,16)</masterLabel>
+        <translation>Recebimento a 85 dias por transferência (1,16)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 85 days invoice date</masterLabel>
+        <translation>Recebimento a 85 dias por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 90 days (10,end of month)</masterLabel>
+        <translation>Recebimento a 90 dias por transferência (10,FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 90 days (15)</masterLabel>
+        <translation>Recebimento a 90 dias por transferência (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 90 days (15,30)</masterLabel>
+        <translation>Recebimento a 90 dias por transferência (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 90 days (30)</masterLabel>
+        <translation>Recebimento a 90 dias por transferência (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 90 days (5,20)</masterLabel>
+        <translation>Recebimento a 90 dias por transferência (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 90 days (end of month)</masterLabel>
+        <translation>Recebimento a 90 dias por transferência (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 90 days invoice date</masterLabel>
+        <translation>Recebimento a 90 dias por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, 90 days shipment&apos;s date</masterLabel>
+        <translation>Recebimento a 90 dias por transferência (FE)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Transfer, Cash Payment</masterLabel>
+        <translation>Recebimento imediato por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank transfer, Advanced Payment</masterLabel>
+        <translation>Recebimento antecipado por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.  cheque a 30 días (10,25)</masterLabel>
+        <translation>C. giro dom.a 30 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.  giro dom. a 60 días (17)</masterLabel>
+        <translation>C.  giro dom. a 60 días (17)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.  giro dom. a 75 días 1</masterLabel>
+        <translation>C.  giro dom. a 75 días 1</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Cheque a 45 días (días 10 y 25)</masterLabel>
+        <translation>C. Cheque a 45 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Conf a 30 días (días 5 y 20)</masterLabel>
+        <translation>C. Conf a 30 días (días 5 y 20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Giro vista 15 días (15,30)</masterLabel>
+        <translation>C.  Giro vista 15 días (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Pagaré a 45 días (25)</masterLabel>
+        <translation><!-- C. Pagaré a 45 días (25) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Pagaré a 75 días</masterLabel>
+        <translation>C. Pagaré a 75 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Riba 120 días (FM)</masterLabel>
+        <translation>C.  Riba 120 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Riba 60 días (30,31)</masterLabel>
+        <translation>C.  Riba 60 días (30,31)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Riba 90 días (FM)</masterLabel>
+        <translation>C.  Riba 90 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Riba a 30 días (FM)</masterLabel>
+        <translation>C.  Riba  a 30 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Riba a 60 días</masterLabel>
+        <translation>Recebimento a 60 dias por giro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Riba a 60 días (5)</masterLabel>
+        <translation>C.  Riba a 60 días (5)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Riba a 90 días (10)</masterLabel>
+        <translation>C.  Riba a 90 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. Transf. a 130 dias (FM)</masterLabel>
+        <translation>C. Transf. a 130 dias (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. cheque a 30 días</masterLabel>
+        <translation>C. en efectivo em dinheiro a 30 dias</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. cheque al contado</masterLabel>
+        <translation>C.Cheque imediato</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 15 días</masterLabel>
+        <translation>C.  conf a 15 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 30 días</masterLabel>
+        <translation>C.  conf a 30 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 30 días (15)</masterLabel>
+        <translation>C.  conf a 30 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 30 días (20)</masterLabel>
+        <translation>C.  conf a 30 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 35 días</masterLabel>
+        <translation>C.  conf a 35 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 45 días (10,25)</masterLabel>
+        <translation>C.  conf a 45 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 45 días (30)</masterLabel>
+        <translation>C.  conf a 45 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 55 días (30)</masterLabel>
+        <translation>C.  conf a 55 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días</masterLabel>
+        <translation>C.  conf a 60 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (1,15)</masterLabel>
+        <translation>C.  conf a 60 días (1,15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (10)</masterLabel>
+        <translation>C.  conf a 60 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (10,20,30)</masterLabel>
+        <translation>C.  conf a 60 días (10,20,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (10,25)</masterLabel>
+        <translation>C.  conf a 60 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (12,26)</masterLabel>
+        <translation>C.  conf a 60 días (12,26)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (12,27)</masterLabel>
+        <translation>C.  conf a 60 días (12,27)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (15)</masterLabel>
+        <translation>C.  conf a 60 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (15,30)</masterLabel>
+        <translation>C.  conf a 60 días (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (17)</masterLabel>
+        <translation>C.  conf a 60 días (17)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (20)</masterLabel>
+        <translation>C.  conf a 60 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (25)</masterLabel>
+        <translation>C.  conf a 60 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 60 días (5,20)</masterLabel>
+        <translation>C.  conf a 60 días (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 65 días (25)</masterLabel>
+        <translation>C.  conf a 65 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 70 días</masterLabel>
+        <translation>C.  conf a 70 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 70 días (15)</masterLabel>
+        <translation>C.  conf a 70 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 70 días (30)</masterLabel>
+        <translation>C.  conf a 70 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 75 días</masterLabel>
+        <translation>C.  conf a 75 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 75 días (10)</masterLabel>
+        <translation>C.  conf a 75 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 75 días (10,20)</masterLabel>
+        <translation>C.  conf a 75 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 75 días (10,25)</masterLabel>
+        <translation>C.  conf a 75 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 75 días (30)</masterLabel>
+        <translation>C.  conf a 75 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 75 días (5,15,25)</masterLabel>
+        <translation>C.  conf a 75 días (5,15,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 75 días (5,20)</masterLabel>
+        <translation>C.  conf a 75 días (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 80 días (5,15,25)</masterLabel>
+        <translation>C.  conf a 80 días (5,15,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 85 días</masterLabel>
+        <translation>C.  conf a 85 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 85 días (10)</masterLabel>
+        <translation>C.  conf a 85 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 90 días</masterLabel>
+        <translation>C.  conf a 90 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 90 días (15)</masterLabel>
+        <translation>C.  conf a 90 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 90 días (20)</masterLabel>
+        <translation>C.  conf a 90 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 90 días (25)</masterLabel>
+        <translation>C.  conf a 90 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 90 días (5,15,25)</masterLabel>
+        <translation>C.  conf a 90 días (5,15,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf a 90 días (5,20)</masterLabel>
+        <translation>C.  conf a 90 días (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. conf al contado</masterLabel>
+        <translation>C.  conf em dinheiro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. efectivo a 45 días</masterLabel>
+        <translation>C. en efectivo em dinheiro a 45 dias</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. en efectivo a 60 días</masterLabel>
+        <translation>C. en efectivo em dinheiro a 60 dias</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. en efectivo adelantado</masterLabel>
+        <translation>Recebimento antecipado em dinheiro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (1,15,25)</masterLabel>
+        <translation>C. g dom. a 60 días (1,15,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (10,20)</masterLabel>
+        <translation>C.  g dom. a 60 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (10,25)</masterLabel>
+        <translation>C.  g dom. a 60 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (12,27)</masterLabel>
+        <translation>C.  g dom. a 60 días (12,27)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (15,25)</masterLabel>
+        <translation>C.  g dom. a 60 días (15,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (15,30)</masterLabel>
+        <translation>C.  g dom. a 60 días (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (15,31)</masterLabel>
+        <translation>C.  g dom. a 60 días (15,31)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (20,30)</masterLabel>
+        <translation>C.  g dom. a 60 días (20,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 60 días (30,31)</masterLabel>
+        <translation>C.  g dom. a 60 días (30,31)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 75 días (10,20)</masterLabel>
+        <translation>C.  g dom. a 75 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 75 días (10,25)</masterLabel>
+        <translation>C.  g dom. a 75 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 75 días (14,30)</masterLabel>
+        <translation>C.  g dom. a 75 días (14,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 75 días (15)</masterLabel>
+        <translation>C.  g dom. a 75 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 75 días (15,28)</masterLabel>
+        <translation>C.  g dom. a 75 días (15,28)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 75 días (15,30)</masterLabel>
+        <translation>C.  g dom. a 75 días (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 75 días (25)</masterLabel>
+        <translation>C.  g dom. a 75 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 75 días (5,20)</masterLabel>
+        <translation>C.  g dom. a 75 días (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 85 días (10,25)</masterLabel>
+        <translation>C.  g dom. a 85 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 90 días (10,20)</masterLabel>
+        <translation>C.  g dom. a 90 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 90 días (10,25)</masterLabel>
+        <translation>C.  g dom. a 90 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 90 días (15,28)</masterLabel>
+        <translation>C.  g dom. a 90 días (15,28)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 90 días (15,30)</masterLabel>
+        <translation>C.  g dom. a 90 días (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom. a 90 días (20,30)</masterLabel>
+        <translation>C.  g dom. a 90 días (20,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g dom.a 30 días (10,20,30)</masterLabel>
+        <translation>C. g dom.a 30 días (10,20,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g no dom 60 días (10,25)</masterLabel>
+        <translation>C.  g no dom 60 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g no dom 70 días (10,20)</masterLabel>
+        <translation>C.  g no dom 70 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g no dom 90 días (10,20)</masterLabel>
+        <translation>C.  g no dom 90 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g no dom 90 días (5,20)</masterLabel>
+        <translation>C.  g no dom 90 días (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g no domic a 60 días (25)</masterLabel>
+        <translation>C.  g no domic a 60 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. g no domic a 90 días (15)</masterLabel>
+        <translation>C.  g no domic a 90 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro a la vista a 15 días</masterLabel>
+        <translation>C.  giro a la vista a 15 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom 70 días(25 dd FM)</masterLabel>
+        <translation>C.  giro dom 70 días(25 dd FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. 60 días (15 fm)</masterLabel>
+        <translation>C.  giro dom. a 60 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 45 días</masterLabel>
+        <translation>C.  giro  dom. a 45 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 55 días</masterLabel>
+        <translation>C. giro dom. a 55 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días</masterLabel>
+        <translation>C.  giro dom. a 60 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días (1,15)</masterLabel>
+        <translation>C. giro dom. a 60 días (1,15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días (10)</masterLabel>
+        <translation>C.  giro dom. a 60 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días (15)</masterLabel>
+        <translation>C.  giro dom. a 60 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días (20)</masterLabel>
+        <translation>C.  giro dom. a 60 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días (25)</masterLabel>
+        <translation>C.  giro dom. a 60 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días (30)</masterLabel>
+        <translation>C.  giro dom. a 60 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días (5)</masterLabel>
+        <translation>C.  giro dom. a 60 días (5)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 60 días (5,20)</masterLabel>
+        <translation>C. giro dom. a 60 días (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 65 días (30)</masterLabel>
+        <translation>C.  giro dom. a 65 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 70 días (10)</masterLabel>
+        <translation>C.  giro dom. a 70 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 70 días (15)</masterLabel>
+        <translation>C.  giro dom. a 70 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 70 días (20)</masterLabel>
+        <translation>C.  giro dom. a 70 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 70 días (25)</masterLabel>
+        <translation>C.  giro dom. a 70 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 70 días (30)</masterLabel>
+        <translation>C.  giro dom. a 70 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 75 días</masterLabel>
+        <translation>C.  giro dom. a 75 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 75 días (8,24)</masterLabel>
+        <translation>C. giro dom. a 75 días (8,24)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 80 días</masterLabel>
+        <translation>C.  giro dom. a 80 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 83 días</masterLabel>
+        <translation>C.  giro dom. a 83 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 85 días</masterLabel>
+        <translation>C.  giro dom. a 85 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 85 días (10)</masterLabel>
+        <translation>C.  giro dom. a 85 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días</masterLabel>
+        <translation>C.  giro dom. a 90 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días (10)</masterLabel>
+        <translation>C.  giro dom. a 90 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días (15)</masterLabel>
+        <translation>C.  giro dom. a 90 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días (20)</masterLabel>
+        <translation>C.  giro dom. a 90 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días (22)</masterLabel>
+        <translation>C.  giro dom. a 90 días (22)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días (25)</masterLabel>
+        <translation>C.  giro dom. a 90 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días (30)</masterLabel>
+        <translation>C.  giro dom. a 90 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días (5)</masterLabel>
+        <translation>C.  giro dom. a 90 días (5)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom. a 90 días (5,20)</masterLabel>
+        <translation>C. giro dom. a 90 días (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 120 días</masterLabel>
+        <translation>C.  giro dom.a 120 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días</masterLabel>
+        <translation>C.  giro dom.a 30 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (10)</masterLabel>
+        <translation>C.  giro dom.a 30 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (10,20)</masterLabel>
+        <translation>C. giro dom.a 30 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (10,25)</masterLabel>
+        <translation>C. giro dom.a 30 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (15)</masterLabel>
+        <translation>C.  giro dom.a 30 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (17)</masterLabel>
+        <translation>C.  giro dom.a 30 días (17)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (20)</masterLabel>
+        <translation>C.  giro dom.a 30 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (25)</masterLabel>
+        <translation>C.  giro dom.a 30 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (30)</masterLabel>
+        <translation>C.  giro  dom.a 30 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 30 días (5,20)</masterLabel>
+        <translation>C.  giro dom.a 30 días (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 45 días (25)</masterLabel>
+        <translation>C.  giro dom.a 45 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro dom.a 50 días (20)</masterLabel>
+        <translation>C.  giro dom.a 50 días (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro domiciliado a 50 días</masterLabel>
+        <translation>C. giro domiciliado a 50 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro no domic a 30 días</masterLabel>
+        <translation>C.  giro no domic a 30 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro no domic a 60 días</masterLabel>
+        <translation>C.  giro no domic a 60 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. giro no domic a 90 días</masterLabel>
+        <translation>C.  giro no domic a 90 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. letr acep 60 días (10,25)</masterLabel>
+        <translation>C. letr acep 60 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. letr frn a 30 días (FM)</masterLabel>
+        <translation>C. LCR a 30 dias(FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. letra aceptada a 60 días</masterLabel>
+        <translation>C.  letra aceptada  a 60 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. letra aceptada a 90 días</masterLabel>
+        <translation>C.  letra aceptada  a 90 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. letra fancesa a 45 días dd fm (15)</masterLabel>
+        <translation>C.  letra fancesa a 45 días dd fm (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. letra francesa a 60 días</masterLabel>
+        <translation>C.  letra francesa  a 60 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagare a 45 días</masterLabel>
+        <translation>C. pagare a 45 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 15 días</masterLabel>
+        <translation>Recebimento a 15 dias por pagaré</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 30 días</masterLabel>
+        <translation>Recebimento a 30 dias por pagaré</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 30 días (10)</masterLabel>
+        <translation>Recebimento a 30 dias por pagaré (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 30 días (24)</masterLabel>
+        <translation>Recebimento a 30 dias por pagaré (24)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 30 días (5,25)</masterLabel>
+        <translation>Recebimento a 30 dias por pagaré (5,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (10 dd fm)</masterLabel>
+        <translation>Recebimento a 60 dias por transferência (10 dd fm)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (10,25)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (15)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (15,30)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (20)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (20,25)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (20,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (22)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (22)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (25)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (28)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (28)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (30)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (4)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (4)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (5)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (5)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (5,20)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (FM)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (FM,10)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (FM,10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 60 días (FM,15)</masterLabel>
+        <translation>Recebimento a 60 dias por pagaré (FM,15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 70 días (1)</masterLabel>
+        <translation>C. pagaré a 70 días (1)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 70 días (10)</masterLabel>
+        <translation>C. pagaré a 70 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 70 días (10,15)</masterLabel>
+        <translation>C. pagaré a 70 días (10,15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 70 días (10,20)</masterLabel>
+        <translation>C. pagaré a 70 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 70 días (15)</masterLabel>
+        <translation>C. pagaré a 70 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 70 días (25)</masterLabel>
+        <translation>C. pagaré a 70 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 70 días (30)</masterLabel>
+        <translation>C. pagaré a 70 días (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 70 días (5,25)</masterLabel>
+        <translation>C. pagaré a 70 días (5,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 75 días (10,20)</masterLabel>
+        <translation>C. pagaré a 75 días (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 75 días (10,25)</masterLabel>
+        <translation>C. pagaré a 75 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 75 días (15,25)</masterLabel>
+        <translation>C. pagaré a 75 días (15,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 75 días (15,30)</masterLabel>
+        <translation>C. pagaré a 75 días (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 85 días</masterLabel>
+        <translation>Recebimento a 85 dias por pagaré</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 85 días (10,25)</masterLabel>
+        <translation>Recebimento a 85 dias por pagaré (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (10)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (10,20)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (10,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (10,25)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (15)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (15,25)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (15,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (15,30)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (20)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (23)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (23)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (25)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (30)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré a 90 días (FM)</masterLabel>
+        <translation>Recebimento a 90 dias por pagaré (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. pagaré adelantado</masterLabel>
+        <translation>Recebimento antecipado por pagaré</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. recibo a 90 días (10,25)</masterLabel>
+        <translation>C.  recibo a 90 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. tranf. vista contra entrega de documentos</masterLabel>
+        <translation>Recebimento imediato por transferência</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 30 días (15 dd fm)</masterLabel>
+        <translation>C. trans a 30 días (15 dd fm)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 30 días (15)</masterLabel>
+        <translation>C. trans a 30 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 45 días dd fm (25)</masterLabel>
+        <translation>C. trans a 45 días dd fm (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 70 días (15)</masterLabel>
+        <translation>C.  trans a 70 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 70 días (25)</masterLabel>
+        <translation>C.  trans a 70 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 75 días (10,25)</masterLabel>
+        <translation>C.  trans a 75 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 75 días (15)</masterLabel>
+        <translation>C. trans a 75 días (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 75 días (15,30)</masterLabel>
+        <translation>C.  trans a 75 días (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. trans a 90 días</masterLabel>
+        <translation>C.  trans a 90 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. transferencia (fecha)</masterLabel>
+        <translation>Recebimento por transferência (fecha)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C. transferencia a 8 días</masterLabel>
+        <translation>C. transferencia a 8 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.Riba a 90 días</masterLabel>
+        <translation>C.Riba a 90 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 45 días (FM)</masterLabel>
+        <translation>C.letr frn  a 45 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 60 días (10,25)</masterLabel>
+        <translation>C.letr frn  a 60 días (10,25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 60 días (FE)</masterLabel>
+        <translation>C.letr frn  a 60 días (FE)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 60 días (FM)</masterLabel>
+        <translation>C.letr frn  a 60 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 60 días (FM,10)</masterLabel>
+        <translation>C.letr frn  a 60 días (FM,10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 60 días (FM,15)</masterLabel>
+        <translation>C.letr frn  a 60 días (FM,15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 60 días (FM,15) antes dia 27</masterLabel>
+        <translation>C.letr frn a 60 días (FM,15) antes dia 27</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 60 días (FM,5)</masterLabel>
+        <translation>C.letr frn  a 60 días (FM,5)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 90 días (10)</masterLabel>
+        <translation>C.letr frn  a 90 días (10)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C.letr frn a 90 días (FM)</masterLabel>
+        <translation>C.letr frn  a 90 días (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cash Payment</masterLabel>
+        <translation>C. en efectivo em dinheiro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cash against documents</masterLabel>
+        <translation>Remesa documentaria contra entrega documentos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cheque a 52 días</masterLabel>
+        <translation>Cheque a 52 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cheque a 60 días fin de mes 15</masterLabel>
+        <translation>Cheque a 60 días fin de mes 15</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fra.giro do60,90 (15,30)</masterLabel>
+        <translation>Cobro fra.giro do60,90 (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro frac giro dom a 30,60,85 días</masterLabel>
+        <translation>Cobro frac giro dom a 30,60,85</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro frac giro dom a 30,60,90</masterLabel>
+        <translation>Cobro frac giro dom a 30,60,90</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro frac por pagaré a 30 y 60</masterLabel>
+        <translation>Rec frac por pagaré a 30,60</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro frac por pagaré a 30,60 y 90</masterLabel>
+        <translation>Rec frac por pagaré a 30,60, 90</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro frac por pagaré a 60,90</masterLabel>
+        <translation>Cobro frac por pagaré a 60,90</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc giro do 60,90 (15)</masterLabel>
+        <translation>Cobro fracc giro do 60,90 (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc giro dom30,60 (30)</masterLabel>
+        <translation>Cobro fracc giro dom30,60 (30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc. giro dom a 30,60</masterLabel>
+        <translation>Cobro fracc. giro dom  a 30,60</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc. giro dom a 30,90</masterLabel>
+        <translation>Cobro fracc. giro dom. 30,90</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc. giro dom a 60,120</masterLabel>
+        <translation>Cobro fracc. giro dom. 60,120</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc. giro dom.60,90 (5,20)</masterLabel>
+        <translation>Cobro fracc. giro dom.60,90 (5,20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc. por giro dom60,90</masterLabel>
+        <translation>Cobro fracc. por giro dom.60,90</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc. transf a 30,60 (FM)</masterLabel>
+        <translation>Rec fracc. giro dom  a 30,60 (FM)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cobro fracc.giro dom30,60 (15)</masterLabel>
+        <translation>Cobro fracc. giro dom.30,60 (15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Condición manual</masterLabel>
+        <translation>Condição manual</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirminf a 60 días, día fijo 30</masterLabel>
+        <translation>Confirminf a 60 días, día fijo 30</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirming a  41 días (día 15)</masterLabel>
+        <translation>Confirming a 41 días (día 15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirming a 49 días (días 10 y 25)</masterLabel>
+        <translation>Confirming a 49 días (10 y 25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirming a 52 días (días 10 y 25)</masterLabel>
+        <translation>Confirming a 52 días (días 10 y 25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentary  remitance</masterLabel>
+        <translation>Remesa documentaria</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentary Credit, 30 days shipment&apos;s date</masterLabel>
+        <translation>Recebimento a 30 días por crédito documentario(FE)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentary Credit, 60 days shipment&apos;s date</masterLabel>
+        <translation>Recebimento a 60 días por crédito documentario(FE)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentary remitance</masterLabel>
+        <translation>Remesa documentaria</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentary remitance 60 days</masterLabel>
+        <translation>Remesa documentaria a 60 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentary remittance to 60 days against delivery</masterLabel>
+        <translation>Remesa documentaria a 60 días contra entrega doc.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giro 45 días (días 10 y 25)</masterLabel>
+        <translation>Giro 45 días (10 y 25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giro a 41 días (día 20)</masterLabel>
+        <translation>Giro a 41 días (día 20)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giro a 41 días (día 22)</masterLabel>
+        <translation>Giro a 41 días (día 22)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giro a 45 días (25)</masterLabel>
+        <translation><!-- Giro a 45 días (25) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giro a 49 días (días 10,15)</masterLabel>
+        <translation>Giro a 49 días (días 10,15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giro a 52 días (día 15)</masterLabel>
+        <translation>Giro a 52 días (día 15)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Giro a 56 días</masterLabel>
+        <translation><!-- Giro a 56 días --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Immediate payment without deduction</masterLabel>
+        <translation>Pagamento imediato sem deduções</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pagaré a 37 días (día 25)</masterLabel>
+        <translation>Pagaré a 37 días (25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pagaré a 45 días (día 24)</masterLabel>
+        <translation>Pagaré a 45 días (24)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pagaré a 45 días (días 15,30)</masterLabel>
+        <translation>Pagaré a 45 días (15,30)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pago inmediato sin deducción</masterLabel>
+        <translation>Pago inmediato sin deducción</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transferencia a 20 días</masterLabel>
+        <translation>Transferencia a 20 días</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transferencia a 45 días (día 25)</masterLabel>
+        <translation>Transferencia a 45 días (día 25)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transferencia a 45 días 15</masterLabel>
+        <translation>Transferencia a 45 días (día 15)</translation>
+    </picklistValues>
+</CustomFieldTranslation>

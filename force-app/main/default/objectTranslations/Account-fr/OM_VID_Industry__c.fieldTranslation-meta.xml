@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Industry --></label>
+    <name>OM_VID_Industry__c</name>
+    <picklistValues>
+        <masterLabel>B01 Wines</masterLabel>
+        <translation>B01 Vins</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B02 Waters</masterLabel>
+        <translation>B02 Eaux</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B03 Cava, spark,cidr</masterLabel>
+        <translation>B03Champagne,spuman</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B04 Dairy products</masterLabel>
+        <translation>B04 Produits laitier</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B05 Soft and non-alc</masterLabel>
+        <translation>B05 BrafraichSansalco</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B06 Spirits alcohol</masterLabel>
+        <translation>B06 Liqueurs, alcoho</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B07 Oils</masterLabel>
+        <translation>B07 Huiles</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B08 Vinegars</masterLabel>
+        <translation>B08 Vinaigres</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B09 Juicesnarrowmout</masterLabel>
+        <translation>B09 JusBoucheEtroite</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B10 Returnable beers</masterLabel>
+        <translation>B10 Bières</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B11 Various</masterLabel>
+        <translation>B11 Divers</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B12 Port</masterLabel>
+        <translation>B12 Vins d´Oporto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B13 FAB&apos;s</masterLabel>
+        <translation>B13 FAB&apos;s</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industry</masterLabel>
+        <translation>Industrie</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail</masterLabel>
+        <translation>Commerce</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T01 Olives</masterLabel>
+        <translation>T01 Olives</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T02 Juiceswidemouth</masterLabel>
+        <translation>T02 JusBoucheLarge</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T03 Dairy products</masterLabel>
+        <translation>T03 Produit laitier</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T04 Baby Food</masterLabel>
+        <translation>T04 Aliments enfants</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T05 Preserves</masterLabel>
+        <translation>T05 Conserves</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T06 Sundries</masterLabel>
+        <translation>T06 Divers</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -42,7 +41,7 @@
                 <field>UnitPrice</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Volume_000_s__c</field>
             </layoutItems>
             <layoutItems>
@@ -122,12 +121,12 @@
     <multilineLayoutFields>Pallet_Volume__c</multilineLayoutFields>
     <multilineLayoutFields>UnitPrice</multilineLayoutFields>
     <multilineLayoutFields>Volume_000_s__c</multilineLayoutFields>
-    <multilineLayoutFields>ProductCode</multilineLayoutFields>
-    <multilineLayoutFields>Subtotal</multilineLayoutFields>
-    <multilineLayoutFields>ListPrice</multilineLayoutFields>
-    <multilineLayoutFields>TotalPrice</multilineLayoutFields>
-    <multilineLayoutFields>Description</multilineLayoutFields>
     <multilineLayoutFields>Price_Includes_Delivery__c</multilineLayoutFields>
+    <multilineLayoutFields>Subtotal</multilineLayoutFields>
+    <multilineLayoutFields>ProductCode</multilineLayoutFields>
+    <multilineLayoutFields>TotalPrice</multilineLayoutFields>
+    <multilineLayoutFields>ListPrice</multilineLayoutFields>
+    <multilineLayoutFields>Description</multilineLayoutFields>
     <multilineLayoutFields>OpportunityId</multilineLayoutFields>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>

@@ -4,11 +4,11 @@
     <columns>ACCOUNT.NAME</columns>
     <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
     <columns>PRODUCT2.NAME</columns>
+    <columns>OM_VID_Material__c</columns>
+    <columns>Price_1000__c</columns>
+    <columns>ASSET.CURRENCY_ISO_CODE</columns>
     <columns>ASSET.INSTALL_DATE</columns>
     <columns>ASSET.USAGE_END_DATE</columns>
-    <columns>ASSET.CURRENCY_ISO_CODE</columns>
-    <columns>Material__c</columns>
-    <columns>Price_1000__c</columns>
     <filterScope>Everything</filterScope>
     <label>All Account Products</label>
 </ListView>

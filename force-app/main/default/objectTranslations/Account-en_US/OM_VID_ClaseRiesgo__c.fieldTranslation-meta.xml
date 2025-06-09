@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Clase de riesgo --></label>
+    <name>OM_VID_ClaseRiesgo__c</name>
+    <picklistValues>
+        <masterLabel>High Risk Sales Orders</masterLabel>
+        <translation><!-- High Risk Sales Orders --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New customer</masterLabel>
+        <translation><!-- New customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Orders new customer 2 years</masterLabel>
+        <translation><!-- Orders new customer 2 years --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard customer</masterLabel>
+        <translation><!-- Standard customer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

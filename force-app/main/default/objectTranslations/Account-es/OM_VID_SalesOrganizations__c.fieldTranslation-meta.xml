@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sales Organizations --></label>
+    <name>OM_VID_SalesOrganizations__c</name>
+    <picklistValues>
+        <masterLabel>VD10</masterLabel>
+        <translation><!-- VD10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VD50</masterLabel>
+        <translation><!-- VD50 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

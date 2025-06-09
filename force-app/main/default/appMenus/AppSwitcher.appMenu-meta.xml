@@ -117,10 +117,6 @@
         <type>ConnectedApp</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Dispatch Portal</name>
-        <type>Network</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>standard__LightningInstrumentation</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -138,10 +134,6 @@
     </appMenuItems>
     <appMenuItems>
         <name>standard__AllTabSet</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__AppLauncher</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
@@ -229,6 +221,14 @@
         <type>Network</type>
     </appMenuItems>
     <appMenuItems>
+        <name>Dispatch Portal</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Legal Community</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>OIQ_Integration</name>
         <type>ConnectedApp</type>
     </appMenuItems>
@@ -259,5 +259,53 @@
     <appMenuItems>
         <name>standard__MSJApp</name>
         <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__DataGovernanceConsole</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>SAP_CPI_Integration</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Batch_for_Salesforce</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Composer_AP_for_Salesforce</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Composer_EU_for_Salesforce</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Composer_NA_for_Salesforce</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Conga_Platform_Batch</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Conga_Platform_Composer_AP</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Conga_Platform_Composer_EU</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Conga_Platform_Composer_Lightning</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Conga_Platform_Composer_NA</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>GitHub_CICD</name>
+        <type>ConnectedApp</type>
     </appMenuItems>
 </AppMenu>

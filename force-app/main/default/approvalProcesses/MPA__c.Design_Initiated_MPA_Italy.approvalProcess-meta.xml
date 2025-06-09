@@ -23,7 +23,7 @@
         <allowDelegate>true</allowDelegate>
         <assignedApprover>
             <approver>
-                <name>g.maselli@vidrala.com</name>
+                <name>g.maselli@vidrala.com@cloudshiftgroup.com</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>

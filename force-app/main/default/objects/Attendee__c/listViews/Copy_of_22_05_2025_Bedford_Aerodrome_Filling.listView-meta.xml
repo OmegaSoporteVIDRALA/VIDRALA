@@ -11,8 +11,6 @@
     <columns>Tier__c</columns>
     <columns>Status__c</columns>
     <columns>Is_a_Hotel_Required__c</columns>
-    <columns>Night_before_event__c</columns>
-    <columns>Night_of_event__c</columns>
     <columns>Dietary_Requirements__c</columns>
     <columns>Dietary_Requirements_Comments__c</columns>
     <columns>General_Member_Comments__c</columns>
@@ -20,12 +18,12 @@
     <filters>
         <field>Event__c</field>
         <operation>equals</operation>
-        <value>FA Cup Semi Final - Crystal Palace v Aston Villa @ Wembley</value>
+        <value>FA Cup Final - Crystal Palace v Man City @ Wembley</value>
     </filters>
     <filters>
         <field>Status__c</field>
         <operation>equals</operation>
         <value>Nominated,Invite Sent,Accepted</value>
     </filters>
-    <label>26.04.25 - Crystal Palace v Aston Villa</label>
+    <label>17.05.25 - Crystal Palace v Aston Villa</label>
 </ListView>

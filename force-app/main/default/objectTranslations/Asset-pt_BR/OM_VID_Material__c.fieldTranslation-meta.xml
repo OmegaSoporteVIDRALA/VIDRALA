@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SAP Material Code --></label>
+    <name>OM_VID_Material__c</name>
+    <relationshipLabel><!-- Account Products --></relationshipLabel>
+</CustomFieldTranslation>

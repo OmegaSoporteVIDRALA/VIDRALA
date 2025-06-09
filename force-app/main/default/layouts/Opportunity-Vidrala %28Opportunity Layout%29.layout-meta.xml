@@ -44,10 +44,6 @@
                 <field>SyncedQuoteId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Incoterm__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
                 <field>OM_VID_Idioma__c</field>
             </layoutItems>

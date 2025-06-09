@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Distributor__c</fullName>
-    <deleteConstraint>SetNull</deleteConstraint>
+    <deleteConstraint>Restrict</deleteConstraint>
     <description>Distributor look-up</description>
     <label>Distributor</label>
     <lookupFilter>
         <active>true</active>
         <filterItems>
-            <field>Account.RecordTypeId</field>
+            <field>Account.OM_VID_IsDistributorAuto__c</field>
             <operation>equals</operation>
-            <value>Distributor</value>
+            <value>True</value>
         </filterItems>
         <isOptional>false</isOptional>
     </lookupFilter>

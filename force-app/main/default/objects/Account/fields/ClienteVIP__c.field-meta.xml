@@ -17,12 +17,12 @@
                 <label>ESPECIAL</label>
             </value>
             <value>
-                <fullName>PREFERENTE</fullName>
+                <fullName>98</fullName>
                 <default>false</default>
                 <label>PREFERENTE</label>
             </value>
             <value>
-                <fullName>VIP</fullName>
+                <fullName>99</fullName>
                 <default>false</default>
                 <label>VIP</label>
             </value>

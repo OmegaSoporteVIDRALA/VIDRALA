@@ -1,30 +1,37 @@
-/**
-* @description       :
-* @author            : mmadridp@omegacrmconsulting.com
-* @group             :
-* @last modified on  : 19-03-2024
-* @last modified by  : mmadridp@omegacrmconsulting.com
-**/
 @isTest
-public with sharing class OM_VID_TestUtils {
-    public static void createAccountsWithContacts(Integer accNumber){
-        List<Account> accListToInsert = new List<Account>();
-        for(Integer i = 0; i < accNumber; i++){
-            Account objAccount = new Account(Name = 'mockAcckount' + i.toString(), BillingCity = 'Test City', BillingState = 'Test State', 
-            BillingStreet = 'Test Street', BillingPostalCode = '12345', Market__c = 'FR',
-            BillingCountry = 'Test Country', Phone = '90909009'+i.toString(), SAP_Account_Number__c = '123'+i.toString());
-
-            accListToInsert.add(objAccount);
-        }
+public class OM_VID_TestUtils {
+    
+    //Test Methods to create Users with profile
+    public static User createVidralaUser(){
+        Profile p = [SELECT Id FROM Profile WHERE Name='Fifty Sales Office Profile'];
+        User u = new User(Alias = 'vidUser', Email='vidralauser@testorg.com', 
+            EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US', 
+            LocaleSidKey='en_US', ProfileId = p.Id, 
+            TimeZoneSidKey='America/Los_Angeles', UserName='vidralauser@testorg.com');
         
-        Database.DMLOptions dml = new Database.DMLOptions();
-        dml.DuplicateRuleHeader.AllowSave = true; 
-        List<Database.SaveResult> sr = Database.insert(accListToInsert, dml); 
-
-        //insert accListToInsert;
-        createContacts(accListToInsert);
+        return u;
+        
     }
-
+    
+    public static void createAccountsWithContacts(Integer accNumber){
+        	Id customerRecordType = OM_Utils.RecordTypes.getRecordTypeByDevName('Account', 'Customers');
+            List<Account> accListToInsert = new List<Account>();
+            for(Integer i = 0; i < accNumber; i++){
+                Account objAccount = new Account(Name = 'mockAcckount' + i.toString(), BillingCity = 'Test City', BillingState = 'Test State', 
+                BillingStreet = 'Test Street', BillingPostalCode = '12345', Market__c = 'ES', RecordTypeId = customerRecordType, OM_VID_SalesOrganizations__c = 'VD10',
+                BillingCountry = 'Test Country', Phone = '90909009'+i.toString(), SAP_Account_Number__c = '1234'+i.toString());
+    
+                accListToInsert.add(objAccount);
+            }
+            
+            Database.DMLOptions dml = new Database.DMLOptions();
+            dml.DuplicateRuleHeader.AllowSave = true; 
+            List<Database.SaveResult> sr = Database.insert(accListToInsert, dml); 
+    
+            //insert accListToInsert;
+            createContacts(accListToInsert);
+    }
+    
     public static void createContacts(List<Account> accList){
         List<Contact> conListToInsert = new List<Contact>();
         for(Account acc : accList){

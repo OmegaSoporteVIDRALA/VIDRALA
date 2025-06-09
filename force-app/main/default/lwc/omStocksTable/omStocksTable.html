@@ -1,44 +1,167 @@
 <template>
-    <div class="table-container">
-        <table class="custom-table">
-            <!-- Encabezados principales -->
-            <thead>
-                <tr>
-                    <th rowspan="2">SC: Color</th>
-                    <th rowspan="2">Material</th>
-                    <th rowspan="2">Descripción</th>
-                    <th rowspan="2">Mes.Año</th>
-                    <th colspan="3">Ctd. Stock Total BOT</th>
-                    <th colspan="3">Ctd. Stock Total PAL</th>
-                </tr>
-                <!-- Sub-encabezados -->
-                <tr>
-                    <th>Lote</th>
-                    <th>Exis. Bloqueadas</th>
-                    <th>Exis. Libres</th>
-                    <th>Exis. NoConf. Planta</th>
-                    <th>---</th>
-                    <th>Exis. Libres</th>
-                </tr>
-            </thead>
+    <template if:true={isInitialScreen}>
 
-            <!-- Filas de datos -->
-            <tbody>
-                <template for:each={tableData} for:item="row">
-                    <tr key={row.id}>
-                        <td>{row.color}</td>
-                        <td>{row.material}</td>
-                        <td>{row.descripcion}</td>
-                        <td>{row.mesAno}</td>
-                        <td>{row.lote}</td>
-                        <td>{row.exisBloqueadasBot}</td>
-                        <td>{row.exisLibresBot}</td>
-                        <td>{row.exisNoConfPlanta}</td>
-                        <td>{row.dash}</td>
-                        <td>{row.exisLibresPal}</td>
-                    </tr>
-                </template>
-            </tbody>
-        </table>
+        <div class="header-container">
+            <h1>Stocks de modelo</h1>
+        </div>
+        
+        <div class="info-container">
+            <h2>Elija un mes y un año para realizar la búsqueda de Stock:</h2>
+        </div>
+        <div class="selection-grid">
+
+            <div class="month-container">
+                <lightning-combobox
+                    name="month"
+                    label="Mes"
+                    value={selectedMonth}
+                    options={monthOptions}
+                    onchange={handleMonthChange}
+                    placeholder="Selecciona un mes"
+                    required
+                    oninvalid={handleInvalidMonth}>
+                </lightning-combobox>
+            </div>
+            
+            <div class="year-container">
+                <lightning-combobox
+                    name="year"
+                    label="Año"
+                    value={selectedYear}
+                    options={yearOptions}
+                    onchange={handleYearChange}
+                    placeholder="Selecciona un año"
+                    required
+                    oninvalid={handleInvalidYear}>
+                </lightning-combobox>
+            </div>
+
+        </div>
+        
+        <div class="slds-m-around_medium">
+            <lightning-button
+                label="Buscar"
+                variant="brand"
+                class="slds-m-top_medium"
+                onclick={handleSearch}>
+            </lightning-button>
+        </div>
+        
+</template>
+
+<template if:false={isInitialScreen}>
+    <template if:true={isLoadScreen}>
+        <div class="loading">
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </div>
+
+    </template>
+</template>
+
+
+
+
+    <template if:false={isSearchScreen}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+
+
+                    <header class="slds-modal__header">
+                        <lightning-button-icon
+                            icon-name="utility:close"
+                            variant="bare"
+                            class="slds-modal__close"
+                            onclick={handleBackToSearch}
+                            alternative-text="Cerrar">
+                        </lightning-button-icon>
+                        <h2 class="slds-modal__title slds-hyphenate">Stock de modelo</h2>
+                    </header>
+        
+                <div class="slds-modal__content slds-p-around_medium">
+                <div class="table-container">
+                    <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th colspan="4"></th>
+                            <th colspan="1">Mes.Año</th> 
+                            <th colspan={ratiosNumber}>{selectedMonthLabel} / {selectedYear}</th>
+                        </tr>
+                        <tr>
+                            <th class="header" data-column="centro" rowspan="2" onclick={handleSort}>Centro</th>
+                            <th class="header" data-column="lote" rowspan="2" onclick={handleSort}>Lote</th>
+                            <th class="header" data-column="material" rowspan="2" onclick={handleSort}>Material</th>
+                            <th class="header" data-column="modelo" rowspan="2" onclick={handleSort}>Modelo</th>
+                            <th class="header" data-column="color" rowspan="2" onclick={handleSort}>SC: Color</th>
+                            <th colspan={numStockBOT}>Ctd. Stock Total BOT</th>
+                            <th colspan={numStockPAL}>Ctd. Stock Total PAL</th>
+                        </tr>
+                        
+                        <tr>
+                            <template for:each={stockSubHeaders} for:item="value">
+                                <th key={value.id}>{value}</th>
+                            </template>
+
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5" style="text-align: right;"><strong>•Totales 🡆</strong></td>
+                            <template for:each={totalValues} for:item="value">
+                                <td key={value}>{value}</td>
+                            </template>
+                        </tr>
+
+                        <template for:each={tableData} for:item="row">
+                            <tr key={row.id}>
+                                <td>{row.centro}</td>
+                                <td>{row.lote}</td>
+                                <td>{row.material}</td>
+                                <td>{row.modelo}</td>
+                                <td>{row.color}</td>
+                                <template if:true={row.value0}>
+                                    <td>{row.value0}</td>
+                                </template>
+                                <template if:true={row.value1}>
+                                    <td>{row.value1}</td>
+                                </template>
+                                <template if:true={row.value2}>
+                                    <td>{row.value2}</td>
+                                </template>
+                                <template if:true={row.value3}>
+                                    <td>{row.value3}</td>
+                                </template>
+                                <template if:true={row.value4}>
+                                    <td>{row.value4}</td>
+                                </template>
+                                <template if:true={row.value5}>
+                                    <td>{row.value5}</td>
+                                </template>
+                                <template if:true={row.value6}>
+                                    <td>{row.value6}</td>
+                                </template>
+                                <template if:true={row.value7}>
+                                    <td>{row.value7}</td>
+                                </template>
+                                
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        
+            
+             <footer class="slds-modal__footer">
+                <lightning-button
+                    label="Volver a Selección de valores"
+                    variant="neutral"
+                    onclick={handleBackToSearch}>
+                </lightning-button>
+            </footer>
     </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+
 </template>

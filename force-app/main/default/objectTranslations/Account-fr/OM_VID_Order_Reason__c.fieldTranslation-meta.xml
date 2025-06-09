@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Order Reason --></label>
+    <name>OM_VID_Order_Reason__c</name>
+    <picklistValues>
+        <masterLabel>105 - Devolución por error de carga</masterLabel>
+        <translation><!-- 105 - Devolución por error de carga --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>106 - Devolución por mercancía defecuosa</masterLabel>
+        <translation><!-- 106 - Devolución por mercancía defecuosa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>107 - Devolución por defectos de embalaje</masterLabel>
+        <translation><!-- 107 - Devolución por defectos de embalaje --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>107 - Devolución por error en la toma de pedido</masterLabel>
+        <translation><!-- 107 - Devolución por error en la toma de pedido --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>109 - Devolución p error en pedido del cliente</masterLabel>
+        <translation><!-- 109 - Devolución p error en pedido del cliente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>110 - Devolución por retraso en la entrega</masterLabel>
+        <translation><!-- 110 - Devolución por retraso en la entrega --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>111- Devolución por pedido anulado p cliente</masterLabel>
+        <translation><!-- 111- Devolución por pedido anulado p cliente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>112- Devol por incumplimiento restricciones cte</masterLabel>
+        <translation><!-- 112- Devol por incumplimiento restricciones cte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>114 - Devolución por recompra al cliente</masterLabel>
+        <translation><!-- 114 - Devolución por recompra al cliente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>115 - Devolución por botellas rotas</masterLabel>
+        <translation><!-- 115 - Devolución por botellas rotas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>116 - Devolución por daños en el transporte</masterLabel>
+        <translation><!-- 116 - Devolución por daños en el transporte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>117 - Devolución por diferencia de cantidad</masterLabel>
+        <translation><!-- 117 - Devolución por diferencia de cantidad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>118 - Devolución por muestra gratis</masterLabel>
+        <translation><!-- 118 - Devolución por muestra gratis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>119 - Devolución por diferencia de precio</masterLabel>
+        <translation><!-- 119 - Devolución por diferencia de precio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>121 - Devolución por carga palets mal estado</masterLabel>
+        <translation><!-- 121 - Devolución por carga palets mal estado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>122 - Devolución por gesto comercial</masterLabel>
+        <translation><!-- 122 - Devolución por gesto comercial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>123 - Devolución por calidad preventiva</masterLabel>
+        <translation><!-- 123 - Devolución por calidad preventiva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>124 - Devolução em rota /Anulação cliente</masterLabel>
+        <translation><!-- 124 - Devolução em rota /Anulação cliente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>125 - Devolução em rota /paletes danificadas</masterLabel>
+        <translation><!-- 125 - Devolução em rota /paletes danificadas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>899 - Abono por sobretaxa energética</masterLabel>
+        <translation><!-- 899 - Abono por sobretaxa energética --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>900 - Abono calidad afecta precio</masterLabel>
+        <translation><!-- 900 - Abono calidad afecta precio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>901 - Abono por anulación CONAI</masterLabel>
+        <translation><!-- 901 - Abono por anulación CONAI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>902 - Abono p indemnización p problems calidad</masterLabel>
+        <translation><!-- 902 - Abono p indemnización p problems calidad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>903 - Abono por defecto de embalaje</masterLabel>
+        <translation><!-- 903 - Abono por defecto de embalaje --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>904 - Abono por error de carga</masterLabel>
+        <translation><!-- 904 - Abono por error de carga --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>905 - Abono por error en la toma de pedido</masterLabel>
+        <translation><!-- 905 - Abono por error en la toma de pedido --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>906 - Abono por diferencia de precio</masterLabel>
+        <translation><!-- 906 - Abono por diferencia de precio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>907 - Abono por liquidación de rappel unitario</masterLabel>
+        <translation><!-- 907 - Abono por liquidación de rappel unitario --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>908 - Abono p liquidación de rappel p consumo</masterLabel>
+        <translation><!-- 908 - Abono p liquidación de rappel p consumo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>909 - Abono p devolución de palets</masterLabel>
+        <translation><!-- 909 - Abono p devolución de palets --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>910 - Abono por devoluc de separadores plásticos</masterLabel>
+        <translation><!-- 910 - Abono por devoluc de separadores plásticos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>912 - Abono por retraso en la entrega</masterLabel>
+        <translation><!-- 912 - Abono por retraso en la entrega --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>913 - Abono por daños en el transporte</masterLabel>
+        <translation><!-- 913 - Abono por daños en el transporte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>914 - Abono por transporte</masterLabel>
+        <translation><!-- 914 - Abono por transporte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>915 - Cargo por gastos finacieros</masterLabel>
+        <translation><!-- 915 - Cargo por gastos finacieros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>917 - Cargo por diferencia de precio</masterLabel>
+        <translation><!-- 917 - Cargo por diferencia de precio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>918 - Cargo por suspensión de pagos</masterLabel>
+        <translation><!-- 918 - Cargo por suspensión de pagos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>919 - Cargo de coste por transporte</masterLabel>
+        <translation><!-- 919 - Cargo de coste por transporte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>920 - Cargo por mercancía denegada</masterLabel>
+        <translation><!-- 920 - Cargo por mercancía denegada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>921 - Cargo CONAI</masterLabel>
+        <translation><!-- 921 - Cargo CONAI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>922 - Cargo por daños</masterLabel>
+        <translation><!-- 922 - Cargo por daños --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>924 - Abono por devolución de palets</masterLabel>
+        <translation><!-- 924 - Abono por devolución de palets --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>925 - Cargo venta grupage</masterLabel>
+        <translation><!-- 925 - Cargo venta grupage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>926 - Débito de separadores plásticos</masterLabel>
+        <translation><!-- 926 - Débito de separadores plásticos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>927 - Débito devolução mercadoria mau estado</masterLabel>
+        <translation><!-- 927 - Débito devolução mercadoria mau estado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>928 - Cargo factura errónea: mueve euros y ton</masterLabel>
+        <translation><!-- 928 - Cargo factura errónea: mueve euros y ton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>929 - Cargo facturación moldes</masterLabel>
+        <translation><!-- 929 - Cargo facturación moldes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>930 - Cargo por sobretaxa energética</masterLabel>
+        <translation><!-- 930 - Cargo por sobretaxa energética --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>999 - Pedido Web</masterLabel>
+        <translation><!-- 999 - Pedido Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sin Asignar</masterLabel>
+        <translation><!-- Sin Asignar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Todos</masterLabel>
+        <translation><!-- Todos --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
