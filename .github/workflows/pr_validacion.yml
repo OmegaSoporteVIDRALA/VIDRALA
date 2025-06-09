@@ -16,6 +16,16 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
+      - name: ⛔ Verificar si rama base está autorizada
+        run: |
+          ALLOWED_BRANCHES=("MAIN" "UAT" "INTEGRA")
+          BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
+          echo "Rama base: $BASE_BRANCH"
+          if [[ ! " ${ALLOWED_BRANCHES[@]} " =~ " ${BASE_BRANCH} " ]]; then
+            echo "🚷 La rama '$BASE_BRANCH' no está autorizada para validación."
+            exit 1
+          fi
+      
       - name: 🚫 Bloquear si hay PR abierto validado hacia la misma rama
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
