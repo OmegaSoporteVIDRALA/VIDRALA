@@ -18,7 +18,7 @@ jobs:
 
       - name: ⛔ Verificar si rama base está autorizada
         run: |
-          ALLOWED_BRANCHES=("MAIN" "UAT" "INTEGRA")
+          ALLOWED_BRANCHES=("main" "UAT" "Integra")
           BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
           echo "Rama base: $BASE_BRANCH"
           if [[ ! " ${ALLOWED_BRANCHES[@]} " =~ " ${BASE_BRANCH} " ]]; then
