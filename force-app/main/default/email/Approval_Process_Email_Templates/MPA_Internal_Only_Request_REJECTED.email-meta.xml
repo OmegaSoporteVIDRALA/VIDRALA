@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email notification to MPA Internal Only Submitter that their request has been rejected</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MPA Internal Only Request Rejected</name>
+    <style>none</style>
+    <subject>Your Internal Only MPA Request has been rejected</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

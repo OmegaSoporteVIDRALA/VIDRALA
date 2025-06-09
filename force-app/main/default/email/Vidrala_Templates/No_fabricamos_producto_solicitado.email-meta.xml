@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Utilizamos esta plantilla para responder a leads cuya solicitud no se ajusta al tipo de envase que fabrica Vidrala</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ES - Lead - No fabricamos producto solicitado</name>
+    <style>none</style>
+    <subject>SU SOLICITUD DE CONTACTO</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,8 @@
+A Consumer Complaint has been raised and requires your comments, please complete Quality Manager Comments field on the following record:
+
+Consumer Complaint Record: {!Consumer_Complaint__c.Link}
+
+Encirc Reference No: {!Consumer_Complaint__c.Encirc_Reference_No__c}
+Plant: {!Consumer_Complaint__c.Plant__c}
+Customer: {!Consumer_Complaint__c.Customer__c}
+Container ref: {!Consumer_Complaint__c.Container_Ref__c}

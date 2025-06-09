@@ -1,0 +1,6 @@
+Dear {!Contact.FirstName},
+
+We're sorry that you won't be able to join us for {!Campaign.Name} on {!Campaign.StartDate}. We do hope you can join us for another event soon.
+
+Thanks,
+Fiacre

@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p style="line-height:1.38; background-color:#ffffff"><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#222222"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">A CTR/CSR report has been raised/edited:</span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38; background-color: rgb(255, 255, 255); margin-left: 40px;"><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#222222"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">CTR/CSR name: {{{CTR_CSR__c.Name}}}</span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38; background-color: rgb(255, 255, 255); margin-left: 40px;"><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#222222"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Report Type: {{{CTR_CSR__c.Report_Type__c}}}</span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38; background-color: rgb(255, 255, 255); margin-left: 40px;"><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#222222"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Customer Name: {{{CTR_CSR__c.Customer_Name__c}}}</span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38; background-color: rgb(255, 255, 255); margin-left: 40px;"><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#222222"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Date of Audit: {{{CTR_CSR__c.Date_of_Audit__c}}}</span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38; background-color: rgb(255, 255, 255); margin-left: 40px;"><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#222222"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Link:</span></span></span></span></span></span><span style="font-size:12pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#222222"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">&nbsp;https://encirc360--ciber.sandbox.lightning.force.com/lightning/r/CTR_CSR__c/{{{CTR_CSR__c.Id}}}/view</span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38; background-color: rgb(255, 255, 255); margin-left: 40px;">&nbsp;</p>
+<br />
+&nbsp;
+</body></html>

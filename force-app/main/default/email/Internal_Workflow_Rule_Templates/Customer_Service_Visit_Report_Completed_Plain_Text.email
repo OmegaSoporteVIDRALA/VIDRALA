@@ -1,0 +1,8 @@
+A Data Collection report has been completed for the following Customer: "{!Customer_Services_Visit_Report__c.Customer_Name__c}".
+
+Purpose of Visit: {!Customer_Services_Visit_Report__c.Purpose_of_Visit__c}
+
+Mould Reference: {!Customer_Services_Visit_Report__c.Mould_Reference__c}
+
+
+Here is a link to the full report: {!Customer_Services_Visit_Report__c.Link}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent as soon as a complaint type has been selected as Yes</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>QM asked to complete QM Comments</name>
+    <style>none</style>
+    <subject>Quality Managers Comments for {!Consumer_Complaint__c.Name} required</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

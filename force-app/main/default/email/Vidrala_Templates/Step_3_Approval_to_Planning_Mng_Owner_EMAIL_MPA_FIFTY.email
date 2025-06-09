@@ -1,0 +1,13 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">The MPA&nbsp;{!MPA_Fifty__c.Name} submitted was approved by the Area Manager.</span></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><ul><li><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;">PRODUCT - {!MPA_Fifty__c.Product__c}
+<br></span></li><li><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;">MOULD QUANTITY - {!MPA_Fifty__c.Mould_Quantity__c}
+<br></span></li><li><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;">VOLUME - {!MPA_Fifty__c.Volume__c}
+<br></span></li><li><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;">PLANT - {!MPA_Fifty__c.Plant__c}
+<br></span></li><li><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;">ACCOUNT - {!MPA_Fifty__c.Account__c}
+<br></span></li><li><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;">COMMENTS - {!MPA_Fifty__c.Comments__c}
+<br></span></li><li><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;">APPROVAL REQUEST COMMENTS - {!ApprovalRequest.Comments}
+<br></span></li><li><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;"><a href="{!MPA_Fifty__c.Link}">{!MPA_Fifty__c.Link}</a></span></li></ul><span style="background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13px; white-space: pre-wrap;"></span><span style="font-family: Arial; font-size: 13px; white-space: pre-wrap; background-color: rgb(255, 255, 255);"></span></div>]]></td>
+</tr>
+</table>

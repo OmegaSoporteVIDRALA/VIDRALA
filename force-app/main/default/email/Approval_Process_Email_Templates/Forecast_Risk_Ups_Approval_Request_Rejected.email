@@ -1,0 +1,10 @@
+Please note that your approval request for a Forecast Risk/Upside record has been rejected.
+
+Customer: {!Forecast_Risk_Upside__c.Customer__c}
+
+Comments:
+{!Forecast_Risk_Upside__c.Comments__c}
+
+You can see full details by clicking the link below. You may edit the record and, if appropriate, resubmit it.
+
+{!Forecast_Risk_Upside__c.Link}

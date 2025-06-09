@@ -1,0 +1,7 @@
+The deadline has passed for "Glass Daily Morning Meeting" ({!Morning_Meeting__c.Name}), Please review and update. 
+
+Account : {!Morning_Meeting__c.Account__c}
+Issue: {!Morning_Meeting__c.Issue__c}
+Action: {!Morning_Meeting__c.Actions__c}
+
+Link to the Record: {!Morning_Meeting__c.Link}

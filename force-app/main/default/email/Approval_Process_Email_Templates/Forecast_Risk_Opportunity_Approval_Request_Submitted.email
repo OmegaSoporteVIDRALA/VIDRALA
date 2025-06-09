@@ -1,0 +1,10 @@
+The following monthly Forecast Risk/Upside record requires your Approval or Rejection. You may complete this action from your Salesforce Home Page. For additional record details please click on the link below:
+
+Customer: {!Forecast_Risk_Upside__c.Customer__c} 
+Risk:{!Forecast_Risk_Upside__c.Pending_Risks__c}
+Upside:{!Forecast_Risk_Upside__c.Pending_Upsides__c}
+
+Comments:
+{!Forecast_Risk_Upside__c.Comments__c} 
+
+Forecast Risk/Upside: {!Forecast_Risk_Upside__c.Link}

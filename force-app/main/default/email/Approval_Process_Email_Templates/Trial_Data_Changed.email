@@ -1,0 +1,7 @@
+{!Trial_Data__c.Name} has been changed by {!Trial_Data__c.LastModifiedBy}
+
+Mould Number: {!Trial_Data__c.Mould_Number__c}
+
+Comments:  {!Trial_Data__c.Comment__c}
+
+{!Trial_Data__c.Link}

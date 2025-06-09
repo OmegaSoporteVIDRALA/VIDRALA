@@ -1,0 +1,7 @@
+Please note that the following Rebate will expire in 90 days. This requires your attention.
+
+Link to Rebate: {!Rebate__c.Link}
+Rebate Name: {!Rebate__c.Name}
+Expiry Date: {!Rebate__c.Rebate_Expiry_Date__c}
+Created By: {!Rebate__c.CreatedBy}
+Customer: {!Rebate__c.Account__c}

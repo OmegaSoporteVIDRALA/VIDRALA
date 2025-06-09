@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Vidrala_Logo</letterhead>
+    <name>ES - Email de Oferta</name>
+    <style>freeForm</style>
+    <subject>GRUPO VIDRALA - OFERTA DE PRODUCTOS SOLICITADOS</subject>
+    <textOnly>Estimado cliente,
+
+
+Respondiendo a su solicitud, adjunto incluimos la oferta y planos de los productos solicitados.
+
+No dude en contactarnos para cualquier aclaración adicional,
+
+Atentamente,
+
+
+El Equipo Comercial</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,83 @@
+<messaging:emailTemplate recipientType="User"
+    relatedToType="Customer_Service_Data_Collection__c"
+    subject="Customer Service Data Report">
+
+    <messaging:htmlEmailBody >
+    <style>
+            body {
+                font-family: 'Arial Unicode MS';
+            }
+            #masthead{
+                width: 100%
+                display:inline-block;
+            }
+            #logo{
+                float:right;
+            }
+            #details{
+                width: 100%
+                display: inline-block;
+                clear: both;
+            }
+            p img{
+                height: 300px;
+            }
+            div img{
+                float:center;
+            }
+             .sfdc_richtext img {
+                border: 0;
+                width: 650px;
+            }
+        </style>
+        <html>
+            <body>      
+                <div id="masthead">   
+                <img style="float:right" width="150" src="https://encirc360--ciber--c.documentforce.com/servlet/servlet.ImageServer?id=0153H000000DijP&oid=00D3H0000008lKh&lastMod=1605530784000" alt="Encirc"/>
+                </div>
+                <h1>Data Report</h1>
+                <br/>
+                <p>1. Customer: {!relatedTo.Customer__r.Name}</p>
+                <p>2. Filling line: {!relatedTo.Filling_line__c}</p>
+                <p>3. Filling site: {!relatedTo.Filling_site__c}</p>
+                <p>4. Reception date: {!relatedTo.Reception_date__c}</p>
+                <p>5. Customer NCR Code: {!relatedTo.Customer_NCR_Code__c}</p>
+                <p style="padding-top: 30px;">6. Model Details</p>
+                    <p style="padding-left: 40px;">6.1 Model and Material Number: {!relatedTo.Model_Material_Id__c}</p>
+                    <p style="padding-left: 40px;">6.2 Container Name: {!relatedTo.Container_Name__c}</p>
+                    <p style="padding-left: 40px;">6.3 Works order number: {!relatedTo.Works_order_number__c}</p>
+                    <p style="padding-left: 40px;">6.4 Batch/Lot number (Delivery note or order): {!relatedTo.Batch_number__c}</p>
+                    <p style="padding-left: 40px;">6.5 DOM: {!relatedTo.DOM__c}</p>
+                <p style="padding-top: 30px;">7. Scope of incident: {!relatedTo.Scope_of_incident__c}</p>
+                <p style="padding-left: 40px;">7.1 Other: {!relatedTo.Other__c}</p>
+                <p>8. Incident description</p>
+                    <p style="padding-left: 40px;">8.1 Incident Description: {!relatedTo.Incident_Description__c}</p>
+                    <p style="padding-left: 40px;">8.1 Impact for customer: {!relatedTo.Impact_for_customer__c}</p>
+                    <p style="padding-left: 40px;">8.2 Detection point: {!relatedTo.Detection_point__c}</p>
+                    <p style="padding-left: 40px;">8.3 Affected cavites: {!relatedTo.Affected_cavities__c}</p>
+                    <p style="padding-left: 40px;">8.4 Defective quantity / Breakage rate: {!relatedTo.Percentage__c}</p>
+                    <p style="padding-left: 40px;">8.5 Finished products affected: {!relatedTo.Finished_products_affected__c}</p>
+                <p style="padding-top: 30px;" class="testClass">9. CTS Hypothesis: <apex:outputText value="{!relatedTo.CTS_Hypothesis__c}" escape="false"/></p>
+                <p>10. Incident classification for Customer: {!relatedTo.Incident_classification_for_Customer__c}</p>
+                <p>
+                    11. Return needed: {!relatedTo.Return_needed__c}
+                    <span style="float:right; padding-left: 40px;">Affected QTY: {!relatedTo.Affected_QTY__c}</span>
+                </p>
+                <p>
+                    12. Charges of future risk: {!relatedTo.Charges_of_future_risk__c}
+                    <span style="float:right; padding-left: 40px;">Affected QTY (£ / €): {!relatedTo.Affected_QTY_pounds__c}</span>
+                </p>                    
+                <p style="padding-bottom: 15px;">13. Global Categorization: {!relatedTo.Global_Categorization__c} (-see table below)</p> 
+                
+                <p>14. Supporting Information: {!relatedTo.Sampling_Pictures__c}</p>
+                    
+                        <p style="padding-left: 40px;"> 14.1 Supporting Information: 
+                             <apex:outputField style="height: 50px" value="{!relatedTo.Sampling_Image__c}"/>                  
+                        </p>          
+                <div align="center">
+                    <apex:image value="https://encirc360--ciber--c.documentforce.com/servlet/servlet.ImageServer?id=0153H000000DijU&oid=00D3H0000008lKh&lastMod=1605530963000"  width="450" height="190"/>
+                </div>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

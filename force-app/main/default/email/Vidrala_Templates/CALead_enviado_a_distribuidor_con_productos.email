@@ -1,0 +1,18 @@
+Hola,
+
+En primer lloc agraïr-li haver contactat amb nosaltres (VIDRALA).
+
+El posem en contacte amb el nostre distribuidor de la zona, {!Lead.Distributor__c} , qui contactarà en breu amb vosaltres per donar-vos resposta de la vostra sol·licitud.
+
+Rebeu una cordial salutació,
+
+Equip Comercial
+
+
+CONTACTO: {!Lead.FirstName} {!Lead.LastName}
+EMPRESA: {!Lead.Company}
+EMAIL: {!Lead.Email}
+TELEFONO: {!Lead.Phone}
+PRODUCTO CONSULTADO: {!Lead.Product__c} 
+VOLUMEN EN PALETS: {!Lead.Volume_Pallets__c}
+VOLUMEN EN UNIDADES: {!Lead.Volume_Units_000__c}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Utilizamos esta plantilla para responder a candidatos que remitiremos a nuestros distribuidores</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CA - Lead con productos enviado a distribuidor</name>
+    <style>none</style>
+    <subject>SU SOLICITUD DE CONTACTO</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent after 7 working days if one complaint is marked as Yes and Independent Inalysis is checked Report Complete not checked</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>15 Working Days - One Complaint Type - Independent analysis - Report not Complet</name>
+    <style>none</style>
+    <subject>Report for {!Consumer_Complaint__c.Name} has not been completed</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

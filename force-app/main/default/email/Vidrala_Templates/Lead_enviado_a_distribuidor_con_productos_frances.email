@@ -1,0 +1,16 @@
+Nous vous remercions de l’intérêt que vous portez à Vidrala.
+
+Nous vous mettons en relation avec notre distributeur en charge de votre zone, {!Lead.Distributor__c}, qui ne manquera pas de vous contacter rapidement pour répondre à votre demande.
+
+Cordialement,
+
+L’équipe Commerciale
+
+
+CONTACT: {!Lead.FirstName} {!Lead.LastName}
+SOCIETE: {!Lead.Company}
+EMAIL: {!Lead.Email}
+TÉLÉPHONE: {!Lead.Phone}
+PRODUIT RECHERCHE: {!Lead.Product__c} / {!Lead_Product__c.OM_VID_ProductCode__c} / {!Lead_Product__c.Products__c}
+VOLUME EN PALETTES: {!Lead.Volume_Pallets__c}
+VOLUME EN UNITES: {!Lead.Volume_Units_000__c}

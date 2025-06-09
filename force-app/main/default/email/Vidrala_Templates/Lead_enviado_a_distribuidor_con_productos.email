@@ -1,0 +1,15 @@
+Gracias por su interés en Vidrala.
+
+Le ponemos en contacto con nuestro distribuidor en la zona, {!Lead.Distributor__c}, quién le contactará en breve para dar respuesta a su solicitud.
+
+Atentamente,
+
+El Equipo Comercial
+
+CONTACTO: {!Lead.FirstName} {!Lead.LastName}
+EMPRESA: {!Lead.Company}
+EMAIL: {!Lead.Email}
+TELEFONO: {!Lead.Phone}
+PRODUCTO CONSULTADO: {!Lead.Product__c}
+VOLUMEN EN PALETS: {!Lead.Volume_Pallets__c}
+VOLUMEN EN UNIDADES: {!Lead.Volume_Units_000__c}

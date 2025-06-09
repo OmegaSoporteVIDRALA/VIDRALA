@@ -1,0 +1,9 @@
+This email is to inform you that {!Trial_Data__c.Name} has been created for authorised MPA {!Trial_Data__c.MPA__c}.
+
+Customer: {!Trial_Data__c.Customer__c}
+
+Drawing Sketch Number:{!Trial_Data__c.Drawing_Sketch_Number__c}
+
+Mould Number:{!Trial_Data__c.Mould_Number__c}
+
+{!Trial_Data__c.Link}

@@ -1,0 +1,10 @@
+A Data Collection report has been completed for the following Customer: "{!Customer_Service_Data_Collection__c.Customer__c}".
+
+Customer NRC Code: {!Customer_Service_Data_Collection__c.Customer_NCR_Code__c}
+Model & Material Number: {!Customer_Service_Data_Collection__c.Model_Material_Id__c}
+Scope if incident: {!Customer_Service_Data_Collection__c.Scope_of_incident__c}
+Other: {!Customer_Service_Data_Collection__c.Other__c}
+Incident Description: {!Customer_Service_Data_Collection__c.Incident_Description__c}
+
+
+Here is a link to the full report: {!Customer_Service_Data_Collection__c.Link}

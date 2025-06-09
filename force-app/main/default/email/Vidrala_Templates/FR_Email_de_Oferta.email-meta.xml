@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Envío de Oferta en francés</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Vidrala_Logo</letterhead>
+    <name>FR - Email de Oferta</name>
+    <style>freeForm</style>
+    <subject>GRUPO VIDRALA - OFFRE DES PRODUITS SOLLICITÉS</subject>
+    <textOnly>Cher client,
+
+
+Suite à votre demande, veuillez trouver ci-joint notre offre et les plans verriers des produits sollicités.
+
+N&apos;hésitez pas à nous contacter pour toute précision complémentaire,
+
+Cordialement,
+
+
+L&apos;équipe commerciale</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

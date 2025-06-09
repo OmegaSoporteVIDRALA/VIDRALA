@@ -1,0 +1,11 @@
+*** This email is for information only. No action required *** 
+
+The following "Design Initiated" Mould Purchase Agreement has been created and submitted for approval to the Material Planner, the Account Owner, the Operations Director and the Finance Director for their Approval. 
+
+As a member of the "Design Group" you are receiving this courtesy notification. For full details about this MPA Approval Request please click on the link below: 
+
+Design Initiated MPA: {!MPA__c.Link}
+
+
+Customer : {!MPA__c.Customer__c}
+Bottle: {!MPA__c.Mould_Number__c}

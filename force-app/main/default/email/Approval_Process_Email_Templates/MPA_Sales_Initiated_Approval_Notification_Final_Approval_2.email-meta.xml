@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template to notify Design Users that a Sales Initiated MPA has been approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MPA Sales Initiated Approval Notification Final Approval 2</name>
+    <style>none</style>
+    <subject>Notification: Sales Have Submitted An MPA</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

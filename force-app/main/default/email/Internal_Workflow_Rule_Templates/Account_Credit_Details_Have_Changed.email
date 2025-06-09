@@ -1,0 +1,7 @@
+Dear {!Account.OwnerFirstName},
+
+Please be advised that the Credit Status of your an Account you own has just beed edited by the Finance Department.
+
+Please check the following Account for details:
+
+{!Account.Link}

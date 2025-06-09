@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>38.0</apiVersion>
+    <available>true</available>
+    <description>Daily Late Load totals and links to List Reports</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Daily OTIF</name>
+    <style>none</style>
+    <subject>OTIF Load Status Report</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

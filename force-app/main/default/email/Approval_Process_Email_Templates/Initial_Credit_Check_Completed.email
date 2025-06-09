@@ -1,0 +1,7 @@
+Hello,
+
+An initial credit check request has been completed for the account {!Account.Name} 
+
+You can view the account record on the following link:
+
+{!Account.Link}

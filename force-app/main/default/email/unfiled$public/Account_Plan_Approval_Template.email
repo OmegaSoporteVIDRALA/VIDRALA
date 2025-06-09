@@ -1,0 +1,8 @@
+The following Account Plan has been submitted for your approval:
+
+Name: {!SFDC_Acct_Plan__c.Name}
+Account: {!SFDC_Acct_Plan__c.Account__c}
+Planning Year: {!SFDC_Acct_Plan__c.Planning_Year__c}
+Link: {!SFDC_Acct_Plan__c.Link}
+
+Please user the above link to access the record in Salesforce to Approve/Reject.

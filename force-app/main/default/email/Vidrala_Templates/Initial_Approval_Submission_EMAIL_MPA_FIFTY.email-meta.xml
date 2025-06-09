@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>MPA Approval Process Fifty</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Initial Approval Submission EMAIL MPA Fifty</name>
+    <style>freeForm</style>
+    <subject>MPA Submitted for Approval</subject>
+    <textOnly>The Following MPA Was Submitted for Approval
+
+PRODUCT - {!MPA_Fifty__c.Product__c}
+
+MOULD QUANTITY - {!MPA_Fifty__c.Mould_Quantity__c}
+
+VOLUME - {!MPA_Fifty__c.Volume__c}
+
+PLANT - {!MPA_Fifty__c.Plant__c}
+
+ACCOUNT - {!MPA_Fifty__c.Account__c}
+
+COMMENTS - {!MPA_Fifty__c.Comments__c}
+
+COMMENTS TO APPROVER - {!ApprovalRequest.Comments}
+
+
+
+{!MPA_Fifty__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

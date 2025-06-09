@@ -1,0 +1,16 @@
+This record was created 15 days ago and an internal report is due for this Consumer Complaint, please use the below link to update the record
+
+{!Consumer_Complaint__c.Link}.
+
+An independent Analysis has been completed for this record
+
+Record has the following stipulations:
+
+• Manufacturing Fault Present: {!Consumer_Complaint__c.Manufacturing_Fault_Present__c}
+• Injury: {!Consumer_Complaint__c.Injury__c}
+• Legal: {!Consumer_Complaint__c.Legal__c}
+
+Encirc Reference No: {!Consumer_Complaint__c.Encirc_Reference_No__c}
+Plant: {!Consumer_Complaint__c.Plant__c}
+Customer: {!Consumer_Complaint__c.Customer__c}
+Container reference: {!Consumer_Complaint__c.Container_Ref__c}

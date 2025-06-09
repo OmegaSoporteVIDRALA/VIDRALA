@@ -1,0 +1,9 @@
+Hello,
+
+An initial credit check request has been submitted by {!Account.OwnerFullName} for the account {!Account.Name}.
+
+Please perform the credit check, update the account with the credit details and then complete the initial check using the "Initial Check" action on the account.
+
+You can view the account record on the following link:
+
+{!Account.Link}

@@ -1,0 +1,11 @@
+***This email is for notification only. No action is required.*** 
+
+The following Sales Initiated MPA approval request has been made by the Sales team. This has now been approved by the Material Planner, the Operations Director and the Finance Director.
+
+As a member of the "Design Group" you are receiving this courtesy notification. For full details about this MPA Approval Request please click on the link below: 
+
+Sales Initiated MPA: {!MPA__c.Link}
+
+
+Customer : {!MPA__c.Customer__c}
+Bottle: {!MPA__c.Mould_Number__c}

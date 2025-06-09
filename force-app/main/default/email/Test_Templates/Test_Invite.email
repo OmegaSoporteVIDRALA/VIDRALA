@@ -1,0 +1,8 @@
+Dear {!Contact.FirstName},
+
+We're hosting a {!Campaign.Name} on {!Campaign.StartDate} and we'd like to invite you.
+
+Please RSVP by 21.05.15
+
+Thanks,
+Fiacre

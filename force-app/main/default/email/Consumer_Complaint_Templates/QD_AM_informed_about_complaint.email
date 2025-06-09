@@ -1,0 +1,8 @@
+This email is to inform you that a Consumer Complaint has been raised with the following details:
+
+Encirc Reference No: {!Consumer_Complaint__c.Encirc_Reference_No__c}
+Plant: {!Consumer_Complaint__c.Plant__c}
+Customer: {!Consumer_Complaint__c.Customer__c}
+Container reference: {!Consumer_Complaint__c.Container_Ref__c}
+
+Here is a link to the record  {!Consumer_Complaint__c.Link}

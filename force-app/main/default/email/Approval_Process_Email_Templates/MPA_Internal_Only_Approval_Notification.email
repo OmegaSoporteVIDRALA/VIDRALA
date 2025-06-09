@@ -1,0 +1,11 @@
+*** This email is for information only. No action required ***
+
+The following "Internal Only" Mould Purchase Agreement has been approved by the Operations Director. The request has now been passed to the Finance Director for their approval.
+
+As the creator of this MPA approval request you are receiving this courtesy notification. No action is required. For full details about this MPA Approval Request please click on the link below:
+
+Internal Only MPA: {!MPA__c.Link}
+
+
+Customer : {!MPA__c.Customer__c}
+Bottle: {!MPA__c.Mould_Number__c}

@@ -1,0 +1,9 @@
+<messaging:emailTemplate subject="OTIF: Current Month Late/Early Loads" recipientType="User" relatedToType="Dispatch__c">
+<messaging:htmlEmailBody >
+<html>
+    <body>
+        <c:DailyOTIFEmail />
+    </body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

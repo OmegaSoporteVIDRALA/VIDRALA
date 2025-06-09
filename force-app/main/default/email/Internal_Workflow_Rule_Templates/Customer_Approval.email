@@ -1,0 +1,3 @@
+Samples of {!Trial_Data__c.Mould_Number__c} were sent to the customer on {!Trial_Data__c.Date_Samples_Sent_to_Customer__c}.  Can you confirm customer approval of Trial Glass?
+
+{!Trial_Data__c.Link}

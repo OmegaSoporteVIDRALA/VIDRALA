@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>response from the web to lead that came the Vidrala catalog form</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank</letterhead>
+    <name>Quotation Request Vidrala</name>
+    <style>formalLetter</style>
+    <subject>Thank you for contacting Vidrala.</subject>
+    <textOnly>Thank you for requesting a budget from Vidrala.
+These are the details of your request:
+
+Country: {!Lead.Country}
+Province: {!Lead.State}
+First name: {!Lead.FirstName}
+Last name: {!Lead.LastName}
+Company: {!Lead.Company}
+Phone: {!Lead.Phone}
+Email: {!Lead.Phone}
+Observations:
+{!Lead.Enquiry__c}
+
+
+
+Description : Botella para cerveza de vidrio ABBEY 33 CL 
+Quantity : 6
+Total :17.760
+
+Let´s answer his/her request as soon as possible.
+
+
+Tel. +34 946 719 700  no_reply@vidrala.com   www.vidrala.com
+
+
+This message is intended exclusively for its addressee and may contain information that is CONFIDENTIAL and protected by a professional privilege or whose disclosure is prohibited by law. If this message has been received in error, please immediately notify us via e-mail and delete it. Please note that Internet e-mail neither guarantees the confidentiality nor the proper receipt of the messages sent. If the addressee of this message does not consent to the use of Internet e-mail, please communicate it to us immediately.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

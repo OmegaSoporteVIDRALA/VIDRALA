@@ -1,0 +1,9 @@
+Hello,
+
+A full credit check request has been submitted by {!Account.OwnerFullName} for the account {!Account.Name}.
+
+Please perform the full credit check, update the account with the credit details and then complete the full check using the "Full Check" action on the account.
+
+You can view the account record on the following link:
+
+{!Account.Link}

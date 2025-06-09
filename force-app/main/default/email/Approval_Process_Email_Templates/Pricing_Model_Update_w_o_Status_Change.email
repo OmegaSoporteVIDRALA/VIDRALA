@@ -1,0 +1,11 @@
+Hello,
+
+You have recently updated a Pricing Model record associated with the account {!Pricing_Model__c.Account__c}, but you did not change the Status.
+
+The Pricing Model still has a Status of  - {!Pricing_Model__c.Status__c}. If you did not intend to update the Status then please ignore this email otherwise please use the link below to access the record and update the Status.
+
+{!Pricing_Model__c.Link}
+
+Note: It is only when you update the Status that the next department in the sequence will be notified that they need to process the Pricing Model.
+
+Thank you

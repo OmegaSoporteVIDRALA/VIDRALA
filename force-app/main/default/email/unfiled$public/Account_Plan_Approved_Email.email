@@ -1,0 +1,5 @@
+The following Account Plan has been approved and is now locked:
+
+Name: {!SFDC_Acct_Plan__c.Name}
+Account: {!SFDC_Acct_Plan__c.Account__c}
+Link: {!SFDC_Acct_Plan__c.Link}

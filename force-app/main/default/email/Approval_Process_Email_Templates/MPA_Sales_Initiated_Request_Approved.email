@@ -1,0 +1,7 @@
+The following MPA request that you submitted has been APPROVED by all record Approvers. You can view the full record here: 
+
+{!MPA__c.Link}
+
+
+Customer : {!MPA__c.Customer__c}
+Bottle: {!MPA__c.Mould_Number__c}

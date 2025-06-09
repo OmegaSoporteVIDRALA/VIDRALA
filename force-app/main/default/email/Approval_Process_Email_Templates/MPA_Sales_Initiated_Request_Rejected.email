@@ -1,0 +1,9 @@
+The following MPA request that you submitted has been REJECTED. Please refer to the Approval History of the record, discuss it with your colleagues and, if necessary, edit and resubmit for approval.
+
+You can view the full record here: 
+
+{!MPA__c.Link}
+
+
+Customer : {!MPA__c.Customer__c}
+Bottle: {!MPA__c.Mould_Number__c}

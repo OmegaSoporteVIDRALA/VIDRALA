@@ -1,0 +1,5 @@
+The trial meeting for {!Trial_Data__c.Name} was held on {!Trial_Data__c.Trial_Meeting_Date__c}.  
+
+Can you add the results to Salesforce please?
+
+{!Trial_Data__c.Link}

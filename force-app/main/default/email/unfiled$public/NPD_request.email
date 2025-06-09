@@ -1,0 +1,15 @@
+Hello
+
+The following NPD request has been completed in Salesforce.
+
+Customer:  {!NPD_Request__c.Existing_Customer_Name__c} {!NPD_Request__c.Potential_Customer_Name__c}
+
+Account Manager :  {!NPD_Request__c.OwnerFullName}
+
+Container Description:  {!NPD_Request__c.Container_Description__c}
+
+Existing sku:  {!NPD_Request__c.Existing_SKU__c}
+Shape:  {!NPD_Request__c.Shape__c}
+
+Here is a link to the record
+{!NPD_Request__c.Link}

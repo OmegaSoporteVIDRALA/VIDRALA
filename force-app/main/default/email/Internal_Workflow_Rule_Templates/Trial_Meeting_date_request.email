@@ -1,0 +1,5 @@
+Hello
+
+A trial took place on {!Trial_Data__c.Trial_Date__c} for bottle {!Trial_Data__c.Mould_Number__c}.  Can add the planned Trial meeting date.
+
+{!Trial_Data__c.Link}

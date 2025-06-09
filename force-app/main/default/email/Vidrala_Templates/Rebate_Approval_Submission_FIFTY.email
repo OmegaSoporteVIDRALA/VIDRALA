@@ -1,0 +1,10 @@
+The following Rebate has been submitted for approval:
+
+Rebate reference: {!Rebate__c.Name} 
+Account name: {!Rebate__c.Account__c} 
+Created by: {!Rebate__c.CreatedBy}
+Created on: {!Rebate__c.CreatedDate}
+Reason for the Rebate:
+{!Rebate__c.Reason_for_Rebate__c}
+
+Click here to review the Rebate: {!Rebate__c.Link}

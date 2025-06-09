@@ -1,0 +1,6 @@
+A Mould has been scrapped
+
+Mould Life Tracker Name - {!Mould_Life_Tracker__c.Name}
+RecordType - {!Mould_Life_Tracker__c.RecordType}
+
+To view the approved Mould Life Tracker record in Salesforce, click here - https://encirc360.lightning.force.com/lightning/r/Mould_Life_Tracker__c/{!Mould_Life_Tracker__c.Id}/view

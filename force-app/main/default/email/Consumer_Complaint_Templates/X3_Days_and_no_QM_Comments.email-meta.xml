@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to QM and Complaints Admin after 3 days if QM Comments not completed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>3 Days and no QM Comments</name>
+    <style>none</style>
+    <subject>Quality Manager Comments for {!Consumer_Complaint__c.Name} have not been completed</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

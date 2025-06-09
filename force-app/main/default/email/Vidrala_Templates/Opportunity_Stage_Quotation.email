@@ -1,0 +1,5 @@
+Opportunity name: {!Opportunity.Name}
+Account name: {!Opportunity.Account}
+Opportunity Owner: {!Opportunity.OwnerFullName}
+Quote Required By: {!Opportunity.Quote_Required_By__c}
+Link to the record: {!Opportunity.Link}

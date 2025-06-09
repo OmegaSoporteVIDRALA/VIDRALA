@@ -1,0 +1,8 @@
+It has been 7 days since this record was created and an internal report is due for this Consumer Complaint.   {!Consumer_Complaint__c.Link}. 
+
+This record has no complaint type selected. 
+
+Encirc Reference No:{!Consumer_Complaint__c.Encirc_Reference_No__c}
+Plant: {!Consumer_Complaint__c.Plant__c}
+Customer: {!Consumer_Complaint__c.Customer__c}
+Container: {!Consumer_Complaint__c.Container_Ref__c}

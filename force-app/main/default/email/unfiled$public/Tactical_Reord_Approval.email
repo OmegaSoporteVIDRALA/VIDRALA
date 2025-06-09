@@ -1,0 +1,7 @@
+Hi {!SFDC_Strategy__c.OwnerFullName},
+
+The below mentioned Tactic Record has been approved.
+
+Link:{!SFDC_Strategy__c.Link}
+
+Thanks

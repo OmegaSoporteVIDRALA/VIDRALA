@@ -1,0 +1,11 @@
+Hi 
+
+Status or Action field has been changed.
+
+Link to the record : {!Morning_Meeting__c.Link}
+
+Issue :{!Morning_Meeting__c.Issue__c}
+
+Account : {!Morning_Meeting__c.Account__c}
+
+Action :{!Morning_Meeting__c.Actions__c}

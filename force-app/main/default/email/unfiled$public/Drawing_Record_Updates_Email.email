@@ -1,0 +1,8 @@
+Account:  {!Drawing__c.Account__c}
+SAP Account Number: {!Drawing__c.SAP_Account_Number__c}
+Drawing Type:  {!Drawing__c.Drawing_Type__c}
+Description: {!Drawing__c.Description__c}
+Spec Number:  {!Drawing__c.Spec_No__c}
+Drawing number:  {!Drawing__c.Name}
+SAP Material Code:  {!Drawing__c.SAP_Material_Code__c}
+Here is a link to the record:  {!Drawing__c.Link}

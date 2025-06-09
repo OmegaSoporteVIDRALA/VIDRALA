@@ -1,0 +1,6 @@
+The following Internal Only MPA requires your Approval or Rejection. You may complete this action from your Salesforce Home Page. For additional record details please click on the link below:
+
+Internal Only MPA: {!MPA__c.Link}
+MPA Number: {!MPA__c.Name}
+Customer: {!MPA__c.Customer__c}
+Mould Number: {!MPA__c.Mould_Number__c}

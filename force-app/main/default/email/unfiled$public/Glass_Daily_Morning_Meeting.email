@@ -1,0 +1,12 @@
+Hi 
+
+A New record of Glass Daily Morning Meeting has been created.
+
+Here is the link to the record : {!Morning_Meeting__c.Link}
+
+The issue reported is :{!Morning_Meeting__c.Issue__c}
+
+Customer : {!Morning_Meeting__c.Account__c}
+
+Actions :
+{!Morning_Meeting__c.Actions__c}

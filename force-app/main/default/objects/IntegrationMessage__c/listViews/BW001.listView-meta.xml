@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BW001</fullName>
+    <columns>NAME</columns>
+    <columns>StatusAuto__c</columns>
+    <columns>Status__c</columns>
+    <columns>Direction__c</columns>
+    <columns>Endpoint__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Endpoint__c</field>
+        <operation>contains</operation>
+        <value>actualSalesHistoryCalloutBW</value>
+    </filters>
+    <label>[BW001] Actual_Sales_History</label>
+</ListView>

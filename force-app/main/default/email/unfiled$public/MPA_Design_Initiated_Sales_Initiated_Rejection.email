@@ -1,0 +1,8 @@
+The following Mould Purchase Agreement has been rejected:
+
+Name: {!MPA__c.Name}
+Rejected by: {!User.Name}
+
+For full details about this MPA Approval Request please click on the link below: 
+
+MPA: {!MPA__c.Link}

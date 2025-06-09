@@ -1,0 +1,11 @@
+Dear {!User.FirstName} {!User.LastName},
+
+The task that you created has been either updated or completed.
+
+{!Task.Subject}
+
+{!Task.Description}
+
+Select task as follows to see detail.
+
+{!Task.Link}

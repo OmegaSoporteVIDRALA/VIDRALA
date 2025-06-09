@@ -1,0 +1,9 @@
+Please note that your approval request for an Internal Only MPA record has been rejected.
+
+You can see full details by clicking the link below. You will see the reason for the rejection. You may edit the record and, if appropriate, resubmit it.
+
+{!MPA__c.Link}
+
+
+Customer : {!MPA__c.Customer__c}
+Bottle: {!MPA__c.Mould_Number__c}

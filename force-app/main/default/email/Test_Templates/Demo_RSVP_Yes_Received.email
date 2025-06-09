@@ -1,0 +1,8 @@
+Dear {!Contact.FirstName},
+
+We're delighted that you'll be able to join us for {!Campaign.Name} on {!Campaign.StartDate}.
+
+It will be a great evening. We'll send more details closer to the time.
+
+Thanks,
+Fiacre

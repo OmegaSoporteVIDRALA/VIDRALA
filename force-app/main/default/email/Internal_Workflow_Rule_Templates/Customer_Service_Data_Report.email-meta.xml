@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Glass_Letter_Head_with_Green_Logo</letterhead>
+    <name>Customer Service Data Report</name>
+    <style>formalLetter</style>
+    <subject>Customer Service Data Report</subject>
+    <textOnly>{!Customer_Service_Data_Collection__c.Customer__r.Name}
+
+{!Customer_Service_Data_Collection__c.Reception_date__c}
+
+{!Customer_Service_Data_Collection__c.Customer_NCR_Code__c}
+
+{!Customer_Service_Data_Collection__c.Batch_number__c}
+
+{!Customer_Service_Data_Collection__c.Model_Material_Id__c}
+
+{!Customer_Service_Data_Collection__c.Container_Name__c}
+
+{!Customer_Service_Data_Collection__c.Works_order_number__c}
+
+{!Customer_Service_Data_Collection__c.DOM__c}
+
+{!Customer_Service_Data_Collection__c.Scope_of_incident__c}
+
+{!Customer_Service_Data_Collection__c.Impact_for_customer__c}
+
+{!Customer_Service_Data_Collection__c.Detection_point__c}
+
+{!Customer_Service_Data_Collection__c.Affected_cavities__c}
+
+{!Customer_Service_Data_Collection__c.Percentage__c}
+
+{!Customer_Service_Data_Collection__c.Finished_products_affected__c}
+
+{!Customer_Service_Data_Collection__c.CTS_Hypothesis__c}
+
+{!Customer_Service_Data_Collection__c.Incident_classification_for_Customer__c}
+
+{!Customer_Service_Data_Collection__c.Return_needed__c}
+
+{!Customer_Service_Data_Collection__c.Charges_of_future_risk__c}
+
+{!Customer_Service_Data_Collection__c.Global_Categorization__c}
+
+{!Customer_Service_Data_Collection__c.Sampling_Pictures__c}
+
+{!Customer_Service_Data_Collection__c.Sampling_Image__c}
+
+{!Customer_Service_Data_Collection__c.Affected_QTY__c}
+
+{!Customer_Service_Data_Collection__c.Affected_QTY_pounds__c}
+
+{!Customer_Service_Data_Collection__c.Other__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

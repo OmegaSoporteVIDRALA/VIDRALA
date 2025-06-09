@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Glass_Letter_Head_with_Green_Logo</letterhead>
+    <name>C/S Audit report (Free Form)</name>
+    <style>freeForm</style>
+    <subject>Customer Service Audit Report</subject>
+    <textOnly>Date: {!01I58000001FvRB.00N5800000D0Kmx}
+
+Customer: {!01I58000001FvRB.00N5800000D0Kmw}
+
+Contract Packer: {!01I58000001FvRB.00N5800000D0KpY}
+
+Customer Contact: {!01I58000001FvRB.00N5800000D0Kmv}
+
+Encirc Contact: {!01I58000001FvRB.00N5800000D0Kn0}
+
+
+
+Summary and Recommendations
+
+{!01I58000001FvRB.00N5800000D0Kny}
+
+
+
+
+
+Purpose of Visit:
+
+{!01I58000001FvRB.00N5800000D0Knr}
+
+
+
+Details
+
+Filling Line: {!01I58000001FvRB.00N5800000D0KnA}
+
+Encirc Reference: {!01I58000001FvRB.00N5800000D0Kn2}
+
+Bottle Description: {!01I58000001FvRB.00N5800000D0KmN}
+
+Pack Spec: {!01I58000001FvRB.00N5800000D0Knh}
+
+Date of Manufacture: {!01I58000001FvRB.00N5800000D0Kmy}
+
+Works Order: {!01I58000001FvRB.00N5800000D0Ko3}
+
+Encirc Line: {!01I58000001FvRB.00N5800000D0Kn1}
+
+
+
+UV Code
+
+UV Code: {!01I58000001FvRB.00N5800000D0Ko0}
+
+Cold End Coating Check: {!01I58000001FvRB.00N5800000D0Kma}
+
+
+
+Fork Lift Truck
+
+FLT: {!01I58000001FvRB.00N5800000D0KnC}
+
+
+
+Intake and Depalletiser
+
+Pallet Condition: {!01I58000001FvRB.00N5800000D0Knj}
+
+Strapping: {!01I58000001FvRB.00N5800000D0Knx}
+
+Pallet Label: {!01I58000001FvRB.00N5800000D0Knk}
+
+Bag Removal: {!01I58000001FvRB.00N5800000D0KmK}
+
+Pallets to Hoist: {!01I58000001FvRB.00N5800000D0Knl}
+
+Layer Pad Grippers: {!01I58000001FvRB.00N5800000D0KnQ}
+
+Layer Pad Sweep Off: {!01I58000001FvRB.00N5800000D0KnR}
+
+Layer Sweep Off Frame: {!01I58000001FvRB.00N5800000D0KnT}
+
+Lift off Depalletiser: {!01I58000001FvRB.00N5800000D0KnU}
+
+Discharge Mat: {!01I58000001FvRB.00N5800000D0Kmz}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmn}
+
+
+
+Conveyors - Mass
+
+Mass Conveyors: {!01I58000001FvRB.00N5800000D0Knc}
+
+Pressure: {!01I58000001FvRB.00N5800000D0Knq}
+
+Conveyors: {!01I58000001FvRB.00N5800000D0Kmt}
+
+Guide Rails: {!01I58000001FvRB.00N5800000D0KnJ}
+
+Line Control Switches: {!01I58000001FvRB.00N5800000D0KnY}
+
+Fallen Bottles: {!01I58000001FvRB.00N5800000D0Kn8}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kme}
+
+
+
+EBI
+
+Rejection Rate: {!01I58000001FvRB.00N5800000D0Knu}
+
+Rejection Details: {!01I58000001FvRB.00N5800000D0Knt}
+
+Rejection Samples: {!01I58000001FvRB.00N5800000D0Kns}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmf}
+
+
+
+Rinser - Filler - Crowner
+
+Rinsing Head/Nozzles: {!01I58000001FvRB.00N5800000D0Knv}
+
+Bottle Handling: {!01I58000001FvRB.00N5800000D0KmR}
+
+Breakage / Glass Fragments: {!01I58000001FvRB.00N5800000D0KmW}
+
+Overhead Covers: {!01I58000001FvRB.00N5800000D0Knf}
+
+Explosion Guards: {!01I58000001FvRB.00N5800000D0Kn3}
+
+Bottle Alignment: {!01I58000001FvRB.00N5800000D0KmM}
+
+Operating Speed: {!01I58000001FvRB.00N5800000D0Kne}
+
+Ring Bowl Pressure Filling: {!01I58000001FvRB.00N5800000D0Kps}
+
+Filling Temperature: {!01I58000001FvRB.00N5800000D0Kpx}
+
+Crowner Crimps: {!01I58000001FvRB.00N5800000D0Kmu}
+
+Fill Levels: {!01I58000001FvRB.00N5800000D0Kn9}
+
+Capacity Checks: {!01I58000001FvRB.00N5800000D0KmY}
+
+Under Cap Rinse: {!01I58000001FvRB.00N5800000D0Ko1}
+
+Bottles Filled: {!01I58000001FvRB.00N5800000D0KmV}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmg}
+
+
+
+Conveyors - Mass / PC
+
+Mass Conveyor: {!01I58000001FvRB.00N5800000D0KnZ}
+
+Pressure: {!01I58000001FvRB.00N5800000D0Knn}
+
+Conveyors: {!01I58000001FvRB.00N5800000D0Kmq}
+
+Guide Rails: {!01I58000001FvRB.00N5800000D0KnK}
+
+Line Control Switches: {!01I58000001FvRB.00N5800000D0KnV}
+
+Fallen Bottles: {!01I58000001FvRB.00N5800000D0Kn4}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmh}
+
+
+
+Pasteuriser
+
+Glass Breakages: {!01I58000001FvRB.00N5800000D0KnE}
+
+Spray Pattern: {!01I58000001FvRB.00N5800000D0Knw}
+
+Bottle Pressure: {!01I58000001FvRB.00N5800000D0KmU}
+
+Fallen Bottles: {!01I58000001FvRB.00N5800000D0Kn5}
+
+Zone Temperatures: {!01I58000001FvRB.00N5800000D0Ko4}
+
+Post Pasteuriser Findings: {!01I58000001FvRB.00N5800000D0Knm}
+
+UV Code: {!01I58000001FvRB.00N5800000D0Knz}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmi}
+
+
+
+Conveyors - Mass/PC
+
+Mass Conveyors: {!01I58000001FvRB.00N5800000D0Kna}
+
+Pressure: {!01I58000001FvRB.00N5800000D0Kno}
+
+Conveyors: {!01I58000001FvRB.00N5800000D0Kmr}
+
+Guide Rails: {!01I58000001FvRB.00N5800000D0KnF}
+
+Line Control Switches: {!01I58000001FvRB.00N5800000D0KnW}
+
+Fallen Bottles: {!01I58000001FvRB.00N5800000D0Kn6}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmj}
+
+
+
+Bottle Drier
+
+Blowers: {!01I58000001FvRB.00N5800000D0KmL}
+
+Nozzles: {!01I58000001FvRB.00N5800000D0Knd}
+
+Under Crown Blowers: {!01I58000001FvRB.00N5800000D0Ko2}
+
+Guide Rails: {!01I58000001FvRB.00N5800000D0KnG}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmk}
+
+
+
+Labeller
+
+Bottle Handling: {!01I58000001FvRB.00N5800000D0KmO}
+
+Breakages: {!01I58000001FvRB.00N5800000D0KmX}
+
+Labels: {!01I58000001FvRB.00N5800000D0KnO}
+
+Label Application: {!01I58000001FvRB.00N5800000D0KnM}
+
+Labeller Operating Speed: {!01I58000001FvRB.00N5800000D0KnN}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kml}
+
+
+
+Conveyors - Mass/PC
+
+Mass Conveyors: {!01I58000001FvRB.00N5800000D0Kna}
+
+Pressure: {!01I58000001FvRB.00N5800000D0Knp}
+
+Conveyors: {!01I58000001FvRB.00N5800000D0Kms}
+
+Guide Rails: {!01I58000001FvRB.00N5800000D0KnH}
+
+Line Control Switches: {!01I58000001FvRB.00N5800000D0KnX}
+
+Fallen Bottles: {!01I58000001FvRB.00N5800000D0Kn7}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmm}
+
+
+
+Multi - Packer
+
+Bottle Infeed: {!01I58000001FvRB.00N5800000D0KmT}
+
+Lane Guides: {!01I58000001FvRB.00N5800000D0KnP}
+
+Bottle Handling: {!01I58000001FvRB.00N5800000D0KmP}
+
+Condition of Packs: {!01I58000001FvRB.00N5800000D0Kmo}
+
+Glass Breakages: {!01I58000001FvRB.00N5800000D0KnD}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmb}
+
+
+
+Carton Packer
+
+Infeed Lane Guides: {!01I58000001FvRB.00N5800000D0KnL}
+
+Bottle Infeed: {!01I58000001FvRB.00N5800000D0KmS}
+
+Bottle Handling: {!01I58000001FvRB.00N5800000D0KmQ}
+
+Cleanliness: {!01I58000001FvRB.00N5800000D0KmZ}
+
+Condition of Packs: {!01I58000001FvRB.00N5800000D0Kmp}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmc}
+
+
+
+Palletiser
+
+Pack Turners: {!01I58000001FvRB.00N5800000D0Kni}
+
+Layer Pushers: {!01I58000001FvRB.00N5800000D0KnS}
+
+Guide Rails: {!01I58000001FvRB.00N5800000D0KnI}
+
+Pack Handling: {!01I58000001FvRB.00N5800000D0Kng}
+
+Finished Pallets: {!01I58000001FvRB.00N5800000D0KnB}
+
+Comments: {!01I58000001FvRB.00N5800000D0Kmd}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

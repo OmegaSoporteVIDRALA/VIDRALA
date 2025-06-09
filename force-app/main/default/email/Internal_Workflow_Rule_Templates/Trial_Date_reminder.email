@@ -1,0 +1,5 @@
+Hello
+
+The trial for {!Trial_Data__c.Mould_Number__c} was due to take place {!Trial_Data__c.Trial_Date__c}.  Can you confirm if this has taken place?
+
+{!Trial_Data__c.Link}

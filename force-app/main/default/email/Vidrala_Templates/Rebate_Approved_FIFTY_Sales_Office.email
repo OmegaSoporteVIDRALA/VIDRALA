@@ -1,0 +1,7 @@
+The following Rebate has been approved, please upload to SAP: 
+Sales Admin Assigned : {!Account.Sales_Admin_Lookup__c}
+
+Rebate reference: {!Rebate__c.Name}
+Account name: {!Rebate__c.Account__c}
+
+Click here to review the Rebate: {!Rebate__c.Link}

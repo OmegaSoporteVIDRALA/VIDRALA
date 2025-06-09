@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to go to Consumer Complaints Admin telling them that the Quality Manager Comments field has been populated</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Quality Manager Comments Populated</name>
+    <style>none</style>
+    <subject>Quality Manager Comments for {!Consumer_Complaint__c.Name} have been completed</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

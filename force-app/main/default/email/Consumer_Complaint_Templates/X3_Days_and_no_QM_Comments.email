@@ -1,0 +1,10 @@
+You have recently received a request to complete the Quality Manager comments on the following Consumer Complaints record which is still outstanding.
+
+Please use the below link to complete this task ASAP
+
+Consumer Complaint Record: {!Consumer_Complaint__c.Link}
+
+Encirc Reference No: {!Consumer_Complaint__c.Encirc_Reference_No__c}
+Plant: {!Consumer_Complaint__c.Plant__c}
+Customer: {!Consumer_Complaint__c.Customer__c}
+Container reference: {!Consumer_Complaint__c.Container_Ref__c}

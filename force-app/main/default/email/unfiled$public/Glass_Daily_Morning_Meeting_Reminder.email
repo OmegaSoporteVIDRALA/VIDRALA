@@ -1,0 +1,11 @@
+Hi {!Morning_Meeting__c.Assigned_to__c},
+
+This record of Glass Daily Morning Meeting has not been updated in the last 48hrs.  Can you please add an update.
+
+Link to the record : {!Morning_Meeting__c.Link}
+
+Issue :{!Morning_Meeting__c.Issue__c}
+
+Account : {!Morning_Meeting__c.Account__c}
+
+Action :{!Morning_Meeting__c.Actions__c}

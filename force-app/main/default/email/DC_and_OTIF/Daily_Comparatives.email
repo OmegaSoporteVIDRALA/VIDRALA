@@ -1,0 +1,10 @@
+<messaging:emailTemplate subject="Daily Comparatives Top 20" recipientType="User" relatedToType="Month__c">
+<messaging:htmlEmailBody >
+<html>
+    <body>
+        <c:DailyComparativesTop20Units />
+        <c:DailyComparativesTop20Tonnage />
+    </body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

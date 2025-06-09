@@ -1,0 +1,6 @@
+The following Rebate has been rejected: 
+
+Rebate reference: {!Rebate__c.Name} 
+Account name: {!Rebate__c.Account__c} 
+
+Click here to review the Rebate: {!Rebate__c.Link}

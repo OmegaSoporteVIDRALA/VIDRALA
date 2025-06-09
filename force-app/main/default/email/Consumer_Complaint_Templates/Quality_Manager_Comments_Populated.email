@@ -1,0 +1,10 @@
+The Quality Manager Comments for {!Consumer_Complaint__c.Record_Name__c} have now been completed. 
+
+Here is a Link to the record: 
+{!Consumer_Complaint__c.Link}
+
+Encirc Reference No: {!Consumer_Complaint__c.Encirc_Reference_No__c}
+Plant: {!Consumer_Complaint__c.Plant__c}
+Customer: {!Consumer_Complaint__c.Customer__c}
+Container: {!Consumer_Complaint__c.Container_Ref__c}
+.

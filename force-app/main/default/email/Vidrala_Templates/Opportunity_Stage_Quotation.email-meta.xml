@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Fifty Quotation Stage Email Used In Opportunity Create Update Flow</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Opportunity Stage Quotation</name>
+    <style>none</style>
+    <subject>New Opportunity Should Be Offered</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

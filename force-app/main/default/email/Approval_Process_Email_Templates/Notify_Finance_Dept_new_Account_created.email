@@ -1,0 +1,3 @@
+A new account "{!Account.Name}" has been created and needs to be credit checked. Please carry out a check and update the account record with the credit limit.
+
+Click here to view the account record: {!Account.Link}

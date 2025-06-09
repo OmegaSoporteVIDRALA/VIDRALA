@@ -1,0 +1,7 @@
+Please note that your approval request for an Internal Only MPA record has been approved.
+
+You can see full details at: {!MPA__c.Link}
+
+
+Customer : {!MPA__c.Customer__c}
+Bottle: {!MPA__c.Mould_Number__c}

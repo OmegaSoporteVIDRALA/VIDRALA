@@ -1,0 +1,7 @@
+The following MPA record requires you to Approve or Reject. You may Reject or Approve the MPA directly from your Home Page. 
+
+You can also click on the link below to see the full MPA record detail.
+
+{!MPA__c.Link}
+{!MPA__c.Customer__c}
+{!MPA__c.Mould_Number__c}

@@ -1,0 +1,6 @@
+Hello
+
+Trail data {!Trial_Data__c.Name} has been update with a trial date: {!Trial_Data__c.Trial_Date__c}
+
+
+{!Trial_Data__c.Link}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Utilizamos esta plantilla para responder a leads, de lengua francesa, cuando por falta de vidrio no podemos atender</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>FR y RM - Pas aider dû à une forte demande de bouteilles sur nos marchés</name>
+    <style>none</style>
+    <subject>YOUR CONSULTATION</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

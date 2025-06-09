@@ -1,0 +1,5 @@
+The following Account Plan has been rejected and has now been unlocked: 
+
+Name: {!SFDC_Acct_Plan__c.Name} 
+Account: {!SFDC_Acct_Plan__c.Account__c} 
+Link: {!SFDC_Acct_Plan__c.Link}

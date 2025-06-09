@@ -1,0 +1,6 @@
+The following Design Inititated MPA requires your Approval or Rejection. You may complete this action from your Salesforce Home Page. For additional record details please click on the link below: 
+
+Internal Only MPA: {!MPA__c.Link}
+
+Customer : {!MPA__c.Customer__c}
+Bottle: {!MPA__c.Mould_Number__c}
