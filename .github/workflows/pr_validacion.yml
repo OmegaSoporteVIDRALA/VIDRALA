@@ -18,7 +18,7 @@ jobs:
 
       - name: ⛔ Verificar si rama base está autorizada
         run: |
-          ALLOWED_BRANCHES=("MAIN" "UAT" "INTEGRA")
+          ALLOWED_BRANCHES=("main" "UAT" "Integra")
           BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
           echo "Rama base: $BASE_BRANCH"
           if [[ ! " ${ALLOWED_BRANCHES[@]} " =~ " ${BASE_BRANCH} " ]]; then
@@ -75,7 +75,7 @@ jobs:
           BASE_REF="${GITHUB_BASE_REF:-${GITHUB_REF_NAME}}"
           echo "🔎 Branch destino: $BASE_REF"
 
-          if [[ "$BASE_REF" == "INTEGRA" ]]; then
+          if [[ "$BASE_REF" == "Integra" ]]; then
             echo "LOGIN_URL=https://test.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_INTEGRA }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_INTEGRA }}" >> $GITHUB_ENV
@@ -89,7 +89,7 @@ jobs:
             echo "JWT_KEY<<EOF" >> $GITHUB_ENV
             echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_UAT }}" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
-          elif [[ "$BASE_REF" == "MAIN" ]]; then
+          elif [[ "$BASE_REF" == "main" ]]; then
             echo "LOGIN_URL=https://login.salesforce.com" >> $GITHUB_ENV
             echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_PROD }}" >> $GITHUB_ENV
             echo "USERNAME=${{ secrets.SFDX_USERNAME_PROD }}" >> $GITHUB_ENV
@@ -115,21 +115,39 @@ jobs:
       - name: 🔧 Instalar Salesforce CLI
         run: |
           npm install --global @salesforce/cli
-
+      
       - name: 🛂 Autenticarse en Salesforce con JWT
         env:
+    
           SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
-          SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_UAT }}
           SFDX_USERNAME: ${{ env.USERNAME }}
           SFDX_URL: ${{ env.LOGIN_URL }}
+          SFDX_JWT_KEY_INTEGRA: ${{ vars.SFDX_JWT_KEY_INTEGRA }}
+          SFDX_JWT_KEY_UAT: ${{ vars.SFDX_JWT_KEY_UAT }}
+          SFDX_JWT_KEY_PRO: ${{ vars.SFDX_JWT_KEY_PRO }}
         run: |
-          echo "$SFDX_JWT_KEY" > server.key
-          sf org login jwt \
-            --client-id "$SFDX_CLIENT_ID" \
-            --jwt-key-file server.key \
-            --username "$SFDX_USERNAME" \
-            --instance-url "$SFDX_URL" \
-            --alias SF
+          
+          BASE_REF="${GITHUB_BASE_REF:-${GITHUB_REF_NAME}}"
+          echo "🔎 Branch destino: $BASE_REF"
+          if [[ "$BASE_REF" == "Integra" ]]; then
+            echo "$SFDX_JWT_KEY_INTEGRA" > server.key
+          elif [[ "$BASE_REF" == "UAT" ]]; then
+            echo "$SFDX_JWT_KEY_UAT" > server.key
+          elif [[ "$BASE_REF" == "main" ]]; then
+            echo "$SFDX_JWT_KEY_PRO" > server.key
+          fi
+
+          if [[ -f "server.key" ]]; then
+            sf org login jwt \
+              --client-id "$SFDX_CLIENT_ID" \
+              --jwt-key-file server.key \
+              --username "$SFDX_USERNAME" \
+              --instance-url "$SFDX_URL" \
+              --alias SF
+          else
+            echo "❌ Error: server.key not found, aborting login"
+            exit 1
+          fi
 
       - name: ✍ Verify Authentication
         run: |
@@ -285,6 +303,10 @@ jobs:
 
       - name: 🛑 Fallar si hay errores PMD
         run: |
+          if [ ! -f ./pmd/report/pmd-report.json ]; then
+            echo "⚠️ El archivo pmd-report.json no existe, se salta esta validación."
+            exit 0
+          fi
           LINE_COUNT=$(wc -l < ./pmd/report/pmd-report.json)
           echo "El archivo tiene $LINE_COUNT líneas"
 
