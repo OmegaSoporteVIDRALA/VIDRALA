@@ -26,13 +26,20 @@ jobs:
             exit 1
           fi
       
-      - name: 🚫 Bloquear si hay PR abierto validado hacia la misma rama
+      - name: 🚫 Bloquear si hay PR abierto validado o validación en curso hacia la misma rama
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
           CURRENT_PR_NUMBER=${{ github.event.pull_request.number }}
           echo "🔎 Buscando otros PR abiertos hacia $BASE_BRANCH (excepto el actual: #$CURRENT_PR_NUMBER)"
+
+          # Verificar validaciones en curso
+          RUNNING_VALIDATIONS=$(gh run list --workflow "📝 Validate Salesforce PR" --branch "$BASE_BRANCH" --json status --jq '.[] | select(.status=="in_progress" or .status=="queued") | .status' | wc -l)
+          if [ "$RUNNING_VALIDATIONS" -gt 0 ]; then
+            echo "❌ Ya hay validaciones en curso para PRs hacia $BASE_BRANCH. Bloqueando creación."
+            exit 1
+          fi
 
           OPEN_PRS=$(gh pr list --state open --base "$BASE_BRANCH" --json number,headRefOid --jq '.[] | select(.number != '"$CURRENT_PR_NUMBER"')')
 

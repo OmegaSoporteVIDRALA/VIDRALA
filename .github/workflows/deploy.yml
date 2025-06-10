@@ -3,7 +3,7 @@ name: 🚀 Deploy after Merge to Integra or UAT
 on:
   push:
     branches:
-      - INTEGRA
+      - Integra
       - UAT
 
 jobs:
