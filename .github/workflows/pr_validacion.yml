@@ -98,10 +98,10 @@ jobs:
             echo "EOF" >> $GITHUB_ENV
           elif [[ "$BASE_REF" == "main" ]]; then
             echo "LOGIN_URL=https://login.salesforce.com" >> $GITHUB_ENV
-            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_PROD }}" >> $GITHUB_ENV
-            echo "USERNAME=${{ secrets.SFDX_USERNAME_PROD }}" >> $GITHUB_ENV
+            echo "CLIENT_ID=${{ secrets.SFDX_CLIENT_ID_PRO }}" >> $GITHUB_ENV
+            echo "USERNAME=${{ secrets.SFDX_USERNAME_PRO }}" >> $GITHUB_ENV
             echo "JWT_KEY<<EOF" >> $GITHUB_ENV
-            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PROD }}" >> $GITHUB_ENV
+            echo "JWT_KEY=${{ secrets.SFDX_JWT_KEY_PRO }}" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
           else
             echo "❌ Branch not supported"
