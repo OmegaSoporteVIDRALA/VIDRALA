@@ -3,6 +3,10 @@ name: 📝 Validate Salesforce PR
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    branches:
+      - main
+      - UAT
+      - Integra
 
 jobs:
   validate:
