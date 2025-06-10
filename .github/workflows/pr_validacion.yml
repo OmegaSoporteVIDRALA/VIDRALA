@@ -118,7 +118,7 @@ jobs:
       
       - name: 🛂 Autenticarse en Salesforce con JWT
         env:
-          BRANCH_NAME: ${{ github.ref_name }}
+    
           SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
           SFDX_USERNAME: ${{ env.USERNAME }}
           SFDX_URL: ${{ env.LOGIN_URL }}
@@ -127,7 +127,15 @@ jobs:
           SFDX_JWT_KEY_PRO: ${{ vars.SFDX_JWT_KEY_PRO }}
         run: |
           
-          echo "$SFDX_JWT_KEY_INTEGRA" > server.key
+          BASE_REF="${GITHUB_BASE_REF:-${GITHUB_REF_NAME}}"
+          echo "🔎 Branch destino: $BASE_REF"
+          if [[ "$BASE_REF" == "Integra" ]]; then
+            echo "$SFDX_JWT_KEY_INTEGRA" > server.key
+          elif [[ "$BASE_REF" == "UAT" ]]; then
+            echo "$SFDX_JWT_KEY_UAT" > server.key
+          elif [[ "$BASE_REF" == "main" ]]; then
+            echo "$SFDX_JWT_KEY_PRO" > server.key
+          fi
 
           if [[ -f "server.key" ]]; then
             sf org login jwt \
