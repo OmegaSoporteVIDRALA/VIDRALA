@@ -4,5 +4,10 @@
 		<members>Account.ClienteVIP__c</members>
 		<name>CustomField</name>
 	</types>
+	<types>
+		<members>DummyClass</members>
+		<members>DummyClassTest</members>
+		<name>ApexClass</name>
+	</types>
 	<version>63.0</version>
 </Package>
