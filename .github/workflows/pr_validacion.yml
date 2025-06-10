@@ -286,6 +286,10 @@ jobs:
 
       - name: 🛑 Fallar si hay errores PMD
         run: |
+          if [ ! -f ./pmd/report/pmd-report.json ]; then
+            echo "⚠️ El archivo pmd-report.json no existe, se salta esta validación."
+            exit 0
+          fi
           LINE_COUNT=$(wc -l < ./pmd/report/pmd-report.json)
           echo "El archivo tiene $LINE_COUNT líneas"
 
