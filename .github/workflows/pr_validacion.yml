@@ -119,11 +119,20 @@ jobs:
       - name: 🛂 Autenticarse en Salesforce con JWT
         env:
           SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
-          SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_INTEGRA }}
           SFDX_USERNAME: ${{ env.USERNAME }}
           SFDX_URL: ${{ env.LOGIN_URL }}
+          JWT_KEY_PRO: ${{ vars.SFDX_JWT_KEY_PRO }}
+          JWT_KEY_UAT: ${{ vars.SFDX_JWT_KEY_UAT }}
+          JWT_KEY_INTEGRA: ${{ vars.SFDX_JWT_KEY_INTEGRA }}
         run: |
-          echo "$SFDX_JWT_KEY" > server.key
+          if [[ "$BRANCH_NAME" == "main" ]]; then
+            echo "$JWT_KEY_PRO" > server.key
+          elif [[ "$BRANCH_NAME" == "uat" ]]; then
+           echo "$JWT_KEY_UAT" > server.key
+          elif [[ "$BRANCH_NAME" == "Integra" ]]; then
+            echo "$JWT_KEY_INTEGRA" > server.key
+          fi
+          
           sf org login jwt \
             --client-id "$SFDX_CLIENT_ID" \
             --jwt-key-file server.key \
