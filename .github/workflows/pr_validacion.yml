@@ -119,7 +119,7 @@ jobs:
       - name: 🛂 Autenticarse en Salesforce con JWT
         env:
           SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
-          SFDX_JWT_KEY: ${{ env.SFDX_JWT_KEY_UAT }}
+          SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_INTEGRA }}
           SFDX_USERNAME: ${{ env.USERNAME }}
           SFDX_URL: ${{ env.LOGIN_URL }}
         run: |
