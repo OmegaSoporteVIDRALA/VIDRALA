@@ -121,16 +121,10 @@ jobs:
           SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
           SFDX_USERNAME: ${{ env.USERNAME }}
           SFDX_URL: ${{ env.LOGIN_URL }}
-          JWT_KEY_INTEGRA: ${{ vars.SFDX_JWT_KEY_INTEGRA }}
+          SFDX_JWT_KEY: ${{ vars.SFDX_JWT_KEY_INTEGRA }}
         run: |
-          if [[ "$BRANCH_NAME" == "main" ]]; then
-            echo "$JWT_KEY_PRO" > server.key
-          elif [[ "$BRANCH_NAME" == "uat" ]]; then
-           echo "$JWT_KEY_UAT" > server.key
-          elif [[ "$BRANCH_NAME" == "Integra" ]]; then
-            echo "$JWT_KEY_INTEGRA" > server.key
-          fi
-          
+
+          echo "$SFDX_JWT_KEY" > server.key
           sf org login jwt \
             --client-id "$SFDX_CLIENT_ID" \
             --jwt-key-file server.key \
