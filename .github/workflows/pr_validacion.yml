@@ -121,8 +121,6 @@ jobs:
           SFDX_CLIENT_ID: ${{ env.CLIENT_ID }}
           SFDX_USERNAME: ${{ env.USERNAME }}
           SFDX_URL: ${{ env.LOGIN_URL }}
-          JWT_KEY_PRO: ${{ vars.SFDX_JWT_KEY_PRO }}
-          JWT_KEY_UAT: ${{ vars.SFDX_JWT_KEY_UAT }}
           JWT_KEY_INTEGRA: ${{ vars.SFDX_JWT_KEY_INTEGRA }}
         run: |
           if [[ "$BRANCH_NAME" == "main" ]]; then
