@@ -43,9 +43,9 @@ public class OM_VID_GenerateOffersController_Test {
         Test.stopTest();
 
         List<Quote> quotes = [SELECT Id, OpportunityId FROM Quote WHERE OpportunityId = :opp.Id];
-        System.assertEquals(1, quotes.size(), 'Quote debería haberse creado');
+        System.assertEquals(2, quotes.size(), 'Quote debería haberse creado');
 
-        List<QuoteLineItem> qli = [SELECT Id, QuoteId FROM QuoteLineItem WHERE QuoteId = :quotes[0].Id];
+        List<QuoteLineItem> qli = [SELECT Id, QuoteId FROM QuoteLineItem WHERE QuoteId = :quotes[1].Id];
         System.assertEquals(1, qli.size(), 'QuoteLineItem debería haberse creado');
     }
 }

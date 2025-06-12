@@ -11,8 +11,23 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.OM_VID_NumProductosGanadores__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.OM_VID_NumQuotes__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.OM_VID_TotalPriceProdGanadores__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OpportunityLineItem.OM_VID_ProductoGanador__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
         <layout>Opportunity-Vidrala %28Opportunity Layout%29</layout>
@@ -22,6 +37,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Quote-OM_VID_QuoteFiftyLayout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>QuoteLineItem-FIFTY quote line item layout</layout>
     </layoutAssignments>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
