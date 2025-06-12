@@ -338,7 +338,7 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests "$TEST_CLASSES" \
-              --json > validation-result.json || exit 0
+              --json > validation-result.json || exit 1
           else
             echo "🧱 No se encontraron clases de test. Validando solo los componentes"
             sf deploy metadata validate \
@@ -346,7 +346,7 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests DummyClass \
-              --json > validation-result.json || exit 0
+              --json > validation-result.json || exit 1
           fi
 
           echo "📢 Resultado de la validación:"
@@ -356,8 +356,6 @@ jobs:
           if [ -n "$DEPLOY_ID" ]; then
             mkdir -p .gh-deploy-data
             echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
-          else 
-            exit 1
           fi
 
 
