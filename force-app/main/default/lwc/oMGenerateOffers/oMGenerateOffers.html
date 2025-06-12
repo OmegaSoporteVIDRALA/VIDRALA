@@ -1,0 +1,13 @@
+<template>
+   <template if:true={isScreenOpen}>
+        <div class="floating-screen">
+            <header class="screen-header">
+                <h2>¿Está seguro de querer crear una oferta?</h2>
+            </header>
+            <footer class="screen-footer">
+                <lightning-button variant="neutral" label="No" onclick={closeScreen}></lightning-button>
+                <lightning-button variant="brand" label="Sí" onclick={handleConfirm}></lightning-button>
+            </footer>
+        </div>
+   </template>
+</template>

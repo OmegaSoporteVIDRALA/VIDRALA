@@ -358,6 +358,7 @@ jobs:
             echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
           fi
 
+
       - name: 📬 Guardar commit SHA
         run: |
           mkdir -p .gh-deploy-data

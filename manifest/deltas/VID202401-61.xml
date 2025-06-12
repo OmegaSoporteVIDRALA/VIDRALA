@@ -7,16 +7,12 @@
 	</types>
 	<types>
 		<members>Opportunity.OM_VID_NumQuotes__c</members>
-		<members>Opportunity.OM_VID_NumProductosGanadores__c</members>
-		<members>Opportunity.OM_VID_TotalPriceProdGanadores__c</members>
-		<members>OpportunityLineItem.OM_VID_ProductoGanador__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
 		<members>Opportunity-Vidrala %28Opportunity Layout%29</members>
 		<members>OpportunityLineItem-Opportunity Product Fifty</members>
 		<members>Quote-OM_VID_QuoteFiftyLayout</members>
-		<members>QuoteLineItem-FIFTY quote line item layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -34,10 +30,6 @@
 	<types>
 		<members>Opportunity.OMGenerarOferta</members>
 		<name>QuickAction</name>
-	</types>
-	<types>
-		<members>Opportunity.Vidrala_Do_Not_Close_WIthout_Winner</members>
-		<name>ValidationRule</name>
 	</types>
 	<version>63.0</version>
 </Package>
