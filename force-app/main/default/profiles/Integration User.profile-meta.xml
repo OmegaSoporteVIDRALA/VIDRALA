@@ -299,6 +299,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DummyClass</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DummyClassTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>EmailSendSchedulable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1019,6 +1027,21 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.OM_VID_CustomerClass__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.OM_VID_GrupoTotalFacturacion__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.OM_VID_GrupoTotalToneladas__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.OM_VID_GrupoTotalUnidades__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15795,6 +15818,11 @@
         <editable>true</editable>
         <field>dlrs__LookupRollupSummary2__mdt.dlrs__AggregateOperation__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>dlrs__LookupRollupSummary2__mdt.dlrs__BypassPermissionApiName__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

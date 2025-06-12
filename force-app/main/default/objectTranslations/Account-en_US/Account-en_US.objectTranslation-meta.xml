@@ -151,8 +151,12 @@
         <name>Pan_Euro_Parent_Financials</name>
     </quickActions>
     <quickActions>
-        <label><!-- Vidrala Financials --></label>
-        <name>Vidrala_Financials</name>
+        <label><!-- Vidrala Financials Customer --></label>
+        <name>Vidrala_Financials_Customer</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Vidrala Financials Group --></label>
+        <name>Vidrala_Financials_Group</name>
     </quickActions>
     <recordTypes>
         <description><!-- Competitor --></description>

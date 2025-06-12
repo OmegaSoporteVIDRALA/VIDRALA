@@ -19,6 +19,10 @@
         <value xsi:type="xsd:string">Parent_Current_Financial_Year_Units__c</value>
     </values>
     <values>
+        <field>dlrs__BypassPermissionApiName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
         <field>dlrs__CalculationMode__c</field>
         <value xsi:type="xsd:string">Realtime</value>
     </values>
