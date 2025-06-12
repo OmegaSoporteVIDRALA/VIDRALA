@@ -338,7 +338,7 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests "$TEST_CLASSES" \
-              --json > validation-result.json || exit 1
+              --json > validation-result.json || VALIDATION_FAILED=true
           else
             echo "🧱 No se encontraron clases de test. Validando solo los componentes"
             sf deploy metadata validate \
@@ -346,17 +346,25 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests DummyClass \
-              --json > validation-result.json || exit 1
+              --json > validation-result.json || VALIDATION_FAILED=true
           fi
 
           echo "📢 Resultado de la validación:"
           cat validation-result.json | jq
+
+          if [ "$VALIDATION_FAILED" = true ]; then
+            echo "❌ Se encontraron errores en la validación:"
+            jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' validation-result.json
+            echo "🛑 Proceso detenido por errores de validación."
+            exit 1
+          fi
 
           DEPLOY_ID=$(jq -r '.result.id' validation-result.json)
           if [ -n "$DEPLOY_ID" ]; then
             mkdir -p .gh-deploy-data
             echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
           fi
+
 
       - name: 📬 Guardar commit SHA
         run: |
