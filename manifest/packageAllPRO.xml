@@ -41,16 +41,8 @@
 		<name>AppMenu</name>
 	</types>
 	<types>
-		<members>ISE_IDV</members>
-		<name>ApplicationSubtypeDefinition</name>
-	</types>
-	<types>
 		<members>*</members>
 		<name>ApprovalProcess</name>
-	</types>
-	<types>
-		<members>Lead.Vidrala Assignments Volume%2Fcountry</members>
-		<name>AssignmentRule</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -77,27 +69,12 @@
 		<name>BrandingSet</name>
 	</types>
 	<types>
-		<members>IDV_Audit</members>
-		<name>BusinessProcessTypeDefinition</name>
-	</types>
-	<types>
 		<members>*</members>
 		<name>CMSConnectSource</name>
 	</types>
 	<types>
 		<members>*</members>
 		<name>CallCenter</name>
-	</types>
-	<types>
-		<members>APXTConga4__Conga_Composer_AP_oauth_c4s__Conga_Composer_AP_oauth_c4sCanvas</members>
-		<members>APXTConga4__Conga_Composer_EU_oauth_c4s__Conga_Composer_EU_oauth_c4sCanvas</members>
-		<members>APXTConga4__Conga_Composer_SF1_AP_oauth_c4s__Conga_Composer_SF1_AP_oauth_c4sCanvas</members>
-		<members>APXTConga4__Conga_Composer_SF1_EU_oauth_c4s__Conga_Composer_SF1_EU_oauth_c4sCanvas</members>
-		<members>APXTConga4__Conga_Composer_SF1_oauth_c4s__Conga_Composer_SF1_oauth_c4sCanvas</members>
-		<members>APXTConga4__Conga_Composer_oauth_c4s_2__Conga_Composer_oauth_c4s_2Canvas</members>
-		<members>mule__dataloader_io2_oauth_c4s__dataloader_io2_oauth_c4sCanvas</members>
-		<members>mule__dataloaderio_v2_oauth_c4s__dataloaderio_v2_oauth_c4sCanvas</members>
-		<name>CanvasMetadata</name>
 	</types>
 	<types>
 		<members>*</members>
@@ -213,6 +190,9 @@
 		<members>Account.OM_VID_Blocked__c</members>
 		<members>Account.OM_VID_ClaseRiesgo__c</members>
 		<members>Account.OM_VID_CustomerClass__c</members>
+		<members>Account.OM_VID_GrupoTotalFacturacion__c</members>
+		<members>Account.OM_VID_GrupoTotalToneladas__c</members>
+		<members>Account.OM_VID_GrupoTotalUnidades__c</members>
 		<members>Account.OM_VID_Industry__c</members>
 		<members>Account.OM_VID_IsDistributorAuto__c</members>
 		<members>Account.OM_VID_NIF__c</members>
@@ -411,6 +391,7 @@
 		<members>Case.OM_SAC_Causa_Raiz_Ocurrencia__c</members>
 		<members>Case.OM_SAC_Cod_Egestiona__c</members>
 		<members>Case.OM_SAC_CodigoModelo__c</members>
+		<members>Case.OM_SAC_CosteEstimado__c</members>
 		<members>Case.OM_SAC_DetectadasEnClienteDeCuantas__c</members>
 		<members>Case.OM_SAC_EspecificacionCliente__c</members>
 		<members>Case.OM_SAC_Fotografias__c</members>
@@ -2112,6 +2093,11 @@
 		<members>OM_SAC_lineasDeCentro__c.OM_SAC_unicoformatomultiformato__c</members>
 		<members>OM_SAC_lineasDeCentro__c.OM_SAC_unidadespasteurizacion__c</members>
 		<members>OM_SAC_lineasDeCentro__c.OM_SAC_velocidaddelalinea__c</members>
+		<members>OM_VID_FieldTranslations__mdt.OM_VID_FieldName__c</members>
+		<members>OM_VID_FieldTranslations__mdt.OM_VID_Language__c</members>
+		<members>OM_VID_FieldTranslations__mdt.OM_VID_Object__c</members>
+		<members>OM_VID_FieldTranslations__mdt.OM_VID_Translation__c</members>
+		<members>OM_VID_FieldTranslations__mdt.OM_VID_ValueAPIName__c</members>
 		<members>Opportunity.Actual_Tonnage__c</members>
 		<members>Opportunity.Actual_Volume__c</members>
 		<members>Opportunity.Additional_Analysis_of_Reason_for__c</members>
@@ -2147,6 +2133,7 @@
 		<members>Opportunity.New_Bottle_Information__c</members>
 		<members>Opportunity.OM_AdditionalInformation__c</members>
 		<members>Opportunity.OM_VID_Idioma__c</members>
+		<members>Opportunity.OM_VID_NumQuotes__c</members>
 		<members>Opportunity.Opportunity_Business_Type__c</members>
 		<members>Opportunity.Opportunity_Design_Weight_in_Tons__c</members>
 		<members>Opportunity.Opportunity_Production_Weight_in_Tons__c</members>
@@ -2341,6 +2328,8 @@
 		<members>Quote.OM_VID_Fecha_de_envio_oferta__c</members>
 		<members>Quote.OM_VID_Idioma__c</members>
 		<members>Quote.OM_VID_Oferta_Enviada__c</members>
+		<members>Quote.OM_VID_OpportunityAgreedTerms__c</members>
+		<members>Quote.OM_VID_OpportunityPaymentMethods__c</members>
 		<members>Quote.OM_VID_PaymentMethod__c</members>
 		<members>Quote.Pack_Spec_Details__c</members>
 		<members>Quote.Packaging_Agreement__c</members>
@@ -2727,6 +2716,7 @@
 		<members>dlrs__LookupRollupSummary2__mdt.dlrs__AggregateAllRows__c</members>
 		<members>dlrs__LookupRollupSummary2__mdt.dlrs__AggregateOperation__c</members>
 		<members>dlrs__LookupRollupSummary2__mdt.dlrs__AggregateResultField__c</members>
+		<members>dlrs__LookupRollupSummary2__mdt.dlrs__BypassPermissionApiName__c</members>
 		<members>dlrs__LookupRollupSummary2__mdt.dlrs__CalculationMode__c</members>
 		<members>dlrs__LookupRollupSummary2__mdt.dlrs__CalculationSharingMode__c</members>
 		<members>dlrs__LookupRollupSummary2__mdt.dlrs__ChildObject__c</members>
@@ -4018,6 +4008,49 @@
 		<members>dlrs__fflib_security_error_object_not_insertable</members>
 		<members>dlrs__fflib_security_error_object_not_readable</members>
 		<members>dlrs__fflib_security_error_object_not_updateable</members>
+		<members>omAllOption</members>
+		<members>omAvailable</members>
+		<members>omCancel</members>
+		<members>omClearAll</members>
+		<members>omDelete</members>
+		<members>omDeselectAll</members>
+		<members>omEdit</members>
+		<members>omExact</members>
+		<members>omFilterIn</members>
+		<members>omFilterOperator</members>
+		<members>omFilteredBy</members>
+		<members>omGoTo</members>
+		<members>omHide</members>
+		<members>omInputInvalid</members>
+		<members>omInputRequired</members>
+		<members>omList</members>
+		<members>omLoading</members>
+		<members>omNew</members>
+		<members>omNext</members>
+		<members>omNo</members>
+		<members>omNoResultFound</members>
+		<members>omOf</members>
+		<members>omOnlyDates</members>
+		<members>omOptionsSelected</members>
+		<members>omPrevious</members>
+		<members>omRefresh</members>
+		<members>omSave</members>
+		<members>omSearch</members>
+		<members>omSelect</members>
+		<members>omSelectAll</members>
+		<members>omSelectAnOption</members>
+		<members>omSelectChoose</members>
+		<members>omSelected</members>
+		<members>omShow</members>
+		<members>omShowAs</members>
+		<members>omShowing</members>
+		<members>omStack</members>
+		<members>omTable</members>
+		<members>omTo</members>
+		<members>omUnhideColumns</members>
+		<members>omView</members>
+		<members>omWrap</members>
+		<members>omYes</members>
 		<name>CustomLabel</name>
 	</types>
 	<types>
@@ -4219,6 +4252,7 @@
 		<members>OM_SAC_accionesCorrectivas__c</members>
 		<members>OM_SAC_informedevisita__c</members>
 		<members>OM_SAC_lineasDeCentro__c</members>
+		<members>OM_VID_FieldTranslations__mdt</members>
 		<members>Opportunity</members>
 		<members>OpportunityCompetitor</members>
 		<members>OpportunityContactRole</members>
@@ -5710,5 +5744,5 @@
 		<members>Field_Trip__Object_Analysis__c.Field_Trip__Processing Complete</members>
 		<name>WorkflowRule</name>
 	</types>
-	<version>63.0</version>
+	<version>64.0</version>
 </Package>
