@@ -4,6 +4,7 @@
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
     <description>Whether or not the campaign content&apos;s css was auto-inlined</description>
+    <externalId>false</externalId>
     <label>CSS Auto-Inlined</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

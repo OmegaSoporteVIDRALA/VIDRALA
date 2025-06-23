@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Late_Delivery_Date__c</fullName>
     <description>Expected Delivery Date as determined by the latest Late Load</description>
+    <externalId>false</externalId>
     <inlineHelpText>Expected Delivery Date as determined by the latest Late Load</inlineHelpText>
     <label>Late Delivery Date</label>
     <summarizedField>Late_Load__c.New_Delivery_Date__c</summarizedField>

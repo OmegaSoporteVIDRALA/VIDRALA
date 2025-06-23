@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Is_External_Testing_Required__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Is External Testing Required?</label>
     <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>

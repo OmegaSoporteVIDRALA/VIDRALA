@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Filling_Process_Type__c</fullName>
     <description>Filling process type for design brief</description>
+    <externalId>false</externalId>
     <label>Filling Process Type</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

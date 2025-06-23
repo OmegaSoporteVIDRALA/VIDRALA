@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Additional_Analysis_of_Reason_for__c</fullName>
     <description>Please provide more detail as to the reason why this Opportunity was lost.</description>
+    <externalId>false</externalId>
     <inlineHelpText>Please provide more detail as to the reason why this Opportunity was lost.</inlineHelpText>
     <label>More Info: Reason Opportunity Was Lost</label>
     <length>32768</length>

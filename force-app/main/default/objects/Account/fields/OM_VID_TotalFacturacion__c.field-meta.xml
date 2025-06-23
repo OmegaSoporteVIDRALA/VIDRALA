@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OM_VID_TotalFacturacion__c</fullName>
+    <externalId>false</externalId>
     <label>Total facturación del año</label>
     <summarizedField>Actual_Sales_History__c.OM_VID_Revenue__c</summarizedField>
     <summaryFilterItems>

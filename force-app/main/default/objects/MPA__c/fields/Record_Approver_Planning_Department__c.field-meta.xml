@@ -3,6 +3,7 @@
     <fullName>Record_Approver_Planning_Department__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Please enter specific User who will be required to approve this MPA from the Planning Department</description>
+    <externalId>false</externalId>
     <inlineHelpText>Please enter specific User who will be required to approve this MPA from the Planning Department</inlineHelpText>
     <label>Record Approver: Planning Department</label>
     <referenceTo>User</referenceTo>

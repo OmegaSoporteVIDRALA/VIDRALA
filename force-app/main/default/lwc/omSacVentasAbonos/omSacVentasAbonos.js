@@ -1,11 +1,14 @@
 import { LightningElement, track, wire, api } from 'lwc';
+import { getRecord } from 'lightning/uiRecordApi';
 import getTableData from '@salesforce/apex/OM_VID_VentasAbonosTableController.getTableData';
-import makeBWVACallout from '@salesforce/apex/OM_VID_VentasAbonosTableController.makeBWVACallout';
 import getAccount from '@salesforce/apex/OM_VID_VentasAbonosTableController.getAccountCode';
 import { CurrentPageReference } from 'lightning/navigation';
 import { NavigationMixin } from 'lightning/navigation';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import getOrderReasonValues from '@salesforce/apex/OM_VID_VentasAbonosTableController.getOrderReasonValues';
+import getMaterials from '@salesforce/apex/OM_VID_VentasAbonosTableController.getMaterials';
+import NAME_FIELD from '@salesforce/schema/Product2.Name';
+import CODE_FIELD from '@salesforce/schema/Product2.OM_Product_Code_SIP__c';
 
 export default class OmSacVentasAbonos extends LightningElement {
     
@@ -13,6 +16,12 @@ export default class OmSacVentasAbonos extends LightningElement {
     errors;
     ratiosNumber = 0;
     customerCode;
+    materialOptions = [];
+    isDisabled = true; 
+    placeholderMaterial = 'Todos';
+    productOptions = [];
+    isDisabledProduct = true; 
+    placeholderProduct = 'Todos';
     @track isSearchScreen = true;
     @track isInitialScreen = true;
     @track isLoadScreen = false;
@@ -23,10 +32,14 @@ export default class OmSacVentasAbonos extends LightningElement {
     @track selectedYear = '';
     @track selectedYearTo = '';
     @track selectedOrderLabel = '';
+    @track selectedMaterial = '';
+    @track selectedProduct = '';
     @track showTable = false;
     @track recordId;
-    @track selectedOrder = [];
     @track orderOptions = [];
+    @track selectedProductId = '';
+    @track selectedProductName = '';
+    @track selectedProductCode = 'vacio';
     currentPageReference = null; 
     urlStateParameters = null;
 
@@ -45,15 +58,97 @@ export default class OmSacVentasAbonos extends LightningElement {
        }
     }
     
-
     @wire(getAccount, { accountId: '$recordId' })
     wiredProductCode({ error, data }) {
-    if (data) {
-        this.customerCode = data.SAP_Account_Number__c; 
-        console.log('Código del cliente obtenido:', this.customerCode);  
-    } else if (error) {
-        console.error('Error al obtener el código de la cuenta:', error);
+        if (data) {
+            this.customerCode = data.SAP_Account_Number__c;
+            console.log('Código del cliente obtenido:', this.customerCode);
+        } else if (error) {
+            console.error('Error al obtener el código de la cuenta:', error);
+        }
     }
+
+    // Obtener datos del producto seleccionado
+    @wire(getRecord, { recordId: '$selectedProductId', fields: [NAME_FIELD, CODE_FIELD] })
+    wiredProduct({ data, error }) {
+        if (data) {
+            this.selectedProductName = data.fields.Name.value;
+            this.selectedProductCode = data.fields.OM_Product_Code_SIP__c.value;
+            console.log('Nombre:', this.selectedProductName);
+            console.log('Código SIP:', this.selectedProductCode);
+        } else if (error) {
+            console.error('Error al recuperar datos del producto:', error);
+        }
+    }
+
+    // Cuando se selecciona producto desde el lookup
+    handleSelected(event) {
+        const selectedRecord = event.detail[0]; // objeto completo
+        if (selectedRecord && selectedRecord.Id) {
+            this.selectedProductId = selectedRecord.Id;
+            console.log('Producto seleccionado ID:', this.selectedProductId);
+            this.loadMaterials();
+        } else {
+            this.selectedProductId = '';
+            this.selectedProductCode = 'vacio';
+            this.selectedProductName = '';
+            this.materialOptions = [];
+            this.selectedMaterial = 'vacio';
+            this.isDisabled = true;
+            console.log('Producto deseleccionado, valores reseteados');
+        }
+    }
+
+    
+
+    handleInvalidProduct(event) {
+        if (!this.selectedProduct) {
+            event.target.setCustomValidity('Por favor, selecciona un Product.');
+        } else {
+            event.target.setCustomValidity('');
+        }
+    }
+
+    loadMaterials() {
+    getMaterials({ productId: this.selectedProductId })
+        .then(data => {
+            if (data && data.length > 0) {
+                this.materialOptions = [
+                    { label: 'Todos', value: 'vacio' },
+                    ...data.map(material => ({
+                        label: material,
+                        value: material
+                    }))
+                ];
+                this.selectedMaterial = 'vacio';
+                this.isDisabled = false;
+                console.log('Materiales cargados');
+            } else {
+                this.materialOptions = [];
+                this.selectedMaterial = 'vacio';
+                this.isDisabled = true;
+                console.log('Sin materiales para este producto');
+            }
+        })
+        .catch(error => {
+            console.error('Error al cargar materiales:', error);
+            this.materialOptions = [];
+            this.selectedMaterial = 'vacio';
+            this.isDisabled = true;
+        });
+}
+
+    handleMaterialChange(event) {
+        this.selectedMaterial = event.target.value; 
+        console.log('Material seleccionado:', this.selectedMaterial); 
+    }
+
+    handleInvalidMaterial(event) {
+        if (!this.selectedMaterial) {
+            event.target.setCustomValidity('Por favor, selecciona un Material.');
+        } else {
+            event.target.setCustomValidity('');
+        }
     }
 
     generateMonthOptions() {
@@ -298,6 +393,14 @@ export default class OmSacVentasAbonos extends LightningElement {
         params.orderReason = this.selectedOrder; 
     }
 
+    if (this.selectedProductCode !== 'vacio') {
+            params.model = this.selectedProductCode;
+    }   
+
+    if (this.selectedMaterial !== 'vacio') {
+            params.material = this.selectedMaterial;
+    }
+    
     this.isInitialScreen = false;
     this.isLoadScreen = true;
 
@@ -381,6 +484,11 @@ export default class OmSacVentasAbonos extends LightningElement {
         this.selectedOrder = '';  
         this.selectedYear = '';
         this.selectedYearTo = '';
+        this.selectedProductCode = 'vacio';
+        this.selectedProductId = '';
+        this.selectedProductName = '';
+        this.selectedMaterial = 'vacio';
+
     }
 
     connectedCallback() {

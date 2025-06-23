@@ -5,7 +5,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>runtime_sales_todo_list:unifiedToDoListAuraWrapper</componentName>
-                <identifier>runtime_sales_todo_list_unifiedToDoListAuraWrapper</identifier>
             </componentInstance>
         </itemInstances>
         <name>utilityItems</name>

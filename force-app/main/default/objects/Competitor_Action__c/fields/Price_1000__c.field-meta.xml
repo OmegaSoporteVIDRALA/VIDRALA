@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Price_1000__c</fullName>
     <description>Precio €/1000</description>
+    <externalId>false</externalId>
     <inlineHelpText>Precio €/1000</inlineHelpText>
     <label>Price €/1000</label>
     <precision>18</precision>

@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Volume_Pallets_Web_Capture__c</fullName>
     <description>Used to capture the number of pallets  by comma eliminated list</description>
+    <externalId>false</externalId>
     <label>Volume Pallets Web Capture</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>

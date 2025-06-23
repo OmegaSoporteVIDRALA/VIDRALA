@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Items_Discussed__c</fullName>
     <description>Items discussed and meeting notes</description>
+    <externalId>false</externalId>
     <label>Items Discussed</label>
     <length>32768</length>
     <trackFeedHistory>true</trackFeedHistory>

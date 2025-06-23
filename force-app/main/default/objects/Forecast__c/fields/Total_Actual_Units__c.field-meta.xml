@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Total_Actual_Units__c</fullName>
     <description>Total dispatched units for this month and  product</description>
+    <externalId>false</externalId>
     <label>Total Actual Units</label>
     <summarizedField>Dispatch__c.Units__c</summarizedField>
     <summaryForeignKey>Dispatch__c.Forecast__c</summaryForeignKey>

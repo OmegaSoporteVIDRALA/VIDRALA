@@ -24,7 +24,6 @@
                     <value>1</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
-                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -39,7 +38,6 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Attendee_Type__c</fieldItem>
-                <identifier>RecordAttendee_Type__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -49,7 +47,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Account__c</fieldItem>
-                <identifier>RecordAccount__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -59,7 +56,6 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Beverages_Customer__c</fieldItem>
-                <identifier>RecordBeverages_Customer__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
@@ -76,7 +72,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Beverages_Customer_Contact_Account__c</fieldItem>
-                <identifier>RecordBeverages_Customer_Account_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -86,7 +81,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Contact__c</fieldItem>
-                <identifier>RecordContact__cField</identifier>
                 <visibilityRule>
                     <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
@@ -109,7 +103,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Personnel__c</fieldItem>
-                <identifier>RecordPersonnel__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
@@ -126,7 +119,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Event__c</fieldItem>
-                <identifier>RecordEvent__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -136,7 +128,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Is_a_Hotel_Required__c</fieldItem>
-                <identifier>RecordIs_a_Hotel_Required_cField1</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-5cc2e43c-bbff-40b9-97a1-f90660cd5036</name>
@@ -150,7 +141,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.OwnerId</fieldItem>
-                <identifier>RecordOwnerIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -160,7 +150,6 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Tier__c</fieldItem>
-                <identifier>RecordTier__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -170,7 +159,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Status__c</fieldItem>
-                <identifier>RecordStatus__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -180,7 +168,6 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Invite_Sent_Date__c</fieldItem>
-                <identifier>RecordInvite_Sent_Date__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Status__c}</leftValue>
@@ -197,7 +184,6 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Declined_Reason__c</fieldItem>
-                <identifier>RecordDeclined_Reason__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Status__c}</leftValue>
@@ -218,7 +204,6 @@
                     <value>Facet-5cc2e43c-bbff-40b9-97a1-f90660cd5036</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -228,7 +213,6 @@
                     <value>Facet-c0027254-e112-4534-a886-737d3f723c55</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-38ce5496-6f57-4bbf-bdde-7f7d3503da44</name>
@@ -242,7 +226,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Night_before_event__c</fieldItem>
-                <identifier>RecordNight_before_event_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-26058587-7c69-4caf-8911-f09bcfdc61f5</name>
@@ -256,7 +239,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Night_of_event__c</fieldItem>
-                <identifier>RecordNight_of_event_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-392e9f27-af9a-4fdd-ba0d-e29896e03f0d</name>
@@ -270,7 +252,6 @@
                     <value>Facet-26058587-7c69-4caf-8911-f09bcfdc61f5</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column9</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -280,7 +261,6 @@
                     <value>Facet-392e9f27-af9a-4fdd-ba0d-e29896e03f0d</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column10</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-64e101e8-7845-4a8e-a10b-9da54b15a4c6</name>
@@ -294,7 +274,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Contact_Job_Title__c</fieldItem>
-                <identifier>RecordContact_Job_Title__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
@@ -311,7 +290,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Account_Owner__c</fieldItem>
-                <identifier>RecordAccount_Owner__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
@@ -328,7 +306,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CompanyOrAccount__c</fieldItem>
-                <identifier>RecordCompanyOrAccount__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
@@ -349,7 +326,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Contact_Email__c</fieldItem>
-                <identifier>RecordContact_Email__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
@@ -366,7 +342,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Contact_Phone__c</fieldItem>
-                <identifier>RecordContact_Phone__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
@@ -383,7 +358,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Contact_Mobile_Phone__c</fieldItem>
-                <identifier>RecordContact_Mobile_Phone__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
@@ -404,7 +378,6 @@
                     <value>Facet-ba525c16-b850-43fb-9683-4b222c8230ae</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -414,7 +387,6 @@
                     <value>Facet-7d6c39fb-2fdc-4291-9ab6-0796aac09131</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-54a7e6a9-9f50-4a1e-b4df-7ae84cf53a84</name>
@@ -428,7 +400,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Transport__c</fieldItem>
-                <identifier>RecordTransport__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -438,7 +409,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.General_Member_Comments__c</fieldItem>
-                <identifier>RecordGeneral_Member_Comments__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -448,7 +418,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Golf_Handicap__c</fieldItem>
-                <identifier>RecordGolf_Handicap_cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Event__r.Event_Type__c}</leftValue>
@@ -469,7 +438,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Dietary_Requirements__c</fieldItem>
-                <identifier>RecordDietary_Requirements__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -479,7 +447,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Accessibility_Requirements__c</fieldItem>
-                <identifier>RecordAccessibility_Requirements__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -489,7 +456,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Dietary_Requirements_Comments__c</fieldItem>
-                <identifier>RecordDietary_Requirements_Comments__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -499,7 +465,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Accessibility_Requirements_Comments__c</fieldItem>
-                <identifier>RecordAccessibility_Requirements_Comments__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-aa2e7212-276e-4849-9fba-7a0da728c690</name>
@@ -513,7 +478,6 @@
                     <value>Facet-2d852e9d-7668-4676-8809-b83304f69fe0</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -523,7 +487,6 @@
                     <value>Facet-aa2e7212-276e-4849-9fba-7a0da728c690</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column6</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-3b40d55f-7943-4025-8f27-e1d51e7c0afb</name>
@@ -537,7 +500,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CreatedById</fieldItem>
-                <identifier>RecordCreatedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-5965a244-b623-4a24-a82c-66fe287a605c</name>
@@ -551,7 +513,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.LastModifiedById</fieldItem>
-                <identifier>RecordLastModifiedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-0d03fcc7-dd64-4ead-9aaa-469c07ecb63d</name>
@@ -565,7 +526,6 @@
                     <value>Facet-5965a244-b623-4a24-a82c-66fe287a605c</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column7</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -575,7 +535,6 @@
                     <value>Facet-0d03fcc7-dd64-4ead-9aaa-469c07ecb63d</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column8</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-fae3e8e6-f5cf-4e5a-be2e-bf385c14059b</name>
@@ -597,7 +556,6 @@
                     <value>Details</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -615,7 +573,6 @@
                     <value>EVENT ONLY HOTEL REQUIREMENTS</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection5</identifier>
                 <visibilityRule>
                     <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
@@ -646,7 +603,6 @@
                     <value>Attendee Details</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection2</identifier>
                 <visibilityRule>
                     <booleanFilter>1 AND 2</booleanFilter>
                     <criteria>
@@ -677,7 +633,6 @@
                     <value>Details</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection3</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Is_New__c}</leftValue>
@@ -702,13 +657,11 @@
                     <value>System Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection4</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>force:recordDetailPanelMobile</componentName>
-                <identifier>force_recordDetailPanelMobile</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -731,7 +684,6 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListContainer</componentName>
-                <identifier>force_relatedListContainer</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -754,7 +706,6 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>detailTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -768,7 +719,6 @@
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>relatedListsTab</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -783,7 +733,6 @@
                     <value>maintabs</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -798,7 +747,6 @@
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentName>runtime_sales_activities:activityPanel</componentName>
-                <identifier>runtime_sales_activities_activityPanel</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

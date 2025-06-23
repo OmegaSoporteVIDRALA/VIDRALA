@@ -3,6 +3,7 @@
     <fullName>Parent_Event_Filling__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>event type filling</description>
+    <externalId>false</externalId>
     <label>Parent Budget (Filling)</label>
     <lookupFilter>
         <active>true</active>

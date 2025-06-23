@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Current_Financial_Year_Revenue__c</fullName>
     <description>summary of current financial year revenue taken from actual sales history</description>
+    <externalId>false</externalId>
     <inlineHelpText>A sum of current financial year revenue taken from actual sales history</inlineHelpText>
     <label>Current Financial Year Revenue</label>
     <summarizedField>Actual_Sales_History__c.Revenue__c</summarizedField>

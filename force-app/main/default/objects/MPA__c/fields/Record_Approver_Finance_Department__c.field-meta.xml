@@ -3,6 +3,7 @@
     <fullName>Record_Approver_Finance_Department__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>lease enter specific User who will be required to approve this MPA from the Finance Department</description>
+    <externalId>false</externalId>
     <inlineHelpText>lease enter specific User who will be required to approve this MPA from the Finance Department</inlineHelpText>
     <label>Record Approver: Finance Department</label>
     <lookupFilter>

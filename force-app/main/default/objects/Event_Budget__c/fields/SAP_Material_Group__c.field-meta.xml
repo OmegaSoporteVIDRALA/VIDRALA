@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>SAP_Material_Group__c</fullName>
     <description>Budget Types that Encirc Uses</description>
+    <externalId>false</externalId>
     <label>SAP Material Group</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

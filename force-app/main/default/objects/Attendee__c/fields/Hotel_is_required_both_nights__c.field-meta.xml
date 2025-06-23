@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Hotel_is_required_both_nights__c</fullName>
     <description>For reporting purposes</description>
+    <externalId>false</externalId>
     <formula>IF(Night_before_event__c = TRUE &amp;&amp; Night_of_event__c = TRUE, TRUE, FALSE)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Hotel is required both nights</label>

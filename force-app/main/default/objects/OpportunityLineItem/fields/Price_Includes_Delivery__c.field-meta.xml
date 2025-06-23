@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Price_Includes_Delivery__c</fullName>
     <description>Define whether the price being offered includes delivery, and if not which ex-works location the price refers to the description above is legacy this field was repurposed by Fifty there is a automation linked to it.</description>
+    <externalId>false</externalId>
     <label>Incoterms</label>
     <required>false</required>
     <type>Picklist</type>

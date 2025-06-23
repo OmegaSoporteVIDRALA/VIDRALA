@@ -15,10 +15,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Consumer_Complaint__c.Quality_Manager_Comments_Populated</nameSegment>
     </actionCalls>
     <apiVersion>55.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Assign_Consumer_Complaint_Name</name>
         <label>Assign Consumer Complaint Name</label>
@@ -267,7 +265,6 @@
     </decisions>
     <description>After Create and Update Flow for the Consumer Complaint object
 *Updated Date Formula</description>
-    <environments>Default</environments>
     <formulas>
         <description>Whenever a User updates the Comments Text field, this keeps PreviousComments field populated with the previous Text from the Comments field.</description>
         <name>formula_PreviousComments</name>

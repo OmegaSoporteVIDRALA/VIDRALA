@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Microbiological_Water_Test__c</fullName>
+    <externalId>false</externalId>
     <formula>NOT(ISBLANK(Water_Test_Text__c))</formula>
     <label>Microbiological Water Test</label>
     <trackTrending>false</trackTrending>

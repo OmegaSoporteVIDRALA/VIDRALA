@@ -3,6 +3,7 @@
     <fullName>Other_Strategic_or_Operational_Fit__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Would this customer fit in with other strategic or operational goals?</description>
+    <externalId>false</externalId>
     <inlineHelpText>Would this customer fit in with other strategic or operational goals?</inlineHelpText>
     <label>Other Strategic or Operational Fit?</label>
     <trackFeedHistory>false</trackFeedHistory>

@@ -3,6 +3,7 @@
     <fullName>MC4SF__ClickTale__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>ClickTale Tracking Enabled</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

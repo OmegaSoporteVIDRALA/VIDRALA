@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Actual_Expenditure_Balance__c</fullName>
     <description>A DLRS Roll-Up Updates This Field</description>
+    <externalId>false</externalId>
     <label>Actual Final Pmt</label>
     <precision>18</precision>
     <required>false</required>

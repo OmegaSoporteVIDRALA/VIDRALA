@@ -17,7 +17,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Services_Visit_Report__c.Customer_Service_Visit_Report_Complete</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_Alert_for_Corsico</name>
@@ -33,7 +32,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Services_Visit_Report__c.Customer_Services_Visit_Report_Corsico</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_alert_for_Derrylin</name>
@@ -49,7 +47,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Services_Visit_Report__c.Customer_Services_Visit_Report_Derrylin</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_alert_for_Elton</name>
@@ -65,10 +62,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Services_Visit_Report__c.Customer_Services_Visit_Report_Elton</nameSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Assign_Account_Manager_email</name>
         <label>Assign Account Manager email</label>
@@ -463,7 +458,6 @@
             <label>True</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <name>Name_change_check</name>
         <dataType>Boolean</dataType>

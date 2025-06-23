@@ -3,6 +3,7 @@
     <fullName>bar__Backup_Files__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Backup Files</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

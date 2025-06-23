@@ -3,6 +3,7 @@
     <fullName>MC4SF__User_Contacts_Only__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>User Contacts Only</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

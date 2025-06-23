@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DLRS_Trade_Event_Budget_F__c</fullName>
     <description>DLRS Filling roll up</description>
+    <externalId>false</externalId>
     <label>Trade Event Budget (F)</label>
     <precision>18</precision>
     <required>false</required>

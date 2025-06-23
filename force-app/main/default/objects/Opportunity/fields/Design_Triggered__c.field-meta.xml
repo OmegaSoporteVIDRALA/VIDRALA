@@ -3,6 +3,7 @@
     <fullName>Design_Triggered__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Used to identify when the creation of a new Design record has been triggered from the Opportunity. It ensures that multiple design records are not created for the same opportunity.</description>
+    <externalId>false</externalId>
     <label>Design Triggered</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

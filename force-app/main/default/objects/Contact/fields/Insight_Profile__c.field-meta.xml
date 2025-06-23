@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Insight_Profile__c</fullName>
+    <externalId>false</externalId>
     <inlineHelpText>&quot;Yellow = Involve me&quot;.                                                                                                                                                              
 &quot;Red = Be brief, Be bright, Be gone&quot;.
 &quot;Blue = Give me detail&quot;.

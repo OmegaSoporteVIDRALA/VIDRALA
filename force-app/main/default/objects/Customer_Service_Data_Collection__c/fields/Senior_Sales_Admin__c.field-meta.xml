@@ -3,6 +3,7 @@
     <fullName>Senior_Sales_Admin__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>For email alert</description>
+    <externalId>false</externalId>
     <label>Senior Sales Admin</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Customer_Service_Data_Collections2</relationshipName>

@@ -3,6 +3,7 @@
     <fullName>Account_Owner__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Field used to capture the Account Owner; utilised for automated email for the &apos;Customer Service Data Collections&apos; report</description>
+    <externalId>false</externalId>
     <label>Account Owner</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Customer_Service_Data_Collections</relationshipName>

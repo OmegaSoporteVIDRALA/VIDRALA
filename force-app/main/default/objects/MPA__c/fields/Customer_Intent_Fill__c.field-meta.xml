@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer_Intent_Fill__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Customer Intent: Fill</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

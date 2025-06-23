@@ -17,7 +17,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Service_Data_Collection__c.Customer_Services_Data_Report_All</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_Alert_for_All_CS</name>
@@ -36,7 +35,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Service_Data_Collection__c.Customer_Services_Data_Report_All</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_Alert_for_All_DR</name>
@@ -55,7 +53,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Service_Data_Collection__c.Customer_Services_Data_Report_All</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Customer_Services_Data_Collection_notification</name>
@@ -71,7 +68,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Service_Data_Collection__c.Customer_Service_Data_Collection_Report_Complete_Email_Alert</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Customer_Services_Data_Collection_notification2</name>
@@ -87,7 +83,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Service_Data_Collection__c.Customer_Service_Data_Collection_Report_Complete_Email_Alert</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Customer_Services_Data_Collection_notification3</name>
@@ -103,10 +98,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Service_Data_Collection__c.Customer_Service_Data_Collection_Report_Complete_Email_Alert</nameSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
@@ -264,7 +257,6 @@
             <label>True</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Customer Service Data Collection - Create or Update Triggered {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Customer Service Data Collection - Create or Update Triggered</label>
     <processMetadataValues>

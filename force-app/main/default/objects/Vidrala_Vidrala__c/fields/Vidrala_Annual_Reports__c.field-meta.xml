@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Vidrala_Annual_Reports__c</fullName>
+    <externalId>false</externalId>
     <label>Vidrala Annual Reports</label>
     <referenceTo>Vidrala_Customer_Survey_Annual_Reports__c</referenceTo>
     <relationshipName>Vidrala_Customer_Surveys</relationshipName>

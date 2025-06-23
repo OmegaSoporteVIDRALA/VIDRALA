@@ -3,6 +3,7 @@
     <fullName>MC4SF__User_Leads_Only__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>User Leads Only</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

@@ -11,11 +11,13 @@ public with sharing class OM_VID_OpportunityTRGHandler {
     private static Boolean byPassApex = false;
 
 	public static void setbyPassApex(Boolean skip){
-		byPassApex = skip;
+		byPassApex = skip;        
 	}
 
 	public static Boolean getbyPassApex(){
-		return byPassApex;
+		return byPassApex;     
+        
+        
 	}
 
     public static void execute(
@@ -120,7 +122,7 @@ public with sharing class OM_VID_OpportunityTRGHandler {
         for(Opportunity opp : oppList){
             Quote q = new Quote();
             //recupero cuantas quotes tiene cada Opp?
-            q.Name = opp.Name + '_v1';
+            q.Name = opp.Name + '_v' + String.valueOf(opp.OM_VID_NumQuotes__c + 1);
             q.OpportunityId = opp.Id;
             q.recordTypeId = recordTypeId;
             q.ExpirationDate = Date.today() + 30;

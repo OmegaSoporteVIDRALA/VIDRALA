@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Is_Drawing_Record_Found</name>
         <label>Is Drawing Record Found</label>
@@ -24,7 +23,6 @@
             <label>Drawing Record Found</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Field Update on Trial Data lookup on Drawing Object {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Field Update on Trial Data lookup on Drawing Object</label>
     <processMetadataValues>

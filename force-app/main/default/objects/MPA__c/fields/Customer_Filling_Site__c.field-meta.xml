@@ -3,6 +3,7 @@
     <fullName>Customer_Filling_Site__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Please select correct Account to reference the Customer Filling Site for this MPA</description>
+    <externalId>false</externalId>
     <inlineHelpText>Please select correct Account to reference the Customer Filling Site for this MPA</inlineHelpText>
     <label>Customer Filling Site</label>
     <referenceTo>Account</referenceTo>

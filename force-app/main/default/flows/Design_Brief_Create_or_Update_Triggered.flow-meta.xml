@@ -17,11 +17,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Design_Brief__c.NEW_Design_Brief_is_Created</nameSegment>
-        <offset>0</offset>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
@@ -45,7 +42,6 @@
         </rules>
     </decisions>
     <description>Removed second email alert</description>
-    <environments>Default</environments>
     <formulas>
         <name>Is_New</name>
         <dataType>Boolean</dataType>

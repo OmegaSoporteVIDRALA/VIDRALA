@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Running_First_Short_Run_Ext_triall_glass__c</fullName>
     <description>Date Customer Running First Short Run / Extended Trial Glass</description>
+    <externalId>false</externalId>
     <inlineHelpText>Date Customer Running First Short Run / Extended Trial Glass</inlineHelpText>
     <label>Date Customer Running First Short Run*</label>
     <required>false</required>

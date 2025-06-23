@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
@@ -24,7 +23,6 @@
             <label>Flow should run</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>MPA Fifty - Create or Update Triggered {!$Flow.CurrentDateTime}</interviewLabel>
     <label>MPA Fifty - Create or Update Triggered</label>
     <processMetadataValues>

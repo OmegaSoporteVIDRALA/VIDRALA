@@ -3,6 +3,7 @@
     <fullName>Report_Complete__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Checkbox that needs to be checked once the internal report has been completed and attached</description>
+    <externalId>false</externalId>
     <label>Report Complete</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

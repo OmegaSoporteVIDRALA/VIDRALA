@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Budget_Start_Date__c</fullName>
     <description>Date The Budget Started</description>
+    <externalId>false</externalId>
     <label>Budget Start Date</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

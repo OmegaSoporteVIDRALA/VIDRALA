@@ -3,6 +3,7 @@
     <fullName>Event__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Look up to the Event</description>
+    <externalId>false</externalId>
     <label>Event</label>
     <referenceTo>Events__c</referenceTo>
     <relationshipLabel>Attendees</relationshipLabel>

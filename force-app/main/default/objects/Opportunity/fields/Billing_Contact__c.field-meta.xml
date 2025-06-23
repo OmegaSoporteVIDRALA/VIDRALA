@@ -3,6 +3,7 @@
     <fullName>Billing_Contact__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Refers to the person responsible for receiving invoices related to this opportunity</description>
+    <externalId>false</externalId>
     <inlineHelpText>Refers to the person responsible for receiving invoices related to this opportunity</inlineHelpText>
     <label>Billing Contact</label>
     <referenceTo>Contact</referenceTo>

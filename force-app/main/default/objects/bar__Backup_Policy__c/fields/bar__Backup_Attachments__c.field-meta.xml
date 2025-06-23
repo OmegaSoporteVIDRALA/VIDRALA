@@ -3,6 +3,7 @@
     <fullName>bar__Backup_Attachments__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Backup Attachments (not used)</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

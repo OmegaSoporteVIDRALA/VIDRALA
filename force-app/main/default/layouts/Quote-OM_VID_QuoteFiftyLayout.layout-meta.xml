@@ -40,7 +40,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
+                <field>OM_VID_OpportunityAgreedTerms__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>OM_VID_PaymentMethod__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OM_VID_OpportunityPaymentMethods__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -343,6 +351,8 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
+        <excludeButtons>AddQuoteLine</excludeButtons>
+        <excludeButtons>MultiAdd</excludeButtons>
         <fields>QUOTE_LI.PRODUCT2</fields>
         <fields>ProductCode</fields>
         <fields>QUOTE_LI.UNIT_PRICE</fields>

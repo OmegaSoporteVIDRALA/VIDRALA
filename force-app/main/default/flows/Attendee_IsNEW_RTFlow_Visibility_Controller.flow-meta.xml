@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>62.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <description>isNew is used for ligntning page visibility  to hide sections on the new screen</description>
         <name>IsNEW_to_OFF</name>
@@ -19,7 +18,6 @@
     <description>Is New is default TRUE this Flow unticks that field on creation of the record  controlling the visibility of sections on the lightning details page  that is shown when creating a new record 
 
 doesn&apos;t need should flows run controller as we still want this to run if a new record is created or uploaded</description>
-    <environments>Default</environments>
     <interviewLabel>Attendee IsNEW RTFlow Visability Controller {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Attendee IsNEW RTFlow Visibility Controller</label>
     <processMetadataValues>

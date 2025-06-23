@@ -3,6 +3,7 @@
     <fullName>Account__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
     <description>Associated Account</description>
+    <externalId>false</externalId>
     <label>Account</label>
     <referenceTo>Account</referenceTo>
     <relationshipLabel>Accounts Competitor Prices</relationshipLabel>

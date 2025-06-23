@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <description>The Date for first time any of Manufacturing Fault Present, Legal Y/N and Injury Y/N have Yes selected</description>
         <name>Complaint_Type_Confirmed</name>
@@ -47,7 +46,6 @@
             <label>Complaint is Yes?</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <description>Encirc Reference No – Customer - Date Raised</description>
         <name>formulaComplaintName</name>

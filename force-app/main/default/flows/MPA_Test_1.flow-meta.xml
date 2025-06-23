@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>myRule_1</name>
         <label>Sales Org Set or Changed</label>
@@ -51,7 +50,6 @@
     </decisions>
     <description>Migrated from the MPA Test process using multiple criteria.
 Trial record created once approved and reason for trial entered.</description>
-    <environments>Default</environments>
     <formulas>
         <name>formula_1_myRule_1_A1_0415229080</name>
         <dataType>String</dataType>

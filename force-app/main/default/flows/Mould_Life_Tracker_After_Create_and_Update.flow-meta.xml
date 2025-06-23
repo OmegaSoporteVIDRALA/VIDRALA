@@ -17,7 +17,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Account_Manager_Commercial_obsolete_Design_Team_Approved</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Account_Manager_Commercial_obsolete_Design_Team_Rejected</name>
@@ -36,7 +35,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Account_Manager_Commercial_obsolete_Design_Team_Rejected</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Design_Commercial_obsolete_Account_Approval</name>
@@ -55,7 +53,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Design_Commercial_obsolete_Account_Approval</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Design_Commercial_obsolete_Account_Approval_0</name>
@@ -74,7 +71,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Design_Commercial_obsolete_Account_Approval</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Design_Commercial_obsolete_Account_Rejection</name>
@@ -93,7 +89,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Design_Commercial_obsolete_Account_Rejection</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Design_Commercial_obsolete_Account_Rejection_0</name>
@@ -112,7 +107,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Design_Commercial_obsolete_Account_Rejection</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_Alert_to_Mould_Shop</name>
@@ -131,7 +125,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Lifecycle_Submitted_to_Mould_Shop</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_Alert_to_Mould_Shop_0_0</name>
@@ -147,7 +140,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Lifecycle_Submitted_to_Mould_Shop</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_Alert_to_Mould_Shop_0_0_0</name>
@@ -166,7 +158,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Lifecycle_Submitted_to_Mould_Shop</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_Alert_to_Mould_Shop_0_0_0_0</name>
@@ -185,7 +176,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Lifecycle_Submitted_to_Mould_Shop</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Email_Alert_to_Mould_Shop_0_0_0_0_0_0_0_0</name>
@@ -204,7 +194,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Lifecycle_Submitted_to_Mould_Shop</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Mould_has_been_Scrapped_Alert</name>
@@ -223,7 +212,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_has_been_Scrapped_Alert</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Mould_Shop_Obsolete_Moulds_Account_Manager_Approved</name>
@@ -242,7 +230,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Shop_Obsolete_Moulds_Account_Manager_Approved</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Mould_Shop_Obsolete_Moulds_Account_Manager_Rejected</name>
@@ -261,7 +248,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Shop_Obsolete_Moulds_Account_Manager_Rejected</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Mould_Shop_Obsolete_Moulds_Design_Team_Approved</name>
@@ -277,7 +263,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Shop_Obsolete_Moulds_Design_Team_Approved</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Mould_Shop_Obsolete_Moulds_Design_Team_Rejected</name>
@@ -296,7 +281,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Mould_Life_Tracker__c.Mould_Shop_Obsolete_Moulds_Design_Team_Rejected</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Approval_alert_to_submitter_0_0</name>
@@ -339,7 +323,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Approval_alert_to_submitter_0_0_0</name>
@@ -382,7 +365,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Approval_alert_to_submitter_0_0_0_0</name>
@@ -425,7 +407,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Approval_alert_to_submitter_0_0_0_0_0</name>
@@ -468,7 +449,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Rejection_alert_to_submitter</name>
@@ -511,7 +491,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Rejection_alert_to_submitter_0_0</name>
@@ -554,7 +533,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Rejection_alert_to_submitter_0_0_0</name>
@@ -597,7 +575,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Rejection_alert_to_submitter_0_0_0_0</name>
@@ -640,7 +617,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_Rejection_alert_to_submitter_0_0_0_0_0</name>
@@ -683,10 +659,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <apiVersion>55.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Add_Submitter_Id</name>
         <label>Add Submitter Id</label>
@@ -1171,7 +1145,6 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <name>formula6MonthsDueDate</name>
         <dataType>Date</dataType>

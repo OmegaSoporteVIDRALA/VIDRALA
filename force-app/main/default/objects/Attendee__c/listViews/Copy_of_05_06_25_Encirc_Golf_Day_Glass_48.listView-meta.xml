@@ -25,7 +25,7 @@
     <filters>
         <field>Status__c</field>
         <operation>equals</operation>
-        <value>Nominated,Invite Sent,Accepted</value>
+        <value>Invite Sent,Accepted</value>
     </filters>
     <filters>
         <field>Account__c</field>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>OM_VID_Object__c</columns>
+    <columns>OM_VID_FieldName__c</columns>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>OM_VID_Language__c</columns>
+    <columns>OM_VID_ValueAPIName__c</columns>
+    <columns>OM_VID_Translation__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

@@ -3,6 +3,7 @@
     <fullName>Trial_Data_Lookup__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Lookup to Trial Data object</description>
+    <externalId>false</externalId>
     <label>Trial Data Lookup</label>
     <referenceTo>Trial_Data__c</referenceTo>
     <relationshipLabel>Drawings</relationshipLabel>

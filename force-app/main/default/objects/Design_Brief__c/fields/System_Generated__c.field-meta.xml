@@ -3,6 +3,7 @@
     <fullName>System_Generated__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Indicates if the Design Process record was generated automatically (e.g. when an Opportunity reaches design stage).</description>
+    <externalId>false</externalId>
     <label>System Generated</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

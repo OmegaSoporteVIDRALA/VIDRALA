@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>VIP_Link__c</fullName>
     <description>Link to the Vidrala VIP page</description>
+    <externalId>false</externalId>
     <label>VIP Link</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Events_2025</fullName>
+    <columns>NAME</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Host__c</columns>
+    <columns>Status__c</columns>
+    <columns>Hotel_Requested__c</columns>
+    <columns>Hotel_Booked__c</columns>
+    <columns>Number_Of_Tickets__c</columns>
+    <columns>No_of_Nominees__c</columns>
+    <columns>External_Invited__c</columns>
+    <columns>External_Accepted__c</columns>
+    <columns>Remaining_Tickets__c</columns>
+    <columns>Ticket_received_issued__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>12/31/2025</value>
+    </filters>
+    <filters>
+        <field>End_Date__c</field>
+        <operation>lessThan</operation>
+        <value>1/1/2027</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Booked,Planned,Postponed</value>
+    </filters>
+    <label>Events 2026</label>
+</ListView>

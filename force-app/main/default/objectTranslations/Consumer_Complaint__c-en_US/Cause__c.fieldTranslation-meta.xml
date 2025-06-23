@@ -15,6 +15,10 @@
         <translation><!-- Contamination --></translation>
     </picklistValues>
     <picklistValues>
+        <masterLabel>Glass Defect</masterLabel>
+        <translation><!-- Glass Defect --></translation>
+    </picklistValues>
+    <picklistValues>
         <masterLabel>Handling Damage</masterLabel>
         <translation><!-- Handling Damage --></translation>
     </picklistValues>
@@ -41,9 +45,5 @@
     <picklistValues>
         <masterLabel>Scratch</masterLabel>
         <translation><!-- Scratch --></translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Soft Blister</masterLabel>
-        <translation><!-- Soft Blister --></translation>
     </picklistValues>
 </CustomFieldTranslation>

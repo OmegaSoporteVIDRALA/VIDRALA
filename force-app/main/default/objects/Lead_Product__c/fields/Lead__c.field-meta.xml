@@ -3,6 +3,7 @@
     <fullName>Lead__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Lead product is seleacted on</description>
+    <externalId>false</externalId>
     <label>Lead</label>
     <referenceTo>Lead</referenceTo>
     <relationshipLabel>Lead Products</relationshipLabel>

@@ -14,10 +14,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Customer_Technical_Report_CTR__c.Email_alert_for_new_CTR</nameSegment>
     </actionCalls>
     <apiVersion>60.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Form_Completed</name>
         <label>Form Completed?</label>
@@ -80,7 +78,6 @@
                 </rightValue>
             </conditions>
             <connector>
-                <isGoTo>true</isGoTo>
                 <targetReference>Sent_notification</targetReference>
             </connector>
             <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
@@ -88,7 +85,6 @@
         </rules>
     </decisions>
     <description>Change name and send email alert.</description>
-    <environments>Default</environments>
     <formulas>
         <name>IsNew</name>
         <dataType>Boolean</dataType>

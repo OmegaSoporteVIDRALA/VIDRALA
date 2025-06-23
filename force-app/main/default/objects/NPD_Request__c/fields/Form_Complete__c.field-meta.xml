@@ -3,6 +3,7 @@
     <fullName>Form_Complete__c</fullName>
     <description>replaces the checkbox originally used
 Selecting Yes and Saving will send the form email</description>
+    <externalId>false</externalId>
     <inlineHelpText>Is the form ready to be emailed to the NPD team? 
 Selecting yes and saving will send an email.</inlineHelpText>
     <label>Form Complete</label>

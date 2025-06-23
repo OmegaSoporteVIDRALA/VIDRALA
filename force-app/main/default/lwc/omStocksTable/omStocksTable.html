@@ -36,6 +36,17 @@
                 </lightning-combobox>
             </div>
 
+            <div class="batch-container">
+                    <lightning-input
+                        name="batch" 
+                        type="text" 
+                        label="Lote"
+                        onchange={handleBatchChange}
+                        placeholder="Introduzca un lote"
+                        oninvalid={handleInvalidBatch}>
+                    </lightning-input>
+                </div>
+
         </div>
         
         <div class="slds-m-around_medium">
@@ -88,7 +99,7 @@
                         </tr>
                         <tr>
                             <th class="header" data-column="centro" rowspan="2" onclick={handleSort}>Centro</th>
-                            <th class="header" data-column="lote" rowspan="2" onclick={handleSort}>Lote</th>
+                            <th class="header" data-column="almacen" rowspan="2" onclick={handleSort}>Almacén</th>
                             <th class="header" data-column="material" rowspan="2" onclick={handleSort}>Material</th>
                             <th class="header" data-column="modelo" rowspan="2" onclick={handleSort}>Modelo</th>
                             <th class="header" data-column="color" rowspan="2" onclick={handleSort}>SC: Color</th>
@@ -115,7 +126,7 @@
                         <template for:each={tableData} for:item="row">
                             <tr key={row.id}>
                                 <td>{row.centro}</td>
-                                <td>{row.lote}</td>
+                                <td>{row.almacen}</td>
                                 <td>{row.material}</td>
                                 <td>{row.modelo}</td>
                                 <td>{row.color}</td>

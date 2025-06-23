@@ -3,6 +3,7 @@
     <fullName>Area_Manager__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Vidrala Sales Role</description>
+    <externalId>false</externalId>
     <label>Area Manager</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Accounts4</relationshipName>

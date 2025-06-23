@@ -18,9 +18,5 @@
     <enableProfileCustomTabsets>true</enableProfileCustomTabsets>
     <enableQuickCreate>false</enableQuickCreate>
     <enableRelatedListHovers>true</enableRelatedListHovers>
-    <enableSldsV2>false</enableSldsV2>
     <enableTabOrganizer>true</enableTabOrganizer>
-    <multiColumnSort>false</multiColumnSort>
-    <multiColumnSortLv>true</multiColumnSortLv>
-    <multiColumnSortRl>true</multiColumnSortRl>
 </UserInterfaceSettings>

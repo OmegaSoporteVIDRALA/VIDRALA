@@ -3,6 +3,7 @@
     <fullName>New_market_Catalogue__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Is an active product for New Markets?</description>
+    <externalId>false</externalId>
     <label>New market Catalogue</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

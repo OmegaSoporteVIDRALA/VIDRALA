@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Bottle_Number_8__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
     <label>Bottle Number</label>
     <referenceTo>Drawing__c</referenceTo>
     <relationshipLabel>Mould Life Trackers</relationshipLabel>

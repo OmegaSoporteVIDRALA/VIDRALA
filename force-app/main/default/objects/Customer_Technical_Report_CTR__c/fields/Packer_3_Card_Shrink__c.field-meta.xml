@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Packer_3_Card_Shrink__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Packer 3 - Card &amp; Shrink</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

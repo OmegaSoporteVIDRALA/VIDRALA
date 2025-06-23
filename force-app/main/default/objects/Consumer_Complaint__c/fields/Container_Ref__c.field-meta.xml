@@ -3,6 +3,7 @@
     <fullName>Container_Ref__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Lookup to Drawing Object</description>
+    <externalId>false</externalId>
     <label>Container Ref.</label>
     <referenceTo>Drawing__c</referenceTo>
     <relationshipLabel>Consumer Complaints</relationshipLabel>

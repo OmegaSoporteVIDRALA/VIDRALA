@@ -130,6 +130,13 @@ h1 {
     margin-bottom: 20px;
 }
 
+.batch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
 
 .lightning-combobox {
     display: grid;
@@ -152,7 +159,7 @@ h1 {
 }
 
 
-.month-container, .year-container {
+.month-container, .year-container, .batch-container {
     flex: 1;                       
 }
 

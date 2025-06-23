@@ -3,6 +3,7 @@
     <fullName>Design_Brief_Created__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Checks box after the design brief is created</description>
+    <externalId>false</externalId>
     <label>Design Brief Created</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

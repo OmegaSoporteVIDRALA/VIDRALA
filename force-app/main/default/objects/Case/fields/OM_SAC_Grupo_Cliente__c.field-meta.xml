@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OM_SAC_Grupo_Cliente__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
     <label>Grupo Cliente</label>
     <referenceTo>Account</referenceTo>
     <relationshipLabel>Insatisfacciones grupo</relationshipLabel>

@@ -3,6 +3,7 @@
     <fullName>Quote__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Spaing migration User story EVM-115 Rebates on Quotes</description>
+    <externalId>false</externalId>
     <label>Quote</label>
     <referenceTo>Quote</referenceTo>
     <relationshipLabel>Rebates</relationshipLabel>

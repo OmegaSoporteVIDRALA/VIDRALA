@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Proposed_First_Production_Date__c</fullName>
     <description>Proposed Production Date For First Short Run / Extended Trial (2 Days)</description>
+    <externalId>false</externalId>
     <inlineHelpText>Proposed Production Date For First Short Run / Extended Trial (2 Days)</inlineHelpText>
     <label>Proposed Production Date 1st Short Run*</label>
     <required>false</required>

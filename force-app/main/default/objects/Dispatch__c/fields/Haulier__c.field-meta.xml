@@ -3,6 +3,7 @@
     <fullName>Haulier__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Reference to Haulier Name</description>
+    <externalId>false</externalId>
     <label>Haulier</label>
     <referenceTo>Haulier__c</referenceTo>
     <relationshipLabel>Dispatches</relationshipLabel>

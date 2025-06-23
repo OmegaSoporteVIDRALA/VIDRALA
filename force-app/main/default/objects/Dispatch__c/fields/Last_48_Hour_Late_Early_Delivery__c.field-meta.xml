@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Last_48_Hour_Late_Early_Delivery__c</fullName>
+    <externalId>false</externalId>
     <formula>IF(Delivery_Status__c == &quot;Late&quot;, 
   NOW() - Late_Delivery_Date__c &lt; 2,
   IF(Delivery_Status__c == &quot;Early&quot;, NOW() - Early_Delivery_Date__c &lt; 2, false)

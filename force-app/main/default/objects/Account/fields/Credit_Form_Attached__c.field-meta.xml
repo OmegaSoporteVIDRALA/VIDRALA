@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Credit_Form_Attached__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <inlineHelpText>Indicates that a Credit Application form has been completed by the customer and uploaded against the account.</inlineHelpText>
     <label>Credit Form Attached</label>
     <trackFeedHistory>false</trackFeedHistory>

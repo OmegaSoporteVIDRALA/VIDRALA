@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Manufacturing_Line__c</fullName>
+    <externalId>false</externalId>
     <inlineHelpText>Which Encirc line was the container made on</inlineHelpText>
     <label>Manufacturing Line:</label>
     <required>false</required>

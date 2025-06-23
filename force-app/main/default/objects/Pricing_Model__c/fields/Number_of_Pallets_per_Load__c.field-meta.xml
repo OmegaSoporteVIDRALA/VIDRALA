@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Number_of_Pallets_per_Load__c</fullName>
     <description>Planning field</description>
+    <externalId>false</externalId>
     <label>Number of Pallets per Load</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

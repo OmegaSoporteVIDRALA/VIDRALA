@@ -3,6 +3,7 @@
     <fullName>French_Catalogue__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Is an active product for France?</description>
+    <externalId>false</externalId>
     <label>French Catalogue</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

@@ -3,6 +3,7 @@
     <fullName>Design_Brief_SR_001_Rev_6__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Created design brief</description>
+    <externalId>false</externalId>
     <inlineHelpText>Created design brief</inlineHelpText>
     <label>Design Brief (SR-001 Rev 6)</label>
     <referenceTo>Design_Brief__c</referenceTo>

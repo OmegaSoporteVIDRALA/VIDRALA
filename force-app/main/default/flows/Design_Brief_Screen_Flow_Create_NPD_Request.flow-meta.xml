@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>59.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <description>Flow to create and NPD Request from values populated on the Design Brief</description>
-    <environments>Default</environments>
     <formulas>
         <description>link to new record</description>
         <name>FormulaforLink</name>
@@ -247,7 +245,6 @@
             <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Create NPD Request &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Hi,  &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;It Looks like there isn&apos;t an &quot;&lt;strong&gt;NPD Request&quot;&lt;/strong&gt; Associated with this &lt;strong&gt;Design Brief: {!recordId.Name}.&lt;/strong&gt; Please click the button below if you would like to create one.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
-        <nextOrFinishButtonLabel>Create NPD Request</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>

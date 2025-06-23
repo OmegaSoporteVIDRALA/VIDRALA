@@ -14,10 +14,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Task.Task_changes_email</nameSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
@@ -97,7 +95,6 @@
             <label>Completed</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Task - Create or Update Triggered {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Task - Create or Update Triggered</label>
     <processMetadataValues>

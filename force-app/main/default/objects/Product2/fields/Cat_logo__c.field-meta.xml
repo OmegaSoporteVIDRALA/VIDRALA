@@ -3,6 +3,7 @@
     <fullName>Cat_logo__c</fullName>
     <defaultValue>false</defaultValue>
     <description>from vidrala spain  org</description>
+    <externalId>false</externalId>
     <label>In Catalog</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

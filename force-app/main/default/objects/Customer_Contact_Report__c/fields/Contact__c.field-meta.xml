@@ -3,6 +3,7 @@
     <fullName>Contact__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Poder seleccionar contacto, en caso que esté creado</description>
+    <externalId>false</externalId>
     <label>Contact</label>
     <referenceTo>Contact</referenceTo>
     <relationshipLabel>Customer Contact Reports</relationshipLabel>

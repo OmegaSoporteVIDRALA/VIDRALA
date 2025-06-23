@@ -3,6 +3,7 @@
     <fullName>Timeframe_achievable__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Is the timeframe for delivery rational/achievable?</description>
+    <externalId>false</externalId>
     <inlineHelpText>Is the timeframe for delivery rational/achievable?</inlineHelpText>
     <label>Timeframe achievable?</label>
     <trackFeedHistory>false</trackFeedHistory>

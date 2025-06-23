@@ -3,6 +3,7 @@
     <fullName>Customer__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Master Account record for the customer</description>
+    <externalId>false</externalId>
     <inlineHelpText>Master Account record for the customer</inlineHelpText>
     <label>Customer</label>
     <referenceTo>Account</referenceTo>

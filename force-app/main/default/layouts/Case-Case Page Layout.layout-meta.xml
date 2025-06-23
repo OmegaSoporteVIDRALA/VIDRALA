@@ -186,7 +186,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>OM_SAC_cantidadAbono__c</field>
+                <field>OM_SAC_CosteEstimado__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

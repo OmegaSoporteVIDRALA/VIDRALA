@@ -69,13 +69,36 @@
                 <lightning-dual-listbox
                     name="order"
                     label="Motivo de Pedido"
-                    
                     options={orderOptions}
                     value={selectedOrder}
                     onchange={handleOrderChange}
                     required
                     oninvalid={handleInvalidOrder}>
                 </lightning-dual-listbox>
+            </div>
+
+            <div class="product-container">
+                <c-om-lookup 
+                    name="product"
+                    icon-name="standard:product"
+                    sobject="Product2"
+                    label="Seleccionar producto" 
+                    filter="(ProductCode != null OR Name != null) AND isActive = true"
+                    onselected={handleSelected}>
+                </c-om-lookup>
+            </div>
+
+            <div class="material-container">
+                <lightning-combobox
+                    name="material"
+                    label="Material"
+                    value={selectedMaterial}
+                    options={materialOptions}
+                    onchange={handleMaterialChange}
+                    placeholder={placeholderMaterial}
+                    disabled={isDisabled}
+                    oninvalid={handleInvalidMaterial}>
+                </lightning-combobox>
             </div>
 
         </div>

@@ -3,6 +3,7 @@
     <fullName>Distributor__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
     <description>Distributor look-up</description>
+    <externalId>false</externalId>
     <label>Distributor</label>
     <lookupFilter>
         <active>true</active>

@@ -4,6 +4,7 @@
     <defaultValue>$System.OriginDateTime</defaultValue>
     <description>used for processing purposes to not trigger validation in flow
 this is the start time for the Automation bypass date/ time</description>
+    <externalId>false</externalId>
     <label>AutomationBypassDateTime</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

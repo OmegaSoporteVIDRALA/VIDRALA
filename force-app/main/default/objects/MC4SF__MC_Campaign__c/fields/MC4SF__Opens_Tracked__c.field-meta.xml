@@ -3,6 +3,7 @@
     <fullName>MC4SF__Opens_Tracked__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Opens Tracked</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

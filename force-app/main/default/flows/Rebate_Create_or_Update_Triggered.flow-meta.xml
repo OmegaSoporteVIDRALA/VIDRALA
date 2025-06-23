@@ -14,10 +14,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Rebate__c.Rebate_to_Expire_in_90_Days</nameSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
@@ -40,7 +38,6 @@
             <label>Flow should run</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Rebate - Create or Update Triggered {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Rebate - Create or Update Triggered</label>
     <processMetadataValues>

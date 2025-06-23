@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OM_SAC_conPrecalentamiento__c</fullName>
     <defaultValue>true</defaultValue>
+    <externalId>false</externalId>
     <label>¿Con precalentamiento?</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

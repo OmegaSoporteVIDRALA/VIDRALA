@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Adh_to_Rev_T_Fcast__c</fullName>
+    <externalId>false</externalId>
     <formula>IF(Revised_T_Forecast__c == 0, 0, Total_Tonnage_Rounded__c / Revised_T_Forecast__c)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Adh to Rev T Fcast %</label>

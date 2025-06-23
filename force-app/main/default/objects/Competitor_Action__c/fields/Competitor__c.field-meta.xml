@@ -3,6 +3,7 @@
     <fullName>Competitor__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Account record type Competitor filter</description>
+    <externalId>false</externalId>
     <label>Competitor</label>
     <lookupFilter>
         <active>true</active>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>fields_not_filled_in</name>
         <label>fields not filled in</label>
@@ -79,7 +78,6 @@
 Case 6210: added capacity_fill _point_ml__c
 Case 6862: added fields Type of Design, customer contact,glass finish details,refillable,embossed,carbonated level(gCO2/litre), filling process type, costing completed by cm,competitors drawing attached...
 Case 7043: populate a look up for npd request field</description>
-    <environments>Default</environments>
     <formulas>
         <description>creates a link</description>
         <name>formulalforlink</name>
@@ -292,7 +290,6 @@ Case 7043: populate a look up for npd request field</description>
             <targetReference>Createdscreen</targetReference>
         </connector>
         <faultConnector>
-            <isGoTo>true</isGoTo>
             <targetReference>fault_screen</targetReference>
         </faultConnector>
         <filterLogic>and</filterLogic>
@@ -504,7 +501,6 @@ Case 7043: populate a look up for npd request field</description>
                 </conditions>
             </visibilityRule>
         </fields>
-        <nextOrFinishButtonLabel>Close</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -530,10 +526,8 @@ Case 7043: populate a look up for npd request field</description>
             <dataType>String</dataType>
             <fieldText>Design Details Name</fieldText>
             <fieldType>InputField</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
         </fields>
-        <nextOrFinishButtonLabel>Convert</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>

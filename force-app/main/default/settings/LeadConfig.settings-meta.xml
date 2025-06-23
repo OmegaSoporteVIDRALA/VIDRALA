@@ -8,5 +8,4 @@
     <enableConversionsOnMobile>true</enableConversionsOnMobile>
     <enableOrgWideMergeAndDelete>false</enableOrgWideMergeAndDelete>
     <shouldLeadConvertRequireValidation>true</shouldLeadConvertRequireValidation>
-    <shouldSendNotificationEmailWhenLeadOwnerUpdatesViaApexInLEX>true</shouldSendNotificationEmailWhenLeadOwnerUpdatesViaApexInLEX>
 </LeadConfigSettings>

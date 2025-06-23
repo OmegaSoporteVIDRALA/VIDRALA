@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Name__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
     <inlineHelpText>Customer name</inlineHelpText>
     <label>Name</label>
     <referenceTo>Contact</referenceTo>

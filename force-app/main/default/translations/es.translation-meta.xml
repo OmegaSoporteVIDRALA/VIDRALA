@@ -4972,6 +4972,178 @@
         <label><!-- fflib_security_error_object_not_updateable --></label>
         <name>dlrs__fflib_security_error_object_not_updateable</name>
     </customLabels>
+    <customLabels>
+        <label>-- Todo --</label>
+        <name>omAllOption</name>
+    </customLabels>
+    <customLabels>
+        <label>Disponible</label>
+        <name>omAvailable</name>
+    </customLabels>
+    <customLabels>
+        <label>Cancelar</label>
+        <name>omCancel</name>
+    </customLabels>
+    <customLabels>
+        <label>Deseleccionar todos</label>
+        <name>omClearAll</name>
+    </customLabels>
+    <customLabels>
+        <label>Eliminar</label>
+        <name>omDelete</name>
+    </customLabels>
+    <customLabels>
+        <label>Deseleccionar todos</label>
+        <name>omDeselectAll</name>
+    </customLabels>
+    <customLabels>
+        <label>Editar</label>
+        <name>omEdit</name>
+    </customLabels>
+    <customLabels>
+        <label>Exacto</label>
+        <name>omExact</name>
+    </customLabels>
+    <customLabels>
+        <label>Filtrar en</label>
+        <name>omFilterIn</name>
+    </customLabels>
+    <customLabels>
+        <label>Operador de filtro</label>
+        <name>omFilterOperator</name>
+    </customLabels>
+    <customLabels>
+        <label>Filtrado por</label>
+        <name>omFilteredBy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- omGoTo --></label>
+        <name>omGoTo</name>
+    </customLabels>
+    <customLabels>
+        <label>Ocultar</label>
+        <name>omHide</name>
+    </customLabels>
+    <customLabels>
+        <label>El valor es inválido</label>
+        <name>omInputInvalid</name>
+    </customLabels>
+    <customLabels>
+        <label>El campo es obligatorio</label>
+        <name>omInputRequired</name>
+    </customLabels>
+    <customLabels>
+        <label>Lista</label>
+        <name>omList</name>
+    </customLabels>
+    <customLabels>
+        <label>Cargando...</label>
+        <name>omLoading</name>
+    </customLabels>
+    <customLabels>
+        <label>Nuevo</label>
+        <name>omNew</name>
+    </customLabels>
+    <customLabels>
+        <label>Siguiente</label>
+        <name>omNext</name>
+    </customLabels>
+    <customLabels>
+        <label>No</label>
+        <name>omNo</name>
+    </customLabels>
+    <customLabels>
+        <label>Ningún resultado encontrado</label>
+        <name>omNoResultFound</name>
+    </customLabels>
+    <customLabels>
+        <label>de</label>
+        <name>omOf</name>
+    </customLabels>
+    <customLabels>
+        <label>Sólo fechas</label>
+        <name>omOnlyDates</name>
+    </customLabels>
+    <customLabels>
+        <label>opciones seleccionadas</label>
+        <name>omOptionsSelected</name>
+    </customLabels>
+    <customLabels>
+        <label>Anterior</label>
+        <name>omPrevious</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Refresh --></label>
+        <name>omRefresh</name>
+    </customLabels>
+    <customLabels>
+        <label>Guardar</label>
+        <name>omSave</name>
+    </customLabels>
+    <customLabels>
+        <label>Buscar</label>
+        <name>omSearch</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccionar</label>
+        <name>omSelect</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccionar todos</label>
+        <name>omSelectAll</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccione una opción</label>
+        <name>omSelectAnOption</name>
+    </customLabels>
+    <customLabels>
+        <label>- Elegir -</label>
+        <name>omSelectChoose</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccionados</label>
+        <name>omSelected</name>
+    </customLabels>
+    <customLabels>
+        <label>Mostrar</label>
+        <name>omShow</name>
+    </customLabels>
+    <customLabels>
+        <label>Mostrar como</label>
+        <name>omShowAs</name>
+    </customLabels>
+    <customLabels>
+        <label>Mostrando</label>
+        <name>omShowing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Stack --></label>
+        <name>omStack</name>
+    </customLabels>
+    <customLabels>
+        <label>Tabla</label>
+        <name>omTable</name>
+    </customLabels>
+    <customLabels>
+        <label>a</label>
+        <name>omTo</name>
+    </customLabels>
+    <customLabels>
+        <label>Mostrar columnas</label>
+        <name>omUnhideColumns</name>
+    </customLabels>
+    <customLabels>
+        <label>Ver</label>
+        <name>omView</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Wrap text --></label>
+        <name>omWrap</name>
+    </customLabels>
+    <customLabels>
+        <label>Sí</label>
+        <name>omYes</name>
+    </customLabels>
     <customTabs>
         <label><!-- About Strategic Account Planning --></label>
         <name>AboutStrategicAccountPlanning</name>
@@ -5131,10 +5303,6 @@
                     <name>Customer_Informed_Section_Mandatory</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Customer_Informed_Section_Mandatory_Column1</name>
                 </fields>
                 <fields>
@@ -5144,27 +5312,15 @@
                     <name>Delivery_Information</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Delivery_Information_Column1</name>
                 </fields>
                 <fields>
                     <name>Dispatch_Information</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Dispatch_Information_Column1</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Dispatch_Information_Column2</name>
                 </fields>
                 <fields>
@@ -5241,20 +5397,12 @@
                     <name>Customer_Informed_Section_Mandatory</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Customer_Informed_Section_Mandatory_Column1</name>
                 </fields>
                 <fields>
                     <name>Customer_s_Lines_Down_Section_Mandatory</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Customer_s_Lines_Down_Section_Mandatory_Column1</name>
                 </fields>
                 <fields>
@@ -5264,27 +5412,15 @@
                     <name>Delivery_Information</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Delivery_Information_Column1</name>
                 </fields>
                 <fields>
                     <name>Dispatch_Information</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Dispatch_Information_Column1</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Dispatch_Information_Column2</name>
                 </fields>
                 <fields>
@@ -5437,10 +5573,6 @@
                     <name>Collapsed_Load_Information</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Collapsed_Load_Information_Column1</name>
                 </fields>
                 <fields>
@@ -5450,20 +5582,12 @@
                     <name>Customer_Informed_Section_Mandatory</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Customer_Informed_Section_Mandatory_Column1</name>
                 </fields>
                 <fields>
                     <name>Customer_s_Lines_Down_Section_Mandatory</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Customer_s_Lines_Down_Section_Mandatory_Column1</name>
                 </fields>
                 <fields>
@@ -5476,17 +5600,9 @@
                     <name>Dispatch_Information</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Dispatch_Information_Column1</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Dispatch_Information_Column2</name>
                 </fields>
                 <fields>
@@ -5499,10 +5615,6 @@
                     <name>New_Collapsed_Load_Section4</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>New_Collapsed_Load_Section4_Column1</name>
                 </fields>
                 <fields>
@@ -5515,10 +5627,6 @@
                     <name>Replacement_Section_Mandatory</name>
                 </fields>
                 <fields>
-                    <inputParameters>
-                        <name>width</name>
-                        <value/>
-                    </inputParameters>
                     <name>Replacement_Section_Mandatory_Column1</name>
                 </fields>
                 <fields>

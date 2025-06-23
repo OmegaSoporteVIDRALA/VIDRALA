@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Pre_Filler_Heat_Tunnel__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Pre-Filler Heat Tunnel</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

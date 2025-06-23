@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Filler_Thread_Crown_Flush__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Filler - Thread/Crown Flush</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

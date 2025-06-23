@@ -3,6 +3,7 @@
     <fullName>Exclude_from_OTIF__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Exclude this Haulier from OTIF Reporting</description>
+    <externalId>false</externalId>
     <inlineHelpText>Exclude this Haulier from OTIF Reporting</inlineHelpText>
     <label>Exclude from OTIF</label>
     <trackTrending>false</trackTrending>

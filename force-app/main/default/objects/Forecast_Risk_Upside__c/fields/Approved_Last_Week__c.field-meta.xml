@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Approved_Last_Week__c</fullName>
+    <externalId>false</externalId>
     <formula>AND(
 ISPICKVAL( Approval_Status__c, &quot;Approved&quot;),
 DATEVALUE(Approved_Rejected_Date__c) &lt; TODAY() - 5,

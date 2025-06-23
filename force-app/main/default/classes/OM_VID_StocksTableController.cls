@@ -24,9 +24,9 @@ public with sharing class OM_VID_StocksTableController {
 }
 
     @AuraEnabled(cacheable=true)
-    public static void makeBWStocksCallout(String year, String month, String model){
+    public static void makeBWStocksCallout(String year, String month, String model, String batch){
 
-        OM_BW_Wrapper.BWFilter bwFilter = new OM_BW_Wrapper.BWFilter(year, month, model);
+        OM_BW_Wrapper.BWFilter bwFilter = new OM_BW_Wrapper.BWFilter(year, month, model, batch);
         List<OM_BW_Wrapper.BWStocksRow> listStockRows = new List<OM_BW_Wrapper.BWStocksRow>();
         try {
             OM_BW_StocksCallout.stocksCalloutBW(bwFilter);
@@ -35,9 +35,9 @@ public with sharing class OM_VID_StocksTableController {
         }
     }
     @AuraEnabled(cacheable=true)
-    public static TableWrapper getTableData(String year, String month, String model/*, OM_SapFunctionsStyle.GetQueryViewDataResponse_element response*/) {
+    public static TableWrapper getTableData(String year, String month, String model, String batch/*, OM_SapFunctionsStyle.GetQueryViewDataResponse_element response*/) {
 
-        OM_BW_Wrapper.BWFilter bwFilter = new OM_BW_Wrapper.BWFilter(year, month, model);
+        OM_BW_Wrapper.BWFilter bwFilter = new OM_BW_Wrapper.BWFilter(year, month, model, batch );
         
         OM_BW_Wrapper.BWReport bwReport = new OM_BW_Wrapper.BWReport();
         bwReport = OM_BW_StocksCallout.stocksCalloutBW(bwFilter);
@@ -56,8 +56,8 @@ public with sharing class OM_VID_StocksTableController {
             tableWrapper.totalValues = new List<String>(); 
 
                
-           for (Double value : bwReport.totalValues) {
-                        tableWrapper.totalValues.add(String.valueOf(value)); // ✅ Convertimos `Double` a `String`
+            for (Double value : bwReport.totalValues) {
+               tableWrapper.totalValues.add(String.valueOf(value)); // ✅ Convertimos `Double` a `String`
             }
                 
 
@@ -70,7 +70,7 @@ public with sharing class OM_VID_StocksTableController {
                 mapData.put('color', row.color);
                 mapData.put('material', row.material);
                 mapData.put('modelo', row.modelo);
-                mapData.put('lote', row.lote);
+                mapData.put('almacen', row.almacen);
 
                 Integer contador = 0;
                 for(String value : row.dataValues){

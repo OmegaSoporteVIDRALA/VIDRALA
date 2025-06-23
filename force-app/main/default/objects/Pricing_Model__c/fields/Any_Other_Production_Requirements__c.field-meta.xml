@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Any_Other_Production_Requirements__c</fullName>
     <description>Planning field</description>
+    <externalId>false</externalId>
     <label>Any Other Production Requirements</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

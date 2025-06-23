@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Week_4_Units__c</fullName>
+    <externalId>false</externalId>
     <label>Week 4 Units</label>
     <summarizedField>Dispatch__c.Units__c</summarizedField>
     <summaryFilterItems>

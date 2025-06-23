@@ -3,6 +3,7 @@
     <fullName>Related_Opportunity__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>If this MPA is related to a specific Opportunity please reference it here</description>
+    <externalId>false</externalId>
     <inlineHelpText>If this MPA is related to a specific Opportunity please reference it here</inlineHelpText>
     <label>Related Opportunity</label>
     <referenceTo>Opportunity</referenceTo>

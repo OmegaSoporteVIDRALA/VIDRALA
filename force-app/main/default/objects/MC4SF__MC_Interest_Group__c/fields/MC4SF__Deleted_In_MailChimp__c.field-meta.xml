@@ -3,6 +3,7 @@
     <fullName>MC4SF__Deleted_In_MailChimp__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Deleted In MailChimp</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

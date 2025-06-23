@@ -3,6 +3,7 @@
     <fullName>Decision_Process_Known__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Does Encirc know and understand the Lead’s decision makers / decision making process?</description>
+    <externalId>false</externalId>
     <inlineHelpText>Does Encirc know and understand the Lead’s decision makers / decision making process?</inlineHelpText>
     <label>Decision Process Known?</label>
     <trackFeedHistory>false</trackFeedHistory>

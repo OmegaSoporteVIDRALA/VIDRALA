@@ -3,6 +3,7 @@
     <fullName>Account_Manager__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Select the Encirc Account Manager from list of all Encirc Salesforce Users</description>
+    <externalId>false</externalId>
     <inlineHelpText>Select the Encirc Account Manager from list of all Encirc Salesforce Users</inlineHelpText>
     <label>Account Manager</label>
     <referenceTo>User</referenceTo>

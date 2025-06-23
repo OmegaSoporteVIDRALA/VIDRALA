@@ -3,6 +3,7 @@
     <fullName>Top_Tonnage_Customer__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Updated by Month Forecast Trigger - indicates top customer this month by Revised Tonnage Forecast</description>
+    <externalId>false</externalId>
     <label>Top Tonnage Customer</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

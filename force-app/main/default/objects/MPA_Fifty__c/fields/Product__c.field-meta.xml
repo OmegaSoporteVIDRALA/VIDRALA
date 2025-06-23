@@ -3,6 +3,7 @@
     <fullName>Product__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Product associated with the MPA</description>
+    <externalId>false</externalId>
     <label>Product</label>
     <referenceTo>Product2</referenceTo>
     <relationshipName>MPAs_Spain</relationshipName>

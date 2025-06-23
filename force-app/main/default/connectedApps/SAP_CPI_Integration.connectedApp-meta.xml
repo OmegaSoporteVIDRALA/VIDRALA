@@ -6,22 +6,13 @@
         <callbackUrl>https://login.salesforce.com/services/oauth2/success</callbackUrl>
         <consumerKey>3MVG98_Psg5cppyYOWh.WpjnAcadYuSY_dEaIQrR8Hu.Y5_5OSBt8_LLVL5NoDbPjEpmwAq_f.U0BoxwVVFpv</consumerKey>
         <isAdminApproved>false</isAdminApproved>
-        <isClientCredentialEnabled>false</isClientCredentialEnabled>
-        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
-        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
         <isConsumerSecretOptional>false</isConsumerSecretOptional>
         <isIntrospectAllTokens>false</isIntrospectAllTokens>
-        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
-        <isPkceRequired>false</isPkceRequired>
-        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
         <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
-        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
-        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
         <scopes>Full</scopes>
     </oauthConfig>
     <oauthPolicy>
         <ipRelaxation>ENFORCE</ipRelaxation>
-        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
         <refreshTokenPolicy>infinite</refreshTokenPolicy>
     </oauthPolicy>
 </ConnectedApp>

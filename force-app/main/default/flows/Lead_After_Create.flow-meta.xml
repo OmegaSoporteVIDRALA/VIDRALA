@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Lead_Owner_Organisation_Name</name>
         <label>Lead Owner Organisation Name</label>
@@ -69,7 +68,6 @@
             <label>Vidrala France</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Lead: After Create {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Lead: After Create</label>
     <processMetadataValues>

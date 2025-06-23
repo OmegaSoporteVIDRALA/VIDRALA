@@ -3,6 +3,7 @@
     <fullName>Does_Not_Cannibalise_Distributor__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Is Encirc certain that accepting this project would not cannibalise Encirc’s existing distributors’ revenues?</description>
+    <externalId>false</externalId>
     <inlineHelpText>Is Encirc certain that accepting this project would not cannibalise Encirc’s existing distributors’ revenues?</inlineHelpText>
     <label>Does Not Cannibalise Distributor?</label>
     <trackFeedHistory>false</trackFeedHistory>

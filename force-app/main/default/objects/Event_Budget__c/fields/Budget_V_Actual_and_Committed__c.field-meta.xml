@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Budget_V_Actual_and_Committed__c</fullName>
+    <externalId>false</externalId>
     <formula>Budget_Amount__c   -   (Committed_Expenditure_Balance__c   +  Committed_Expenditure_Deposit__c   +    Actual_Expenditure_Balance__c  +  Actual_Expenditure_Deposit__c )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Balance (Budget v Actual v Committed)</label>

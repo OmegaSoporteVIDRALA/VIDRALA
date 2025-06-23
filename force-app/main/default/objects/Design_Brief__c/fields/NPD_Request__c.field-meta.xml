@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>NPD_Request__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
     <label>NPD Request</label>
     <referenceTo>NPD_Request__c</referenceTo>
     <relationshipLabel>Design Briefs</relationshipLabel>

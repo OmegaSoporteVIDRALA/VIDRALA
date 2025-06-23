@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OM_VID_Blocked__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Customer blocked</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

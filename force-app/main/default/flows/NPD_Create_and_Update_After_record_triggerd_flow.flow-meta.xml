@@ -18,10 +18,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>NPD_Request__c.NPD_Completed</nameSegment>
     </actionCalls>
     <apiVersion>58.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <description>check to see if the form has been completed check box has been ticked</description>
         <name>Form_Completed</name>
@@ -92,7 +90,6 @@
         </rules>
     </decisions>
     <description>change of trigger to picklist</description>
-    <environments>Default</environments>
     <interviewLabel>NPD - Create and Update After record triggerd flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>NPD - Create and Update After record triggerd flow</label>
     <processMetadataValues>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Check_Design_Brief</name>
         <label>Check Design Brief</label>
@@ -46,7 +45,6 @@
             <label>Drawing Exist</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>MPA Updated {!$Flow.CurrentDateTime}</interviewLabel>
     <label>MPA Updated</label>
     <processMetadataValues>

@@ -14,8 +14,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Trial_Data__c.testSFDC</nameSegment>
-        <offset>0</offset>
     </actionCalls>
     <actionCalls>
         <name>Trial_Data_Created</name>
@@ -34,8 +32,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Trial_Data__c.Trial_Data_Created</nameSegment>
-        <offset>0</offset>
     </actionCalls>
     <actionCalls>
         <name>Trial_date_email_alert</name>
@@ -54,8 +50,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Trial_Data__c.Trial_Data_trial_date</nameSegment>
-        <offset>0</offset>
     </actionCalls>
     <actionCalls>
         <name>X1_Day_Email_Alert</name>
@@ -71,11 +65,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Trial_Data__c.TESTSFDC5</nameSegment>
-        <offset>0</offset>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Are_flows_enabled</name>
         <label>Are flows enabled?</label>
@@ -318,7 +309,6 @@
         </rules>
     </decisions>
     <description>fix drawing record update</description>
-    <environments>Default</environments>
     <formulas>
         <name>New_Record</name>
         <dataType>Boolean</dataType>

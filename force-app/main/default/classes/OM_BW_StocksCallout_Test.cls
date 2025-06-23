@@ -7,10 +7,12 @@ public class OM_BW_StocksCallout_Test {
         String year = '2024';
         String month = '01';
         String model = 'MOD789';
+        String batch = '256532123';
+        
         
 
         // Ejecutar el método y obtener JSON
-        String jsonOutput = OM_BW_StocksCallout.createJsonBWWrapper(year, month, model);
+        String jsonOutput = OM_BW_StocksCallout.createJsonBWWrapper(year, month, model, batch);
         System.debug('JSON Output: ' + jsonOutput);
 
         // Validar que el JSON no está vacío y es un objeto válido
@@ -21,7 +23,7 @@ public class OM_BW_StocksCallout_Test {
     static void testAbonosDevolucionesSACCalloutBW() {
         // Crear un objeto BWFilter con datos simulados
         OM_BW_Wrapper.BWFilter testFilter = new OM_BW_Wrapper.BWFilter(
-            '2024', '2025','MOD789'
+            '2024', '2025','MOD789', '256532123'
         );
         
         Test.setMock(WebServiceMock.class, new OM_SapFunctionsMock_Test());

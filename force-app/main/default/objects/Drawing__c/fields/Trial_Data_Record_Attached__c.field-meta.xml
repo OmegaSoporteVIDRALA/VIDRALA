@@ -3,6 +3,7 @@
     <fullName>Trial_Data_Record_Attached__c</fullName>
     <defaultValue>false</defaultValue>
     <description>To restrict update of Trail data field</description>
+    <externalId>false</externalId>
     <label>Trial Data Record Attached</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

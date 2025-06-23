@@ -4,5 +4,4 @@
     <desktop>true</desktop>
     <masterLabel>Approval Approved</masterLabel>
     <mobile>true</mobile>
-    <slack>false</slack>
 </CustomNotificationType>

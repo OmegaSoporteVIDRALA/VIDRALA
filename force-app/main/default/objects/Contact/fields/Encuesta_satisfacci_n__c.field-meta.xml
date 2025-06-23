@@ -3,6 +3,7 @@
     <fullName>Encuesta_satisfacci_n__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Contacto al que enviar la encuesta de satisfacción</description>
+    <externalId>false</externalId>
     <label>Encuesta satisfacción</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

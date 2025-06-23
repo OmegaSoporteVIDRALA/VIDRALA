@@ -39,7 +39,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Cust. Service Visit Reports by Customer</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -77,7 +76,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Customer Service Visit Reports by Team</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -103,7 +101,6 @@
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Last 30 Days</title>
                 <useReportChart>true</useReportChart>
             </dashboardComponent>
@@ -142,7 +139,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
@@ -180,7 +176,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
@@ -192,9 +187,6 @@
             <dashboardComponent>
                 <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
                 <componentType>RichText</componentType>
-                <dashboardComponentContents>
-                    <richTextContent>[{\&amp;quot;attributes\&amp;quot;:{\&amp;quot;color\&amp;quot;:\&amp;quot;#16325c\&amp;quot;},\&amp;quot;insert\&amp;quot;:\&amp;quot;....\&amp;quot;},{\&amp;quot;attributes\&amp;quot;:{\&amp;quot;align\&amp;quot;:\&amp;quot;left\&amp;quot;},\&amp;quot;insert\&amp;quot;:\&amp;quot;\\n\&amp;quot;}]</richTextContent>
-                </dashboardComponentContents>
                 <groupingSortProperties/>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
@@ -231,7 +223,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Dave Sewells visits in the last 30 Days</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -269,7 +260,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>James Smiths visits in the last 30 Days</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -309,7 +299,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowValueDescending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Phil Palmers visits in the last 30 days</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -348,7 +337,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>John Wight Visits in the last 30 days</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -386,7 +374,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Paul Woods visits in the last 30 Days</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -424,7 +411,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Mark Booths visits in the last 30 Days</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -437,7 +423,6 @@
     <dashboardType>SpecifiedUser</dashboardType>
     <description>For Customer Service and Quality teams</description>
     <isGridLayout>true</isGridLayout>
-    <owner>vicky.craven@encirc360.com</owner>
     <runningUser>vicky.craven@encirc360.com</runningUser>
     <textColor>#000000</textColor>
     <title>Customer Services Team</title>

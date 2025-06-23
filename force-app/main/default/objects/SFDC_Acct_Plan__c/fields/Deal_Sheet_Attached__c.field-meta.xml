@@ -3,6 +3,7 @@
     <fullName>Deal_Sheet_Attached__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Check this box to confirm a Deal Sheet has been attached</description>
+    <externalId>false</externalId>
     <inlineHelpText>Check this box to confirm a Deal Sheet has been attached</inlineHelpText>
     <label>Deal Sheet Attached</label>
     <trackFeedHistory>true</trackFeedHistory>

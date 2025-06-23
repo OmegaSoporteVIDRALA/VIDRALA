@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Attendees__c</fullName>
     <description>List of attendees at the meeting.  Not using a lookup to Contacts as some attendees will not be in the system.  As agreed with Jacqueline.</description>
+    <externalId>false</externalId>
     <label>Attendees</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>

@@ -3,6 +3,7 @@
     <fullName>guar__Included_Objects__c</fullName>
     <deprecated>false</deprecated>
     <description>Objects to include in report assessment. Comma Separated object api names.</description>
+    <externalId>false</externalId>
     <fieldManageability>DeveloperControlled</fieldManageability>
     <inlineHelpText>Objects to include in report assessment. Comma Separated object api names.</inlineHelpText>
     <label>Included Objects</label>

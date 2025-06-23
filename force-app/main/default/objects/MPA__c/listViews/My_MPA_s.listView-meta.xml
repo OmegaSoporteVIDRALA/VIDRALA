@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_MPA_s</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Customer__c</columns>
+    <columns>Mould_Number__c</columns>
+    <columns>Mould_Type__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Approval_Status__c</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Manager__c</field>
+        <operation>equals</operation>
+        <value>Tom Prescott</value>
+    </filters>
+    <label>Tom&apos;s MPA&apos;s</label>
+</ListView>

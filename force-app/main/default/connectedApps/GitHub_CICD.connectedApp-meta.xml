@@ -7,23 +7,14 @@
         <certificate>MIIDKzCCAhOgAwIBAgIUQQAbTwVE83SrlWgXFLriYU4bxEcwDQYJKoZIhvcNAQELBQAwPjELMAkGA1UEBhMCRVMxDDAKBgNVBAgMA0JDTjEhMB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMB4XDTI1MDYwOTEwMjMyNFoXDTI2MDYwOTEwMjMyNFowPjELMAkGA1UEBhMCRVMxDDAKBgNVBAgMA0JDTjEhMB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkFCTB+EAYwBqz9Z28NzHMhRTGLK53775ZAE2xWjS8RPUBwC1Ff4qGNiymBCYC4Nptj4NmPGfQvBBAB4PSWckH8VqH2oycNtrTY4Qekp4jBUPYTAhPxU5rvjwP4VDaKVhTBv94bQEs0IbVD4zkdgIU5emMRzueSBz+kD/JdYcAUW8eIcCwAhf+x9kIFCkfOCfQGLDYeJawGy9RET524aQPvY+aOBBcia9c4V5kWWTggzvss+Hb9Cf3truyFhxf6cFkHV/t7WEWv7u+iIi75pq7/uY25nZ/wHz0cH6EV3fJN4kl2iulc12ht3rqfv7RafOJ5cbHPv2p4SAb6ftAG4kRwIDAQABoyEwHzAdBgNVHQ4EFgQUcQXnSyeWFUhgQAZNTdKcqDkhALAwDQYJKoZIhvcNAQELBQADggEBAHquj2GMMFuUEwgxGxGCP3YAc7XE4N4eWPCCi8oH+Ji2cWSnAguULNzj9tTDKsUNBlkHJ+ceMYHvw94EHDkdEFOK+rYUxF/gDIS1pcyagMv4MKK9JYFktoTMBkH6nBdDq44v5MbSAlTTYmisLBxQg/+Dprz2KYhBmGPnLL0PrYnWUJC07lsxHlpnd5LN2wrSp2aHG2clfYr8v8jWMo8+d9eXfjf5yJICaCZexxJi1eJ+pqsqz3ggmGnIEPljkOKXGWlEEgFqzkQcuCgTO854hUPs1N/C08ZLVWlRTGoXKpFybfnHFdzUdWi7NrIYu704z25qzbgvW0G4hT6QKsN2otU=</certificate>
         <consumerKey>3MVG98_Psg5cppyYOWh.WpjnAcasMnTOKuh.PxHMIXNl9KpmNEbUVMxdF0CKGcs531jashrKB5lr8x.X5jRqi</consumerKey>
         <isAdminApproved>true</isAdminApproved>
-        <isClientCredentialEnabled>true</isClientCredentialEnabled>
-        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
-        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
         <isConsumerSecretOptional>false</isConsumerSecretOptional>
         <isIntrospectAllTokens>false</isIntrospectAllTokens>
-        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
-        <isPkceRequired>true</isPkceRequired>
-        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
         <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
-        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
-        <isTokenExchangeEnabled>true</isTokenExchangeEnabled>
         <scopes>Full</scopes>
         <scopes>RefreshToken</scopes>
     </oauthConfig>
     <oauthPolicy>
         <ipRelaxation>ENFORCE</ipRelaxation>
-        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
         <refreshTokenPolicy>infinite</refreshTokenPolicy>
     </oauthPolicy>
     <profileName>System Administrator</profileName>

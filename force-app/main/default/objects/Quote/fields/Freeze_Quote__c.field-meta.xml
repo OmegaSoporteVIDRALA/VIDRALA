@@ -3,6 +3,7 @@
     <fullName>Freeze_Quote__c</fullName>
     <defaultValue>false</defaultValue>
     <description>used to change the record type to read-only see process builder</description>
+    <externalId>false</externalId>
     <inlineHelpText>Used to change the Record Type to read-only Notify Admin to Unlock</inlineHelpText>
     <label>Freeze Quote</label>
     <trackFeedHistory>false</trackFeedHistory>

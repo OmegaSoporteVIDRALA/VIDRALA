@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Previous_Comments__c</fullName>
     <description>Previous comments box to contain all historical comments made on the Comments field.</description>
+    <externalId>false</externalId>
     <label>Previous Comments</label>
     <length>131072</length>
     <trackHistory>false</trackHistory>

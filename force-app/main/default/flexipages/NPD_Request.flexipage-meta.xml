@@ -63,7 +63,6 @@
                     <value>3</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
-                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <name>header</name>
@@ -77,7 +76,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
-                <identifier>RecordNameField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -87,7 +85,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Existing_Customer_Name__c</fieldItem>
-                <identifier>RecordExisting_Customer_Name_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -97,7 +94,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.NPD_Stage__c</fieldItem>
-                <identifier>RecordNPD_Stage_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-3cd15288-36e7-47e0-992f-4c8b3bc2a9fc</name>
@@ -111,7 +107,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.OwnerId</fieldItem>
-                <identifier>RecordOwnerIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -121,7 +116,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Potential_Customer_Name__c</fieldItem>
-                <identifier>RecordPotential_Customer_Name_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-5d392b7d-469a-426d-bcf7-b105302c7e13</name>
@@ -135,7 +129,6 @@
                     <value>Facet-3cd15288-36e7-47e0-992f-4c8b3bc2a9fc</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -145,7 +138,6 @@
                     <value>Facet-5d392b7d-469a-426d-bcf7-b105302c7e13</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-582c4a06-f6de-4886-9f21-50e411ab3c3c</name>
@@ -159,7 +151,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Volume__c</fieldItem>
-                <identifier>RecordVolume_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -169,7 +160,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Container_Description__c</fieldItem>
-                <identifier>RecordContainer_Description_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -179,7 +169,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Capacity_Brimful_ml__c</fieldItem>
-                <identifier>RecordCapacity_ml_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -189,7 +178,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Capacity_Fill_Point_ml__c</fieldItem>
-                <identifier>RecordCapacity_Fill_Point_ml_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -199,7 +187,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Weight_g_If_known__c</fieldItem>
-                <identifier>RecordWeight_g_If_known_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-eeepum1u7zk</name>
@@ -213,7 +200,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Existing_SKU__c</fieldItem>
-                <identifier>RecordExisting_SKU_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -223,7 +209,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Shape__c</fieldItem>
-                <identifier>RecordShape_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -233,7 +218,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Glass_Colour__c</fieldItem>
-                <identifier>RecordColour_s_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -243,7 +227,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Other_Colour__c</fieldItem>
-                <identifier>RecordOther_Colour_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-2skz3pkj0p4</name>
@@ -257,7 +240,6 @@
                     <value>Facet-eeepum1u7zk</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -267,7 +249,6 @@
                     <value>Facet-2skz3pkj0p4</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-ed71i5j71z</name>
@@ -281,7 +262,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Estimated_Volume_000_s__c</fieldItem>
-                <identifier>RecordAnnual_Volume_000_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -291,7 +271,6 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Line_Audit_Required__c</fieldItem>
-                <identifier>RecordLine_Audit_Required_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-m1qbyg6d0j</name>
@@ -305,7 +284,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Requested_Bulk_Glass_Date__c</fieldItem>
-                <identifier>RecordRequested_Bulk_Glass_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -315,7 +293,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Pack_Spec_Available__c</fieldItem>
-                <identifier>RecordPack_Spec_Available_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -325,7 +302,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Other_Information__c</fieldItem>
-                <identifier>RecordOther_Information_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-4zaxqplmket</name>
@@ -339,7 +315,6 @@
                     <value>Facet-m1qbyg6d0j</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -349,7 +324,6 @@
                     <value>Facet-4zaxqplmket</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column6</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-rogxqzluhrp</name>
@@ -363,7 +337,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.TypeOfDesign__c</fieldItem>
-                <identifier>RecordTypeOfDesign_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -373,7 +346,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Customer_Contact__c</fieldItem>
-                <identifier>RecordCustomer_Contact_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -383,7 +355,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Glass_Finish_Details__c</fieldItem>
-                <identifier>RecordGlass_Finish_Details_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -393,7 +364,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Refillable__c</fieldItem>
-                <identifier>RecordRefillable_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -403,7 +373,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Line_Audit_Completed_Date__c</fieldItem>
-                <identifier>RecordLine_Audit_Completed_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -413,7 +382,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Competitor_s_Drawing_Attached__c</fieldItem>
-                <identifier>RecordCompetitor_s_Drawing_Attached_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-2a96114e-2cae-4e91-9aae-fd245c4d6ad4</name>
@@ -427,7 +395,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Embossed__c</fieldItem>
-                <identifier>RecordEmbossed_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -437,7 +404,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Carbonated_Level_g_CO2_litre__c</fieldItem>
-                <identifier>RecordCarbonated_Level_g_CO2_litre_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -447,7 +413,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Filling_Process_Type__c</fieldItem>
-                <identifier>RecordFilling_Process_Type_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -457,7 +422,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Costings_Completed_By_Commercial_Manager__c</fieldItem>
-                <identifier>RecordCostings_Completed_By_Commercial_Manager_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -467,7 +431,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.If_No_Line_Audit_Date_Who_Is_Responsible__c</fieldItem>
-                <identifier>RecordIf_No_Line_Audit_Date_Who_Is_Responsible_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -477,7 +440,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Delivery_Date_For_24_Samples__c</fieldItem>
-                <identifier>RecordDelivery_Date_For_24_Samples_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -487,7 +449,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Competitor_s_Reference_Number__c</fieldItem>
-                <identifier>RecordCompetitor_s_Reference_Number_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-577b2add-ebc4-401d-8d51-a450b6875005</name>
@@ -501,7 +462,6 @@
                     <value>Facet-2a96114e-2cae-4e91-9aae-fd245c4d6ad4</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column9</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -511,7 +471,6 @@
                     <value>Facet-577b2add-ebc4-401d-8d51-a450b6875005</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column10</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-c8e674aa-1171-4830-8702-86953218d29e</name>
@@ -525,7 +484,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CreatedById</fieldItem>
-                <identifier>RecordCreatedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -535,7 +493,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.LastModifiedById</fieldItem>
-                <identifier>RecordLastModifiedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-e7374554-be2d-4a46-9beb-de9a10b005e1</name>
@@ -549,7 +506,6 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Form_Complete__c</fieldItem>
-                <identifier>RecordForm_Complete_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -559,7 +515,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Design_Brief_Created__c</fieldItem>
-                <identifier>RecordDesign_Brief_Created_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -569,7 +524,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Design_Brief_SR_001_Rev_6__c</fieldItem>
-                <identifier>RecordDesign_Brief_SR_001_Rev_6_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-77c96166-afad-416e-8f8c-33d2d175769b</name>
@@ -583,7 +537,6 @@
                     <value>Facet-e7374554-be2d-4a46-9beb-de9a10b005e1</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column7</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -593,7 +546,6 @@
                     <value>Facet-77c96166-afad-416e-8f8c-33d2d175769b</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column8</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-a2cbd7a7-6763-4dd4-9162-dd1763af1bac</name>
@@ -615,7 +567,6 @@
                     <value>Customer Details</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -629,7 +580,6 @@
                     <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(247, 3, 32); font-size: 26px;&quot;&gt;Each record should be for one Sku only&lt;/strong&gt;&lt;span style=&quot;color: rgb(237, 0, 0); font-size: 24px;&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
-                <identifier>flexipage_richText</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -647,7 +597,6 @@
                     <value>Bottle Details - 1 Sku only</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -665,7 +614,6 @@
                     <value>Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -683,7 +631,6 @@
                     <value>Design Brief Required</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -701,7 +648,6 @@
                     <value>Section</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-abb10ea0-e50f-42b9-b7e3-56e95e1aa388</name>
@@ -723,7 +669,6 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListContainer</componentName>
-                <identifier>force_relatedListContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-0c4ff9b3-25e1-462a-9e45-8e5369bb5b11</name>
@@ -745,7 +690,6 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -763,7 +707,6 @@
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-940bcf92-a12a-47e3-9b2f-7812e3128096</name>
@@ -777,7 +720,6 @@
                     <value>Facet-940bcf92-a12a-47e3-9b2f-7812e3128096</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
@@ -791,7 +733,6 @@
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentName>runtime_sales_activities:activityPanel</componentName>
-                <identifier>runtime_sales_activities_activityPanel</identifier>
             </componentInstance>
         </itemInstances>
         <name>sidebar</name>

@@ -3,6 +3,7 @@
     <fullName>bar__Backup_Policy__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Backup Policy</label>
     <referenceTo>bar__Backup_Policy__c</referenceTo>
     <relationshipLabel>Backup Objects</relationshipLabel>

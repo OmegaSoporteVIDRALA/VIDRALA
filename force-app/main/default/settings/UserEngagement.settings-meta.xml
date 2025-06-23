@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UserEngagementSettings xmlns="http://soap.sforce.com/2006/04/metadata">
-    <canUseAdoptionApps>false</canUseAdoptionApps>
+<UserEngagementSettings xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canGovCloudUseAdoptionApps xsi:nil="true"/>
     <doesScheduledSwitcherRunDaily>false</doesScheduledSwitcherRunDaily>
     <enableCustomHelpGlobalSection>true</enableCustomHelpGlobalSection>
     <enableHelpMenuShowFeedback>true</enableHelpMenuShowFeedback>
@@ -29,5 +29,4 @@
     <isMeetTheAssistantDisabledInLightning>false</isMeetTheAssistantDisabledInLightning>
     <isSmartNudgesDisabled>false</isSmartNudgesDisabled>
     <optimizerAppEnabled>true</optimizerAppEnabled>
-    <suggestedForYou>true</suggestedForYou>
 </UserEngagementSettings>

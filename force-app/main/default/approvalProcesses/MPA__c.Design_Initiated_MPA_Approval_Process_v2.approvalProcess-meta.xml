@@ -23,7 +23,7 @@
         <allowDelegate>true</allowDelegate>
         <assignedApprover>
             <approver>
-                <name>claire.dolan@encirc360.com</name>
+                <name>breege.harte@encirc360.com</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>

@@ -3,6 +3,7 @@
     <fullName>MC4SF__Create_New_Leads_From_MailChimp__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <inlineHelpText>Setting to have the system poll hourly for new MailChimp Subscribers and create them as Leads in Salesforce.</inlineHelpText>
     <label>Create New Leads From MailChimp</label>
     <trackTrending>false</trackTrending>

@@ -272,6 +272,55 @@ public without sharing class OM_Utils {
         }
     }
     
+    public class FieldTranslations{
+        // Mapa con clave compuesta: Objeto|Campo|Valor|Idioma
+        public Map<String, String> translationMap;
+        
+        public void getTranslationMap(){
+            this.translationMap = new Map<String, String>();
+            for (OM_VID_FieldTranslations__mdt t : [
+                SELECT OM_VID_Object__c, OM_VID_FieldName__c, OM_VID_ValueAPIName__c, OM_VID_Language__c, OM_VID_Translation__c
+                FROM OM_VID_FieldTranslations__mdt
+            ]) {
+                String key = generateKey(t.OM_VID_Object__c, t.OM_VID_FieldName__c, t.OM_VID_ValueAPIName__c, t.OM_VID_Language__c);
+                this.translationMap.put(key, t.OM_VID_Translation__c);
+            }
+        }
+    
+    
+        private String generateKey(String objectName, String fieldName, String value, String language) {
+             List<String> parts = new List<String>{
+                objectName != null ? objectName.toLowerCase() : '',
+                fieldName != null ? fieldName.toLowerCase() : '',
+                value != null ? value.toLowerCase() : '',
+                language != null ? language.toLowerCase() : ''
+            };
+            return String.join(parts, '|');
+        }
+    
+        //Obtener la traducción para un valor específico
+        public String getTranslation(String objectName, String fieldName, String value, String language) {
+            String key = generateKey(objectName, fieldName, value, language);
+            return this.translationMap.containsKey(key) ? translationMap.get(key) : value; // fallback: devuelve el valor original
+        }
+    
+        //Obtener todas las traducciones para un campo
+        public Map<String, String> getTranslationsForField(String objectName, String fieldName, String language) {
+            Map<String, String> result = new Map<String, String>();
+            for (String key : translationMap.keySet()) {
+                List<String> parts = key.split('\\|');
+                if (parts.size() == 4 
+                    && parts[0] == objectName.toLowerCase() 
+                    && parts[1] == fieldName.toLowerCase()
+                    && parts[3] == language.toLowerCase()) {
+                        result.put(parts[2], translationMap.get(key));
+                }
+            }
+            return result;
+        }
+
+    }
+    
     public static Date parseSAPDate(String dateString) {
         if (dateString == null || dateString.length() != 8) {
             return null; // Manejo de error si el formato es incorrecto

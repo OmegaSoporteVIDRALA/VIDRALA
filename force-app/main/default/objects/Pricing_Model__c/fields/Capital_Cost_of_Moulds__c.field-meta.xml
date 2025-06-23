@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Capital_Cost_of_Moulds__c</fullName>
     <description>Design field</description>
+    <externalId>false</externalId>
     <label>Capital Cost of Moulds</label>
     <precision>18</precision>
     <required>false</required>

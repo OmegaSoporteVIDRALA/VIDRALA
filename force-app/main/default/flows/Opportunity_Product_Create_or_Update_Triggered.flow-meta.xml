@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Assign_Description_Mould_Cost_Amortisation</name>
         <label>Assign Description - Mould Cost Amortisation</label>
@@ -192,7 +191,6 @@
             <label>True</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <name>Description_check</name>
         <dataType>String</dataType>

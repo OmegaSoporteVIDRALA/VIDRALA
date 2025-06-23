@@ -3,6 +3,7 @@
     <fullName>Comunicaci_n_precios__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Contacto al que enviar comunicaciones de precios</description>
+    <externalId>false</externalId>
     <label>Comunicación precios</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

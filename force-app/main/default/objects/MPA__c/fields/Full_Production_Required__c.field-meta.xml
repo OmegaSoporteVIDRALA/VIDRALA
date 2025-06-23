@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Full_Production_Required__c</fullName>
     <description>Estimated date when full production would be required</description>
+    <externalId>false</externalId>
     <inlineHelpText>Estimated date when full production would be required</inlineHelpText>
     <label>Full Production Required</label>
     <required>false</required>

@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Previous_Company_Name_SAPID__c</fullName>
     <description>Flow to populate</description>
+    <externalId>false</externalId>
     <inlineHelpText>Automation populates this field</inlineHelpText>
     <label>Previous Company Name/SAPID</label>
     <length>32768</length>

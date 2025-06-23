@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Former_Contact__c</fullName>
     <description>Contacts that are no longer with the Company</description>
+    <externalId>false</externalId>
     <label>Former Contact</label>
     <length>500</length>
     <trackFeedHistory>false</trackFeedHistory>

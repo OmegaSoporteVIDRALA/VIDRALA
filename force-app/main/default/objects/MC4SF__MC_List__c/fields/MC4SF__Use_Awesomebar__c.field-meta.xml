@@ -3,6 +3,7 @@
     <fullName>MC4SF__Use_Awesomebar__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Awesome Bar Enabled</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

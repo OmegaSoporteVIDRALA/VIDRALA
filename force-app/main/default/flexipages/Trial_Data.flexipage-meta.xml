@@ -20,7 +20,6 @@
                     <value>3</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
-                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -31,7 +30,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>force:detailPanel</componentName>
-                <identifier>force_detailPanel</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -46,7 +44,6 @@
                     <value>NONE</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListContainer</componentName>
-                <identifier>force_relatedListContainer</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -69,7 +66,6 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>detailTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -83,7 +79,6 @@
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>relatedListsTab</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -98,7 +93,6 @@
                     <value>maintabs</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -113,7 +107,6 @@
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentName>runtime_sales_activities:activityPanel</componentName>
-                <identifier>runtime_sales_activities_activityPanel</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -136,7 +129,6 @@
                     <value>Standard.Tab.activity</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>activityTab</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -155,7 +147,6 @@
                     <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(183, 8, 8); font-size: 18px;&quot;&gt;Is this the first trial record for this job?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(183, 8, 8); font-size: 18px;&quot;&gt;All data should be filled on the original trail data record&lt;/strong&gt;&lt;/p&gt;</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:richText</componentName>
-                <identifier>flexipage_richText</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -165,7 +156,6 @@
                     <value>sidebartabs</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -195,7 +185,6 @@
                     <value>Design_Brief__c</value>
                 </componentInstanceProperties>
                 <componentName>CustomRelatedListComponent</componentName>
-                <identifier>CustomRelatedListComponent</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -225,7 +214,6 @@
                     <value>Drawing__c</value>
                 </componentInstanceProperties>
                 <componentName>CustomRelatedListComponent</componentName>
-                <identifier>CustomRelatedListComponent2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -255,7 +243,6 @@
                     <value>MPA__c</value>
                 </componentInstanceProperties>
                 <componentName>CustomRelatedListComponent</componentName>
-                <identifier>CustomRelatedListComponent3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -281,7 +268,6 @@
                     <value>Trial_Data__c</value>
                 </componentInstanceProperties>
                 <componentName>CustomRelatedListComponent</componentName>
-                <identifier>CustomRelatedListComponent4</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Revised_Forecast_Variance_Roll_Up__c</fullName>
+    <externalId>false</externalId>
     <label>Revised Forecast Variance Roll Up</label>
     <summarizedField>Forecast__c.Revised_Forecast_Variance__c</summarizedField>
     <summaryForeignKey>Forecast__c.Month__c</summaryForeignKey>

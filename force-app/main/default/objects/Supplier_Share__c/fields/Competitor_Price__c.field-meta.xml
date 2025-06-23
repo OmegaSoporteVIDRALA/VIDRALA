@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Competitor_Price__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
     <label>Competitor Price</label>
     <referenceTo>Competitor_Price__c</referenceTo>
     <relationshipLabel>Supplier Shares</relationshipLabel>

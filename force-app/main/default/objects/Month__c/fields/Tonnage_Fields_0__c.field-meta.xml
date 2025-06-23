@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Tonnage_Fields_0__c</fullName>
+    <externalId>false</externalId>
     <formula>Budget_Tonnage__c + Forecast_Tonnage__c + Revised_T_Forecast__c + Total_Tonnage_Rounded__c = 0</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Tonnage Fields = 0</label>

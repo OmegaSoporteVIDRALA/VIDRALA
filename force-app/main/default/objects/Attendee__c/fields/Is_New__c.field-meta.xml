@@ -3,6 +3,7 @@
     <fullName>Is_New__c</fullName>
     <defaultValue>true</defaultValue>
     <description>Needed for FLOW and dynamic fields to work ***Do Not Delete***</description>
+    <externalId>false</externalId>
     <label>Is New</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

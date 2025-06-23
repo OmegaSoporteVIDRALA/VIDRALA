@@ -3,6 +3,7 @@
     <fullName>Personnel__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Encirc Personnel With Or Without A User In Salesforce</description>
+    <externalId>false</externalId>
     <inlineHelpText>Notify A System Administrator If The Personnel Member You Are Looking For Cannot Be Found</inlineHelpText>
     <label>Personnel</label>
     <referenceTo>Personnel__c</referenceTo>

@@ -3,6 +3,7 @@
     <fullName>MC4SF__Show__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <inlineHelpText>Whether the list owner has this field displayed on their list dashboard</inlineHelpText>
     <label>Show</label>
     <trackTrending>false</trackTrending>

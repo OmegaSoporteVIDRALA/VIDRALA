@@ -3,6 +3,7 @@
     <fullName>MC4SF__MC_Campaign__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>MC Campaign</label>
     <referenceTo>MC4SF__MC_Campaign__c</referenceTo>
     <relationshipLabel>MC Subscriber Activity</relationshipLabel>

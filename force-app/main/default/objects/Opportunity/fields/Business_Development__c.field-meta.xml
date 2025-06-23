@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Business_Development__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
     <label>Business Development</label>
     <referenceTo>Business_Development__c</referenceTo>
     <relationshipLabel>Opportunities</relationshipLabel>

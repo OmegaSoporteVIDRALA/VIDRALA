@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>SAP_Material_Code__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
     <inlineHelpText>This is the pack spec number which is the last five numbers after the underscore on the pallet label.</inlineHelpText>
     <label>SAP Material Code</label>
     <referenceTo>SAP_Material_Code__c</referenceTo>

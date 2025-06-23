@@ -3,6 +3,7 @@
     <fullName>Opportunity__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>The opportunity the design originated from.</description>
+    <externalId>false</externalId>
     <label>Opportunity</label>
     <referenceTo>Opportunity</referenceTo>
     <relationshipName>Design_Processes</relationshipName>

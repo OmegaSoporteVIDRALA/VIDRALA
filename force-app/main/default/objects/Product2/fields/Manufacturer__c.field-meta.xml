@@ -3,6 +3,7 @@
     <fullName>Manufacturer__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Fabricante__c look up</description>
+    <externalId>false</externalId>
     <label>Manufacturer</label>
     <lookupFilter>
         <active>true</active>

@@ -17,6 +17,7 @@ export default class OmStocksTable extends LightningElement {
     stockSubHeaders = [];
     totalValues = [];
     productCode;
+    inputBatch = 'vacio';
 
     
     @track isSearchScreen = true;
@@ -136,6 +137,30 @@ export default class OmStocksTable extends LightningElement {
         console.log('Mes seleccionado:', this.selectedYear);
     }
 
+    handleBatchChange(event) {
+        const batchValue = event.target.value;
+        const isValidAlphanumeric = /^[a-zA-Z0-9]{9,11}$/.test(batchValue);
+
+        if (!batchValue || !isValidAlphanumeric) {
+            console.log('Error: El lote introducido no es válido.');
+            event.target.setCustomValidity('Por favor, introduzca un lote válido.');
+            this.inputBatch = 'vacio';
+        }else {
+            console.log('Batch introducido:', batchValue);
+            event.target.setCustomValidity('');
+            this.inputBatch = batchValue;
+        }
+
+        event.target.reportValidity();
+    }
+
+    handleInvalidBatch(event) {
+        if (!this.inputBatch || this.inputBatch === 'vacio') {
+            event.target.setCustomValidity('Por favor, selecciona un lote.');
+        } else {
+            event.target.setCustomValidity('');
+        }
+    }
     
 
     handleSearch() {
@@ -147,14 +172,21 @@ export default class OmStocksTable extends LightningElement {
             }));
             return;
         }
+
+        const params = {
+            year: this.selectedYear, 
+            month: this.selectedMonth, 
+            model: this.productCode,
+        };
+
+        if (this.inputBatch !== 'vacio') {
+            params.batch = this.inputBatch;
+        }  
+
         this.isInitialScreen = false;
         this.isLoadScreen = true;
     
-        getTableData({ 
-            year: this.selectedYear, 
-            month: this.selectedMonth, 
-            model: this.productCode 
-        })
+         getTableData(params)
         .then((data) => {
             console.log('Resultado de la consulta:', data);
             if (data && data.tableData && data.tableData.length > 0) {
@@ -229,6 +261,7 @@ export default class OmStocksTable extends LightningElement {
         this.isSearchScreen = true;
         this.selectedMonth = '';  
         this.selectedYear = '';
+        this.inputbatch = 'vacio';
     }
 
     connectedCallback() {

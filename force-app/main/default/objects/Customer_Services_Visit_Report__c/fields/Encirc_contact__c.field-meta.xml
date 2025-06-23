@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Encirc_contact__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
     <inlineHelpText>Customer Service contact</inlineHelpText>
     <label>Encirc contact</label>
     <referenceTo>User</referenceTo>

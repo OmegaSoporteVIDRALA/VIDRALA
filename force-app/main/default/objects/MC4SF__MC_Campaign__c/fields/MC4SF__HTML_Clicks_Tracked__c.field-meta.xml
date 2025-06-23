@@ -3,6 +3,7 @@
     <fullName>MC4SF__HTML_Clicks_Tracked__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>HTML Clicks Tracked</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

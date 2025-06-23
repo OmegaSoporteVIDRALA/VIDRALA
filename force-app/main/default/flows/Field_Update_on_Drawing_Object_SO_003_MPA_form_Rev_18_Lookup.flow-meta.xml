@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Is_Drawing_Record_Found</name>
         <label>Is Drawing Record Found</label>
@@ -25,7 +24,6 @@
         </rules>
     </decisions>
     <description>Field Update on Drawing Object (SO-003) MPA form Rev 18 Lookup</description>
-    <environments>Default</environments>
     <interviewLabel>Update the Drawing Object {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Field Update on Drawing Object (SO-003) MPA form Rev 18 Lookup</label>
     <processMetadataValues>

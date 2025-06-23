@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>New_Delivery_Date__c</fullName>
     <description>New Delivery Date resulting from Early or Late Load</description>
+    <externalId>false</externalId>
     <inlineHelpText>New Delivery Date resulting from Early or Late Load</inlineHelpText>
     <label>New Delivery Date</label>
     <required>false</required>

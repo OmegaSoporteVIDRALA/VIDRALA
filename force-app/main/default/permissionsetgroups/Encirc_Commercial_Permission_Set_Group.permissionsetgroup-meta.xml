@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Grouped permissions</description>
-    <hasActivationRequired>false</hasActivationRequired>
     <label>Encirc Commercial Permission Set Group</label>
     <permissionSets>Commercial_Manager_Edit_Access_to_Account_Credit_Limit</permissionSets>
     <permissionSets>Report_Subscription_all_access</permissionSets>

@@ -3,6 +3,7 @@
     <fullName>Product__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
     <description>Product this Forecast refers to</description>
+    <externalId>false</externalId>
     <label>Product</label>
     <referenceTo>Bottle__c</referenceTo>
     <relationshipLabel>Forecasts</relationshipLabel>

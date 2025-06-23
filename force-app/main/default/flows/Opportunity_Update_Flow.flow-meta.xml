@@ -22,10 +22,8 @@ Opportunity Fifty Stage Quotation Email</description>
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Opportunity.Opportunity_Fifty_Stage_Quotation_Email</nameSegment>
     </actionCalls>
     <apiVersion>53.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Assign_ID_to_the_Opportunity_Variable</name>
         <label>Assign ID to the Opportunity Variable</label>
@@ -407,7 +405,6 @@ Email subject title &quot;New opportunity should be offered&quot;</description>
         </rules>
     </decisions>
     <description>Added case 7799 Email Marta on fifty Master opportunity and Qualification stage</description>
-    <environments>Default</environments>
     <formulas>
         <name>Assign_comments</name>
         <dataType>String</dataType>

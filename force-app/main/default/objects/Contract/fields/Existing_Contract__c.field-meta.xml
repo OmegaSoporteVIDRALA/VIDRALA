@@ -3,6 +3,7 @@
     <fullName>Existing_Contract__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Field part of signature information section</description>
+    <externalId>false</externalId>
     <label>Existing Contract</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

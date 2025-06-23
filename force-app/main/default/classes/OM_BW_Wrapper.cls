@@ -35,6 +35,7 @@ public class OM_BW_Wrapper {
         public String material {get;set;}
         public String modelo {get;set;}
         public String lote {get;set;}
+        public String almacen {get;set;}
         //VentasAbonos
         public String fecha {get;set;}
         public String ventas {get;set;} //Org. ventas
@@ -100,13 +101,14 @@ public class OM_BW_Wrapper {
                             
         }
         
-        public BWFilter(String year, String month, String model){
+        public BWFilter(String year, String month, String model, String batch){
             		
                             this.yearFrom = year;
                             this.yearTo = year;
                             this.monthFrom = month;
                             this.monthTo = month;
                             this.model = model;
+            				this.batch = batch;
                         
         }
 

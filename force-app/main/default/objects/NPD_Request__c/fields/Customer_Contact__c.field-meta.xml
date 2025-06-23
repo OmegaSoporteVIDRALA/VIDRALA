@@ -3,6 +3,7 @@
     <fullName>Customer_Contact__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Customer_Contact look up</description>
+    <externalId>false</externalId>
     <label>Customer Contact</label>
     <referenceTo>Contact</referenceTo>
     <relationshipLabel>NPD Requests</relationshipLabel>

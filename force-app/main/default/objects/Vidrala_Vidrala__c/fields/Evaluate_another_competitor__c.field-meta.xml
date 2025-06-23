@@ -3,6 +3,7 @@
     <fullName>Evaluate_another_competitor__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Does the customer want to evaluate another competitor?</description>
+    <externalId>false</externalId>
     <label>Evaluate another competitor</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Early_Loads__c</fullName>
     <description>Number of early deliveries for this dispatch (normally 0 or 1)</description>
+    <externalId>false</externalId>
     <inlineHelpText>Number of early deliveries for this dispatch (normally 0 or 1)</inlineHelpText>
     <label>Early Loads</label>
     <summaryFilterItems>

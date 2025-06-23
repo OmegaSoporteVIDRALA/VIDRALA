@@ -137,7 +137,7 @@ h1 {
 }
 
 
-.batch-grid, .material-grid {
+.batch-grid, .material-grid, .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 10px;
@@ -176,7 +176,7 @@ h1 {
     box-sizing: border-box; 
 }
 
-.month-container, .year-container,.batch-container {
+.month-container, .year-container,.batch-container, .product-container, .material-container {
     flex: 1;                       
 }
 

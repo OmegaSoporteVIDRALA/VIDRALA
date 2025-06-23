@@ -14,7 +14,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>CTR_CSR__c.Email_alert_new_CTR_CSR</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Record_Updated_Email_Alert</name>
@@ -30,10 +29,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>CTR_CSR__c.Email_alert_CTR_CSR_Update</nameSegment>
     </actionCalls>
     <apiVersion>54.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
@@ -125,7 +122,6 @@
         </rules>
     </decisions>
     <description>using the formula field to update record name</description>
-    <environments>Default</environments>
     <formulas>
         <description>Formula to differentiate new record from updated records</description>
         <name>IsNew</name>

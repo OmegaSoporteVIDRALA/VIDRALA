@@ -3,6 +3,7 @@
     <fullName>Account_Id_Copy__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Used to look up and filter the account</description>
+    <externalId>false</externalId>
     <label>Related Account</label>
     <referenceTo>Account</referenceTo>
     <relationshipLabel>Quotes</relationshipLabel>

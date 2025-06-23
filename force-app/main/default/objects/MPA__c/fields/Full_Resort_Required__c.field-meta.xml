@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Full_Resort_Required__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Full Resort Required</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>true</trackHistory>

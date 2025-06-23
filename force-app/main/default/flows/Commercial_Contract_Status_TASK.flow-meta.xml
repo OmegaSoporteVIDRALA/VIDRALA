@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>63.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <description>email and Task created if user changed
 6 may 25 - added date action to be completed by</description>
-    <environments>Default</environments>
     <formulas>
         <name>frmInstanceURL</name>
         <dataType>String</dataType>

@@ -3,6 +3,7 @@
     <fullName>Parent_Event_Budget__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Parent Budget</description>
+    <externalId>false</externalId>
     <label>Parent Budget</label>
     <referenceTo>Event_Budget__c</referenceTo>
     <relationshipLabel>Event Budget</relationshipLabel>

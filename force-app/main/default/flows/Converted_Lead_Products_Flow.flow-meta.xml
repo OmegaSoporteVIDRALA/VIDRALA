@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>52.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Add_Price_Book_to_Opportunity</name>
         <label>Add Price Book to Opportunity</label>
@@ -79,7 +78,6 @@
         </connector>
     </assignments>
     <description>added entry criteria converted lead id is populated</description>
-    <environments>Default</environments>
     <interviewLabel>Converted Lead Products Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity - After Save - Created Converted Lead Products Flow</label>
     <loops>

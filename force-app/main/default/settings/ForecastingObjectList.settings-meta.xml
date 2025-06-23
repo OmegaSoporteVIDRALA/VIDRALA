@@ -270,10 +270,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -348,6 +344,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -440,6 +440,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -468,7 +469,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>OpportunityRevenue</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -742,10 +742,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -820,6 +816,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -912,6 +912,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -940,7 +941,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>OpportunityQuantity</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -1218,10 +1218,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -1296,6 +1292,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -1389,6 +1389,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -1417,7 +1418,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>OpportunityLineItemRevenue</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -1691,10 +1691,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -1769,6 +1765,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -1861,6 +1861,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -1889,7 +1890,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>OpportunityLineItemQuantity</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -2167,10 +2167,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -2245,6 +2241,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -2338,6 +2338,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -2366,7 +2367,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>OpportunityRevenueProductDate</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -2640,10 +2640,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -2718,6 +2714,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -2810,6 +2810,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -2838,7 +2839,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>OpportunityQuantityProductDate</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -3116,10 +3116,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -3194,6 +3190,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -3287,6 +3287,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -3315,7 +3316,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>LineItemRevenueProductDate</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -3589,10 +3589,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -3667,6 +3663,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -3759,6 +3759,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -3787,7 +3788,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>LineItemQuantityProductDate</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -4065,10 +4065,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -4143,6 +4139,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -4236,6 +4236,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -4264,7 +4265,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>OpportunityRevenueScheduleDate</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -4538,10 +4538,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -4616,6 +4612,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -4708,6 +4708,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -4736,7 +4737,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>OpportunityQuantityScheduleDate</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -5014,10 +5014,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -5092,6 +5088,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -5185,6 +5185,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -5213,7 +5214,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>LineItemRevenueScheduleDate</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>
@@ -5487,10 +5487,6 @@
             <label>Sales Org Name</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
-            <label>Push Count</label>
-        </forecastingObjectListLabelMappings>
-        <forecastingObjectListLabelMappings>
             <field>00NQ4000001LtfF</field>
             <label>Idioma</label>
         </forecastingObjectListLabelMappings>
@@ -5565,6 +5561,10 @@
         <forecastingObjectListLabelMappings>
             <field>OPPORTUNITY.RECORDTYPE</field>
             <label>Opportunity Record Type</label>
+        </forecastingObjectListLabelMappings>
+        <forecastingObjectListLabelMappings>
+            <field>00NQ4000002cB69</field>
+            <label>Número de ofertas</label>
         </forecastingObjectListLabelMappings>
         <forecastingObjectListLabelMappings>
             <field>CORE.USERS.FIRST_NAME</field>
@@ -5657,6 +5657,7 @@
             <field>00N58000001FbnA</field>
             <field>00N58000001x9kJ</field>
             <field>00N4I00000EV9CZ</field>
+            <field>00NQ4000002cB69</field>
             <field>00N4I00000EnJGh</field>
             <field>00N58000001IiQh</field>
             <field>00N58000001IkBc</field>
@@ -5685,7 +5686,6 @@
             <field>00N58000001IlVn</field>
             <field>00N58000001IlW2</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
-            <field>OPPORTUNITY.PUSH_COUNT</field>
         </forecastingObjectListUnselectedSettings>
         <forecastingTypeDeveloperName>LineItemQuantityScheduleDate</forecastingTypeDeveloperName>
     </forecastingTypeObjectListSettings>

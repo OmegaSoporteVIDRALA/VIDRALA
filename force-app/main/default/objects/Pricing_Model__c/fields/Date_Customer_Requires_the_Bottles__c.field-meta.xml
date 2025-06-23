@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Date_Customer_Requires_the_Bottles__c</fullName>
     <description>Sales field</description>
+    <externalId>false</externalId>
     <label>Date Customer Requires the Bottles</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

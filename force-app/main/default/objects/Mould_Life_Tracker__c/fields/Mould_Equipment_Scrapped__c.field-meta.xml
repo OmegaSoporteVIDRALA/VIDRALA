@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Mould_Equipment_Scrapped__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Mould Equipment Scrapped</label>
     <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>

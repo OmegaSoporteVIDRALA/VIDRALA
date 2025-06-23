@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Manually_Operated__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Manually Operated</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

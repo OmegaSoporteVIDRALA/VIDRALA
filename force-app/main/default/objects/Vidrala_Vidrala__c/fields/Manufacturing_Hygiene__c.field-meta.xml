@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Manufacturing_Hygiene__c</fullName>
+    <externalId>false</externalId>
     <formula>NOT(ISBLANK(Manufacturing_Text__c))</formula>
     <label>Manufacturing &amp; Hygiene</label>
     <trackTrending>false</trackTrending>

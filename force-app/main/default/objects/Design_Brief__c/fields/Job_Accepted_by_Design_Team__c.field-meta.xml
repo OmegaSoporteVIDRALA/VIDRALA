@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Job_Accepted_by_Design_Team__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Job Accepted by Design Team</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

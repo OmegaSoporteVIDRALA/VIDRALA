@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Last_Risk_Upside_Date__c</fullName>
     <description>Last Risk/Upside Approved or Rejected Date</description>
+    <externalId>false</externalId>
     <inlineHelpText>Last Risk/Upside Approved or Rejected Date</inlineHelpText>
     <label>Last Risk/Upside Date</label>
     <summarizedField>Forecast_Risk_Upside__c.Approved_Rejected_Date__c</summarizedField>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>62.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <description>because the emails to inactive owners fail this replace the record owner with an active user (Accont owner)</description>
         <name>update_owner</name>
@@ -39,7 +38,6 @@
         </rules>
     </decisions>
     <description>replace an inactive owner with account owner</description>
-    <environments>Default</environments>
     <interviewLabel>TrialData - Owner Inactive replacement - Before save {!$Flow.CurrentDateTime}</interviewLabel>
     <label>TrialData - Owner Inactive replacement - Before save</label>
     <processMetadataValues>

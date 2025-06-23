@@ -3,6 +3,7 @@
     <fullName>Approval_Owner__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>MS case 5806</description>
+    <externalId>false</externalId>
     <label>Approval Owner</label>
     <referenceTo>User</referenceTo>
     <relationshipName>MPAs4</relationshipName>

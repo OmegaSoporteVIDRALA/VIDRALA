@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Late_Loads__c</fullName>
     <description>Number of times delivery was delayed</description>
+    <externalId>false</externalId>
     <inlineHelpText>Number of times delivery was delayed</inlineHelpText>
     <label>Late Loads</label>
     <summaryFilterItems>

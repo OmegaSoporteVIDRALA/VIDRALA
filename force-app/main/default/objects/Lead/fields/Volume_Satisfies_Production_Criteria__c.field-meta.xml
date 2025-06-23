@@ -3,6 +3,7 @@
     <fullName>Volume_Satisfies_Production_Criteria__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Does the potential volume satisfy Encirc’s production criteria?</description>
+    <externalId>false</externalId>
     <inlineHelpText>Does the potential volume satisfy Encirc’s production criteria?</inlineHelpText>
     <label>Volume Satisfies Production Criteria?</label>
     <trackFeedHistory>false</trackFeedHistory>

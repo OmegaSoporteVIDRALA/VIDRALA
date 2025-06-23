@@ -31,7 +31,6 @@
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>OTIF % by Month</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -57,7 +56,6 @@
                 <showTotal>false</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Current Month Deliveries by Status</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -88,7 +86,6 @@
                 <showTotal>false</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>This Month Early/Lates by Haulier</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -119,7 +116,6 @@
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Current Month OTIF % by Haulier</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -145,7 +141,6 @@
                 <showTotal>false</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Last Month Deliveries by Status</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -176,7 +171,6 @@
                 <showTotal>false</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Last Month Early/Lates by Haulier</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -207,7 +201,6 @@
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Last Month OTIF % by Haulier</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -239,7 +232,6 @@
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>16</rowIndex>
@@ -269,7 +261,6 @@
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Last Month OTIF % by Customer</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -281,7 +272,6 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <owner>lynn.mccann@encirc360.com</owner>
     <runningUser>lynn.mccann@encirc360.com</runningUser>
     <textColor>#000000</textColor>
     <title>OTIF Management Dashboard</title>

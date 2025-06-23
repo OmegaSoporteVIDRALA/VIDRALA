@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <description>Stamps the Related Drawings Related Accounts Owner onto the Mould Tracker Record
 
@@ -139,7 +138,6 @@ Then the Id can be referred to in Approval Processes as an Approver.</descriptio
             <label>Yes</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <name>formulaISNEW</name>
         <dataType>Boolean</dataType>

@@ -1,67 +1,346 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
-        <fullName>FailedLoadDataBody</fullName>
+        <fullName>omAllOption</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>FailedLoadDataBody</shortDescription>
-        <value>The data load to dispatch staging was unsuccessful.</value>
+        <shortDescription>All Option</shortDescription>
+        <value>-- All --</value>
     </labels>
     <labels>
-        <fullName>FailedLoadDataSubject</fullName>
+        <fullName>omAvailable</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>FailedLoadDataSubject</shortDescription>
-        <value>Dispatch Staging Data Load Unsuccessful</value>
+        <shortDescription>Available</shortDescription>
+        <value>Available</value>
     </labels>
     <labels>
-        <fullName>SalesOrg_Italy_Checkbox_Label</fullName>
+        <fullName>omCancel</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>SalesOrg Italy Checkbox Label</shortDescription>
-        <value>Italy</value>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
     </labels>
     <labels>
-        <fullName>SalesOrg_Selection_Label</fullName>
+        <fullName>omClearAll</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>12 Month Forecast SalesOrg Selection Label</shortDescription>
-        <value>Please select the Sales Organisation.</value>
+        <shortDescription>Clear All</shortDescription>
+        <value>Clear all</value>
     </labels>
     <labels>
-        <fullName>SalesOrg_Spain_Checkbox_Label</fullName>
+        <fullName>omDelete</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>SalesOrg Spain Checkbox Label</shortDescription>
-        <value>Spain</value>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
     </labels>
     <labels>
-        <fullName>SalesOrg_UK_Checkbox_Label</fullName>
+        <fullName>omDeselectAll</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>Sales Org UK Checkbox Labal</shortDescription>
-        <value>UK</value>
+        <shortDescription>Deselect all</shortDescription>
+        <value>Deselect all</value>
     </labels>
     <labels>
-        <fullName>SuccessLoadDataBody</fullName>
+        <fullName>omEdit</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>SuccessLoadDataBody</shortDescription>
-        <value>Data was successfully loaded into dispatch staging.
-{0} records were insert.</value>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
     </labels>
     <labels>
-        <fullName>SuccessLoadDataSubject</fullName>
+        <fullName>omExact</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>SuccessLoadDataSubject</shortDescription>
-        <value>Dispatch Staging Data Loaded Successfully</value>
+        <shortDescription>Exact</shortDescription>
+        <value>Exact</value>
     </labels>
     <labels>
-        <fullName>UserNameToSendNotificationEmail</fullName>
+        <fullName>omFilterIn</fullName>
+        <categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
-        <shortDescription>User Name To Send Notification Email</shortDescription>
-        <value>Miles Dinneen,Lynn McCann,Vicky Craven</value>
+        <shortDescription>Filter in</shortDescription>
+        <value>Filter in</value>
+    </labels>
+    <labels>
+        <fullName>omFilterOperator</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Filter operator</shortDescription>
+        <value>Filter operator</value>
+    </labels>
+    <labels>
+        <fullName>omFilteredBy</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Filtered By</shortDescription>
+        <value>Filtered by</value>
+    </labels>
+    <labels>
+        <fullName>omGoTo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>omGoTo</shortDescription>
+        <value>Go to</value>
+    </labels>
+    <labels>
+        <fullName>omHide</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Hide</shortDescription>
+        <value>Hide</value>
+    </labels>
+    <labels>
+        <fullName>omInputInvalid</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Input Invalid</shortDescription>
+        <value>The value is invalid</value>
+    </labels>
+    <labels>
+        <fullName>omInputRequired</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Input required</shortDescription>
+        <value>The field is required</value>
+    </labels>
+    <labels>
+        <fullName>omList</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List</shortDescription>
+        <value>List</value>
+    </labels>
+    <labels>
+        <fullName>omLoading</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loading...</shortDescription>
+        <value>Loading...</value>
+    </labels>
+    <labels>
+        <fullName>omNew</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>omNext</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>omNo</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No</shortDescription>
+        <value>No</value>
+    </labels>
+    <labels>
+        <fullName>omNoResultFound</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No result found</shortDescription>
+        <value>No result found</value>
+    </labels>
+    <labels>
+        <fullName>omOf</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Of</shortDescription>
+        <value>of</value>
+    </labels>
+    <labels>
+        <fullName>omOnlyDates</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Only dates</shortDescription>
+        <value>Only dates</value>
+    </labels>
+    <labels>
+        <fullName>omOptionsSelected</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Options selected</shortDescription>
+        <value>options selected</value>
+    </labels>
+    <labels>
+        <fullName>omPrevious</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Previous</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>omRefresh</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Refresh</shortDescription>
+        <value>Refresh</value>
+    </labels>
+    <labels>
+        <fullName>omSave</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>omSearch</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>omSelect</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select</shortDescription>
+        <value>Select</value>
+    </labels>
+    <labels>
+        <fullName>omSelectAll</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select all</shortDescription>
+        <value>Select all</value>
+    </labels>
+    <labels>
+        <fullName>omSelectAnOption</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select an option</shortDescription>
+        <value>Select an option</value>
+    </labels>
+    <labels>
+        <fullName>omSelectChoose</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>-- Choose --</shortDescription>
+        <value>-- Choose --</value>
+    </labels>
+    <labels>
+        <fullName>omSelected</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected</shortDescription>
+        <value>Selected</value>
+    </labels>
+    <labels>
+        <fullName>omShow</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Show</shortDescription>
+        <value>Show</value>
+    </labels>
+    <labels>
+        <fullName>omShowAs</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Show as</shortDescription>
+        <value>Show as</value>
+    </labels>
+    <labels>
+        <fullName>omShowing</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Showing</shortDescription>
+        <value>Showing</value>
+    </labels>
+    <labels>
+        <fullName>omStack</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Stack</shortDescription>
+        <value>Stack</value>
+    </labels>
+    <labels>
+        <fullName>omTable</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Table</shortDescription>
+        <value>table</value>
+    </labels>
+    <labels>
+        <fullName>omTo</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>To</shortDescription>
+        <value>to</value>
+    </labels>
+    <labels>
+        <fullName>omUnhideColumns</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unhide columns</shortDescription>
+        <value>Unhide columns</value>
+    </labels>
+    <labels>
+        <fullName>omView</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>View</shortDescription>
+        <value>View</value>
+    </labels>
+    <labels>
+        <fullName>omWrap</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Wrap text</shortDescription>
+        <value>Wrap text</value>
+    </labels>
+    <labels>
+        <fullName>omYes</fullName>
+        <categories>OM</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Yes</shortDescription>
+        <value>Yes</value>
     </labels>
 </CustomLabels>

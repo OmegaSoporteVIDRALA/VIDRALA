@@ -40,7 +40,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -99,7 +98,6 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <owner>iurquijo1@omegacrmconsulting.com</owner>
     <runningUser>iurquijo1@omegacrmconsulting.com</runningUser>
     <textColor>#000000</textColor>
     <title>Dashboard SAC Fifty</title>

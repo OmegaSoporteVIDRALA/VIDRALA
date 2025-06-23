@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Reason_for_Rebate__c</fullName>
     <description>Please enter a description of the Rebate including the reason why it is being requested.</description>
+    <externalId>false</externalId>
     <inlineHelpText>Please enter a description of the Rebate including the reason why it is being requested.</inlineHelpText>
     <label>Reason for Rebate</label>
     <length>32768</length>

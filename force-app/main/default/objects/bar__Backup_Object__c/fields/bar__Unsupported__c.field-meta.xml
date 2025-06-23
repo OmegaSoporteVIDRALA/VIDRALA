@@ -3,6 +3,7 @@
     <fullName>bar__Unsupported__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Unsupported</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

@@ -4,5 +4,4 @@
     <desktop>true</desktop>
     <masterLabel>Attendee Accepted Status Change</masterLabel>
     <mobile>true</mobile>
-    <slack>false</slack>
 </CustomNotificationType>

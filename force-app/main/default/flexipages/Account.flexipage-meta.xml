@@ -20,13 +20,11 @@
                     <value>4</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
-                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>accountTeams</componentName>
-                <identifier>c_accountTeams1</identifier>
             </componentInstance>
         </itemInstances>
         <name>header</name>
@@ -36,7 +34,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>force:detailPanel</componentName>
-                <identifier>force_detailPanel</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-8852a710-b785-4095-880e-08da2520e76a</name>
@@ -62,7 +59,6 @@
                     <value>Account.Pan_Euro_Parent_Financials</value>
                 </componentInstanceProperties>
                 <componentName>console:relatedRecord</componentName>
-                <identifier>console_relatedRecord2</identifier>
                 <visibilityRule>
                     <booleanFilter>((1 OR 3 OR 4 OR 5 OR 6 OR 8) AND 2) OR 7</booleanFilter>
                     <criteria>
@@ -127,7 +123,6 @@
                     <value>Account.Pan_Euro_Financials</value>
                 </componentInstanceProperties>
                 <componentName>console:relatedRecord</componentName>
-                <identifier>console_relatedRecord3</identifier>
                 <visibilityRule>
                     <booleanFilter>((1 OR 2 OR 3 OR 4 OR 6 OR 8) AND 5) OR 7</booleanFilter>
                     <criteria>
@@ -192,7 +187,6 @@
                     <value>Account.Financials</value>
                 </componentInstanceProperties>
                 <componentName>console:relatedRecord</componentName>
-                <identifier>console_relatedRecord1</identifier>
                 <visibilityRule>
                     <booleanFilter>(1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 8)) OR 7</booleanFilter>
                     <criteria>
@@ -249,7 +243,6 @@
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListQuickLinksContainer</componentName>
-                <identifier>force_relatedListQuickLinksContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-b278ea4f-bdfc-4bab-a73b-f0121364eae8</name>
@@ -271,7 +264,6 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>detailTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -285,7 +277,6 @@
                     <value>Financials</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -303,7 +294,6 @@
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>relatedListsTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -317,7 +307,6 @@
                     <value>Standard.Tab.news</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>newsTab</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-06da0abb-dcb2-4f19-9fd6-b7473e94034a</name>
@@ -331,7 +320,6 @@
                     <value>Facet-06da0abb-dcb2-4f19-9fd6-b7473e94034a</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -349,7 +337,6 @@
                     <value>NONE</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
@@ -359,7 +346,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>runtime_sales_activities:activityPanel</componentName>
-                <identifier>runtime_sales_activities_activityPanel</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-963b9b24-a0f1-4a0c-8c7d-d073e1855acd</name>
@@ -369,7 +355,6 @@
         <itemInstances>
             <componentInstance>
                 <componentName>forceChatter:recordFeedContainer</componentName>
-                <identifier>forceChatter_recordFeedContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-37b086e7-e9ad-40fa-b5dc-10b55cdeb717</name>
@@ -399,7 +384,6 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:reportChart</componentName>
-                <identifier>flexipage_reportChart</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-a370968b-fd06-4008-a871-f12266488d30</name>
@@ -425,7 +409,6 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:reportChart</componentName>
-                <identifier>flexipage_reportChart2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -450,7 +433,6 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:reportChart</componentName>
-                <identifier>flexipage_reportChart3</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-jbb0cmrk67m</name>
@@ -472,7 +454,6 @@
                     <value>Standard.Tab.activity</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>activityTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -486,7 +467,6 @@
                     <value>Standard.Tab.collaborate</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>collaborateTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -500,7 +480,6 @@
                     <value>Opp. Reports</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>customTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -514,7 +493,6 @@
                     <value>Rev. Reports</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>customTab2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-97c6643d-c70e-47e8-8a3e-47200a723ed6</name>
@@ -528,7 +506,6 @@
                     <value>Facet-97c6643d-c70e-47e8-8a3e-47200a723ed6</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset2</identifier>
             </componentInstance>
         </itemInstances>
         <name>sidebar</name>

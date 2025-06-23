@@ -3,6 +3,7 @@
     <fullName>DataLoader__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Do not use</description>
+    <externalId>false</externalId>
     <label>DataLoader</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

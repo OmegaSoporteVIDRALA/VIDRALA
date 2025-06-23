@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Net_Efficiency__c</fullName>
     <description>Planning field</description>
+    <externalId>false</externalId>
     <label>Net Efficiency</label>
     <precision>18</precision>
     <required>false</required>

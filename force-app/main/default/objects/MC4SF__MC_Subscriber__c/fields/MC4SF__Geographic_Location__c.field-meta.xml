@@ -3,6 +3,7 @@
     <fullName>MC4SF__Geographic_Location__c</fullName>
     <deprecated>false</deprecated>
     <displayLocationInDecimal>false</displayLocationInDecimal>
+    <externalId>false</externalId>
     <label>Geographic Location</label>
     <required>false</required>
     <scale>2</scale>

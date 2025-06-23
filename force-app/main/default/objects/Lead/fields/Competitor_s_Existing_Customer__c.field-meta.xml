@@ -3,6 +3,7 @@
     <fullName>Competitor_s_Existing_Customer__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Is the lead a meaningful, existing customer of one of Encirc&apos;s competitors?</description>
+    <externalId>false</externalId>
     <inlineHelpText>Is the lead a meaningful, existing customer of one of Encirc&apos;s competitors?</inlineHelpText>
     <label>Competitor&apos;s Existing Customer?</label>
     <trackFeedHistory>false</trackFeedHistory>

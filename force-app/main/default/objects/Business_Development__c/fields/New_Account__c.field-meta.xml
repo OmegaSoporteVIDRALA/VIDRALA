@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>New_Account__c</fullName>
+    <externalId>false</externalId>
     <inlineHelpText>Use this if Account is not set up in Salesforce</inlineHelpText>
     <label>New Account</label>
     <required>false</required>

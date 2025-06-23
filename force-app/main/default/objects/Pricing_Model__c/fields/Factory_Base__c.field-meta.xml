@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Factory_Base__c</fullName>
     <description>Planning field</description>
+    <externalId>false</externalId>
     <label>Factory Base</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

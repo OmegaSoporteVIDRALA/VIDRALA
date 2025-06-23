@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Date_for_Customer_Samples_Trial__c</fullName>
+    <externalId>false</externalId>
     <inlineHelpText>Date customer will run a trial on the samples sent to them</inlineHelpText>
     <label>Date for Customer Samples Trial</label>
     <required>false</required>

@@ -670,6 +670,13 @@
         <runAsUser>l.roux@vidrala.com</runAsUser>
     </emailServicesAddresses>
     <emailServicesAddresses>
+        <authorizedSenders>josh.fry@encirc360.com</authorizedSenders>
+        <developerName>emailtosalesforce46</developerName>
+        <isActive>true</isActive>
+        <localPart>emailtosalesforce</localPart>
+        <runAsUser>josh.fry1@encirc360.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
         <authorizedSenders>l.rizzo@vidrala.com</authorizedSenders>
         <developerName>emailtosalesforce5</developerName>
         <isActive>true</isActive>

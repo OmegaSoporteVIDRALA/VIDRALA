@@ -3,6 +3,7 @@
     <fullName>MC4SF__Auto_Convert_Video__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Auto-Convert Video</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

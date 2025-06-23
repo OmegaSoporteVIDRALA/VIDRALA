@@ -3,6 +3,7 @@
     <fullName>Rebate__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Existing rebate on the Account</description>
+    <externalId>false</externalId>
     <label>Existing Rebate</label>
     <lookupFilter>
         <active>true</active>

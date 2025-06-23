@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Date_Informed__c</fullName>
     <description>Time when customer was informed of Late, Early or Collapsed Load</description>
+    <externalId>false</externalId>
     <inlineHelpText>Time when customer was informed of Late, Early or Collapsed Load</inlineHelpText>
     <label>Date Informed</label>
     <required>false</required>

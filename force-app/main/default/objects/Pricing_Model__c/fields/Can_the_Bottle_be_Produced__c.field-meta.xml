@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Can_the_Bottle_be_Produced__c</fullName>
     <description>Sales field</description>
+    <externalId>false</externalId>
     <label>Can the Bottle be Produced</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

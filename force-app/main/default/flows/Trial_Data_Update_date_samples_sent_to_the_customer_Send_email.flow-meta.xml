@@ -32,13 +32,10 @@
                 <booleanValue>true</booleanValue>
             </value>
         </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
     </actionCalls>
     <apiVersion>59.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <description>Date samples sent to the customer is Changed send email
 6 Sep 24 - removed customer service and added scott parry to email list</description>
-    <environments>Default</environments>
     <formulas>
         <name>LinkFormula</name>
         <dataType>String</dataType>

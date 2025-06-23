@@ -3,6 +3,7 @@
     <fullName>Able_to_Add_Value__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Could Encird add value to the customer?</description>
+    <externalId>false</externalId>
     <inlineHelpText>Could Encird add value to the customer?</inlineHelpText>
     <label>Able to Add Value?</label>
     <trackFeedHistory>false</trackFeedHistory>

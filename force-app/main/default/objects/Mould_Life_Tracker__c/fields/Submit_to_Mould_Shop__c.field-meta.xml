@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Submit_to_Mould_Shop__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Submit to Mould Shop</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

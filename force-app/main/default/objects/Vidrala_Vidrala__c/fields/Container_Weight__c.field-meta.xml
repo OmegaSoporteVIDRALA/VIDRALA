@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Container_Weight__c</fullName>
+    <externalId>false</externalId>
     <formula>NOT(ISBLANK(Container_Weight_Text__c))</formula>
     <label>Container Weight</label>
     <trackTrending>false</trackTrending>

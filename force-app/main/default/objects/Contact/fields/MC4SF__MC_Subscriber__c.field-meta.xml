@@ -3,6 +3,7 @@
     <fullName>MC4SF__MC_Subscriber__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>MC Subscriber</label>
     <referenceTo>MC4SF__MC_Subscriber__c</referenceTo>
     <relationshipLabel>Contacts</relationshipLabel>

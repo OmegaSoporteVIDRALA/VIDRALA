@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Assigned_to_Design_Team_Member__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
     <inlineHelpText>Which Design team member has the job been assigned to.</inlineHelpText>
     <label>Assigned to Design Team Member</label>
     <referenceTo>User</referenceTo>

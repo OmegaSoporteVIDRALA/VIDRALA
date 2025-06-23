@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Aware_of_Encirc_s_SustainabilityStrategy__c</fullName>
+    <externalId>false</externalId>
     <label>Aware of Encirc&apos;s SustainabilityStrategy</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

@@ -3,6 +3,7 @@
     <fullName>Spain_catalogue__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Is active in Spanish calalogue?</description>
+    <externalId>false</externalId>
     <label>Spanish catalogue</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

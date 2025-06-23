@@ -41,7 +41,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowValueDescending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>UK - Current Month Customer Units</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -81,7 +80,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowValueDescending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>UK - Current Month Customer Tonnage</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -197,7 +195,6 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <owner>lynn.mccann@encirc360.com</owner>
     <runningUser>lynn.mccann@encirc360.com</runningUser>
     <textColor>#000000</textColor>
     <title>Daily Comparatives</title>

@@ -1,9 +1,9 @@
 public class OM_BW_StocksCallout {
     
-    public static String createJsonBWWrapper(String year, String month, String model){
+    public static String createJsonBWWrapper(String year, String month, String model, String batch){
         
         
-        OM_BW_Wrapper.BWFilter filterWrapper = new OM_BW_Wrapper.BWFilter(year, month, model);
+        OM_BW_Wrapper.BWFilter filterWrapper = new OM_BW_Wrapper.BWFilter(year, month, model, batch);
         
         return JSON.serialize(filterWrapper);
         
@@ -21,6 +21,7 @@ public class OM_BW_StocksCallout {
          * 1. Mes.Año --> VAR_20240626203032: VAR_VALUE_LOW_EXT_1 (Fecha desde) y VAR_VALUE_HIGH_EXT_1 (Fecha hasta) 01.2024. En este caso sólo se mostrará el rango de un mes, por lo que si se 
          * indica Octubre, tanto el low como el high serán octubre.
          * 2. Modelo --> VAR_20240627081033. 
+         * 3. Lote --> VAR_20250619094432
          **/
         
         List<OM_SapFunctionsStyle.W3query> itemList = new List<OM_SapFunctionsStyle.W3query>();
@@ -56,7 +57,20 @@ public class OM_BW_StocksCallout {
             itemList.add(item5);
             VAR_NAME++;
             
-        }      
+        }  
+        
+        //Lote
+        if(filterWrapper.batch != null){
+            OM_SapFunctionsStyle.W3query item6 = new OM_SapFunctionsStyle.W3query();
+            item6.Name = 'VAR_NAME_'+VAR_NAME;
+            item6.Value = 'VARA_20250619094432';
+            itemList.add(item6);
+            OM_SapFunctionsStyle.W3query item7 = new OM_SapFunctionsStyle.W3query();
+            item7.Name = 'VAR_VALUE_EXT_'+VAR_NAME;
+            item7.Value = filterWrapper.batch; 
+            itemList.add(item7);
+            VAR_NAME++;  
+        } 
     
            
         parameter.item = itemList;
@@ -131,8 +145,8 @@ public class OM_BW_StocksCallout {
                             
                             if(item.Chanm == '0PLANT'){ //Se coge código y descripción del centro
                                 row.centro = item.ChavlExt + ' - '+ item.Caption;                                    
-                            }else if(item.Chanm == '0BATCH'){ //Se coge el lote
-                                row.lote = item.ChavlExt;
+                            }else if(item.Chanm == '0STOR_LOC'){ //Se coge el almacén
+                                row.almacen = item.Caption;
                             }else if(item.Chanm == '0MATERIAL'){ //Se coge Material
                                 if(item.Chavl.replaceFirst('^0+', '').length() == 5 || item.Chavl.replaceFirst('^0+', '').equals('GEN_VENTAS')){ //Solo se incluyen materiales de 5 dígitos o que se llamen GEN_VENTAS
                                     row.material = item.ChavlExt + ' - '+ item.Caption;

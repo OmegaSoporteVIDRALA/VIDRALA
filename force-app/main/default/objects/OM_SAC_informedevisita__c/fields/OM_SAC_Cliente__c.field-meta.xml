@@ -3,6 +3,7 @@
     <fullName>OM_SAC_Cliente__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Cliente al que se debe visitar por la insatisfacción generada</description>
+    <externalId>false</externalId>
     <label>Cliente</label>
     <referenceTo>Account</referenceTo>
     <relationshipLabel>Informes de visita</relationshipLabel>

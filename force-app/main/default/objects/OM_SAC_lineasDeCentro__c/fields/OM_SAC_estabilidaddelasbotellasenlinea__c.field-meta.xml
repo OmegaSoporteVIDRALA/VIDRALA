@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OM_SAC_estabilidaddelasbotellasenlinea__c</fullName>
     <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
     <label>Estabilidad de las botellas en línea</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

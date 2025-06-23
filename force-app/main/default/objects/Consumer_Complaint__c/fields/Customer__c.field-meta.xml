@@ -3,6 +3,7 @@
     <fullName>Customer__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Lookup to the Account Object</description>
+    <externalId>false</externalId>
     <label>Customer</label>
     <referenceTo>Account</referenceTo>
     <relationshipLabel>Consumer Complaints</relationshipLabel>

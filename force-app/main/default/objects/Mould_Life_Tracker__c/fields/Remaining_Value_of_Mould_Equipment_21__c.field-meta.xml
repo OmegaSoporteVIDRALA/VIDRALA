@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Remaining_Value_of_Mould_Equipment_21__c</fullName>
+    <externalId>false</externalId>
     <formula>Mould_Life_Remaining_14__c * Cost_of_Set_Mould_Equipment_When_New_20__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Remaining Value of Mould Equipment</label>

@@ -3,6 +3,7 @@
     <fullName>MC4SF__Parent_MC_Subscriber__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Parent MC Subscriber</label>
     <referenceTo>MC4SF__MC_Subscriber__c</referenceTo>
     <relationshipLabel>MC Subscribers</relationshipLabel>

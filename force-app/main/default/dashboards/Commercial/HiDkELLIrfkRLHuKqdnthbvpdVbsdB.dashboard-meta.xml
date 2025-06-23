@@ -41,7 +41,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>SAP Dispatched orders</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -82,7 +81,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>SAP Dispatched orders</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -123,7 +121,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Revised Forecast</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -163,7 +160,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
@@ -203,7 +199,6 @@
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <title>Revised Forecast</title>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -242,7 +237,6 @@
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <sortLegendValues>false</sortLegendValues>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>16</rowIndex>
@@ -253,7 +247,6 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <owner>vicky.craven@encirc360.com</owner>
     <runningUser>vicky.craven@encirc360.com</runningUser>
     <textColor>#000000</textColor>
     <title>Commercial</title>

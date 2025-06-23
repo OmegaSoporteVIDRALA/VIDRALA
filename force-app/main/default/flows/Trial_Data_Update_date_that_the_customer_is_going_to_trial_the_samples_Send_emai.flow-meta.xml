@@ -32,13 +32,10 @@
                 <booleanValue>true</booleanValue>
             </value>
         </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
     </actionCalls>
     <apiVersion>59.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <description>Date that the customer is going to trial the samples, send email
 6sep24 removed {!$Record.Customer__r.Customer_Service_UK__r.Email}, from &quot;EmailListTT&quot;</description>
-    <environments>Default</environments>
     <formulas>
         <name>LinkFormula</name>
         <dataType>String</dataType>

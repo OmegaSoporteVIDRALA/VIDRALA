@@ -3,6 +3,7 @@
     <fullName>Container_Pack_Might_Require_Banding__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Is it possible that this container pack specification will require Banding?</description>
+    <externalId>false</externalId>
     <inlineHelpText>Is it possible that this container pack specification will require Banding?</inlineHelpText>
     <label>Container Pack Might Require Banding</label>
     <trackFeedHistory>true</trackFeedHistory>

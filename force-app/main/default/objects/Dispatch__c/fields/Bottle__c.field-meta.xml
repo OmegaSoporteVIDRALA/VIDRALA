@@ -3,6 +3,7 @@
     <fullName>Bottle__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
     <description>Reference to Bottle Description</description>
+    <externalId>false</externalId>
     <label>Bottle</label>
     <lookupFilter>
         <active>true</active>

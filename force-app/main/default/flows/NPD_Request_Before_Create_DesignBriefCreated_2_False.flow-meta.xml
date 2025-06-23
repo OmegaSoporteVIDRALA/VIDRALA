@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>62.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>assign_blank_value</name>
         <label>assign blank value</label>
@@ -24,7 +23,6 @@
     </assignments>
     <description>When a record is cloned this flow flow will untick the design brief created field if ticked
 flow version 62</description>
-    <environments>Default</environments>
     <interviewLabel>NPD Request - Before Create-  DesignBriefCreated 2 False {!$Flow.CurrentDateTime}</interviewLabel>
     <label>NPD Request - Before Create-  DesignBriefCreated 2 False</label>
     <processMetadataValues>

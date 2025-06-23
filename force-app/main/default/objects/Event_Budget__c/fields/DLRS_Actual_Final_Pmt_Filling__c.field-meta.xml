@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DLRS_Actual_Final_Pmt_Filling__c</fullName>
     <description>Filling DLRS Field</description>
+    <externalId>false</externalId>
     <label>Actual Final Pmt (F)</label>
     <precision>18</precision>
     <required>false</required>

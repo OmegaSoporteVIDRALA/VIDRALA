@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <description>this will update to the null value</description>
         <name>add_blank_incoterm</name>
@@ -79,7 +78,6 @@
                 </rightValue>
             </conditions>
             <connector>
-                <isGoTo>true</isGoTo>
                 <targetReference>incoterms</targetReference>
             </connector>
             <label>description changed</label>
@@ -95,7 +93,6 @@
                 </rightValue>
             </conditions>
             <connector>
-                <isGoTo>true</isGoTo>
                 <targetReference>incoterms</targetReference>
             </connector>
             <label>price include mould cost amoritisation changed</label>
@@ -111,7 +108,6 @@
                 </rightValue>
             </conditions>
             <connector>
-                <isGoTo>true</isGoTo>
                 <targetReference>incoterms</targetReference>
             </connector>
             <label>price includes delivery changed</label>
@@ -240,7 +236,6 @@
         </rules>
     </decisions>
     <description>update: flow doesn&apos;t apply to Opportunities of RT Fifty</description>
-    <environments>Default</environments>
     <interviewLabel>Opportunity line items - before trigger - CU {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity line items - before trigger - CU</label>
     <processMetadataValues>

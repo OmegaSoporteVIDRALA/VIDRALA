@@ -52,19 +52,7 @@ public class OM_Utils_UT {
     }
 
     @isTest static void dmlOperationsTest(){
-        /* User otherUser = new User(
-            FirstName = 'TestOtherBiomass',
-            LastName = 'UserotherBiomass',
-            Email = 'testuserotherBiomass@example.com',
-            Username = 'testuserotherbio@example.com',
-            Alias = 'tusotbio',
-            EmailEncodingKey = 'UTF-8',
-            LanguageLocaleKey = 'en_US',
-            LocaleSidKey = 'en_US',
-            ProfileId = Utils.Profiles.getProfileIdFromName('Axpo Hydro'),
-            TimeZoneSidKey ='Europe/Berlin'
-        );
-        insert otherUser; */
+
         User otherUser = [SELECT Id FROM User WHERE username like '%omegacrmconsulting%' LIMIT 1];
         
         List<Lead> testLeads = new List<Lead>();
@@ -101,5 +89,43 @@ public class OM_Utils_UT {
         }catch(Exception e){
             System.debug('Error catched in Test Class: ' + e.getMessage());
         }
+    }
+    
+    @IsTest
+    static void testGetTranslationsForField() {
+        
+        OM_Utils.FieldTranslations translations = new OM_Utils.FieldTranslations();
+        
+        translations.getTranslationMap(); 
+
+        translations.translationMap.put('account|fieldname|value|en', 'TranslatedValue');
+
+        Map<String, String> result = translations.getTranslationsForField('Account', 'FieldName', 'en');
+
+        System.assertEquals(1, result.size(), 'Debe haber una traducción');
+        System.assertEquals('TranslatedValue', result.get('value'), 'La traducción no es la esperada');
+    }
+
+    @IsTest
+    static void testParseSAPDateValid() {
+        String sapDate = '20250618';
+        Date expectedDate = Date.newInstance(2025, 6, 18);
+
+        Date result = OM_Utils.parseSAPDate(sapDate);
+
+        System.assertEquals(expectedDate, result, 'Fecha no coincide');
+    }
+
+    @IsTest
+    static void testParseSAPDateInvalid() {
+        String invalidDate = '2025618';
+        Date result = OM_Utils.parseSAPDate(invalidDate);
+        System.assertEquals(null, result, 'Debe devolver null');
+    }
+
+    @IsTest
+    static void testParseSAPDateNull() {
+        Date result = OM_Utils.parseSAPDate(null);
+        System.assertEquals(null, result, 'Debe devolver null');
     }
 }

@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Action_Points__c</fullName>
     <description>Action points from the meeting</description>
+    <externalId>false</externalId>
     <label>Action Points</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>

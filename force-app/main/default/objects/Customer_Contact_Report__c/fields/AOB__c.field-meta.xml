@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>AOB__c</fullName>
     <description>Any other business</description>
+    <externalId>false</externalId>
     <label>AOB</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>

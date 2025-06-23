@@ -4,7 +4,6 @@
     <amount>true</amount>
     <dateType>2</dateType>
     <developerName>OpportunityRevenueScheduleDate</developerName>
-    <hasCustomGroup>false</hasCustomGroup>
     <hasProductFamily>false</hasProductFamily>
     <masterLabel>Opportunity Revenue Schedule Date</masterLabel>
     <quantity>false</quantity>

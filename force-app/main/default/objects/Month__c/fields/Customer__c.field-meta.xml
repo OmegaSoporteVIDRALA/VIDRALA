@@ -3,6 +3,7 @@
     <fullName>Customer__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
     <description>Lookup to related customer account</description>
+    <externalId>false</externalId>
     <label>Customer</label>
     <referenceTo>Account</referenceTo>
     <relationshipName>Months</relationshipName>

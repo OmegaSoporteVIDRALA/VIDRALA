@@ -15,10 +15,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>Drawing__c.Drawing_Record_Updates_Alert</nameSegment>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <description>This decision is used to guide the flow if the Drawing Record has been created by the user being marked in the Sales Org SAP Code EN60 or VD30.</description>
         <name>Sales_Org_SAP_Code_Check</name>
@@ -42,7 +40,6 @@
             <label>TRUE</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <description>Formula is used to identify the Sales Organisation SAP Code of the user creating/raising any Drawing records.</description>
         <name>USERSalesOrgSAPCode</name>

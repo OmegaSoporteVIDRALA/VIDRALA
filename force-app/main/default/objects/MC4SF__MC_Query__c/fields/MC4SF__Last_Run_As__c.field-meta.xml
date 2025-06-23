@@ -3,6 +3,7 @@
     <fullName>MC4SF__Last_Run_As__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Last Run As</label>
     <referenceTo>User</referenceTo>
     <relationshipName>MC_Queries1</relationshipName>

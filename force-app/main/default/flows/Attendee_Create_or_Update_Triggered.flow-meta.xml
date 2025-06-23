@@ -38,7 +38,6 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Status_Changes_To_Accepted</name>
@@ -78,10 +77,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Store_User_ids</name>
         <label>Store User ids</label>
@@ -158,7 +155,6 @@
             <label>Declined</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Attendee - Create or Update Triggered {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Attendee - Create or Update Triggered</label>
     <loops>

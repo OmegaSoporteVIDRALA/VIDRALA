@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Has_this_container_been_replaced_19__c</fullName>
+    <externalId>false</externalId>
     <label>Has this container been replaced?</label>
     <required>false</required>
     <trackHistory>true</trackHistory>

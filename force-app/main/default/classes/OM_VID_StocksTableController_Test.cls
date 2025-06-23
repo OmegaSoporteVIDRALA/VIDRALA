@@ -15,7 +15,7 @@ public class OM_VID_StocksTableController_Test {
             Test.setMock(WebServiceMock.class, new OM_SapFunctionsMock_Test());
             Test.startTest();
             OM_VID_StocksTableController.makeBWStocksCallout(
-                '2024','01','M001'
+                '2024','01','M001', '256532123'
             );
             Test.stopTest();
         }
@@ -28,7 +28,7 @@ public class OM_VID_StocksTableController_Test {
         Test.startTest();
         OM_VID_StocksTableController.TableWrapper result =
             OM_VID_StocksTableController.getTableData(
-                '2024',  '01', 'ADDR001'
+                '2024',  '01', 'ADDR001', '256532123'
             );
         Test.stopTest();
 

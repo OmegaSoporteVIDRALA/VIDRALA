@@ -3,6 +3,7 @@
     <fullName>bar__Exclude_Formula_Fields__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Exclude Formula Fields</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

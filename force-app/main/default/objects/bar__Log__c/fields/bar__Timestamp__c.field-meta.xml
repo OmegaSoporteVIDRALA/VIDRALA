@@ -3,6 +3,7 @@
     <fullName>bar__Timestamp__c</fullName>
     <deprecated>false</deprecated>
     <description>Log event timestamp from the external system</description>
+    <externalId>false</externalId>
     <label>Timestamp</label>
     <required>true</required>
     <trackHistory>false</trackHistory>

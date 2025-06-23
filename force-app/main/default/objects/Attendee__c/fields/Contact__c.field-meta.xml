@@ -3,6 +3,7 @@
     <fullName>Contact__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Event Attendee External to Encirc with a Contact in Salesforce</description>
+    <externalId>false</externalId>
     <inlineHelpText>Type In The Account Name To Retrieve Contacts For The Account</inlineHelpText>
     <label>Contact</label>
     <lookupFilter>
