@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_VID_EAN__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>EAN</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>SAP_Material_Code__c.OM_ProductRef__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.OM_SAC_modeloYDenominacion__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>SAP_Material_Code__c</referenceTo>
+    <relationshipLabel>Insatisfacciones</relationshipLabel>
+    <relationshipName>Insatisfacciones</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
