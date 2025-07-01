@@ -515,6 +515,18 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>OM_VID_CaseTRGHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OM_VID_CaseTRGHandlerMethods</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OM_VID_CaseTRGHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>OM_VID_ConstantsTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -3447,6 +3459,21 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.OM_SAC_CodigoModelo__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.OM_VID_AccountNameAuto__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.OM_VID_EAN__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.OM_VID_Planta__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
