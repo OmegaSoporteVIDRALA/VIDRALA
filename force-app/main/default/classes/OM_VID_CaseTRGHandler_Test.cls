@@ -1,5 +1,5 @@
 @isTest
-public class OM_VID_CaseTRGHandler_Test {
+public class OM_VID_CaseTRGHandler_Test { 
     @isTest static void testHandlerMethod_BeforeInsertMethods(){
         Test.StartTest();
         OM_VID_TestUtils.createCases(1);
