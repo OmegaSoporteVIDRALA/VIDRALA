@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OM_VID_TipoCliente__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISPICKVAL(Account.ClienteVIP__c, &quot;98&quot;),
+    &quot;Preferente&quot;,
+    IF(
+        ISPICKVAL(Account.ClienteVIP__c, &quot;99&quot;),
+        &quot;VIP&quot;,
+        IF(
+            ISPICKVAL(Account.ClienteVIP__c, &quot;ESPECIAL&quot;),
+            &quot;Especial&quot;,
+            &quot;&quot;
+        )
+    )
+)</formula>
+    <label>Tipo de cliente</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

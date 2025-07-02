@@ -17,6 +17,7 @@
 		<members>Case.OM_VID_AccountNameAuto__c</members>
 		<members>Case.OM_VID_EAN__c</members>
 		<members>Case.OM_VID_Planta__c</members>
+		<members>Case.OM_VID_TipoCliente__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
