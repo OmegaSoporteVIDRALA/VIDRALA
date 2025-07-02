@@ -6,6 +6,7 @@
 		<members>OM_VID_CaseTRGHandler_Test</members>
 		<members>OM_VID_Constants</members>
 		<members>OM_VID_TestUtils</members>
+		<members>OM_VID_AccountTRGHandlerMethods</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
