@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>OM_VID_CaseTRGHandler</members>
+		<members>OM_VID_CaseTRGHandlerMethods</members>
+		<members>OM_VID_CaseTRGHandler_Test</members>
+		<members>OM_VID_Constants</members>
+		<members>OM_VID_TestUtils</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>OM_VID_CaseTRG</members>
+		<name>ApexTrigger</name>
+	</types>
+	<types>
+		<members>Case.OM_SAC_CosteEstimado__c</members>
+		<members>Case.OM_VID_AccountNameAuto__c</members>
+		<members>Case.OM_VID_EAN__c</members>
+		<members>Case.OM_VID_Planta__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>OM_SAC_GrupoCliente</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>OM_SAC_lineasDeCentro__c-Linea Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Admin</members>
+		<members>Integration User</members>
+		<members>System Administrator Fifty</members>
+		<members>Vidrala Europe Sales</members>
+		<members>Vidrala Europe Support</members>
+		<name>Profile</name>
+	</types>
+	<version>64.0</version>
+</Package>
