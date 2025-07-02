@@ -17,6 +17,9 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
+      - name: 🧹 Clear Salesforce CLI cache
+        run: rm -rf ~/.sf
+
       - name: ⛔ Verificar si rama base está autorizada
         run: |
           ALLOWED_BRANCHES=("main" "UAT" "Integra")
@@ -124,7 +127,7 @@ jobs:
         run: |
           npm install --global @salesforce/cli
 
-      - name: Ver versión de Salesforce CLI
+      - name: 🔎 Ver versión de Salesforce CLI
         run: sf --version
       
       - name: 🛂 Autenticarse en Salesforce con JWT
@@ -351,25 +354,6 @@ jobs:
           
           if [ "$VALIDATION_FAILED" = true ]; then
             echo "❌ Errores de validación:"
-
-            # Verificar errores en componentFailures
-            HAS_COMPONENT_FAILURES=$(jq -r '(.result.details.componentFailures | type) == "array"' validation-result.json)
-            if [ "$HAS_COMPONENT_FAILURES" = "true" ]; then
-              echo "📦 Component Failures:"
-              jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' validation-result.json
-            else
-              echo "No hay errores en componentFailures."
-            fi
-
-            # Verificar errores en runTestResult.failures (fallos en tests)
-            HAS_TEST_FAILURES=$(jq -r '(.result.details.runTestResult.failures | type) == "array"' validation-result.json)
-            if [ "$HAS_TEST_FAILURES" = "true" ]; then
-              echo "🧪 Test Failures:"
-              jq -r '.result.details.runTestResult.failures[] | "\(.name):\(.methodName): \(.message)"' validation-result.json
-            else
-              echo "No hay errores en runTestResult.failures."
-            fi
-
             echo "🛑 Proceso detenido por errores de validación."
             exit 1
           fi
