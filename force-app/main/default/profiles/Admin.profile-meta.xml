@@ -14,11 +14,11 @@
     </classAccesses>
     <classAccesses>
         <apexClass>OM_VID_Constants</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>OM_VID_TestUtils</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
