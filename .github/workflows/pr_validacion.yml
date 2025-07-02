@@ -335,13 +335,11 @@ jobs:
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
         run: |
           echo "⏳ Buscando clases de test..."
-          TEST_CLASSES=$(find ./pmd/classes \( -name "*Test.cls"\) -type f -exec basename {} .cls \; | paste -sd' ' -)
+          TEST_CLASSES=$(find ./pmd/classes \( -name "*Test.cls" \) -type f -exec basename {} .cls \; | paste -sd ' ' -)
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
-            printf '%q\n' $TEST_CLASSES
             echo "Ejecutando: sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests $TEST_CLASSES"
             sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests "$TEST_CLASSES" --json > validation-result.json || VALIDATION_FAILED=true
-
           else
             echo "🧱 No se encontraron clases de test. Validando solo los componentes"
             sf deploy metadata validate \
