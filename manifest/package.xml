@@ -7,6 +7,7 @@
 		<members>OM_VID_Constants</members>
 		<members>OM_VID_TestUtils</members>
 		<members>OM_VID_AccountTRGHandlerMethods</members>
+		<members>OM_VID_AccountTRGHandler_UT</members>
 		<members>OM_VID_ConstantsTest</members>
 		<name>ApexClass</name>
 	</types>
