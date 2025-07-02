@@ -330,7 +330,8 @@ jobs:
         run: |
           echo "⏳ Buscando clases de test..."
           TEST_CLASSES=$(find ./pmd/classes \( -name "*Test.cls" -o -name "*_UT.cls" \) -type f -exec basename {} .cls \; | paste -sd' ' -)
-
+          echo "Contenido de package.xml:"
+          cat ./manifest/package.xml
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
             sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests "$TEST_CLASSES" --json > validation-result.json || VALIDATION_FAILED=true
