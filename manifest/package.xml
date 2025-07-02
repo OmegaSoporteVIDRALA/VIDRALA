@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>OM_VID_CaseTRGHandler</members>
-		<members>OM_VID_CaseTRGHandlerMethods</members>
-		<members>OM_VID_CaseTRGHandler_Test</members>
-		<members>OM_VID_Constants</members>
-		<members>OM_VID_TestUtils</members>
-		<members>OM_VID_AccountTRGHandlerMethods</members>
-		<members>OM_VID_AccountTRGHandler_UT</members>
-		<members>OM_VID_ConstantsTest</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
 		<members>OM_VID_CaseTRG</members>
 		<name>ApexTrigger</name>
 	</types>
