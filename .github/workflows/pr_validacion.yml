@@ -132,7 +132,7 @@ jobs:
 
       - name: 🚷 Logout of Salesforce CLI
         run: sf logout --all
-        
+
       - name: 🛂 Autenticarse en Salesforce con JWT
         env:
     
@@ -340,7 +340,7 @@ jobs:
             echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
             printf '%q\n' $TEST_CLASSES
             echo "Ejecutando: sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests $TEST_CLASSES"
-            sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests "$TEST_CLASSES" --json > validation-result.json || VALIDATION_FAILED=true
+            sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests OM_VID_AccountTRGHandler_UT OM_VID_CaseTRGHandler_Test OM_VID_ConstantsTest --json > validation-result.json || VALIDATION_FAILED=true
           else
             echo "🧱 No se encontraron clases de test. Validando solo los componentes"
             sf deploy metadata validate \
