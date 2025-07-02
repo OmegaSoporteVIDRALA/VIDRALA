@@ -329,7 +329,7 @@ jobs:
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
         run: |
           echo "⏳ Buscando clases de test..."
-          TEST_CLASSES=$(find ./pmd/classes \( -name "*Test.cls" -o -name "*_UT.cls" \) -type f -exec basename {} .cls \; | paste -sd',' -)
+          TEST_CLASSES=$(find ./pmd/classes \( -name "*Test.cls" -o -name "*_UT.cls" \) -type f -exec basename {} .cls \; | paste -sd' ' -)
 
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
