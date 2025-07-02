@@ -391,6 +391,18 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>OM_VID_CaseTRGHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OM_VID_CaseTRGHandlerMethods</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OM_VID_CaseTRGHandler_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>OM_VID_Constants</apexClass>
         <enabled>false</enabled>
     </classAccesses>
