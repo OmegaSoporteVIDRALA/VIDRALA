@@ -13,10 +13,7 @@ jobs:
     name : Salesforce Validation
     runs-on: ubuntu-latest
     
-    steps:
-      - name: ⬇️ Checkout repository
-        uses: actions/checkout@v3
-        
+    steps:        
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
@@ -351,9 +348,28 @@ jobs:
           echo "📢 Resultado de la validación:"
           cat validation-result.json | jq
 
+          
           if [ "$VALIDATION_FAILED" = true ]; then
-            echo "❌ Se encontraron errores en la validación:"
-            jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' validation-result.json
+            echo "❌ Errores de validación:"
+
+            # Verificar errores en componentFailures
+            HAS_COMPONENT_FAILURES=$(jq -r '(.result.details.componentFailures | type) == "array"' validation-result.json)
+            if [ "$HAS_COMPONENT_FAILURES" = "true" ]; then
+              echo "📦 Component Failures:"
+              jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' validation-result.json
+            else
+              echo "No hay errores en componentFailures."
+            fi
+
+            # Verificar errores en runTestResult.failures (fallos en tests)
+            HAS_TEST_FAILURES=$(jq -r '(.result.details.runTestResult.failures | type) == "array"' validation-result.json)
+            if [ "$HAS_TEST_FAILURES" = "true" ]; then
+              echo "🧪 Test Failures:"
+              jq -r '.result.details.runTestResult.failures[] | "\(.name):\(.methodName): \(.message)"' validation-result.json
+            else
+              echo "No hay errores en runTestResult.failures."
+            fi
+
             echo "🛑 Proceso detenido por errores de validación."
             exit 1
           fi
