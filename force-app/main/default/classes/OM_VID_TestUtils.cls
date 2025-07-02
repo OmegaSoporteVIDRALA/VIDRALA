@@ -26,7 +26,7 @@ public class OM_VID_TestUtils {
             
             Database.DMLOptions dml = new Database.DMLOptions();
             dml.DuplicateRuleHeader.AllowSave = true; 
-            List<Database.SaveResult> sr = Database.insert(accListToInsert, dml); 
+            Database.insert(accListToInsert, dml); 
     
             //insert accListToInsert;
             createContacts(accListToInsert);
@@ -41,7 +41,7 @@ public class OM_VID_TestUtils {
 
         Database.DMLOptions dml = new Database.DMLOptions();
         dml.DuplicateRuleHeader.AllowSave = true; 
-        List<Database.SaveResult> sr = Database.insert(conListToInsert, dml);
+        Database.insert(conListToInsert, dml);
         //insert conListToInsert;
     }
 
