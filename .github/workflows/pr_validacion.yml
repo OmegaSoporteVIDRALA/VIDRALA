@@ -126,6 +126,9 @@ jobs:
       - name: 🔧 Instalar Salesforce CLI
         run: |
           npm install --global @salesforce/cli
+
+      - name: Ver versión de Salesforce CLI
+        run: sf --version
       
       - name: 🛂 Autenticarse en Salesforce con JWT
         env:
@@ -334,6 +337,7 @@ jobs:
           cat ./manifest/package.xml
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
+            echo "Ejecutando: sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests $TEST_CLASSES"
             sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests "$TEST_CLASSES" --json > validation-result.json || VALIDATION_FAILED=true
           else
             echo "🧱 No se encontraron clases de test. Validando solo los componentes"
@@ -342,23 +346,16 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests DummyClass \
-              --json > validation-result.json 2>&1
-          EXIT_CODE=$?
+             --json > validation-result.json || VALIDATION_FAILED=true
           fi
 
-          echo "📢 Contenido crudo de $VALIDATION_JSON:"
-          cat validation-result.json || echo "No se pudo leer el archivo validation-result.json"
-          
-          if [ $EXIT_CODE -ne 0 ]; then
-            echo "❌ Error en sf deploy metadata validate, código de salida: $EXIT_CODE"
-            exit $EXIT_CODE
-          fi
+          echo "📢 Resultado de la validación:"
+          cat validation-result.json | jq
 
-          FAILURES=$(jq '.result.details.componentFailures | length' validation-result.json || echo 0)
-
-          if [ "$FAILURES" -gt 0 ]; then
+          if [ "$VALIDATION_FAILED" = true ]; then
             echo "❌ Se encontraron errores en la validación:"
             jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' validation-result.json
+            echo "🛑 Proceso detenido por errores de validación."
             exit 1
           fi
 
