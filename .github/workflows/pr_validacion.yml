@@ -333,12 +333,7 @@ jobs:
 
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
-            sf deploy metadata validate \
-              --manifest ./manifest/package.xml \
-              --target-org SF \
-              --test-level RunSpecifiedTests \
-              --tests "$TEST_CLASSES" \
-              --json > validation-result.json || VALIDATION_FAILED=true
+            sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests "$TEST_CLASSES" --json > validation-result.json || VALIDATION_FAILED=true
           else
             echo "🧱 No se encontraron clases de test. Validando solo los componentes"
             sf deploy metadata validate \
