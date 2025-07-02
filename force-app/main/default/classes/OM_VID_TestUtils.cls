@@ -167,4 +167,34 @@ public class OM_VID_TestUtils {
 
         return one;
     }
+    
+    public static void createCases(Integer caseNum){
+        List<Case> caseToInsert = new List<Case>();
+        createAccountsWithContacts(1);
+        Account objAccount = [SELECT Id FROM ACCOUNT LIMIT 1];
+        
+        String recordTypeId = [SELECT Id from RecordType where SobjectType = :OM_VID_Constants.caseName and DeveloperName = :OM_VID_Constants.insatisfaccionRTVidrala].Id;
+        Product2 producto =new Product2();
+        producto.Name='test';
+        producto.productCode='1234';
+        producto.isActive = true;
+        producto.CurrencyIsoCode='EUR';        
+        insert producto;
+        for(Integer i = 0; i < caseNum; i++){
+            Case ins = new Case(
+            	AccountId = objAccount.Id,
+            	RecordTypeId = recordTypeId,
+                OM_SAC_Categorizacion_Incidencia__c = 'A',
+                OM_SAC_loteOAlbaran__c = '1234554',
+                OM_SAC_hipotesisDelAt__c = 'test',
+                OM_SAC_modeloYDenominacion__c = producto.Id,
+                OM_VID_Planta__c = '1030'
+                
+			);
+
+            caseToInsert.add(ins);
+        }
+
+        insert caseToInsert;
+    }
 }
