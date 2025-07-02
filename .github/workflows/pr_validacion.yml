@@ -347,18 +347,18 @@ jobs:
           fi
 
           echo "📢 Contenido crudo de $VALIDATION_JSON:"
-          cat "$VALIDATION_JSON" || echo "No se pudo leer el archivo $VALIDATION_JSON"
+          cat validation-result.json || echo "No se pudo leer el archivo validation-result.json"
           
           if [ $EXIT_CODE -ne 0 ]; then
             echo "❌ Error en sf deploy metadata validate, código de salida: $EXIT_CODE"
             exit $EXIT_CODE
           fi
 
-          FAILURES=$(jq '.result.details.componentFailures | length' "$VALIDATION_JSON" || echo 0)
+          FAILURES=$(jq '.result.details.componentFailures | length' validation-result.json || echo 0)
 
           if [ "$FAILURES" -gt 0 ]; then
             echo "❌ Se encontraron errores en la validación:"
-            jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' "$VALIDATION_JSON"
+            jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' validation-result.json
             exit 1
           fi
 
@@ -368,7 +368,7 @@ jobs:
             echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
           fi
           echo "✅ Validación completada con éxito."
-          
+
       - name: 📬 Guardar commit SHA
         run: |
           mkdir -p .gh-deploy-data
