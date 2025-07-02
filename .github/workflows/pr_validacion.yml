@@ -342,16 +342,23 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests DummyClass \
-              --json > validation-result.json || VALIDATION_FAILED=true
+              --json > validation-result.json 2>&1
+          EXIT_CODE=$?
           fi
 
-          echo "📢 Resultado de la validación:"
-          cat validation-result.json | jq
+          echo "📢 Contenido crudo de $VALIDATION_JSON:"
+          cat "$VALIDATION_JSON" || echo "No se pudo leer el archivo $VALIDATION_JSON"
+          
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "❌ Error en sf deploy metadata validate, código de salida: $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
 
-          if [ "$VALIDATION_FAILED" = true ]; then
+          FAILURES=$(jq '.result.details.componentFailures | length' "$VALIDATION_JSON" || echo 0)
+
+          if [ "$FAILURES" -gt 0 ]; then
             echo "❌ Se encontraron errores en la validación:"
-            jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' validation-result.json
-            echo "🛑 Proceso detenido por errores de validación."
+            jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' "$VALIDATION_JSON"
             exit 1
           fi
 
@@ -360,7 +367,8 @@ jobs:
             mkdir -p .gh-deploy-data
             echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
           fi
-
+          echo "✅ Validación completada con éxito."
+          
       - name: 📬 Guardar commit SHA
         run: |
           mkdir -p .gh-deploy-data
