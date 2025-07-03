@@ -1,7 +1,7 @@
 @isTest
 public class OM_VID_AccountTRGHandler_UT {
     
-    @isTest static void testHandlerMethod_InsertMethods(){
+    @isTest static void testHandlerMethod_InsertMethods(){ 
         Test.StartTest();
         OM_VID_TestUtils.createAccountsWithContacts(1);
         
