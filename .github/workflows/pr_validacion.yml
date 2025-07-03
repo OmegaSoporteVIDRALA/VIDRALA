@@ -13,10 +13,7 @@ jobs:
     name : Salesforce Validation
     runs-on: ubuntu-latest
     
-    steps:
-      - name: ⬇️ Checkout repository
-        uses: actions/checkout@v3
-        
+    steps:        
       - name: ⬇️ Checkout code
         uses: actions/checkout@v4
 
@@ -126,7 +123,16 @@ jobs:
       - name: 🔧 Instalar Salesforce CLI
         run: |
           npm install --global @salesforce/cli
+
+      - name: 🔎 Ver versión de Salesforce CLI
+        run: sf --version
       
+      - name: 🧹 Clear Salesforce CLI cache
+        run: rm -rf ~/.sf
+
+      - name: 🚷 Logout of Salesforce CLI
+        run: sf logout --all
+
       - name: 🛂 Autenticarse en Salesforce con JWT
         env:
     
@@ -329,16 +335,11 @@ jobs:
       - name: 🧭 Validar todo el package.xml (con o sin clases de test)
         run: |
           echo "⏳ Buscando clases de test..."
-          TEST_CLASSES=$(find ./pmd/classes -type f -name "*Test.cls" -exec basename {} .cls \; | paste -sd' ' -)
-
+          TEST_CLASSES=$(find ./pmd/classes -type f \( -name "*Test.cls" -o -name "*_UT.cls" \) -printf '%f\n' | sed 's/\.cls$//' | paste -sd' ' -)
           if [ -n "$TEST_CLASSES" ]; then
             echo "🧪 Clases de test encontradas: $TEST_CLASSES. Validando componentes y clases tests"
-            sf deploy metadata validate \
-              --manifest ./manifest/package.xml \
-              --target-org SF \
-              --test-level RunSpecifiedTests \
-              --tests "$TEST_CLASSES" \
-              --json > validation-result.json || VALIDATION_FAILED=true
+            echo "Ejecutando: sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests $TEST_CLASSES"
+            sf deploy metadata validate --manifest ./manifest/package.xml --target-org SF --test-level RunSpecifiedTests --tests $TEST_CLASSES --json > validation-result.json || VALIDATION_FAILED=true
           else
             echo "🧱 No se encontraron clases de test. Validando solo los componentes"
             sf deploy metadata validate \
@@ -346,15 +347,15 @@ jobs:
               --target-org SF \
               --test-level RunSpecifiedTests \
               --tests DummyClass \
-              --json > validation-result.json || VALIDATION_FAILED=true
+             --json > validation-result.json || VALIDATION_FAILED=true
           fi
 
           echo "📢 Resultado de la validación:"
           cat validation-result.json | jq
 
+          
           if [ "$VALIDATION_FAILED" = true ]; then
-            echo "❌ Se encontraron errores en la validación:"
-            jq -r '.result.details.componentFailures[] | "\(.fileName):\(.lineNumber): \(.problem)"' validation-result.json
+            echo "❌ Errores de validación:"
             echo "🛑 Proceso detenido por errores de validación."
             exit 1
           fi
@@ -364,6 +365,7 @@ jobs:
             mkdir -p .gh-deploy-data
             echo "$DEPLOY_ID" > .gh-deploy-data/validated-deploy-id.txt
           fi
+          echo "✅ Validación completada con éxito."
 
       - name: 📬 Guardar commit SHA
         run: |

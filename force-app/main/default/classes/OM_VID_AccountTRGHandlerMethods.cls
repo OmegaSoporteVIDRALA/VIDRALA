@@ -19,6 +19,7 @@ public class OM_VID_AccountTRGHandlerMethods {
         if(destinatariosToInsert.size() > 0){
             OM_Utils.shouldSkipTriggerGlobal = true;
             insert destinatariosToInsert;
+            OM_Utils.shouldSkipTriggerGlobal = false;
         }
     }
     
