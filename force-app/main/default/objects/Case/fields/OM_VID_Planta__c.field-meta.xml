@@ -14,27 +14,27 @@
             <value>
                 <fullName>1010</fullName>
                 <default>false</default>
-                <label>1010</label>
+                <label>Aiala</label>
             </value>
             <value>
                 <fullName>1020</fullName>
                 <default>false</default>
-                <label>1020</label>
+                <label>Crisnova</label>
             </value>
             <value>
                 <fullName>1030</fullName>
                 <default>false</default>
-                <label>1030</label>
+                <label>Castellar</label>
             </value>
             <value>
                 <fullName>1040</fullName>
                 <default>false</default>
-                <label>1040</label>
+                <label>Gallo</label>
             </value>
             <value>
                 <fullName>1090</fullName>
                 <default>false</default>
-                <label>1090</label>
+                <label>Santos Barosa</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -15,19 +15,21 @@ public class OM_VID_CaseTRGHandler {
 
         if (isBefore) {
             if (isInsert) {
-            	OM_VID_CaseTRGHandlerMethods.caseBeforeInsertActions(news);
+            	OM_VID_CaseTRGHandlerMethods.caseBeforeActions(news, null);
             }
 
             if(isUpdate){
+                OM_VID_CaseTRGHandlerMethods.caseBeforeActions(news, oldsMap);
             }
         }
 
         if (isAfter) {
             if (isInsert) {
-                OM_VID_CaseTRGHandlerMethods.caseAfterInsertActions(news);
+                OM_VID_CaseTRGHandlerMethods.caseAfterActions(news, null);
             }
 
             if(isUpdate){
+                OM_VID_CaseTRGHandlerMethods.caseAfterActions(news, oldsMap);
             }
         }
     }
