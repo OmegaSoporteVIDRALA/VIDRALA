@@ -5,7 +5,7 @@
 * @last modified on  : 15-03-2024
 * @last modified by  : mmadridp@omegacrmconsulting.com
 **/
-@isTest
+@isTest 
 public with sharing class OM_VID_ConstantsTest {
     @isTest 
     public static void testConstants(){
