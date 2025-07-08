@@ -46,6 +46,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>OM_VID_ProductoGanador__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Discount</field>
             </layoutItems>
             <layoutItems>
@@ -122,6 +126,7 @@
     <multilineLayoutFields>Pallet_Volume__c</multilineLayoutFields>
     <multilineLayoutFields>UnitPrice</multilineLayoutFields>
     <multilineLayoutFields>Quantity</multilineLayoutFields>
+    <multilineLayoutFields>OM_VID_ProductoGanador__c</multilineLayoutFields>
     <multilineLayoutFields>Subtotal</multilineLayoutFields>
     <multilineLayoutFields>TotalPrice</multilineLayoutFields>
     <multilineLayoutFields>ListPrice</multilineLayoutFields>
