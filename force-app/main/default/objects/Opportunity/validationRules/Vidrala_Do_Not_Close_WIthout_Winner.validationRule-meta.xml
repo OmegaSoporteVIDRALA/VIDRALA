@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vidrala_Do_Not_Close_WIthout_Winner</fullName>
+    <active>true</active>
+    <description>Si en una oportunidad de Record Type “Fifty_Master_Opportunity” el estado pasa a Closed Won y OM_VID_NumProductosGanadores__c es igual a 0 no permite cerrarla.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(StageName, &quot;Closed Won&quot;),
+    RecordType.DeveloperName = &quot;Fifty_Master_Opportunity&quot;,
+    OR(
+        ISBLANK(OM_VID_NumProductosGanadores__c),
+        OM_VID_NumProductosGanadores__c = 0
+    )
+)</errorConditionFormula>
+    <errorMessage>Para cerrar la oportunidad como ganadora, debes elegir algún producto como ganador en la oportunidad.</errorMessage>
+</ValidationRule>
