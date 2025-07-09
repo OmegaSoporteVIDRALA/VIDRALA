@@ -63,7 +63,7 @@ public class OM_BW_StocksCallout {
         if(filterWrapper.batch != null){
             OM_SapFunctionsStyle.W3query item6 = new OM_SapFunctionsStyle.W3query();
             item6.Name = 'VAR_NAME_'+VAR_NAME;
-            item6.Value = 'VARA_20250619094432';
+            item6.Value = 'VAR_20250619094432';
             itemList.add(item6);
             OM_SapFunctionsStyle.W3query item7 = new OM_SapFunctionsStyle.W3query();
             item7.Name = 'VAR_VALUE_EXT_'+VAR_NAME;
@@ -71,7 +71,7 @@ public class OM_BW_StocksCallout {
             itemList.add(item7);
             VAR_NAME++;  
         } 
-    
+      
            
         parameter.item = itemList;
         OM_SapFunctionsStyle.RrwsThxAxisData axis;
