@@ -20,6 +20,7 @@
         <exclude name="ApexUnitTestShouldNotUseSeeAllDataTrue"/><!--Apex unit tests should not use @isTest(seeAllData=true) because it opens up the existing database data for unexpected modification by tests.-->
         <exclude name="AvoidGlobalModifier"/><!--Global classes should be avoided (especially in managed packages) as they can never be deleted or changed in signature-->
         <exclude name="DebugsShouldUseLoggingLevel"/><!--The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum.-->
+        <exclude name="UnusedLocalVariable"/><!--Excludes the unused local variables-->
     </rule>
 
     <!-- 🔤 Code Style: Rules which enforce a specific coding style. -->

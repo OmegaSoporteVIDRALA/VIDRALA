@@ -15,7 +15,7 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
     errors;
     ratiosNumber = 0;
     productCode;
-    inputBatch = '';
+    inputBatch = 'vacio';
     materialOptions = [];
     isDisabled = true; 
     placeholderMaterial = 'Todos';    
@@ -198,11 +198,12 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
     
 
     handleInvalidBatch(event) {
-        if (!this.inputBatch) {
-            event.target.setCustomValidity('Por favor, selecciona un Lote.');
+        if (!this.inputBatch || this.inputBatch === 'invalid') {
+            event.target.setCustomValidity('Por favor, introduzca un lote válido.');
         } else {
             event.target.setCustomValidity('');
         }
+            event.target.reportValidity();
     }
 
     handleInvalidMaterial(event) {
@@ -282,21 +283,21 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
     
 
     handleBatchChange(event) {
-        const batchValue = event.target.value; 
-    
-        
-        const isValidAlphanumeric = /^[a-zA-Z0-9]+$/.test(batchValue);
-    
-        if (!batchValue || !isValidAlphanumeric) {
-            console.log('Error: El lote introducido no es válido.');
-            event.target.setCustomValidity('Por favor, introduzca un Lote válido.');
+        const batchValue = event.target.value;
+        const isValidAlphanumeric = /^[a-zA-Z0-9]{9,11}$/.test(batchValue);
+
+        if (!batchValue) {
+            this.inputBatch = 'vacio';
+            event.target.setCustomValidity('');
+        } else if (!isValidAlphanumeric) {
+            this.inputBatch = 'invalid';
+            event.target.setCustomValidity('Por favor, introduzca un lote válido.');
         } else {
-            console.log('Batch introducido:', batchValue);
-            event.target.setCustomValidity(''); 
-            this.inputBatch = batchValue; 
+            this.inputBatch = batchValue;
+            event.target.setCustomValidity('');
         }
+            event.target.reportValidity();
     
-        event.target.reportValidity(); 
     }
 
     handleMaterialChange(event) {
@@ -350,6 +351,15 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
             return;
         }
 
+        if (this.inputBatch === 'invalid')  {
+            this.dispatchEvent(new ShowToastEvent({
+                title: 'Error',
+                message: 'El Lote introducido debe tener el formato correcto',
+                variant: 'error'
+            }));
+            return;
+        }
+
        
         if (this.calculateMonthDifference(this.selectedYear, this.selectedMonth, this.selectedYearTo, this.selectedMonthTo) > 12) {
             this.dispatchEvent(new ShowToastEvent({
@@ -375,7 +385,6 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
             monthFrom: this.selectedMonth,
             monthTo: this.selectedMonthTo,
             model : this.productCode,
-            batch : this.inputBatch,
         };
     
         
@@ -385,6 +394,10 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
 
         if (this.selectedMaterial !== 'vacio') {
             params.material = this.selectedMaterial;
+        }
+
+        if (this.inputBatch !== 'vacio') {
+            params.batch = this.inputBatch;
         }
 
         this.isInitialScreen = false;
@@ -413,6 +426,7 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
                     variant: 'warning'
                 }));
 
+                this.inputBatch = 'vacio';
                 this.isInitialScreen = true;
                 this.isSearchScreen = true;
                 this.isLoadScreen = false;
@@ -432,9 +446,11 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
                 variant: 'error'
             }));
 
+            this.inputBatch = 'vacio';
             this.isInitialScreen = true;
             this.isSearchScreen = true;
             this.isLoadScreen = false;
+            
         });
     }
 
@@ -471,7 +487,7 @@ export default class OmSacAbonosDevolucionesProduct extends LightningElement {
         this.selectedOrder = '';  
         this.selectedYear = '';
         this.selectedYearTo = '';
-        this.inputBatch = '';
+        this.inputBatch = 'vacio';
         this.selectedMaterial = 'vacio';
     }
 
