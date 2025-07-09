@@ -141,25 +141,27 @@ export default class OmStocksTable extends LightningElement {
         const batchValue = event.target.value;
         const isValidAlphanumeric = /^[a-zA-Z0-9]{9,11}$/.test(batchValue);
 
-        if (!batchValue || !isValidAlphanumeric) {
-            console.log('Error: El lote introducido no es válido.');
-            event.target.setCustomValidity('Por favor, introduzca un lote válido.');
+        if (!batchValue) {
             this.inputBatch = 'vacio';
-        }else {
-            console.log('Batch introducido:', batchValue);
             event.target.setCustomValidity('');
+        } else if (!isValidAlphanumeric) {
+            this.inputBatch = 'invalid';
+            event.target.setCustomValidity('Por favor, introduzca un lote válido.');
+        } else {
             this.inputBatch = batchValue;
+            event.target.setCustomValidity('');
         }
-
-        event.target.reportValidity();
+            event.target.reportValidity();
+    
     }
 
     handleInvalidBatch(event) {
-        if (!this.inputBatch || this.inputBatch === 'vacio') {
-            event.target.setCustomValidity('Por favor, selecciona un lote.');
+        if (!this.inputBatch || this.inputBatch === 'invalid') {
+            event.target.setCustomValidity('Por favor, introduzca un lote válido.');
         } else {
             event.target.setCustomValidity('');
         }
+            event.target.reportValidity();
     }
     
 
@@ -168,6 +170,15 @@ export default class OmStocksTable extends LightningElement {
             this.dispatchEvent(new ShowToastEvent({
                 title: 'Error',
                 message: 'Seleccione un Mes y un Año antes de buscar.',
+                variant: 'error'
+            }));
+            return;
+        }
+
+        if (this.inputBatch === 'invalid')  {
+            this.dispatchEvent(new ShowToastEvent({
+                title: 'Error',
+                message: 'El Lote introducido debe tener el formato correcto',
                 variant: 'error'
             }));
             return;
@@ -208,9 +219,11 @@ export default class OmStocksTable extends LightningElement {
                     variant: 'warning'
                 }));
 
+                this.inputBatch = 'vacio';
                 this.isInitialScreen = true;
                 this.isSearchScreen = true;
                 this.isLoadScreen = false;
+                
             }
         })
         .catch((error) => {
@@ -225,6 +238,7 @@ export default class OmStocksTable extends LightningElement {
                 variant: 'error'
             }));
 
+            this.inputBatch = 'vacio';
             this.isInitialScreen = true;
             this.isSearchScreen = true;
             this.isLoadScreen = false;
