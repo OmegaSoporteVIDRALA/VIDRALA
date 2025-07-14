@@ -94,6 +94,24 @@
                     <value>Ventas, abonos y devoluciones</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <visibilityRule>
+                    <booleanFilter>1 OR 2 OR 3</booleanFilter>
+                    <criteria>
+                        <leftValue>{!$User.UserRole.Name}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Account Manager (RM)</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!$User.UserRole.Name}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Fifty Account Manager Portugal (PT)</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!$User.UserRole.Name}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Fifty Account Manager_Spain (ES)</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <name>tabs</name>

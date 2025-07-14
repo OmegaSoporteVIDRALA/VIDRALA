@@ -138,7 +138,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
-                    <value>Comparativa revenue mes a mes - Cliente</value>
+                    <value>Comparativa facturación mes a mes - Cliente</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>reportFilter</name>
@@ -170,7 +170,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
-                    <value>Comparativa revenue por año - Cliente</value>
+                    <value>Comparativa facturación por año - Cliente</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>reportFilter</name>
@@ -202,7 +202,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
-                    <value>Comparativa revenue mes a mes - Grupo</value>
+                    <value>Comparativa facturación mes a mes - Grupo</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>reportFilter</name>
@@ -234,7 +234,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
-                    <value>Comparativa revenue por año - Grupo</value>
+                    <value>Comparativa facturación por año - Grupo</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>reportFilter</name>
@@ -825,7 +825,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListLabel</name>
-                    <value>Opportunities</value>
+                    <value>Oportunidades</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>showActionBar</name>
@@ -955,7 +955,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListLabel</name>
-                    <value>Contacts</value>
+                    <value>Contactos</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>showActionBar</name>
@@ -1038,7 +1038,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListLabel</name>
-                    <value>Account Products</value>
+                    <value>Productos Cotizados</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>showActionBar</name>
