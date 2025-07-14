@@ -30,11 +30,6 @@
                 <field>OM_VID_TotalUnidades__c</field>
                 <uiBehavior>Readonly</uiBehavior>
             </quickActionLayoutItems>
-            <quickActionLayoutItems>
-                <emptySpace>false</emptySpace>
-                <field>Credit_Check_Timeline__c</field>
-                <uiBehavior>Readonly</uiBehavior>
-            </quickActionLayoutItems>
         </quickActionLayoutColumns>
         <quickActionLayoutColumns>
             <quickActionLayoutItems>
