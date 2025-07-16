@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>GrupoClienteRecordPage</members>
-		<members>OM_SAC_Product</members>
-		<members>OM_SAC_destinatarioDeMercancia</members>
-		<name>FlexiPage</name>
-	</types>
-	<types>
-		<members>Account-Vidrala %28Customer Layout%29</members>
-		<members>Supplier_Share__c-Supplier Share Layout</members>
-		<members>Supplier_Share__c-Supplier share by product</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>Vidrala Europe Sales</members>
-		<members>Vidrala Europe Support</members>
-		<name>Profile</name>
-	</types>
-	<types>
-		<members>Account.Vidrala_Financials_Customer</members>
-		<members>Account.Vidrala_Financials_Group</members>
-		<name>QuickAction</name>
+		<members>Update_Approved_MPAs</members>
+		<name>Flow</name>
 	</types>
 	<version>64.0</version>
 </Package>
