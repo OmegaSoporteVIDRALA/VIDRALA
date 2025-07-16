@@ -37,15 +37,16 @@
             </div>
 
             <div class="batch-container">
-                    <lightning-input
-                        name="batch" 
-                        type="text" 
-                        label="Lote"
-                        onchange={handleBatchChange}
-                        placeholder="Introduzca un lote"
-                        oninvalid={handleInvalidBatch}>
-                    </lightning-input>
-                </div>
+                 <lightning-input
+                     name="batch" 
+                     type="text" 
+                     label="Lote"
+                     onchange={handleBatchChange}
+                     oninput={handleBatchChange}
+                     placeholder="Introduzca un lote"
+                     oninvalid={handleInvalidBatch}>
+                 </lightning-input>
+            </div>
 
         </div>
         
