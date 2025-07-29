@@ -81,6 +81,32 @@
 		<members>Vidrala Europe Support</members>
 		<name>Profile</name>
 	</types>
+	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>Account.Account_Executive_FL__c</members>
+		<members>Account.Account_Manager_FL__c</members>
+		<members>Account.Sales_Admin_FL__c</members>
+		<members>Account.Senior_Sales_Office_FL__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Account-Account Layout</members>
+		<members>Account-Blank Community Layout</members>
+		<members>Account-Customer Layout</members>
+		<members>Account-Non Sales User</members>
+		<members>Account-Non-Customer Layout</members>
+		<members>Account-Parent Pan European</members>
+		<members>Account-System Admin Customer Layout</members>
+		<members>Account-Vidrala %28Non-Customer Layout%29</members>
+		<members>Supplier_Share__c-Supplier Share Layout</members>
+		<members>Supplier_Share__c-Supplier share by product</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>accountTeams</members>
+		<name>LightningComponentBundle</name>
+	</types>
 
 	<version>64.0</version>
 </Package>
