@@ -81,6 +81,10 @@
 		<members>Vidrala Europe Support</members>
 		<name>Profile</name>
 	</types>
+		<types>
+		<members>accountTeams</members>
+		<name>LightningComponentBundle</name>
+	</types>
 
 	<version>64.0</version>
 </Package>
