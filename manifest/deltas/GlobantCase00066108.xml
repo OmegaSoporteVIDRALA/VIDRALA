@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>Account.Account_Executive_FL__c</members>
+		<members>Account.Account_Manager_FL__c</members>
+		<members>Account.Sales_Admin_FL__c</members>
+		<members>Account.Senior_Sales_Office_FL__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Account-Account Layout</members>
+		<members>Account-Blank Community Layout</members>
+		<members>Account-Customer Layout</members>
+		<members>Account-Non Sales User</members>
+		<members>Account-Non-Customer Layout</members>
+		<members>Account-Parent Pan European</members>
+		<members>Account-System Admin Customer Layout</members>
+		<members>Account-Vidrala %28Non-Customer Layout%29</members>
+		<members>Supplier_Share__c-Supplier Share Layout</members>
+		<members>Supplier_Share__c-Supplier share by product</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Analytics Cloud Integration User</members>
+		<members>Analytics Cloud Security User</members>
+		<members>Anypoint Integration</members>
+		<members>Company Communities User</members>
+		<members>ContractManager</members>
+		<members>Encirc - Customer Services%2FQuality User</members>
+		<members>Encirc Account Managers Profile</members>
+		<members>Encirc Commercial User</members>
+		<members>Encirc Community User</members>
+		<members>Encirc Data Loader API</members>
+		<members>Encirc Design%2FPlanning User</members>
+		<members>Encirc Director Profile</members>
+		<members>Encirc Finance%2FLegal User</members>
+		<members>Encirc Legal Community User</members>
+		<members>Encirc Login Only</members>
+		<members>Encirc Manufacturing Community User</members>
+		<members>Encirc Mould Lifecycle Community user</members>
+		<members>Encirc Non Sales User</members>
+		<members>Encirc Sales</members>
+		<members>Encirc Sales Admin</members>
+		<members>Encirc Sales Office Profile</members>
+		<members>Encirc Standard User</members>
+		<members>Encirc Support</members>
+		<members>Encirc Systems Administrator</members>
+		<members>Encirc Transport User</members>
+		<members>Encirc Workflow Manager</members>
+		<members>Fifty Account Managers Profile</members>
+		<members>Fifty Agent</members>
+		<members>Fifty Area Manager Profile</members>
+		<members>Fifty Director Profile</members>
+		<members>Fifty Director%2BProduct Profile</members>
+		<members>Fifty Planning Manager</members>
+		<members>Fifty SAC Calidad</members>
+		<members>Fifty Sales Office Profile</members>
+		<members>Identity User</members>
+		<members>Integration User</members>
+		<members>MarketingProfile</members>
+		<members>Minimum Access - API Only Integrations</members>
+		<members>Minimum Access - API Only Integrations</members>
+		<members>Minimum Access - Salesforce</members>
+		<members>Minimum Access - Salesforce</members>
+		<members>Minimum Access - Salesforce Custom</members>
+		<members>PP Commercial</members>
+		<members>PP Customer Services - Quality</members>
+		<members>PP Design Planning User</members>
+		<members>PP Finance - Legal</members>
+		<members>PP Transport User</members>
+		<members>Premier Support User</members>
+		<members>Read Only</members>
+		<members>Sales Insights Integration User</members>
+		<members>Salesforce API Only System Integrations</members>
+		<members>SolutionManager</members>
+		<members>Standard</members>
+		<members>StandardAul</members>
+		<members>System Administrator Fifty</members>
+		<members>System Administrator test</members>
+		<members>Vidrala Europe Sales</members>
+		<members>Vidrala Europe Support</members>
+		<name>Profile</name>
+	</types>
+		<types>
+		<members>accountTeams</members>
+		<name>LightningComponentBundle</name>
+	</types>
+
+	<version>64.0</version>
+</Package>

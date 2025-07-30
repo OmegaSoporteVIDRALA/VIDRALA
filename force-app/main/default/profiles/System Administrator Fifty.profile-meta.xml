@@ -3,24 +3,26 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Opportunity.OM_VID_NumProductosGanadores__c</field>
+        <field>Account.Account_Executive_FL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Opportunity.OM_VID_TotalPriceProdGanadores__c</field>
-        <readable>true</readable>
+        <field>Account.Account_Manager_FL__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>OpportunityLineItem.OM_VID_ProductoGanador__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>Account.Sales_Admin_FL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Senior_Sales_Office_FL__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <layoutAssignments>
-        <layout>Opportunity-Vidrala %28Opportunity Layout%29</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>OpportunityLineItem-Opportunity Product Fifty</layout>
+        <layout>Supplier_Share__c-Supplier Share Layout</layout>
     </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
