@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Admin_FL__c</fullName>
+    <label>Sales Admin FL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shelley Stitson</fullName>
+                <default>false</default>
+                <label>Shelley Stitson</label>
+            </value>
+            <value>
+                <fullName>Sara Innes, Hayley and Faye CS7</fullName>
+                <default>false</default>
+                <label>Sara Innes, Hayley and Faye CS7</label>
+            </value>
+            <value>
+                <fullName>Hayley and Faye CS3</fullName>
+                <default>false</default>
+                <label>Hayley and Faye CS3</label>
+            </value>
+            <value>
+                <fullName>Danielle Reed CS4</fullName>
+                <default>false</default>
+                <label>Danielle Reed CS4</label>
+            </value>
+            <value>
+                <fullName>Jacob Ainscough CS8</fullName>
+                <default>false</default>
+                <label>Jacob Ainscough CS8</label>
+            </value>
+            <value>
+                <fullName>Abigail Long</fullName>
+                <default>false</default>
+                <label>Abigail Long</label>
+            </value>
+            <value>
+                <fullName>Michelle Hardy CS6</fullName>
+                <default>false</default>
+                <label>Michelle Hardy CS6</label>
+            </value>
+            <value>
+                <fullName>Sara Innes / Hayley and Faye CS9</fullName>
+                <default>false</default>
+                <label>Sara Innes / Hayley and Faye CS9</label>
+            </value>
+            <value>
+                <fullName>Kerry/ Tracey/ Emma CS5</fullName>
+                <default>false</default>
+                <label>Kerry/ Tracey/ Emma CS5</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
