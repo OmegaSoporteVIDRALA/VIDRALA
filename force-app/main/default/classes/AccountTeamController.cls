@@ -37,7 +37,13 @@ public with sharing class AccountTeamController {
                     Customer_Service__r.Name, 
                     Sales_Office__r.Name, 
                     Sales_Office_UK__r.Name, 
-                    Sales_Office_IT__r.Name 
+                    Sales_Office_IT__r.Name,
+   /*Globant Case 00066108*/                
+                    Account_Manager_FL__r.Name,
+                    Account_Executive_FL__r.Name,
+                    Senior_Sales_Office_FL__c,
+                    Sales_Admin_FL__c
+   /*Globant Case 00066108*/                 
                 FROM Account
                 WHERE Id IN :recordIds
             ]
