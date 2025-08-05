@@ -309,6 +309,10 @@
         <relatedList>Account.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>ArchivoConfidencial__c.Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
         <fields>NAME</fields>
         <fields>CASES.SUBJECT</fields>
