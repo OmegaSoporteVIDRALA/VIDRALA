@@ -14,7 +14,12 @@ export default class AccountTeams extends LightningElement {
     areaManagerUK = '';
     customerServiceUK = ''; 
     salesOfficeUK = ''; 
-
+    //Globant Case 00066108
+    accountManagerFL = '';
+    accountExecutiveFL = '';
+    seniorSalesOfficeFL = '';
+    salesAdminFL = '';
+    //Globant Case 00066108
     get recordIds() {
         return this.recordId ? [this.recordId] : [];
     }
@@ -72,6 +77,20 @@ export default class AccountTeams extends LightningElement {
             if (accountRecord.Sales_Office_UK__c != "undefined" && accountRecord.Sales_Office_UK__c != null) {
                 this.salesOfficeUK = accountRecord.Sales_Office_UK__r.Name;
             }
+            //Globant Case 00066108
+            if (accountRecord.Account_Manager_FL__c != "undefined" && accountRecord.Account_Manager_FL__c != null) {
+                this.accountManagerFL = accountRecord.Account_Manager_FL__r.Name;
+            }
+            if (accountRecord.Account_Executive_FL__c != "undefined" && accountRecord.Account_Executive_FL__c != null) {
+                this.accountExecutiveFL = accountRecord.Account_Executive_FL__r.Name;
+            }
+            if (accountRecord.Senior_Sales_Office_FL__c != null) {
+                this.seniorSalesOfficeFL = accountRecord.Senior_Sales_Office_FL__c;
+            }
+            if (accountRecord.Sales_Admin_FL__c != null) {
+                this.salesAdminFL = accountRecord.Sales_Admin_FL__c;
+            }
+            //Globant Case 00066108
         } else if (error) {
             this.error = error;
             console.log(this.error);
