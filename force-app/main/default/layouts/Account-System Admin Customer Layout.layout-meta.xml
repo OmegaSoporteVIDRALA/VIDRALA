@@ -2,10 +2,12 @@
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <customButtons>Month_Forecast_List</customButtons>
     <customButtons>Create_12_Month_Forecasts_for_This_Year</customButtons>
-    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
+    <excludeButtons>DataDotComAccountInsights</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
+    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -343,11 +345,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Account_Manager_IT__c</field>
+                <field>Account_Manager_UK__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Account_Manager_UK__c</field>
+                <field>Account_Manager_FL__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Account_Executive_FL__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -365,10 +371,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Customer_Service_IT__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Customer_Service_UK__c</field>
             </layoutItems>
             <layoutItems>
@@ -377,11 +379,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Sales_Office_IT__c</field>
+                <field>Sales_Office_UK__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Sales_Office_UK__c</field>
+                <field>Senior_Sales_Office_FL__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Sales_Admin_FL__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
