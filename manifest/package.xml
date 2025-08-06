@@ -156,7 +156,6 @@
 		<name>CustomField</name>
 		<members>ArchivoConfidencial__c.Account__c</members>
 		<name>CustomField</name>
-		<name>CustomField</name>
 	</types>
 	<types>
 		<members>ArchivoConfidencial__c</members>
