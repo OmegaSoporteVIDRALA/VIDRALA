@@ -60,7 +60,6 @@
 		<members>Dispatch_Staging__c.Current_Date_for_Start_of_Loading__c</members>
 		<members>Dispatch_Staging__c.Current_Date_for_Start_of_Shipment__c</members>
 		<members>Dispatch_Staging__c.Current_Date_of_Shipment_Completion__c</members>
-		<members>Dispatch_Staging__c.Current_Month_Delivery__c</members>
 		<members>Dispatch_Staging__c.Current_Time_of_Check_In__c</members>
 		<members>Dispatch_Staging__c.Customer_Code__c</members>
 		<members>Dispatch_Staging__c.End_of_Planning_Date__c</members>
@@ -153,23 +152,7 @@
 		<members>Late_Load__c.Where_was_the_load_cleared_by__c</members>
 		<members>Late_Load__c.Where_was_the_shot_load_found__c</members>
 		<members>Late_Load__c.Works_Order__c</members>
-		<members>ArchivoConfidencial__c.Account__c</members>
 		<name>CustomField</name>
-	</types>
-	<types>
-		<members>ArchivoConfidencial__c</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>Account-Destinatario de mercancía</members>
-		<members>Account-Vidrala %28Customer Layout%29</members>
-		<members>Account-Vidrala %28Non-Customer Layout%29</members>
-		<members>ArchivoConfidencial__c-Archivo confidencial Layout</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>ArchivoConfidencial__c</members>
-		<name>SharingRules</name>
 	</types>
 	<types>
 		<members>Account.HaulierCompactLayout</members>
