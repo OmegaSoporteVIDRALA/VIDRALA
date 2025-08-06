@@ -1284,16 +1284,6 @@
                 <identifier>RecordNCR_Review_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Form_Sent__c</fieldItem>
-                <identifier>RecordForm_Sent_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-fcbd0ea7-4a50-4905-9def-2eca8642ff55</name>
         <type>Facet</type>
     </flexiPageRegions>
