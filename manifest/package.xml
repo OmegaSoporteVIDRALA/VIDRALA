@@ -168,10 +168,6 @@
 		<name>Layout</name>
 	</types>
 	<types>
-		<members>OM_ManageConfidentialDocuments</members>
-		<name>PermissionSet</name>
-	</types>
-	<types>
 		<members>ArchivoConfidencial__c</members>
 		<name>SharingRules</name>
 	</types>
@@ -185,7 +181,6 @@
 	</types>
 	<types>
 		<members>Collapsed</members>
-		<members>Haulier</members>
 		<members>HaulierAccountPage</members>
 		<name>FlexiPage</name>
 	</types>
