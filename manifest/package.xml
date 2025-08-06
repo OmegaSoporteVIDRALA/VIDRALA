@@ -161,11 +161,6 @@
 		<name>CustomObject</name>
 	</types>
 	<types>
-		<members>GrupoClienteRecordPage</members>
-		<members>OM_SAC_destinatarioDeMercancia</members>
-		<name>FlexiPage</name>
-	</types>
-	<types>
 		<members>Account-Destinatario de mercancía</members>
 		<members>Account-Vidrala %28Customer Layout%29</members>
 		<members>Account-Vidrala %28Non-Customer Layout%29</members>
@@ -245,5 +240,5 @@
 		<members>Encirc Workflow Manager</members>
 		<name>Profile</name>
 	</types>
-	<version>62.0</version>
+	<version>58.0</version>
 </Package>
