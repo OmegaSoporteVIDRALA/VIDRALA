@@ -5,6 +5,164 @@
     <description>Delivery early and not collapsed</description>
     <label>Early Load</label>
     <picklistValues>
+        <picklist>Actions_Root_Cause_Accepted__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cause_Category__c</picklist>
+        <values>
+            <fullName>Admin Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor Planning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cause_Subcategory__c</picklist>
+        <values>
+            <fullName>CX Admin Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscommunication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turned up early for collection</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cause__c</picklist>
+        <values>
+            <fullName>Live load not stand trailer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscommunication</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dunnage__c</picklist>
+        <values>
+            <fullName>Derrylin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Has_Shot_load_form_been_completed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Have_pictures_been_sent_if_via_ferry__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Investigated__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Location__c</picklist>
+        <values>
+            <fullName>Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Everywhere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Front</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Middle</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Manufacturing_Site__c</picklist>
+        <values>
+            <fullName>Bristol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derrylin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Method_of_Communication__c</picklist>
         <values>
             <fullName>Email</fullName>
@@ -67,10 +225,74 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haulier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Status__c</picklist>
         <values>
             <fullName>Early</fullName>
             <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Strapped__c</picklist>
+        <values>
+            <fullName>Derrylin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trailer_Dropped_in_Elton__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trailer_Resolved__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
         </values>
     </picklistValues>
 </RecordType>

@@ -5,6 +5,356 @@
     <description>Delivery late but not collapsed</description>
     <label>Late Load</label>
     <picklistValues>
+        <picklist>Actions_Root_Cause_Accepted__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cause_Category__c</picklist>
+        <values>
+            <fullName>AW Breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admin Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex Works</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal IT Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor Planning - Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor Planning - Haulier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor Planning - Warehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replacement of Collapsed Load</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traffic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cause_Subcategory__c</picklist>
+        <values>
+            <fullName>AW Breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CX Admin Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conveyor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver Delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interface Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal IT Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Last minute change to order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Late Collection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Link to original collapsed load</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscommunication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Driver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not booked in</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not booked in with the warehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order placed outside agreed timeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paperwork Delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Road Closure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shuttle Car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stand Trailer not loaded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock Replenish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Outage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trailer Availability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turned up early for collection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weather</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cause__c</picklist>
+        <values>
+            <fullName>Availability %28pool report%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conveyor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Bound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interface Error - External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interface Error - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live load not stand trailer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscommunication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out Bound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paperwork Delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returned Stock not unload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shot Load</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shuttle Car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock not released from QT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VOR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dunnage__c</picklist>
+        <values>
+            <fullName>Derrylin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Has_Shot_load_form_been_completed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Have_pictures_been_sent_if_via_ferry__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Investigated__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Location__c</picklist>
+        <values>
+            <fullName>Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Everywhere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Front</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Middle</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Manufacturing_Site__c</picklist>
+        <values>
+            <fullName>Bristol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derrylin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Method_of_Communication__c</picklist>
         <values>
             <fullName>Email</fullName>
@@ -67,10 +417,74 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haulier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Status__c</picklist>
         <values>
             <fullName>Late</fullName>
             <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Strapped__c</picklist>
+        <values>
+            <fullName>Derrylin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trailer_Dropped_in_Elton__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trailer_Resolved__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
         </values>
     </picklistValues>
 </RecordType>
