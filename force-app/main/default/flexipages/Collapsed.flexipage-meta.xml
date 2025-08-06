@@ -1308,16 +1308,6 @@
                 <identifier>RecordIf_no_additional_information_required_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Form_Recieved__c</fieldItem>
-                <identifier>RecordForm_Recieved_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-49b0fe26-f1b4-48d3-9d2a-05c7400f0248</name>
         <type>Facet</type>
     </flexiPageRegions>
