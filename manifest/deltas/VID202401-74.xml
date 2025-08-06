@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>ArchivoConfidencial__c.Account__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>ArchivoConfidencial__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>GrupoClienteRecordPage</members>
+		<members>OM_SAC_destinatarioDeMercancia</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Account-Destinatario de mercancía</members>
+		<members>Account-Vidrala %28Customer Layout%29</members>
+		<members>Account-Vidrala %28Non-Customer Layout%29</members>
+		<members>ArchivoConfidencial__c-Archivo confidencial Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>OM_ManageConfidentialDocuments</members>
+		<name>PermissionSet</name>
+	</types>
+	<types>
+		<members>ArchivoConfidencial__c</members>
+		<name>SharingRules</name>
+	</types>
+	<version>64.0</version>
+</Package>

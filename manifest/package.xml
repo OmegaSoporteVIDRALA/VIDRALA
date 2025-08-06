@@ -2,9 +2,9 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
  		<members>Account.Customer_Lane__c</members>
-       	<members>Account.Haulier__c</members>
-       	<members>Drawing__c.Pallet_Height__c</members>
-        <members>Drawing__c.Type__c</members>
+    <members>Account.Haulier__c</members>
+    <members>Drawing__c.Pallet_Height__c</members>
+    <members>Drawing__c.Type__c</members>
 		<members>Dispatch__c.Actual_Date_for_End_of_Loading__c</members>
 		<members>Dispatch__c.Actual_Date_for_End_of_Shipment__c</members>
 		<members>Dispatch__c.Actual_Date_of_Check_In__c</members>
@@ -155,6 +155,7 @@
 		<members>Late_Load__c.Works_Order__c</members>
 		<name>CustomField</name>
 		<members>ArchivoConfidencial__c.Account__c</members>
+		<name>CustomField</name>
 		<name>CustomField</name>
 	</types>
 	<types>
