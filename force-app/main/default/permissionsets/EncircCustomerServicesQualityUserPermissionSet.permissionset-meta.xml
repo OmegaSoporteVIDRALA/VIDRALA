@@ -7108,11 +7108,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Events__c.Hotel_Booked__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Events__c.Hotel_Notes__c</field>
         <readable>false</readable>
     </fieldPermissions>
