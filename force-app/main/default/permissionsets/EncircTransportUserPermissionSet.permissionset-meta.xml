@@ -13139,11 +13139,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Product2.New_market_Catalogue__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Product2.OM_Product_Code_SIP__c</field>
         <readable>false</readable>
     </fieldPermissions>
