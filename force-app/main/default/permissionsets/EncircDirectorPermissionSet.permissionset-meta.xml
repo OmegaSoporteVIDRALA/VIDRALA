@@ -7029,11 +7029,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Actual_Deposit_Filling__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Event_Budget__c.DLRS_Actual_Final_Pmt_Filling__c</field>
         <readable>false</readable>
     </fieldPermissions>
