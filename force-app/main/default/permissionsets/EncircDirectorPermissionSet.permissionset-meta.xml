@@ -3154,11 +3154,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Competitor_Action__c.OM_VID_ProductCode__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Competitor_Action__c.Price_1000__c</field>
         <readable>false</readable>
     </fieldPermissions>
