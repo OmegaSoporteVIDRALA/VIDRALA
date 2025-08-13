@@ -878,11 +878,7 @@
         <field>Account.OM_VID_Industry__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Account.OM_VID_IsDistributorAuto__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
+
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.OM_VID_NIF__c</field>
