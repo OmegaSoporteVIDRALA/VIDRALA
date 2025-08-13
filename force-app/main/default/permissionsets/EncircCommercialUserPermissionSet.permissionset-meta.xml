@@ -14430,11 +14430,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Trial_Data__c.Production_tool_order_date__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Data__c.Proposed_First_Production_Date__c</field>
         <readable>true</readable>
