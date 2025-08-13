@@ -13074,11 +13074,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Quote.OM_AccountName__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Quote.OM_VID_AgreedTerms__c</field>
         <readable>false</readable>
     </fieldPermissions>
