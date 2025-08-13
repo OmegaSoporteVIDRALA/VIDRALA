@@ -13424,11 +13424,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>QuoteLineItem.OM_ProductColourTranslateAuto__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>QuoteLineItem.OM_VID_Incoterms__c</field>
         <readable>false</readable>
     </fieldPermissions>
