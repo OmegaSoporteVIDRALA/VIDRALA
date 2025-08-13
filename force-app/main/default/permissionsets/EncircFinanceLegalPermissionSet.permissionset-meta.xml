@@ -3085,11 +3085,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Commercial_Contract_Status__c.Priority__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Commercial_Contract_Status__c.Start_date__c</field>
         <readable>true</readable>
