@@ -150,10 +150,13 @@ public class OM_VID_TestUtils {
             IsActive = true
         );
         update standardPricebook;
+        
+        Integer randomCode = Math.round(Math.random() * 8999) + 1000; 
+        String codeStr = String.valueOf(randomCode);
 
         Product2 producto =new Product2();
         producto.Name='test';
-        producto.productCode='1234';
+        producto.productCode= codeStr;
         producto.isActive = true;
         producto.CurrencyIsoCode='EUR';        
         insert producto;
