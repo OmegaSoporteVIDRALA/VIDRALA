@@ -13828,11 +13828,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SAP_Material_Code__c.Active__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SAP_Material_Code__c.Bottle_Identifier__c</field>
         <readable>true</readable>
