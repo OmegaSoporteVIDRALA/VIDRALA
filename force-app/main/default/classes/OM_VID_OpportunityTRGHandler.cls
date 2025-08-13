@@ -49,6 +49,7 @@ public with sharing class OM_VID_OpportunityTRGHandler {
 
             if(isUpdate){
                 createQuoteAndQuoteLineCotizacion(news, oldsMap);
+                checkProductosGanadores(news, oldsMap);
             }
         }
     }
@@ -159,5 +160,69 @@ public with sharing class OM_VID_OpportunityTRGHandler {
         }
 
         return returnQuoteLines;
+    }
+    
+    public static void checkProductosGanadores(List<Opportunity> updatedOpps, Map<Id, Opportunity> oldOppsMap) {
+        List<OpportunityLineItem> toUpdate = new List<OpportunityLineItem>();
+        
+        List<Opportunity> oppsToCheck = new List<Opportunity>();
+        for (Opportunity opp : updatedOpps) {
+            Opportunity oldOpp = oldOppsMap.get(opp.Id);
+            if (
+                opp.StageName == 'Closed Won' &&
+                oldOpp.StageName != 'Closed Won' &&
+                opp.RecordTypeId == OpportunityRTFiftyId
+            ) {
+                oppsToCheck.add(opp);
+            }
+        }
+        
+        if (oppsToCheck.isEmpty()) return;
+        
+        Set<Id> oppIds = new Set<Id>();
+        for (Opportunity opp : oppsToCheck) {
+            oppIds.add(opp.Id);
+        }
+        
+        List<OpportunityLineItem> allLineItems = [
+            SELECT Id, OM_VID_ProductoGanador__c, OpportunityId
+            FROM OpportunityLineItem
+            WHERE OpportunityId IN :oppIds
+        ];
+        
+        Map<Id, List<OpportunityLineItem>> oppLineMap = new Map<Id, List<OpportunityLineItem>>();
+        for (OpportunityLineItem oli : allLineItems) {
+            if (!oppLineMap.containsKey(oli.OpportunityId)) {
+                oppLineMap.put(oli.OpportunityId, new List<OpportunityLineItem>());
+            }
+            oppLineMap.get(oli.OpportunityId).add(oli);
+        }
+        
+        for (Opportunity opp : oppsToCheck) {
+            List<OpportunityLineItem> prods = oppLineMap.get(opp.Id);
+            Integer prodGanadores = 0;
+            
+            if (prods != null) {
+                for (OpportunityLineItem oli : prods) {
+                    if (oli.OM_VID_ProductoGanador__c == true) {
+                        prodGanadores++;
+                    }
+                }
+            }
+            
+            if (prodGanadores == 0) {
+                if (prods == null || prods.isEmpty() || prods.size() > 1) {
+                    opp.addError('Para cerrar la oportunidad como ganadora, debes elegir algún producto como ganador en la oportunidad.');
+                } else {
+                    OpportunityLineItem prod = prods[0];
+                    prod.OM_VID_ProductoGanador__c = true;
+                    toUpdate.add(prod);
+                }
+            }
+         }
+        
+        if (!toUpdate.isEmpty()) {
+            update toUpdate;
+        }
     }
 }
