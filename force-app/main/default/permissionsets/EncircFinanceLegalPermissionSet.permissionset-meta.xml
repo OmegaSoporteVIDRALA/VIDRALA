@@ -8771,11 +8771,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Lead_Product__c.OM_VID_ProductCode__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Lead_Product__c.Products__c</field>
         <readable>false</readable>
     </fieldPermissions>

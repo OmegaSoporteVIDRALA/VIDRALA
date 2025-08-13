@@ -11851,11 +11851,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Opportunity.OM_AdditionalInformation__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Opportunity.OM_VID_Idioma__c</field>
         <readable>false</readable>
     </fieldPermissions>
