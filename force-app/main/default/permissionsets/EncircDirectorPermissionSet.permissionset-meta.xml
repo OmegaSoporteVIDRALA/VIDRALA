@@ -11844,11 +11844,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Opportunity.OM_AdditionalInformation__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Opportunity.OM_VID_Idioma__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -12896,11 +12891,6 @@
         <editable>true</editable>
         <field>Product2.Finish__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Product2.French_Catalogue__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
