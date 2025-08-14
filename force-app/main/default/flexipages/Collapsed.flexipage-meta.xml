@@ -191,16 +191,6 @@
                 <identifier>RecordCustomer_Informed_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Production_Line_Downtime__c</fieldItem>
-                <identifier>RecordProduction_Line_Downtime__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-9c56f4fa-6083-404a-9552-60783e9da72c</name>
         <type>Facet</type>
     </flexiPageRegions>

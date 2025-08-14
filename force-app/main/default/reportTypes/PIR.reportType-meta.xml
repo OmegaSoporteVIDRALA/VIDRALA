@@ -548,17 +548,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Date_of_Incident__c</field>
-            <table>Late_Load__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Time_of_Incident__c</field>
-            <table>Late_Load__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Production_Line_Downtime__c</field>
             <table>Late_Load__c</table>
         </columns>
         <masterLabel>PIR</masterLabel>

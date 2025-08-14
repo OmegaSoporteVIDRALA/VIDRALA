@@ -8632,11 +8632,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Late_Load__c.Time_of_Incident__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Late_Load__c.Total_Cost__c</field>
         <readable>true</readable>
     </fieldPermissions>
