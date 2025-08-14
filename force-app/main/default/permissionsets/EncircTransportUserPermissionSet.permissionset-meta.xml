@@ -8528,7 +8528,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Late_Load__c.Production_Line_Downtime__c</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
