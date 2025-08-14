@@ -19,10 +19,8 @@
 		<members>Dispatch_Staging</members>
 		<members>Early_Late_Load</members>
 		<members>Early_or_Late_Load</members>
-		<members>GrupoClienteRecordPage</members>
 		<members>Haulier</members>
 		<members>HaulierAccountPage</members>
-		<members>OM_SAC_destinatarioDeMercancia</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
