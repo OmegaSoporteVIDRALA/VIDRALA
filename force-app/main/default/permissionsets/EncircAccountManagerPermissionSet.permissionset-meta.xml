@@ -8478,11 +8478,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field></field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Late_Load__c.Reason_for_Delay__c</field>
         <readable>true</readable>
     </fieldPermissions>
