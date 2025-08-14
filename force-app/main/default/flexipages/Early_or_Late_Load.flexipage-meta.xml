@@ -114,16 +114,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Time_of_Incident__c</fieldItem>
-                <identifier>RecordTime_of_Incident__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Production_Line_Downtime__c</fieldItem>
                 <identifier>RecordProduction_Line_Downtime__cField</identifier>
             </fieldInstance>
