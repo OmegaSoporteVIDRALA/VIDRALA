@@ -49,7 +49,6 @@
                 <componentInstanceProperties>
                     <name>enableActionsInNative</name>
                     <value>true</value>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideChatterActions</name>
