@@ -88,12 +88,6 @@
                 <identifier>RecordSalesforce_Unique_ID_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Concat_Id__c</fieldItem>
-                <identifier>RecordConcat_Id__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-a8beae2b-f03f-480c-a652-19a357b8bfda</name>
         <type>Facet</type>
     </flexiPageRegions>

@@ -7,9 +7,6 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>Late_Load__c.Download_PIR_Form</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>Global.NewContact</value>
                         </valueListItems>
                         <valueListItems>
