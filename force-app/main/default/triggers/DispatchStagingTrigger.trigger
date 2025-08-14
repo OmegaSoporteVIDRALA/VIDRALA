@@ -9,7 +9,7 @@
    Aug 2025		2.0		Globant				Added new class methods to trigger
 ------------------------------------------------------------------------------------------------------------------------ */        
 
-trigger DispatchStagingTrigger on Dispatch_Staging__c (before insert, before update,after insert) {
+trigger DispatchStagingTrigger on Dispatch_Staging__c (before insert,after insert) {
     DispatchStagingHandler handler = new DispatchStagingHandler();
     if(Trigger.isBefore){
         if(Trigger.isInsert){

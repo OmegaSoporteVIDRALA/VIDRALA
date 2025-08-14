@@ -64,6 +64,10 @@
                 <field>Difference_in_Hours__c</field>
             </layoutItems>
             <layoutItems>
+            <behavior>Required</behavior>
+                <field>Reason_for_Delay__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Date_of_Incident__c</field>
             </layoutItems>
