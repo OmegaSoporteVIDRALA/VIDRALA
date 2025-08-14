@@ -546,11 +546,6 @@
             <field>Form_Recieved__c</field>
             <table>Late_Load__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Time_of_Incident__c</field>
-            <table>Late_Load__c</table>
-        </columns>
         <masterLabel>PIR</masterLabel>
     </sections>
 </ReportType>

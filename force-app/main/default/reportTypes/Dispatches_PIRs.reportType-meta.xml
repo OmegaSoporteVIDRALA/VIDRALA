@@ -1113,11 +1113,6 @@
             <field>Form_Recieved__c</field>
             <table>Dispatch__c.Late_Loads__r</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Time_of_Incident__c</field>
-            <table>Dispatch__c.Late_Loads__r</table>
-        </columns>
         <masterLabel>PIR</masterLabel>
     </sections>
 </ReportType>
