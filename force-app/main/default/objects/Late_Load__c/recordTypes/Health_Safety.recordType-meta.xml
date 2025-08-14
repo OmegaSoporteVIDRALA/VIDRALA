@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Collapsed_Load</fullName>
+    <fullName>Health_Safety</fullName>
     <active>true</active>
-    <description>Load collapsed on delivery</description>
-    <label>Collapsed Load</label>
+    <description>The record type to be used for health and safety issues</description>
+    <label>Health &amp; Safety</label>
     <picklistValues>
         <picklist>Cause_Category__c</picklist>
         <values>
@@ -15,7 +15,31 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Driver Behaviour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver on the back of trailer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elton Despatch Site Barrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entrance Site Barrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entry Height Barrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Ex Works</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GHY Site Barrier</fullName>
             <default>false</default>
         </values>
         <values>
@@ -23,7 +47,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Incorrect PPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Internal IT Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
             <default>false</default>
         </values>
         <values>

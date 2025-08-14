@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cause_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Cause Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Source__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Admin Error</fullName>
+                <default>false</default>
+                <label>Admin Error</label>
+            </value>
+            <value>
+                <fullName>Breakdown</fullName>
+                <default>false</default>
+                <label>Breakdown</label>
+            </value>
+            <value>
+                <fullName>Driver Behaviour</fullName>
+                <default>false</default>
+                <label>Driver Behaviour</label>
+            </value>
+            <value>
+                <fullName>Driver on the back of trailer</fullName>
+                <default>false</default>
+                <label>Driver on the back of trailer</label>
+            </value>
+            <value>
+                <fullName>Elton Despatch Site Barrier</fullName>
+                <default>false</default>
+                <label>Elton Despatch Site Barrier</label>
+            </value>
+            <value>
+                <fullName>Entrance Site Barrier</fullName>
+                <default>false</default>
+                <label>Entrance Site Barrier</label>
+            </value>
+            <value>
+                <fullName>Entry Height Barrier</fullName>
+                <default>false</default>
+                <label>Entry Height Barrier</label>
+            </value>
+            <value>
+                <fullName>Ex Works</fullName>
+                <default>false</default>
+                <label>Ex Works</label>
+            </value>
+            <value>
+                <fullName>GHY Site Barrier</fullName>
+                <default>false</default>
+                <label>GHY Site Barrier</label>
+            </value>
+            <value>
+                <fullName>Human Error</fullName>
+                <default>false</default>
+                <label>Human Error</label>
+            </value>
+            <value>
+                <fullName>Incorrect PPE</fullName>
+                <default>false</default>
+                <label>Incorrect PPE</label>
+            </value>
+            <value>
+                <fullName>Internal IT Issues</fullName>
+                <default>false</default>
+                <label>Internal IT Issues</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Poor Planning</fullName>
+                <default>false</default>
+                <label>Poor Planning</label>
+            </value>
+            <value>
+                <fullName>Poor Planning - Customer</fullName>
+                <default>false</default>
+                <label>Poor Planning - Customer</label>
+            </value>
+            <value>
+                <fullName>Poor Planning - Haulier</fullName>
+                <default>false</default>
+                <label>Poor Planning - Haulier</label>
+            </value>
+            <value>
+                <fullName>Poor Planning - Warehouse</fullName>
+                <default>false</default>
+                <label>Poor Planning - Warehouse</label>
+            </value>
+            <value>
+                <fullName>Replacement of Collapsed Load</fullName>
+                <default>false</default>
+                <label>Replacement of Collapsed Load</label>
+            </value>
+            <value>
+                <fullName>Traffic</fullName>
+                <default>false</default>
+                <label>Traffic</label>
+            </value>
+            <value>
+                <fullName>AW Breakdown</fullName>
+                <default>false</default>
+                <label>AW Breakdown</label>
+            </value>
+            <value>
+                <fullName>Customer Production Line Issues</fullName>
+                <default>false</default>
+                <label>Customer Production Line Issues</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Admin Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Ex Works</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Poor Planning - Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Customer Production Line Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Haulier</controllingFieldValue>
+            <valueName>Breakdown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Haulier</controllingFieldValue>
+            <valueName>Poor Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Haulier</controllingFieldValue>
+            <valueName>Poor Planning - Haulier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Haulier</controllingFieldValue>
+            <valueName>Replacement of Collapsed Load</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Haulier</controllingFieldValue>
+            <valueName>Traffic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Warehouse</controllingFieldValue>
+            <valueName>Human Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Warehouse</controllingFieldValue>
+            <valueName>Internal IT Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Warehouse</controllingFieldValue>
+            <valueName>Poor Planning - Warehouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Warehouse</controllingFieldValue>
+            <valueName>AW Breakdown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kammac Warrington</controllingFieldValue>
+            <controllingFieldValue>Malcolms Haydock</controllingFieldValue>
+            <controllingFieldValue>Elton</controllingFieldValue>
+            <controllingFieldValue>Derrylin</controllingFieldValue>
+            <controllingFieldValue>Ballyconell</controllingFieldValue>
+            <controllingFieldValue>The Park</controllingFieldValue>
+            <valueName>Driver Behaviour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kammac Warrington</controllingFieldValue>
+            <controllingFieldValue>Malcolms Haydock</controllingFieldValue>
+            <controllingFieldValue>Elton</controllingFieldValue>
+            <controllingFieldValue>Derrylin</controllingFieldValue>
+            <controllingFieldValue>Ballyconell</controllingFieldValue>
+            <controllingFieldValue>The Park</controllingFieldValue>
+            <valueName>Driver on the back of trailer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kammac Warrington</controllingFieldValue>
+            <controllingFieldValue>Malcolms Haydock</controllingFieldValue>
+            <controllingFieldValue>Elton</controllingFieldValue>
+            <controllingFieldValue>Derrylin</controllingFieldValue>
+            <controllingFieldValue>Ballyconell</controllingFieldValue>
+            <controllingFieldValue>The Park</controllingFieldValue>
+            <valueName>Incorrect PPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Elton</controllingFieldValue>
+            <valueName>Elton Despatch Site Barrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Elton</controllingFieldValue>
+            <valueName>Entrance Site Barrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Elton</controllingFieldValue>
+            <valueName>Entry Height Barrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Elton</controllingFieldValue>
+            <valueName>GHY Site Barrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Elton</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
