@@ -28,6 +28,7 @@
         <members>EarlyLateLoad_CR_RT_After</members>
         <members>Early_Load_Screen_Flow</members>
         <members>Late_Load_Screen_Flow</members>
+		<members>Screenflow_Create_Health_Safety_PIR</members>
         <members>New_Collapsed_Load_Screen_Flow</members>
         <name>Flow</name>
     </types>
