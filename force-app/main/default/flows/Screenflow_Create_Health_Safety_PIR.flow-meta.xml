@@ -273,6 +273,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
     <screens>
         <description>creates an early / late Load record of type health and safety</description>
         <name>New_Early_Load</name>
+        <regionContainerType>SectionWithoutHeader</regionContainerType>
         <label>New Health &amp; Safety</label>
         <locationX>182</locationX>
         <locationY>458</locationY>
