@@ -64,7 +64,7 @@
                 <field>Difference_in_Hours__c</field>
             </layoutItems>
             <layoutItems>
-            <behavior>Required</behavior>
+                <behavior>Required</behavior>
                 <field>Reason_for_Delay__c</field>
             </layoutItems>
             <layoutItems>
