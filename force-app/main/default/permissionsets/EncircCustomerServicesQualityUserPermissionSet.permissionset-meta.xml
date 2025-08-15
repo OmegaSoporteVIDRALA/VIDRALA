@@ -8133,6 +8133,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Late_Load__c.Form_Recieved__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Late_Load__c.Form_Sent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Late_Load__c.Has_Shot_load_form_been_completed__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8274,6 +8284,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Late_Load__c.Reason_for_Early_Delivery__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Late_Load__c.Related_Load__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

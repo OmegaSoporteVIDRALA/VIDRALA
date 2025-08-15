@@ -1,10 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Custom_Notification</name>
+        <label>Send Custom Notification</label>
+        <locationX>424</locationX>
+        <locationY>3095</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>Get_Custom_Notification.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>vUserTextIDs</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <stringValue>New PIR Created</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>fNotificationBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email</name>
+        <label>Send Email</label>
+        <locationX>512</locationX>
+        <locationY>2903</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Loop_Users</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+        </inputParameters>
+        <inputParameters>
+            <name>useEmailTemplate</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailTemplateId</name>
+            <value>
+                <elementReference>Get_Email_Template.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>Loop_Users</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+    </actionCalls>
     <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>Assign_Acc_Mgr</name>
+        <label>Assign CS</label>
+        <locationX>292</locationX>
+        <locationY>1271</locationY>
+        <assignmentItems>
+            <assignToReference>vUserTextIDs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Account.Customer_Service_UK__r.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Senior_Sales_Admin</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Acc_Owner</name>
+        <label>Assign Acc Owner</label>
+        <locationX>424</locationX>
+        <locationY>1055</locationY>
+        <assignmentItems>
+            <assignToReference>vUserTextIDs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Account.Owner.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Acc_Manager_Populated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Group_Member_to_User_Collection</name>
+        <label>Assign Group Member to User Collection</label>
+        <locationX>512</locationX>
+        <locationY>2387</locationY>
+        <assignmentItems>
+            <assignToReference>vUserTextIDs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_Group_Members.UserOrGroupId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Group_Members</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Sales_Admin</name>
+        <label>Assign Sales Admin</label>
+        <locationX>292</locationX>
+        <locationY>1871</locationY>
+        <assignmentItems>
+            <assignToReference>vUserTextIDs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Account.Sales_Admin_Lookup__r.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Public_Group</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Senior_Sales</name>
+        <label>Assign Senior Sales</label>
+        <locationX>292</locationX>
+        <locationY>1571</locationY>
+        <assignmentItems>
+            <assignToReference>vUserTextIDs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Account.Senior_Sales_Admin_Lookup__r.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Sales_Admin_added</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Acc_Manager_Populated</name>
+        <label>Customer Service Populated?</label>
+        <locationX>424</locationX>
+        <locationY>1163</locationY>
+        <defaultConnector>
+            <targetReference>Senior_Sales_Admin</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Acc_Mgr</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account.Customer_Service_UK__r.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Acc_Mgr</targetReference>
+            </connector>
+            <label>Yes CS</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Copy_1_of_TYPE</name>
         <label>Copy 1 of TYPE</label>
-        <locationX>1898</locationX>
+        <locationX>1810</locationX>
         <locationY>431</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -120,7 +305,7 @@
     <decisions>
         <name>CREATE_UPDATE</name>
         <label>CREATE/UPDATE</label>
-        <locationX>1238</locationX>
+        <locationX>1194</locationX>
         <locationY>323</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_TYPE</targetReference>
@@ -143,10 +328,85 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Customer_Account_entered</name>
+        <label>Customer Account entered?</label>
+        <locationX>578</locationX>
+        <locationY>839</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Accnt_Entered</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Customer__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Account</targetReference>
+            </connector>
+            <label>Yes Accnt Entered</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Sales_Admin_added</name>
+        <label>Sales Admin added?</label>
+        <locationX>424</locationX>
+        <locationY>1763</locationY>
+        <defaultConnector>
+            <targetReference>Get_Public_Group</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Sales_Admin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account.Sales_Admin_Lookup__r.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Sales_Admin</targetReference>
+            </connector>
+            <label>Yes Sales Admin</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Senior_Sales_Admin</name>
+        <label>Senior Sales Admin?</label>
+        <locationX>424</locationX>
+        <locationY>1463</locationY>
+        <defaultConnector>
+            <targetReference>Sales_Admin_added</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Senior_Sales</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account.Senior_Sales_Admin_Lookup__r.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Senior_Sales</targetReference>
+            </connector>
+            <label>Yes Senior Sales</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>TYPE</name>
         <label>TYPE</label>
         <locationX>578</locationX>
         <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Customer_Account_entered</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Collapsed</name>
@@ -230,7 +490,17 @@
             <label>Update Record Type and Name for On Time &amp; Not Collapsed Loads</label>
         </rules>
     </decisions>
-    <description>Update so replaces the correct Number</description>
+    <description>Update so replaces the correct Number
+Including PIR record creation notifications
+added triggerint record as resource in email send</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fNotificationBody</name>
+        <dataType>String</dataType>
+        <expression>&quot;Hello&quot; &amp; BR() &amp;
+&quot;A new &quot; &amp; {!$Record.RecordType.Name} &amp; &quot; PIR has been created for &quot; &amp; {!$Record.Customer__r.Name} &amp; BR() &amp;
+&quot;Click here to be taken to the record.&quot;</expression>
+    </formulas>
     <formulas>
         <name>FORMULAforupdate</name>
         <dataType>String</dataType>
@@ -260,6 +530,34 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     </formulas>
     <interviewLabel>EarlyLateLoad-CR-RT-After {!$Flow.CurrentDateTime}</interviewLabel>
     <label>EarlyLateLoad-CR-RT-After</label>
+    <loops>
+        <name>Loop_Group_Members</name>
+        <label>Loop Group Members</label>
+        <locationX>424</locationX>
+        <locationY>2279</locationY>
+        <collectionReference>Get_Group_Members</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_Group_Member_to_User_Collection</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Get_Email_Template</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Loop_Users</name>
+        <label>Loop Users</label>
+        <locationX>424</locationX>
+        <locationY>2795</locationY>
+        <collectionReference>vUserTextIDs</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Send_Email</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Send_Custom_Notification</targetReference>
+        </noMoreValuesConnector>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -279,6 +577,111 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Account</name>
+        <label>Get Account</label>
+        <locationX>424</locationX>
+        <locationY>947</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Acc_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Customer__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Custom_Notification</name>
+        <label>Get Custom Notification</label>
+        <locationX>424</locationX>
+        <locationY>2687</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_Users</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MasterLabel</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PIR Notification</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CustomNotificationType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Email_Template</name>
+        <label>Get Email Template</label>
+        <locationX>424</locationX>
+        <locationY>2579</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Custom_Notification</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PIR_Created</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>EmailTemplate</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Group_Members</name>
+        <label>Get Group Members</label>
+        <locationX>424</locationX>
+        <locationY>2171</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_Group_Members</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>GroupId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Public_Group.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>GroupMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Public_Group</name>
+        <label>Get Public Group</label>
+        <locationX>424</locationX>
+        <locationY>2063</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Group_Members</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PIR_Notifications</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordLookups>
         <name>GET_Record_Type_Collapsed</name>
         <label>GET Record Type Collapsed</label>
@@ -340,7 +743,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     <recordLookups>
         <name>GET_Record_Type_Collapsed_2_FOR_UPDATE</name>
         <label>GET Record Type Collapsed 2 FOR UPDATE</label>
-        <locationX>2162</locationX>
+        <locationX>2074</locationX>
         <locationY>539</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -370,7 +773,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     <recordLookups>
         <name>GET_Record_Type_Collapsed_FOR_UPDATE</name>
         <label>GET Record Type Collapsed FOR UPDATE</label>
-        <locationX>1370</locationX>
+        <locationX>1282</locationX>
         <locationY>539</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -428,7 +831,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     <recordLookups>
         <name>GET_Record_Type_Early_Load_FOR_UPDATE</name>
         <label>GET Record Type Early Load FOR UPDATE</label>
-        <locationX>1634</locationX>
+        <locationX>1546</locationX>
         <locationY>539</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -488,7 +891,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     <recordLookups>
         <name>GET_Record_Type_Late_Load_FOR_UPDATE</name>
         <label>GET Record Type Late Load FOR UPDATE</label>
-        <locationX>1898</locationX>
+        <locationX>1810</locationX>
         <locationY>539</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -518,7 +921,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     <recordUpdates>
         <name>Copy_1_of_Copy_1_of_Update_Record</name>
         <label>Update Record</label>
-        <locationX>1634</locationX>
+        <locationX>1546</locationX>
         <locationY>647</locationY>
         <inputAssignments>
             <field>Name</field>
@@ -537,7 +940,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     <recordUpdates>
         <name>Copy_1_of_Copy_2_of_Update_Record</name>
         <label>Update Record</label>
-        <locationX>1898</locationX>
+        <locationX>1810</locationX>
         <locationY>647</locationY>
         <inputAssignments>
             <field>Name</field>
@@ -556,7 +959,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     <recordUpdates>
         <name>Copy_1_of_Copy_3_of_Update_Record</name>
         <label>Update Record</label>
-        <locationX>2162</locationX>
+        <locationX>2074</locationX>
         <locationY>647</locationY>
         <inputAssignments>
             <field>Name</field>
@@ -577,6 +980,9 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <label>Copy 1 of Update Record</label>
         <locationX>314</locationX>
         <locationY>647</locationY>
+        <connector>
+            <targetReference>Customer_Account_entered</targetReference>
+        </connector>
         <inputAssignments>
             <field>Name</field>
             <value>
@@ -596,6 +1002,9 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <label>Copy 2 of Update Record</label>
         <locationX>578</locationX>
         <locationY>647</locationY>
+        <connector>
+            <targetReference>Customer_Account_entered</targetReference>
+        </connector>
         <inputAssignments>
             <field>Name</field>
             <value>
@@ -615,6 +1024,9 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <label>Copy 3 of Update Record</label>
         <locationX>842</locationX>
         <locationY>647</locationY>
+        <connector>
+            <targetReference>Customer_Account_entered</targetReference>
+        </connector>
         <inputAssignments>
             <field>Name</field>
             <value>
@@ -632,7 +1044,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
     <recordUpdates>
         <name>Copy_4_of_Update_Record</name>
         <label>Update Record</label>
-        <locationX>1370</locationX>
+        <locationX>1282</locationX>
         <locationY>647</locationY>
         <inputAssignments>
             <field>Name</field>
@@ -653,6 +1065,9 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <label>Update Record</label>
         <locationX>50</locationX>
         <locationY>647</locationY>
+        <connector>
+            <targetReference>Customer_Account_entered</targetReference>
+        </connector>
         <inputAssignments>
             <field>Name</field>
             <value>
@@ -668,7 +1083,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>1112</locationX>
+        <locationX>1068</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>CREATE_UPDATE</targetReference>
@@ -677,11 +1092,18 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>RecordTypeName</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>vUserTextIDs</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
     </variables>
