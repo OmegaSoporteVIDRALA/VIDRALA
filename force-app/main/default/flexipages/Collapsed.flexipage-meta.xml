@@ -7,6 +7,9 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
+                            <value>Late_Load__c.Download_PIR_Form</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>Global.NewContact</value>
                         </valueListItems>
                         <valueListItems>
@@ -189,6 +192,36 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Customer_Informed__c</fieldItem>
                 <identifier>RecordCustomer_Informed_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Date_of_Incident__c</fieldItem>
+                <identifier>RecordDate_of_Incident__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Time_of_Incident__c</fieldItem>
+                <identifier>RecordTime_of_Incident__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Production_Line_Downtime__c</fieldItem>
+                <identifier>RecordProduction_Line_Downtime__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-9c56f4fa-6083-404a-9552-60783e9da72c</name>

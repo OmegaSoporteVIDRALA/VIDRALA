@@ -62,7 +62,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Reason_for_Early_Delivery__c</field>
+                <field>Date_of_Incident__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Time_of_Incident__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -120,6 +124,10 @@
                 <behavior>Edit</behavior>
                 <field>Customer_Requested_Date__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Production_Line_Downtime__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -127,7 +135,6 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>NCR Investigation</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
