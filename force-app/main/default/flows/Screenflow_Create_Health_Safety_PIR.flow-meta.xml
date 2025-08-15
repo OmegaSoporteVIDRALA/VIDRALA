@@ -383,6 +383,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+        <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -398,7 +399,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <allowPause>false</allowPause>
         <fields>
             <name>DTNewrecord</name>
-            <fieldText>&lt;p&gt;Click &lt;a href=&quot;{!URLLinktonewrecord}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;HERE&lt;/a&gt; to open the new record&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Record successfully created. Click &lt;a href=&quot;{!URLLinktonewrecord}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;HERE&lt;/a&gt; to open the new record&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
