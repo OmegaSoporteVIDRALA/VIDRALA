@@ -10,6 +10,7 @@
                             <value>Late_Load__c.Download_PIR_Form</value>
                         </valueListItems>
                         <valueListItems>
+
                             <value>Global.NewContact</value>
                         </valueListItems>
                         <valueListItems>
@@ -26,9 +27,6 @@
                         </valueListItems>
                         <valueListItems>
                             <value>ChangeRecordType</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.Late_Load__c.Generate_PIR_Form</value>
                         </valueListItems>
                         <valueListItems>
                             <value>PrintableView</value>
@@ -165,10 +163,6 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Tabs</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>maintabs</value>
                 </componentInstanceProperties>
@@ -221,10 +215,6 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Tabs</value>
-                </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>sidebartabs</value>

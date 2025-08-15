@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cause__c</fullName>
+    <externalId>false</externalId>
+    <label>Cause</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cause_Subcategory__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Availability (pool report)</fullName>
+                <default>false</default>
+                <label>Availability (pool report)</label>
+            </value>
+            <value>
+                <fullName>Conveyor</fullName>
+                <default>false</default>
+                <label>Conveyor</label>
+            </value>
+            <value>
+                <fullName>Crane</fullName>
+                <default>false</default>
+                <label>Crane</label>
+            </value>
+            <value>
+                <fullName>External</fullName>
+                <default>false</default>
+                <label>External</label>
+            </value>
+            <value>
+                <fullName>In Bound</fullName>
+                <default>false</default>
+                <label>In Bound</label>
+            </value>
+            <value>
+                <fullName>Incomplete Transfer</fullName>
+                <default>false</default>
+                <label>Incomplete Transfer</label>
+            </value>
+            <value>
+                <fullName>Interface Error - External</fullName>
+                <default>false</default>
+                <label>Interface Error - External</label>
+            </value>
+            <value>
+                <fullName>Interface Error - Internal</fullName>
+                <default>false</default>
+                <label>Interface Error - Internal</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Live load not stand trailer</fullName>
+                <default>false</default>
+                <label>Live load not stand trailer</label>
+            </value>
+            <value>
+                <fullName>Miscommunication</fullName>
+                <default>false</default>
+                <label>Miscommunication</label>
+            </value>
+            <value>
+                <fullName>Out Bound</fullName>
+                <default>false</default>
+                <label>Out Bound</label>
+            </value>
+            <value>
+                <fullName>Paperwork Delay</fullName>
+                <default>false</default>
+                <label>Paperwork Delay</label>
+            </value>
+            <value>
+                <fullName>Returned Stock not unload</fullName>
+                <default>false</default>
+                <label>Returned Stock not unload</label>
+            </value>
+            <value>
+                <fullName>Shot Load</fullName>
+                <default>false</default>
+                <label>Shot Load</label>
+            </value>
+            <value>
+                <fullName>Shuttle Car</fullName>
+                <default>false</default>
+                <label>Shuttle Car</label>
+            </value>
+            <value>
+                <fullName>Stock not released from QT</fullName>
+                <default>false</default>
+                <label>Stock not released from QT</label>
+            </value>
+            <value>
+                <fullName>VOR</fullName>
+                <default>false</default>
+                <label>VOR</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Stand Trailer not loaded</controllingFieldValue>
+            <valueName>Returned Stock not unload</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stand Trailer not loaded</controllingFieldValue>
+            <valueName>Shot Load</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stock Replenish</controllingFieldValue>
+            <valueName>Incomplete Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stock Replenish</controllingFieldValue>
+            <valueName>Stock not released from QT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailer Availability</controllingFieldValue>
+            <valueName>Availability (pool report)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailer Availability</controllingFieldValue>
+            <valueName>VOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interface Error</controllingFieldValue>
+            <valueName>External</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interface Error</controllingFieldValue>
+            <valueName>Internal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
+            <valueName>Interface Error - External</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
+            <valueName>Interface Error - Internal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
+            <valueName>Paperwork Delay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Conveyor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Crane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Shuttle Car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capacity</controllingFieldValue>
+            <valueName>In Bound</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capacity</controllingFieldValue>
+            <valueName>Out Bound</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Driver Error</controllingFieldValue>
+            <valueName>Live load not stand trailer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Driver Error</controllingFieldValue>
+            <valueName>Miscommunication</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
