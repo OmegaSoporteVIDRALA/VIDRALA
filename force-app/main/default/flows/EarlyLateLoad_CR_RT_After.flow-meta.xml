@@ -4,7 +4,7 @@
         <name>Send_Custom_Notification</name>
         <label>Send Custom Notification</label>
         <locationX>424</locationX>
-        <locationY>3095</locationY>
+        <locationY>3311</locationY>
         <actionName>customNotificationAction</actionName>
         <actionType>customNotificationAction</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -41,41 +41,62 @@
         <nameSegment>customNotificationAction</nameSegment>
     </actionCalls>
     <actionCalls>
-        <name>Send_Email</name>
-        <label>Send Email</label>
-        <locationX>512</locationX>
-        <locationY>2903</locationY>
+        <name>Send_Email_Action_1</name>
+        <label>Send Email Action 1</label>
+        <locationX>424</locationX>
+        <locationY>3203</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <connector>
-            <targetReference>Loop_Users</targetReference>
+            <targetReference>Send_Custom_Notification</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>emailAddresses</name>
         </inputParameters>
         <inputParameters>
-            <name>useEmailTemplate</name>
+            <name>emailAddressesArray</name>
+            <value>
+                <elementReference>VarColEmails</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
             <value>
                 <stringValue>True</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>emailTemplateId</name>
+            <name>emailSubject</name>
             <value>
-                <elementReference>Get_Email_Template.Id</elementReference>
+                <elementReference>TTsubjectPIR</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>recipientId</name>
+            <name>emailBody</name>
             <value>
-                <elementReference>Loop_Users</elementReference>
+                <elementReference>TTBodyPIR</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+            <value>
+                <booleanValue>true</booleanValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>relatedRecordId</name>
             <value>
                 <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -91,6 +112,13 @@
             <operator>Add</operator>
             <value>
                 <elementReference>Get_Account.Customer_Service_UK__r.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VarColEmails</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Account.Customer_Service_UK__r.Email</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -109,6 +137,13 @@
                 <elementReference>Get_Account.Owner.Id</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VarColEmails</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Account.Owner.Email</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Acc_Manager_Populated</targetReference>
         </connector>
@@ -119,7 +154,7 @@
         <locationX>512</locationX>
         <locationY>2387</locationY>
         <assignmentItems>
-            <assignToReference>vUserTextIDs</assignToReference>
+            <assignToReference>vGroupMemberID</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>Loop_Group_Members.UserOrGroupId</elementReference>
@@ -141,6 +176,13 @@
                 <elementReference>Get_Account.Sales_Admin_Lookup__r.Id</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VarColEmails</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Account.Sales_Admin_Lookup__r.Email</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Get_Public_Group</targetReference>
         </connector>
@@ -157,8 +199,38 @@
                 <elementReference>Get_Account.Senior_Sales_Admin_Lookup__r.Id</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VarColEmails</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Account.Senior_Sales_Admin_Lookup__r.Email</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Sales_Admin_added</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_User_Variables</name>
+        <label>Assign User Variables</label>
+        <locationX>512</locationX>
+        <locationY>2795</locationY>
+        <assignmentItems>
+            <assignToReference>vUserTextIDs</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_Users.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VarColEmails</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_Users.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Users</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -492,7 +564,7 @@
     </decisions>
     <description>Update so replaces the correct Number
 Including PIR record creation notifications
-added triggerint record as resource in email send</description>
+updated email send action</description>
     <environments>Default</environments>
     <formulas>
         <name>fNotificationBody</name>
@@ -520,6 +592,11 @@ RIGHT(&apos;000&apos; &amp; TEXT({!$Record.Dispatch__r.Early_Late_Collapsed_Load
 IF({!$Record.Collapsed__c} = TRUE , &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__c})))</expression>
     </formulas>
     <formulas>
+        <name>formulaPIRLINK</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Partner_Server_URL_550}, FIND( &apos;/services&apos;, {!$Api.Partner_Server_URL_550})) &amp; {!$Record.Id}</expression>
+    </formulas>
+    <formulas>
         <name>SetNameaccordingtoDeliveryStatus</name>
         <dataType>String</dataType>
         <expression>SUBSTITUTE(
@@ -541,21 +618,21 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
             <targetReference>Assign_Group_Member_to_User_Collection</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Get_Email_Template</targetReference>
+            <targetReference>Get_Users</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
         <name>Loop_Users</name>
         <label>Loop Users</label>
         <locationX>424</locationX>
-        <locationY>2795</locationY>
-        <collectionReference>vUserTextIDs</collectionReference>
+        <locationY>2687</locationY>
+        <collectionReference>Get_Users</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Send_Email</targetReference>
+            <targetReference>Assign_User_Variables</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Send_Custom_Notification</targetReference>
+            <targetReference>Get_Email_Template</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -602,10 +679,10 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <name>Get_Custom_Notification</name>
         <label>Get Custom Notification</label>
         <locationX>424</locationX>
-        <locationY>2687</locationY>
+        <locationY>3095</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Loop_Users</targetReference>
+            <targetReference>Send_Email_Action_1</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -623,7 +700,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <name>Get_Email_Template</name>
         <label>Get Email Template</label>
         <locationX>424</locationX>
-        <locationY>2579</locationY>
+        <locationY>2987</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Custom_Notification</targetReference>
@@ -918,6 +995,27 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <queriedFields>DeveloperName</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Get_Users</name>
+        <label>Get Users</label>
+        <locationX>424</locationX>
+        <locationY>2579</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_Users</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>vGroupMemberID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>Copy_1_of_Copy_1_of_Update_Record</name>
         <label>Update Record</label>
@@ -1092,11 +1190,45 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
+    <textTemplates>
+        <name>TTBodyPIR</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello,
+The following {!$Record.RecordType.Name} PIR record has been created in Salesforce:
+Customer: {!$Record.Customer__c}
+Record Link: {!formulaPIRLINK}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>TTsubjectPIR</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>PIR Created - {!$Record.RecordType.Name}</text>
+    </textTemplates>
     <variables>
         <name>RecordTypeName</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>VarColEmails</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>VARemail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>vGroupMemberID</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
     </variables>
