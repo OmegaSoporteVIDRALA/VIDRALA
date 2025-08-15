@@ -11,7 +11,7 @@
 		<members>DispatchStagingQueueableTest</members>
 		<members>DispatchStagingValidation</members>
 		<members>DispatchStagingValidationTest</members>
-  		<members>TestDataFactory</members>
+  	<members>TestDataFactory</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
