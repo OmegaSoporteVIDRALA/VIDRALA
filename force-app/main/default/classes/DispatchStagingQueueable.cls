@@ -115,6 +115,7 @@ public class DispatchStagingQueueable implements Queueable {
                                '. Updated existing record ID: ' + existingRecord.Id + 
                                '. Reset status from ' + originalStatus + ' to New for reprocessing.');
                 } else {
+
                     newRecordsToDelete.add(newRecord);
                     
                     System.debug('No data changes for unique ID: ' + uniqueId + 
@@ -182,6 +183,7 @@ public class DispatchStagingQueueable implements Queueable {
      * Returns true if any field value is different between new and existing record
      */
     private boolean hasDataChanged(Dispatch_Staging__c newRecord, Dispatch_Staging__c existingRecord) {
+
         return (
             !isEqual(newRecord.Number_of_Material_Document__c, existingRecord.Number_of_Material_Document__c) ||
             !isEqual(newRecord.SAP_Material_Code__c, existingRecord.SAP_Material_Code__c) ||
