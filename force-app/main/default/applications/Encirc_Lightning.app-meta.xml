@@ -473,15 +473,6 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>HaulierAccountPage</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Haulier</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
         <content>Collapsed</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Late_Load__c</pageOrSobjectType>
@@ -865,15 +856,6 @@
         <pageOrSobjectType>Late_Load__c</pageOrSobjectType>
         <recordType>Late_Load__c.Collapsed_Load</recordType>
         <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Collapsed</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Late_Load__c</pageOrSobjectType>
-        <recordType>Late_Load__c.Collapsed_Load</recordType>
-        <type>Flexipage</type>
         <profile>Standard</profile>
     </profileActionOverrides>
     <profileActionOverrides>
@@ -1115,15 +1097,6 @@
         <content>Early_Late_Load</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Late_Load__c</pageOrSobjectType>
-        <recordType>Late_Load__c.Early_Load</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Early_Late_Load</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Late_Load__c</pageOrSobjectType>
         <recordType>Late_Load__c.Late_Load</recordType>
         <type>Flexipage</type>
         <profile>Encirc - Customer Services/Quality User</profile>
@@ -1307,15 +1280,6 @@
         <recordType>Late_Load__c.Late_Load</recordType>
         <type>Flexipage</type>
         <profile>Encirc Workflow Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Early_Late_Load</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Late_Load__c</pageOrSobjectType>
-        <recordType>Late_Load__c.Late_Load</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
     </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Account</tabs>
