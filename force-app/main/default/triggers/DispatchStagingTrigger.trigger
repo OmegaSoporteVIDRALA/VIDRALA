@@ -29,5 +29,9 @@ trigger DispatchStagingTrigger on Dispatch_Staging__c (before insert,after inser
                 insertedIds.add(rec.Id);
             }
         }
+        // for DispatchStagingQueueable class
+        if (!insertedIds.isEmpty() && !System.isBatch() && !System.isFuture()) {
+            System.enqueueJob(new DispatchStagingQueueable(insertedIds));
+        }
     }
 }
