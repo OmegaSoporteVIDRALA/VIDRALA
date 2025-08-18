@@ -3,13 +3,7 @@
 	<types>
 		<members>DispatchStagingQueueable</members>
 		<members>DispatchStagingQueueableTest</members>
-		<members>DispatchStagingValidation</members>
-		<members>DispatchStagingValidationTest</members>
 		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>DispatchStagingTrigger</members>
-		<name>ApexTrigger</name>
 	</types>
 	<version>64.0</version>
 </Package>

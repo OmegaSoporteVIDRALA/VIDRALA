@@ -16197,6 +16197,10 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
+        <recordType>Account.Haulier</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <recordType>Account.Investors_Owners</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -16254,6 +16258,10 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Late_Load__c.Early_Load</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Late_Load__c.Health_Safety</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
