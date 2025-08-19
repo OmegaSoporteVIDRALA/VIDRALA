@@ -147,6 +147,7 @@
         <picklistField>Status__c</picklistField>
         <picklistObject>Late_Load__c</picklistObject>
     </dynamicChoiceSets>
+    <environments>Default</environments>
     <formulas>
         <name>FORMULAEarlyNAME</name>
         <dataType>String</dataType>
@@ -269,7 +270,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
             <field>Id</field>
         </outputAssignments>
     </recordLookups>
-    <runInMode>DefaultMode</runInMode>
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <description>creates an early / late Load record of type health and safety</description>
         <name>New_Early_Load</name>
@@ -296,21 +297,25 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <fieldType>Region</fieldType>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Haulier__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Customer__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Product__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Related_Load__c</objectFieldReference>
                 </fields>
@@ -319,6 +324,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <dataType>String</dataType>
                     <fieldText>Customer Contact Name</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
@@ -326,10 +332,12 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <dataType>Boolean</dataType>
                     <fieldText>Is this issue related to a dispatch?</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Dispatch__c</objectFieldReference>
                     <visibilityRule>
@@ -356,21 +364,25 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <fieldType>Region</fieldType>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>Get_H_S_Record.Source__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>Get_H_S_Record.Cause_Category__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Add__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Comments__c</objectFieldReference>
                 </fields>
@@ -383,7 +395,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-        <regionContainerType>SectionWithHeader</regionContainerType>
+            <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
