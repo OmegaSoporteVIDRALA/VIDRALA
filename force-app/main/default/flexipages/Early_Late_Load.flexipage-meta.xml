@@ -10,7 +10,6 @@
                             <value>Late_Load__c.Download_PIR_Form</value>
                         </valueListItems>
                         <valueListItems>
-
                             <value>Global.NewContact</value>
                         </valueListItems>
                         <valueListItems>
@@ -27,6 +26,9 @@
                         </valueListItems>
                         <valueListItems>
                             <value>ChangeRecordType</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.Late_Load__c.Generate_PIR_Form</value>
                         </valueListItems>
                         <valueListItems>
                             <value>PrintableView</value>

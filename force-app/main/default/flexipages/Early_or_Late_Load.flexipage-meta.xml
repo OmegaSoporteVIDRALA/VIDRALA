@@ -30,6 +30,9 @@
                         <valueListItems>
                             <value>AssignRecordLabel</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.Late_Load__c.Generate_PIR_Form</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -109,36 +112,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Dispatch__c</fieldItem>
                 <identifier>RecordDispatch_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Date_of_Incident__c</fieldItem>
-                <identifier>RecordDate_of_Incident__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Time_of_Incident__c</fieldItem>
-                <identifier>RecordTime_of_Incident__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Production_Line_Downtime__c</fieldItem>
-                <identifier>RecordProduction_Line_Downtime__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-25e61799-a0bd-49b1-9d1f-3a263a069ac5</name>
@@ -243,6 +216,26 @@
                 <identifier>RecordForm_Sent_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Date_of_Incident__c</fieldItem>
+                <identifier>RecordDate_of_Incident__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Time_of_Incident__c</fieldItem>
+                <identifier>RecordTime_of_Incident__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-72024144-f27e-4b67-bafa-9f43901864ca</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -275,6 +268,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Form_Recieved__c</fieldItem>
                 <identifier>RecordForm_Recieved_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Production_Line_Downtime__c</fieldItem>
+                <identifier>RecordProduction_Line_Downtime__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-e524ccc2-5498-46ce-9c43-a86fd083a220</name>
@@ -557,10 +560,6 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Tabs</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>maintabs</value>
                 </componentInstanceProperties>
@@ -613,10 +612,6 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Tabs</value>
-                </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>sidebartabs</value>

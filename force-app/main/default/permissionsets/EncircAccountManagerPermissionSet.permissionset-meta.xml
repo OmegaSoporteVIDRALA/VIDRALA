@@ -15757,6 +15757,10 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
+        <tab>Dispatch__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>MC4SF__MC_Campaign__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
