@@ -5,7 +5,6 @@
     <externalId>false</externalId>
     <label>Haulier</label>
     <referenceTo>Haulier__c</referenceTo>
-    <relationshipLabel>(Early or) Late Loads</relationshipLabel>
     <relationshipName>Early_or_Late_Loads</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>
