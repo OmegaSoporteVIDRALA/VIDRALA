@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
-    <brand>
-        <headerColor>#0070D2</headerColor>
-        <logo>encirc_11</logo>
-        <logoVersion>1</logoVersion>
-        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
-    </brand>
     <description>(Lightning Experience) Lets sales reps work with multiple records on one screen</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
