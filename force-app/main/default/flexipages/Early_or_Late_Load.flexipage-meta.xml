@@ -30,9 +30,6 @@
                         <valueListItems>
                             <value>AssignRecordLabel</value>
                         </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.Late_Load__c.Generate_PIR_Form</value>
-                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
