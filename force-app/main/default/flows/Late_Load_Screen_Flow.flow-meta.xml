@@ -254,6 +254,7 @@ new picklists added</description>
         <object>Late_Load__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <description>creates an early / late Load record of type colapsed</description>
         <name>New_Late_Load</name>
