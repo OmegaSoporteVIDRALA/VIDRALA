@@ -241,6 +241,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <object>Late_Load__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <description>creates an early / late Load record of type colapsed</description>
         <name>New_Early_Load</name>
