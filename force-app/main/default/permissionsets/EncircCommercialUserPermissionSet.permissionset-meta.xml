@@ -860,11 +860,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Business_Development__c.Current_Manufacturer__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Business_Development__c.Existing_Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1231,36 +1226,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CalculationProcedureVersion.IsLoopingEnabled</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CalculationProcedureVersion.LastSimulatedVariablesInput</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CalculationProcedureVersion.LoopEnd</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CalculationProcedureVersion.LoopIncrement</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CalculationProcedureVersion.LoopStart</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CalculationProcedureVersion.Rank</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CalculationProcedureVersion.StartDateTime</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3119,11 +3084,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Commercial_Contract_Status__c.Priority__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Commercial_Contract_Status__c.Start_date__c</field>
         <readable>true</readable>
@@ -3181,11 +3141,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Competitor_Action__c.Height__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Competitor_Action__c.OM_VID_ProductCode__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6995,213 +6950,8 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Event_Budget__c.Actual_Expenditure_Balance_Month__c</field>
+        <field>Events__c.Additional_Information__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Actual_Expenditure_Balance__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Actual_Expenditure_Deposit_Month__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Actual_Expenditure_Deposit__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Balance_Budget_v_Actual_v_Committed_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Budget_Amount__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Budget_Comments__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Budget_End_Date__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Budget_Start_Date__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Budget_V_Actual_and_Committed__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Committed_Expenditure_Balance_Month__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Committed_Expenditure_Balance__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Committed_Expenditure_Deposit_Month__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Committed_Expenditure_Deposit__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Event_Budget__c.Customer_Entertainment_Budget__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Actual_Deposit_Filling__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Actual_Final_Pmt_Filling__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Budget_Amount_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Commited_Final_Pmt_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Committed_Deposit_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Customer_Entertainment_Budget_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Marketing_Budget_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Sponsorship_Subscription_Budget_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Trade_Event_Budget_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Event_Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Invoice_Details__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.PO_No__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.PO_No_date_created__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Parent_Event_Budget__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Parent_Event_Filling__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Pr_No_Date_Created__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Pr_No__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.SAP_Entered__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.SAP_Material_Group__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.SAP_Material_Sub_Group__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.Model__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.No_of_Labelling_Stations__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.No_of_Pedestals__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.Number_of_Cages_per_Retort__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.Number_of_Labelling_Stations__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.Number_of_Packers__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.Number_of_Pedestals__c</field>
-        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -7234,14 +6984,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.P1_Case_Pack_Carton_Erector_Cycles_min__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Customer_Technical_Report_CTR__c.P1_Cluster_Pack_Number_of_Cycles_per_min__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>Events__c.Hotel_Notes__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -8450,13 +8195,8 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Dispatch__c.Entry_Time__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Dispatch__c.Exclude_from_OTIF__c</field>
-        <readable>true</readable>
+        <field>Lead_Product__c.Products__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -11865,13 +11605,8 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>MC4SF__MC_Subscriber__c.MC4SF__View_Subscriber_in_MC__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MC4SF__MC_Subscriber__c.MC4SF__Web_ID__c</field>
-        <readable>true</readable>
+        <field>Opportunity.OM_VID_Idioma__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -12879,14 +12614,19 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Mould_Life_Tracker__c.Remind_me_in_6_months_to_review_again__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>Product2.Manufacturer__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Mould_Life_Tracker__c.Replacement_Container_Drawing_19__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>Product2.New_Drop_Substitute__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product2.OM_Product_Code_SIP__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -12905,11 +12645,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Mould_Life_Tracker__c.Submit_to_Mould_Shop__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Mould_Life_Tracker__c.Submitter_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -12919,14 +12654,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Mould_Life_Tracker__c.Who_is_paying_Residual_Cost_of_Mould_22__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>NPD_Request__c.Capacity_Brimful_ml__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>Product2.Status__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -13054,14 +12784,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>NPD_Request__c.Potential_Customer_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>NPD_Request__c.Refillable__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>Quote.OM_VID_AgreedTerms__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -13184,14 +12909,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.Delivery_Account__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.Description</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>QuoteLineItem.OM_VID_Incoterms__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -13376,11 +13096,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>OpportunityLineItem.Opportunity_Production_Weight_in_Tons__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>OpportunityLineItem.Pallet_Volume__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14391,11 +14106,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SFDC_Acct_Plan__c.Product_Sales_Growth__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SFDC_Acct_Plan__c.Services_Sales_Growth__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
