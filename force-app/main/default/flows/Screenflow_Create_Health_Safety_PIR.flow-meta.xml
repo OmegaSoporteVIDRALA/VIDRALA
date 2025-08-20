@@ -35,19 +35,19 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>New_Early_Load</targetReference>
+            <targetReference>Get_Dispatch_Recordx</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Dispatch</name>
         <label>Assign Dispatch</label>
         <locationX>314</locationX>
-        <locationY>674</locationY>
+        <locationY>782</locationY>
         <assignmentItems>
             <assignToReference>VAREarlyorLateLoad.Dispatch__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>recordId.Id</elementReference>
+                <elementReference>recordIdvar.Id</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -58,7 +58,7 @@
         <name>Assign_Misc</name>
         <label>Apply misc</label>
         <locationX>50</locationX>
-        <locationY>782</locationY>
+        <locationY>890</locationY>
         <assignmentItems>
             <assignToReference>VAREarlyorLateLoad.Dispatch__c</assignToReference>
             <operator>Assign</operator>
@@ -74,12 +74,12 @@
         <name>assignment_H_S_Variables</name>
         <label>assignment H&amp;S Variables</label>
         <locationX>182</locationX>
-        <locationY>974</locationY>
+        <locationY>1082</locationY>
         <assignmentItems>
             <assignToReference>VAREarlyorLateLoad.Customer__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>recordId.Customer__c</elementReference>
+                <elementReference>Customer.recordId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -110,6 +110,20 @@
                 <elementReference>Get_H_S_Record.Cause_Category__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Haulier__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Haulier.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Product__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>BottleProduct.recordId</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_Collapsed_Load_Record</targetReference>
         </connector>
@@ -118,7 +132,7 @@
         <name>Is_Dispatch_Populated</name>
         <label>Is Dispatch Populated?</label>
         <locationX>182</locationX>
-        <locationY>566</locationY>
+        <locationY>674</locationY>
         <defaultConnector>
             <targetReference>Assign_Dispatch</targetReference>
         </defaultConnector>
@@ -151,9 +165,9 @@
     <formulas>
         <name>FORMULAEarlyNAME</name>
         <dataType>String</dataType>
-        <expression>{!recordId.Dispatch_ID__c}
+        <expression>{!recordIdvar.Dispatch_ID__c}
 + &quot;-&quot; +
-RIGHT(&apos;000&apos; &amp; TEXT({!recordId.Early_Late_Collapsed_Loads__c} + 1 ), 3) 
+RIGHT(&apos;000&apos; &amp; TEXT({!recordIdvar.Early_Late_Collapsed_Loads__c} + 1 ), 3) 
 + &quot; &quot; + 
 UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
     </formulas>
@@ -192,7 +206,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>Create_Collapsed_Load_Record</name>
         <label>Create H&amp;S Record</label>
         <locationX>182</locationX>
-        <locationY>1082</locationY>
+        <locationY>1190</locationY>
         <connector>
             <targetReference>NewRecordCreatedScreen</targetReference>
         </connector>
@@ -202,7 +216,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>Get_Dispatch_record</name>
         <label>Get Misc Dispatch record</label>
         <locationX>50</locationX>
-        <locationY>674</locationY>
+        <locationY>782</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_Misc</targetReference>
@@ -213,6 +227,27 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
             <operator>EqualTo</operator>
             <value>
                 <stringValue>Misc</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Dispatch__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Dispatch_Recordx</name>
+        <label>Get Dispatch Recordx</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>New_Early_Load</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -276,7 +311,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>New_Early_Load</name>
         <label>New Health &amp; Safety</label>
         <locationX>182</locationX>
-        <locationY>458</locationY>
+        <locationY>566</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -296,22 +331,118 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <name>Details_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
+                    <name>Haulier</name>
+                    <extensionName>flowruntime:lookup</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value>
+                            <stringValue>Haulier__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Haulier</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value>
+                            <stringValue>Dispatch__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value>
+                            <elementReference>Get_Dispatch_Recordx.Haulier__c</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>maxValues</name>
+                        <value>
+                            <numberValue>1.0</numberValue>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>VAREarlyorLateLoad.Haulier__c</objectFieldReference>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
+                    <name>Customer</name>
+                    <extensionName>flowruntime:lookup</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value>
+                            <stringValue>Customer__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Customer</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value>
+                            <stringValue>Dispatch__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>maxValues</name>
+                        <value>
+                            <numberValue>1.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value>
+                            <elementReference>Get_Dispatch_Recordx.Customer__c</elementReference>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>VAREarlyorLateLoad.Customer__c</objectFieldReference>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
+                    <name>BottleProduct</name>
+                    <extensionName>flowruntime:lookup</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value>
+                            <stringValue>Bottle__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Product</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value>
+                            <stringValue>Dispatch__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>maxValues</name>
+                        <value>
+                            <numberValue>1.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value>
+                            <elementReference>Get_Dispatch_Recordx.Bottle__c</elementReference>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>VAREarlyorLateLoad.Product__c</objectFieldReference>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
@@ -405,7 +536,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>NewRecordCreatedScreen</name>
         <label>NewRecordCreatedScreen</label>
         <locationX>182</locationX>
-        <locationY>1190</locationY>
+        <locationY>1298</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -427,6 +558,13 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
     <status>Active</status>
     <variables>
         <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>recordIdvar</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
