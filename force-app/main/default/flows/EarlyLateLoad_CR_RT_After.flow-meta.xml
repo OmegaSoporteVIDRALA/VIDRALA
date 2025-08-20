@@ -1219,7 +1219,7 @@ IF({!$Record.Collapsed__c}, &quot;COLLAPSED&quot;, UPPER(TEXT({!$Record.Status__
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>Hello,
 The following {!$Record.RecordType.Name} PIR record has been created in Salesforce:
-Customer: {!$Record.Customer__c}
+Customer: {!$Record.Customer__r.Name}
 Record Link: {!formulaPIRLINK}</text>
     </textTemplates>
     <textTemplates>
