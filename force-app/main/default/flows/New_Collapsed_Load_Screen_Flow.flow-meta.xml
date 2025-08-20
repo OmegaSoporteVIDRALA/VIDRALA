@@ -238,7 +238,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>DisplayText2</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Customer&lt;/strong&gt; : {!recordId.Customer__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product&lt;/strong&gt; : {!recordId.Bottle__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Pack Specification&lt;/strong&gt; : {!recordId.Pack_Specification__c}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Customer&lt;/strong&gt; : {!recordId.Customer__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product&lt;/strong&gt; : {!recordId.Bottle__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;SAP Material Code&lt;/strong&gt; : {!recordId.SAP_Material_Code__r.Name}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
