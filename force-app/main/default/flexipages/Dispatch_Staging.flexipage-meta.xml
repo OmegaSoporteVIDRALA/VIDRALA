@@ -88,6 +88,16 @@
                 <identifier>RecordSalesforce_Unique_ID_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Concat_Id__c</fieldItem>
+                <identifier>RecordConcat_Id__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-a8beae2b-f03f-480c-a652-19a357b8bfda</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -664,6 +674,22 @@
                 <identifier>RecordPlanned_Transport_End_Time_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:blankSpace</componentName>
+                <identifier>flexipage_blankSpace5</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.End_of_Planning_Date__c</fieldItem>
+                <identifier>RecordEnd_of_Planning_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-b0221d4b-fee2-4496-b597-366e008aaee5</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -804,6 +830,22 @@
                 <identifier>RecordActual_Shipment_End_Time_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:blankSpace</componentName>
+                <identifier>flexipage_blankSpace6</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Scheduling_End_Time__c</fieldItem>
+                <identifier>RecordScheduling_End_Time_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-1991ffc7-d2c6-4f7d-8a3a-d5ecf3583b00</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -940,26 +982,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Item__c</fieldItem>
                 <identifier>RecordItem_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.End_of_Planning_Date__c</fieldItem>
-                <identifier>RecordEnd_of_Planning_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Scheduling_End_Time__c</fieldItem>
-                <identifier>RecordScheduling_End_Time_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-49888e73-bf7e-4ef9-8ee9-efa8dfb9646c</name>
