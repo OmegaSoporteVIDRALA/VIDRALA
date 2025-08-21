@@ -30,6 +30,9 @@
                         <valueListItems>
                             <value>AssignRecordLabel</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.Late_Load__c.Generate_PIR_Form</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -109,6 +112,32 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Dispatch__c</fieldItem>
                 <identifier>RecordDispatch_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:blankSpace</componentName>
+                <identifier>flexipage_blankSpace</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Who_reported_this_issue__c</fieldItem>
+                <identifier>RecordWho_reported_this_issue__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Other_Please_Specifiy__c</fieldItem>
+                <identifier>RecordOther_Please_Specifiy_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-25e61799-a0bd-49b1-9d1f-3a263a069ac5</name>
