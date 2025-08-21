@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>Account.Customer_platform__c</members>
+		<members>Account.Platform_password__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Account-Vidrala %28Customer Layout%29</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Admin</members>
+		<members>Fifty SAC Calidad</members>
+		<members>System Administrator Fifty</members>
+		<members>Vidrala Europe Support</members>
+		<name>Profile</name>
+	</types>
+	<version>64.0</version>
+</Package>

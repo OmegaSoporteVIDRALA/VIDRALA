@@ -2,10 +2,47 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>59.0</apiVersion>
     <assignments>
+        <name>Assign_Blank</name>
+        <label>Assign Blank</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>getEarlyLoads.Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getEarlyLoads.Cause_Category__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getEarlyLoads.Cause_Subcategory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getEarlyLoads.Cause__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Early_Load</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>assignment_EarlyLate_Load</name>
         <label>assignment EarlyLate Load</label>
         <locationX>176</locationX>
-        <locationY>350</locationY>
+        <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>VAREarlyorLateLoad.Customer__c</assignToReference>
             <operator>Assign</operator>
@@ -63,10 +100,31 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>VAREarlyorLateLoad.Reason_for_Early_Delivery__c</assignToReference>
+            <assignToReference>VAREarlyorLateLoad.Source__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Reason_for_early_delivery</elementReference>
+                <elementReference>getEarlyLoads.Source__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Cause_Category__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>getEarlyLoads.Cause_Category__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Cause_Subcategory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>getEarlyLoads.Cause_Subcategory__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Cause__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>getEarlyLoads.Cause__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -81,6 +139,7 @@
         <picklistField>Status__c</picklistField>
         <picklistObject>Late_Load__c</picklistObject>
     </dynamicChoiceSets>
+    <environments>Default</environments>
     <formulas>
         <name>FORMULAEarlyNAME</name>
         <dataType>String</dataType>
@@ -123,9 +182,9 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
     <processType>Flow</processType>
     <recordCreates>
         <name>Create_Collapsed_Load_Record</name>
-        <label>Create Collapsed Load Record</label>
+        <label>Create Early Load Record</label>
         <locationX>176</locationX>
-        <locationY>458</locationY>
+        <locationY>674</locationY>
         <connector>
             <targetReference>NewRecordCreatedScreen</targetReference>
         </connector>
@@ -138,7 +197,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>New_Early_Load</targetReference>
+            <targetReference>getEarlyLoads</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -161,12 +220,34 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
             <field>Id</field>
         </outputAssignments>
     </recordLookups>
+    <recordLookups>
+        <name>getEarlyLoads</name>
+        <label>getEarlyLoad</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Blank</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RecordTypeID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Late_Load__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <description>creates an early / late Load record of type colapsed</description>
         <name>New_Early_Load</name>
         <label>New Early Load</label>
         <locationX>176</locationX>
-        <locationY>242</locationY>
+        <locationY>458</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -198,7 +279,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>DisplayText2</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Customer&lt;/strong&gt; : {!recordId.Customer__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product&lt;/strong&gt; : {!recordId.Bottle__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Pack Specification&lt;/strong&gt; : {!recordId.Pack_Specification__c}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Customer&lt;/strong&gt; : {!recordId.Customer__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product&lt;/strong&gt; : {!recordId.Bottle__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;SAP Material Code&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt; : {!recordId.SAP_Material_Code__r.Name}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -210,6 +291,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <fields>
             <name>Delivery_Information</name>
@@ -223,6 +305,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <dataType>DateTime</dataType>
                     <fieldText>New Delivery Date</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <validationRule>
                         <errorMessage>&lt;p&gt;Please enter in a New Delivery Date earlier than the Planned Delivery Date&lt;/p&gt;</errorMessage>
@@ -230,31 +313,62 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     </validationRule>
                 </fields>
                 <fields>
-                    <name>Reason_for_early_delivery</name>
-                    <dataType>String</dataType>
-                    <fieldText>Reason for early delivery</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Comments__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Customer_Informed__c</objectFieldReference>
                 </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
-                        <stringValue>12</stringValue>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Delivery_Information_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>getEarlyLoads.Source__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>getEarlyLoads.Cause_Category__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>getEarlyLoads.Cause_Subcategory__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>getEarlyLoads.Cause__c</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
                     </value>
                 </inputParameters>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <fields>
             <name>Customer_Informed_Section_Mandatory</name>
@@ -268,6 +382,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <dataType>String</dataType>
                     <fieldText>Encirc Contact Name</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
@@ -275,10 +390,12 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <dataType>String</dataType>
                     <fieldText>Customer Contact Name</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Method_of_Communication__c</objectFieldReference>
                 </fields>
@@ -287,6 +404,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <dataType>DateTime</dataType>
                     <fieldText>Date Informed</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
@@ -298,6 +416,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -317,7 +436,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>NewRecordCreatedScreen</name>
         <label>NewRecordCreatedScreen</label>
         <locationX>176</locationX>
-        <locationY>566</locationY>
+        <locationY>782</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
