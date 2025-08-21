@@ -1,0 +1,10 @@
+<apex:page standardController="Late_Load__c" showHeader="false" sidebar="false" cache="true" >
+    <apex:form >
+        <apex:outputPanel >
+            <p style="font-size: 18px; font-weight: bold;">
+                Your download has started. You can close this window.
+            </p>
+            <iframe src="/apex/PIRForm?id={!Late_Load__c.Id}" style="display:none;"></iframe>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>
