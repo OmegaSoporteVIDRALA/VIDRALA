@@ -63,6 +63,11 @@
                 <label>Driver Hours</label>
             </value>
             <value>
+                <fullName>Haulier turned away on arrival</fullName>
+                <default>false</default>
+                <label>Haulier turned away on arrival</label>
+            </value>
+            <value>
                 <fullName>Interface Error</fullName>
                 <default>false</default>
                 <label>Interface Error</label>
@@ -88,9 +93,34 @@
                 <label>Late Collection</label>
             </value>
             <value>
+                <fullName>Line breakdown</fullName>
+                <default>false</default>
+                <label>Line breakdown</label>
+            </value>
+            <value>
+                <fullName>Line running ahead of schedule</fullName>
+                <default>false</default>
+                <label>Line running ahead of schedule</label>
+            </value>
+            <value>
+                <fullName>Line running behind schedule</fullName>
+                <default>false</default>
+                <label>Line running behind schedule</label>
+            </value>
+            <value>
+                <fullName>Line stopped</fullName>
+                <default>false</default>
+                <label>Line stopped</label>
+            </value>
+            <value>
                 <fullName>Link to original collapsed load</fullName>
                 <default>false</default>
                 <label>Link to original collapsed load</label>
+            </value>
+            <value>
+                <fullName>Longer than expected time to unload trailer</fullName>
+                <default>false</default>
+                <label>Longer than expected time to unload trailer</label>
             </value>
             <value>
                 <fullName>Miscommunication</fullName>
@@ -203,7 +233,15 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
+            <valueName>Haulier turned away on arrival</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
             <valueName>Last minute change to order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
+            <valueName>Longer than expected time to unload trailer</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
@@ -285,6 +323,22 @@
         <valueSettings>
             <controllingFieldValue>AW Breakdown</controllingFieldValue>
             <valueName>Shuttle Car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
+            <valueName>Line breakdown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
+            <valueName>Line running ahead of schedule</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
+            <valueName>Line running behind schedule</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
+            <valueName>Line stopped</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>
