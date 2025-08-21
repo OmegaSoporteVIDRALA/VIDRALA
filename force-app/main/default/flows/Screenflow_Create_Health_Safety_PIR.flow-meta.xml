@@ -520,6 +520,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
+        <regionContainerType>SectionWithoutHeader</regionContainerType>
     </screens>
     <screens>
         <description>to redirect to the record</description>
