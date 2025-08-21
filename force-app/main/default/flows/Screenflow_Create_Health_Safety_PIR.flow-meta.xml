@@ -47,7 +47,7 @@
             <assignToReference>VAREarlyorLateLoad.Dispatch__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>recordIdvar.Id</elementReference>
+                <elementReference>Get_Dispatch_Recordx.Id</elementReference>
             </value>
         </assignmentItems>
         <connector>
