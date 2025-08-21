@@ -194,6 +194,32 @@
                 <identifier>RecordCustomer_Informed_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>flexipage:blankSpace</componentName>
+                <identifier>flexipage_blankSpace</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Who_reported_this_issue__c</fieldItem>
+                <identifier>RecordWho_reported_this_issue__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Other_Please_Specifiy__c</fieldItem>
+                <identifier>RecordOther_Please_Specifiy__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-9c56f4fa-6083-404a-9552-60783e9da72c</name>
         <type>Facet</type>
     </flexiPageRegions>
