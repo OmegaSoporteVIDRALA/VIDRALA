@@ -517,10 +517,10 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+        <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
-        <regionContainerType>SectionWithoutHeader</regionContainerType>
     </screens>
     <screens>
         <description>to redirect to the record</description>
