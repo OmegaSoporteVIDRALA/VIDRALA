@@ -3,11 +3,6 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Customer_Lane__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Dispatch_Staging__c.Actual_Date_for_End_of_Loading__c</field>
         <readable>true</readable>
     </fieldPermissions>
