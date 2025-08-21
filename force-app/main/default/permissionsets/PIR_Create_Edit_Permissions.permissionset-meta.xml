@@ -908,6 +908,21 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Drawing__c.Colour__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Drawing__c.Pallet_Height__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Drawing__c.Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Haulier__c.Exclude_from_OTIF__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1148,6 +1163,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Late_Load__c.Other_Please_Specifiy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Late_Load__c.Pallets_damaged__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1303,6 +1323,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Late_Load__c.Who_reported_this_issue__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Late_Load__c.Works_Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1333,6 +1358,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>Dispatch__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Drawing__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -1388,6 +1422,10 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
+        <recordType>Drawing__c.Drawings_Encirc</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <recordType>Late_Load__c.Collapsed_Load</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -1405,6 +1443,10 @@
     </recordTypeVisibilities>
     <tabSettings>
         <tab>Dispatch__c</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Drawing__c</tab>
         <visibility>Available</visibility>
     </tabSettings>
     <tabSettings>
