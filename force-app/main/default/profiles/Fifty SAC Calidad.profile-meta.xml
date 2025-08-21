@@ -27,6 +27,16 @@
     <layoutAssignments>
         <layout>Supplier_Share__c-Supplier Share Layout</layout>
     </layoutAssignments>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Customer_platform__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Platform_password__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
