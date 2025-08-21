@@ -21,12 +21,6 @@
         <field>Account.Senior_Sales_Office_FL__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    <layoutAssignments>
-        <layout>Account-Account Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Supplier_Share__c-Supplier Share Layout</layout>
-    </layoutAssignments>
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Customer_platform__c</field>
@@ -37,6 +31,13 @@
         <field>Account.Platform_password__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>Account-Account Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Supplier_Share__c-Supplier Share Layout</layout>
+    </layoutAssignments>
+    
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
