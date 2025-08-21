@@ -2,10 +2,47 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>59.0</apiVersion>
     <assignments>
+        <name>assign_blank</name>
+        <label>assign blank</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>getLateLoad.Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getLateLoad.Cause_Subcategory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getLateLoad.Cause_Category__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getLateLoad.Cause__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Late_Load</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>assignment_EarlyLate_Load</name>
         <label>assignment EarlyLate Load</label>
         <locationX>176</locationX>
-        <locationY>350</locationY>
+        <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>VAREarlyorLateLoad.Customer__c</assignToReference>
             <operator>Assign</operator>
@@ -70,17 +107,39 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>VAREarlyorLateLoad.Reason_for_Delay__c</assignToReference>
+            <assignToReference>VAREarlyorLateLoad.Source__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Reason_for_Delay</elementReference>
+                <elementReference>getLateLoad.Source__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Cause_Subcategory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>getLateLoad.Cause_Subcategory__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Cause_Category__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>getLateLoad.Cause_Category__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Cause__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>getLateLoad.Cause__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
             <targetReference>Create_Collapsed_Load_Record</targetReference>
         </connector>
     </assignments>
-    <description>validation rule added</description>
+    <description>validation rule added
+new picklists added</description>
     <dynamicChoiceSets>
         <name>ReasonForDelayPicklist</name>
         <dataType>Picklist</dataType>
@@ -97,6 +156,7 @@
         <picklistField>Status__c</picklistField>
         <picklistObject>Late_Load__c</picklistObject>
     </dynamicChoiceSets>
+    <environments>Default</environments>
     <formulas>
         <name>formulalateloadvalidation</name>
         <dataType>Boolean</dataType>
@@ -137,7 +197,7 @@
         <name>Create_Collapsed_Load_Record</name>
         <label>Create Collapsed Load Record</label>
         <locationX>176</locationX>
-        <locationY>458</locationY>
+        <locationY>674</locationY>
         <connector>
             <targetReference>NewRecordCreatedScreen</targetReference>
         </connector>
@@ -150,7 +210,7 @@
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>New_Late_Load</targetReference>
+            <targetReference>getLateLoad</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -173,12 +233,34 @@
             <field>Id</field>
         </outputAssignments>
     </recordLookups>
+    <recordLookups>
+        <name>getLateLoad</name>
+        <label>getLateLoad</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>assign_blank</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RecordTypeID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Late_Load__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <description>creates an early / late Load record of type colapsed</description>
         <name>New_Late_Load</name>
         <label>New Late Load</label>
         <locationX>176</locationX>
-        <locationY>242</locationY>
+        <locationY>458</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -210,7 +292,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>DisplayText2</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Customer&lt;/strong&gt; : {!recordId.Customer__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product&lt;/strong&gt; : {!recordId.Bottle__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Pack Specification&lt;/strong&gt; : {!recordId.Pack_Specification__c}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Customer&lt;/strong&gt; : {!recordId.Customer__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product&lt;/strong&gt; : {!recordId.Bottle__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;SAP Material Code&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt; : {!recordId.SAP_Material_Code__r.Name}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -222,6 +304,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <fields>
             <name>Delivery_Information</name>
@@ -235,6 +318,7 @@
                     <dataType>DateTime</dataType>
                     <fieldText>New Delivery Date</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <validationRule>
                         <errorMessage>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;For a Late Load, the new delivery date must be later than the planned delivery date&lt;/span&gt;&lt;/p&gt;</errorMessage>
@@ -242,32 +326,62 @@
                     </validationRule>
                 </fields>
                 <fields>
-                    <name>Reason_for_Delay</name>
-                    <choiceReferences>ReasonForDelayPicklist</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Reason for Delay</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Comments__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Customer_Informed__c</objectFieldReference>
                 </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
-                        <stringValue>12</stringValue>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Delivery_Information_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>getLateLoad.Source__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>getLateLoad.Cause_Category__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>getLateLoad.Cause_Subcategory__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>getLateLoad.Cause__c</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
                     </value>
                 </inputParameters>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <fields>
             <name>Customer_Informed_Section_Mandatory</name>
@@ -281,6 +395,7 @@
                     <dataType>String</dataType>
                     <fieldText>Encirc Contact Name</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
@@ -288,10 +403,12 @@
                     <dataType>String</dataType>
                     <fieldText>Customer Contact Name</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Method_of_Communication__c</objectFieldReference>
                 </fields>
@@ -300,10 +417,12 @@
                     <dataType>DateTime</dataType>
                     <fieldText>Date Informed</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Customers_lines_down__c</objectFieldReference>
                 </fields>
@@ -316,6 +435,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -339,6 +459,7 @@
                     <dataType>DateTime</dataType>
                     <fieldText>Time customer run out of glass</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
@@ -350,6 +471,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -369,7 +491,7 @@
         <name>NewRecordCreatedScreen</name>
         <label>NewRecordCreatedScreen</label>
         <locationX>176</locationX>
-        <locationY>566</locationY>
+        <locationY>782</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>

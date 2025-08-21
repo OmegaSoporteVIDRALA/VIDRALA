@@ -1,0 +1,489 @@
+<apex:page contentType="application/msword" standardController="Late_Load__c" cache="true" showHeader="false" sidebar="false">
+    <apex:variable var="TimeOfIncident" value="{!Late_Load__c.Time_of_Incident__c}" />
+    <html xmlns:w="urn:schemas-microsoft-com:office:word">
+<head>
+    <style>
+        body {
+            font-family: Calibri, Arial, sans-serif;
+            font-size: 12px;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 210mm; /* A4 width for printing */
+            margin: 0 auto;
+        }
+        
+        /* Table Styles */
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        
+        .report-table td {
+            border: 1px solid #000;
+            padding: 6px;
+            vertical-align: top;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            margin: 20px 0 10px 0;
+            text-align: left;
+        }
+        
+        /* Header table styles */
+        .header-table {
+            border: 1px solid #000;
+        	border-collapse: collapse;
+        	width: 100%
+        }
+        
+        .header-table td {
+            border: 1px solid #000;
+        	padding: 8px;
+        	vertical-align: middle;
+        
+        }
+        
+        .logo-cell {
+            width: 50%;
+            color: transparent;
+            text-align: left;
+        	border: 1px solid #000;
+        }
+        
+        .title-cell {
+            width: 50%;
+            background-color: #a8d08d;
+            text-align: center;
+        	border: 1px solid #000;
+        }
+        
+        /* Table Cell Types */
+        .label-cell {
+            width: 40%;
+            background-color: #a8d08d;
+            color: #000;
+            font-weight: bold;
+            vertical-align: top;
+        }
+        
+        .value-cell {
+            width: 60%;
+            background-color: #fff;
+            color: #000;
+            vertical-align: top;
+        }
+        
+        /* Styling for Report Origin section */
+        .label-cell-vertical {
+            width: 40%;
+            background-color: #a8d08d;
+            color: #000;
+            font-weight: bold;
+        	font-size: 14px;
+            vertical-align: middle;
+            text-align: left;
+            padding: 20px 8px;
+        }
+        
+        .value-cell-stacked {
+            width: 60%;
+            background-color: #fff;
+            color: #000;
+            padding: 0;
+        }
+        
+        .value-row {
+            padding: 8px;
+            border-bottom: 1px solid #000;
+        }
+        
+        .value-row:last-child {
+            border-bottom: none;
+        }
+        
+        /* Section title row for Details of Incident */
+        .section-title-row {
+            background-color: #a8d08d;
+            font-weight: bold;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        .description-text {
+            padding: 8px;
+            background-color: #fff;
+            text-align: left;
+        }
+        
+        /* 5W1H Table */
+        .incident-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+        }
+        
+        .incident-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            vertical-align: top;
+        }
+        
+        .question-cell {
+            background-color: #a8d08d;
+            font-weight: bold;
+            width: 15%;
+        }
+        
+        .instruction-cell {
+            background-color: #fff;
+            width: 42.5%;
+        }
+        
+        .manual-cell {
+            background-color: #fff;
+            width: 42.5%;
+        }
+        
+        /* Attachment text and empty space */
+        .attachment-section {
+            margin: 15px 0;
+            padding: 0 8px;
+        }
+        
+        .empty-space {
+            height: 300px;
+            border: 1px solid #000;
+            margin: 10px 0;
+        }
+        
+        /* Root Cause Table */
+        .root-cause-header {
+            background-color: #a8d08d;
+            font-weight: bold;
+            font-style: italic;
+            padding: 8px;
+        }
+        
+        .root-cause-question {
+            background-color: #a8d08d;
+            font-weight: bold;
+            width: 15%;
+        }
+        
+        .root-cause-value {
+            background-color: #fff;
+            width: 85%;
+        }
+        
+        /* Actions Table */
+        .actions-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .actions-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            vertical-align: top;
+        }
+        
+        /* Review Section */
+        .review-header {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            margin: 30px 0 10px 0;
+            text-align: left;
+        }
+        
+        /* Image styles */
+        .logo-img {
+            width: 250px;
+            height: 97px;
+        }
+        
+        .title-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        /* Utility classes */
+        .no-margin {
+            margin: 0;
+            padding: 2px;
+        }
+        
+        /* Print optimization */
+        @media print {
+            .container {
+                max-width: none;
+                margin: 0;
+            }
+            
+            .report-table {
+                page-break-inside: avoid;
+            }
+        }
+        a.record-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <table class="report-table header-table">
+            <tbody>
+                <tr>
+                    <td class="logo-cell">
+                        <p class="no-margin">
+                                 <img class="logo-img" src="data:image/png;base64,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"
+                                      />
+                                      </p>
+                    </td>
+                    <td class="title-cell">
+                        <p class="no-margin">
+                            <span class="title-text">PIR Form</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Section 1: Originator -->
+        <h2 class="section-header">1. Originator</h2>
+        <table class="report-table">
+            <tbody>
+                <tr>
+                    <td class="label-cell">Name :</td>
+                    <td class="value-cell">{!$User.FirstName} {!$User.LastName}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Position :</td>
+                    <td class="value-cell">{!$User.Title}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Department:</td>
+                    <td class="value-cell">{!$User.Department}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Company :</td>
+                    <td class="value-cell">{!$User.CompanyName}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <!-- Report Origin Section -->
+        <table class="report-table">
+            <tbody>
+        <tr>
+            <td class="label-cell-vertical" rowspan="3"><br/><br/>Report Origin (Please Highlight)</td>
+            <td class="value-cell">Customer Complaint / Feedback</td>
+        </tr>
+        <tr>
+            <td class="value-cell">Internal Issue</td>
+        </tr>
+        <tr>
+            <td class="value-cell">Other (include more Information)</td>
+        </tr>
+    </tbody>
+        </table>
+
+        <!-- Section 2: Initial Information -->
+        <h2 class="section-header">2. Initial Information</h2>
+        <table class="report-table">
+            <tbody>
+                <tr>
+                    <td class="label-cell">Complaint Ref (Encirc)</td>
+                    <td class="value-cell"> </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Identified Issue (Shot Load , Late Delivery)</td>
+                    <td class="value-cell">{!Late_Load__c.RecordType.Name}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Load</td>
+                    <td class="value-cell">{!Late_Load__c.Dispatch__r.Freight_Reference__c}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Customer Impacted</td>
+                    <td class="value-cell">	{!Late_Load__c.Customer__r.Name}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Production Line Downtime</td>
+                    <td class="value-cell">{!Late_Load__c.Production_Line_Downtime__c}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Load Details (Shipment Reference)</td>
+                    <td class="value-cell">{!Late_Load__c.Dispatch__r.Shipment_Number__c}</td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Date of Incident</td>
+                   <td>
+                       <apex:outputText value="{0,date,dd/MM/yyyy}">
+                    <apex:param value="{!Late_Load__c.Date_of_Incident__c}" />
+                       </apex:outputText></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Time Of Incident</td>
+                    <td class="value-cell">{!LEFT(TEXT(TimeOfIncident), 5)}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br/><br/><br/><br/><br/>
+        <!-- Section 3: Incident Description / Details -->
+        <h2 class="section-header">3. Incident Description / Details</h2>
+        
+        <!-- Details of Incident with full-width structure -->
+        <table class="report-table">
+            <tbody>
+                <tr>
+                    <td class="section-title-row">Details of Incident</td>
+                </tr>
+                <tr>
+                    <td class="description-text">
+                        Please complete details of the incident below using the 05W1H method
+                        <table class="incident-table" style="margin-top: 10px;">
+                            <tbody>
+                                <tr>
+                                    <td class="question-cell">1. What?</td>
+                                    <td class="instruction-cell">What is the nature of the problem?</td>
+                                    <td class="manual-cell"></td>
+                                </tr>
+                                <tr>
+                                    <td class="question-cell">2. Why?</td>
+                                    <td class="instruction-cell">Why is it a problem? Quantify the effect and disruption caused.</td>
+                                    <td class="manual-cell"></td>
+                                </tr>
+                                <tr>
+                                    <td class="question-cell">3.Where?</td>
+                                    <td class="instruction-cell">Where was the problem observed? (particular bottle, area)</td>
+                                    <td class="manual-cell"></td>
+                                </tr>
+                                <tr>
+                                    <td class="question-cell">4.Who?</td>
+                                    <td class="instruction-cell">Who is impacted? (Customer? Supplier?)</td>
+                                    <td class="manual-cell"></td>
+                                </tr>
+                                <tr>
+                                    <td class="question-cell">5.When?</td>
+                                    <td class="instruction-cell">When was the problem first observed?</td>
+                                    <td class="manual-cell"></td>
+                                </tr>
+                                <tr>
+                                    <td class="question-cell">6. How?</td>
+                                    <td class="instruction-cell">How much of an impact / loss has occurred? E.g. 2 hours downtime, 06 pallets collapsed</td>
+                                    <td class="manual-cell"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        Please attach telematics data(If NCR is for a collapsed / Shot Load)<br/>
+                        and or pictures of the incident below:<br/>
+                        <p>
+                        </p>
+                        <br/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Empty space for attachments -->
+        <div class="empty-space"></div>
+        <br/>
+        <!-- Root Cause Section -->
+        <table class="report-table">
+            <tbody>
+                <tr>
+                    <td class="root-cause-header">Root Cause (use 5-why's method)</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table class="report-table">
+            <tbody>
+                <tr>
+                    <td class="root-cause-question">Why?</td>
+                    <td class="root-cause-value"></td>
+                </tr>
+                <tr>
+                    <td class="root-cause-question">Why?</td>
+                    <td class="root-cause-value"></td>
+                </tr>
+                <tr>
+                    <td class="root-cause-question">Why?</td>
+                    <td class="root-cause-value"></td>
+                </tr>
+                <tr>
+                    <td class="root-cause-question">Why?</td>
+                    <td class="root-cause-value"></td>
+                </tr>
+                <tr>
+                    <td class="root-cause-question">Why?</td>
+                    <td class="root-cause-value"></td>
+                </tr>
+                <tr>
+                    <td class="root-cause-question">Root Cause</td>
+                    <td class="root-cause-value"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Actions Section -->
+        <table class="actions-table">
+            <tbody>
+                <tr>
+                    <td class="label-cell">Root cause identified</td>
+                    <td class="value-cell"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Corrective action to be implemented</td>
+                    <td class="value-cell"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Preventive actions to be implemented</td>
+                    <td class="value-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Section 4: Encirc Review -->
+        <h2 class="review-header">4. Encirc Review (to be completed by Encirc Team)</h2>
+        <table class="report-table">
+            <tbody>
+                <tr>
+                    <td class="label-cell">Reviewed By</td>
+                    <td class="value-cell"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Actions &amp; Root Cause Accepted (Yes / No)</td>
+                    <td class="value-cell"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">If no Additional info required</td>
+                    <td class="value-cell"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Date</td>
+                    <td class="value-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+</apex:page>

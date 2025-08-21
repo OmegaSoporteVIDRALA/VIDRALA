@@ -9,18 +9,12 @@
     <type>Picklist</type>
     <valueSet>
         <controllingField>Source__c</controllingField>
-        <restricted>true</restricted>
         <valueSetDefinition>
-            <sorted>true</sorted>
+            <sorted>false</sorted>
             <value>
                 <fullName>Admin Error</fullName>
                 <default>false</default>
                 <label>Admin Error</label>
-            </value>
-            <value>
-                <fullName>AW Breakdown</fullName>
-                <default>false</default>
-                <label>AW Breakdown</label>
             </value>
             <value>
                 <fullName>Breakdown</fullName>
@@ -112,6 +106,16 @@
                 <default>false</default>
                 <label>Traffic</label>
             </value>
+            <value>
+                <fullName>AW Breakdown</fullName>
+                <default>false</default>
+                <label>AW Breakdown</label>
+            </value>
+            <value>
+                <fullName>Customer Production Line Issues</fullName>
+                <default>false</default>
+                <label>Customer Production Line Issues</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Customer</controllingFieldValue>
@@ -124,6 +128,10 @@
         <valueSettings>
             <controllingFieldValue>Customer</controllingFieldValue>
             <valueName>Poor Planning - Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Customer Production Line Issues</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Haulier</controllingFieldValue>
@@ -147,10 +155,6 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Warehouse</controllingFieldValue>
-            <valueName>AW Breakdown</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Warehouse</controllingFieldValue>
             <valueName>Human Error</valueName>
         </valueSettings>
         <valueSettings>
@@ -160,6 +164,10 @@
         <valueSettings>
             <controllingFieldValue>Warehouse</controllingFieldValue>
             <valueName>Poor Planning - Warehouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Warehouse</controllingFieldValue>
+            <valueName>AW Breakdown</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Kammac Warrington</controllingFieldValue>
