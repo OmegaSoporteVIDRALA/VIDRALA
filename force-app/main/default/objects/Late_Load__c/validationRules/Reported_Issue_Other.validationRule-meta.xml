@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reported_Issue_Other</fullName>
+    <active>true</active>
+    <description>Enforces &apos;Other - Please Specify&apos; to be completed if &apos;Other&apos; selected as Reported by</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Who_reported_this_issue__c, &quot;Other&quot;),
+    ISBLANK(Other_Please_Specifiy__c)
+)</errorConditionFormula>
+    <errorDisplayField>Other_Please_Specifiy__c</errorDisplayField>
+    <errorMessage>Please specify who this issue was reported by.</errorMessage>
+</ValidationRule>

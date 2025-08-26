@@ -5,7 +5,6 @@
     <externalId>false</externalId>
     <label>Product</label>
     <referenceTo>Bottle__c</referenceTo>
-    <relationshipLabel>(Early or) Late Loads</relationshipLabel>
     <relationshipName>Early_or_Late_Loads</relationshipName>
     <required>true</required>
     <trackHistory>false</trackHistory>
