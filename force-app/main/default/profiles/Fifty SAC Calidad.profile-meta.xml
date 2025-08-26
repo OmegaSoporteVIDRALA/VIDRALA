@@ -37,6 +37,7 @@
     <layoutAssignments>
         <layout>Supplier_Share__c-Supplier Share Layout</layout>
     </layoutAssignments>
+    
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
