@@ -155,8 +155,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Discount</label>
     <nameField>
+        <displayFormat>Dcto - {0000}</displayFormat>
         <label>Discount Name</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Discounts</pluralLabel>
     <searchLayouts></searchLayouts>
