@@ -30,6 +30,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Customer Production Line Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Ex Works</fullName>
             <default>false</default>
         </values>
@@ -101,6 +105,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Haulier turned away on arrival</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>IT</fullName>
             <default>false</default>
         </values>
@@ -121,7 +129,27 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Line breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Line running ahead of schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Line running behind schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Line stopped</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Link to original collapsed load</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Longer than expected time to unload trailer</fullName>
             <default>false</default>
         </values>
         <values>
@@ -484,6 +512,33 @@
         </values>
         <values>
             <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Who_reported_this_issue__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haulier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Exec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
             <default>false</default>
         </values>
     </picklistValues>

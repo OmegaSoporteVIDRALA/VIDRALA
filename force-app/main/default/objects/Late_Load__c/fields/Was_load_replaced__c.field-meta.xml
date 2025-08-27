@@ -3,7 +3,6 @@
     <fullName>Was_load_replaced__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Was collapsed load replaced by a subsequent dispatch?</description>
-    <externalId>false</externalId>
     <inlineHelpText>Was collapsed load replaced by a subsequent dispatch?</inlineHelpText>
     <label>Was load replaced?</label>
     <trackHistory>false</trackHistory>

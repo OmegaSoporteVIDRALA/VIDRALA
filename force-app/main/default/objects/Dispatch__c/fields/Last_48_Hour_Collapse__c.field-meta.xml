@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Last_48_Hour_Collapse__c</fullName>
-    <externalId>false</externalId>
     <formula>AND( Collapsed__c, NOW() - Planned_Delivery_Date__c &lt; 2 )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Last 48 Hour Collapse</label>

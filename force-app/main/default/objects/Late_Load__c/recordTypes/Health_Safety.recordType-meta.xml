@@ -499,4 +499,31 @@
             <default>false</default>
         </values>
     </picklistValues>
+    <picklistValues>
+        <picklist>Who_reported_this_issue__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haulier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Exec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>

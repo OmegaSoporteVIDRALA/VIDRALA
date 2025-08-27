@@ -3,7 +3,6 @@
     <fullName>Customers_lines_down__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Were the customer&apos;s production lines down?</description>
-    <externalId>false</externalId>
     <inlineHelpText>Were the customer&apos;s production lines down?</inlineHelpText>
     <label>Customer&apos;s lines down?</label>
     <trackHistory>false</trackHistory>

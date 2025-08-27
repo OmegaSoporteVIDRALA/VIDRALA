@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Forecast__c</fullName>
     <description>Delivery forecast by account, month and product</description>
-    <externalId>false</externalId>
     <label>Forecast</label>
     <referenceTo>Forecast__c</referenceTo>
     <relationshipLabel>Dispatches</relationshipLabel>

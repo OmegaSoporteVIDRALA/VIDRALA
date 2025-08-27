@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Account_Credit_Limit__c</fullName>
     <description>Finance Department set Credit Limit for all Customer Accounts</description>
-    <externalId>false</externalId>
     <inlineHelpText>Finance Department set Credit Limit for all Customer Accounts</inlineHelpText>
     <label>Account Credit Limit</label>
     <precision>9</precision>

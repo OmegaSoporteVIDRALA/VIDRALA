@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Account__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <inlineHelpText>The distributor of which competitor? Indicate</inlineHelpText>
     <label>Account</label>
     <referenceTo>Account</referenceTo>

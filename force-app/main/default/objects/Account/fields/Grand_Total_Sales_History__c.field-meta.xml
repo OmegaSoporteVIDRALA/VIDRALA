@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Grand_Total_Sales_History__c</fullName>
     <description>This value will be rolled up to the Parent Pan European record type as a grand total</description>
-    <externalId>false</externalId>
     <formula>Total_Sales_History__c +  Parent_Total_Sales_History__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <inlineHelpText>This is the Sum of the current &apos;Total Sales History&apos; and the Child &apos;Total Sales History&apos;.</inlineHelpText>

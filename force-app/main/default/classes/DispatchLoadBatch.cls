@@ -8,6 +8,7 @@
    Nov 2017     1.0     M.Witchalls(Ciber)  Initial Release
    May 2018     2.0     M.Witchalls         SAP Version
    Sep 2024     3.0     Globant             Refactor
+   Aug 2025		4.0		Globant				New fields Addition and Refactored Upsert logic for dispatch records
 ------------------------------------------------------------------------------------------------------------------------ */
 global class DispatchLoadBatch implements Database.Batchable<sObject>, Database.Stateful { 
     
@@ -129,7 +130,17 @@ global class DispatchLoadBatch implements Database.Batchable<sObject>, Database.
                    Planned_Delivery_Date__c, Planned_Delivery_Time__c, Site_ID__c, Warehouse_ID__c, Freight_Reference__c,
                    Bottle_Identifier__c, Bottle_Description__c, SAP_Model_Number__c, SAP_Material_Code__c,
                    Pack_Specification__c, Units__c, Tonnage__c, Weight_per_Unit__c, Process_Job__c, Process_Status__c,
-                   Process_Error__c, Process_Date__c
+                   Process_Error__c, Process_Date__c,  Store__c, Customer_Code__c, Item__c, Shipment_Number__c, Record_Creation_Date__c,
+    			   Entry_Time__c, Plate_Number__c, Trailer_Plate_Number__c, Overall_Transportation_Status__c, End_of_Planning_Date__c,
+ 				   Scheduling_End_Time__c, Planned_Date_of_Check_In__c,	Planned_Check_In_Time__c, Actual_Date_of_Check_In__c,
+    			   Current_Time_of_Check_In__c, Planned_Date_for_Start_of_Loading__c, Planned_Loading_Start_Time__c,
+    			   Current_Date_for_Start_of_Loading__c, Actual_Loading_Start_Time__c,Planned_Date_for_End_of_Loading__c,
+    			   Planned_Loading_End_Time__c, Actual_Date_for_End_of_Loading__c, Actual_Loading_End_Time__c,
+    			   Planned_Date_for_Shipment_Completion__c, Planned_Time_for_Processing__c, Current_Date_of_Shipment_Completion__c,
+    			   Time_of_Transportation_Processing__c, Planned_Date_for_Start_of_Shipment__c, Planned_Transport_Start_Time__c,
+    			   Current_Date_for_Start_of_Shipment__c, Actual_Transport_Start_Time__c, Planned_Date_for_End_of_Shipment__c,
+    			   Planned_Transport_End_Time__c, Actual_Date_for_End_of_Shipment__c, Actual_Shipment_End_Time__c, Purchasing_Document_Number__c,
+    			   Sales_Document__c, Number_of_Material_Document__c, Material_Document_Year__c, Batch_Number__c, Series__c, Salesforce_Unique_ID__c
             FROM Dispatch_Staging__c
             WHERE Dispatch_ID__c != null AND Process_Status__c IN (:NEW_STATUS, :ERROR_STATUS)
             ORDER BY Dispatch_Date__c, Name
@@ -474,6 +485,9 @@ global class DispatchLoadBatch implements Database.Batchable<sObject>, Database.
                 dl.Process_Status__c = ERROR_STATUS;
                 dl.Process_Error__c += 'Missing Account for Encirc/SAP Account Number '+ dl.Encirc_Account_Number__c + '\n';
                 context.errorWarningCount++;
+                System.debug('Process Status '+dl.Process_Status__c);
+         		System.debug('Process Error '+dl.Process_Error__c);
+
             }
         }
 
@@ -614,7 +628,51 @@ global class DispatchLoadBatch implements Database.Batchable<sObject>, Database.
                 Load_Job_Id__c = jobId,
                 Staging_Id__c = dl.Id,
                 Week__c = dl.Week__c,
-                Week_in_Month__c = dl.Week_in_Month__c
+                Week_in_Month__c = dl.Week_in_Month__c,
+                
+                //Addition of new fields - Abhishek Aug 2025
+                Store__c = dl.Store__c,
+                Customer_Code__c = dl.Customer_Code__c,
+                Item__c = dl.Item__c,
+                Shipment_Number__c = dl.Shipment_Number__c,
+                Record_Creation_Date__c = dl.Record_Creation_Date__c,
+                Entry_Time__c = dl.Entry_Time__c,
+                Plate_Number__c = dl.Plate_Number__c,
+                Trailer_Plate_Number__c = dl.Trailer_Plate_Number__c,
+                Overall_Transportation_Status__c = dl.Overall_Transportation_Status__c,
+                End_of_Planning_Date__c = dl.End_of_Planning_Date__c,
+                Scheduling_End_Time__c = dl.Scheduling_End_Time__c,
+                Planned_Date_of_Check_In__c = dl.Planned_Date_of_Check_In__c,	
+                Planned_Check_In_Time__c = dl.Planned_Check_In_Time__c,
+                Actual_Date_of_Check_In__c = dl.Actual_Date_of_Check_In__c,
+                Current_Time_of_Check_In__c = dl.Current_Time_of_Check_In__c,
+                Planned_Date_for_Start_of_Loading__c = dl.Planned_Date_for_Start_of_Loading__c,
+                Planned_Loading_Start_Time__c = dl.Planned_Loading_Start_Time__c,
+                Current_Date_for_Start_of_Loading__c = dl.Current_Date_for_Start_of_Loading__c,
+                Actual_Loading_Start_Time__c = dl.Actual_Loading_Start_Time__c,
+                Planned_Date_for_End_of_Loading__c = dl.Planned_Date_for_End_of_Loading__c,
+                Planned_Loading_End_Time__c = dl.Planned_Loading_End_Time__c,
+                Actual_Date_for_End_of_Loading__c = dl.Actual_Date_for_End_of_Loading__c,
+                Actual_Loading_End_Time__c = dl.Actual_Loading_End_Time__c,
+                Planned_Date_for_Shipment_Completion__c = dl.Planned_Date_for_Shipment_Completion__c,
+                Planned_Time_for_Processing__c = dl.Planned_Time_for_Processing__c,
+                Current_Date_of_Shipment_Completion__c = dl.Current_Date_of_Shipment_Completion__c,
+                Time_of_Transportation_Processing__c = dl.Time_of_Transportation_Processing__c,
+                Planned_Date_for_Start_of_Shipment__c = dl.Planned_Date_for_Start_of_Shipment__c,
+                Planned_Transport_Start_Time__c = dl.Planned_Transport_Start_Time__c,
+                Current_Date_for_Start_of_Shipment__c = dl.Current_Date_for_Start_of_Shipment__c,
+                Actual_Transport_Start_Time__c = dl.Actual_Transport_Start_Time__c,
+                Planned_Date_for_End_of_Shipment__c = dl.Planned_Date_for_End_of_Shipment__c,
+                Planned_Transport_End_Time__c = dl.Planned_Transport_End_Time__c,
+                Actual_Date_for_End_of_Shipment__c = dl.Actual_Date_for_End_of_Shipment__c,
+                Actual_Shipment_End_Time__c = dl.Actual_Shipment_End_Time__c,
+                Purchasing_Document_Number__c = dl.Purchasing_Document_Number__c,
+                Sales_Document__c = dl.Sales_Document__c,
+                Number_of_Material_Document__c = dl.Number_of_Material_Document__c,
+                Material_Document_Year__c = dl.Material_Document_Year__c,
+                Batch_Number__c = dl.Batch_Number__c,
+                Series__c = dl.Series__c,
+                Salesforce_Unique_ID__c = dl.Salesforce_Unique_ID__c
             );
 
             context.dispatchUpsertMap.put(dl.Unique_ID__c, du);
@@ -709,28 +767,109 @@ global class DispatchLoadBatch implements Database.Batchable<sObject>, Database.
             }
         }
 
-        List<Database.UpsertResult> results = Database.upsert(context.dispatchUpsertMap.values(), Dispatch__c.Fields.Unique_ID__c, false);
+    //Upsert Logic
+    if (!context.dispatchUpsertMap.isEmpty()) {
+    // Collect keys from staging
+    Set<String> sfKeys = new Set<String>();
+    Set<String> uniqueKeys = new Set<String>();
+    
+    for (Dispatch__c d : context.dispatchUpsertMap.values()) {
+        if (String.isNotBlank(d.Salesforce_Unique_ID__c)) {
+            sfKeys.add(d.Salesforce_Unique_ID__c);
+        }
+        if (String.isNotBlank(d.Unique_ID__c)) {
+            uniqueKeys.add(d.Unique_ID__c);
+        }
+    }
+    
+    // Query existing Dispatch__c records
+    Map<String, Dispatch__c> bySFKey = new Map<String, Dispatch__c>();
+    Map<String, Dispatch__c> byUniqueKey = new Map<String, Dispatch__c>();
+    
+    if (!sfKeys.isEmpty() || !uniqueKeys.isEmpty()) {
+        for (Dispatch__c existing : [
+            SELECT Id, Salesforce_Unique_ID__c, Unique_ID__c
+            FROM Dispatch__c
+            WHERE Salesforce_Unique_ID__c IN :sfKeys
+            OR Unique_ID__c IN :uniqueKeys
+        ]) {
+            if (String.isNotBlank(existing.Salesforce_Unique_ID__c)) {
+                bySFKey.put(existing.Salesforce_Unique_ID__c, existing);
+            }
+            if (String.isNotBlank(existing.Unique_ID__c)) {
+                byUniqueKey.put(existing.Unique_ID__c, existing);
+            }
+        }
+    }
+    
+    // Separate into update and insert lists
+    List<Dispatch__c> toInsert = new List<Dispatch__c>();
+    List<Dispatch__c> toUpdate = new List<Dispatch__c>();
+    Set<String> processedKeys = new Set<String>();
+    
+    for (Dispatch__c newRec : context.dispatchUpsertMap.values()) {
+        String dedupKey = (newRec.Salesforce_Unique_ID__c != null ? newRec.Salesforce_Unique_ID__c : '') + '|' +
+                          (newRec.Unique_ID__c != null ? newRec.Unique_ID__c : '');
+        if (processedKeys.contains(dedupKey)) continue;
+        processedKeys.add(dedupKey);
         
-        for(Integer i=0; i < results.size(); i++) {
-
-            if(!results[i].isSuccess()) {
-
-                Database.UpsertResult r = results[i];
-                Dispatch__c du = context.dispatchUpsertMap.values()[i];
-                String uniqueId = du.Unique_ID__c;
-                Dispatch_Staging__c dl = context.dispatchLoadMap.get(uniqueId);
-                dl.Process_Status__c = ERROR_STATUS;
-                dl.Process_Error__c = r.getErrors()[0].getMessage();
-                for (Integer j=1; j < r.getErrors().size(); j++) dl.Process_Error__c += ';'+ r.getErrors()[j].getMessage();
-                dl.Process_Error__c += '\n';
-                System.debug('Dispatch Load Error Record ' + uniqueId + ': Customer '+ dl.Encirc_Account_Number__c + ' Error: ' + dl.Process_Error__c);
+        if (bySFKey.containsKey(newRec.Salesforce_Unique_ID__c)) {
+            newRec.Id = bySFKey.get(newRec.Salesforce_Unique_ID__c).Id;
+            toUpdate.add(newRec);
+        } else if (byUniqueKey.containsKey(newRec.Unique_ID__c)) {
+            newRec.Id = byUniqueKey.get(newRec.Unique_ID__c).Id;
+            toUpdate.add(newRec);
+        } else {
+            toInsert.add(newRec);
+        }
+    }
+    
+    // Perform update with partial success + error handling
+    if (!toUpdate.isEmpty()) {
+        List<Database.SaveResult> updateResults = Database.update(toUpdate, false);
+        for (Integer i = 0; i < updateResults.size(); i++) {
+            if (!updateResults[i].isSuccess()) {
+                Dispatch__c failedRec = toUpdate[i];
+                String uniqueId = failedRec.Unique_ID__c;
+                Dispatch_Staging__c stagingRec = context.dispatchLoadMap.get(uniqueId);
+                stagingRec.Process_Status__c = ERROR_STATUS;
+                stagingRec.Process_Error__c = String.join(
+                    new List<String>{
+                        updateResults[i].getErrors()[0].getMessage()
+                    }, ';'
+                );
+                System.debug('Update Error for Unique_ID__c=' + uniqueId + ': ' + stagingRec.Process_Error__c);
                 context.errorWarningCount++;
             }
         }
-
-        update context.dispatchLoadMap.values();
     }
+    
+    // Perform insert with partial success + error handling
+    if (!toInsert.isEmpty()) {
+        List<Database.SaveResult> insertResults = Database.insert(toInsert, false);
+        for (Integer i = 0; i < insertResults.size(); i++) {
+            if (!insertResults[i].isSuccess()) {
+                Dispatch__c failedRec = toInsert[i];
+                String uniqueId = failedRec.Unique_ID__c;
+                Dispatch_Staging__c stagingRec = context.dispatchLoadMap.get(uniqueId);
+                stagingRec.Process_Status__c = ERROR_STATUS;
+                stagingRec.Process_Error__c = String.join(
+                    new List<String>{
+                        insertResults[i].getErrors()[0].getMessage()
+                    }, ';'
+                );
+                	System.debug('Insert Error for Unique_ID__c=' + uniqueId + ': ' + stagingRec.Process_Error__c);
+                	context.errorWarningCount++;
+           	 }
+       	   }
+    	 }
+       }
 
+        // Update staging records after processing
+        update context.dispatchLoadMap.values();
+   }
+    
+        
     /** 
      * Wrapper/helper class of the dispatch context to process the data.
      */

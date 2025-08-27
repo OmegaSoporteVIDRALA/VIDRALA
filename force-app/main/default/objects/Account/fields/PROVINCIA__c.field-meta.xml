@@ -3,7 +3,6 @@
     <fullName>PROVINCIA__c</fullName>
     <businessStatus>Active</businessStatus>
     <description>PROVINCIA A LA QUE PERTENECE EL CLIENTE</description>
-    <externalId>false</externalId>
     <label>Province</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

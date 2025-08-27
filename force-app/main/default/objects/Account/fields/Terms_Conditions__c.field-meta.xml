@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Terms_Conditions__c</fullName>
     <description>To show if Terms &amp; conditions have been signed or are not required</description>
-    <externalId>false</externalId>
     <inlineHelpText>Does this account have signed Terms &amp; conditions or are not they required</inlineHelpText>
     <label>Terms &amp; Conditions</label>
     <required>false</required>

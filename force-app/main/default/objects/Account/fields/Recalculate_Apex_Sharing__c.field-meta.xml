@@ -3,7 +3,6 @@
     <fullName>Recalculate_Apex_Sharing__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Enables a System Administrator to redo the Apex Sharing on Child Objects</description>
-    <externalId>false</externalId>
     <label>Recalculate Apex Sharing on Save</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
