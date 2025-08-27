@@ -3,7 +3,6 @@
     <fullName>MPA_Spain__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Spanish MPA Object</description>
-    <externalId>false</externalId>
     <label>MPA (Fifty)</label>
     <referenceTo>MPA_Fifty__c</referenceTo>
     <relationshipLabel>Drawings</relationshipLabel>

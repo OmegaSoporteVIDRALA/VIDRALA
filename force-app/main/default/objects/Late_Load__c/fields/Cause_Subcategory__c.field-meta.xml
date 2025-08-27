@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Cause_Subcategory__c</fullName>
-    <externalId>false</externalId>
     <label>Cause Subcategory</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
@@ -63,6 +62,11 @@
                 <label>Driver Hours</label>
             </value>
             <value>
+                <fullName>Haulier turned away on arrival</fullName>
+                <default>false</default>
+                <label>Haulier turned away on arrival</label>
+            </value>
+            <value>
                 <fullName>Interface Error</fullName>
                 <default>false</default>
                 <label>Interface Error</label>
@@ -88,9 +92,34 @@
                 <label>Late Collection</label>
             </value>
             <value>
+                <fullName>Line breakdown</fullName>
+                <default>false</default>
+                <label>Line breakdown</label>
+            </value>
+            <value>
+                <fullName>Line running ahead of schedule</fullName>
+                <default>false</default>
+                <label>Line running ahead of schedule</label>
+            </value>
+            <value>
+                <fullName>Line running behind schedule</fullName>
+                <default>false</default>
+                <label>Line running behind schedule</label>
+            </value>
+            <value>
+                <fullName>Line stopped</fullName>
+                <default>false</default>
+                <label>Line stopped</label>
+            </value>
+            <value>
                 <fullName>Link to original collapsed load</fullName>
                 <default>false</default>
                 <label>Link to original collapsed load</label>
+            </value>
+            <value>
+                <fullName>Longer than expected time to unload trailer</fullName>
+                <default>false</default>
+                <label>Longer than expected time to unload trailer</label>
             </value>
             <value>
                 <fullName>Miscommunication</fullName>
@@ -164,30 +193,55 @@
             </value>
         </valueSetDefinition>
         <valueSettings>
-            <controllingFieldValue>Poor Planning - Warehouse</controllingFieldValue>
-            <valueName>Capacity</valueName>
+            <controllingFieldValue>Human Error</controllingFieldValue>
+            <valueName>Miscommunication</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Poor Planning - Warehouse</controllingFieldValue>
-            <valueName>Stand Trailer not loaded</valueName>
+            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
+            <valueName>Interface Error</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Poor Planning - Warehouse</controllingFieldValue>
-            <valueName>Stock Replenish</valueName>
+            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
+            <valueName>Paperwork Delay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
+            <controllingFieldValue>Ex Works</controllingFieldValue>
+            <valueName>System Outage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning</controllingFieldValue>
+            <controllingFieldValue>Poor Planning - Haulier</controllingFieldValue>
+            <valueName>Driver Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning</controllingFieldValue>
+            <controllingFieldValue>Poor Planning - Haulier</controllingFieldValue>
+            <valueName>Driver Hours</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning</controllingFieldValue>
+            <valueName>Turned up early for collection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
+            <valueName>Haulier turned away on arrival</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
+            <valueName>Last minute change to order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
+            <valueName>Longer than expected time to unload trailer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
+            <valueName>Order placed outside agreed timeline</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Poor Planning - Haulier</controllingFieldValue>
             <valueName>Driver Delay</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Poor Planning - Haulier</controllingFieldValue>
-            <controllingFieldValue>Poor Planning</controllingFieldValue>
-            <valueName>Driver Error</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Poor Planning - Haulier</controllingFieldValue>
-            <controllingFieldValue>Poor Planning</controllingFieldValue>
-            <valueName>Driver Hours</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Poor Planning - Haulier</controllingFieldValue>
@@ -202,12 +256,20 @@
             <valueName>Trailer Availability</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
-            <valueName>Last minute change to order</valueName>
+            <controllingFieldValue>Poor Planning - Warehouse</controllingFieldValue>
+            <valueName>Capacity</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Poor Planning - Customer</controllingFieldValue>
-            <valueName>Order placed outside agreed timeline</valueName>
+            <controllingFieldValue>Poor Planning - Warehouse</controllingFieldValue>
+            <valueName>Stand Trailer not loaded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poor Planning - Warehouse</controllingFieldValue>
+            <valueName>Stock Replenish</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Replacement of Collapsed Load</controllingFieldValue>
+            <valueName>Link to original collapsed load</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Admin Error</controllingFieldValue>
@@ -218,8 +280,20 @@
             <valueName>CX Admin Error</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Poor Planning</controllingFieldValue>
-            <valueName>Turned up early for collection</valueName>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Conveyor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Crane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Shuttle Car</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Ex Works</controllingFieldValue>
@@ -238,11 +312,6 @@
             <valueName>Not booked in with the warehouse</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Ex Works</controllingFieldValue>
-            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
-            <valueName>System Outage</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Traffic</controllingFieldValue>
             <valueName>Accident</valueName>
         </valueSettings>
@@ -255,36 +324,20 @@
             <valueName>Weather</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Replacement of Collapsed Load</controllingFieldValue>
-            <valueName>Link to original collapsed load</valueName>
+            <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
+            <valueName>Line breakdown</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Human Error</controllingFieldValue>
-            <valueName>Miscommunication</valueName>
+            <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
+            <valueName>Line running ahead of schedule</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
-            <valueName>Interface Error</valueName>
+            <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
+            <valueName>Line running behind schedule</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Internal IT Issues</controllingFieldValue>
-            <valueName>Paperwork Delay</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>AW Breakdown</controllingFieldValue>
-            <valueName>Conveyor</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>AW Breakdown</controllingFieldValue>
-            <valueName>Crane</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>AW Breakdown</controllingFieldValue>
-            <valueName>IT</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>AW Breakdown</controllingFieldValue>
-            <valueName>Shuttle Car</valueName>
+            <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
+            <valueName>Line stopped</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

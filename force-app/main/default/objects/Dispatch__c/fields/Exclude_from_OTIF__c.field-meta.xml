@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Exclude_from_OTIF__c</fullName>
-    <externalId>false</externalId>
     <formula>Haulier__r.Exclude_from_OTIF__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Exclude from OTIF</label>

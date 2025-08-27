@@ -18,6 +18,6 @@
     </filters>
     <label>Distributor</label>
     <sharedTo>
-        <roleAndSubordinates>Fifty_Sales_Director</roleAndSubordinates>
+        <roleAndSubordinatesInternal>Fifty_Sales_Director</roleAndSubordinatesInternal>
     </sharedTo>
 </ListView>

@@ -3,7 +3,6 @@
     <fullName>Collapsed__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Was the load delivered in a collapsed state?</description>
-    <externalId>false</externalId>
     <inlineHelpText>Was the load delivered in a collapsed state?</inlineHelpText>
     <label>Collapsed</label>
     <trackHistory>false</trackHistory>

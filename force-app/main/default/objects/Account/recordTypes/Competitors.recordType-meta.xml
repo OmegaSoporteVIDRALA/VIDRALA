@@ -1978,6 +1978,45 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Sales_Admin_FL__c</picklist>
+        <values>
+            <fullName>Abigail Long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Danielle Reed CS4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hayley and Faye CS3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacob Ainscough CS8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kerry%2F Tracey%2F Emma CS5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michelle Hardy CS6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sara Innes %2F Hayley and Faye CS9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sara Innes%2C Hayley and Faye CS7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shelley Stitson</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Sales_Admin__c</picklist>
         <values>
             <fullName>Celine Little</fullName>
@@ -2056,6 +2095,21 @@
         </values>
         <values>
             <fullName>Vicky Craven</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Senior_Sales_Office_FL__c</picklist>
+        <values>
+            <fullName>Laura Pollinger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michelle Turner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olivia Newell</fullName>
             <default>false</default>
         </values>
     </picklistValues>

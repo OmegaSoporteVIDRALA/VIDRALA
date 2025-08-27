@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>First_Monday_of_Year__c</fullName>
-    <externalId>false</externalId>
     <formula>DATE(YEAR(Dispatch_Date__c), 1, 1) + 
   CASE(MOD( DATE(YEAR(Dispatch_Date__c),1,1) - DATE(2000, 1, 3), 7 ), 
     1, -1,

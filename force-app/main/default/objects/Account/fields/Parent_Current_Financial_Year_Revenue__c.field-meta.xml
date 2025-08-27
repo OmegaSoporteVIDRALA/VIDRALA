@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Parent_Current_Financial_Year_Revenue__c</fullName>
-    <externalId>false</externalId>
     <inlineHelpText>This is the sum of all &apos;Current Financial Year Revenue&apos;s on Child Accounts associated to this account</inlineHelpText>
     <label>Parent Current Financial Year Revenue</label>
     <precision>18</precision>

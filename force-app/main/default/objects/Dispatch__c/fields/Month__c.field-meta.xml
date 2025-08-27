@@ -3,7 +3,6 @@
     <fullName>Month__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>A lookup relationship to the month of the forecast/budget</description>
-    <externalId>false</externalId>
     <label>Month</label>
     <referenceTo>Month__c</referenceTo>
     <relationshipLabel>Dispatches</relationshipLabel>

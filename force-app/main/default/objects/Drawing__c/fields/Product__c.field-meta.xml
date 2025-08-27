@@ -3,7 +3,6 @@
     <fullName>Product__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Product look-up Fifty</description>
-    <externalId>false</externalId>
     <label>Product</label>
     <referenceTo>Product2</referenceTo>
     <relationshipLabel>Drawings</relationshipLabel>

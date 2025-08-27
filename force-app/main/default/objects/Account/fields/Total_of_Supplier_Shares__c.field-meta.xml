@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Total_of_Supplier_Shares__c</fullName>
-    <externalId>false</externalId>
     <label>Total of Supplier Shares</label>
     <summarizedField>Supplier_Share__c.Competitor_Units__c</summarizedField>
     <summaryForeignKey>Supplier_Share__c.Account__c</summaryForeignKey>

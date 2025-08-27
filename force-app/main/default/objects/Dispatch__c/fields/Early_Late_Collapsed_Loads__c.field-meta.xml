@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Early_Late_Collapsed_Loads__c</fullName>
     <description>Early, Late or Collapsed Loads for this Dispatch</description>
-    <externalId>false</externalId>
     <inlineHelpText>Early, Late or Collapsed Loads for this Dispatch</inlineHelpText>
     <label>Number of Early/Late/Collapsed Loads</label>
     <summaryForeignKey>Late_Load__c.Dispatch__c</summaryForeignKey>
