@@ -36,6 +36,12 @@
         <type>Flexipage</type>
         <pageOrSobjectType>Lead</pageOrSobjectType>
     </actionOverrides>
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>Encirc_A_Vidrala_Company_Colour_P</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
     <description>Manage your sales process with accounts, leads, opportunities, and more</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
