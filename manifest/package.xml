@@ -12,13 +12,16 @@
 		<members>Case.OM_SAC_FormulaNameConga__c</members>
 		<members>Case.OM_SAC_FotografiasCongaAuto__c</members>
 		<members>Case.OM_SAC_MuestrasTextAuto__c</members>
+		<members>Discount__c.EUR__c</members>
 		<members>Discount__c.From__c</members>
 		<members>Discount__c.OM_VID_Codigo_producto__c</members>
+		<members>Discount__c.Percentage__c</members>
 		<members>Discount__c.SAP_Material_Code__c</members>
 		<members>Discount__c.To__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
+		<members>Discount__c</members>
 		<members>Quote</members>
 		<name>CustomObject</name>
 	</types>
@@ -48,5 +51,5 @@
 		<members>Vidrala Europe Support</members>
 		<name>Profile</name>
 	</types>
-	<version>64.0</version>
+	<version>63.0</version>
 </Package>
