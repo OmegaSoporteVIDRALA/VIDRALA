@@ -14,8 +14,13 @@
 		<members>Case.OM_SAC_MuestrasTextAuto__c</members>
 		<members>Discount__c.From__c</members>
 		<members>Discount__c.OM_VID_Codigo_producto__c</members>
+		<members>Discount__c.SAP_Material_Code__c</members>
 		<members>Discount__c.To__c</members>
 		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Quote</members>
+		<name>CustomObject</name>
 	</types>
 	<types>
 		<members>Vidrala_Templates/Vidrala_Parte_de_Apertura_ES</members>
