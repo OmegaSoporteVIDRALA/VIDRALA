@@ -26,7 +26,7 @@
         <field>Case.OM_SAC_MuestrasTextAuto__c</field>
         <readable>true</readable>
     </fieldPermissions>
-<fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Discount__c.From__c</field>
         <readable>true</readable>
