@@ -10,6 +10,7 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Name</field>
+                <required>true</required>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
