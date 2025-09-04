@@ -24,6 +24,10 @@
                 <field>Product__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OM_VID_Codigo_producto__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Percentage__c</field>
             </layoutItems>
