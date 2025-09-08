@@ -189,7 +189,7 @@ public class OM_VID_TestUtils {
             	RecordTypeId = recordTypeId,
                 OM_SAC_Categorizacion_Incidencia__c = 'A',
                 OM_SAC_loteOAlbaran__c = '1234554',
-                OM_SAC_hipotesisDelAt__c = 'test',
+                OM_SAC_Defecto__c = 'test',
                 OM_SAC_modeloYDenominacion__c = producto.Id,
                 OM_VID_Planta__c = '1030'
                 
