@@ -1128,7 +1128,10 @@
                     <name>relatedListFieldAliases</name>
                     <valueList>
                         <valueListItems>
-                            <value>TYPE__c</value>
+                            <value>ProductName__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>OM_VID_Codigo_producto__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>Percentage__c</value>
@@ -1137,7 +1140,19 @@
                             <value>EUR__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Product__c</value>
+                            <value>Quantity__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Unit_Type__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>TYPE__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>From__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>To__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
