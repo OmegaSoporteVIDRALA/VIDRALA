@@ -8,5 +8,5 @@
   "name": "LOEWE PROD REPO",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "52.0"
+  "sourceApiVersion": "64.0"
 }
