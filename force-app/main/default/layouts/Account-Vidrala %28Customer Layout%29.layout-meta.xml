@@ -321,6 +321,8 @@
         <relatedList>ArchivoConfidencial__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <customButtons>OM_VID_New</customButtons>
+        <excludeButtons>NewCase</excludeButtons>
         <fields>CASES.CASE_NUMBER</fields>
         <fields>NAME</fields>
         <fields>CASES.SUBJECT</fields>
@@ -366,6 +368,8 @@
         <relatedList>RelatedAssetList</relatedList>
     </relatedLists>
     <relatedLists>
+        <customButtons>OM_VID_New</customButtons>
+        <excludeButtons>NewContact</excludeButtons>
         <fields>FULL_NAME</fields>
         <fields>Insight_Profile_Image__c</fields>
         <fields>CONTACT.TITLE</fields>
@@ -374,6 +378,8 @@
         <relatedList>RelatedContactList</relatedList>
     </relatedLists>
     <relatedLists>
+        <customButtons>OM_VID_New</customButtons>
+        <excludeButtons>New</excludeButtons>
         <fields>OPPORTUNITY.NAME</fields>
         <fields>OPPORTUNITY.STAGE_NAME</fields>
         <fields>OPPORTUNITY.AMOUNT</fields>
@@ -422,6 +428,8 @@
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
+        <customButtons>OM_VID_New</customButtons>
+        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <relatedList>Discount__c.Account__c</relatedList>
     </relatedLists>
