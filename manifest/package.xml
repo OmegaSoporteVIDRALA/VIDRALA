@@ -18,6 +18,15 @@
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>
+		<members>Admin</members>
+		<members>Fifty SAC Calidad</members>
+		<members>Integration User</members>
+		<members>System Administrator Fifty</members>
+		<members>Vidrala Europe Sales</members>
+		<members>Vidrala Europe Support</members>
+		<name>Profile</name>
+	</types>
+	<types>
 		<members>Case.OM_VID_New</members>
 		<members>Contact.OM_VID_New</members>
 		<members>Discount__c.OM_VID_New</members>
