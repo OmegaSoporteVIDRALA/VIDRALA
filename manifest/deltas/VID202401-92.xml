@@ -6,13 +6,6 @@
 		<name>ApexClass</name>
 	</types>
 	<types>
-		<members>Case</members>
-		<members>Contact</members>
-		<members>Discount__c</members>
-		<members>Opportunity</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
 		<members>GrupoClienteRecordPage</members>
 		<name>FlexiPage</name>
 	</types>
