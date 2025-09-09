@@ -6,13 +6,6 @@
 		<name>ApexClass</name>
 	</types>
 	<types>
-		<members>Case</members>
-		<members>Contact</members>
-		<members>Discount__c</members>
-		<members>Opportunity</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
 		<members>GrupoClienteRecordPage</members>
 		<name>FlexiPage</name>
 	</types>
@@ -23,6 +16,15 @@
 	<types>
 		<members>omCustomNewOverrideOpportunity</members>
 		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>Admin</members>
+		<members>Fifty SAC Calidad</members>
+		<members>Integration User</members>
+		<members>System Administrator Fifty</members>
+		<members>Vidrala Europe Sales</members>
+		<members>Vidrala Europe Support</members>
+		<name>Profile</name>
 	</types>
 	<types>
 		<members>Case.OM_VID_New</members>
