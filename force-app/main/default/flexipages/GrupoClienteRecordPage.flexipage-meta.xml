@@ -819,7 +819,7 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>New</value>
+                            <value>CustomButton.Opportunity.OM_VID_New</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -885,7 +885,7 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>NewCase</value>
+                            <value>CustomButton.Case.OM_VID_New</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -954,7 +954,7 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>NewContact</value>
+                            <value>CustomButton.Contact.OM_VID_New</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -1101,7 +1101,7 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>New</value>
+                            <value>CustomButton.Discount__c.OM_VID_New</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
