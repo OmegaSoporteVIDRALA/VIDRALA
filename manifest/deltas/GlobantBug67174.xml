@@ -8,7 +8,6 @@
 		<members>Account-Encirc Beverages Customer</members>
 		<name>Layout</name>
 	</types>
-		<types>
 		<members>Admin</members>
 		<members>Encirc Community User</members>
 		<members>Encirc Data Loader API</members>
