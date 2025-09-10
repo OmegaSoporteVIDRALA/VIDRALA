@@ -3,6 +3,10 @@
     <custom>true</custom>
     <description>Non-expiring password for API use</description>
     <userLicense>Salesforce</userLicense>
+    <layoutAssignments>
+        <layout>Account-Encirc Beverages Customer</layout>
+        <recordType>Account.Encirc_Beverages_Customers</recordType>
+    </layoutAssignments>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivitiesAccess</name>
