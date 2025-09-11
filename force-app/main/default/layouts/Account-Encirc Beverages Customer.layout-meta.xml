@@ -64,10 +64,6 @@
                 <field>Target_AQL__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Account_Owner_Check__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Terms_Conditions__c</field>
             </layoutItems>
@@ -92,10 +88,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CIF__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Credit_Check_Set_To__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
