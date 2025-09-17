@@ -2,6 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>Account.Haulier_Comments__c</members>
+		<members>Account.Haulier__c</members>
 		<members>Account.Primary_Haulier__c</members>
 		<members>Account.Secondary_Haulier__c</members>
 		<members>Account.Tertiary_Haulier__c</members>
