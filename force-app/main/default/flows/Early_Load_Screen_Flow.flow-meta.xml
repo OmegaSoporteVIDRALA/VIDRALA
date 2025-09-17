@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Assign_Blank</name>
         <label>Assign Blank</label>
@@ -131,6 +132,7 @@
             <targetReference>Create_Collapsed_Load_Record</targetReference>
         </connector>
     </assignments>
+    <description>Added new fields &quot;Who Reported this issue&quot; &amp; &quot;other - please specify&quot;</description>
     <dynamicChoiceSets>
         <name>StatusPCS</name>
         <dataType>Picklist</dataType>
@@ -188,6 +190,9 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <connector>
             <targetReference>NewRecordCreatedScreen</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>ErrorScreen</targetReference>
+        </faultConnector>
         <inputReference>VAREarlyorLateLoad</inputReference>
     </recordCreates>
     <recordLookups>
@@ -243,6 +248,40 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
     </recordLookups>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
+        <name>ErrorScreen</name>
+        <label>ErrorScreen</label>
+        <locationX>440</locationX>
+        <locationY>782</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>false</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Errormessage</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: rgb(255, 255, 255);&quot;&gt;If ‘Other’ is selected, please enter details in the text box.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+            <visibilityRule>
+                <conditionLogic>1</conditionLogic>
+                <conditions>
+                    <leftValueReference>$Flow.FaultMessage</leftValueReference>
+                    <operator>Contains</operator>
+                    <rightValue>
+                        <stringValue>Please specify who this issue was reported</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <description>creates an early / late Load record of type colapsed</description>
         <name>New_Early_Load</name>
         <label>New Early Load</label>
@@ -265,6 +304,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <name>display1</name>
                     <fieldText>&lt;p&gt;&lt;strong&gt;ID : &lt;/strong&gt;{!recordId.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Dispatch&lt;/strong&gt; &lt;strong&gt;ID&lt;/strong&gt;: {!recordId.Dispatch_ID__c}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Haulier&lt;/strong&gt; : {!recordId.Haulier__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Dispatch Date : &lt;/strong&gt;{!recordId.Dispatch_Date__c}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Dispatch Date/Time &lt;/strong&gt;: {!recordId.Dispatch_Date_Time__c}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Planned Delivery Date&lt;/strong&gt; : {!recordId.Planned_Delivery_Date__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -281,6 +328,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <name>DisplayText2</name>
                     <fieldText>&lt;p&gt;&lt;strong&gt;Customer&lt;/strong&gt; : {!recordId.Customer__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product&lt;/strong&gt; : {!recordId.Bottle__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;SAP Material Code&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt; : {!recordId.SAP_Material_Code__r.Name}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -292,6 +347,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
             </fields>
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
         </fields>
         <fields>
             <name>Delivery_Information</name>
@@ -307,6 +370,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                     <validationRule>
                         <errorMessage>&lt;p&gt;Please enter in a New Delivery Date earlier than the Planned Delivery Date&lt;/p&gt;</errorMessage>
                         <formulaExpression>{!recordId.Planned_Delivery_Date__c} &gt; {!New_Delivery_Date}</formulaExpression>
@@ -317,12 +388,56 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Comments__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Customer_Informed__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>VAREarlyorLateLoad.Who_reported_this_issue__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>VAREarlyorLateLoad.Other_Please_Specifiy__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -340,24 +455,56 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>getEarlyLoads.Source__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>getEarlyLoads.Cause_Category__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>getEarlyLoads.Cause_Subcategory__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>getEarlyLoads.Cause__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -369,6 +516,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
             </fields>
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
         </fields>
         <fields>
             <name>Customer_Informed_Section_Mandatory</name>
@@ -384,6 +539,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <fields>
                     <name>Customer_Contact_Name</name>
@@ -392,12 +555,28 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Method_of_Communication__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <fields>
                     <name>Date_Informed</name>
@@ -406,6 +585,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -417,6 +604,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
             </fields>
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -444,6 +639,14 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
             <name>DTNewrecord</name>
             <fieldText>&lt;p&gt;Click &lt;a href=&quot;{!URLLinktonewrecord}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;HERE&lt;/a&gt; to open the new record&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
