@@ -6,6 +6,7 @@
 		<members>Account.Primary_Haulier__c</members>
 		<members>Account.Secondary_Haulier__c</members>
 		<members>Account.Tertiary_Haulier__c</members>
+		<members>Haulier__c.Haulier_Account__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>

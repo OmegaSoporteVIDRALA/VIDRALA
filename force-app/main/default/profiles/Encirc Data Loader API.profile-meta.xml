@@ -27,6 +27,11 @@
         <field>Account.Tertiary_Haulier__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Haulier__c.Haulier_Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Haulier__c-Haulier Layout</layout>
     </layoutAssignments>
