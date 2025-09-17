@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <custom>true</custom>
-    <userLicense>Company Communities</userLicense>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Haulier_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Primary_Haulier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Secondary_Haulier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Tertiary_Haulier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
-        <layout>Account-Encirc Beverages Customer</layout>
-        <recordType>Account.Encirc_Beverages_Customers</recordType>
+        <layout>Account-Customer Layout</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>Haulier__c-Haulier Layout</layout>
+    </layoutAssignments>
+    <userLicense>Company Communities</userLicense>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivitiesAccess</name>
