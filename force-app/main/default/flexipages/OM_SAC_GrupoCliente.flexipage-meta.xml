@@ -464,7 +464,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.OM_SAC_hipotesisDelAt__c</fieldItem>
                 <identifier>RecordOM_SAC_hipotesisDelAt_cField</identifier>
