@@ -4,9 +4,9 @@
     <externalId>false</externalId>
     <formula>CASE(
     OM_SAC_Categorizacion_Incidencia__c,
-    &quot;C&quot;, &quot;🔴 Gravedad Alta&quot;,
+    &quot;C&quot;, &quot;🟡 Gravedad Baja&quot;,
     &quot;B&quot;, &quot;🟠 Gravedad Media&quot;,
-    &quot;A&quot;, &quot;🟢 Gravedad Baja&quot;,
+    &quot;A&quot;, &quot;🔴 Gravedad Alta&quot;,
     &quot;&quot;
 )</formula>
     <label>Categorización incidencia Color</label>

@@ -18,6 +18,47 @@ public class OM_VID_CaseTRGHandlerMethods {
                 }
             }
         }
+        
+         Set<Id> accountIds = new Set<Id>();
+            for (Case c : newList) {
+                if (c.AccountId != null) {
+                    accountIds.add(c.AccountId);
+                }
+            }
+    
+            Map<Id, Account> accountsMap = new Map<Id, Account>(
+                [SELECT Id, ParentId FROM Account WHERE Id IN :accountIds]
+            );
+    
+            for (Case c : newList) {
+                Case oldCase = (oldMap != null ? oldMap.get(c.Id) : null);
+    
+                if (oldMap == null) {
+                    if (c.AccountId != null && accountsMap.containsKey(c.AccountId)) {
+                        Id parentId = accountsMap.get(c.AccountId).ParentId;
+                        if (parentId != null) {
+                            c.OM_SAC_Grupo_Cliente__c = parentId;
+                        }
+                    }
+                }
+                
+                else {
+                    Boolean accountChanged = (c.AccountId != oldCase.AccountId);
+    
+                    if (accountChanged) {
+                        if (c.AccountId != null && accountsMap.containsKey(c.AccountId)) {
+                            Id parentId = accountsMap.get(c.AccountId).ParentId;
+                            if (parentId != null) {
+                                c.OM_SAC_Grupo_Cliente__c = parentId;
+                            } else {
+                                c.OM_SAC_Grupo_Cliente__c = null;
+                            }
+                        } else {
+                            c.OM_SAC_Grupo_Cliente__c = null;
+                        }
+                    }
+                }
+            }
 	}
     
     public static void caseAfterActions(List<Case> newList, Map<Id, Case> oldMap) {
