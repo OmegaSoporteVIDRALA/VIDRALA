@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>PIR_Create_Edit_Permissions</members>
+		<name>PermissionSet</name>
+	</types>
+	<types>
+		<members>Drawing__c.Colour__c</members>
+		<members>Drawing__c.Pallet_Height__c</members>
+		<members>Drawing__c.Type__c</members>
+		<members>Late_Load__c.Other_Please_Specifiy__c</members>
+		<members>Late_Load__c.Who_reported_this_issue__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Collapsed</members>
+		<members>Early_Late_Load</members>
+		<members>Early_or_Late_Load</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Late_Load__c-Collapsed Load Layout</members>
+		<members>Late_Load__c-Early Load Layout</members>
+		<members>Late_Load__c-Health %26 Safety</members>
+		<members>Late_Load__c-Late Load Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Late_Load__c.Reported_Issue_Other</members>
+		<name>ValidationRule</name>
+	</types>
+	<version>60.0</version>
+</Package>

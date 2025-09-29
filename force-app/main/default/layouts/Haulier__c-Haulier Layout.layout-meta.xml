@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -18,6 +19,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Exclude_from_OTIF__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Haulier_Account__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>
@@ -52,6 +57,19 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
+        <fields>ACCOUNT.NAME</fields>
+        <fields>PARENT_NAME</fields>
+        <fields>CORE.USERS.FIRST_NAME</fields>
+        <fields>Encirc_Account_Number__c</fields>
+        <fields>ACCOUNT.ADDRESS1_CITY</fields>
+        <fields>ACCOUNT.ADDRESS1_ZIP</fields>
+        <fields>ACCOUNT.PHONE1</fields>
+        <fields>ACCOUNT.URL</fields>
+        <fields>Total_Sales_History__c</fields>
+        <fields>ACCOUNT.TYPE</fields>
+        <relatedList>Account.Haulier__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>NAME</fields>
         <fields>Pack_Specification__c</fields>
         <relatedList>Dispatch__c.Haulier__c</relatedList>
@@ -66,7 +84,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h4E000000JXZ0</masterLabel>
+        <masterLabel>00h580000029ka9</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

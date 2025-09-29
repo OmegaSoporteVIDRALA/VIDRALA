@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>OM_VID_CaseTRGHandlerMethods</members>
+		<members>OM_VID_CaseTRGHandler_Test</members>
+		<members>OM_VID_TestUtils</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Case.OM_SAC_CategorizacionColorAuto__c</members>
+		<members>Case.OM_SAC_Defecto__c</members>
+		<members>Case.OM_SAC_FormulaNameConga__c</members>
+		<members>Case.OM_SAC_FotografiasCongaAuto__c</members>
+		<members>Case.OM_SAC_MuestrasTextAuto__c</members>
+		<members>Discount__c.EUR__c</members>
+		<members>Discount__c.From__c</members>
+		<members>Discount__c.OM_VID_Codigo_producto__c</members>
+		<members>Discount__c.Percentage__c</members>
+		<members>Discount__c.SAP_Material_Code__c</members>
+		<members>Discount__c.To__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Discount__c</members>
+		<members>Quote</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Vidrala_Templates/Vidrala_Parte_de_Apertura_ES</members>
+		<name>EmailTemplate</name>
+	</types>
+	<types>
+		<members>GrupoClienteRecordPage</members>
+		<members>OM_SAC_GrupoCliente</members>
+		<members>Quote</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Discount__c-Discount Layout</members>
+		<members>Quote-OM_VID_QuoteFiftyLayout</members>
+		<members>Quote-Quote Layout</members>
+		<members>Quote-Read Only</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Admin</members>
+		<members>Fifty SAC Calidad</members>
+		<members>Integration User</members>
+		<members>System Administrator Fifty</members>
+		<members>Vidrala Europe Sales</members>
+		<members>Vidrala Europe Support</members>
+		<name>Profile</name>
+	</types>
+	<version>63.0</version>
+</Package>

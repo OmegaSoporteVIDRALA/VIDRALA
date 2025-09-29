@@ -4,7 +4,6 @@
     <externalId>false</externalId>
     <label>Dispatch</label>
     <referenceTo>Dispatch__c</referenceTo>
-    <relationshipLabel>(Early or) Late Loads</relationshipLabel>
     <relationshipName>Late_Loads</relationshipName>
     <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>

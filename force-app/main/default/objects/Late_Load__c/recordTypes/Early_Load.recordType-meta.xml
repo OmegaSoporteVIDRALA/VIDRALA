@@ -5,72 +5,56 @@
     <description>Delivery early and not collapsed</description>
     <label>Early Load</label>
     <picklistValues>
-        <picklist>Method_of_Communication__c</picklist>
+        <picklist>Cause_Category__c</picklist>
         <values>
-            <fullName>Email</fullName>
+            <fullName>Admin Error</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Phone</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Reason_for_Delay__c</picklist>
-        <values>
-            <fullName>Customer - Planning</fullName>
+            <fullName>Human Error</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Encirc - Loading Delay</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Encirc - Planning</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Encirc - Stock Availability</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Encirc - Stock Issues</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Encirc - System Issues</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Haulier - Breakdown</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Haulier - Driver Error</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Haulier - Driver Hours</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Haulier - Planning</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Traffic</fullName>
+            <fullName>Poor Planning</fullName>
             <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Status__c</picklist>
+        <picklist>Cause_Subcategory__c</picklist>
         <values>
-            <fullName>Early</fullName>
-            <default>true</default>
+            <fullName>CX Admin Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscommunication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turned up early for collection</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cause__c</picklist>
+        <values>
+            <fullName>Live load not stand trailer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miscommunication</fullName>
+            <default>false</default>
         </values>
     </picklistValues>
 </RecordType>

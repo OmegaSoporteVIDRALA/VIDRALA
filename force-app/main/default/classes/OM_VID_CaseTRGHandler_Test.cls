@@ -14,9 +14,9 @@ public class OM_VID_CaseTRGHandler_Test {
         Test.StartTest();
         OM_VID_TestUtils.createCases(1);
         
-        Case insatisfaccion = [SELECT ID, Subject, OM_SAC_Categorizacion_Incidencia__c, OM_SAC_loteOAlbaran__c, OM_SAC_hipotesisDelAt__c, OM_VID_AccountNameAuto__c, OM_SAC_CodigoModelo__c FROM Case WHERE RecordTypeId =: OM_Utils.RecordTypes.getRecordTypeByDevName('Case', 'Fifty_Calidad_Insatisfaccion') limit 1];
+        Case insatisfaccion = [SELECT ID, Subject, OM_SAC_Categorizacion_Incidencia__c, OM_SAC_loteOAlbaran__c, OM_SAC_Defecto__c, OM_VID_AccountNameAuto__c, OM_SAC_CodigoModelo__c FROM Case WHERE RecordTypeId =: OM_Utils.RecordTypes.getRecordTypeByDevName('Case', 'Fifty_Calidad_Insatisfaccion') limit 1];
         //Assert.areEqual(acc.Phone, '+34 523456789', 'Account phone number hasn\'t got the expected format');
-        Assert.areEqual(insatisfaccion.Subject, 'Apertura NC_'+insatisfaccion.OM_SAC_Categorizacion_Incidencia__c+'_'+insatisfaccion.OM_VID_AccountNameAuto__c+'_'+insatisfaccion.OM_SAC_loteOAlbaran__c+'_'+insatisfaccion.OM_SAC_CodigoModelo__c+'_'+insatisfaccion.OM_SAC_hipotesisDelAt__c);
+        Assert.areEqual(insatisfaccion.Subject, 'Apertura NC_'+insatisfaccion.OM_SAC_Categorizacion_Incidencia__c+'_'+insatisfaccion.OM_VID_AccountNameAuto__c+'_'+insatisfaccion.OM_SAC_loteOAlbaran__c+'_'+insatisfaccion.OM_SAC_CodigoModelo__c+'_'+insatisfaccion.OM_SAC_Defecto__c);
         Test.StopTest();
     }
     
@@ -24,7 +24,7 @@ public class OM_VID_CaseTRGHandler_Test {
         
         OM_VID_TestUtils.createCases(1);
         
-        Case insatisfaccion = [SELECT Id, Subject, OM_SAC_Categorizacion_Incidencia__c, OM_SAC_loteOAlbaran__c, OM_SAC_hipotesisDelAt__c, OM_VID_AccountNameAuto__c, OM_SAC_CodigoModelo__c, OM_VID_Planta__c 
+        Case insatisfaccion = [SELECT Id, Subject, OM_SAC_Categorizacion_Incidencia__c, OM_SAC_loteOAlbaran__c, OM_SAC_Defecto__c, OM_VID_AccountNameAuto__c, OM_SAC_CodigoModelo__c, OM_VID_Planta__c 
                                FROM Case 
                                WHERE RecordTypeId =: OM_Utils.RecordTypes.getRecordTypeByDevName('Case', 'Fifty_Calidad_Insatisfaccion') 
                                LIMIT 1];
@@ -32,14 +32,14 @@ public class OM_VID_CaseTRGHandler_Test {
         
         insatisfaccion.OM_SAC_Categorizacion_Incidencia__c = 'B';
         insatisfaccion.OM_SAC_loteOAlbaran__c = '4554321';
-        insatisfaccion.OM_SAC_hipotesisDelAt__c = 'update';
+        insatisfaccion.OM_SAC_Defecto__c = 'update';
         insatisfaccion.OM_VID_Planta__c = '1090';
         
         Test.StartTest();
         update insatisfaccion;
         Test.StopTest();
         
-        Case updatedCase = [SELECT Id, Subject, OM_SAC_Categorizacion_Incidencia__c, OM_SAC_loteOAlbaran__c, OM_SAC_hipotesisDelAt__c, OM_VID_AccountNameAuto__c, OM_SAC_CodigoModelo__c, OM_VID_Planta__c, OM_SAC_Lista_de_distribucion__c 
+        Case updatedCase = [SELECT Id, Subject, OM_SAC_Categorizacion_Incidencia__c, OM_SAC_loteOAlbaran__c, OM_SAC_Defecto__c, OM_VID_AccountNameAuto__c, OM_SAC_CodigoModelo__c, OM_VID_Planta__c, OM_SAC_Lista_de_distribucion__c 
                             FROM Case 
                             WHERE Id = :insatisfaccion.Id];
         
@@ -47,7 +47,7 @@ public class OM_VID_CaseTRGHandler_Test {
                                  updatedCase.OM_VID_AccountNameAuto__c + '_' +
                                  updatedCase.OM_SAC_loteOAlbaran__c + '_' +
                                  updatedCase.OM_SAC_CodigoModelo__c + '_' +
-                                 updatedCase.OM_SAC_hipotesisDelAt__c;
+                                 updatedCase.OM_SAC_Defecto__c;
                                  
         System.assertEquals(updatedSubject, updatedCase.Subject, 'El Subject no se ha actualizado correctamente.');
         

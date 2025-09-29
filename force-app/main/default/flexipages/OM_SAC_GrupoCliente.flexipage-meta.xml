@@ -248,6 +248,16 @@
                 <identifier>RecordOM_SAC_Tabla_Categorizacion__cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.OM_SAC_CategorizacionColorAuto__c</fieldItem>
+                <identifier>RecordOM_SAC_CategorizacionColorAuto_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-a6e83e69-7a92-4419-a4d0-4cbb0fc7544e</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -445,6 +455,16 @@
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
                     <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.OM_SAC_Defecto__c</fieldItem>
+                <identifier>RecordOM_SAC_Defecto__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.OM_SAC_hipotesisDelAt__c</fieldItem>
                 <identifier>RecordOM_SAC_hipotesisDelAt_cField</identifier>
