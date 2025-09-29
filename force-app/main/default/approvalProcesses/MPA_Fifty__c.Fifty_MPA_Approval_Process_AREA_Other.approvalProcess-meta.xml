@@ -107,7 +107,7 @@ ISPICKVAL(Account__r.Market__c, &quot;NM&quot;)
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
-    <label>Fifty MPA Approval Process AREA Other</label>
+    <label>Vidrala MPA Approval Process AREA Other</label>
     <processOrder>3</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>

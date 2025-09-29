@@ -103,7 +103,7 @@
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
-    <label>Fifty MPA Approval Process AREA Portugal</label>
+    <label>VidralMPA Approval Process AREA Portugal</label>
     <processOrder>4</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>

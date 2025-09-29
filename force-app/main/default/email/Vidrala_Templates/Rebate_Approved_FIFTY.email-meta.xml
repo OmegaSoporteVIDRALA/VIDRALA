@@ -3,7 +3,7 @@
     <available>true</available>
     <description>Rebate Approved email</description>
     <encodingKey>ISO-8859-1</encodingKey>
-    <name>Rebate Approved FIFTY</name>
+    <name>Rebate Approved Vidrala</name>
     <style>none</style>
     <subject>Your Rebate Approval Request Has Been Approved</subject>
     <type>text</type>
