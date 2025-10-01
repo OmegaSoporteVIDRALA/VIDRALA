@@ -32,6 +32,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Account-Account Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Haulier__c-Haulier Layout</layout>
     </layoutAssignments>
     <userLicense>Company Communities</userLicense>
