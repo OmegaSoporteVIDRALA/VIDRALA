@@ -105,12 +105,18 @@
                 <elementReference>Total_Cost</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Haulier__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId.Haulier__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_Collapsed_Load_Record</targetReference>
         </connector>
     </assignments>
-    <description>Addeded the new fields &apos;Who reported this issue?&apos;  and &apos;
-Other - Please Specifiy&apos;</description>
+    <description>Added Haulier field to assignment</description>
     <dynamicChoiceSets>
         <name>StatusPCS</name>
         <dataType>Picklist</dataType>
@@ -1823,34 +1829,6 @@ Other - Please Specifiy&apos;</description>
             </fields>
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
-            <styleProperties>
-                <verticalAlignment>
-                    <stringValue>top</stringValue>
-                </verticalAlignment>
-                <width>
-                    <stringValue>12</stringValue>
-                </width>
-            </styleProperties>
-        </fields>
-        <fields>
-            <fieldType>ObjectProvided</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>false</isRequired>
-            <objectFieldReference>VAREarlyorLateLoad.Who_reported_this_issue__c</objectFieldReference>
-            <styleProperties>
-                <verticalAlignment>
-                    <stringValue>top</stringValue>
-                </verticalAlignment>
-                <width>
-                    <stringValue>12</stringValue>
-                </width>
-            </styleProperties>
-        </fields>
-        <fields>
-            <fieldType>ObjectProvided</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>false</isRequired>
-            <objectFieldReference>VAREarlyorLateLoad.Who_reported_this_issue__c</objectFieldReference>
             <styleProperties>
                 <verticalAlignment>
                     <stringValue>top</stringValue>
