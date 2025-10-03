@@ -6,11 +6,5 @@
 		<members>New_Collapsed_Load_Screen_Flow</members>
 		<name>Flow</name>
 	</types>
-	<types>
-		<members>Early_Load_Screen_Flow</members>
-		<members>Late_Load_Screen_Flow</members>
-		<members>New_Collapsed_Load_Screen_Flow</members>
-		<name>FlowDefinition</name>
-	</types>
 	<version>64.0</version>
 </Package>
