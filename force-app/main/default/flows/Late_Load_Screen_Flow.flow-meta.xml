@@ -135,11 +135,18 @@
                 <elementReference>getLateLoad.Cause__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Haulier__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId.Haulier__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_Collapsed_Load_Record</targetReference>
         </connector>
     </assignments>
-    <description>added &quot;Who Reported this issue&quot; &amp; &quot;other - please specify&quot;</description>
+    <description>Added Haulier field to assignment</description>
     <dynamicChoiceSets>
         <name>ReasonForDelayPicklist</name>
         <dataType>Picklist</dataType>

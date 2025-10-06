@@ -18,6 +18,8 @@
 		<members>Account-Encirc Beverages Customer</members>
 		<members>Account-Haulier Account Layout</members>
 		<members>Haulier__c-Haulier Layout</members>
+		<members>Account-Account Layout</members>
+		<members>Account-Parent Pan European</members>
 		<name>Layout</name>
 	</types>
 	<types>
