@@ -204,6 +204,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Dispatch_Name__c</fieldItem>
+                <identifier>RecordDispatch_Name_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -257,6 +258,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Dispatch_Staging_Record__c</fieldItem>
+                <identifier>RecordDispatch_Staging_Record_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
