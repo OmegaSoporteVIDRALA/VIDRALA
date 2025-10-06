@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>OM_CustomNewOverrideController</members>
-		<members>OM_CustomNewOverrideController_Test</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
 		<members>GrupoClienteRecordPage</members>
 		<name>FlexiPage</name>
 	</types>
@@ -25,13 +19,6 @@
 		<members>Vidrala Europe Sales</members>
 		<members>Vidrala Europe Support</members>
 		<name>Profile</name>
-	</types>
-	<types>
-		<members>Case.OM_VID_New</members>
-		<members>Contact.OM_VID_New</members>
-		<members>Discount__c.OM_VID_New</members>
-		<members>Opportunity.OM_VID_New</members>
-		<name>WebLink</name>
 	</types>
 	<version>64.0</version>
 </Package>
