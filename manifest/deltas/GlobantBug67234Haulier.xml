@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+<types>
+		<members>Account.Haulier_Comments__c</members>
+		<members>Account.Haulier__c</members>
+		<members>Account.Primary_Haulier__c</members>
+		<members>Account.Secondary_Haulier__c</members>
+		<members>Account.Tertiary_Haulier__c</members>
+		<members>Haulier__c.Haulier_Account__c</members>
+		<name>CustomField</name>
+	</types> 
+	<types>
+		<members>HaulierAccountPage</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Account-Customer Layout</members>
+		<members>Account-Encirc Beverages Customer</members>
+		<members>Account-Haulier Account Layout</members>
+		<members>Haulier__c-Haulier Layout</members>
+		<members>Account-Account Layout</members>
+		<members>Account-Parent Pan European</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Admin</members>
+		<members>Encirc Community User</members>
+		<members>Encirc Data Loader API</members>
+		<members>Encirc Legal Community User</members>
+		<members>Encirc Mould Lifecycle Community user</members>
+		<members>Encirc Sales</members>
+		<members>Encirc Support</members>
+		<name>Profile</name>
+	</types>
+	<version>64.0</version>
+</Package>
