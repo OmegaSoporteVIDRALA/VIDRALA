@@ -103,7 +103,7 @@
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
-    <label>VidralMPA Approval Process AREA Portugal</label>
+    <label>Vidrala EU MPA Approval Process AREA PT</label>
     <processOrder>4</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
