@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Queue xmlns="http://soap.sforce.com/2006/04/metadata">
     <doesSendEmailToMembers>false</doesSendEmailToMembers>
-    <name>Vidrala Regional Sales Office</name>
+    <name>Vidrala Europe Regional Sales Office</name>
     <queueMembers>
         <roles>
             <role>Fifty_Sales_Office</role>
