@@ -3,7 +3,7 @@
     <animationFrequency>always</animationFrequency>
     <developerName>Fifty_Opportunity</developerName>
     <isActive>true</isActive>
-    <masterLabel>Vidrala Europe Opportunity</masterLabel>
+    <masterLabel>Vidrala Opportunity</masterLabel>
     <recordTypeContext>Custom</recordTypeContext>
     <recordTypeName>Fifty_Master_Opportunity</recordTypeName>
     <sobjectType>Opportunity</sobjectType>

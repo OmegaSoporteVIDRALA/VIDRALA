@@ -46,6 +46,28 @@
             </action>
         </rejectionActions>
     </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>g.cussino@vidrala.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>MPA_Fifty__c.Approval_Status__c</field>
+                <operation>equals</operation>
+                <value>Pending Planning Approval</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Fifty Area Manager Approval</label>
+        <name>Fifty_Area_Manager_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
     <description>Italy Area Manager</description>
     <emailTemplate>Vidrala_Templates/Initial_Approval_Submission_EMAIL_MPA_FIFTY</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
@@ -81,7 +103,7 @@
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
-    <label>Vidrala Europe MPA Approval Process AREA Italy</label>
+    <label>Vidrala MPA Approval Process AREA Italy</label>
     <processOrder>2</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
