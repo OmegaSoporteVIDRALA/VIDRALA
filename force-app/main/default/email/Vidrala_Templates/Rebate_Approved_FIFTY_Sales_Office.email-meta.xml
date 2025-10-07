@@ -3,7 +3,7 @@
     <available>true</available>
     <description>Rebate Approved email Upload to SAP</description>
     <encodingKey>ISO-8859-1</encodingKey>
-    <name>Rebate Approved Vidrala Europe Sales Office</name>
+    <name>Rebate Approved Vidrala Sales Office</name>
     <style>none</style>
     <subject>Your Rebate Approval Request Has Been Approved</subject>
     <type>text</type>

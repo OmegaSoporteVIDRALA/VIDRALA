@@ -4,7 +4,7 @@
     <contactAccessLevel>Edit</contactAccessLevel>
     <description>Fifty Sales Office</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>Vidrala Europe Sales Office</name>
+    <name>Vidrala Sales Office</name>
     <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Fifty_Sales_Director</parentRole>
 </Role>
