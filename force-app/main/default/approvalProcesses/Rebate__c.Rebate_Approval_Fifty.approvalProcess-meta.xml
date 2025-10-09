@@ -88,7 +88,7 @@
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
-    <label>Rebate Approval Fifty</label>
+    <label>Rebate Approval Vidrala Europe</label>
     <nextAutomatedApprover>
         <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
         <userHierarchyField>Rebate_Approval_Manager__c</userHierarchyField>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
     <available>true</available>
-    <description>MPA Approval Process Fifty</description>
+    <description>MPA Approval Process Vidrala Europe</description>
     <encodingKey>ISO-8859-1</encodingKey>
     <letterhead>Blank</letterhead>
-    <name>Initial Approval Submission EMAIL MPA Fifty</name>
+    <name>Initial Approval Submission EMAIL MPA VIDRALA</name>
     <style>freeForm</style>
     <subject>MPA Submitted for Approval</subject>
     <textOnly>The Following MPA Was Submitted for Approval

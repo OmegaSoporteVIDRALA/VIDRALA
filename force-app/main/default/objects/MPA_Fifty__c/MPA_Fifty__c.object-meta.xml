@@ -160,7 +160,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Read</externalSharingModel>
-    <label>MPA (Fifty)</label>
+    <label>MPA (Vidrala Europe)</label>
     <nameField>
         <displayFormat>MPA-{00000}</displayFormat>
         <label>MPA</label>
@@ -168,7 +168,7 @@
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>MPAs (Fifty)</pluralLabel>
+    <pluralLabel>MPAs (Vidrala Europe)</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>Read</sharingModel>
     <visibility>Public</visibility>

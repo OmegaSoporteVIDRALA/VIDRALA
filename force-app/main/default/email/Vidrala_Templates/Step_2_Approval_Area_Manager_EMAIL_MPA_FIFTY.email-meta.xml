@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
     <available>true</available>
-    <description>MPA Approval Process FIFTY Area Manager</description>
+    <description>MPA Approval Process Vidrala Europe Area Manager</description>
     <encodingKey>ISO-8859-1</encodingKey>
     <letterhead>Blank</letterhead>
-    <name>Step 2 Approval To Area Manager EMAIL MPA FIFTY</name>
+    <name>Step 2 Approval To Area Manager EMAIL MPA VIDRALA EUROPE</name>
     <style>freeForm</style>
     <subject>MPA Was Approved by the Account Owner</subject>
     <textOnly>The Following MPA was Approved by the Account Owner

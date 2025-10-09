@@ -50,7 +50,7 @@
         <allowDelegate>false</allowDelegate>
         <assignedApprover>
             <approver>
-                <name>josepedromagalhaes1@vidrala.com</name>
+                <name>iurquijo1@omegacrmconsulting.com</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
@@ -103,7 +103,7 @@
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
-    <label>Fifty MPA Approval Process AREA Portugal</label>
+    <label>Vidrala EU MPA Approval Process AREA PT</label>
     <processOrder>4</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>

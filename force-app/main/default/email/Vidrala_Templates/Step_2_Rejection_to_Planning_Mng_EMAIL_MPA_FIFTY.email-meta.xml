@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
     <available>true</available>
-    <description>Step 2 Rejection to Planning Mng EMAIL MPA FIFTY</description>
+    <description>Step 2 Rejection to Planning Mng EMAIL MPA VIDRALA EUROPE</description>
     <encodingKey>ISO-8859-1</encodingKey>
     <letterhead>Blank</letterhead>
-    <name>Step 2 Rejection to Planning Mng EMAIL MPA FIFTY</name>
+    <name>Step 2 Rejection to Planning Mng EMAIL MPA VIDRALA EUROPE</name>
     <style>freeForm</style>
     <subject>MPA Rejected</subject>
     <textOnly>The MPA {!MPA_Fifty__c.Name} submitted was rejected by the Account Owner
