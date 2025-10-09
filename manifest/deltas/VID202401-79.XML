@@ -59,6 +59,7 @@
 		<members>Fifty_Sales_Director</members>
 		<members>Fifty_Sales_Office</members>
 		<name>Role</name>
+		
 	</types>
 	<version>64.0</version>
 </Package>
