@@ -9,6 +9,7 @@
    May 2018     2.0     M.Witchalls         SAP Version
    Sep 2024     3.0     Globant             Refactor
    Aug 2025		4.0		Globant				New fields Addition and Refactored Upsert logic for dispatch records
+   Oct 2025		5.0		Globant				New fields addition for dispatch records - Case 00067826
 ------------------------------------------------------------------------------------------------------------------------ */
 global class DispatchLoadBatch implements Database.Batchable<sObject>, Database.Stateful { 
     
@@ -672,7 +673,11 @@ global class DispatchLoadBatch implements Database.Batchable<sObject>, Database.
                 Material_Document_Year__c = dl.Material_Document_Year__c,
                 Batch_Number__c = dl.Batch_Number__c,
                 Series__c = dl.Series__c,
-                Salesforce_Unique_ID__c = dl.Salesforce_Unique_ID__c
+                Salesforce_Unique_ID__c = dl.Salesforce_Unique_ID__c,
+                
+                //Case 00067826 - new fields addition - Abhishek Oct 2025
+                Dispatch_Name__c = dl.Delivery_Name__c,
+                Dispatch_Staging_Record__c = dl.Id
             );
 
             context.dispatchUpsertMap.put(dl.Unique_ID__c, du);
