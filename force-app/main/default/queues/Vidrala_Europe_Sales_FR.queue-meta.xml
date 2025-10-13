@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Queue of sales France to which the Tasks of &quot;Sending Quotation&quot; might be assigned</description>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>soporte.vidrala@omegacrmconsulting.com</email>
+    <name>Vidrala Europe Sales FR</name>
+    <queueMembers>
+        <users>
+            <user>f.revuelta@vidrala.com</user>
+            <user>l.roux@vidrala.com</user>
+            <user>l.cazes@vidrala.com</user>
+            <user>s.ascenso@vidrala.com</user>
+            <user>v.pinheiro@vidrala.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>
