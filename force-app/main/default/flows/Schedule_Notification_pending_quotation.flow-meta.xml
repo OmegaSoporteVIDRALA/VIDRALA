@@ -193,9 +193,6 @@
         <label>Sales office assigned in Account?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>Get_Queue</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>Else</defaultConnectorLabel>
         <rules>
             <name>Account_has_sales_office</name>
@@ -218,6 +215,21 @@
                 <targetReference>Send_Email_to_Sales_office</targetReference>
             </connector>
             <label>Account has sales office</label>
+        </rules>
+        <rules>
+            <name>Opportunity_has_Market</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.Market__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Queue</targetReference>
+            </connector>
+            <label>Opportunity has Market</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -351,7 +363,7 @@ TODAY() - 1)
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <textTemplates>
         <name>EmailBody</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
