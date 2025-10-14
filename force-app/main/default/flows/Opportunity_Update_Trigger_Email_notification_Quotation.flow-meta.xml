@@ -1,133 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionCalls>
-        <name>Send_Email_to_Queue</name>
-        <label>Send Email to Queue</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <actionName>emailSimple</actionName>
-        <actionType>emailSimple</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>recipientAddresses</name>
-            <value/>
-        </inputParameters>
-        <inputParameters>
-            <name>senderType</name>
-            <value>
-                <stringValue>CurrentUser</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>senderAddress</name>
-            <value>
-                <elementReference>$User.Email</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>composeEmailContent</name>
-            <value>
-                <stringValue>True</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailSubject</name>
-            <value>
-                <elementReference>Get_Email_Template.Subject</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailBody</name>
-            <value>
-                <elementReference>BodyEmail</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>sendRichBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>useLineBreaks</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>relatedRecordId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
-        <offset>0</offset>
-        <versionString>2.0.1</versionString>
-    </actionCalls>
-    <actionCalls>
-        <name>Send_Email_to_Sales_office</name>
-        <label>Send Email to Sales office</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <actionName>emailSimple</actionName>
-        <actionType>emailSimple</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>recipientAddresses</name>
-            <value/>
-        </inputParameters>
-        <inputParameters>
-            <name>senderType</name>
-            <value>
-                <stringValue>CurrentUser</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>senderAddress</name>
-            <value>
-                <elementReference>$User.Email</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>composeEmailContent</name>
-            <value>
-                <stringValue>True</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailSubject</name>
-            <value>
-                <elementReference>Get_Email_Template.Subject</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailBody</name>
-            <value>
-                <elementReference>BodyEmail</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>sendRichBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>useLineBreaks</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>relatedRecordId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
-        <offset>0</offset>
-        <versionString>2.0.1</versionString>
-    </actionCalls>
     <apiVersion>65.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
@@ -142,9 +14,6 @@
                 <elementReference>$Record.Account.Sales_Office__r.Email</elementReference>
             </value>
         </assignmentItems>
-        <connector>
-            <targetReference>Send_Email_to_Sales_office</targetReference>
-        </connector>
     </assignments>
     <assignments>
         <name>Add_Email_Recipients_Queue</name>
@@ -158,9 +27,6 @@
                 <elementReference>Get_Queue.Email</elementReference>
             </value>
         </assignmentItems>
-        <connector>
-            <targetReference>Send_Email_to_Queue</targetReference>
-        </connector>
     </assignments>
     <decisions>
         <name>Are_Flows_enabled</name>
