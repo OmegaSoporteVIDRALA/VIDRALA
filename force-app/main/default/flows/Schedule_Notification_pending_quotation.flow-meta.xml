@@ -72,10 +72,10 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>listEmailRecipients</assignToReference>
-            <operator>Add</operator>
+            <assignToReference>emailRecipient</assignToReference>
+            <operator>Assign</operator>
             <value>
-                <elementReference>$Record.Opportunity.Account.Sales_Office__r.Email</elementReference>
+                <elementReference>$Record.Opportunity.Account.Account__r.Sales_Office__r.Email</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -88,8 +88,8 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>listEmailRecipients</assignToReference>
-            <operator>Add</operator>
+            <assignToReference>emailRecipient</assignToReference>
+            <operator>Assign</operator>
             <value>
                 <elementReference>Get_Queue.Email</elementReference>
             </value>
@@ -133,8 +133,8 @@
             <name>Empty</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>listEmailRecipients</leftValueReference>
-                <operator>IsEmpty</operator>
+                <leftValueReference>emailRecipient</leftValueReference>
+                <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
@@ -359,6 +359,13 @@ TODAY() - 1)
         <isViewedAsPlainText>false</isViewedAsPlainText>
         <text>&lt;p&gt;Opportunity name: {!$Record.Opportunity.Name}&lt;/p&gt;&lt;p&gt;Account name: {!$Record.Opportunity.Account.Name}&lt;/p&gt;&lt;p&gt;Opportunity Owner: {!Get_User.Name}&lt;/p&gt;&lt;p&gt;Quote Required By:&amp;nbsp;{!$Record.Opportunity.Quote_Required_By__c}&lt;/p&gt;&lt;p&gt;Link to the record:&amp;nbsp;&lt;a href=&quot;https://encirc360--devomega.sandbox.lightning.force.com/{!$Record.OpportunityId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Opportunity.Name}&lt;/a&gt;&lt;/p&gt;</text>
     </textTemplates>
+    <variables>
+        <name>emailRecipient</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>listEmailRecipients</name>
         <dataType>String</dataType>
