@@ -5,6 +5,5 @@
 		<members>Schedule_Notification_pending_quotation</members>
 		<name>Flow</name>
 	</types>
-	
 	<version>64.0</version>
 </Package>

@@ -10,9 +10,7 @@
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>recipientAddresses</name>
-             <value>
-                <elementReference>{!Get_Queue.Email}</elementReference>
-             </value>
+            <value/>
         </inputParameters>
         <inputParameters>
             <name>senderType</name>
@@ -76,9 +74,7 @@
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>recipientAddresses</name>
-             <value>
-                <elementReference>{!$Record.Account.Sales_Office__r.Email}</elementReference>
-             </value>
+            <value/>
         </inputParameters>
         <inputParameters>
             <name>senderType</name>
@@ -134,6 +130,38 @@
     </actionCalls>
     <apiVersion>65.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Add_Email_Recipients</name>
+        <label>Add Email Recipients</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>emailRecipients</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Account.Sales_Office__r.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Email_to_Sales_office</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Add_Email_Recipients_Queue</name>
+        <label>Add_Email_Recipients_Queue</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>emailRecipients</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Queue.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Email_to_Queue</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
@@ -216,7 +244,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Send_Email_to_Sales_office</targetReference>
+                <targetReference>Add_Email_Recipients</targetReference>
             </connector>
             <label>Account has sales office</label>
         </rules>
@@ -307,7 +335,7 @@
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Send_Email_to_Queue</targetReference>
+            <targetReference>Add_Email_Recipients_Queue</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -366,4 +394,11 @@
         <isViewedAsPlainText>false</isViewedAsPlainText>
         <text>&lt;p&gt;Opportunity name: {!$Record.Name}&lt;/p&gt;&lt;p&gt;Account name: {!$Record.Account.Name}&lt;/p&gt;&lt;p&gt;Opportunity Owner: {!Get_Owner.Name}&lt;/p&gt;&lt;p&gt;Quote Required By: &lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Quote_Required_By__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Link to the record: &lt;a href=&quot;https://encirc360--devomega.sandbox.lightning.force.com/{!$Record.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Name}&lt;/a&gt;&lt;/p&gt;</text>
     </textTemplates>
+    <variables>
+        <name>emailRecipients</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
 </Flow>
