@@ -1,65 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Fifty_Opportunity</members>
-		<name>AnimationRule</name>
+		<members>OM_VID_Constants</members>
+		<members>OM_VID_ConstantsTest</members>
+		<members>OM_VID_OpportunityTRGHandler</members>
+		<members>OM_VID_OpportunityTRGTest</members>
+		<name>ApexClass</name>
 	</types>
 	<types>
-		<members>MPA_Fifty__c.Fifty_MPA_Approval_Process_AREA_FRANCE</members>
-		<members>MPA_Fifty__c.Fifty_MPA_Approval_Process_AREA_Italy</members>
-		<members>MPA_Fifty__c.Fifty_MPA_Approval_Process_AREA_Other</members>
-		<members>MPA_Fifty__c.Fifty_MPA_Approval_Process_AREA_Portugal</members>
-		<members>MPA_Fifty__c.Fifty_MPA_Approval_Process_AREA_SPAIN</members>
-		<members>Rebate__c.Rebate_Approval_Fifty</members>
-		<name>ApprovalProcess</name>
+		<members>Vidrala Europe Sales</members>
+		<name>Profile</name>
 	</types>
 	<types>
-		<members>MPA_Fifty__c</members>
-		<name>CustomObject</name>
+		<members>Opportunity_Update_Trigger_Email_notification_Quotation</members>
+		<members>Schedule_Notification_pending_quotation</members>
+		<name>Flow</name>
 	</types>
 	<types>
-		<members>Vidrala_Templates/Initial_Approval_Submission_EMAIL_MPA_FIFTY</members>
-		<members>Vidrala_Templates/Opportunity_Stage_Quotation</members>
-		<members>Vidrala_Templates/Rebate_Approval_Submission_FIFTY</members>
-		<members>Vidrala_Templates/Rebate_Approved_FIFTY</members>
-		<members>Vidrala_Templates/Rebate_Approved_FIFTY_Sales_Office</members>
-		<members>Vidrala_Templates/Rebate_Rejected_FIFTY</members>
-		<members>Vidrala_Templates/Step_2_Approval_Area_Manager_EMAIL_MPA_FIFTY</members>
-		<members>Vidrala_Templates/Step_2_Rejection_to_Planning_Mng_EMAIL_MPA_FIFTY</members>
-		<members>Vidrala_Templates/Step_3_Approval_to_Planning_Mng_Owner_EMAIL_MPA_FIFTY</members>
-		<members>Vidrala_Templates/Step_3_Rejection_to_Planning_Mng_Owner_EMAIL_MPA_FIFTY</members>
-		<name>EmailTemplate</name>
-	</types>
-	<types>
-		<members>Fifty_Colour</members>
-		<members>Sector_Account_Industry_Fifty</members>
-		<name>GlobalValueSet</name>
-	</types>
-	<types>
-		<members>FIfty_Account_Manager_Group</members>
-		<members>Fifty_Public_Group</members>
-		<members>Fifty_Sales_Dir_office</members>
-		<members>Fifty_Sales_Office</members>
-		<name>Group</name>
-	</types>
-	<types>
-		<members>Fifty_Regional_Sales_Office</members>
-		<members>Fifty_Sales_Managers</members>
+		<members>Vidrala_Europe_Sales_ES</members>
+		<members>Vidrala_Europe_Sales_FR</members>
+		<members>Vidrala_Europe_Sales_NM</members>
+		<members>Vidrala_Europe_Sales_PT</members>
 		<name>Queue</name>
 	</types>
-	<types>
-		<members>Fifty_Account_Manager_France</members>
-		<members>Fifty_Account_Manager_Portugal_PT</members>
-		<members>Fifty_Account_Manager_Spain</members>
-		<members>Fifty_Agent_Spain_ES</members>
-		<members>Fifty_Area_Manager</members>
-		<members>Fifty_Area_Manager_France</members>
-		<members>Fifty_Calidad</members>
-		<members>Fifty_Planning</members>
-		<members>Fifty_Sales_Director</members>
-		<members>Fifty_Sales_Office</members>
-		<name>Role</name>
-		
-	</types>
-	<version>63.0</version>
+	<version>64.0</version>
 </Package>
