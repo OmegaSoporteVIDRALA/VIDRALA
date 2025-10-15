@@ -91,6 +91,15 @@ export default class OmCustomNewOverrideOpportunity extends NavigationMixin(Ligh
             case 'Discount__c':
                 defaults.Account__c = this._accountId;
                 break;
+            case 'Competitor_Action__c':
+                defaults.Account__c = this._accountId;
+                break;
+            case 'Customer_Contact_Report__c':
+                defaults.Account__c = this._accountId;
+                break;
+            case 'Competitor_Price__c':
+                defaults.Account__c = this._accountId;
+                break;   
             default:
                 break;
         }
