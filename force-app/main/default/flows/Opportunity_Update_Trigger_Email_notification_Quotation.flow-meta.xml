@@ -139,7 +139,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>emailRecipientsSalesOffice</assignToReference>
+            <assignToReference>emailRecipientList</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>$Record.Account.Sales_Office__r.Email</elementReference>
@@ -155,7 +155,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>emailRecipientsQueue</assignToReference>
+            <assignToReference>emailRecipientList</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>Get_Queue.Email</elementReference>
@@ -398,14 +398,7 @@
         <text>&lt;p&gt;Opportunity name: {!$Record.Name}&lt;/p&gt;&lt;p&gt;Account name: {!$Record.Account.Name}&lt;/p&gt;&lt;p&gt;Opportunity Owner: {!Get_Owner.Name}&lt;/p&gt;&lt;p&gt;Quote Required By: &lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Quote_Required_By__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Link to the record: &lt;a href=&quot;https://encirc360--devomega.sandbox.lightning.force.com/{!$Record.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Name}&lt;/a&gt;&lt;/p&gt;</text>
     </textTemplates>
     <variables>
-        <name>emailRecipientsQueue</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>emailRecipientsSalesOffice</name>
+        <name>emailRecipientList</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
