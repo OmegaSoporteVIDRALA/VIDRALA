@@ -60,8 +60,12 @@
                 <elementReference>$Record.OpportunityId</elementReference>
             </value>
         </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>2.0.1</versionString>
     </actionCalls>
     <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Add_Email_Recipients</name>
         <label>Add Email Recipients</label>
@@ -69,7 +73,10 @@
         <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>listEmailRecipients</assignToReference>
-            <operator>Assign</operator>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Opportunity.Account.Account__r.Sales_Office__r.Email</elementReference>
+            </value>
         </assignmentItems>
         <connector>
             <targetReference>List_Email_is_Empty</targetReference>
@@ -82,7 +89,10 @@
         <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>listEmailRecipients</assignToReference>
-            <operator>Assign</operator>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Queue.Email</elementReference>
+            </value>
         </assignmentItems>
         <connector>
             <targetReference>List_Email_is_Empty</targetReference>
@@ -124,7 +134,10 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>listEmailRecipients</leftValueReference>
-                <operator>EqualTo</operator>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
             </conditions>
             <label>Empty</label>
         </rules>
@@ -209,6 +222,7 @@
             <label>Opportunity has Market</label>
         </rules>
     </decisions>
+    <environments>Default</environments>
     <formulas>
         <name>LAST_LABORAL_DAY</name>
         <dataType>Date</dataType>

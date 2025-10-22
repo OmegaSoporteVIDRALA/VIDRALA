@@ -63,6 +63,9 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>2.0.1</versionString>
     </actionCalls>
     <actionCalls>
         <name>Send_Email_to_Sales_office</name>
@@ -124,8 +127,12 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>2.0.1</versionString>
     </actionCalls>
     <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Add_Email_Recipients</name>
         <label>Add Email Recipients</label>
@@ -149,7 +156,10 @@
         <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>emailRecipientsQueue</assignToReference>
-            <operator>Assign</operator>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Queue.Email</elementReference>
+            </value>
         </assignmentItems>
         <connector>
             <targetReference>Send_Email_to_Queue</targetReference>
@@ -257,6 +267,7 @@
             <label>Opportunity has Market</label>
         </rules>
     </decisions>
+    <environments>Default</environments>
     <interviewLabel>Opportunity - Update Trigger - Email notification Quotation {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity - Update Trigger - Email notification Quotation</label>
     <processMetadataValues>
