@@ -28,5 +28,6 @@
 		<members>Opportunity.Opportunity_Fifty_Stage_Quotation_Email</members>
 		<name>WorkflowAlert</name>
 	</types>
-	<version>64.0</version>
+	
+	<version>65.0</version>
 </Package>
