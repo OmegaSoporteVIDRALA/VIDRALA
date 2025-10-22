@@ -1,77 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionCalls>
-        <name>Send_Email_For_Quotation</name>
-        <label>Send Email For Quotation</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <actionName>emailSimple</actionName>
-        <actionType>emailSimple</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>recipientAddresses</name>
-            <value/>
-        </inputParameters>
-        <inputParameters>
-            <name>senderType</name>
-            <value>
-                <stringValue>OrgWideEmailAddress</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>senderAddress</name>
-            <value>
-                <stringValue>comercial@vidrala.com</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>composeEmailContent</name>
-            <value>
-                <stringValue>True</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailSubject</name>
-            <value>
-                <elementReference>Get_Email_Template.Subject</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailBody</name>
-            <value>
-                <elementReference>EmailBody</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>sendRichBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>useLineBreaks</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>relatedRecordId</name>
-            <value>
-                <elementReference>$Record.OpportunityId</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
     <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Add_Email_Recipients</name>
         <label>Add Email Recipients</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>emailRecipient</assignToReference>
-            <operator>Assign</operator>
+            <assignToReference>listEmailRecipients</assignToReference>
+            <operator>Add</operator>
             <value>
-                <elementReference>$Record.Opportunity.Account.Account__r.Sales_Office__r.Email</elementReference>
+                <stringValue>{!$Record.Opportunity.Account.Account__r.Sales_Office__r.Email}</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -84,10 +24,10 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>emailRecipient</assignToReference>
-            <operator>Assign</operator>
+            <assignToReference>listEmailRecipients</assignToReference>
+            <operator>Add</operator>
             <value>
-                <elementReference>Get_Queue.Email</elementReference>
+                <stringValue>{!Get_Queue.Email}</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -121,9 +61,6 @@
         <label>List Email is Empty?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>Send_Email_For_Quotation</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>NOT empty</defaultConnectorLabel>
         <rules>
             <name>Empty</name>
@@ -218,6 +155,7 @@
             <label>Opportunity has Market</label>
         </rules>
     </decisions>
+    <environments>Default</environments>
     <formulas>
         <name>LAST_LABORAL_DAY</name>
         <dataType>Date</dataType>
@@ -348,7 +286,7 @@ TODAY() - 1)
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
-    <status>Active</status>
+    <status>Inactive</status>
     <textTemplates>
         <name>EmailBody</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
