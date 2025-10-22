@@ -286,7 +286,7 @@ TODAY() - 1)
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
-    <status>Inactive</status>
+    <status>Draft</status>
     <textTemplates>
         <name>EmailBody</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>

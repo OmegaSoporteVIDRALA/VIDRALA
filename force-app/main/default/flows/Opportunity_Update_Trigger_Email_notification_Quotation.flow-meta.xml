@@ -254,7 +254,7 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Inactive</status>
+    <status>Draft</status>
     <textTemplates>
         <name>BodyEmail</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
