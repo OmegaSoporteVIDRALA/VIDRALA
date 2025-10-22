@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Send_Email_to_Queue</name>
-        <label>Send Email to Queue</label>
+        <name>Send_Email_For_Quotation</name>
+        <label>Send Email For Quotation</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>emailSimple</actionName>
@@ -15,13 +15,13 @@
         <inputParameters>
             <name>senderType</name>
             <value>
-                <stringValue>CurrentUser</stringValue>
+                <stringValue>OrgWideEmailAddress</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>senderAddress</name>
             <value>
-                <elementReference>$User.Email</elementReference>
+                <stringValue>comercial@vidrala.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -60,76 +60,40 @@
                 <elementReference>$Record.OpportunityId</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
-        <offset>0</offset>
-        <versionString>2.0.1</versionString>
-    </actionCalls>
-    <actionCalls>
-        <name>Send_Email_to_Queue1</name>
-        <label>Send Email to Queue1</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <actionName>emailSimple</actionName>
-        <actionType>emailSimple</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>recipientAddresses</name>
-            <value/>
-        </inputParameters>
-        <inputParameters>
-            <name>senderType</name>
-            <value>
-                <stringValue>CurrentUser</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>senderAddress</name>
-            <value>
-                <elementReference>$User.Email</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>composeEmailContent</name>
-            <value>
-                <stringValue>True</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailSubject</name>
-            <value>
-                <elementReference>Get_Email_Template.Subject</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>emailBody</name>
-            <value>
-                <elementReference>EmailBody</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>sendRichBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>useLineBreaks</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>relatedRecordId</name>
-            <value>
-                <elementReference>$Record.OpportunityId</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
-        <offset>0</offset>
-        <versionString>2.0.1</versionString>
     </actionCalls>
     <apiVersion>65.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Add_Email_Recipients</name>
+        <label>Add Email Recipients</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>emailRecipient</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity.Account.Account__r.Sales_Office__r.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>List_Email_is_Empty</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Add_Email_Recipients_Queue</name>
+        <label>Add Email Recipients Queue</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>emailRecipient</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Queue.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>List_Email_is_Empty</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
@@ -150,6 +114,28 @@
                 <targetReference>Opportunity_is_Fifty_and_in_Quotation</targetReference>
             </connector>
             <label>Flow should run</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>List_Email_is_Empty</name>
+        <label>List Email is Empty?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_For_Quotation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>NOT empty</defaultConnectorLabel>
+        <rules>
+            <name>Empty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>emailRecipient</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Empty</label>
         </rules>
     </decisions>
     <decisions>
@@ -212,7 +198,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Send_Email_to_Queue</targetReference>
+                <targetReference>Add_Email_Recipients</targetReference>
             </connector>
             <label>Account has sales office</label>
         </rules>
@@ -232,7 +218,6 @@
             <label>Opportunity has Market</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <name>LAST_LABORAL_DAY</name>
         <dataType>Date</dataType>
@@ -292,7 +277,7 @@ TODAY() - 1)
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Send_Email_to_Queue1</targetReference>
+            <targetReference>Add_Email_Recipients_Queue</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
