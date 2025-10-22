@@ -60,23 +60,16 @@
                 <elementReference>$Record.OpportunityId</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
-        <offset>0</offset>
-        <versionString>2.0.1</versionString>
     </actionCalls>
     <apiVersion>65.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Add_Email_Recipients</name>
         <label>Add Email Recipients</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>emailRecipient</assignToReference>
+            <assignToReference>listEmailRecipients</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Opportunity.Account.Account__r.Sales_Office__r.Email</elementReference>
-            </value>
         </assignmentItems>
         <connector>
             <targetReference>List_Email_is_Empty</targetReference>
@@ -88,11 +81,8 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>emailRecipient</assignToReference>
+            <assignToReference>listEmailRecipients</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <elementReference>Get_Queue.Email</elementReference>
-            </value>
         </assignmentItems>
         <connector>
             <targetReference>List_Email_is_Empty</targetReference>
@@ -133,11 +123,8 @@
             <name>Empty</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>emailRecipient</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
+                <leftValueReference>listEmailRecipients</leftValueReference>
+                <operator>EqualTo</operator>
             </conditions>
             <label>Empty</label>
         </rules>
@@ -222,7 +209,6 @@
             <label>Opportunity has Market</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <name>LAST_LABORAL_DAY</name>
         <dataType>Date</dataType>

@@ -55,14 +55,14 @@
             </value>
         </inputParameters>
         <inputParameters>
+            <name>recipientId</name>
+        </inputParameters>
+        <inputParameters>
             <name>relatedRecordId</name>
             <value>
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
-        <offset>0</offset>
-        <versionString>2.0.1</versionString>
     </actionCalls>
     <actionCalls>
         <name>Send_Email_to_Sales_office</name>
@@ -124,19 +124,15 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>emailSimple</nameSegment>
-        <offset>0</offset>
-        <versionString>2.0.1</versionString>
     </actionCalls>
     <apiVersion>65.0</apiVersion>
-    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
         <name>Add_Email_Recipients</name>
         <label>Add Email Recipients</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>emailRecipients</assignToReference>
+            <assignToReference>emailRecipientsSalesOffice</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>$Record.Account.Sales_Office__r.Email</elementReference>
@@ -152,11 +148,8 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>emailRecipients</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Get_Queue.Email</elementReference>
-            </value>
+            <assignToReference>emailRecipientsQueue</assignToReference>
+            <operator>Assign</operator>
         </assignmentItems>
         <connector>
             <targetReference>Send_Email_to_Queue</targetReference>
@@ -264,7 +257,6 @@
             <label>Opportunity has Market</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Opportunity - Update Trigger - Email notification Quotation {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity - Update Trigger - Email notification Quotation</label>
     <processMetadataValues>
@@ -395,7 +387,14 @@
         <text>&lt;p&gt;Opportunity name: {!$Record.Name}&lt;/p&gt;&lt;p&gt;Account name: {!$Record.Account.Name}&lt;/p&gt;&lt;p&gt;Opportunity Owner: {!Get_Owner.Name}&lt;/p&gt;&lt;p&gt;Quote Required By: &lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Quote_Required_By__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Link to the record: &lt;a href=&quot;https://encirc360--devomega.sandbox.lightning.force.com/{!$Record.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Name}&lt;/a&gt;&lt;/p&gt;</text>
     </textTemplates>
     <variables>
-        <name>emailRecipients</name>
+        <name>emailRecipientsQueue</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>emailRecipientsSalesOffice</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
