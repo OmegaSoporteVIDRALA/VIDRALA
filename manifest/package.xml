@@ -5,6 +5,7 @@
 		<members>Attendee__c.Hospitality_Ordered__c</members>
 		<members>Events__c.Hospitality_Notes__c</members>
 		<members>Events__c.Hospitality_Ordered__c</members>
+		<members>Events__c.Hotel_Booked__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>

@@ -22,6 +22,11 @@
         <field>Events__c.Hospitality_Ordered__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Events__c.Hotel_Booked__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Attendee__c-Attendee Layout</layout>
     </layoutAssignments>
