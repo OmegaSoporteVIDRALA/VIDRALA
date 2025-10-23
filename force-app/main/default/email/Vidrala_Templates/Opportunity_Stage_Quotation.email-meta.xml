@@ -5,7 +5,7 @@
     <encodingKey>ISO-8859-1</encodingKey>
     <name>Opportunity Stage Quotation</name>
     <style>none</style>
-    <subject>New Opportunity Should Be Offered</subject>
+    <subject>New Opportunity Should Be Offered For {!Opportunity.Account}</subject>
     <type>text</type>
     <uiType>Aloha</uiType>
 </EmailTemplate>
