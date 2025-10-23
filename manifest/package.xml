@@ -8,6 +8,7 @@
 		<name>CustomField</name>
 	</types>
 	<types>
+		<members>Attendee_Record_Page</members>
 		<members>Event_Record_Page</members>
 		<name>FlexiPage</name>
 	</types>
