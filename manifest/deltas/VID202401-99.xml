@@ -3,6 +3,7 @@
 	<types>
 		<members>OM_CustomNewOverrideController</members>
 		<members>OM_CustomRTSelectorController</members>
+		<members>OM_CustomNewOverrideController_Test</members>
 		<members>OM_CustomRTSelectorController_Test</members>
 		<name>ApexClass</name>
 	</types>
