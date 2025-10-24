@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
 	<masterLabel>New Opportunity Override</masterLabel>
-	<apiVersion>63.0</apiVersion>
+	<apiVersion>64.0</apiVersion>
 	<isExposed>true</isExposed>
     <targets>
         <target>lightning__AppPage</target>
