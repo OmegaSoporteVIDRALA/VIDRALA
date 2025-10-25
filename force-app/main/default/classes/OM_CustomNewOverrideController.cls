@@ -22,4 +22,9 @@ public class OM_CustomNewOverrideController {
             LIMIT 1
         ];
     }
+    
+    @AuraEnabled(cacheable=true)
+	public static Id getUserProfile() {
+    	return [SELECT ProfileId FROM User WHERE Id = :UserInfo.getUserId()].ProfileId;
+	}
 }
