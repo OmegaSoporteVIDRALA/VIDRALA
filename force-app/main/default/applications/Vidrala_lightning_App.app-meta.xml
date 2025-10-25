@@ -1527,6 +1527,24 @@
         <type>Flexipage</type>
         <profile>Vidrala Europe Support</profile>
     </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Cases_Sales</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Fifty_Calidad_Insatisfaccion</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Cases_Sales</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Fifty_Calidad_Insatisfaccion</recordType>
+        <type>Flexipage</type>
+        <profile>Vidrala Europe Sales</profile>
+    </profileActionOverrides>
     <tabs>standard-MobileHome</tabs>
     <tabs>standard-home</tabs>
     <tabs>standard-Lead</tabs>

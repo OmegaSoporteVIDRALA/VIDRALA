@@ -2,20 +2,35 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>OM_CustomNewOverrideController</members>
-		<members>OM_CustomRTSelectorController</members>
 		<members>OM_CustomNewOverrideController_Test</members>
+		<members>OM_CustomRTSelectorController</members>
 		<members>OM_CustomRTSelectorController_Test</members>
 		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>OM_SAC_Service_Console</members>
+		<members>Vidrala_lightning_App</members>
+		<name>CustomApplication</name>
 	</types>
 	<types>
 		<members>omSelectRT</members>
 		<name>CustomLabel</name>
 	</types>
 	<types>
+		<members>Case</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Case</members>
 		<members>Cases_Sales</members>
 		<members>GrupoClienteRecordPage</members>
+		<members>OM_SAC_GrupoCliente</members>
 		<members>OM_SAC_GrupoClienteSales</members>
 		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Case-Case Page Layout</members>
+		<name>Layout</name>
 	</types>
 	<types>
 		<members>omCustomNewOverrideOpportunity</members>
