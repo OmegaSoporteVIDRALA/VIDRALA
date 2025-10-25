@@ -19,103 +19,17 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Vidrala</label>
     <navType>Standard</navType>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FiftySalesOfficeAccountPage</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Customers</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FiftySalesOfficeAccountPage</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Customers</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FiftySalesOfficeAccountPage</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Distributor</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FiftySalesOfficeAccountPage</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Distributor</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FiftySalesOfficeAccountPage</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Suppliers</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>FiftySalesOfficeAccountPage</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Suppliers</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
     <profileActionOverrides>
         <actionName>Tab</actionName>
         <content>Vidrala_Home_Page_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>Delegados_Comerciales</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>Delegados_Comerciales</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -124,7 +38,7 @@
         <pageOrSobjectType>Opportunity</pageOrSobjectType>
         <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
         <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -133,133 +47,7 @@
         <pageOrSobjectType>Opportunity</pageOrSobjectType>
         <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
         <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Opportunity</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Opportunity</pageOrSobjectType>
-        <recordType>Opportunity.Fifty_Master_Opportunity</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -267,7 +55,7 @@
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -275,119 +63,7 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Vidrala_Customer_Survey</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Vidrala_Customer_Survey__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -395,7 +71,7 @@
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Lead</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -403,119 +79,7 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Lead</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Lead_Fifty</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -523,7 +87,7 @@
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Quote</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -531,119 +95,7 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Quote</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Fifty Sales Office Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Quote</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Quote</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -652,7 +104,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Competitors</recordType>
         <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -661,115 +113,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Competitors</recordType>
         <type>Flexipage</type>
-        <profile>Fifty Account Managers Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Area Manager Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Director Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Director+Product Profile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>Fifty Planning Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>AccountFinancialAdjustment</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Competitors</recordType>
-        <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -828,7 +172,7 @@
         <pageOrSobjectType>Contract</pageOrSobjectType>
         <recordType>Contract.Specific_Product</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -837,7 +181,7 @@
         <pageOrSobjectType>Contract</pageOrSobjectType>
         <recordType>Contract.Specific_Product</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -882,7 +226,7 @@
         <pageOrSobjectType>Contract</pageOrSobjectType>
         <recordType>Contract.Customer_Annual</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -891,7 +235,7 @@
         <pageOrSobjectType>Contract</pageOrSobjectType>
         <recordType>Contract.Customer_Annual</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -949,7 +293,7 @@
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -957,7 +301,7 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Customer_Contact_Report__c</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -984,7 +328,7 @@
         <pageOrSobjectType>Quote</pageOrSobjectType>
         <recordType>Quote.OM_VID_Quote_Fifty</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -993,7 +337,7 @@
         <pageOrSobjectType>Quote</pageOrSobjectType>
         <recordType>Quote.OM_VID_Quote_Fifty</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1056,7 +400,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Customers</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1065,7 +409,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Customers</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1128,7 +472,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Customers</recordType>
         <type>Flexipage</type>
-        <profile>Fifty SAC Calidad</profile>
+        <profile>Vidrala Europe SAC Calidad</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1137,7 +481,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Customers</recordType>
         <type>Flexipage</type>
-        <profile>Fifty SAC Calidad</profile>
+        <profile>Vidrala Europe SAC Calidad</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1182,7 +526,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OM_VID_Grupo</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1191,7 +535,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OM_VID_Grupo</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1254,7 +598,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OM_VID_Grupo</recordType>
         <type>Flexipage</type>
-        <profile>Fifty SAC Calidad</profile>
+        <profile>Vidrala Europe SAC Calidad</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1263,7 +607,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OM_VID_Grupo</recordType>
         <type>Flexipage</type>
-        <profile>Fifty SAC Calidad</profile>
+        <profile>Vidrala Europe SAC Calidad</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1326,7 +670,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OM_VID_Destinatario</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1335,7 +679,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OM_VID_Destinatario</recordType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1380,7 +724,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OM_VID_Destinatario</recordType>
         <type>Flexipage</type>
-        <profile>Fifty SAC Calidad</profile>
+        <profile>Vidrala Europe SAC Calidad</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1389,7 +733,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OM_VID_Destinatario</recordType>
         <type>Flexipage</type>
-        <profile>Fifty SAC Calidad</profile>
+        <profile>Vidrala Europe SAC Calidad</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1445,7 +789,7 @@
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Product2</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1453,7 +797,7 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Product2</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>System Administrator Fifty</profile>
+        <profile>System Administrator Vidrala</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1493,7 +837,7 @@
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Product2</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Fifty SAC Calidad</profile>
+        <profile>Vidrala Europe SAC Calidad</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1501,7 +845,7 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Product2</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>Fifty SAC Calidad</profile>
+        <profile>Vidrala Europe SAC Calidad</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>Tab</actionName>
