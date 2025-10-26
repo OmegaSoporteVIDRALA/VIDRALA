@@ -1,5 +1,5 @@
 <template>
-    <template if:true={showModal}>
+    <template if:true={showConfirmationModal}>
         <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
             <div class="slds-modal__container">
                 <header class="slds-modal__header">
@@ -8,16 +8,25 @@
                 <div class="slds-modal__content slds-p-around_medium">
                     <p>
                         Está intentando crear un registro en un cliente que pertenece al grupo
-                        <strong> {parentName}</strong>.
+                        <strong>{parentName}</strong>.
                     </p>
                     <p>¿Está seguro de continuar con esta acción?</p>
                 </div>
                 <footer class="slds-modal__footer">
                     <lightning-button variant="neutral" label="Cancelar" onclick={handleCancel}></lightning-button>
-                    <lightning-button class="slds-m-left_small" variant="brand" label="Continuar" onclick={handleContinue}></lightning-button>
+                    <lightning-button class="slds-m-left_small" variant="brand" label="Continuar" onclick={handleConfirmationContinue}></lightning-button>
                 </footer>
             </div>
         </section>
         <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <template if:true={showRecordTypeSelector}>
+        <c-om-custom-r-t-selector
+            target-object={targetObject}
+            profile-id={profileId}
+            onrecordtypeselected={handleRecordTypeSelected}
+            oncancel={handleCancel}>
+        </c-om-custom-r-t-selector>
     </template>
 </template>
