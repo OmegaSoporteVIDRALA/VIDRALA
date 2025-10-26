@@ -16,7 +16,6 @@
         <apexClass>OM_VID_OpportunityTRGTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
-    <custom>true</custom>
  <classAccesses>
         <apexClass>OM_CustomNewOverrideController</apexClass>
         <enabled>true</enabled>
