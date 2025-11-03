@@ -11,25 +11,25 @@
         <inputParameters>
             <name>emailAddressesArray</name>
             <value>
-                <elementReference>listEmailRecipients</elementReference>
+                <elementReference>emailRecipients</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
             <name>ccRecipientAddressCollection</name>
             <value>
-                <elementReference>listCCRecipients</elementReference>
+                <elementReference>ccRecipients</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
             <name>senderType</name>
             <value>
-                <stringValue>OrgWideEmailAddress</stringValue>
+                <stringValue>CurrentUser</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>senderAddress</name>
             <value>
-                <stringValue>comercial@vidrala.com</stringValue>
+                <elementReference>$User.Email</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -47,7 +47,7 @@
         <inputParameters>
             <name>emailBody</name>
             <value>
-                <elementReference>EmailBody</elementReference>
+                <elementReference>BodyEmail</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -65,7 +65,7 @@
         <inputParameters>
             <name>relatedRecordId</name>
             <value>
-                <elementReference>$Record.OpportunityId</elementReference>
+                <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -83,13 +83,13 @@
         <inputParameters>
             <name>emailAddressesArray</name>
             <value>
-                <elementReference>listEmailRecipients</elementReference>
+                <elementReference>emailRecipients</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
             <name>ccRecipientAddressCollection</name>
             <value>
-                <elementReference>listCCRecipients</elementReference>
+                <elementReference>ccRecipients</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -119,7 +119,7 @@
         <inputParameters>
             <name>emailBody</name>
             <value>
-                <elementReference>EmailBody</elementReference>
+                <elementReference>BodyEmail</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -137,7 +137,7 @@
         <inputParameters>
             <name>relatedRecordId</name>
             <value>
-                <elementReference>$Record.OpportunityId</elementReference>
+                <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -155,13 +155,13 @@
         <inputParameters>
             <name>emailAddressesArray</name>
             <value>
-                <elementReference>listEmailRecipients</elementReference>
+                <elementReference>emailRecipients</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
             <name>ccRecipientAddressCollection</name>
             <value>
-                <elementReference>listCCRecipients</elementReference>
+                <elementReference>ccRecipients</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -191,7 +191,7 @@
         <inputParameters>
             <name>emailBody</name>
             <value>
-                <elementReference>EmailBody</elementReference>
+                <elementReference>BodyEmail</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -209,7 +209,7 @@
         <inputParameters>
             <name>relatedRecordId</name>
             <value>
-                <elementReference>$Record.OpportunityId</elementReference>
+                <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -227,13 +227,13 @@
         <inputParameters>
             <name>emailAddressesArray</name>
             <value>
-                <elementReference>listEmailRecipients</elementReference>
+                <elementReference>emailRecipients</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
             <name>ccRecipientAddressCollection</name>
             <value>
-                <elementReference>listCCRecipients</elementReference>
+                <elementReference>ccRecipients</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -263,7 +263,7 @@
         <inputParameters>
             <name>emailBody</name>
             <value>
-                <elementReference>EmailBody</elementReference>
+                <elementReference>BodyEmail</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -281,7 +281,7 @@
         <inputParameters>
             <name>relatedRecordId</name>
             <value>
-                <elementReference>$Record.OpportunityId</elementReference>
+                <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -296,14 +296,14 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>listEmailRecipients</assignToReference>
+            <assignToReference>emailRecipients</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>Get_Queue.Email</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>listCCRecipients</assignToReference>
+            <assignToReference>ccRecipients</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>$Record.Opportunity.Account.Sales_Office__r.Email</elementReference>
@@ -330,9 +330,45 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Opportunity_is_Fifty_and_in_Quotation</targetReference>
+                <targetReference>Fifty_Opportunity_and_Stage_Quotation</targetReference>
             </connector>
             <label>Flow should run</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Fifty_Opportunity_and_Stage_Quotation</name>
+        <label>Fifty Opportunity and Stage Quotation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>OM_VID_Quote_Fifty</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Quotation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.Market__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Email_Template</targetReference>
+            </connector>
+            <label>Yes</label>
         </rules>
     </decisions>
     <decisions>
@@ -343,12 +379,12 @@
         <defaultConnector>
             <targetReference>Market</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>NOT empty</defaultConnectorLabel>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Empty</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>listEmailRecipients</leftValueReference>
+                <leftValueReference>emailRecipients</leftValueReference>
                 <operator>IsEmpty</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -412,67 +448,14 @@
             <label>FR</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>Opportunity_is_Fifty_and_in_Quotation</name>
-        <label>Opportunity is Fifty and in Quotation?</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>Yes</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Opportunity.RecordType.DeveloperName</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Fifty_Master_Opportunity</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Opportunity.StageName</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Qualification</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Opportunity.LastStageChangeDate</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>LAST_LABORAL_DAY</elementReference>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Opportunity.Market__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_Email_Template</targetReference>
-            </connector>
-            <label>Yes</label>
-        </rules>
-    </decisions>
     <environments>Default</environments>
-    <formulas>
-        <name>LAST_LABORAL_DAY</name>
-        <dataType>Date</dataType>
-        <expression>IF(
-WEEKDAY(TODAY()) = 2 /*Monday*/ ,  TODAY() - 3, 
-IF(
-WEEKDAY(TODAY()) = 1 /* Domingo */ , TODAY() - 2, 
-TODAY() - 1)
-)</expression>
-    </formulas>
     <formulas>
         <name>vOrgBaseURL</name>
         <dataType>String</dataType>
         <expression>LEFT({!$Api.Enterprise_Server_URL_260}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_260}))</expression>
     </formulas>
-    <interviewLabel>Schedule - Notification pending quotation {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Schedule - Notification pending quotation</label>
+    <interviewLabel>Quote - Create Trigger - Email notification Quotation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote - Create Trigger - Email notification Quotation</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -499,7 +482,7 @@ TODAY() - 1)
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Get_User</targetReference>
+            <targetReference>Get_Owner</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -511,6 +494,27 @@ TODAY() - 1)
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>EmailTemplate</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Owner</name>
+        <label>Get Owner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Queue</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
@@ -548,54 +552,21 @@ TODAY() - 1)
         <object>Group</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordLookups>
-        <name>Get_User</name>
-        <label>Get User</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Get_Queue</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Opportunity.OwnerId</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>User</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <start>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Are_Flows_enabled</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>OM_VID_Oferta_Enviada__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
         <object>Quote</object>
-        <schedule>
-            <frequency>Daily</frequency>
-            <startDate>2025-10-08</startDate>
-            <startTime>00:00:00.000Z</startTime>
-        </schedule>
-        <triggerType>Scheduled</triggerType>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <textTemplates>
-        <name>EmailBody</name>
+        <name>BodyEmail</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;Opportunity name: {!$Record.Opportunity.Name}&lt;/p&gt;&lt;p&gt;Account name: {!$Record.Opportunity.Account.Name}&lt;/p&gt;&lt;p&gt;Opportunity Owner: {!Get_User.Name}&lt;/p&gt;&lt;p&gt;Quote Required By:&amp;nbsp;{!$Record.Opportunity.Quote_Required_By__c}&lt;/p&gt;&lt;p&gt;Link to the record:&amp;nbsp;&lt;a href=&quot;{!vOrgBaseURL}{!$Record.OpportunityId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Opportunity.Name}&lt;/a&gt;&lt;/p&gt;</text>
+        <text>&lt;p&gt;Opportunity name: {!$Record.Opportunity.Name}&lt;/p&gt;&lt;p&gt;Account name: {!$Record.Opportunity.Account.Name}&lt;/p&gt;&lt;p&gt;Opportunity Owner: {!Get_Owner.Name}&lt;/p&gt;&lt;p&gt;Quote Required By: {!$Record.Opportunity.Quote_Required_By__c}&lt;/p&gt;&lt;p&gt;Link to the record: &lt;a href=&quot;{!vOrgBaseURL}{!$Record.OpportunityId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Opportunity.Name}&lt;/a&gt;&lt;/p&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>subjectEmail</name>
@@ -603,21 +574,14 @@ TODAY() - 1)
         <text>New Opportunity Should Be Offered For {!$Record.Opportunity.Account.Name}</text>
     </textTemplates>
     <variables>
-        <name>emailRecipient</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>listCCRecipients</name>
+        <name>ccRecipients</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <name>listEmailRecipients</name>
+        <name>emailRecipients</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
