@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>Attendee__c.Hospitality_Notes__c</members>
+		<members>Attendee__c.Hospitality_Ordered__c</members>
+		<members>Events__c.Hospitality_Notes__c</members>
+		<members>Events__c.Hospitality_Ordered__c</members>
+		<members>Events__c.Hotel_Booked__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Attendee_Record_Page</members>
+		<members>Event_Record_Page</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Attendee__c-Attendee Layout</members>
+		<members>Events__c-Event Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Events_and_Attendees_and_Personnel_Users</members>
+		<name>PermissionSet</name>
+	</types>
+	<types>
+		<members>Admin</members>
+		<members>Encirc Data Loader API</members>
+		<name>Profile</name>
+	</types>
+	<version>65.0</version>
+</Package>
