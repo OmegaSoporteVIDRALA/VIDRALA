@@ -7,6 +7,7 @@
 		<members>OM_VID_OpportunityTRGTest</members>
 		<members>OM_VID_QuoteTRGHandler</members>
 		<members>OM_VID_QuoteTRGHandlerMethods</members>
+		<members>OM_VID_QuoteTRGHandlerMethods_Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
