@@ -18,7 +18,6 @@ export default class OmCustomRtSelector extends LightningElement {
         return !this.selectedRecordTypeId;
     }
 
-    // Carga del nombre del objeto
     @wire(getObjectLabel, { objectApiName: '$targetObject' })
     wiredObjectLabel({ error, data }) {
         if (data) {
@@ -28,7 +27,6 @@ export default class OmCustomRtSelector extends LightningElement {
         }
     }
     
-    // Carga de los record types
     @wire(getAvailableRecordTypes, { objectApiName: '$targetObject', profileId: '$profileId' })
     wiredRecordTypes({ error, data }) {
         if (data && data.length > 0) {
@@ -52,7 +50,7 @@ export default class OmCustomRtSelector extends LightningElement {
             this.dispatchEvent(new CustomEvent('recordtypeselected', {
                 detail: { recordTypeId: this.selectedRecordTypeId },
                 bubbles: true,
-                composed: true // 🔥 Esto es clave para que el evento atraviese el modal
+                composed: true 
             }));
         }
     }
@@ -60,7 +58,7 @@ export default class OmCustomRtSelector extends LightningElement {
     handleCancel() {
         this.dispatchEvent(new CustomEvent('cancel', {
             bubbles: true,
-            composed: true // 🔥 Igual aquí
+            composed: true 
         }));
     }
 }
