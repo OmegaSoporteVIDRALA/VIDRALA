@@ -15,7 +15,6 @@
 	</types>
 	<types>
 		<members>Opportunity_Update_Flow</members>
-		<members>Opportunity_Update_Trigger_Email_notification_Quotation</members>
 		<members>Schedule_Notification_pending_quotation</members>
 		<members>Quote_Create_Trigger_Email_notification_Quotation</members>
 		<name>Flow</name>
