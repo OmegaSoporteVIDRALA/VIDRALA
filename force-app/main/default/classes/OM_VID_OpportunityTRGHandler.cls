@@ -11,7 +11,6 @@ public with sharing class OM_VID_OpportunityTRGHandler {
     private static final String OpportunityRTFiftyId = Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get(OM_VID_Constants.opportunityRTFifty).getRecordTypeId();
 
     private static Boolean byPassApex = false;
-    private static final String QUEUE_DEVNAME_FILTER = 'Vidrala_Europe_Sales_%';
 
 	public static void setbyPassApex(Boolean skip){
 		byPassApex = skip;        
@@ -51,143 +50,10 @@ public with sharing class OM_VID_OpportunityTRGHandler {
             }
 
             if(isUpdate){
-                createTasksForSendingQuotes(news, oldsMap);
                 createQuoteAndQuoteLineCotizacion(news, oldsMap);
                 checkProductosGanadores(news, oldsMap);
             }
         }
-    }
-    
-    /*
-    *********************************************************
-    @Method Name    : createTasksForSendingQuotes
-    @author         : maria.lopez@omegacrmconsulting.com
-    @description    : Creates follow-up tasks for opportunities that meet specific criteria, such as stage change to "Quotation" and matching record type.
-					  Tasks are assigned to Account's Sales Office or predefined queues in Market field in Opportunity.
-	@param          : List<Opportunity> newOpps - List of newly updated Opportunity records from the trigger.
-	@param          : Map<Id, Opportunity> oldOppsMap - Map of old Opportunity records keyed by Id, used to detect changes.
-	@return         : void
-    ********************************************************
-    */
-    private static void createTasksForSendingQuotes(List<Opportunity> newOpps, Map<Id, Opportunity> oldOppsMap){
-        final String METHOD_NAME = 'createTasksForSendingQuotes';
-        List<Task> tasksToInsert = new List<Task>();
-        System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: Start');
-        if (newOpps.isEmpty()) {
-            System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: No opportunities to process');
-            return;
-        }
-        Map<String, Group> queueMap = getRelevantQueues();
-        for (Opportunity opp : newOpps) {
-            if (isToCreateTask(opp, oldOppsMap.get(opp.Id))){
-                Task newTaskToInsert = constructNewTask(opp, queueMap);
-                if(newTaskToInsert != null){
-                    tasksToInsert.add(newTaskToInsert);
-                }
-            }
-        }
-        if (!tasksToInsert.isEmpty()) {
-            try {
-                insert tasksToInsert;
-                System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: Inserted ' + tasksToInsert.size() + ' tasks');
-            } catch (DmlException e) {
-                System.debug(LoggingLevel.ERROR, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: DML Error: ' + e.getMessage());
-            }
-        } else {
-            System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: No tasks to insert');
-        }
-        System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: End');
-    }
-    
-    /*
-    *********************************************************
-    @Method Name    : getRelevantQueues
-    @author         : maria.lopez@omegacrmconsulting.com
-    @description    : Retrieves and maps relevant queue groups by Name for task assignment.
-	@return         : Map<String, Group> - Map of Group records keyed by Name.
-    ********************************************************
-    */
-    private static Map<String, Group> getRelevantQueues() {
-        final String METHOD_NAME = 'getRelevantQueues';
-        Map<String, Group> queueMap = new Map<String, Group>();
-        System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: Start');
-        for (Group groupItem : [
-            SELECT Id, Name 
-            FROM Group 
-            WHERE Type = :OM_VID_Constants.groupTypeQueue 
-            AND DeveloperName LIKE :QUEUE_DEVNAME_FILTER
-            AND Name != null
-        ]) {
-            queueMap.put(groupItem.Name.toUpperCase(), groupItem);
-        }
-        System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: End');
-        return queueMap;
-    }
-    
-    /*
-    *********************************************************
-    @Method Name    : isToCreateTask
-    @author         : maria.lopez@omegacrmconsulting.com
-    @description    : Determines whether a task should be created based on stage change and record type.
-	@param          : Opportunity newOpp - The updated opportunity record.
-	@param          : Opportunity oldOpp - The previous opportunity record.
-	@return         : Boolean - True if a task should be created, false otherwise.
-    ********************************************************
-    */
-    private static Boolean isToCreateTask(Opportunity newOpp, Opportunity oldOpp){
-        final String METHOD_NAME = 'isToCreateTask';
-        System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: Start');
-        if (newOpp == null || oldOpp == null) {
-            System.debug(LoggingLevel.WARN, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: Null opportunity detected');
-            return false;
-        }
-        Boolean result = newOpp?.RecordTypeId == OpportunityRTFiftyId && 
-            oldOpp?.StageName != OM_VID_Constants.opportunityStatusQuotation &&
-            newOpp?.StageName == OM_VID_Constants.opportunityStatusQuotation;
-        System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: Result: ' + result);
-        System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: End');
-		return result;
-    }
-    
-    /*
-    *********************************************************
-    @Method Name    : constructNewTask
-    @author         : maria.lopez@omegacrmconsulting.com
-    @description    : Builds a new Task record for an Opportunity marked for quotation.
-					  The task is assigned either to the Sales Office of the Account or to a queue based on the Market field.
-	@param          : Opportunity newOpp - The updated opportunity record.
-	@param          : Map<String, Group> queueMap - Map of available Group queues keyed by DeveloperName or Name.
-    @return         : Task newTask - A configured Task ready for insertion.
-    ********************************************************
-    */
-    private static Task constructNewTask(Opportunity newOpp, Map<String, Group> queueMap){
-    	final String METHOD_NAME = 'constructNewTask';
-        Task newTask = new Task();
-    	System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: Start');
-        if (newOpp == null) {
-            System.debug(LoggingLevel.WARN, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: Opportunity is null');
-            return null;
-        }
-        newTask.Subject = OM_VID_Constants.taskSubjectSendQuotation;
-        newTask.WhatId = newOpp.Id;
-        newTask.Status = OM_VID_Constants.taskStatusOpen;
-        newTask.Priority = OM_VID_Constants.taskPriorityNormal;
-        newTask.ActivityDate = System.today().addDays(1);
-        if (newOpp.Account?.Sales_Office__c != null) {
-            newTask.OwnerId = newOpp.Account.Sales_Office__c;
-        } else if (newOpp.Market__c != null && String.isNotBlank(newOpp.Market__c)) {
-            for (Group queue : queueMap.values()) {
-                if (queue?.Name?.toUpperCase().contains(newOpp.Market__c.toUpperCase())) {
-                    newTask.OwnerId = queue.Id;
-                    break;
-                }
-            }
-        } else {
-            System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: No user/queue found to assign this task.');
-            return null;
-        }
-		System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: End');
-    	return newTask;
     }
 
     public static void updateOppCloseDate(List<Opportunity> news, Map<Id, Opportunity> oldsMap){
