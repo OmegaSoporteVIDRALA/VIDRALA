@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>OM_CustomNewOverrideController</members>
+		<members>OM_CustomNewOverrideController_Test</members>
+		<members>OM_CustomRTSelectorController</members>
+		<members>OM_CustomRTSelectorController_Test</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>omSelectRT</members>
+		<name>CustomLabel</name>
+	</types>
+	<types>
+		<members>Cases_Sales</members>
+		<members>GrupoClienteRecordPage</members>
+		<members>OM_SAC_GrupoClienteSales</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
+		<members>Case-Case Page Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>omCustomNewOverrideOpportunity</members>
+		<members>omCustomRTSelector</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>Vidrala Europe Sales</members>
+		<name>Profile</name>
+	</types>
+	<types>
+		<members>Case.OM_VidralaEuropeSalesNoModifica</members>
+		<name>ValidationRule</name>
+	</types>
+	<types>
+		<members>Competitor_Action__c.OM_VID_New</members>
+		<members>Competitor_Price__c.OM_VID_New</members>
+		<members>Customer_Contact_Report__c.OM_VID_New</members>
+		<members>Supplier_Share__c.OM_VID_New</members>
+		<name>WebLink</name>
+	</types>
+	<version>64.0</version>
+</Package>

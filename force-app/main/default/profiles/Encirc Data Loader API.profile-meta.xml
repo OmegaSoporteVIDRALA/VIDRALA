@@ -4,39 +4,29 @@
     <description>Non-expiring password for API use</description>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Haulier_Comments__c</field>
+        <field>Attendee__c.Hospitality_Notes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Haulier__c</field>
+        <field>Attendee__c.Hospitality_Ordered__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Primary_Haulier__c</field>
+        <field>Events__c.Hospitality_Notes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Secondary_Haulier__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Account.Tertiary_Haulier__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Haulier__c.Haulier_Account__c</field>
+        <field>Events__c.Hospitality_Ordered__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
-        <layout>Account-Account Layout</layout>
+        <layout>Attendee__c-Attendee Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Haulier__c-Haulier Layout</layout>
+        <layout>Events__c-Event Layout</layout>
     </layoutAssignments>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
