@@ -15,6 +15,12 @@
             </value>
         </inputParameters>
         <inputParameters>
+            <name>ccRecipientAddressCollection</name>
+            <value>
+                <elementReference>ccRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
             <name>senderType</name>
             <value>
                 <stringValue>CurrentUser</stringValue>
@@ -35,7 +41,7 @@
         <inputParameters>
             <name>emailSubject</name>
             <value>
-                <elementReference>Get_Email_Template.Subject</elementReference>
+                <elementReference>subjectEmail</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -62,28 +68,18 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <inputParameters>
-            <name>recipientAddresses</name>
-            <value/>
-        </inputParameters>
         <nameSegment>emailSimple</nameSegment>
         <offset>0</offset>
         <versionString>1.0.1</versionString>
     </actionCalls>
     <actionCalls>
-        <name>Send_Email_to_Sales_office</name>
-        <label>Send Email to Sales office</label>
+        <name>Send_Email_to_Queue_ES</name>
+        <label>Send Email to Queue ES</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>emailAddresses</name>
-            <value>
-                <stringValue>re</stringValue>
-            </value>
-        </inputParameters>
         <inputParameters>
             <name>emailAddressesArray</name>
             <value>
@@ -91,15 +87,21 @@
             </value>
         </inputParameters>
         <inputParameters>
+            <name>ccRecipientAddressCollection</name>
+            <value>
+                <elementReference>ccRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
             <name>senderType</name>
             <value>
-                <stringValue>CurrentUser</stringValue>
+                <stringValue>OrgWideEmailAddress</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>senderAddress</name>
             <value>
-                <elementReference>$User.Email</elementReference>
+                <stringValue>comercial@vidrala.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -111,7 +113,151 @@
         <inputParameters>
             <name>emailSubject</name>
             <value>
-                <elementReference>Get_Email_Template.Subject</elementReference>
+                <elementReference>subjectEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>BodyEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>1.0.1</versionString>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_to_Queue_FR</name>
+        <label>Send Email to Queue FR</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddressesArray</name>
+            <value>
+                <elementReference>emailRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ccRecipientAddressCollection</name>
+            <value>
+                <elementReference>ccRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>commercial@vidrala.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>subjectEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>BodyEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>1.0.1</versionString>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_to_Queue_PT</name>
+        <label>Send Email to Queue PT</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddressesArray</name>
+            <value>
+                <elementReference>emailRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ccRecipientAddressCollection</name>
+            <value>
+                <elementReference>ccRecipients</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>vendas@vidrala.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>subjectEmail</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -153,27 +299,18 @@
             <assignToReference>emailRecipients</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>$Record.Account.Sales_Office__r.Email</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Send_Email_to_Sales_office</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Add_Email_Recipients_Queue</name>
-        <label>Add_Email_Recipients_Queue</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>emailRecipients</assignToReference>
-            <operator>Add</operator>
-            <value>
                 <elementReference>Get_Queue.Email</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ccRecipients</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Opportunity.Account.Sales_Office__r.Email</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
-            <targetReference>Send_Email_to_Queue</targetReference>
+            <targetReference>List_Email_is_Empty</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -211,21 +348,21 @@
                 <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Fifty_Master_Opportunity</stringValue>
+                    <stringValue>OM_VID_Quote_Fifty</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.StageName</leftValueReference>
+                <leftValueReference>$Record.Opportunity.StageName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Quotation</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record__Prior.StageName</leftValueReference>
-                <operator>NotEqualTo</operator>
+                <leftValueReference>$Record.Opportunity.Market__c</leftValueReference>
+                <operator>IsNull</operator>
                 <rightValue>
-                    <stringValue>Quotation</stringValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -235,52 +372,90 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Sales_office_assigned_in_Account</name>
-        <label>Sales office assigned in Account?</label>
+        <name>List_Email_is_Empty</name>
+        <label>List Email is Empty?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnectorLabel>Else</defaultConnectorLabel>
+        <defaultConnector>
+            <targetReference>Market</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Account_has_sales_office</name>
+            <name>Empty</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Account.Sales_Office__c</leftValueReference>
-                <operator>IsNull</operator>
+                <leftValueReference>emailRecipients</leftValueReference>
+                <operator>IsEmpty</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <label>Empty</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Market</name>
+        <label>Market?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_to_Queue</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Rest</defaultConnectorLabel>
+        <rules>
+            <name>ES</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Account.Sales_Office__c</leftValueReference>
-                <operator>IsBlank</operator>
+                <leftValueReference>$Record.Opportunity.Market__c</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <stringValue>ES</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Add_Email_Recipients</targetReference>
+                <targetReference>Send_Email_to_Queue_ES</targetReference>
             </connector>
-            <label>Account has sales office</label>
+            <label>ES</label>
         </rules>
         <rules>
-            <name>Opportunity_has_Market</name>
+            <name>PT</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Market__c</leftValueReference>
-                <operator>IsNull</operator>
+                <leftValueReference>$Record.Opportunity.Market__c</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <stringValue>PT</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_Queue</targetReference>
+                <targetReference>Send_Email_to_Queue_PT</targetReference>
             </connector>
-            <label>Opportunity has Market</label>
+            <label>PT</label>
+        </rules>
+        <rules>
+            <name>FR</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.Market__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>FR</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_to_Queue_FR</targetReference>
+            </connector>
+            <label>FR</label>
         </rules>
     </decisions>
     <environments>Default</environments>
-    <interviewLabel>Opportunity - Update Trigger - Email notification Quotation {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Opportunity - Update Trigger - Email notification Quotation</label>
+    <formulas>
+        <name>vOrgBaseURL</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_260}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_260}))</expression>
+    </formulas>
+    <interviewLabel>Quote - Create Trigger - Email notification Quotation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote - Create Trigger - Email notification Quotation</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -328,14 +503,14 @@
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Sales_office_assigned_in_Account</targetReference>
+            <targetReference>Get_Queue</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Email_Template.OwnerId</elementReference>
+                <elementReference>$Record.Opportunity.OwnerId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -349,7 +524,7 @@
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Add_Email_Recipients_Queue</targetReference>
+            <targetReference>Add_Email_Recipients</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -363,7 +538,7 @@
             <field>DeveloperName</field>
             <operator>Contains</operator>
             <value>
-                <elementReference>$Record.Market__c</elementReference>
+                <elementReference>$Record.Opportunity.Market__c</elementReference>
             </value>
         </filters>
         <filters>
@@ -383,31 +558,28 @@
         <connector>
             <targetReference>Are_Flows_enabled</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>StageName</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>StageName</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Quotation</stringValue>
-            </value>
-        </filters>
-        <object>Opportunity</object>
-        <recordTriggerType>Update</recordTriggerType>
+        <object>Quote</object>
+        <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <textTemplates>
         <name>BodyEmail</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;Opportunity name: {!$Record.Name}&lt;/p&gt;&lt;p&gt;Account name: {!$Record.Account.Name}&lt;/p&gt;&lt;p&gt;Opportunity Owner: {!Get_Owner.Name}&lt;/p&gt;&lt;p&gt;Quote Required By: &lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Quote_Required_By__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Link to the record: &lt;a href=&quot;https://encirc360--devomega.sandbox.lightning.force.com/{!$Record.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Name}&lt;/a&gt;&lt;/p&gt;</text>
+        <text>&lt;p&gt;Opportunity name: {!$Record.Opportunity.Name}&lt;/p&gt;&lt;p&gt;Account name: {!$Record.Opportunity.Account.Name}&lt;/p&gt;&lt;p&gt;Opportunity Owner: {!Get_Owner.Name}&lt;/p&gt;&lt;p&gt;Quote Required By: {!$Record.Opportunity.Quote_Required_By__c}&lt;/p&gt;&lt;p&gt;Link to the record: &lt;a href=&quot;{!vOrgBaseURL}{!$Record.OpportunityId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Opportunity.Name}&lt;/a&gt;&lt;/p&gt;</text>
     </textTemplates>
+    <textTemplates>
+        <name>subjectEmail</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>New Opportunity Should Be Offered For {!$Record.Opportunity.Account.Name}</text>
+    </textTemplates>
+    <variables>
+        <name>ccRecipients</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>emailRecipients</name>
         <dataType>String</dataType>
