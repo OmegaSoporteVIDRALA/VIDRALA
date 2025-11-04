@@ -47,7 +47,7 @@ global class OM_SapFunctionsMockActualSalesH_Test implements WebServiceMock {
         OM_SapFunctionsStyle.RrwsTCell cellData = new OM_SapFunctionsStyle.RrwsTCell();
         cellData.item = new List<OM_SapFunctionsStyle.RrwsSCell>();
 
-        for (Integer i = 0; i < 3; i++) {
+        for (Integer i = 0; i < 20; i++) {
             OM_SapFunctionsStyle.RrwsSCell cell = new OM_SapFunctionsStyle.RrwsSCell();
             cell.Value = String.valueOf(i * 100);
             //cell.ColumnIndex = i;
