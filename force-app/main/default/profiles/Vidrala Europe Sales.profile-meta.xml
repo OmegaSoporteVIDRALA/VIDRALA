@@ -42,11 +42,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>QuoteLineItem.OM_ProductColourTranslateAuto__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>QuoteLineItem.OM_VID_Incoterms__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -85,6 +80,104 @@
         <field>QuoteLineItem.Volume_000s_without_decimal__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.OM_VID_EuroTonnePrevious__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.OM_VID_EuroTonneVarPercent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.OM_VID_EuroTonneVar__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Actual_Sales_History__c.OM_VID_RevenuePrev__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Actual_Sales_History__c.OM_VID_RevenueVar__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Actual_Sales_History__c.OM_VID_VolumePrev__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Actual_Sales_History__c.OM_VID_VolumeVar__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.PrecioFFPrev__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.PrecioFFVarPercent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.PrecioFFVar__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.RevenuePrev__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.RevenueVarPercentage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.RevenueVar__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.TonnesPrev__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.TonnesVarPercent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.TonnesVar__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.Volume000sPrev__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.Volume000sVarPercent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Actual_Sales_History__c.Volume000sVar__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <layoutAssignments>
+        <layout>Actual_Sales_History__c-ActualSalesHistory Vidrala</layout>
+    </layoutAssignments>
 <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
