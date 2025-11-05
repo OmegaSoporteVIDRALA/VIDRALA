@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>omSelectRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje de seleccion de Record Type usado en el LWC omCustomRTSelector</shortDescription>
+        <value>Seleccione un Record Type</value>
+    </labels>
+    <labels>
         <fullName>omAllOption</fullName>
-        <categories>OM</categories>
+<categories>OM</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>All Option</shortDescription>
