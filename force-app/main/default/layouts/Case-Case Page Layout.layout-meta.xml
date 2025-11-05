@@ -47,6 +47,10 @@
                 <behavior>Edit</behavior>
                 <field>OM_SAC_Grupo_Cliente__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OM_SAC_Defecto__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -89,10 +93,6 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>OM_SAC_loteOAlbaran__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OM_SAC_ean__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
