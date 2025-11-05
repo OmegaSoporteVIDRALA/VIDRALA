@@ -39,6 +39,10 @@
 		<members>Competitor_Price__c.OM_VID_New</members>
 		<members>Customer_Contact_Report__c.OM_VID_New</members>
 		<members>Supplier_Share__c.OM_VID_New</members>
+		<members>Contact.OM_VID_New</members>
+		<members>Case.OM_VID_New</members>
+		<members>Discount__c.OM_VID_New</members>
+		<members>Opportunity.OM_VID_New</members>
 		<name>WebLink</name>
 	</types>
 	<version>64.0</version>

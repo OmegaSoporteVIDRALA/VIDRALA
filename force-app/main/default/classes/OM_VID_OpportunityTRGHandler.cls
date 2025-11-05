@@ -6,7 +6,9 @@
 * @last modified by  : mmadridp@omegacrmconsulting.com
 **/
 public with sharing class OM_VID_OpportunityTRGHandler {
-    private static final String OpportunityRTFiftyId = [SELECT Id FROM RecordType WHERE SObjectType = :OM_VID_Constants.oppName AND DeveloperName = :OM_VID_Constants.opportunityRTFifty LIMIT 1].Id;
+    
+    private static final String CLASS_NAME = OM_VID_OpportunityTRGHandler.class.getName();
+    private static final String OpportunityRTFiftyId = Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get(OM_VID_Constants.opportunityRTFifty).getRecordTypeId();
 
     private static Boolean byPassApex = false;
 
