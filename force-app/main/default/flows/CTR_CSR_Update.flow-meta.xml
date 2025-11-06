@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>New_Record_Email_Alert</name>
-        <label>New Record Email Alert</label>
-        <locationX>50</locationX>
-        <locationY>647</locationY>
-        <actionName>CTR_CSR__c.Email_alert_new_CTR_CSR</actionName>
-        <actionType>emailAlert</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>SObjectRowId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <name>Record_Updated_Email_Alert</name>
-        <label>Record Updated Email Alert</label>
-        <locationX>314</locationX>
+        <description>emailAlert-CTR_CSR__c.CSR_Completed
+Template - CSR Completed
+Recipients - member o CSR emails Public group</description>
+        <name>CSR_Completed_email_alert</name>
+        <label>CSR Completed email alert</label>
+        <locationX>116</locationX>
         <locationY>755</locationY>
-        <actionName>CTR_CSR__c.Email_alert_CTR_CSR_Update</actionName>
+        <actionName>CTR_CSR__c.CSR_Completed</actionName>
         <actionType>emailAlert</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -29,12 +17,15 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
+        <nameSegment>CTR_CSR__c.CSR_Completed</nameSegment>
+        <offset>0</offset>
     </actionCalls>
     <apiVersion>54.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <decisions>
         <name>Are_Flows_enabled</name>
         <label>Are Flows enabled?</label>
-        <locationX>545</locationX>
+        <locationX>347</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -54,55 +45,12 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Check_if_the_following_fields_are_updated</name>
-        <label>Check if the following fields are updated?</label>
-        <locationX>446</locationX>
-        <locationY>647</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Yes1</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.CSR_Name__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Report_Type__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Customer_Name__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Date_of_Audit__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Record_Updated_Email_Alert</targetReference>
-            </connector>
-            <label>Yes</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Is_It_a_New_Record</name>
         <label>Is It a New Record?</label>
-        <locationX>248</locationX>
+        <locationX>50</locationX>
         <locationY>539</locationY>
         <defaultConnector>
-            <targetReference>Check_if_the_following_fields_are_updated</targetReference>
+            <targetReference>Record_is_Completed</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Record Update</defaultConnectorLabel>
         <rules>
@@ -115,13 +63,34 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>New_Record_Email_Alert</targetReference>
-            </connector>
             <label>New Record</label>
         </rules>
     </decisions>
-    <description>using the formula field to update record name</description>
+    <decisions>
+        <name>Record_is_Completed</name>
+        <label>Record is Completed</label>
+        <locationX>248</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes1</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Completed__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CSR_Completed_email_alert</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Removing CTR References</description>
+    <environments>Default</environments>
     <formulas>
         <description>Formula to differentiate new record from updated records</description>
         <name>IsNew</name>
@@ -129,7 +98,7 @@
         <expression>ISNEW()</expression>
     </formulas>
     <interviewLabel>CTR &amp; CSR Update {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>CTR &amp; CSR Update</label>
+    <label>CSR Update</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -153,23 +122,11 @@
         <description>use the field with formulas in to update the name field to keep the format the same</description>
         <name>Update_Record_Name</name>
         <label>Update Record Name</label>
-        <locationX>248</locationX>
+        <locationX>50</locationX>
         <locationY>431</locationY>
         <connector>
             <targetReference>Is_It_a_New_Record</targetReference>
         </connector>
-        <inputAssignments>
-            <field>CSR_Name__c</field>
-            <value>
-                <elementReference>$Record.Formula_Name__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>CTR_Name__c</field>
-            <value>
-                <elementReference>$Record.Formula_Name__c</elementReference>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <field>Name</field>
             <value>
@@ -179,7 +136,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>419</locationX>
+        <locationX>221</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Are_Flows_enabled</targetReference>
