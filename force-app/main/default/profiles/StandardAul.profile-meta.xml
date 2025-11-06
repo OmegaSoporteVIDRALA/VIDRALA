@@ -2,72 +2,30 @@
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <custom>false</custom>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.CSR_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Completed__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Customer_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Encirc_Contact__c</field>
+        <editable>false</editable>
+        <field>Account.Account_Executive_FL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CTR_CSR__c.Files_last_updated__c</field>
-        <readable>true</readable>
+        <field>Account.Account_Manager_FL__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CTR_CSR__c.Files_uploaded__c</field>
-        <readable>true</readable>
+        <field>Account.Sales_Admin_FL__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CTR_CSR__c.Formula_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CTR_CSR__c.Number_of_files_uploaded__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Review_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Specification_Document_Date_of_Issue__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Specification_Document_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Specification_Document_Revision_Number__c</field>
-        <readable>true</readable>
+        <field>Account.Senior_Sales_Office_FL__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <layoutAssignments>
-        <layout>CTR_CSR__c-CSR Layout</layout>
+        <layout>Account-Account Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Supplier_Share__c-Supplier Share Layout</layout>
     </layoutAssignments>
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>

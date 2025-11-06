@@ -1,56 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>CTR_CSR__c.CSR_Name__c</members>
-		<members>CTR_CSR__c.Completed__c</members>
-		<members>CTR_CSR__c.Customer_Name__c</members>
-		<members>CTR_CSR__c.Date__c</members>
-		<members>CTR_CSR__c.Encirc_Contact__c</members>
-		<members>CTR_CSR__c.Files_last_updated__c</members>
-		<members>CTR_CSR__c.Files_uploaded__c</members>
-		<members>CTR_CSR__c.Formula_Name__c</members>
-		<members>CTR_CSR__c.Number_of_files_uploaded__c</members>
-		<members>CTR_CSR__c.Review_Date__c</members>
-		<members>CTR_CSR__c.Specification_Document_Date_of_Issue__c</members>
-		<members>CTR_CSR__c.Specification_Document_Name__c</members>
-		<members>CTR_CSR__c.Specification_Document_Revision_Number__c</members>
+		<members>OM_BW_InsertActualSalesHistory</members>
+		<members>OM_BW_InsertActualSalesHistory_Test</members>
+		<members>OM_SapFunctionsMockActualSalesH_Test</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Actual_Sales_History__c.OM_VID_EuroTonnePrevious__c</members>
+		<members>Actual_Sales_History__c.OM_VID_EuroTonneVarPercent__c</members>
+		<members>Actual_Sales_History__c.OM_VID_EuroTonneVar__c</members>
+		<members>Actual_Sales_History__c.OM_VID_RevenuePrev__c</members>
+		<members>Actual_Sales_History__c.OM_VID_RevenueVar__c</members>
+		<members>Actual_Sales_History__c.OM_VID_VolumePrev__c</members>
+		<members>Actual_Sales_History__c.OM_VID_VolumeVar__c</members>
+		<members>Actual_Sales_History__c.PrecioFFPrev__c</members>
+		<members>Actual_Sales_History__c.PrecioFFVarPercent__c</members>
+		<members>Actual_Sales_History__c.PrecioFFVar__c</members>
+		<members>Actual_Sales_History__c.RevenuePrev__c</members>
+		<members>Actual_Sales_History__c.RevenueVarPercentage__c</members>
+		<members>Actual_Sales_History__c.RevenueVar__c</members>
+		<members>Actual_Sales_History__c.TonnesPrev__c</members>
+		<members>Actual_Sales_History__c.TonnesVarPercent__c</members>
+		<members>Actual_Sales_History__c.TonnesVar__c</members>
+		<members>Actual_Sales_History__c.Volume000sPrev__c</members>
+		<members>Actual_Sales_History__c.Volume000sVarPercent__c</members>
+		<members>Actual_Sales_History__c.Volume000sVar__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
-		<members>CTR_CSR__c</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>CTR_CSR</members>
-		<name>FlexiPage</name>
-	</types>
-	<types>
-		<members>CTR_CSR_Update</members>
-		<name>Flow</name>
-	</types>
-	<types>
-		<members>CSR_Emails</members>
-		<name>Group</name>
-	</types>
-	<types>
-		<members>CTR_CSR__c-CSR Layout</members>
+		<members>Actual_Sales_History__c-ActualSalesHistory Vidrala</members>
 		<name>Layout</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>Admin</members>
+		<members>Integration User</members>
+		<members>System Administrator Vidrala</members>
+		<members>Vidrala Europe Sales</members>
+		<members>Vidrala Europe Support</members>
 		<name>Profile</name>
 	</types>
-	<types>
-		<members>CTR_CSR__c</members>
-		<name>Workflow</name>
-	</types>
-	<types>
-		<members>CTR_CSR__c.CSR_Completed</members>
-		<name>WorkflowAlert</name>
-	</types>
-	<types>
-    <members>unfiled$public/CSR_Completed</members>
-    <name>EmailTemplate</name>
-</types>
-	<version>65.0</version>
+	<version>64.0</version>
 </Package>

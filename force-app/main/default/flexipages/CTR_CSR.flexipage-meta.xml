@@ -47,7 +47,6 @@
                     <value>5</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
-                <identifier>force_highlightsPanel1</identifier>
             </componentInstance>
         </itemInstances>
         <name>header</name>
@@ -60,12 +59,12 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Name</fieldItem>
-                <identifier>RecordNameField</identifier>
+                <fieldItem>Record.CSR_Name__c</fieldItem>
                 <visibilityRule>
                     <criteria>
-                        <leftValue>{!Record.Name}</leftValue>
-                        <operator>NE</operator>
+                        <leftValue>{!Record.Report_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>CSR</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
@@ -74,20 +73,25 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Date__c</fieldItem>
-                <identifier>RecordDate_cField</identifier>
+                <fieldItem>Record.CTR_Name__c</fieldItem>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Report_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>CTR</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Customer_Name__c</fieldItem>
-                <identifier>RecordCustomer_Name_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -96,8 +100,7 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Review_Date__c</fieldItem>
-                <identifier>RecordReview_Date__cField</identifier>
+                <fieldItem>Record.Filling_Site__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -106,8 +109,23 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Specification_Document_Name__c</fieldItem>
-                <identifier>RecordSpecification_Document_Name__cField</identifier>
+                <fieldItem>Record.Filling_Line__c</fieldItem>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Report_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>CTR</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Files_uploaded__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -116,8 +134,7 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Specification_Document_Date_of_Issue__c</fieldItem>
-                <identifier>RecordSpecification_Document_Date_of_Issue__cField</identifier>
+                <fieldItem>Record.Number_of_files_uploaded__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -126,18 +143,7 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Specification_Document_Revision_Number__c</fieldItem>
-                <identifier>RecordSpecification_Document_Revision_Number__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Completed__c</fieldItem>
-                <identifier>RecordCompleted__cField</identifier>
+                <fieldItem>Record.Files_last_updated__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <name>Facet-74ac7757-14da-4e80-a28a-f41ffa97e762</name>
@@ -148,30 +154,18 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>readonly</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Files_uploaded__c</fieldItem>
-                <identifier>RecordFiles_uploaded_cField</identifier>
+                <fieldItem>Record.Date_of_Audit__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>readonly</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Number_of_files_uploaded__c</fieldItem>
-                <identifier>RecordNumber_of_files_uploaded_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>readonly</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Files_last_updated__c</fieldItem>
-                <identifier>RecordFiles_last_updated_cField</identifier>
+                <fieldItem>Record.Encirc_Contact__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <name>Facet-77d76650-81f3-4916-8d6a-1fb384a592eb</name>
@@ -185,7 +179,6 @@
                     <value>Facet-74ac7757-14da-4e80-a28a-f41ffa97e762</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -195,7 +188,6 @@
                     <value>Facet-77d76650-81f3-4916-8d6a-1fb384a592eb</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-ff1b21fc-c54b-403e-8c2e-99841bc5de01</name>
@@ -209,7 +201,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.OwnerId</fieldItem>
-                <identifier>RecordOwnerIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -219,7 +210,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CreatedById</fieldItem>
-                <identifier>RecordCreatedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-f66e7c92-33cd-483e-bf01-0a48eb959bdd</name>
@@ -233,7 +223,6 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.LastModifiedById</fieldItem>
-                <identifier>RecordLastModifiedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-28cdf812-6b55-4610-b67b-129e01191d66</name>
@@ -247,7 +236,6 @@
                     <value>Facet-f66e7c92-33cd-483e-bf01-0a48eb959bdd</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -257,7 +245,6 @@
                     <value>Facet-28cdf812-6b55-4610-b67b-129e01191d66</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-eb95e165-a7ed-4e35-baa6-80e51ed98d67</name>
@@ -271,15 +258,10 @@
                     <value>Facet-ff1b21fc-c54b-403e-8c2e-99841bc5de01</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -289,21 +271,15 @@
                     <value>Facet-eb95e165-a7ed-4e35-baa6-80e51ed98d67</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>System Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>force:recordDetailPanelMobile</componentName>
-                <identifier>force_recordDetailPanelMobile</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-167da84f-f7d7-4131-bee4-8747d821848b</name>
@@ -325,7 +301,6 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListContainer</componentName>
-                <identifier>force_relatedListContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-fe6c7086-1bd1-4be6-a8a9-da613160ea3d</name>
@@ -347,7 +322,6 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -365,7 +339,6 @@
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-b39fc4f1-1657-4588-9a47-41682da0f562</name>
@@ -375,15 +348,10 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Tabs</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-b39fc4f1-1657-4588-9a47-41682da0f562</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset1</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
@@ -397,13 +365,12 @@
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentName>runtime_sales_activities:activityPanel</componentName>
-                <identifier>runtime_sales_activities_activityPanel1</identifier>
             </componentInstance>
         </itemInstances>
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>CSR</masterLabel>
+    <masterLabel>CTR &amp; CSR</masterLabel>
     <sobjectType>CTR_CSR__c</sobjectType>
     <template>
         <name>flexipage:recordHomeTemplateDesktop</name>
