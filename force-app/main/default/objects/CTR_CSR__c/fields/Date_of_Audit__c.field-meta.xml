@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Completed__c</fullName>
-    <defaultValue>false</defaultValue>
-    <description>Triggers an email from flow</description>
-    <label>Completed</label>
+    <fullName>Date_of_Audit__c</fullName>
+    <externalId>false</externalId>
+    <label>Date of Audit</label>
+    <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Checkbox</type>
+    <type>Date</type>
 </CustomField>
