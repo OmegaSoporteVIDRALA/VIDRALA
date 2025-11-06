@@ -1,4 +1,4 @@
 A CSR record has been created for “{!CTR_CSR__c.Customer_Name__c}” 
 
 Please view the completed record via this link.
-{!CTR_CSR__c.Link}
+{!CTR_CSR__c.Link} 
