@@ -2,7 +2,7 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>CSR_Completed</fullName>
-        <description>CSR Completed</description>
+        <description>CSR Completed Email</description>
         <protected>false</protected>
         <recipients>
             <recipient>CSR_Emails</recipient>
