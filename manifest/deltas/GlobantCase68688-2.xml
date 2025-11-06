@@ -40,7 +40,7 @@
 		<members>CTR_CSR__c-CSR Layout</members>
 		<name>Layout</name>
 	</types>
-	<types>
+		<types>
 		<members>Admin</members>
 		<members>Encirc Community User</members>
 		<members>Encirc Data Loader API</members>
