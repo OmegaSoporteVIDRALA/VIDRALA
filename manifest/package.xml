@@ -41,6 +41,10 @@
 		<name>Profile</name>
 	</types>
 	<types>
+		<members>CTR_CSR__c</members>
+		<name>Workflow</name>
+	</types>
+	<types>
 		<members>CTR_CSR__c.CSR_Completed</members>
 		<name>WorkflowAlert</name>
 	</types>

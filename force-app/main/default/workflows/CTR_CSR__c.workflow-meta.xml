@@ -11,4 +11,26 @@
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/CSR_Completed</template>
     </alerts>
+    <alerts>
+        <fullName>Email_alert_CTR_CSR_Update</fullName>
+        <description>Email alert CTR/CSR Record Update</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CTR_CSR_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Update_on_CTR_CSR_Record_Lightning_1667825151297</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_alert_new_CTR_CSR</fullName>
+        <description>Email alert for new CTR/CSR Record</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CTR_CSR_Team</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_CTR_CSR_Lightning_1667826225856</template>
+    </alerts>
 </Workflow>
