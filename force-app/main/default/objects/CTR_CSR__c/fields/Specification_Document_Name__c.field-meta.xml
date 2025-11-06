@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Formula_Name__c</fullName>
-    <description>Updates Name via flow</description>
+    <fullName>Specification_Document_Name__c</fullName>
     <externalId>false</externalId>
-    <formula>Customer_Name__r.Name &amp;&quot; - &quot;&amp; TEXT(Day(Date__c))&amp;&quot;.&quot;&amp;TEXT(MONTH(Date__c))&amp;&quot;.&quot;&amp;TEXT(YEAR(Date__c))</formula>
-    <label>Formula Name</label>
+    <label>Specification Document Name</label>
+    <length>100</length>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
