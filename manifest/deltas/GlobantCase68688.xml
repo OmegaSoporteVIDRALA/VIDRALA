@@ -48,9 +48,5 @@
 		<members>CTR_CSR__c.CSR_Completed</members>
 		<name>WorkflowAlert</name>
 	</types>
-	<types>
-    <members>unfiled$public/CSR_Completed</members>
-    <name>EmailTemplate</name>
-</types>
 	<version>65.0</version>
 </Package>
