@@ -3,16 +3,7 @@
     <fullName>Formula_Name__c</fullName>
     <description>Updates Name via flow</description>
     <externalId>false</externalId>
-    <formula>IF(TEXT(Report_Type__c) = &quot;CTR&quot;, 
-
-TEXT(Report_Type__c)&amp;&quot; - &quot;&amp; Customer_Name__r.Name &amp;&quot; - &quot;&amp;&quot;Line &quot;&amp; Filling_Line__c &amp;&quot; - &quot;
-&amp; TEXT(Day(Date_of_Audit__c))&amp;&quot;.&quot;&amp;TEXT(MONTH(Date_of_Audit__c))&amp;&quot;.&quot;&amp;TEXT(YEAR(Date_of_Audit__c)), 
-
-
-TEXT(Report_Type__c)&amp;&quot; - &quot;&amp; Customer_Name__r.Name &amp;&quot; - &quot;&amp;&quot;Site &quot;&amp;  Filling_Site__c  &amp;&quot; - &quot;
-&amp; TEXT(Day(Date_of_Audit__c))&amp;&quot;.&quot;&amp;TEXT(MONTH(Date_of_Audit__c))&amp;&quot;.&quot;&amp;TEXT(YEAR(Date_of_Audit__c))
-)</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <formula>Customer_Name__r.Name &amp;&quot; - &quot;&amp; TEXT(Day(Date__c))&amp;&quot;.&quot;&amp;TEXT(MONTH(Date__c))&amp;&quot;.&quot;&amp;TEXT(YEAR(Date__c))</formula>
     <label>Formula Name</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

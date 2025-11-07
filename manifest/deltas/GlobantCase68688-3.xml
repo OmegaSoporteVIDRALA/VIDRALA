@@ -62,9 +62,5 @@
 		<members>CTR_CSR__c.CSR_Completed</members>
 		<name>WorkflowAlert</name>
 	</types>
-<types>
-    <members>CSR_Templates</members>
-    <name>EmailFolder</name>
-</types>
 	<version>65.0</version>
 </Package>
