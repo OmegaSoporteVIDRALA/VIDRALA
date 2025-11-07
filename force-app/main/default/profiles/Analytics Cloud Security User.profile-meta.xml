@@ -94,7 +94,6 @@
     <layoutAssignments>
         <layout>CTR_CSR__c-CSR Layout</layout>
     </layoutAssignments>
-    </recordTypeVisibilities>
     <userLicense>Analytics Cloud Integration User</userLicense>
     <userPermissions>
         <enabled>true</enabled>
