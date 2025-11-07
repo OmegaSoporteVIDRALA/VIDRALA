@@ -8,10 +8,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>CTR_CSR__c.Completed__c</field>
         <readable>true</readable>
     </fieldPermissions>
