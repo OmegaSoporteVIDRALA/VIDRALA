@@ -46,6 +46,7 @@
         <editable>false</editable>
         <field>CTR_CSR__c.Number_of_files_uploaded__c</field>
         <readable>true</readable>
+    </fieldPermissions>    
     <fieldPermissions>
         <editable>true</editable>
         <field>CTR_CSR__c.Review_Date__c</field>
