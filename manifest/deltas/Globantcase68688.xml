@@ -45,61 +45,13 @@
         <name>ListView</name>
     </types>
     <types>
-        <members>Admin</members>
-        <members>Analytics Cloud Integration User</members>
-        <members>Analytics Cloud Security User</members>
-        <members>Anypoint Integration</members>
-        <members>Chatter External User</members>
-        <members>Chatter Free User</members>
-        <members>Chatter Moderator User</members>
-        <members>Company Communities User</members>
-        <members>ContractManager</members>
-        <members>Encirc - Customer Services%2FQuality User</members>
-        <members>Encirc Account Managers Profile</members>
-        <members>Encirc Commercial User</members>
+      <members>Admin</members>
         <members>Encirc Community User</members>
         <members>Encirc Data Loader API</members>
-        <members>Encirc Design%2FPlanning User</members>
-        <members>Encirc Director Profile</members>
-        <members>Encirc Finance%2FLegal User</members>
         <members>Encirc Legal Community User</members>
-        <members>Encirc Login Only</members>
-        <members>Encirc Manufacturing Community User</members>
         <members>Encirc Mould Lifecycle Community user</members>
-        <members>Encirc Non Sales User</members>
         <members>Encirc Sales</members>
-        <members>Encirc Sales Admin</members>
-        <members>Encirc Sales Office Profile</members>
-        <members>Encirc Standard User</members>
         <members>Encirc Support</members>
-        <members>Encirc Systems Administrator</members>
-        <members>Encirc Transport User</members>
-        <members>Encirc Workflow Manager</members>
-        <members>Identity User</members>
-        <members>Integration User</members>
-        <members>Legal Community Profile</members>
-        <members>MarketingProfile</members>
-        <members>Minimum Access - API Only Integrations</members>
-        <members>Minimum Access - API Only Integrations %28Copy%29</members>
-        <members>Minimum Access - Salesforce</members>
-        <members>Minimum Access - Salesforce</members>
-        <members>Minimum Access - Salesforce Custom</members>
-        <members>PP Commercial</members>
-        <members>PP Customer Services - Quality</members>
-        <members>PP Design Planning User</members>
-        <members>PP Finance - Legal</members>
-        <members>PP Transport User</members>
-        <members>Premier Support User</members>
-        <members>Read Only</members>
-        <members>Sales Insights Integration User</members>
-        <members>Salesforce API Only System Integrations</members>
-        <members>SolutionManager</members>
-        <members>Standard</members>
-        <members>System Administrator Fifty</members>
-        <members>System Administrator test</members>
-        <members>Test Profle</members>
-        <members>Vidrala Europe Sales</members>
-        <members>Vidrala Europe Support</members>
         <name>Profile</name>
     </types>
     <types>
