@@ -44,14 +44,13 @@
         <name>ListView</name>
     </types>
     <types>
-        <members>Admin</members>
+      <members>Admin</members>
         <members>Encirc Community User</members>
         <members>Encirc Data Loader API</members>
         <members>Encirc Legal Community User</members>
         <members>Encirc Mould Lifecycle Community user</members>
         <members>Encirc Sales</members>
         <members>Encirc Support</members>
-
         <name>Profile</name>
     </types>
     <types>
