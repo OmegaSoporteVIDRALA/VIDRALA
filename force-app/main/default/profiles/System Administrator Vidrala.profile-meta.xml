@@ -1,72 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <custom>false</custom>
+    <classAccesses>
+        <apexClass>OM_BW_InsertActualSalesHistory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OM_SapFunctionsMockActualSalesH_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <custom>true</custom>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.CSR_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Completed__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Customer_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Encirc_Contact__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Files_last_updated__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CTR_CSR__c.Files_uploaded__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CTR_CSR__c.Formula_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Number_of_files_uploaded__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Review_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Specification_Document_Date_of_Issue__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Specification_Document_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Specification_Document_Revision_Number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-        <fieldPermissions>
         <editable>true</editable>
         <field>Actual_Sales_History__c.OM_VID_EuroTonnePrevious__c</field>
         <readable>true</readable>
@@ -164,30 +107,14 @@
     <layoutAssignments>
         <layout>Actual_Sales_History__c-ActualSalesHistory Vidrala</layout>
     </layoutAssignments>
-    <layoutAssignments>
-        <layout>CTR_CSR__c-CSR Layout</layout>
-    </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>
     </loginIpRanges>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>CTR_CSR__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
         <name>AIViewInsightObjects</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AccessOrchestrationObjects</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -207,31 +134,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>AllowObjectDetectionTraining</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ApexRestServices</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ApiEnabled</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AppFrameworkManageApp</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AppFrameworkManageTemplate</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ApprovalAdmin</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ApprovalDesigner</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -252,10 +159,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>BulkMacrosAllowed</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CanApproveUninstalledApps</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -296,10 +199,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ChatterOwnGroups</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ClientSecretRotation</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -371,10 +270,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>DecisionTableExecUserAccess</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>DelegatedTwoFactor</name>
     </userPermissions>
     <userPermissions>
@@ -392,10 +287,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>EditActivatedOrders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditBillingInfo</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -471,23 +362,15 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ExternalClientAppAdmin</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ExternalClientAppDeveloper</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ExternalClientAppViewer</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>FreezeUsers</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>GiveRecognitionBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>IdentityEnabled</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -567,15 +450,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageContentTaxonomy</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManageContentTypes</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCustomDomains</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -599,10 +474,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageDevSandboxes</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManageDynamicDashboards</name>
     </userPermissions>
     <userPermissions>
@@ -612,14 +483,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageExchangeConfig</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageFilesAndAttachments</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageForecastingCustomData</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -655,15 +518,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageMobileAppSecurity</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManageNetworks</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageOrchInstsAndWorkItems</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -763,10 +618,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ModifyAllPolicyCenterPolicies</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ModifyDataClassification</name>
     </userPermissions>
     <userPermissions>
@@ -807,10 +658,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>QrCodeGeneratorMobilePublisherPlayground</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>RemoveDirectMessageMembers</name>
     </userPermissions>
     <userPermissions>
@@ -836,6 +683,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SendCustomNotifications</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendExternalEmailAvailable</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -887,10 +738,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>TerritoryOperations</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>TraceXdsQueries</name>
     </userPermissions>
     <userPermissions>
@@ -919,10 +766,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>UserInteractionInsights</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ViewAllData</name>
     </userPermissions>
     <userPermissions>
@@ -931,23 +774,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ViewAllPolicyCenterPolicies</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ViewAllProfiles</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewAllUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewClientSecret</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewContentTaxonomy</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -976,10 +807,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewHelpLink</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewMLModels</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

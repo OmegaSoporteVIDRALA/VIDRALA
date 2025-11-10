@@ -181,36 +181,36 @@ public class OM_BW_InsertActualSalesHistory {
                                 }else{
                                     excludeLogic = true;
                                 }
-
-                                if(!String.isBlank(response.cellData.item.get(cellOrdinalCounter).Value)){
-                                    actSH.Revenue__c = Decimal.ValueOf(response.cellData.item.get(cellOrdinalCounter).Value).setScale(2, RoundingMode.HALF_UP); //El primer valor siempre es Revenue__c
-                                }else{
-                                    actSH.Revenue__c = 0;
-                                }
                                 
-                                if(!String.isBlank(response.cellData.item.get(cellOrdinalCounter+1).Value)){
-                                    actSH.Tonnes__c = Decimal.ValueOf(response.cellData.item.get(cellOrdinalCounter+1).Value).setScale(2, RoundingMode.HALF_UP); //El segundo valor siempre es Tonnes__c
-                                }else{
-                                    actSH.Tonnes__c = 0;
-                                }
+                                actSH.Revenue__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter).Value);
+                                actSH.RevenuePrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 1).Value);
+                                actSH.RevenueVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 2).Value);
+                                actSH.RevenueVarPercentage__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 3).Value);
                                 
-                                if(!String.isBlank(response.cellData.item.get(cellOrdinalCounter+2).Value)){
-                                   actSH.Volume_000_s__c = Decimal.ValueOf(response.cellData.item.get(cellOrdinalCounter+2).Value).setScale(2, RoundingMode.HALF_UP); //El tercer valor siempre es Volume_000_s__c 
-                                }else{
-                                    actSH.Volume_000_s__c = 0;
-                                }
+                                actSH.Tonnes__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 4).Value);
+                                actSH.TonnesPrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 5).Value);
+                                actSH.TonnesVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 6).Value);
+                                actSH.TonnesVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 7).Value);
                                 
-                                if(!String.isBlank(response.cellData.item.get(cellOrdinalCounter+3).Value)){
-                                    actSH.Precio_FF__c = Decimal.ValueOf(response.cellData.item.get(cellOrdinalCounter+3).Value).setScale(2, RoundingMode.HALF_UP);//El cuarto valor siempre es Precio Francofábrica
-                                }else{
-                                    actSH.Precio_FF__c = 0;
-                                }
+                                actSH.Volume_000_s__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 8).Value);
+                                actSH.Volume000sPrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 9).Value);
+                                actSH.Volume000sVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 10).Value);
+                                actSH.Volume000sVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 11).Value);
+                                
+                                //record.OM_VID_EuroTonne__c es una fórmula en Salesforce
+                                actSH.OM_VID_EuroTonnePrevious__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 13).Value);
+                                actSH.OM_VID_EuroTonneVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 14).Value);
+                                actSH.OM_VID_EuroTonneVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 15).Value);
+                                
+                                actSH.Precio_FF__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 16).Value);
+                                actSH.PrecioFFPrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 17).Value);
+                                actSH.PrecioFFVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 18).Value);
+                                actSH.PrecioFFVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 19).Value);
                                 
         						System.debug('***asigna actSH: '+actSH);
                                 if(!excludeLogic) actualSalesHistoryInsertList.add(actSH);
-                            //}
                             
-                                cellOrdinalCounter = cellOrdinalCounter+4; 
+                                cellOrdinalCounter = cellOrdinalCounter + 20; 
                                 actSH = new Actual_Sales_History__c();
                                 excludeLogic = false;
                                 tupleCounter++;
@@ -246,5 +246,9 @@ public class OM_BW_InsertActualSalesHistory {
                 }
             }
         }
+    }
+    
+    private static Decimal parseDecimal(String value) {
+        return String.isBlank(value) ? 0 : Decimal.valueOf(value).setScale(2, RoundingMode.HALF_UP);
     }
 }
