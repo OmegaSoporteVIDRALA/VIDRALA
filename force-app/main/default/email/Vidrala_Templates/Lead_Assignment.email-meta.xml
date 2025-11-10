@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Vidrala_Logo</letterhead>
+    <name>Lead Assignment</name>
+    <style>freeForm</style>
+    <subject>Nuevo Candidato asignado {!Lead.Name} {!Lead.State}</subject>
+    <textOnly>Te han asignado un nuevo candidato.
+
+Si consideras que pudiera ser una oportunidad de negocio, conviértelo, sino, por favor , dale respuesta mediante el mail, y las plantillas para ello.
+
+Recuerda que hay una por si quisieras mandar el candidato a un distribuidor.
+
+Una vez hecho, hay que cambiar el estado...
+
+Si tienes duda en algún paso, no dudes en contactarme.
+
+Un saludo
+Marta</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
