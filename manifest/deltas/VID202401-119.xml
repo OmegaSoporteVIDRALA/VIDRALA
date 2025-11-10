@@ -4,6 +4,7 @@
 		<members>OM_SAP_InsertCustomerPriceWS</members>
 		<members>OM_SAP_InsertCustomerPriceWS_Test</members>
 		<members>OM_SAP_Wrappers</members>
+        <members>OM_SAP_Wrappers_Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
