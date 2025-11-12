@@ -166,7 +166,7 @@ public class OM_BW_InsertActualSalesHistory {
                                 actSH.Account__r = accountReference;
                                 actSH.OM_AccountText__c = item.ChavlExt;
                             }else if(item.Chanm == '0MATERIAL__ZISDMODEL' && !String.isBlank(item.ChavlExt) && item.ChavlExt != '#'){ //Se coge Modelo
-                                Product2 modelReference = new Product2(OM_Product_Code_SIP__c = item.ChavlExt);
+                                Product2 modelReference = new Product2(OM_Product_Code_SIP__c = item.ChavlExt.toUpperCase());
                                 //Product2 modelReference = new Product2(OM_Product_Code_SIP__c = '1001476O');
                                 actSH.OM_ProductCodeText__c = item.ChavlExt;
                                 actSH.OM_ModelRef__r = modelReference;
