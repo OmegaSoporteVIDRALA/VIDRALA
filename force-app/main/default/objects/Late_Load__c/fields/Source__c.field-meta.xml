@@ -55,6 +55,11 @@
                 <default>false</default>
                 <label>The Park</label>
             </value>
+            <value>
+                <fullName>Customer Delivery Site</fullName>
+                <default>false</default>
+                <label>Customer Delivery Site</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

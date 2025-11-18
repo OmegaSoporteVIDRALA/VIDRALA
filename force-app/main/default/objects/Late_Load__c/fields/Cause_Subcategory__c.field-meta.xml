@@ -193,10 +193,6 @@
             </value>
         </valueSetDefinition>
         <valueSettings>
-            <controllingFieldValue>Human Error</controllingFieldValue>
-            <valueName>Miscommunication</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Internal IT Issues</controllingFieldValue>
             <valueName>Interface Error</valueName>
         </valueSettings>
@@ -272,28 +268,24 @@
             <valueName>Link to original collapsed load</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Traffic</controllingFieldValue>
+            <valueName>Accident</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Traffic</controllingFieldValue>
+            <valueName>Road Closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Traffic</controllingFieldValue>
+            <valueName>Weather</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Admin Error</controllingFieldValue>
             <valueName>Customer Error</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Admin Error</controllingFieldValue>
             <valueName>CX Admin Error</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>AW Breakdown</controllingFieldValue>
-            <valueName>Conveyor</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>AW Breakdown</controllingFieldValue>
-            <valueName>Crane</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>AW Breakdown</controllingFieldValue>
-            <valueName>IT</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>AW Breakdown</controllingFieldValue>
-            <valueName>Shuttle Car</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Ex Works</controllingFieldValue>
@@ -312,16 +304,24 @@
             <valueName>Not booked in with the warehouse</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Traffic</controllingFieldValue>
-            <valueName>Accident</valueName>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Conveyor</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Traffic</controllingFieldValue>
-            <valueName>Road Closure</valueName>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Crane</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Traffic</controllingFieldValue>
-            <valueName>Weather</valueName>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AW Breakdown</controllingFieldValue>
+            <valueName>Shuttle Car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Error</controllingFieldValue>
+            <valueName>Miscommunication</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Customer Production Line Issues</controllingFieldValue>
