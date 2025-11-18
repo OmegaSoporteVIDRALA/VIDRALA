@@ -415,6 +415,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Customer Delivery Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Derrylin</fullName>
             <default>false</default>
         </values>

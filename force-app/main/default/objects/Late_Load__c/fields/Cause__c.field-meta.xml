@@ -124,20 +124,20 @@
             <valueName>Stock not released from QT</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Trailer Availability</controllingFieldValue>
-            <valueName>Availability (pool report)</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Trailer Availability</controllingFieldValue>
-            <valueName>VOR</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Interface Error</controllingFieldValue>
             <valueName>External</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Interface Error</controllingFieldValue>
             <valueName>Internal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailer Availability</controllingFieldValue>
+            <valueName>Availability (pool report)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailer Availability</controllingFieldValue>
+            <valueName>VOR</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Internal IT Issues</controllingFieldValue>
