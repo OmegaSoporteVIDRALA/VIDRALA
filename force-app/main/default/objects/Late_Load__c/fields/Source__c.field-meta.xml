@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Source__c</fullName>
-    <externalId>false</externalId>
     <label>Source</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
@@ -55,6 +54,11 @@
                 <fullName>The Park</fullName>
                 <default>false</default>
                 <label>The Park</label>
+            </value>
+            <value>
+                <fullName>Customer Delivery Site</fullName>
+                <default>false</default>
+                <label>Customer Delivery Site</label>
             </value>
         </valueSetDefinition>
     </valueSet>

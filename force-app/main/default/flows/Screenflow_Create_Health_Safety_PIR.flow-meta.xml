@@ -43,7 +43,7 @@
         <name>Assign_Dispatch</name>
         <label>Assign Dispatch</label>
         <locationX>314</locationX>
-        <locationY>782</locationY>
+        <locationY>890</locationY>
         <assignmentItems>
             <assignToReference>VAREarlyorLateLoad.Dispatch__c</assignToReference>
             <operator>Assign</operator>
@@ -59,7 +59,7 @@
         <name>Assign_Misc</name>
         <label>Apply misc</label>
         <locationX>50</locationX>
-        <locationY>890</locationY>
+        <locationY>998</locationY>
         <assignmentItems>
             <assignToReference>VAREarlyorLateLoad.Dispatch__c</assignToReference>
             <operator>Assign</operator>
@@ -75,7 +75,7 @@
         <name>assignment_H_S_Variables</name>
         <label>assignment H&amp;S Variables</label>
         <locationX>182</locationX>
-        <locationY>1082</locationY>
+        <locationY>1190</locationY>
         <assignmentItems>
             <assignToReference>VAREarlyorLateLoad.Customer__c</assignToReference>
             <operator>Assign</operator>
@@ -129,11 +129,28 @@
             <targetReference>Create_Collapsed_Load_Record</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <description>pre populate values if</description>
+        <name>AssignmentValuesToVariable</name>
+        <label>AssignmentValuesToVariable</label>
+        <locationX>182</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>VAREarlyorLateLoad.Dispatch__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Early_Load</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>Is_Dispatch_Populated</name>
         <label>Is Dispatch Populated?</label>
         <locationX>182</locationX>
-        <locationY>674</locationY>
+        <locationY>782</locationY>
         <defaultConnector>
             <targetReference>Assign_Dispatch</targetReference>
         </defaultConnector>
@@ -154,7 +171,8 @@
             <label>No</label>
         </rules>
     </decisions>
-    <description>Added &quot;Who Reported this issue&quot; &amp; &quot;other - please specify&quot; fields</description>
+    <description>Added &quot;Who Reported this issue&quot; &amp; &quot;other - please specify&quot; fields
+£Hotfix: added fault message, added assignment of record id</description>
     <dynamicChoiceSets>
         <name>StatusPCS</name>
         <dataType>Picklist</dataType>
@@ -164,6 +182,11 @@
         <picklistObject>Late_Load__c</picklistObject>
     </dynamicChoiceSets>
     <environments>Default</environments>
+    <formulas>
+        <name>FormulaDispatchisnotblank</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT(ISBLANK({!VAREarlyorLateLoad.Dispatch__c}))</expression>
+    </formulas>
     <formulas>
         <name>FORMULAEarlyNAME</name>
         <dataType>String</dataType>
@@ -208,7 +231,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>Create_Collapsed_Load_Record</name>
         <label>Create H&amp;S Record</label>
         <locationX>182</locationX>
-        <locationY>1190</locationY>
+        <locationY>1298</locationY>
         <connector>
             <targetReference>NewRecordCreatedScreen</targetReference>
         </connector>
@@ -221,7 +244,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>Get_Dispatch_record</name>
         <label>Get Misc Dispatch record</label>
         <locationX>50</locationX>
-        <locationY>782</locationY>
+        <locationY>890</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_Misc</targetReference>
@@ -245,7 +268,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>New_Early_Load</targetReference>
+            <targetReference>AssignmentValuesToVariable</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -315,10 +338,23 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>Error_Screen</name>
         <label>Error Screen</label>
         <locationX>578</locationX>
-        <locationY>1298</locationY>
+        <locationY>1406</locationY>
         <allowBack>true</allowBack>
         <allowFinish>false</allowFinish>
         <allowPause>true</allowPause>
+        <fields>
+            <name>FaultMessage</name>
+            <fieldText>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
         <fields>
             <name>ErrorMessage</name>
             <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: small; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;If ‘Other’ is selected, please enter details in the text box.&lt;/span&gt;&lt;/p&gt;</fieldText>
@@ -350,7 +386,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>New_Early_Load</name>
         <label>New Health &amp; Safety</label>
         <locationX>182</locationX>
-        <locationY>566</locationY>
+        <locationY>674</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -516,20 +552,6 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     </styleProperties>
                 </fields>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>VAREarlyorLateLoad.Related_Load__c</objectFieldReference>
-                    <styleProperties>
-                        <verticalAlignment>
-                            <stringValue>top</stringValue>
-                        </verticalAlignment>
-                        <width>
-                            <stringValue>12</stringValue>
-                        </width>
-                    </styleProperties>
-                </fields>
-                <fields>
                     <name>Customer_Contact_Name</name>
                     <dataType>String</dataType>
                     <fieldText>Customer Contact Name</fieldText>
@@ -548,6 +570,9 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                 <fields>
                     <name>Is_this_issue_related_to_a_dispatch</name>
                     <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <elementReference>FormulaDispatchisnotblank</elementReference>
+                    </defaultValue>
                     <fieldText>Is this issue related to a dispatch?</fieldText>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -590,6 +615,33 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>VAREarlyorLateLoad.Who_reported_this_issue__c</objectFieldReference>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <name>DTRelatedPIR</name>
+                    <fieldText>&lt;p&gt;&lt;em style=&quot;color: rgb(34, 34, 34); font-family: Aptos, sans-serif; font-size: 10px; background-color: rgb(255, 255, 255);&quot;&gt;&quot;if record has caused an Early, Late or Collapsed Load you can add the relevant PIR record below&quot;&lt;/em&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                    <styleProperties>
+                        <verticalAlignment>
+                            <stringValue>top</stringValue>
+                        </verticalAlignment>
+                        <width>
+                            <stringValue>12</stringValue>
+                        </width>
+                    </styleProperties>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>VAREarlyorLateLoad.Related_Load__c</objectFieldReference>
                     <styleProperties>
                         <verticalAlignment>
                             <stringValue>top</stringValue>
@@ -707,7 +759,7 @@ UPPER(TEXT({!VAREarlyorLateLoad.Status__c}))</expression>
         <name>NewRecordCreatedScreen</name>
         <label>NewRecordCreatedScreen</label>
         <locationX>182</locationX>
-        <locationY>1298</locationY>
+        <locationY>1406</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
