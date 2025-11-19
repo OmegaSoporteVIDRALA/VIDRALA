@@ -60,6 +60,10 @@ public class OM_SAP_Wrappers {
         public List<CustomerPriceWrapper> order {get;set;}
     }
     
+    public class CustomerOrderWrapperUnique{
+        public CustomerPriceWrapper order {get;set;}
+    }
+    
     public class CustomerPriceWrapper{
         public String priceCode {get;set;}
         public Double price {get;set;}
