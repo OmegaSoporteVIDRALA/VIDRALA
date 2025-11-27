@@ -2592,11 +2592,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>CTR_CSR__c.Filling_Site__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>CTR_CSR__c.Formula_Name__c</field>
         <readable>true</readable>
