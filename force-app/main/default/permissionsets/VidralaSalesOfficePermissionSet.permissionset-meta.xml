@@ -2578,11 +2578,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CTR_CSR__c.Date_of_Audit__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>CTR_CSR__c.Encirc_Contact__c</field>
         <readable>true</readable>
     </fieldPermissions>
