@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Type__c</fullName>
     <description>Tipo_modelo__c</description>
-    <externalId>false</externalId>
     <label>Type</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
@@ -13,18 +12,30 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Exclusivo</fullName>
-                <default>false</default>
-                <label>Exclusivo</label>
-            </value>
-            <value>
                 <fullName>Estandar</fullName>
                 <default>false</default>
                 <label>Estandar</label>
             </value>
             <value>
+                <fullName>Limitado</fullName>
+                <default>false</default>
+                <label>Limitado</label>
+            </value>
+            <value>
+                <fullName>Privado</fullName>
+                <default>false</default>
+                <label>Privado</label>
+            </value>
+            <value>
+                <fullName>Exclusivo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exclusivo</label>
+            </value>
+            <value>
                 <fullName>Personalizado</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Personalizado</label>
             </value>
         </valueSetDefinition>
