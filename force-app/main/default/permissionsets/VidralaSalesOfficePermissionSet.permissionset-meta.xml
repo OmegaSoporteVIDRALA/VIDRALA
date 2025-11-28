@@ -3165,7 +3165,7 @@
         <editable>false</editable>
         <field>Case.OM_SAC_Fotografias__c</field>
         <readable>false</readable>
-    </fieldPermissions>
+    </fieldPermissions> 
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.OM_SAC_Grupo_Cliente__c</field>
