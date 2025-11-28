@@ -3155,7 +3155,7 @@
         <editable>false</editable>
         <field>Case.OM_SAC_CosteEstimado__c</field>
         <readable>false</readable>
-    </fieldPermissions> 
+    </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.OM_SAC_EspecificacionCliente__c</field>
