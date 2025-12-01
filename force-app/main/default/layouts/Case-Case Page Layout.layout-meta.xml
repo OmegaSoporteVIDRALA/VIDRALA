@@ -104,6 +104,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
+                <field>OM_VID_EAN__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
                 <field>Tipo_de_modelo__c</field>
             </layoutItems>
             <layoutItems>
@@ -115,7 +119,7 @@
                 <field>OM_SAC_descripcionDelProblema__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>OM_SAC_DetectadasEnClienteDeCuantas__c</field>
             </layoutItems>
             <layoutItems>
