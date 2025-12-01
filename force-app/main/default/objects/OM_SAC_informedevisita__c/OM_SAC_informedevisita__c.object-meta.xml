@@ -155,9 +155,10 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Informe de visita</label>
     <nameField>
-        <label>Objetivo de la visita</label>
+        <displayFormat>IV-{0000}</displayFormat>
+        <label>Referencia</label>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Informes de visita</pluralLabel>
     <searchLayouts></searchLayouts>
