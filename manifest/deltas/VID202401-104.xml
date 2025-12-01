@@ -2,20 +2,41 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>Case.OM_SAC_DetectadasEnClienteDeCuantas__c</members>
+		<members>Case.OM_SAC_modeloYDenominacion__c</members>
 		<members>Case.OM_VID_EAN__c</members>
+		<members>Case.Product__c</members>
+		<members>Case.TIPOLOGIA_PRODUCTO__c</members>
+		<members>OM_SAC_informedevisita__c.Objetivo_visita__c</members>
+		<members>OM_SAC_informedevisita__c.Product__c</members>
 		<members>Product2.Type__c</members>
 		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Case</members>
+		<members>OM_SAC_informedevisita__c</members>
+		<name>CustomObject</name>
 	</types>
 	<types>
 		<members>GrupoClienteRecordPage</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
+		<members>Case-Case Layout</members>
+		<members>Case-Case Page Layout</members>
+		<members>OM_SAC_informedevisita__c-Informe de visita Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>System_Admin_Permission_Set</members>
 		<members>VidralaSalesOfficePermissionSet</members>
 		<name>PermissionSet</name>
 	</types>
 	<types>
+		<members>Admin</members>
+		<members>Integration User</members>
 		<members>System Administrator Vidrala</members>
+		<members>Vidrala Europe SAC Calidad</members>
+		<members>Vidrala Europe Sales</members>
 		<members>Vidrala Europe Support</members>
 		<name>Profile</name>
 	</types>
