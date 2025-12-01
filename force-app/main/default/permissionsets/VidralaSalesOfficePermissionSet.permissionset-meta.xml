@@ -3472,11 +3472,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Commercial_Contract_Status__c.Priority__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Commercial_Contract_Status__c.Start_date__c</field>
         <readable>true</readable>
@@ -3535,11 +3530,6 @@
         <editable>true</editable>
         <field>Competitor_Action__c.Height__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Competitor_Action__c.OM_VID_ProductCode__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -7328,11 +7318,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Event_Budget__c.Balance_Budget_v_Actual_v_Committed_F__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Event_Budget__c.Budget_Amount__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -7380,21 +7365,6 @@
         <editable>true</editable>
         <field>Event_Budget__c.Customer_Entertainment_Budget__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Actual_Deposit_Filling__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Actual_Final_Pmt_Filling__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.DLRS_Budget_Amount_F__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
