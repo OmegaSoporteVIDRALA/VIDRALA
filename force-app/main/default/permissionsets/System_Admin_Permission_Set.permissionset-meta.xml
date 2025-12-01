@@ -2717,7 +2717,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Actual_Sales_History__c.RevenuePerTonne__c</field>
+        <field>Actual_Sales_History__c.Revenue_Per_Tonne__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
