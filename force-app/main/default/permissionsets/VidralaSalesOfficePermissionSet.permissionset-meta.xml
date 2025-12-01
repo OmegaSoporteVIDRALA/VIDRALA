@@ -13423,11 +13423,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Product2.New_market_Catalogue__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Product2.OM_Product_Code_SIP__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -14954,11 +14949,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Data__c.Production_Tooling_Ordered__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Trial_Data__c.Production_tool_order_date__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
