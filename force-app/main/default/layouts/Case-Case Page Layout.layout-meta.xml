@@ -47,6 +47,10 @@
                 <behavior>Edit</behavior>
                 <field>OM_SAC_Grupo_Cliente__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OM_SAC_Defecto__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -91,16 +95,16 @@
                 <field>OM_SAC_loteOAlbaran__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OM_SAC_ean__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
                 <field>OM_SAC_modeloYDenominacion__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>OM_SAC_CodigoModelo__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>OM_VID_EAN__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -115,7 +119,7 @@
                 <field>OM_SAC_descripcionDelProblema__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>OM_SAC_DetectadasEnClienteDeCuantas__c</field>
             </layoutItems>
             <layoutItems>

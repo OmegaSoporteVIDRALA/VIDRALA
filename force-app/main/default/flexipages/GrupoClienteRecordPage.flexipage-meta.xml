@@ -1413,6 +1413,11 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>adminFilters</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>ASSET.USAGE_END_DATE|GREATER_OR_EQUAL|TODAY</value>
+                        </valueListItems>
+                    </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>maxRecordsToDisplay</name>
