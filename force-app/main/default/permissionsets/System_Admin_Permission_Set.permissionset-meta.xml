@@ -9506,11 +9506,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Lead_Product__c.OM_VID_ProductCode__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Lead_Product__c.Products__c</field>
         <readable>true</readable>
