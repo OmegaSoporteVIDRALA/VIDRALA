@@ -14071,11 +14071,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.OM_ProductColourTranslateAuto__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>QuoteLineItem.OM_VID_Pallet_Volume__c</field>
         <readable>true</readable>

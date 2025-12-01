@@ -13402,11 +13402,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Product2.French_Catalogue__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Product2.Height__c</field>
         <readable>true</readable>
@@ -13729,11 +13724,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>QuoteLineItem.ListPrice</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.OM_ProductColourTranslateAuto__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
