@@ -7991,11 +7991,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Balance_Budget_v_Actual_v_Committed_F__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Event_Budget__c.Budget_Amount__c</field>
         <readable>true</readable>
