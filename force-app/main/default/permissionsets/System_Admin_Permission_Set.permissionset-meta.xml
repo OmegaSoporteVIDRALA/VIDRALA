@@ -8067,11 +8067,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Event_Budget__c.Parent_Event_Filling__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Event_Budget__c.Pr_No_Date_Created__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8113,11 +8108,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Event_Budget__c.Vendor_number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event_Budget__c.Within_Budget_F__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
