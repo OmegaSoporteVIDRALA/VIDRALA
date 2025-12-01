@@ -12353,11 +12353,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Opportunity.OM_AdditionalInformation__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Opportunity.OM_VID_Idioma__c</field>
         <readable>true</readable>
     </fieldPermissions>
