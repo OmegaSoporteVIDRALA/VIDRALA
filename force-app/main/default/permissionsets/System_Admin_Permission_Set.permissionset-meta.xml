@@ -8042,11 +8042,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Event_Budget__c.DLRS_Actual_Final_Pmt_Filling__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Event_Budget__c.DLRS_Budget_Amount_F__c</field>
         <readable>true</readable>
     </fieldPermissions>
