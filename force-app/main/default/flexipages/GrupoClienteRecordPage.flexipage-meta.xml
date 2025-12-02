@@ -664,7 +664,7 @@
                             <value>NAME</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Competitor__c</value>
+                            <value>Supplier__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>CURRENCY_ISO_CODE</value>
@@ -1413,6 +1413,11 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>adminFilters</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>ASSET.USAGE_END_DATE|GREATER_OR_EQUAL|TODAY</value>
+                        </valueListItems>
+                    </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>maxRecordsToDisplay</name>
