@@ -6,7 +6,6 @@ Clearpoint is 115396
 Chester Races is 115601
 Wembley is 116202
 Etc.</description>
-    <externalId>false</externalId>
     <label>Vendor number</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
@@ -62,11 +61,6 @@ Etc.</description>
                 <label>117149</label>
             </value>
             <value>
-                <fullName>118708</fullName>
-                <default>false</default>
-                <label>118708</label>
-            </value>
-            <value>
                 <fullName>201403</fullName>
                 <default>false</default>
                 <label>201403</label>
@@ -81,11 +75,13 @@ Etc.</description>
                 <default>false</default>
                 <label>113570</label>
             </value>
+            <value>
+                <fullName>118708</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>118708</label>
+            </value>
         </valueSetDefinition>
-        <valueSettings>
-            <controllingFieldValue>Croke Park</controllingFieldValue>
-            <valueName>118708</valueName>
-        </valueSettings>
         <valueSettings>
             <controllingFieldValue>VIP Match Days</controllingFieldValue>
             <valueName>201403</valueName>

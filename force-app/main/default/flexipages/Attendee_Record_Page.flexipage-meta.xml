@@ -56,23 +56,6 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Beverages_Customer__c</fieldItem>
-                <identifier>RecordBeverages_Customer__cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Attendee_Type__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Beverages Customer Attendee</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Beverages_Customer_Contact_Account__c</fieldItem>
@@ -88,16 +71,10 @@
                 <fieldItem>Record.Contact__c</fieldItem>
                 <identifier>RecordContact__cField</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Attendee_Type__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Customer Attendee</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Attendee_Type__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Beverages Customer Attendee</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
