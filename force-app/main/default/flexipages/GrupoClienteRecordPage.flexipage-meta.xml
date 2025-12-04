@@ -664,7 +664,7 @@
                             <value>NAME</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Supplier__c</value>
+                            <value>Competitor__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>CURRENCY_ISO_CODE</value>
