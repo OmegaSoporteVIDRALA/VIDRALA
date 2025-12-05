@@ -27,13 +27,11 @@ export default class OmVidEnviarEmailOferta extends LightningElement {
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Correcto',
-                        message: 'Se ha enviado el email correctamente',
+                        message: 'Se ha enviado el email correctamente.',
                         variant: 'success',
                         mode: 'sticky'
                     })
                 )
-
-                this.closeQuickAction()
             }else{
                 this.dispatchEvent(
                     new ShowToastEvent({
@@ -43,13 +41,20 @@ export default class OmVidEnviarEmailOferta extends LightningElement {
                         mode: 'sticky'
                     })
                 )
-
-                this.closeQuickAction()
             }
         })
-
-        
-        
+        .catch((error) => {
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title: 'Fallo',
+                    message: 'Se produjo un error inesperado. Contacte con su administrador.',
+                    variant: 'error',
+                    mode: 'sticky'
+                })
+            );
+        })
+        .finally(() => {
+            this.closeQuickAction();
+        });
     }
-
 }

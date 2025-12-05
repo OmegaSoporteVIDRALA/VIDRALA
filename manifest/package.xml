@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>GrupoClienteRecordPage</members>
-		<name>FlexiPage</name>
+		<members>OM_VID_EnviarEmailOfertaController</members>
+		<members>OM_VID_EnviarEmailOfertaControllerTest</members>
+		<name>ApexClass</name>
 	</types>
 	<types>
-		<members>Vidrala Europe SAC Calidad</members>
-		<name>Profile</name>
+		<members>omVidEnviarEmailOferta</members>
+		<name>LightningComponentBundle</name>
 	</types>
 	<version>64.0</version>
 </Package>
