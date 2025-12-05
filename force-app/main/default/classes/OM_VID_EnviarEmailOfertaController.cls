@@ -11,7 +11,7 @@ public without sharing class OM_VID_EnviarEmailOfertaController {
     @AuraEnabled
     public static String validateErrors(String quoteId){
         try{
-            Quote qParam = [SELECT Id, Name, OpportunityId, OM_VID_Idioma__c, ContactId, Opportunity.Name, Opportunity.OM_VID_Idioma__c, Opportunity.OwnerId, Opportunity.Contact__c, Account.Name FROM Quote WHERE Id =: quoteId LIMIT 1];
+            Quote qParam = [SELECT Id, Name, OM_VID_Fecha_de_envio_oferta__c , OpportunityId, OM_VID_Idioma__c, ContactId, Opportunity.Name, Opportunity.OM_VID_Idioma__c, Opportunity.OwnerId, Opportunity.Contact__c, Account.Name FROM Quote WHERE Id =: quoteId LIMIT 1];
             //Opportunity opp = [SELECT Id, Contact__c, Name, OM_VID_Idioma__c, OwnerId FROM Opportunity WHERE Id =: qParam.OpportunityId LIMIT 1];
             List<QuoteLineItem> qLineItemList = [SELECT Id, Product2Id, Product2.Name, Product2.Drawing__c FROM QuoteLineItem WHERE QuoteId = :quoteId];
             Set<Id> productIdSet = new Set<Id>();
@@ -34,21 +34,20 @@ public without sharing class OM_VID_EnviarEmailOfertaController {
             
             System.debug('***está por aqui');
 
-
-            /*if(!qLineItemList.isEmpty()){
-                for(QuoteLineItem item : qLineItemList){
-                    if(item.Product2.Drawing__c != null) drawingIdSet.add(item.Product2.Drawing__c);
-                }
-                cvList.addAll(validateDrawings(drawingIdSet, qLineItemList));
-            }*/
-
             if(errorMessage == null || errorMessage == ''){
-                errorMessage = OM_VID_EmailController.sendQuoteEmail(templateName, qParam, cvList);
-                if(errorMessage == 'Ok'){
-                    qParam.OM_VID_Oferta_Enviada__c = true;
-                    qParam.OM_VID_Fecha_de_envio_oferta__c = System.now();
+                if(
+                    (qParam.OM_VID_Fecha_de_envio_oferta__c != null && (System.now().getTime() - qParam.OM_VID_Fecha_de_envio_oferta__c.getTime()) >= 60000) ||
+                    qParam.OM_VID_Fecha_de_envio_oferta__c == null
+                ){
+                    errorMessage = OM_VID_EmailController.sendQuoteEmail(templateName, qParam, cvList);
+                    if(errorMessage == 'Ok'){
+                        qParam.OM_VID_Oferta_Enviada__c = true;
+                        qParam.OM_VID_Fecha_de_envio_oferta__c = System.now();
 
-                    update qParam;
+                        update qParam;
+                    }
+                }else{
+                   errorMessage = 'Debe pasar al menos un minuto para volver a enviar la oferta';
                 }
             }
 
