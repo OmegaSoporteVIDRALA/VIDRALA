@@ -6,7 +6,6 @@ Clearpoint is 115396
 Chester Races is 115601
 Wembley is 116202
 Etc.</description>
-    <externalId>false</externalId>
     <label>Vendor number</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
