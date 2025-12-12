@@ -47,7 +47,7 @@ public without sharing class OM_VID_EnviarEmailOfertaController {
                         update qParam;
                     }
                 }else{
-                   errorMessage = 'Debe pasar al menos un minuto para volver a enviar la oferta';
+                   errorMessage = 'Ya ha enviado una oferta. Debe pasar al menos un minuto para volver a enviar otra oferta.';
                 }
             }
 
