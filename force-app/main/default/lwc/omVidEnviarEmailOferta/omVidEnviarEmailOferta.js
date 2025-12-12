@@ -5,56 +5,74 @@ import { CloseActionScreenEvent } from 'lightning/actions';
 import validateErrors from '@salesforce/apex/OM_VID_EnviarEmailOfertaController.validateErrors';
 
 export default class OmVidEnviarEmailOferta extends LightningElement {
-    @api recordId;
+    recordId;
+    _hasRun = false;
 
-    // eslint-disable-next-line no-undef
     @wire(CurrentPageReference)
     getStateParameters(currentPageReference) {
-        if (currentPageReference) {
-            // eslint-disable-next-line @lwc/lwc/no-api-reassignments
-            this.recordId = currentPageReference.state.recordId;
+        console.log('OM _hasRun? ' + this._hasRun);
+        if (!currentPageReference || this._hasRun){
+            console.log('OM _hasRun');
+            return;
+        }
+
+        const state = currentPageReference.state || {};
+        this.recordId = state.recordId || state.c__recordId;
+
+        if (this.recordId) {
+            this._hasRun = true;
+            this.runValidation();
+        } else {
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title: 'Fallo',
+                    message: 'No se encontró el Id de registro en la URL.',
+                    variant: 'error',
+                    mode: 'sticky'
+                })
+            );
+            this.dispatchEvent(new CloseActionScreenEvent());
         }
     }
 
-    closeQuickAction() {
-        this.dispatchEvent(new CloseActionScreenEvent());
-    }
+    async runValidation() {
+        try {
+            const res = await validateErrors({ quoteId: this.recordId });
 
-    connectedCallback() {
-        validateErrors({quoteId : this.recordId
-        }).then(res => {
-            if(res === 'Ok'){
+            if (res === 'Ok') {
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Correcto',
                         message: 'Se ha enviado el email correctamente.',
                         variant: 'success',
-                        mode: 'sticky'
+                        mode: 'dismissable'
                     })
-                )
-            }else{
+                );
+            } else {
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Fallo',
-                        message: res,
+                        message: res || 'Se produjo un error de validación.',
                         variant: 'error',
                         mode: 'sticky'
                     })
-                )
+                );
             }
-        })
-        .catch((error) => {
+        } catch (error) {
+            const msg =
+                (error?.body && (error.body.message || error.body.exceptionType)) ||
+                error?.message ||
+                'Se produjo un error inesperado. Contacte con su administrador.';
             this.dispatchEvent(
                 new ShowToastEvent({
                     title: 'Fallo',
-                    message: 'Se produjo un error inesperado. Contacte con su administrador.',
+                    message: msg,
                     variant: 'error',
                     mode: 'sticky'
                 })
             );
-        })
-        .finally(() => {
-            this.closeQuickAction();
-        });
+        } finally {
+            this.dispatchEvent(new CloseActionScreenEvent());
+        }
     }
 }
