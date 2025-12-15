@@ -89,4 +89,49 @@ public class OM_VID_QuoteTRGHandlerMethods_Test {
     OM_VID_QuoteTRGHandler.setbyPassApex(false);
     System.assertEquals(false, OM_VID_QuoteTRGHandler.getbyPassApex());
 	}
+    
+    @isTest
+    static void testCloseTasks() {
+
+        Account acc = new Account(
+            Name = 'Test Account',
+            SAP_Account_Number__c = '11268'
+        );
+        insert acc;
+
+        Opportunity opp = new Opportunity(
+            Name = 'Test Opportunity',
+            StageName = 'Introduction',
+            CloseDate = Date.today().addDays(30),
+            AccountId = acc.Id
+        );
+        insert opp;
+
+        Task task = new Task(
+            Subject = OM_VID_Constants.taskSubjectSendQuotation,
+            Status = 'Open',
+            WhatId = opp.Id
+        );
+        insert task;
+
+        Quote quote = new Quote(
+            Name = 'Test Quote',
+            OpportunityId = opp.Id,
+            OM_VID_Oferta_Enviada__c = false
+        );
+        insert quote;
+
+        quote.OM_VID_Oferta_Enviada__c = true;
+        update quote;
+
+        Map<Id, Quote> oldMap = new Map<Id, Quote>{ quote.Id => quote };
+        List<Quote> newQuotes = new List<Quote>{ quote };
+
+        Test.startTest();
+        OM_VID_QuoteTRGHandlerMethods.closeTasks(newQuotes, oldMap);
+        Test.stopTest();
+
+        Task tUpdated = [SELECT Status FROM Task WHERE Id = :task.Id];
+        System.assertEquals(OM_VID_Constants.taskStatusCompleted, tUpdated.Status, 'El Task debe haberse cerrado');
+    }
 }
