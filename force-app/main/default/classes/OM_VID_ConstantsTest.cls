@@ -18,6 +18,7 @@ public with sharing class OM_VID_ConstantsTest {
         System.assertEquals(OM_VID_Constants.errorContentVersion, 'No existe un documento de Oferta asociado que poder enviar');
         System.assertEquals(OM_VID_Constants.taskSubjectSendQuotation, 'Send Quotation');
         System.assertEquals(OM_VID_Constants.taskStatusOpen, 'Open');
+        System.assertEquals(OM_VID_Constants.taskStatusCompleted, 'Completed');
         System.assertEquals(OM_VID_Constants.taskPriorityNormal, 'Normal');
         System.assertEquals(OM_VID_Constants.groupTypeQueue, 'Queue');
         System.assertEquals(OM_VID_Constants.insatisfaccionRTVidrala, 'Fifty_Calidad_Insatisfaccion');
