@@ -17,6 +17,7 @@ public with sharing class OM_VID_Constants {
     public static final String errorContentVersion {get{return 'No existe un documento de Oferta asociado que poder enviar';}}
     public static final String taskSubjectSendQuotation {get{return 'Send Quotation';}}
     public static final String taskStatusOpen {get{return 'Open';}}
+    public static final String taskStatusCompleted {get{return 'Completed';}}
     public static final String taskPriorityNormal {get{return 'Normal';}}
     public static final String groupTypeQueue {get{return 'Queue';}}
 }
