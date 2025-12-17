@@ -2,7 +2,12 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OM_SAC_Tabla_Categorizacion__c</fullName>
     <externalId>false</externalId>
-    <formula>IMAGE(&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068Q40000095kcy&amp;operationContext=CHATTER&amp;contentId=05TQ400000As7Bp&quot;, &apos;image alternate text&apos;,250,750)</formula>
+    <formula>IMAGE(
+&quot;/resource/Tabla_categorizacion&quot;,
+&quot;image alternate text&quot;,
+250,
+750
+)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Tabla Categorización</label>
     <required>false</required>
