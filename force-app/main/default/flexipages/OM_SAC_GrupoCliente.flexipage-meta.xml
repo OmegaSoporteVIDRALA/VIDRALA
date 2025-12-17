@@ -302,16 +302,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.OM_VID_TipoCliente__c</fieldItem>
-                <identifier>RecordOM_VID_TipoCliente__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>required</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.OM_SAC_loteOAlbaran__c</fieldItem>
                 <identifier>RecordOM_SAC_loteOAlbaran_cField</identifier>
             </fieldInstance>
@@ -340,10 +330,10 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Tipo_de_modelo__c</fieldItem>
-                <identifier>RecordTipo_de_modelo_cField</identifier>
+                <fieldItem>Record.TIPOLOGIA_PRODUCTO__c</fieldItem>
+                <identifier>RecordTIPOLOGIA_PRODUCTO_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
