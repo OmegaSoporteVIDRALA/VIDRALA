@@ -39,7 +39,7 @@ public class OM_VID_QuoteTRGHandler {
             }
 
             if(isUpdate){
-               
+               OM_VID_QuoteTRGHandlerMethods.closeTasks(news, oldsMap);
             }
         }
     }
