@@ -196,4 +196,47 @@ public class OM_VID_QuoteTRGHandlerMethods {
 		System.debug(LoggingLevel.INFO, CLASS_NAME + ' :: ' + METHOD_NAME + ' :: End');
     	return newTask;
     }
+    
+    
+    /*
+    *********************************************************
+    @Method Name    : closeTasks
+    @author         : soporte.vidrala@omegacrmconsulting.com
+    @description    : 
+    ********************************************************
+    */
+    public static void closeTasks(List<Quote> newQuotes, Map<Id, Quote> oldMap) {
+
+        Set<Id> opportunityIdsToProcess = new Set<Id>();
+
+        for (Quote q : newQuotes) {
+            Quote oldQ = oldMap.get(q.Id);
+
+            if (oldQ != null 
+                && oldQ.OM_VID_Oferta_Enviada__c == false 
+                && q.OM_VID_Oferta_Enviada__c == true 
+                && q.OpportunityId != null) {
+                opportunityIdsToProcess.add(q.OpportunityId);
+            }
+        }
+
+        if (opportunityIdsToProcess.isEmpty()) return;
+
+        List<Task> tasksToClose = [
+            SELECT Id, Status
+            FROM Task
+            WHERE WhatId IN :opportunityIdsToProcess
+              AND Subject = :OM_VID_Constants.taskSubjectSendQuotation
+              AND Status != :OM_VID_Constants.taskStatusCompleted
+        ];
+
+        for (Task t : tasksToClose) {
+            t.Status = OM_VID_Constants.taskStatusCompleted;
+        }
+
+        if (!tasksToClose.isEmpty()) {
+            update tasksToClose;
+        }
+    }
+
 }
