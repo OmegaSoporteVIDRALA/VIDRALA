@@ -17345,10 +17345,6 @@
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <recordType>CTR_CSR__c.CTR</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
         <recordType>Case.Fifty_Calidad_Insatisfaccion</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
