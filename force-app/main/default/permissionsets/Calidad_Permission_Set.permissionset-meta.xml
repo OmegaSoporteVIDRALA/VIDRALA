@@ -15028,11 +15028,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Supplier_Share__c.Competitor__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Supplier_Share__c.OBSERVACIONES__c</field>
         <readable>false</readable>
     </fieldPermissions>
