@@ -45,10 +45,6 @@
         <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
-        <application>standard__DataGovernanceConsole</application>
-        <visible>true</visible>
-    </applicationVisibilities>
-    <applicationVisibilities>
         <application>standard__ExpressionSetConsole</application>
         <visible>true</visible>
     </applicationVisibilities>
