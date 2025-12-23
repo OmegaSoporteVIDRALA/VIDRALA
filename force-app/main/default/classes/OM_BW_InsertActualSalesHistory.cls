@@ -234,27 +234,30 @@ public class OM_BW_InsertActualSalesHistory {
     
             for(Map<String,String> row : rawRows){
                 if(!accountMap.containsKey(row.get('ACCOUNT'))){
+                    System.debug('Account not found, failing code: ' + row.get('ACCOUNT')); // <-- NUEVO LOG
                     salesforceErrors.add('Account not found: ' + row.get('ACCOUNT'));
                     break;
                 }
                 if(!productMap.containsKey(row.get('PRODUCT'))){
+                    System.debug('Product not found, failing code: ' + row.get('PRODUCT')); // <-- NUEVO LOG
                     salesforceErrors.add('Product not found: ' + row.get('PRODUCT'));
                     break;
                 }
                 if(!materialMap.containsKey(row.get('MATERIAL'))){
+                    System.debug('Material not found, failing code: ' + row.get('MATERIAL')); // <-- NUEVO LOG
                     salesforceErrors.add('Material not found: ' + row.get('MATERIAL'));
                     break;
                 }
-    
-                Actual_Sales_History__c rec = new Actual_Sales_History__c();
-                rec.Account__c = accountMap.get(row.get('ACCOUNT')).Id;
-                rec.OM_ModelRef__c = productMap.get(row.get('PRODUCT')).Id;
-                rec.SAP_Material_Code__c = materialMap.get(row.get('MATERIAL')).Id;
-    
-                rec.Revenue__c = parseDecimal(row.get('REV'));
-                rec.Tonnes__c = parseDecimal(row.get('TON'));
-                actualSalesHistoryInsertList.add(rec);
-            }
+
+    Actual_Sales_History__c rec = new Actual_Sales_History__c();
+    rec.Account__c = accountMap.get(row.get('ACCOUNT')).Id;
+    rec.OM_ModelRef__c = productMap.get(row.get('PRODUCT')).Id;
+    rec.SAP_Material_Code__c = materialMap.get(row.get('MATERIAL')).Id;
+
+    rec.Revenue__c = parseDecimal(row.get('REV'));
+    rec.Tonnes__c = parseDecimal(row.get('TON'));
+    actualSalesHistoryInsertList.add(rec);
+}
     
              if(!salesforceErrors.isEmpty()){
                 createResponse(false, 'Validation error', null, '400', salesforceErrors, null, null, requestString);
