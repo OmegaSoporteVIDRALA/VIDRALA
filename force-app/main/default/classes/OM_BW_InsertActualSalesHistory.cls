@@ -130,58 +130,52 @@ public class OM_BW_InsertActualSalesHistory {
     }
     
     public static void processActualSalesHistoryCalloutResponse(OM_SapFunctionsStyle.GetQueryViewDataResponse_element response, String requestString){
-        
+    
         List<Actual_Sales_History__c> actualSalesHistoryInsertList = new List<Actual_Sales_History__c>();
         String successMessage = 'Insert operations completed successfully.';
         String responseMessage = '';
         List<String> salesforceErrors = new List<String>();
-        //List<String> excludeAccounts = new List<String> {'11787','34336','34314','34173','34025','33653','33559','33128','11326'};
+    
         if(response != null){
-             //Empieza en el 1, porque el Tuple 0 lo ignoramos al ser sólo datos de cabecera.
-            Integer cellOrdinalCounter = 0; //Son los valores, se cogen de 4 en 4, cada vez que se cambie de registro se suma 4.
-            for(OM_SapFunctionsStyle.RrwsSxAxisData axis : response.AxisData.item){	
+            Integer cellOrdinalCounter = 0; 
+            List<Map<String, String>> rawRows = new List<Map<String, String>>();
+            Set<String> sapAccounts = new Set<String>();
+            Set<String> productCodes = new Set<String>();
+            Set<String> materialCodes = new Set<String>();
+    
+            for(OM_SapFunctionsStyle.RrwsSxAxisData axis : response.AxisData.item){  
                 Integer tupleCounter = 0;
                 Actual_Sales_History__c actSH = new Actual_Sales_History__c();
-                if(axis.axis == '001'){ //Ignoramos el primero, son solo datos de cabecera
+                if(axis.axis == '001'){
                     Boolean excludeLogic = false;
                     for(OM_SapFunctionsStyle.RrwsSxTuple item : axis.Set_x.item){
-                        System.debug('este es el tupleOrdinal: '+Integer.ValueOf(item.TupleOrdinal));
-                        System.debug('este es el tupleCounter: '+tupleCounter);
-                        if(tupleCounter == Integer.ValueOf(item.TupleOrdinal) /*|| item.Caption != 'Resultado'*/){
-                            //Continuamos rellenando datos del registro
-                            System.debug('***esta es la variable: '+item.Chanm);
-                            
-                            if(item.Chanm == '0CALMONTH'){ //Se coge el año y mes
+                        if(tupleCounter == Integer.ValueOf(item.TupleOrdinal)){
+                            Map<String,String> row = new Map<String,String>();
+    
+                            if(item.Chanm == '0CALMONTH'){
                                 actSH.Year__c = item.Chavl.substring(0,4);
                                 actSH.Month__c = OM_Utils.Strings.getMonthAbbreviation(Integer.valueOf(item.Chavl.substring(4,6)));
-                                    
-                            }else if(item.Chanm == '0SALESORG'){ //Se coge la organización de ventas
+                            } else if(item.Chanm == '0SALESORG'){
                                 actSH.Sales_Organization__c = item.ChavlExt;
-                            }else if(item.Chanm == '0CUST_SALES__ZCUS_SALE'){ //Se coge Grupo Cliente
-                                //Mirar si crear el campo Grupo cliente en Actual Sales History.
-                            }else if(item.Chanm == '0SOLD_TO'){ //Se coge Cliente
-                                //if(excludeAccounts.contains(item.ChavlExt)) excludeLogic = true; //ESTO SE VA A TENER QUE QUITAR
-                                Account accountReference = new Account(SAP_Account_Number__c =  item.ChavlExt);
-                                //Account accountReference = new Account(SAP_Account_Number__c = '11268');
-                                actSH.Account__r = accountReference;
+                            } else if(item.Chanm == '0CUST_SALES__ZCUS_SALE'){
+                                // Grupo cliente
+                            } else if(item.Chanm == '0SOLD_TO'){
+                                row.put('ACCOUNT', item.ChavlExt.toUpperCase());
+                                sapAccounts.add(item.ChavlExt.toUpperCase());
                                 actSH.OM_AccountText__c = item.ChavlExt;
-                            }else if(item.Chanm == '0MATERIAL__ZISDMODEL' && !String.isBlank(item.ChavlExt) && item.ChavlExt != '#'){ //Se coge Modelo
-                                Product2 modelReference = new Product2(OM_Product_Code_SIP__c = item.ChavlExt.toUpperCase());
-                                //Product2 modelReference = new Product2(OM_Product_Code_SIP__c = '1001476O');
+                            } else if(item.Chanm == '0MATERIAL__ZISDMODEL' && !String.isBlank(item.ChavlExt) && item.ChavlExt != '#'){
+                                row.put('PRODUCT', item.ChavlExt.toUpperCase());
+                                productCodes.add(item.ChavlExt.toUpperCase());
                                 actSH.OM_ProductCodeText__c = item.ChavlExt;
-                                actSH.OM_ModelRef__r = modelReference;
-                                
-                                //actSH.OM_ModelRef__r = modelReference;
-                            }else if(item.Chanm == '0MATERIAL' && !String.isBlank(item.ChavlExt)){ //Se coge Material
-                                if(item.Chavl.replaceFirst('^0+', '').length() == 5 || item.Chavl.replaceFirst('^0+', '').equals('GEN_VENTAS')){ //Solo se incluyen materiales de 5 dígitos o que se llamen GEN_VENTAS
-                                    SAP_Material_Code__c materialReference = new SAP_Material_Code__c(Material_Code_Key__c = item.ChavlExt);
-                                    actSH.SAP_Material_Code__r = materialReference;
+                            } else if(item.Chanm == '0MATERIAL' && !String.isBlank(item.ChavlExt)){
+                                if(item.Chavl.replaceFirst('^0+', '').length() == 5 || item.Chavl.replaceFirst('^0+', '').equals('GEN_VENTAS')){
+                                    row.put('MATERIAL', item.ChavlExt.toUpperCase()); 
+                                    materialCodes.add(item.ChavlExt.toUpperCase());
                                     actSH.OM_MaterialCodeText__c = item.ChavlExt;
-                                    excludeLogic = false;
-                                }else{
+                                } else {
                                     excludeLogic = true;
                                 }
-                                
+    
                                 actSH.Revenue__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter).Value);
                                 actSH.RevenuePrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 1).Value);
                                 actSH.RevenueVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 2).Value);
@@ -197,7 +191,6 @@ public class OM_BW_InsertActualSalesHistory {
                                 actSH.Volume000sVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 10).Value);
                                 actSH.Volume000sVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 11).Value);
                                 
-                                //record.OM_VID_EuroTonne__c es una fórmula en Salesforce
                                 actSH.OM_VID_EuroTonnePrevious__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 13).Value);
                                 actSH.OM_VID_EuroTonneVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 14).Value);
                                 actSH.OM_VID_EuroTonneVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 15).Value);
@@ -206,46 +199,74 @@ public class OM_BW_InsertActualSalesHistory {
                                 actSH.PrecioFFPrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 17).Value);
                                 actSH.PrecioFFVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 18).Value);
                                 actSH.PrecioFFVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 19).Value);
-                                
-        						System.debug('***asigna actSH: '+actSH);
-                                if(!excludeLogic) actualSalesHistoryInsertList.add(actSH);
-                            
-                                cellOrdinalCounter = cellOrdinalCounter + 20; 
+    
+                                rawRows.add(row);
+                                cellOrdinalCounter += 20;
+                                tupleCounter++;
                                 actSH = new Actual_Sales_History__c();
                                 excludeLogic = false;
-                                tupleCounter++;
                             }
-                        }        
-                	}
+                        }
+                    }
                 }
             }
-            
+    
+            Map<String, Account> accountMap = new Map<String, Account>();
+            if(!sapAccounts.isEmpty()){
+                for(Account a : [SELECT Id, SAP_Account_Number__c FROM Account WHERE SAP_Account_Number__c IN :sapAccounts]){
+                    accountMap.put(a.SAP_Account_Number__c.toUpperCase(), a);
+                }
+            }
+    
+            Map<String, Product2> productMap = new Map<String, Product2>();
+            if(!productCodes.isEmpty()){
+                for(Product2 p : [SELECT Id, OM_Product_Code_SIP__c FROM Product2 WHERE OM_Product_Code_SIP__c IN :productCodes]){
+                    productMap.put(p.OM_Product_Code_SIP__c.toUpperCase(), p);
+                }
+            }
+    
+            Map<String, SAP_Material_Code__c> materialMap = new Map<String, SAP_Material_Code__c>();
+            if(!materialCodes.isEmpty()){
+                for(SAP_Material_Code__c m : [SELECT Id, Material_Code_Key__c FROM SAP_Material_Code__c WHERE Material_Code_Key__c IN :materialCodes]){
+                    materialMap.put(m.Material_Code_Key__c.toUpperCase(), m);
+                }
+            }
+    
+            for(Map<String,String> row : rawRows){
+                if(!accountMap.containsKey(row.get('ACCOUNT'))){
+                    salesforceErrors.add('Account not found: ' + row.get('ACCOUNT'));
+                    break;
+                }
+                if(!productMap.containsKey(row.get('PRODUCT'))){
+                    salesforceErrors.add('Product not found: ' + row.get('PRODUCT'));
+                    break;
+                }
+                if(!materialMap.containsKey(row.get('MATERIAL'))){
+                    salesforceErrors.add('Material not found: ' + row.get('MATERIAL'));
+                    break;
+                }
+    
+                Actual_Sales_History__c rec = new Actual_Sales_History__c();
+                rec.Account__c = accountMap.get(row.get('ACCOUNT')).Id;
+                rec.OM_ModelRef__c = productMap.get(row.get('PRODUCT')).Id;
+                rec.SAP_Material_Code__c = materialMap.get(row.get('MATERIAL')).Id;
+    
+                rec.Revenue__c = parseDecimal(row.get('REV'));
+                rec.Tonnes__c = parseDecimal(row.get('TON'));
+                actualSalesHistoryInsertList.add(rec);
+            }
+    
+             if(!salesforceErrors.isEmpty()){
+                createResponse(false, 'Validation error', null, '400', salesforceErrors, null, null, requestString);
+                return;
+            }
+    
             if(actualSalesHistoryInsertList.size() > 0){
-                System.debug('***actualSalesHistoryInsertList : '+actualSalesHistoryInsertList);
-                System.debug('***actualSalesHistoryInsertList.size : '+actualSalesHistoryInsertList.size());
-                Database.SaveResult[] actualSalesHistoryInsertResults = Database.insert(actualSalesHistoryInsertList, true);
-                Map<String, String> insertErrors = OM_Utils.DmlResults.getErrorsMap(actualSalesHistoryInsertResults, actualSalesHistoryInsertList, 'OM_AccountText__c');
-			
-                if(!insertErrors.isEmpty()){ // manage the errors
-                    salesforceErrors.add('Exception trying to upsert Account: ' + JSON.serialize(insertErrors));
-                }else{ // If no errors for accounts, we can continue with the junction records
-                    /** Start building the account SalesArea Junction record */
-                    
-                    /** End building the account SalesArea Junction record */
-                    
-                }
-                System.debug('***salesforceErrors: '+salesforceErrors);
-                
-                 // Determine response based on errors
-                if (salesforceErrors.isEmpty()) {
-                    createResponse(true, responseMessage, null, '200', salesforceErrors, successMessage, null, requestString);
-                    // RestContext.response.responseBody = Blob.valueOf(JSON.serialize(responseObj));
-                } else {
-                    createResponse(false, responseMessage, null, '200', salesforceErrors, null, null, requestString);
-                    
-                }
+                Database.insert(actualSalesHistoryInsertList, true);
+                createResponse(true, responseMessage, null, '200', new List<String>(), successMessage, null, requestString);
             }
         }
+    
     }
     
     private static Decimal parseDecimal(String value) {
