@@ -276,17 +276,17 @@ public class OM_BW_InsertActualSalesHistory {
 
         if(!missingAccounts.isEmpty()){
             salesforceErrors.add(
-                'Accounts not found: ' + String.join(new List<String>(missingAccounts), ', ')
+                'ACCOUNTS NOT FOUND: ' + String.join(new List<String>(missingAccounts), ', ')
             );
         }
         if(!missingProducts.isEmpty()){
             salesforceErrors.add(
-                'Products not found: ' + String.join(new List<String>(missingProducts), ', ')
+                'PRODUCTS NOT FOUND: ' + String.join(new List<String>(missingProducts), ', ')
             );
         }
         if(!missingMaterials.isEmpty()){
             salesforceErrors.add(
-                'Materials not found: ' + String.join(new List<String>(missingMaterials), ', ')
+                'MATERIALS NOT FOUND: ' + String.join(new List<String>(missingMaterials), ', ')
             );
         }
 
