@@ -19081,10 +19081,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>SalesConsole</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ScheduleJob</name>
     </userPermissions>
     <userPermissions>
@@ -19186,10 +19182,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>UserInteractionInsights</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewAllActivities</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
