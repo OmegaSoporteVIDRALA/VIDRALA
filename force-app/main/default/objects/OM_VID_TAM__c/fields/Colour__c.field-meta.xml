@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Colour__c</fullName>
+    <externalId>false</externalId>
+    <formula>Case( Colour_Code__c, 
+					&quot;A&quot;, &quot;Amber&quot;, 
+					&quot;B&quot;, &quot;Flint&quot; , 
+					&quot;C&quot;, &quot;Artic Blue&quot;, 
+					&quot;D&quot;, &quot;Colbalt Blue&quot;, 
+					&quot;E&quot;, &quot;Half Flint&quot;, 
+					&quot;F&quot;, &quot;Autumn Leaf&quot;,
+					&quot;K&quot;, &quot;Mallaca&quot;, 
+					&quot;L&quot;, &quot;Sea Green&quot;, 
+					&quot;M&quot;, &quot;Eurogreen/Moss&quot;, 
+					&quot;N&quot;, &quot;Black&quot;, 
+					&quot;O&quot;, &quot;Dark Green&quot;, 
+					&quot;T&quot;, &quot;Brown&quot;, 
+					&quot;V&quot;, &quot;Green&quot;, 
+					&quot; &quot;
+				)</formula>
+    <label>Colour</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

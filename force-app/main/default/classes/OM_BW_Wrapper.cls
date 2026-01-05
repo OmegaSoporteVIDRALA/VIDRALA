@@ -111,6 +111,14 @@ public class OM_BW_Wrapper {
             				this.batch = batch;
                         
         }
+        
+        public BWFilter(String yearFrom, String monthFrom, String salesGroup){
+            		
+                            this.yearFrom = yearFrom;
+                            this.monthFrom = monthFrom;
+                            this.salesGroup = salesGroup;
+                            
+        }
 
     }
 }
