@@ -1,6 +1,5 @@
 public class OM_BW_InsertActualSalesHistory {
-    
-    // WRAPPER PARA LA RESPUESTA DEL WS DE SF
+
     public class SFWS_Response {
         public boolean status;
         public String msg;
@@ -10,50 +9,17 @@ public class OM_BW_InsertActualSalesHistory {
         public List<String> salesforceErrors;
         public String successMessage;
     }
-    
-    public static void createResponse(Boolean status, String msg, String accountId, String code, List<String> errors, String successMessage, String sapCode, String requestParam) {
-        
-        // Generate the response        
-        SFWS_Response respWrapper = new SFWS_Response();
-        respWrapper.status = status;
-        respWrapper.msg = msg;
-        respWrapper.accountId = accountId;
-        respWrapper.sapCode = sapCode;
-        respWrapper.code = code;
-        respWrapper.salesforceErrors = errors;
-        respWrapper.successMessage = successMessage;
 
-
-        // Write the integration Message
-        OM_Utils.IntegrationMsg.createRESTIntegrationMsg(OM_Utils.IntegrationMsg.INBOUND, '/actualSalesHistoryCalloutBW', 'INSERT');
-        OM_Utils.IntegrationMsg.addBody(requestParam, JSON.serialize(respWrapper));
-        OM_Utils.IntegrationMsg.addStatusAndRecord((status ? OM_Utils.IntegrationMsg.SUCCESS : OM_Utils.IntegrationMsg.ERROR), accountId, null, null );
-        OM_Utils.IntegrationMsg.insertRecord();
-        
-    }
-    
-    public static String createJsonBWWrapper(String yearFrom, String yearTo, String monthFrom, String monthTo, 
-                                             String salesOrganization, String salesGroup){
-        
-        
-        OM_BW_Wrapper.BWFilter filterWrapper = new OM_BW_Wrapper.BWFilter(yearFrom, yearTo, monthFrom, monthTo, salesOrganization, salesGroup);
-        
-        return JSON.serialize(filterWrapper);
-        
-    }
-        
     @Future (callout=true)
-    public static void insertActualSalesHistory(String jsonBWFilter){
-        
-    	OM_BW_Wrapper.BWFilter filterWrapper = (OM_BW_Wrapper.BWFilter) JSON.deserialize(jsonBWFilter, OM_BW_Wrapper.BWFilter.class);
+    public static void insertActualSalesHistory(String jsonFilter){
+        OM_BW_Wrapper.BWFilter filterWrapper = (OM_BW_Wrapper.BWFilter) JSON.deserialize(jsonFilter, OM_BW_Wrapper.BWFilter.class);
         actualSalesHistoryCalloutBW(filterWrapper);
-        
     }
-    
+
     public static void actualSalesHistoryCalloutBW(OM_BW_Wrapper.BWFilter filterWrapper){
         
         String infoProvider = 'ZMSDF_11';
-	    String query = 'ZMSDF_11_PYGACC_SF'; //ActualSalesHistory - Pasar a CustomMetadata
+        String query = 'ZMSDF_11_PYGACC_SF'; //ActualSalesHistory - Pasar a CustomMetadata
         Integer VAR_NAME = 1; //Contador variables
         
         /*Parámetros de entrada posibles para este servicio y su orden:
@@ -64,57 +30,32 @@ public class OM_BW_InsertActualSalesHistory {
          **/
         
         OM_SapFunctionsStyle.CDSS cdss = new OM_SapFunctionsStyle.CDSS();
-        
         List<OM_SapFunctionsStyle.W3query> itemList = new List<OM_SapFunctionsStyle.W3query>();
-		
-        //FECHAS
-        OM_SapFunctionsStyle.W3query item = new OM_SapFunctionsStyle.W3query();
-        item.Name = 'VAR_NAME_'+VAR_NAME;
-        item.Value = 'VAR_20240626203032';
-        itemList.add(item);
         
-        OM_SapFunctionsStyle.W3query item2 = new OM_SapFunctionsStyle.W3query();
-        item2.Name = 'VAR_VALUE_LOW_EXT_'+VAR_NAME;
-        item2.Value = filterWrapper.monthFrom+'.'+filterWrapper.yearFrom; //P.e. 11.2024
-        itemList.add(item2);
-        OM_SapFunctionsStyle.W3query item3 = new OM_SapFunctionsStyle.W3query();
-        item3.Name = 'VAR_VALUE_HIGH_EXT_'+VAR_NAME;
-        item3.Value = filterWrapper.monthTo+'.'+filterWrapper.yearTo; //12.2024
-        itemList.add(item3);
+        //FECHAS
+        itemList.add(new OM_SapFunctionsStyle.W3query('VAR_NAME_'+VAR_NAME, 'VAR_20240626203032'));
+        itemList.add(new OM_SapFunctionsStyle.W3query('VAR_VALUE_LOW_EXT_'+VAR_NAME, filterWrapper.monthFrom+'.'+filterWrapper.yearFrom)); //P.e. 11.2024
+        itemList.add(new OM_SapFunctionsStyle.W3query('VAR_VALUE_HIGH_EXT_'+VAR_NAME, filterWrapper.monthTo+'.'+filterWrapper.yearTo)); //12.2024
         VAR_NAME++;
         
         //Organización de ventas
         if(filterWrapper.salesOrganization != null){
-            OM_SapFunctionsStyle.W3query item4 = new OM_SapFunctionsStyle.W3query();
-            item4.Name = 'VAR_NAME_'+VAR_NAME;
-            item4.Value = 'VAR_20241107114952';
-            itemList.add(item4);
-            OM_SapFunctionsStyle.W3query item5 = new OM_SapFunctionsStyle.W3query();
-            item5.Name = 'VAR_VALUE_EXT_'+VAR_NAME;
-            item5.Value = filterWrapper.salesOrganization; 
-            itemList.add(item5);
+            itemList.add(new OM_SapFunctionsStyle.W3query('VAR_NAME_'+VAR_NAME, 'VAR_20241107114952'));
+            itemList.add(new OM_SapFunctionsStyle.W3query('VAR_VALUE_EXT_'+VAR_NAME, filterWrapper.salesOrganization)); 
             VAR_NAME++;
-            
         }
         
         //Grupo de vendedores
         if(filterWrapper.salesGroup != null){
-            OM_SapFunctionsStyle.W3query item6 = new OM_SapFunctionsStyle.W3query();
-            item6.Name = 'VAR_NAME_'+VAR_NAME;
-            item6.Value = 'VAR_20241220095416';
-            itemList.add(item6);
-            OM_SapFunctionsStyle.W3query item7 = new OM_SapFunctionsStyle.W3query();
-            item7.Name = 'VAR_VALUE_EXT_'+VAR_NAME;
-            item7.Value = filterWrapper.salesGroup; 
-            itemList.add(item7);
+            itemList.add(new OM_SapFunctionsStyle.W3query('VAR_NAME_'+VAR_NAME, 'VAR_20241220095416'));
+            itemList.add(new OM_SapFunctionsStyle.W3query('VAR_VALUE_EXT_'+VAR_NAME, filterWrapper.salesGroup)); 
             VAR_NAME++;
-            
         }      
         
         OM_SapFunctionsStyle.Rrxw3tquery parameter = new OM_SapFunctionsStyle.Rrxw3tquery();    
         parameter.item = itemList;
-        OM_SapFunctionsStyle.RrwsThxAxisData axis;
         String requestString = parameter.toString();
+
         try{
             OM_SapFunctionsStyle.GetQueryViewDataResponse_element response = cdss.GetQueryViewData(infoProvider, parameter, query, null);
             System.debug('***response: '+response);
@@ -124,202 +65,144 @@ public class OM_BW_InsertActualSalesHistory {
             }
         }catch(Exception e){
             System.debug('Exception Entra por aqui: '+e.getMessage());
-            createResponse(false, 'Error not known', null, '400', new list<String>{e.getMessage(), e.getStackTraceString()}, null, 'Bad request', requestString);
+            createResponse(false, 'Error not known', null, '400', new List<String>{e.getMessage(), e.getStackTraceString()}, null, 'Bad request', requestString);
         }
-    
     }
-    
-    public static void processActualSalesHistoryCalloutResponse(
-        OM_SapFunctionsStyle.GetQueryViewDataResponse_element response,
-        String requestString
-    ){
-        List<Actual_Sales_History__c> actualSalesHistoryInsertList = new List<Actual_Sales_History__c>();
-        String successMessage = 'Insert operations completed successfully.';
+    public static void processActualSalesHistoryCalloutResponse(OM_SapFunctionsStyle.GetQueryViewDataResponse_element response, String requestString) {
+        List<Actual_Sales_History__c> temporaryList = new List<Actual_Sales_History__c>();
         List<String> salesforceErrors = new List<String>();
-
-        if(response == null){
-            return;
-        }
-
         Integer cellOrdinalCounter = 0;
 
-        List<Map<String, String>> rawRows = new List<Map<String, String>>();
-
-        Set<String> sapAccounts = new Set<String>();
-        Set<String> productCodes = new Set<String>();
-        Set<String> materialCodes = new Set<String>();
-
-        for(OM_SapFunctionsStyle.RrwsSxAxisData axis : response.AxisData.item){  
+        for(OM_SapFunctionsStyle.RrwsSxAxisData axis : response.AxisData.item) {
+            if(axis.axis != '001') continue;
+            Actual_Sales_History__c actSH = new Actual_Sales_History__c();
             Integer tupleCounter = 0;
 
-            if(axis.axis == '001'){
-                Actual_Sales_History__c actSH = new Actual_Sales_History__c();
+            for(OM_SapFunctionsStyle.RrwsSxTuple item : axis.Set_x.item) {
+                if(tupleCounter != Integer.valueOf(item.TupleOrdinal)) continue;
 
-                for(OM_SapFunctionsStyle.RrwsSxTuple item : axis.Set_x.item){
-                    if(tupleCounter == Integer.valueOf(item.TupleOrdinal)){
-                        Map<String,String> row = new Map<String,String>();
-
-                        if(item.Chanm == '0CALMONTH'){
-                            actSH.Year__c = item.Chavl.substring(0,4);
-                            actSH.Month__c = OM_Utils.Strings.getMonthAbbreviation(
-                                Integer.valueOf(item.Chavl.substring(4,6))
-                            );
-
-                        } else if(item.Chanm == '0SALESORG'){
-                            actSH.Sales_Organization__c = item.ChavlExt;
-
-                        } else if(item.Chanm == '0SOLD_TO'){
-                            String acc = item.ChavlExt.toUpperCase();
-                            row.put('ACCOUNT', acc);
-                            sapAccounts.add(acc);
-                            actSH.OM_AccountText__c = item.ChavlExt;
-
-                        } else if(item.Chanm == '0MATERIAL__ZISDMODEL'
-                            && !String.isBlank(item.ChavlExt)
-                            && item.ChavlExt != '#'
-                        ){
-                            String prod = item.ChavlExt.toUpperCase();
-                            row.put('PRODUCT', prod);
-                            productCodes.add(prod);
-                            actSH.OM_ProductCodeText__c = item.ChavlExt;
-
-                        } else if(item.Chanm == '0MATERIAL' && !String.isBlank(item.ChavlExt)){
-                            if(item.Chavl.replaceFirst('^0+', '').length() == 5
-                                || item.Chavl.replaceFirst('^0+', '').equals('GEN_VENTAS')
-                            ){
-                                String mat = item.ChavlExt.toUpperCase();
-                                row.put('MATERIAL', mat);
-                                materialCodes.add(mat);
-                                actSH.OM_MaterialCodeText__c = item.ChavlExt;
-
-                            	actSH.Revenue__c  = parseDecimal(response.cellData.item.get(cellOrdinalCounter).Value);
-                                actSH.RevenuePrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 1).Value);
-                                actSH.RevenueVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 2).Value);
-                                actSH.RevenueVarPercentage__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 3).Value);
-
-                                actSH.Tonnes__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 4).Value);
-                                actSH.TonnesPrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 5).Value);
-                                actSH.TonnesVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 6).Value);
-                                actSH.TonnesVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 7).Value);
-
-                                actSH.Volume_000_s__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 8).Value);
-                                actSH.Volume000sPrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 9).Value);
-                                actSH.Volume000sVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 10).Value);
-                                actSH.Volume000sVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 11).Value);
-
-                                actSH.OM_VID_EuroTonnePrevious__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 13).Value);
-                                actSH.OM_VID_EuroTonneVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 14).Value);
-                                actSH.OM_VID_EuroTonneVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 15).Value);
-
-                                actSH.Precio_FF__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 16).Value);
-                                actSH.PrecioFFPrev__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 17).Value);
-                                actSH.PrecioFFVar__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 18).Value);
-                                actSH.PrecioFFVarPercent__c = parseDecimal(response.cellData.item.get(cellOrdinalCounter + 19).Value);
-
-                                rawRows.add(row);
-                                cellOrdinalCounter += 20;
-                                tupleCounter++;
-                                actSH = new Actual_Sales_History__c();
-                            }
-                        }
+                if(item.Chanm == '0CALMONTH') {
+                    actSH.Year__c = item.Chavl.substring(0,4);
+                    actSH.Month__c = OM_Utils.Strings.getMonthAbbreviation(Integer.valueOf(item.Chavl.substring(4,6)));
+                } else if(item.Chanm == '0SALESORG') {
+                    actSH.Sales_Organization__c = item.ChavlExt;
+                } else if(item.Chanm == '0SOLD_TO') {
+                    actSH.OM_AccountText__c = item.ChavlExt.toUpperCase();
+                } else if(item.Chanm == '0MATERIAL__ZISDMODEL' && String.isNotBlank(item.ChavlExt) && item.ChavlExt != '#') {
+                    actSH.OM_ProductCodeText__c = item.ChavlExt.toUpperCase();
+                } else if(item.Chanm == '0MATERIAL' && String.isNotBlank(item.ChavlExt)) {
+                    String cleanMat = item.Chavl.replaceFirst('^0+', '');
+                    if(cleanMat.length() == 5 || cleanMat.equals('GEN_VENTAS')) {
+                        actSH.OM_MaterialCodeText__c = item.ChavlExt.toUpperCase();
+                        processCellData(actSH, response.cellData.item, cellOrdinalCounter);
+                        temporaryList.add(actSH);
+                        cellOrdinalCounter += 20;
                     }
+                    actSH = new Actual_Sales_History__c();
+                    tupleCounter++;
                 }
             }
         }
 
-        Map<String, Account> accountMap = new Map<String, Account>();
-        if(!sapAccounts.isEmpty()){
-            for(Account a : [
-                SELECT Id, SAP_Account_Number__c
-                FROM Account
-                WHERE SAP_Account_Number__c IN :sapAccounts
-            ]){
-                accountMap.put(a.SAP_Account_Number__c.toUpperCase(), a);
-            }
-        }
+        if(temporaryList.isEmpty()) return;
 
-        Map<String, Product2> productMap = new Map<String, Product2>();
-        if(!productCodes.isEmpty()){
-            for(Product2 p : [
-                SELECT Id, OM_Product_Code_SIP__c
-                FROM Product2
-                WHERE OM_Product_Code_SIP__c IN :productCodes
-            ]){
-                productMap.put(p.OM_Product_Code_SIP__c.toUpperCase(), p);
-            }
-        }
-
-        Map<String, SAP_Material_Code__c> materialMap = new Map<String, SAP_Material_Code__c>();
-        if(!materialCodes.isEmpty()){
-            for(SAP_Material_Code__c m : [
-                SELECT Id, Material_Code_Key__c
-                FROM SAP_Material_Code__c
-                WHERE Material_Code_Key__c IN :materialCodes
-            ]){
-                materialMap.put(m.Material_Code_Key__c.toUpperCase(), m);
-            }
-        }
-
-        Set<String> missingAccounts = new Set<String>();
-        Set<String> missingProducts = new Set<String>();
-        Set<String> missingMaterials = new Set<String>();
-
-        for(String a : sapAccounts){
-            if(!accountMap.containsKey(a)) missingAccounts.add(a);
-        }
-        for(String p : productCodes){
-            if(!productMap.containsKey(p)) missingProducts.add(p);
-        }
-        for(String m : materialCodes){
-            if(!materialMap.containsKey(m)) missingMaterials.add(m);
-        }
-
-        if(!missingAccounts.isEmpty()){
-            salesforceErrors.add(
-                'ACCOUNTS NOT FOUND: ' + String.join(new List<String>(missingAccounts), ', ')
-            );
-        }
-        if(!missingProducts.isEmpty()){
-            salesforceErrors.add(
-                'PRODUCTS NOT FOUND: ' + String.join(new List<String>(missingProducts), ', ')
-            );
-        }
-        if(!missingMaterials.isEmpty()){
-            salesforceErrors.add(
-                'MATERIALS NOT FOUND: ' + String.join(new List<String>(missingMaterials), ', ')
-            );
-        }
+        validateData(temporaryList, salesforceErrors);
 
         if(!salesforceErrors.isEmpty()){
-            createResponse(
-                false,
-                'Master data validation error',
-                null,
-                '400',
-                salesforceErrors,
-                null,
-                null,
-                requestString
-            );
+            createResponse(false, 'Master data validation error', null, '400', salesforceErrors, null, null, requestString);
             return;
         }
 
-    for(Map<String,String> row : rawRows){
-            Actual_Sales_History__c rec = new Actual_Sales_History__c();
-            rec.Account__c = accountMap.get(row.get('ACCOUNT')).Id;
-            rec.OM_ModelRef__c = productMap.get(row.get('PRODUCT')).Id;
-            rec.SAP_Material_Code__c = materialMap.get(row.get('MATERIAL')).Id;
-            actualSalesHistoryInsertList.add(rec);
+        Database.insert(temporaryList, true);
+        createResponse(true, null, null, '200', new List<String>(), 'Inserted ' + temporaryList.size() + ' records', null, requestString);
+    }
+
+    private static void validateData(List<Actual_Sales_History__c> records, List<String> errors) {
+        Set<String> accCodes = new Set<String>();
+        Set<String> prodCodes = new Set<String>();
+        Set<String> matCodes = new Set<String>();
+
+        for(Actual_Sales_History__c r : records) {
+            accCodes.add(r.OM_AccountText__c);
+            prodCodes.add(r.OM_ProductCodeText__c);
+            matCodes.add(r.OM_MaterialCodeText__c);
         }
 
-        if(!actualSalesHistoryInsertList.isEmpty()){
-            Database.insert(actualSalesHistoryInsertList, true);
-            createResponse(true, null, null, '200', new List<String>(), successMessage, null, requestString);
+        Map<String, Id> accMap = new Map<String, Id>();
+        for(Account a : [SELECT Id, SAP_Account_Number__c FROM Account WHERE SAP_Account_Number__c IN :accCodes]) 
+            accMap.put(a.SAP_Account_Number__c.toUpperCase(), a.Id);
+
+        Map<String, Id> prodMap = new Map<String, Id>();
+        for(Product2 p : [SELECT Id, OM_Product_Code_SIP__c FROM Product2 WHERE OM_Product_Code_SIP__c IN :prodCodes]) 
+            prodMap.put(p.OM_Product_Code_SIP__c.toUpperCase(), p.Id);
+
+        Map<String, Id> matMap = new Map<String, Id>();
+        for(SAP_Material_Code__c m : [SELECT Id, Material_Code_Key__c FROM SAP_Material_Code__c WHERE Material_Code_Key__c IN :matCodes]) 
+            matMap.put(m.Material_Code_Key__c.toUpperCase(), m.Id);
+
+        List<String> missA = new List<String>();
+        for(String s : accCodes) if(!accMap.containsKey(s)) missA.add(s);
+        if(!missA.isEmpty()) errors.add('ACCOUNTS NOT FOUND: ' + String.join(missA, ', '));
+        
+        List<String> missP = new List<String>();
+        for(String s : prodCodes) if(!prodMap.containsKey(s)) missP.add(s);
+        if(!missP.isEmpty()) errors.add('PRODUCTS NOT FOUND: ' + String.join(missP, ', '));
+
+        List<String> missM = new List<String>();
+        for(String s : matCodes) if(!matMap.containsKey(s)) missM.add(s);
+        if(!missM.isEmpty()) errors.add('MATERIALS NOT FOUND: ' + String.join(missM, ', '));
+
+        if(errors.isEmpty()) {
+            for(Actual_Sales_History__c r : records) {
+                r.Account__c = accMap.get(r.OM_AccountText__c);
+                r.OM_ModelRef__c = prodMap.get(r.OM_ProductCodeText__c);
+                r.SAP_Material_Code__c = matMap.get(r.OM_MaterialCodeText__c);
+            }
         }
     }
 
-    
-    private static Decimal parseDecimal(String value) {
-        return String.isBlank(value) ? 0 : Decimal.valueOf(value).setScale(2, RoundingMode.HALF_UP);
+    private static void processCellData(Actual_Sales_History__c rec, List<OM_SapFunctionsStyle.RrwsSCell> cells, Integer idx) {
+        rec.Revenue__c = parseDecimal(cells.get(idx).Value);
+        rec.RevenuePrev__c = parseDecimal(cells.get(idx + 1).Value);
+        rec.RevenueVar__c = parseDecimal(cells.get(idx + 2).Value);
+        rec.RevenueVarPercentage__c = parseDecimal(cells.get(idx + 3).Value);
+        
+        rec.Tonnes__c = parseDecimal(cells.get(idx + 4).Value);
+        rec.TonnesPrev__c = parseDecimal(cells.get(idx + 5).Value);
+        rec.TonnesVar__c = parseDecimal(cells.get(idx + 6).Value);
+        rec.TonnesVarPercent__c = parseDecimal(cells.get(idx + 7).Value);
+        
+        rec.Volume_000_s__c = parseDecimal(cells.get(idx + 8).Value);
+        rec.Volume000sPrev__c  = parseDecimal(cells.get(idx + 9).Value);
+        rec.Volume000sVar__c = parseDecimal(cells.get(idx + 10).Value);
+        rec.Volume000sVarPercent__c = parseDecimal(cells.get(idx + 11).Value);
+        
+        //record.OM_VID_EuroTonne__c es una fórmula en Salesforce
+        rec.OM_VID_EuroTonnePrevious__c = parseDecimal(cells.get(idx + 13).Value);
+        rec.OM_VID_EuroTonneVar__c = parseDecimal(cells.get(idx + 14).Value);
+        rec.OM_VID_EuroTonneVarPercent__c = parseDecimal(cells.get(idx + 15).Value);
+        
+        rec.Precio_FF__c = parseDecimal(cells.get(idx + 16).Value);
+        rec.PrecioFFPrev__c = parseDecimal(cells.get(idx + 17).Value);
+        rec.PrecioFFVar__c = parseDecimal(cells.get(idx + 18).Value);
+        rec.PrecioFFVarPercent__c = parseDecimal(cells.get(idx + 19).Value);
+    }
+
+    private static Decimal parseDecimal(String v) {
+        return String.isBlank(v) ? 0 : Decimal.valueOf(v.trim().replace(',', '.')).setScale(2, RoundingMode.HALF_UP);
+    }
+
+    public static void createResponse(Boolean status, String msg, String accId, String code, List<String> errs, String success, String sap, String req) {
+        SFWS_Response resp = new SFWS_Response();
+        resp.status = status; resp.msg = msg; resp.accountId = accId; resp.sapCode = sap; resp.code = code;
+        resp.salesforceErrors = errs; resp.successMessage = success;
+        OM_Utils.IntegrationMsg.createRESTIntegrationMsg(OM_Utils.IntegrationMsg.INBOUND, '/actualSalesHistoryCalloutBW', 'INSERT');
+        OM_Utils.IntegrationMsg.addBody(req, JSON.serialize(resp));
+        OM_Utils.IntegrationMsg.addStatusAndRecord((status ? OM_Utils.IntegrationMsg.SUCCESS : OM_Utils.IntegrationMsg.ERROR), accId, null, null );
+        OM_Utils.IntegrationMsg.insertRecord();
+    }
+
+    public static String createJsonBWWrapper(String yF, String yT, String mF, String mT, String sO, String sG){
+        return JSON.serialize(new OM_BW_Wrapper.BWFilter(yF, yT, mF, mT, sO, sG));
     }
 }
