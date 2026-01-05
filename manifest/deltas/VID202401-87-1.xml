@@ -6,6 +6,8 @@
 		<members>OM_BW_InsertTAMReport_Test</members>
 		<members>OM_SapFunctionsMockTAM_Test</members>
 		<members>OM_BW_Wrapper</members>
+		<members>OM_BW_Callouts_Queable_Test</members>
+		<members>OM_BW_Wrapper_Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
