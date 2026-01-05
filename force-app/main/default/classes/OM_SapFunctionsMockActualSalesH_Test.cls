@@ -1,86 +1,38 @@
 @isTest
 global class OM_SapFunctionsMockActualSalesH_Test implements WebServiceMock {
-    global void doInvoke(
-        Object stub,
-        Object request,
-        Map<String, Object> response,
-        String endpoint,
-        String soapAction,
-        String requestName,
-        String responseNS,
-        String responseName,
-        String responseType
-    ) {
-        // Crear dummy response
-        OM_SapFunctionsStyle.GetQueryViewDataResponse_element responseElement = 
-            new OM_SapFunctionsStyle.GetQueryViewDataResponse_element();
+    global void doInvoke(Object stub, Object request, Map<String, Object> response, String endpoint, String soapAction, String requestName, String responseNS, String responseName, String responseType) {
+        
+        OM_SapFunctionsStyle.GetQueryViewDataResponse_element resp = new OM_SapFunctionsStyle.GetQueryViewDataResponse_element();
+        resp.AxisData = new OM_SapFunctionsStyle.RrwsThxAxisData();
+        resp.AxisData.item = new List<OM_SapFunctionsStyle.RrwsSxAxisData>();
 
-        // Crear AxisData
-        OM_SapFunctionsStyle.RrwsThxAxisData axisData = new OM_SapFunctionsStyle.RrwsThxAxisData();
-        axisData.item = new List<OM_SapFunctionsStyle.RrwsSxAxisData>();
+        OM_SapFunctionsStyle.RrwsSxAxisData axis001 = new OM_SapFunctionsStyle.RrwsSxAxisData();
+        axis001.Axis = '001';
+        axis001.Set_x = new OM_SapFunctionsStyle.RrwsTxSet();
+        axis001.Set_x.item = new List<OM_SapFunctionsStyle.RrwsSxTuple>();
 
-        // Simulamos una dimensión con varios registros
-        OM_SapFunctionsStyle.RrwsSxAxisData axisItem = new OM_SapFunctionsStyle.RrwsSxAxisData();
-        axisItem.Axis = '001'; // Nuestro Axis relevante
-        axisItem.Set_x = new OM_SapFunctionsStyle.RrwsTxSet();
-        axisItem.Set_x.item = new List<OM_SapFunctionsStyle.RrwsSxTuple>();
+        // Datos mínimos para que los IFs de la clase se activen
+        axis001.Set_x.item.add(createT('0', '0CALMONTH', '202511', ''));
+        axis001.Set_x.item.add(createT('0', '0SOLD_TO', '12516', '12516'));
+        axis001.Set_x.item.add(createT('0', '0MATERIAL__ZISDMODEL', '221004B', '221004B'));
+        axis001.Set_x.item.add(createT('0', '0MATERIAL', '18403', '18403')); 
 
-        // Simulamos 2 registros
-        for (Integer j = 0; j < 2; j++) {
-            // Año-Mes
-            OM_SapFunctionsStyle.RrwsSxTuple tupleCalMonth = new OM_SapFunctionsStyle.RrwsSxTuple();
-            tupleCalMonth.TupleOrdinal = String.valueOf(j);
-            tupleCalMonth.Chanm = '0CALMONTH';
-            tupleCalMonth.Chavl = '20240' + (j + 1); // 202401, 202402
-            axisItem.Set_x.item.add(tupleCalMonth);
+        resp.AxisData.item.add(axis001);
 
-            // Cliente
-            OM_SapFunctionsStyle.RrwsSxTuple tupleAccount = new OM_SapFunctionsStyle.RrwsSxTuple();
-            tupleAccount.TupleOrdinal = String.valueOf(j);
-            tupleAccount.Chanm = '0SOLD_TO';
-            tupleAccount.ChavlExt = 'ACCT00' + (j+1); // ACCT001, ACCT002
-            axisItem.Set_x.item.add(tupleAccount);
-
-            // Material
-            OM_SapFunctionsStyle.RrwsSxTuple tupleMaterial = new OM_SapFunctionsStyle.RrwsSxTuple();
-            tupleMaterial.TupleOrdinal = String.valueOf(j);
-            tupleMaterial.Chanm = '0MATERIAL';
-            tupleMaterial.Chavl = 'MAT00' + (j+1);
-            tupleMaterial.ChavlExt = 'MAT00' + (j+1);
-            axisItem.Set_x.item.add(tupleMaterial);
-
-            // Modelo
-            OM_SapFunctionsStyle.RrwsSxTuple tupleModel = new OM_SapFunctionsStyle.RrwsSxTuple();
-            tupleModel.TupleOrdinal = String.valueOf(j);
-            tupleModel.Chanm = '0MATERIAL__ZISDMODEL';
-            tupleModel.ChavlExt = 'MOD00' + (j+1);
-            axisItem.Set_x.item.add(tupleModel);
-
-            // Organización de ventas
-            OM_SapFunctionsStyle.RrwsSxTuple tupleSalesOrg = new OM_SapFunctionsStyle.RrwsSxTuple();
-            tupleSalesOrg.TupleOrdinal = String.valueOf(j);
-            tupleSalesOrg.Chanm = '0SALESORG';
-            tupleSalesOrg.ChavlExt = 'SO01';
-            axisItem.Set_x.item.add(tupleSalesOrg);
-        }
-
-        axisData.item.add(axisItem);
-
-       
-        OM_SapFunctionsStyle.RrwsTCell cellData = new OM_SapFunctionsStyle.RrwsTCell();
-        cellData.item = new List<OM_SapFunctionsStyle.RrwsSCell>();
-        // Para cada registro, agregamos 20 celdas de ejemplo
-        for (Integer i = 0; i < 40; i++) {
+        resp.CellData = new OM_SapFunctionsStyle.RrwsTCell();
+        resp.CellData.item = new List<OM_SapFunctionsStyle.RrwsSCell>();
+        for (Integer i = 0; i < 20; i++) {
             OM_SapFunctionsStyle.RrwsSCell cell = new OM_SapFunctionsStyle.RrwsSCell();
-            cell.Value = String.valueOf(1000 + i * 10); // Valores incrementales
-            cellData.item.add(cell);
+            cell.Value = '10.0';
+            resp.CellData.item.add(cell);
         }
 
-        // Asignar datos al response
-        responseElement.AxisData = axisData;
-        responseElement.CellData = cellData;
+        response.put('response_x', resp);
+    }
 
-        // Insertar en el mapa de respuesta
-        response.put('response_x', responseElement);
+    private OM_SapFunctionsStyle.RrwsSxTuple createT(String ord, String chanm, String chavl, String chavlExt) {
+        OM_SapFunctionsStyle.RrwsSxTuple t = new OM_SapFunctionsStyle.RrwsSxTuple();
+        t.TupleOrdinal = ord; t.Chanm = chanm; t.Chavl = chavl; t.ChavlExt = chavlExt;
+        return t;
     }
 }
