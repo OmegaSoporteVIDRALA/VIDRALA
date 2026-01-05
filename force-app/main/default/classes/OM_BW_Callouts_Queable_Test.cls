@@ -22,4 +22,16 @@ public class OM_BW_Callouts_Queable_Test {
 
        
     }
+    
+    @isTest
+    static void test_Execute_QueuableTAM() {
+        Test.setMock(HttpCalloutMock.class, new MockCallout());
+
+       
+        Test.startTest();
+        System.enqueueJob(new OM_BW_Callouts_Queable_TAM('2000', '1', '2025'));
+        Test.stopTest();
+
+       
+    }
 }
