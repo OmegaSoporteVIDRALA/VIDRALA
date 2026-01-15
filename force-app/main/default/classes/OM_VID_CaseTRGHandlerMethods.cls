@@ -4,6 +4,7 @@
 public class OM_VID_CaseTRGHandlerMethods {
 
     private static Id insatisfaccionRecordType = OM_Utils.RecordTypes.getRecordTypeByDevName('Case', 'Fifty_Calidad_Insatisfaccion');
+    private static final String EMAIL_DELIMITER = ';';
     
     public static void caseBeforeActions(List<Case> newList, Map<Id, Case> oldMap) {
         for (Case currentCase : newList) {
@@ -119,25 +120,46 @@ public class OM_VID_CaseTRGHandlerMethods {
             } 
 	}
     
-    
     @TestVisible
     private static String getOrgWideEmailAddressIdFromPlant(String plant) {
-            
-        String listaDistribucion = '';
-        switch on plant {
-            when '1010'{
-                listaDistribucion = 'Grp._Apertura_Incidencias_AV@vidrala.com';
-            }when '1020'{
-                listaDistribucion = 'Grp._Apertura_Incidencias_CR@vidrala.com';
-            }when '1030'{
-                listaDistribucion = 'grp._apertura_incidencias_cs@vidrala.com';
-            }when '1040'{
-                listaDistribucion = 'Grp._Apertura_Incidencias_GV@vidrala.com';
-            }when '1090'{
-                listaDistribucion = 'Grp._Apertura_Incidencias_SB@vidrala.com';
+        if (String.isBlank(plant) || String.isEmpty(plant)) {
+            return null;
+        }
+        Map<String, String> mapPlantEmail = getMapPlantsEmail();
+        if (mapPlantEmail == null || mapPlantEmail.isEmpty()) {
+            return null;
+        }
+        return mapPlantEmail.containsKey(plant)? mapPlantEmail.get(plant) : null;
+    }
+    
+    private static Map<String, String> getMapPlantsEmail() {
+        Map<String, Set<String>> mapPlantSetEmails = new Map<String, Set<String>>();
+        Map<String, String> mapPlantStringEmails = new Map<String, String>();
+        List<OM_SAC_oweaByPlant__mdt> rows = OM_SAC_oweaByPlant__mdt.getAll().values();
+        if (rows == null || rows.isEmpty()) {
+            return mapPlantStringEmails;
+        }
+        for (OM_SAC_oweaByPlant__mdt rec : rows) {
+            String plant = rec != null ? rec.OM_SAC_plant__c : null;
+            String email = rec != null ? rec.OM_SAC_email__c : null;
+            if (String.isBlank(plant) || String.isBlank(email)) {
+                continue;
             }
-    	}
-        
-        return listaDistribucion;
+            if (!mapPlantSetEmails.containsKey(plant)) {
+                mapPlantSetEmails.put(plant, new Set<String>());
+            }
+            mapPlantSetEmails.get(plant).add(email);
+        }
+        for (String plantKey : mapPlantSetEmails.keySet()) {
+            List<String> emails = new List<String>();
+            for (String e : mapPlantSetEmails.get(plantKey)) {
+                if (!String.isBlank(e)) {
+                    emails.add(e);
+                }
+            }
+            emails.sort();
+            mapPlantStringEmails.put(plantKey, String.join(emails, EMAIL_DELIMITER));
+        }
+        return mapPlantStringEmails;
     }
 }
