@@ -113,6 +113,7 @@ public class OM_VID_TestUtils {
         List<Opportunity> oppsToInsert = new List<Opportunity>();
         for(Integer i = 0; i < numOpp; i++){
             Opportunity opp = new Opportunity(Name = 'Test Opp v' + i.toString(), pricebook2Id  = pricebookId, AccountId = objAccount.Id, StageName = 'Introduction', RecordTypeId = recordTypeId, CloseDate = Date.today() + 1, CurrencyIsoCode = 'EUR');
+            opp.Market__c = 'ES';
             oppsToInsert.add(opp);
         }
 
@@ -183,6 +184,21 @@ public class OM_VID_TestUtils {
         producto.isActive = true;
         producto.CurrencyIsoCode='EUR';        
         insert producto;
+        
+        Bottle__c botella = new Bottle__c(
+                    Name = 'Bottle1',
+                    Bottle_Identifier__c = '12324a',
+                    SAP_Material_Code__c = '1234b',
+                    SAP_Model_Number__c = '1234',
+                    Weight_per_Unit__c = 200
+                );
+        insert botella;
+        
+        SAP_Material_Code__c material = new SAP_Material_Code__c(Material_Code_Key__c = '1234b');
+        material.OM_ProductRef__c = producto.Id;
+        material.Bottle__c = botella.Id;
+        insert material;
+        
         for(Integer i = 0; i < caseNum; i++){
             Case ins = new Case(
             	AccountId = objAccount.Id,
@@ -191,8 +207,9 @@ public class OM_VID_TestUtils {
                 OM_SAC_loteOAlbaran__c = '1234554',
                 OM_SAC_Defecto__c = 'test',
                 OM_SAC_modeloYDenominacion__c = producto.Id,
-                OM_VID_Planta__c = '1030'
-                
+                OM_VID_Planta__c = '1030',
+                OM_SAC_DetectadasEnClienteDeCuantas__c = '2',
+                OM_VID_EAN__c = material.Id
 			);
 
             caseToInsert.add(ins);

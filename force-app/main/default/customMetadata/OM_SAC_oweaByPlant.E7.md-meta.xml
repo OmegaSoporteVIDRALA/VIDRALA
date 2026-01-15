@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>E7</label>
+    <protected>false</protected>
+    <values>
+        <field>OM_SAC_email__c</field>
+        <value xsi:type="xsd:string">grp._apertura_incidencias_gv@vidrala.com</value>
+    </values>
+    <values>
+        <field>OM_SAC_plantNumber__c</field>
+        <value xsi:type="xsd:double">1040.0</value>
+    </values>
+    <values>
+        <field>OM_SAC_plant__c</field>
+        <value xsi:type="xsd:string">1040</value>
+    </values>
+</CustomMetadata>
